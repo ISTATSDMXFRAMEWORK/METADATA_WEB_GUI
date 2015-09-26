@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mes:Structure xmlns:mes="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message" xmlns:str="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure" xmlns:com="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+  <mes:Header>
+    <mes:ID>1PROVA</mes:ID>
+    <mes:Test>false</mes:Test>
+    <mes:Prepared>2014-04-07T12:16:44.276Z</mes:Prepared>
+    <mes:Sender id="DSW"/>
+    <mes:Receiver id="unknown"/>
+  </mes:Header>
+  <mes:Structures>
+    <str:Dataflows>
+      <str:Dataflow id="1PROVA" uri="dfdf" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=STRATOS:1PROVA(1.2)" agencyID="STRATOS" version="1.2" validFrom="2014-04-01T12:14:18.000Z" validTo="2014-04-03T12:14:19.000Z" isFinal="false">
+        <com:Name xml:lang="en">sdfsf</com:Name>
+        <com:Description xml:lang="en">fsdfsdfsdf</com:Description>
+        <str:Structure>
+          <Ref id="NA_PENS" version="1.0" agencyID="ESTAT" package="datastructure" class="DataStructure"/>
+        </str:Structure>
+      </str:Dataflow>
+    </str:Dataflows>
+  </mes:Structures>
+</mes:Structure>

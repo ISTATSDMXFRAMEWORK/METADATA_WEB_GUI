@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Structure xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message">
+  <Header>
+    <ID>ISTATRegistryRetrieveTemplate</ID>
+    <Test>false</Test>
+    <Prepared>2015-05-05T15:55:06.214391+02:00</Prepared>
+    <Sender id="MG" />
+    <Receiver id="unknown" />
+  </Header>
+  <Structures>
+    <OrganisationSchemes xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure">
+      <AgencyScheme id="AGENCIES" uri="http://www.istat.it/index" urn="urn:sdmx:org.sdmx.infomodel.base.AgencyScheme=WB:AGENCIES(1.0)" agencyID="WB" version="1.0" isFinal="true" validFrom="2015-04-01T00:00:00" validTo="2015-04-02T00:00:00">
+        <Annotations xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+          <Annotation id="nuova_annotazione">
+            <AnnotationTitle>hello</AnnotationTitle>
+            <AnnotationType>testo</AnnotationType>
+            <AnnotationURL>http://www.istat.it/</AnnotationURL>
+            <AnnotationText xml:lang="it">dddd</AnnotationText>
+            <AnnotationText xml:lang="en">enenen</AnnotationText>
+          </Annotation>
+        </Annotations>
+        <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">fffff</Name>
+        <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">lkj</Description>
+        <Agency id="SDMX" urn="urn:sdmx:org.sdmx.infomodel.base.Agency=WB.SDMX">
+          <Annotations xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+            <Annotation id="nuova_annotation">
+              <AnnotationTitle>nuova annotazione</AnnotationTitle>
+              <AnnotationType>test</AnnotationType>
+              <AnnotationURL>http://www.istat.it/</AnnotationURL>
+              <AnnotationText xml:lang="it">nbmn</AnnotationText>
+            </Annotation>
+            <Annotation id="jjjkk">
+              <AnnotationText xml:lang="it">kj</AnnotationText>
+            </Annotation>
+          </Annotations>
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">ddd</Name>
+        </Agency>
+        <Agency id="popopo" urn="urn:sdmx:org.sdmx.infomodel.base.Agency=WB.popopo">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">popopo</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">popopo</Description>
+        </Agency>
+        <Agency id="pippo" urn="urn:sdmx:org.sdmx.infomodel.base.Agency=WB.pippo">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">poippo</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">pippo</Description>
+        </Agency>
+        <Agency id="pluto" urn="urn:sdmx:org.sdmx.infomodel.base.Agency=WB.pluto">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">pluto</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">pluto</Description>
+        </Agency>
+      </AgencyScheme>
+    </OrganisationSchemes>
+  </Structures>
+</Structure>

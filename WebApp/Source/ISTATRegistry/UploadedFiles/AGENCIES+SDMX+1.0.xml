@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mes:Structure xmlns:mes="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message" xmlns:str="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure" xmlns:com="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+  <mes:Header>
+    <mes:ID>AGENCIES</mes:ID>
+    <mes:Test>false</mes:Test>
+    <mes:Prepared>2014-05-07T11:04:37.414Z</mes:Prepared>
+    <mes:Sender id="DSW"/>
+    <mes:Receiver id="unknown"/>
+  </mes:Header>
+  <mes:Structures>
+    <str:OrganisationSchemes>
+      <str:AgencyScheme id="AGENCIES" uri="urn:sdmx:org.sdmx.infomodel.base.AgencyScheme=SDMX:AGENCIES(1.0)" urn="urn:sdmx:org.sdmx.infomodel.base.AgencyScheme=SDMX:AGENCIES(1.0)" agencyID="SDMX" version="1.0" validFrom="2014-05-01T10:53:29.000Z" validTo="2014-05-25T10:53:31.000Z" isFinal="false">
+        <com:Annotations>
+          <com:Annotation id="ann1">
+            <com:AnnotationTitle>Agency scheme</com:AnnotationTitle>
+            <com:AnnotationType>SEM</com:AnnotationType>
+			<com:AnnotationURL>http://www.istat.it</com:AnnotationURL>
+            <com:AnnotationText xml:lang="it">Annot_ag_sch_it</com:AnnotationText>
+            <com:AnnotationText xml:lang="en">Annot_ag_sch_eng</com:AnnotationText>
+          </com:Annotation>
+          <com:Annotation>
+            <com:AnnotationTitle>Agency scheme 2</com:AnnotationTitle>
+            <com:AnnotationType>SEM2</com:AnnotationType>
+            <com:AnnotationText xml:lang="it">Annot_ag_sch_it2</com:AnnotationText>
+            <com:AnnotationText xml:lang="en">Annot_ag_sch_eng2</com:AnnotationText>
+          </com:Annotation>
+        </com:Annotations>
+        <com:Name xml:lang="it">Agency schema SDMX</com:Name>
+        <com:Name xml:lang="en">SDMX Agency Scheme</com:Name>
+        <com:Description xml:lang="it">Agency Schema SDMX</com:Description>
+        <com:Description xml:lang="en">SDMX Agency Scheme</com:Description>
+        <str:Agency id="SDMX" urn="urn:sdmx:org.sdmx.infomodel.base.Agency=SDMX">
+          <com:Annotations>
+            <com:Annotation>
+              <com:AnnotationTitle>Annotation agy1</com:AnnotationTitle>
+              <com:AnnotationType>SEM</com:AnnotationType>
+              <com:AnnotationText xml:lang="en">Agy organizationEn1</com:AnnotationText>
+              <com:AnnotationText xml:lang="it">Agy organizationIt1</com:AnnotationText>
+            </com:Annotation>
+            <com:Annotation>
+              <com:AnnotationTitle>Annotation agy11</com:AnnotationTitle>
+              <com:AnnotationType>SEM</com:AnnotationType>
+              <com:AnnotationText xml:lang="en">Agy organizationEn11</com:AnnotationText>
+              <com:AnnotationText xml:lang="it">Agy organizationIt11</com:AnnotationText>
+            </com:Annotation>
+            <com:Annotation>
+              <com:AnnotationTitle>Annotation agy111</com:AnnotationTitle>
+              <com:AnnotationType>SEM</com:AnnotationType>
+              <com:AnnotationText xml:lang="en">Agy organizationEn111</com:AnnotationText>
+              <com:AnnotationText xml:lang="it">Agy organizationIt111</com:AnnotationText>
+            </com:Annotation>
+          </com:Annotations>		
+          <com:Name xml:lang="en">SDMX</com:Name>
+          <com:Description xml:lang="en">SDMX organization</com:Description>
+        </str:Agency>
+        <str:Agency id="ESTAT" urn="urn:sdmx:org.sdmx.infomodel.base.Agency=ESTAT">
+          <com:Annotations>
+            <com:Annotation>
+              <com:AnnotationTitle>Annotation agy2</com:AnnotationTitle>
+              <com:AnnotationType>SEM</com:AnnotationType>
+              <com:AnnotationText xml:lang="en">Agy organizationEn2</com:AnnotationText>
+              <com:AnnotationText xml:lang="it">Agy organizationIt2</com:AnnotationText>
+            </com:Annotation>
+            <com:Annotation>
+              <com:AnnotationTitle>Annotation agy22</com:AnnotationTitle>
+              <com:AnnotationType>SEM</com:AnnotationType>
+              <com:AnnotationText xml:lang="en">Agy organizationEn22</com:AnnotationText>
+              <com:AnnotationText xml:lang="it">Agy organizationIt22</com:AnnotationText>
+            </com:Annotation>
+          </com:Annotations>		
+          <com:Name xml:lang="en">Eurostat</com:Name>
+        </str:Agency>
+        <str:Agency id="IMF" urn="urn:sdmx:org.sdmx.infomodel.base.Agency=IMF">
+          <com:Annotations>
+            <com:Annotation>
+              <com:AnnotationTitle>Annotation agy3</com:AnnotationTitle>
+              <com:AnnotationType>SEM</com:AnnotationType>
+              <com:AnnotationText xml:lang="en">Agy organizationEn3</com:AnnotationText>
+              <com:AnnotationText xml:lang="it">Agy organizationIt3</com:AnnotationText>
+            </com:Annotation>
+          </com:Annotations>		
+          <com:Name xml:lang="en">International Monetary Fund</com:Name>
+        </str:Agency>
+        <str:Agency id="IT1" urn="urn:sdmx:org.sdmx.infomodel.base.Agency=IT1">
+          <com:Name xml:lang="en">Italian Monetary Fund</com:Name>
+        </str:Agency>
+        <str:Agency id="WB" urn="urn:sdmx:org.sdmx.infomodel.base.Agency=WB">
+          <com:Name xml:lang="en">West Bank</com:Name>
+        </str:Agency>
+        <str:Agency id="FAO" urn="urn:sdmx:org.sdmx.infomodel.base.Agency=FAO">
+          <com:Name xml:lang="en">Food and Agriculture Organization</com:Name>
+        </str:Agency>		
+      </str:AgencyScheme>
+    </str:OrganisationSchemes>
+  </mes:Structures>
+</mes:Structure>

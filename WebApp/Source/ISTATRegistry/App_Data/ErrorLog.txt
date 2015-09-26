@@ -1,0 +1,324 @@
+********** 21/09/2015 17:30:34 **********
+Inner Exception Type: System.Net.WebException
+Inner Exception: Impossibile effettuare la connessione al server remoto.
+Inner Source: System
+Inner Stack Trace: 
+   in System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   in System.Net.HttpWebRequest.GetRequestStream()
+   in System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+Exception Type: System.ServiceModel.EndpointNotFoundException
+Exception: Nessun endpoint in ascolto su http://localhost:2631/IRService.asmx in grado di accettare il messaggio. Ciò è spesso causato da un'azione SOAP o un indirizzo non corretto. Per ulteriori dettagli, vedere InnerException, se presente.
+Source: Generic Error Page
+Stack Trace: 
+
+Server stack trace: 
+   in System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   in System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   in System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   in System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   in System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   in System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   in System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   in System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   in System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   in System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   in ISTATRegistry.MyService.Service1Soap.GetUserByCredentials(String username, String password)
+   in ISTATRegistry.MyService.Service1SoapClient.GetUserByCredentials(String username, String password) in E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATRegistry\Service References\MyService\Reference.cs:riga 270
+   in ISTATRegistry.master.btnLoginSubmit_Click(Object sender, EventArgs e) in E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATRegistry\master.Master.cs:riga 160
+   in System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   in System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 21/09/2015 17:31:25 **********
+Inner Exception Type: System.Net.WebException
+Inner Exception: Impossibile effettuare la connessione al server remoto.
+Inner Source: System
+Inner Stack Trace: 
+   in System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   in System.Net.HttpWebRequest.GetRequestStream()
+   in System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+Exception Type: System.ServiceModel.EndpointNotFoundException
+Exception: Nessun endpoint in ascolto su http://localhost:2631/IRService.asmx in grado di accettare il messaggio. Ciò è spesso causato da un'azione SOAP o un indirizzo non corretto. Per ulteriori dettagli, vedere InnerException, se presente.
+Source: Generic Error Page
+Stack Trace: 
+
+Server stack trace: 
+   in System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   in System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   in System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   in System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   in System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   in System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   in System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   in System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   in System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   in System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   in ISTATRegistry.MyService.Service1Soap.GetUserByCredentials(String username, String password)
+   in ISTATRegistry.MyService.Service1SoapClient.GetUserByCredentials(String username, String password) in E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATRegistry\Service References\MyService\Reference.cs:riga 270
+   in ISTATRegistry.master.btnLoginSubmit_Click(Object sender, EventArgs e) in E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATRegistry\master.Master.cs:riga 160
+   in System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   in System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 21/09/2015 17:33:18 **********
+Exception Type: System.Xml.XmlException
+Exception: Not Implemented
+Source: Generic Error Page
+Stack Trace: 
+   in ISTAT.WSDAL.WSModel.WSExecute(ArtefactIdentity artIdentity, wsOperation operation, Boolean stub, Boolean withLike) in E:\ISTAT2\Source\ISTATRegistry_4.0\WSDAL\WSDAL\WSModel.cs:riga 382
+   in ISTAT.WSDAL.WSModel.GetAllAgencyScheme(Boolean stub) in E:\ISTAT2\Source\ISTATRegistry_4.0\WSDAL\WSDAL\WSModel.cs:riga 36
+   in ISTATRegistry.Utils.PopulateCmbAgencies(DropDownList ddlAgencies, Boolean excludeAgenciesForUser) in E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATRegistry\Classes\Utils.cs:riga 554
+   in ISTATRegistry.keyFamilyItemDetails.CommonInit() in E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATRegistry\KeyFamilyItemDetails.aspx.cs:riga 1392
+   in ISTATRegistry.keyFamilyItemDetails.Page_Load(Object sender, EventArgs e) in E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATRegistry\KeyFamilyItemDetails.aspx.cs:riga 146
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 22/09/2015 10:06:45 **********
+Exception Type: System.Xml.XmlException
+Exception: Not Implemented
+Source: Generic Error Page
+Stack Trace: 
+   in ISTAT.WSDAL.WSModel.WSExecute(ArtefactIdentity artIdentity, wsOperation operation, Boolean stub, Boolean withLike) in E:\ISTAT2\Source\ISTATRegistry_4.0\WSDAL\WSDAL\WSModel.cs:riga 382
+   in ISTAT.WSDAL.WSModel.GetAllAgencyScheme(Boolean stub) in E:\ISTAT2\Source\ISTATRegistry_4.0\WSDAL\WSDAL\WSModel.cs:riga 36
+   in ISTATRegistry.Utils.PopulateCmbAgencies(DropDownList ddlAgencies, Boolean excludeAgenciesForUser) in E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATRegistry\Classes\Utils.cs:riga 554
+   in ISTATRegistry.UserControls.DuplicateArtefact.SetForm() in E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATRegistry\UserControls\DuplicateArtefact.ascx.cs:riga 40
+   in ISTATRegistry.UserControls.DuplicateArtefact.Page_Load(Object sender, EventArgs e) in E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATRegistry\UserControls\DuplicateArtefact.ascx.cs:riga 30
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 22/09/2015 10:08:07 **********
+Exception Type: System.Xml.XmlException
+Exception: Not Implemented
+Source: Generic Error Page
+Stack Trace: 
+   in ISTAT.WSDAL.WSModel.WSExecute(ArtefactIdentity artIdentity, wsOperation operation, Boolean stub, Boolean withLike) in E:\ISTAT2\Source\ISTATRegistry_4.0\WSDAL\WSDAL\WSModel.cs:riga 382
+   in ISTAT.WSDAL.WSModel.GetAllAgencyScheme(Boolean stub) in E:\ISTAT2\Source\ISTATRegistry_4.0\WSDAL\WSDAL\WSModel.cs:riga 36
+   in ISTATRegistry.Utils.PopulateCmbAgencies(DropDownList ddlAgencies, Boolean excludeAgenciesForUser) in E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATRegistry\Classes\Utils.cs:riga 554
+   in ISTATRegistry.UserControls.DuplicateArtefact.SetForm() in E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATRegistry\UserControls\DuplicateArtefact.ascx.cs:riga 40
+   in ISTATRegistry.UserControls.DuplicateArtefact.Page_Load(Object sender, EventArgs e) in E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATRegistry\UserControls\DuplicateArtefact.ascx.cs:riga 30
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 22/09/2015 10:10:57 **********
+Exception Type: System.Xml.XmlException
+Exception: Not Implemented
+Source: Generic Error Page
+Stack Trace: 
+   in ISTAT.WSDAL.WSModel.WSExecute(ArtefactIdentity artIdentity, wsOperation operation, Boolean stub, Boolean withLike) in E:\ISTAT2\Source\ISTATRegistry_4.0\WSDAL\WSDAL\WSModel.cs:riga 382
+   in ISTAT.WSDAL.WSModel.GetAllAgencyScheme(Boolean stub) in E:\ISTAT2\Source\ISTATRegistry_4.0\WSDAL\WSDAL\WSModel.cs:riga 36
+   in ISTATRegistry.Utils.PopulateCmbAgencies(DropDownList ddlAgencies, Boolean excludeAgenciesForUser) in E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATRegistry\Classes\Utils.cs:riga 554
+   in ISTATRegistry.UserControls.DuplicateArtefact.SetForm() in E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATRegistry\UserControls\DuplicateArtefact.ascx.cs:riga 40
+   in ISTATRegistry.UserControls.DuplicateArtefact.Page_Load(Object sender, EventArgs e) in E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATRegistry\UserControls\DuplicateArtefact.ascx.cs:riga 30
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 22/09/2015 10:27:54 **********
+Exception Type: System.Web.HttpException
+Exception: Impossibile modificare la raccolta Controls perché il controllo contiene blocchi di codice (ossia <% ... %>).
+Source: Generic Error Page
+Stack Trace: 
+   in System.Web.UI.ControlCollection.RemoveAt(Int32 index)
+   in System.Web.UI.ControlCollection.Remove(Control value)
+   in ISTATRegistry.keyFamilyItemDetails.SetGeneralTab(IDataStructureObject ds) in E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATRegistry\KeyFamilyItemDetails.aspx.cs:riga 1778
+   in ISTATRegistry.keyFamilyItemDetails.BindData() in E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATRegistry\KeyFamilyItemDetails.aspx.cs:riga 1756
+   in ISTATRegistry.keyFamilyItemDetails.SetViewForm() in E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATRegistry\KeyFamilyItemDetails.aspx.cs:riga 1596
+   in ISTATRegistry.keyFamilyItemDetails.Page_Load(Object sender, EventArgs e) in E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATRegistry\KeyFamilyItemDetails.aspx.cs:riga 158
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 22/09/2015 10:29:32 **********
+Exception Type: System.Xml.XmlException
+Exception: Not Implemented
+Source: Generic Error Page
+Stack Trace: 
+   in ISTAT.WSDAL.WSModel.WSExecute(ArtefactIdentity artIdentity, wsOperation operation, Boolean stub, Boolean withLike) in E:\ISTAT2\Source\ISTATRegistry_4.0\WSDAL\WSDAL\WSModel.cs:riga 382
+   in ISTAT.WSDAL.WSModel.GetAllAgencyScheme(Boolean stub) in E:\ISTAT2\Source\ISTATRegistry_4.0\WSDAL\WSDAL\WSModel.cs:riga 36
+   in ISTATRegistry.Utils.PopulateCmbAgencies(DropDownList ddlAgencies, Boolean excludeAgenciesForUser) in E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATRegistry\Classes\Utils.cs:riga 554
+   in ISTATRegistry.dataFlowItemDetails.CommonInit() in E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATRegistry\DataFlowItemDetails.aspx.cs:riga 362
+   in ISTATRegistry.dataFlowItemDetails.Page_Load(Object sender, EventArgs e) in E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATRegistry\DataFlowItemDetails.aspx.cs:riga 126
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 22/09/2015 10:33:11 **********
+Exception Type: System.Xml.XmlException
+Exception: Not Implemented
+Source: Generic Error Page
+Stack Trace: 
+   in ISTAT.WSDAL.WSModel.WSExecute(ArtefactIdentity artIdentity, wsOperation operation, Boolean stub, Boolean withLike) in E:\ISTAT2\Source\ISTATRegistry_4.0\WSDAL\WSDAL\WSModel.cs:riga 382
+   in ISTAT.WSDAL.WSModel.GetAllAgencyScheme(Boolean stub) in E:\ISTAT2\Source\ISTATRegistry_4.0\WSDAL\WSDAL\WSModel.cs:riga 36
+   in ISTATRegistry.Utils.PopulateCmbAgencies(DropDownList ddlAgencies, Boolean excludeAgenciesForUser) in E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATRegistry\Classes\Utils.cs:riga 554
+   in ISTATRegistry.UserControls.DuplicateArtefact.SetForm() in E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATRegistry\UserControls\DuplicateArtefact.ascx.cs:riga 41
+   in ISTATRegistry.UserControls.DuplicateArtefact.Page_Load(Object sender, EventArgs e) in E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATRegistry\UserControls\DuplicateArtefact.ascx.cs:riga 31
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 22/09/2015 10:33:36 **********
+Exception Type: System.Xml.XmlException
+Exception: Not Implemented
+Source: Generic Error Page
+Stack Trace: 
+   in ISTAT.WSDAL.WSModel.WSExecute(ArtefactIdentity artIdentity, wsOperation operation, Boolean stub, Boolean withLike) in E:\ISTAT2\Source\ISTATRegistry_4.0\WSDAL\WSDAL\WSModel.cs:riga 382
+   in ISTAT.WSDAL.WSModel.GetAllAgencyScheme(Boolean stub) in E:\ISTAT2\Source\ISTATRegistry_4.0\WSDAL\WSDAL\WSModel.cs:riga 36
+   in ISTATRegistry.Utils.PopulateCmbAgencies(DropDownList ddlAgencies, Boolean excludeAgenciesForUser) in E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATRegistry\Classes\Utils.cs:riga 554
+   in ISTATRegistry.UserControls.DuplicateArtefact.SetForm() in E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATRegistry\UserControls\DuplicateArtefact.ascx.cs:riga 41
+   in ISTATRegistry.UserControls.DuplicateArtefact.Page_Load(Object sender, EventArgs e) in E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATRegistry\UserControls\DuplicateArtefact.ascx.cs:riga 31
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 22/09/2015 10:36:47 **********
+Exception Type: System.Xml.XmlException
+Exception: Not Implemented
+Source: Generic Error Page
+Stack Trace: 
+   in ISTAT.WSDAL.WSModel.WSExecute(ArtefactIdentity artIdentity, wsOperation operation, Boolean stub, Boolean withLike) in E:\ISTAT2\Source\ISTATRegistry_4.0\WSDAL\WSDAL\WSModel.cs:riga 382
+   in ISTAT.WSDAL.WSModel.GetAllAgencyScheme(Boolean stub) in E:\ISTAT2\Source\ISTATRegistry_4.0\WSDAL\WSDAL\WSModel.cs:riga 36
+   in ISTATRegistry.Utils.PopulateCmbAgencies(DropDownList ddlAgencies, Boolean excludeAgenciesForUser) in E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATRegistry\Classes\Utils.cs:riga 554
+   in ISTATRegistry.categorizationItemDetails.Page_Load(Object sender, EventArgs e) in E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATRegistry\categorizationItemDetails.aspx.cs:riga 694
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 22/09/2015 10:39:25 **********
+Exception Type: System.Xml.XmlException
+Exception: Not Implemented
+Source: Generic Error Page
+Stack Trace: 
+   in ISTAT.WSDAL.WSModel.WSExecute(ArtefactIdentity artIdentity, wsOperation operation, Boolean stub, Boolean withLike) in E:\ISTAT2\Source\ISTATRegistry_4.0\WSDAL\WSDAL\WSModel.cs:riga 382
+   in ISTAT.WSDAL.WSModel.GetAllAgencyScheme(Boolean stub) in E:\ISTAT2\Source\ISTATRegistry_4.0\WSDAL\WSDAL\WSModel.cs:riga 36
+   in ISTATRegistry.Utils.PopulateCmbAgencies(DropDownList ddlAgencies, Boolean excludeAgenciesForUser) in E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATRegistry\Classes\Utils.cs:riga 554
+   in ISTATRegistry.UserControls.DuplicateArtefact.SetForm() in E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATRegistry\UserControls\DuplicateArtefact.ascx.cs:riga 41
+   in ISTATRegistry.UserControls.DuplicateArtefact.Page_Load(Object sender, EventArgs e) in E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATRegistry\UserControls\DuplicateArtefact.ascx.cs:riga 31
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 22/09/2015 10:41:47 **********
+Exception Type: System.Xml.XmlException
+Exception: Not Implemented
+Source: Generic Error Page
+Stack Trace: 
+   in ISTAT.WSDAL.WSModel.WSExecute(ArtefactIdentity artIdentity, wsOperation operation, Boolean stub, Boolean withLike) in E:\ISTAT2\Source\ISTATRegistry_4.0\WSDAL\WSDAL\WSModel.cs:riga 382
+   in ISTAT.WSDAL.WSModel.GetAllAgencyScheme(Boolean stub) in E:\ISTAT2\Source\ISTATRegistry_4.0\WSDAL\WSDAL\WSModel.cs:riga 36
+   in ISTATRegistry.Utils.PopulateCmbAgencies(DropDownList ddlAgencies, Boolean excludeAgenciesForUser) in E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATRegistry\Classes\Utils.cs:riga 554
+   in ISTATRegistry.categorySchemeItemDetails.Page_Load(Object sender, EventArgs e) in E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATRegistry\CategorySchemeItemDetails.aspx.cs:riga 668
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 22/09/2015 10:52:24 **********
+Exception Type: System.Xml.XmlException
+Exception: Not Implemented
+Source: Generic Error Page
+Stack Trace: 
+   in ISTAT.WSDAL.WSModel.WSExecute(ArtefactIdentity artIdentity, wsOperation operation, Boolean stub, Boolean withLike) in E:\ISTAT2\Source\ISTATRegistry_4.0\WSDAL\WSDAL\WSModel.cs:riga 382
+   in ISTAT.WSDAL.WSModel.GetAllAgencyScheme(Boolean stub) in E:\ISTAT2\Source\ISTATRegistry_4.0\WSDAL\WSDAL\WSModel.cs:riga 36
+   in ISTATRegistry.Utils.PopulateCmbAgencies(DropDownList ddlAgencies, Boolean excludeAgenciesForUser) in E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATRegistry\Classes\Utils.cs:riga 554
+   in ISTATRegistry.codelistItemDetails.Page_Load(Object sender, EventArgs e) in E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATRegistry\codelistItemDetails.aspx.cs:riga 647
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 22/09/2015 11:01:02 **********
+Exception Type: System.Xml.XmlException
+Exception: Not Implemented
+Source: Generic Error Page
+Stack Trace: 
+   in ISTAT.WSDAL.WSModel.WSExecute(ArtefactIdentity artIdentity, wsOperation operation, Boolean stub, Boolean withLike) in E:\ISTAT2\Source\ISTATRegistry_4.0\WSDAL\WSDAL\WSModel.cs:riga 382
+   in ISTAT.WSDAL.WSModel.GetAllAgencyScheme(Boolean stub) in E:\ISTAT2\Source\ISTATRegistry_4.0\WSDAL\WSDAL\WSModel.cs:riga 36
+   in ISTATRegistry.Utils.PopulateCmbAgencies(DropDownList ddlAgencies, Boolean excludeAgenciesForUser) in E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATRegistry\Classes\Utils.cs:riga 554
+   in ISTATRegistry.conceptschemeItemDetails.Page_Load(Object sender, EventArgs e) in E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATRegistry\ConceptSchemeItemDetails.aspx.cs:riga 586
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 23/09/2015 11:46:22 **********
+Inner Exception Type: System.Net.WebException
+Inner Exception: Impossibile effettuare la connessione al server remoto.
+Inner Source: System
+Inner Stack Trace: 
+   in System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   in System.Net.HttpWebRequest.GetRequestStream()
+   in System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+Exception Type: System.ServiceModel.EndpointNotFoundException
+Exception: Nessun endpoint in ascolto su http://localhost:2631/IRService.asmx in grado di accettare il messaggio. Ciò è spesso causato da un'azione SOAP o un indirizzo non corretto. Per ulteriori dettagli, vedere InnerException, se presente.
+Source: Generic Error Page
+Stack Trace: 
+
+Server stack trace: 
+   in System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   in System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   in System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   in System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   in System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   in System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   in System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   in System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   in System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   in System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   in ISTATRegistry.MyService.Service1Soap.GetUserByCredentials(String username, String password)
+   in ISTATRegistry.MyService.Service1SoapClient.GetUserByCredentials(String username, String password) in E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATRegistry\Service References\MyService\Reference.cs:riga 270
+   in ISTATRegistry.master.btnLoginSubmit_Click(Object sender, EventArgs e) in E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATRegistry\master.Master.cs:riga 160
+   in System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   in System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+

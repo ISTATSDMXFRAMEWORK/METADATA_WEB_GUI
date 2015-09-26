@@ -1,0 +1,1617 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Structure xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message" xmlns:structure="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message SDMXMessage.xsd">
+  <Header>
+    <ID>REGISTRY_RESPONSE</ID>
+    <Test>true</Test>
+    <Truncated>false</Truncated>
+    <Prepared>2015-07-17T10:14:32</Prepared>
+    <Sender id="EUROSTAT" />
+    <Extracted>2015-07-17T10:14:32</Extracted>
+  </Header>
+  <CodeLists>
+  <structure:CodeList id="CL_REFAREA_SIC_PROV_COM" agencyID="IT1" version="1.0" isFinal="true">
+      <structure:Name xml:lang="it">Territori italiani</structure:Name>
+      <structure:Name xml:lang="en">Italian territory</structure:Name>
+      <structure:Code value="081001" parentCode="ITG11" urn="">
+        <structure:Description xml:lang="it">Alcamo</structure:Description>
+        <structure:Description xml:lang="en">Alcamo</structure:Description>
+      </structure:Code>
+      <structure:Code value="081002" parentCode="ITG11" urn="">
+        <structure:Description xml:lang="it">Buseto Palizzolo</structure:Description>
+        <structure:Description xml:lang="en">Buseto Palizzolo</structure:Description>
+      </structure:Code>
+      <structure:Code value="081003" parentCode="ITG11" urn="">
+        <structure:Description xml:lang="it">Calatafimi-Segesta</structure:Description>
+        <structure:Description xml:lang="en">Calatafimi-Segesta</structure:Description>
+      </structure:Code>
+      <structure:Code value="081004" parentCode="ITG11" urn="">
+        <structure:Description xml:lang="it">Campobello di Mazara</structure:Description>
+        <structure:Description xml:lang="en">Campobello di Mazara</structure:Description>
+      </structure:Code>
+      <structure:Code value="081005" parentCode="ITG11" urn="">
+        <structure:Description xml:lang="it">Castellammare del Golfo</structure:Description>
+        <structure:Description xml:lang="en">Castellammare del Golfo</structure:Description>
+      </structure:Code>
+      <structure:Code value="081006" parentCode="ITG11" urn="">
+        <structure:Description xml:lang="it">Castelvetrano</structure:Description>
+        <structure:Description xml:lang="en">Castelvetrano</structure:Description>
+      </structure:Code>
+      <structure:Code value="081007" parentCode="ITG11" urn="">
+        <structure:Description xml:lang="it">Custonaci</structure:Description>
+        <structure:Description xml:lang="en">Custonaci</structure:Description>
+      </structure:Code>
+      <structure:Code value="081008" parentCode="ITG11" urn="">
+        <structure:Description xml:lang="it">Erice</structure:Description>
+        <structure:Description xml:lang="en">Erice</structure:Description>
+      </structure:Code>
+      <structure:Code value="081009" parentCode="ITG11" urn="">
+        <structure:Description xml:lang="it">Favignana</structure:Description>
+        <structure:Description xml:lang="en">Favignana</structure:Description>
+      </structure:Code>
+      <structure:Code value="081010" parentCode="ITG11" urn="">
+        <structure:Description xml:lang="it">Gibellina</structure:Description>
+        <structure:Description xml:lang="en">Gibellina</structure:Description>
+      </structure:Code>
+      <structure:Code value="081011" parentCode="ITG11" urn="">
+        <structure:Description xml:lang="it">Marsala</structure:Description>
+        <structure:Description xml:lang="en">Marsala</structure:Description>
+      </structure:Code>
+      <structure:Code value="081012" parentCode="ITG11" urn="">
+        <structure:Description xml:lang="it">Mazara del Vallo</structure:Description>
+        <structure:Description xml:lang="en">Mazara del Vallo</structure:Description>
+      </structure:Code>
+      <structure:Code value="081013" parentCode="ITG11" urn="">
+        <structure:Description xml:lang="it">Paceco</structure:Description>
+        <structure:Description xml:lang="en">Paceco</structure:Description>
+      </structure:Code>
+      <structure:Code value="081014" parentCode="ITG11" urn="">
+        <structure:Description xml:lang="it">Pantelleria</structure:Description>
+        <structure:Description xml:lang="en">Pantelleria</structure:Description>
+      </structure:Code>
+      <structure:Code value="081015" parentCode="ITG11" urn="">
+        <structure:Description xml:lang="it">Partanna</structure:Description>
+        <structure:Description xml:lang="en">Partanna</structure:Description>
+      </structure:Code>
+      <structure:Code value="081016" parentCode="ITG11" urn="">
+        <structure:Description xml:lang="it">Poggioreale</structure:Description>
+        <structure:Description xml:lang="en">Poggioreale</structure:Description>
+      </structure:Code>
+      <structure:Code value="081017" parentCode="ITG11" urn="">
+        <structure:Description xml:lang="it">Salaparuta</structure:Description>
+        <structure:Description xml:lang="en">Salaparuta</structure:Description>
+      </structure:Code>
+      <structure:Code value="081018" parentCode="ITG11" urn="">
+        <structure:Description xml:lang="it">Salemi</structure:Description>
+        <structure:Description xml:lang="en">Salemi</structure:Description>
+      </structure:Code>
+      <structure:Code value="081019" parentCode="ITG11" urn="">
+        <structure:Description xml:lang="it">Santa Ninfa</structure:Description>
+        <structure:Description xml:lang="en">Santa Ninfa</structure:Description>
+      </structure:Code>
+      <structure:Code value="081020" parentCode="ITG11" urn="">
+        <structure:Description xml:lang="it">San Vito Lo Capo</structure:Description>
+        <structure:Description xml:lang="en">San Vito Lo Capo</structure:Description>
+      </structure:Code>
+      <structure:Code value="081021" parentCode="ITG11" urn="">
+        <structure:Description xml:lang="it">Trapani</structure:Description>
+        <structure:Description xml:lang="en">Trapani</structure:Description>
+      </structure:Code>
+      <structure:Code value="081022" parentCode="ITG11" urn="">
+        <structure:Description xml:lang="it">Valderice</structure:Description>
+        <structure:Description xml:lang="en">Valderice</structure:Description>
+      </structure:Code>
+      <structure:Code value="081023" parentCode="ITG11" urn="">
+        <structure:Description xml:lang="it">Vita</structure:Description>
+        <structure:Description xml:lang="en">Vita</structure:Description>
+      </structure:Code>
+      <structure:Code value="081024" parentCode="ITG11" urn="">
+        <structure:Description xml:lang="it">Petrosino</structure:Description>
+        <structure:Description xml:lang="en">Petrosino</structure:Description>
+      </structure:Code>
+      <structure:Code value="082001" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Alia</structure:Description>
+        <structure:Description xml:lang="en">Alia</structure:Description>
+      </structure:Code>
+      <structure:Code value="082002" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Alimena</structure:Description>
+        <structure:Description xml:lang="en">Alimena</structure:Description>
+      </structure:Code>
+      <structure:Code value="082003" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Aliminusa</structure:Description>
+        <structure:Description xml:lang="en">Aliminusa</structure:Description>
+      </structure:Code>
+      <structure:Code value="082004" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Altavilla Milicia</structure:Description>
+        <structure:Description xml:lang="en">Altavilla Milicia</structure:Description>
+      </structure:Code>
+      <structure:Code value="082005" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Altofonte</structure:Description>
+        <structure:Description xml:lang="en">Altofonte</structure:Description>
+      </structure:Code>
+      <structure:Code value="082006" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Bagheria</structure:Description>
+        <structure:Description xml:lang="en">Bagheria</structure:Description>
+      </structure:Code>
+      <structure:Code value="082007" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Balestrate</structure:Description>
+        <structure:Description xml:lang="en">Balestrate</structure:Description>
+      </structure:Code>
+      <structure:Code value="082008" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Baucina</structure:Description>
+        <structure:Description xml:lang="en">Baucina</structure:Description>
+      </structure:Code>
+      <structure:Code value="082009" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Belmonte Mezzagno</structure:Description>
+        <structure:Description xml:lang="en">Belmonte Mezzagno</structure:Description>
+      </structure:Code>
+      <structure:Code value="082010" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Bisacquino</structure:Description>
+        <structure:Description xml:lang="en">Bisacquino</structure:Description>
+      </structure:Code>
+      <structure:Code value="082011" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Bolognetta</structure:Description>
+        <structure:Description xml:lang="en">Bolognetta</structure:Description>
+      </structure:Code>
+      <structure:Code value="082012" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Bompietro</structure:Description>
+        <structure:Description xml:lang="en">Bompietro</structure:Description>
+      </structure:Code>
+      <structure:Code value="082013" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Borgetto</structure:Description>
+        <structure:Description xml:lang="en">Borgetto</structure:Description>
+      </structure:Code>
+      <structure:Code value="082014" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Caccamo</structure:Description>
+        <structure:Description xml:lang="en">Caccamo</structure:Description>
+      </structure:Code>
+      <structure:Code value="082015" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Caltavuturo</structure:Description>
+        <structure:Description xml:lang="en">Caltavuturo</structure:Description>
+      </structure:Code>
+      <structure:Code value="082016" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Campofelice di Fitalia</structure:Description>
+        <structure:Description xml:lang="en">Campofelice di Fitalia</structure:Description>
+      </structure:Code>
+      <structure:Code value="082017" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Campofelice di Roccella</structure:Description>
+        <structure:Description xml:lang="en">Campofelice di Roccella</structure:Description>
+      </structure:Code>
+      <structure:Code value="082018" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Campofiorito</structure:Description>
+        <structure:Description xml:lang="en">Campofiorito</structure:Description>
+      </structure:Code>
+      <structure:Code value="082019" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Camporeale</structure:Description>
+        <structure:Description xml:lang="en">Camporeale</structure:Description>
+      </structure:Code>
+      <structure:Code value="082020" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Capaci</structure:Description>
+        <structure:Description xml:lang="en">Capaci</structure:Description>
+      </structure:Code>
+      <structure:Code value="082021" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Carini</structure:Description>
+        <structure:Description xml:lang="en">Carini</structure:Description>
+      </structure:Code>
+      <structure:Code value="082022" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Castelbuono</structure:Description>
+        <structure:Description xml:lang="en">Castelbuono</structure:Description>
+      </structure:Code>
+      <structure:Code value="082023" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Casteldaccia</structure:Description>
+        <structure:Description xml:lang="en">Casteldaccia</structure:Description>
+      </structure:Code>
+      <structure:Code value="082024" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Castellana Sicula</structure:Description>
+        <structure:Description xml:lang="en">Castellana Sicula</structure:Description>
+      </structure:Code>
+      <structure:Code value="082025" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Castronovo di Sicilia</structure:Description>
+        <structure:Description xml:lang="en">Castronovo di Sicilia</structure:Description>
+      </structure:Code>
+      <structure:Code value="082026" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Cefalà Diana</structure:Description>
+        <structure:Description xml:lang="en">Cefalà Diana</structure:Description>
+      </structure:Code>
+      <structure:Code value="082027" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Cefalù</structure:Description>
+        <structure:Description xml:lang="en">Cefalù</structure:Description>
+      </structure:Code>
+      <structure:Code value="082028" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Cerda</structure:Description>
+        <structure:Description xml:lang="en">Cerda</structure:Description>
+      </structure:Code>
+      <structure:Code value="082029" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Chiusa Sclafani</structure:Description>
+        <structure:Description xml:lang="en">Chiusa Sclafani</structure:Description>
+      </structure:Code>
+      <structure:Code value="082030" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Ciminna</structure:Description>
+        <structure:Description xml:lang="en">Ciminna</structure:Description>
+      </structure:Code>
+      <structure:Code value="082031" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Cinisi</structure:Description>
+        <structure:Description xml:lang="en">Cinisi</structure:Description>
+      </structure:Code>
+      <structure:Code value="082032" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Collesano</structure:Description>
+        <structure:Description xml:lang="en">Collesano</structure:Description>
+      </structure:Code>
+      <structure:Code value="082033" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Contessa Entellina</structure:Description>
+        <structure:Description xml:lang="en">Contessa Entellina</structure:Description>
+      </structure:Code>
+      <structure:Code value="082034" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Corleone</structure:Description>
+        <structure:Description xml:lang="en">Corleone</structure:Description>
+      </structure:Code>
+      <structure:Code value="082035" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Ficarazzi</structure:Description>
+        <structure:Description xml:lang="en">Ficarazzi</structure:Description>
+      </structure:Code>
+      <structure:Code value="082036" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Gangi</structure:Description>
+        <structure:Description xml:lang="en">Gangi</structure:Description>
+      </structure:Code>
+      <structure:Code value="082037" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Geraci Siculo</structure:Description>
+        <structure:Description xml:lang="en">Geraci Siculo</structure:Description>
+      </structure:Code>
+      <structure:Code value="082038" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Giardinello</structure:Description>
+        <structure:Description xml:lang="en">Giardinello</structure:Description>
+      </structure:Code>
+      <structure:Code value="082039" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Giuliana</structure:Description>
+        <structure:Description xml:lang="en">Giuliana</structure:Description>
+      </structure:Code>
+      <structure:Code value="082040" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Godrano</structure:Description>
+        <structure:Description xml:lang="en">Godrano</structure:Description>
+      </structure:Code>
+      <structure:Code value="082041" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Gratteri</structure:Description>
+        <structure:Description xml:lang="en">Gratteri</structure:Description>
+      </structure:Code>
+      <structure:Code value="082042" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Isnello</structure:Description>
+        <structure:Description xml:lang="en">Isnello</structure:Description>
+      </structure:Code>
+      <structure:Code value="082043" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Isola delle Femmine</structure:Description>
+        <structure:Description xml:lang="en">Isola delle Femmine</structure:Description>
+      </structure:Code>
+      <structure:Code value="082044" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Lascari</structure:Description>
+        <structure:Description xml:lang="en">Lascari</structure:Description>
+      </structure:Code>
+      <structure:Code value="082045" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Lercara Friddi</structure:Description>
+        <structure:Description xml:lang="en">Lercara Friddi</structure:Description>
+      </structure:Code>
+      <structure:Code value="082046" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Marineo</structure:Description>
+        <structure:Description xml:lang="en">Marineo</structure:Description>
+      </structure:Code>
+      <structure:Code value="082047" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Mezzojuso</structure:Description>
+        <structure:Description xml:lang="en">Mezzojuso</structure:Description>
+      </structure:Code>
+      <structure:Code value="082048" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Misilmeri</structure:Description>
+        <structure:Description xml:lang="en">Misilmeri</structure:Description>
+      </structure:Code>
+      <structure:Code value="082049" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Monreale</structure:Description>
+        <structure:Description xml:lang="en">Monreale</structure:Description>
+      </structure:Code>
+      <structure:Code value="082050" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Montelepre</structure:Description>
+        <structure:Description xml:lang="en">Montelepre</structure:Description>
+      </structure:Code>
+      <structure:Code value="082051" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Montemaggiore Belsito</structure:Description>
+        <structure:Description xml:lang="en">Montemaggiore Belsito</structure:Description>
+      </structure:Code>
+      <structure:Code value="082052" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Palazzo Adriano</structure:Description>
+        <structure:Description xml:lang="en">Palazzo Adriano</structure:Description>
+      </structure:Code>
+      <structure:Code value="082053" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Palermo</structure:Description>
+        <structure:Description xml:lang="en">Palermo</structure:Description>
+      </structure:Code>
+      <structure:Code value="082054" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Partinico</structure:Description>
+        <structure:Description xml:lang="en">Partinico</structure:Description>
+      </structure:Code>
+      <structure:Code value="082055" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Petralia Soprana</structure:Description>
+        <structure:Description xml:lang="en">Petralia Soprana</structure:Description>
+      </structure:Code>
+      <structure:Code value="082056" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Petralia Sottana</structure:Description>
+        <structure:Description xml:lang="en">Petralia Sottana</structure:Description>
+      </structure:Code>
+      <structure:Code value="082057" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Piana degli Albanesi</structure:Description>
+        <structure:Description xml:lang="en">Piana degli Albanesi</structure:Description>
+      </structure:Code>
+      <structure:Code value="082058" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Polizzi Generosa</structure:Description>
+        <structure:Description xml:lang="en">Polizzi Generosa</structure:Description>
+      </structure:Code>
+      <structure:Code value="082059" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Pollina</structure:Description>
+        <structure:Description xml:lang="en">Pollina</structure:Description>
+      </structure:Code>
+      <structure:Code value="082060" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Prizzi</structure:Description>
+        <structure:Description xml:lang="en">Prizzi</structure:Description>
+      </structure:Code>
+      <structure:Code value="082061" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Roccamena</structure:Description>
+        <structure:Description xml:lang="en">Roccamena</structure:Description>
+      </structure:Code>
+      <structure:Code value="082062" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Roccapalumba</structure:Description>
+        <structure:Description xml:lang="en">Roccapalumba</structure:Description>
+      </structure:Code>
+      <structure:Code value="082063" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">San Cipirello</structure:Description>
+        <structure:Description xml:lang="en">San Cipirello</structure:Description>
+      </structure:Code>
+      <structure:Code value="082064" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">San Giuseppe Jato</structure:Description>
+        <structure:Description xml:lang="en">San Giuseppe Jato</structure:Description>
+      </structure:Code>
+      <structure:Code value="082065" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">San Mauro Castelverde</structure:Description>
+        <structure:Description xml:lang="en">San Mauro Castelverde</structure:Description>
+      </structure:Code>
+      <structure:Code value="082066" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Santa Cristina Gela</structure:Description>
+        <structure:Description xml:lang="en">Santa Cristina Gela</structure:Description>
+      </structure:Code>
+      <structure:Code value="082067" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Santa Flavia</structure:Description>
+        <structure:Description xml:lang="en">Santa Flavia</structure:Description>
+      </structure:Code>
+      <structure:Code value="082068" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Sciara</structure:Description>
+        <structure:Description xml:lang="en">Sciara</structure:Description>
+      </structure:Code>
+      <structure:Code value="082069" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Sclafani Bagni</structure:Description>
+        <structure:Description xml:lang="en">Sclafani Bagni</structure:Description>
+      </structure:Code>
+      <structure:Code value="082070" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Termini Imerese</structure:Description>
+        <structure:Description xml:lang="en">Termini Imerese</structure:Description>
+      </structure:Code>
+      <structure:Code value="082071" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Terrasini</structure:Description>
+        <structure:Description xml:lang="en">Terrasini</structure:Description>
+      </structure:Code>
+      <structure:Code value="082072" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Torretta</structure:Description>
+        <structure:Description xml:lang="en">Torretta</structure:Description>
+      </structure:Code>
+      <structure:Code value="082073" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Trabia</structure:Description>
+        <structure:Description xml:lang="en">Trabia</structure:Description>
+      </structure:Code>
+      <structure:Code value="082074" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Trappeto</structure:Description>
+        <structure:Description xml:lang="en">Trappeto</structure:Description>
+      </structure:Code>
+      <structure:Code value="082075" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Ustica</structure:Description>
+        <structure:Description xml:lang="en">Ustica</structure:Description>
+      </structure:Code>
+      <structure:Code value="082076" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Valledolmo</structure:Description>
+        <structure:Description xml:lang="en">Valledolmo</structure:Description>
+      </structure:Code>
+      <structure:Code value="082077" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Ventimiglia di Sicilia</structure:Description>
+        <structure:Description xml:lang="en">Ventimiglia di Sicilia</structure:Description>
+      </structure:Code>
+      <structure:Code value="082078" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Vicari</structure:Description>
+        <structure:Description xml:lang="en">Vicari</structure:Description>
+      </structure:Code>
+      <structure:Code value="082079" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Villabate</structure:Description>
+        <structure:Description xml:lang="en">Villabate</structure:Description>
+      </structure:Code>
+      <structure:Code value="082080" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Villafrati</structure:Description>
+        <structure:Description xml:lang="en">Villafrati</structure:Description>
+      </structure:Code>
+      <structure:Code value="082081" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Scillato</structure:Description>
+        <structure:Description xml:lang="en">Scillato</structure:Description>
+      </structure:Code>
+      <structure:Code value="082082" parentCode="ITG12" urn="">
+        <structure:Description xml:lang="it">Blufi</structure:Description>
+        <structure:Description xml:lang="en">Blufi</structure:Description>
+      </structure:Code>
+      <structure:Code value="083001" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Alcara li Fusi</structure:Description>
+        <structure:Description xml:lang="en">Alcara li Fusi</structure:Description>
+      </structure:Code>
+      <structure:Code value="083002" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Alì</structure:Description>
+        <structure:Description xml:lang="en">Alì</structure:Description>
+      </structure:Code>
+      <structure:Code value="083003" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Alì Terme</structure:Description>
+        <structure:Description xml:lang="en">Alì Terme</structure:Description>
+      </structure:Code>
+      <structure:Code value="083004" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Antillo</structure:Description>
+        <structure:Description xml:lang="en">Antillo</structure:Description>
+      </structure:Code>
+      <structure:Code value="083005" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Barcellona Pozzo di Gotto</structure:Description>
+        <structure:Description xml:lang="en">Barcellona Pozzo di Gotto</structure:Description>
+      </structure:Code>
+      <structure:Code value="083006" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Basicò</structure:Description>
+        <structure:Description xml:lang="en">Basicò</structure:Description>
+      </structure:Code>
+      <structure:Code value="083007" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Brolo</structure:Description>
+        <structure:Description xml:lang="en">Brolo</structure:Description>
+      </structure:Code>
+      <structure:Code value="083008" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Capizzi</structure:Description>
+        <structure:Description xml:lang="en">Capizzi</structure:Description>
+      </structure:Code>
+      <structure:Code value="083009" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Capo d'Orlando</structure:Description>
+        <structure:Description xml:lang="en">Capo d'Orlando</structure:Description>
+      </structure:Code>
+      <structure:Code value="083010" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Capri Leone</structure:Description>
+        <structure:Description xml:lang="en">Capri Leone</structure:Description>
+      </structure:Code>
+      <structure:Code value="083011" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Caronia</structure:Description>
+        <structure:Description xml:lang="en">Caronia</structure:Description>
+      </structure:Code>
+      <structure:Code value="083012" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Casalvecchio Siculo</structure:Description>
+        <structure:Description xml:lang="en">Casalvecchio Siculo</structure:Description>
+      </structure:Code>
+      <structure:Code value="083013" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Castel di Lucio</structure:Description>
+        <structure:Description xml:lang="en">Castel di Lucio</structure:Description>
+      </structure:Code>
+      <structure:Code value="083014" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Castell'Umberto</structure:Description>
+        <structure:Description xml:lang="en">Castell'Umberto</structure:Description>
+      </structure:Code>
+      <structure:Code value="083015" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Castelmola</structure:Description>
+        <structure:Description xml:lang="en">Castelmola</structure:Description>
+      </structure:Code>
+      <structure:Code value="083016" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Castroreale</structure:Description>
+        <structure:Description xml:lang="en">Castroreale</structure:Description>
+      </structure:Code>
+      <structure:Code value="083017" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Cesarò</structure:Description>
+        <structure:Description xml:lang="en">Cesarò</structure:Description>
+      </structure:Code>
+      <structure:Code value="083018" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Condrò</structure:Description>
+        <structure:Description xml:lang="en">Condrò</structure:Description>
+      </structure:Code>
+      <structure:Code value="083019" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Falcone</structure:Description>
+        <structure:Description xml:lang="en">Falcone</structure:Description>
+      </structure:Code>
+      <structure:Code value="083020" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Ficarra</structure:Description>
+        <structure:Description xml:lang="en">Ficarra</structure:Description>
+      </structure:Code>
+      <structure:Code value="083021" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Fiumedinisi</structure:Description>
+        <structure:Description xml:lang="en">Fiumedinisi</structure:Description>
+      </structure:Code>
+      <structure:Code value="083022" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Floresta</structure:Description>
+        <structure:Description xml:lang="en">Floresta</structure:Description>
+      </structure:Code>
+      <structure:Code value="083023" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Fondachelli-Fantina</structure:Description>
+        <structure:Description xml:lang="en">Fondachelli-Fantina</structure:Description>
+      </structure:Code>
+      <structure:Code value="083024" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Forza d'Agrò</structure:Description>
+        <structure:Description xml:lang="en">Forza d'Agrò</structure:Description>
+      </structure:Code>
+      <structure:Code value="083025" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Francavilla di Sicilia</structure:Description>
+        <structure:Description xml:lang="en">Francavilla di Sicilia</structure:Description>
+      </structure:Code>
+      <structure:Code value="083026" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Frazzanò</structure:Description>
+        <structure:Description xml:lang="en">Frazzanò</structure:Description>
+      </structure:Code>
+      <structure:Code value="083027" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Furci Siculo</structure:Description>
+        <structure:Description xml:lang="en">Furci Siculo</structure:Description>
+      </structure:Code>
+      <structure:Code value="083028" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Furnari</structure:Description>
+        <structure:Description xml:lang="en">Furnari</structure:Description>
+      </structure:Code>
+      <structure:Code value="083029" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Gaggi</structure:Description>
+        <structure:Description xml:lang="en">Gaggi</structure:Description>
+      </structure:Code>
+      <structure:Code value="083030" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Galati Mamertino</structure:Description>
+        <structure:Description xml:lang="en">Galati Mamertino</structure:Description>
+      </structure:Code>
+      <structure:Code value="083031" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Gallodoro</structure:Description>
+        <structure:Description xml:lang="en">Gallodoro</structure:Description>
+      </structure:Code>
+      <structure:Code value="083032" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Giardini-Naxos</structure:Description>
+        <structure:Description xml:lang="en">Giardini-Naxos</structure:Description>
+      </structure:Code>
+      <structure:Code value="083033" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Gioiosa Marea</structure:Description>
+        <structure:Description xml:lang="en">Gioiosa Marea</structure:Description>
+      </structure:Code>
+      <structure:Code value="083034" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Graniti</structure:Description>
+        <structure:Description xml:lang="en">Graniti</structure:Description>
+      </structure:Code>
+      <structure:Code value="083035" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Gualtieri Sicaminò</structure:Description>
+        <structure:Description xml:lang="en">Gualtieri Sicaminò</structure:Description>
+      </structure:Code>
+      <structure:Code value="083036" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Itala</structure:Description>
+        <structure:Description xml:lang="en">Itala</structure:Description>
+      </structure:Code>
+      <structure:Code value="083037" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Leni</structure:Description>
+        <structure:Description xml:lang="en">Leni</structure:Description>
+      </structure:Code>
+      <structure:Code value="083038" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Letojanni</structure:Description>
+        <structure:Description xml:lang="en">Letojanni</structure:Description>
+      </structure:Code>
+      <structure:Code value="083039" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Librizzi</structure:Description>
+        <structure:Description xml:lang="en">Librizzi</structure:Description>
+      </structure:Code>
+      <structure:Code value="083040" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Limina</structure:Description>
+        <structure:Description xml:lang="en">Limina</structure:Description>
+      </structure:Code>
+      <structure:Code value="083041" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Lipari</structure:Description>
+        <structure:Description xml:lang="en">Lipari</structure:Description>
+      </structure:Code>
+      <structure:Code value="083042" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Longi</structure:Description>
+        <structure:Description xml:lang="en">Longi</structure:Description>
+      </structure:Code>
+      <structure:Code value="083043" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Malfa</structure:Description>
+        <structure:Description xml:lang="en">Malfa</structure:Description>
+      </structure:Code>
+      <structure:Code value="083044" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Malvagna</structure:Description>
+        <structure:Description xml:lang="en">Malvagna</structure:Description>
+      </structure:Code>
+      <structure:Code value="083045" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Mandanici</structure:Description>
+        <structure:Description xml:lang="en">Mandanici</structure:Description>
+      </structure:Code>
+      <structure:Code value="083046" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Mazzarrà Sant'Andrea</structure:Description>
+        <structure:Description xml:lang="en">Mazzarrà Sant'Andrea</structure:Description>
+      </structure:Code>
+      <structure:Code value="083047" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Merì</structure:Description>
+        <structure:Description xml:lang="en">Merì</structure:Description>
+      </structure:Code>
+      <structure:Code value="083048" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Messina</structure:Description>
+        <structure:Description xml:lang="en">Messina</structure:Description>
+      </structure:Code>
+      <structure:Code value="083049" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Milazzo</structure:Description>
+        <structure:Description xml:lang="en">Milazzo</structure:Description>
+      </structure:Code>
+      <structure:Code value="083050" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Militello Rosmarino</structure:Description>
+        <structure:Description xml:lang="en">Militello Rosmarino</structure:Description>
+      </structure:Code>
+      <structure:Code value="083051" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Mirto</structure:Description>
+        <structure:Description xml:lang="en">Mirto</structure:Description>
+      </structure:Code>
+      <structure:Code value="083052" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Mistretta</structure:Description>
+        <structure:Description xml:lang="en">Mistretta</structure:Description>
+      </structure:Code>
+      <structure:Code value="083053" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Moio Alcantara</structure:Description>
+        <structure:Description xml:lang="en">Moio Alcantara</structure:Description>
+      </structure:Code>
+      <structure:Code value="083054" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Monforte San Giorgio</structure:Description>
+        <structure:Description xml:lang="en">Monforte San Giorgio</structure:Description>
+      </structure:Code>
+      <structure:Code value="083055" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Mongiuffi Melia</structure:Description>
+        <structure:Description xml:lang="en">Mongiuffi Melia</structure:Description>
+      </structure:Code>
+      <structure:Code value="083056" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Montagnareale</structure:Description>
+        <structure:Description xml:lang="en">Montagnareale</structure:Description>
+      </structure:Code>
+      <structure:Code value="083057" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Montalbano Elicona</structure:Description>
+        <structure:Description xml:lang="en">Montalbano Elicona</structure:Description>
+      </structure:Code>
+      <structure:Code value="083058" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Motta Camastra</structure:Description>
+        <structure:Description xml:lang="en">Motta Camastra</structure:Description>
+      </structure:Code>
+      <structure:Code value="083059" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Motta d'Affermo</structure:Description>
+        <structure:Description xml:lang="en">Motta d'Affermo</structure:Description>
+      </structure:Code>
+      <structure:Code value="083060" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Naso</structure:Description>
+        <structure:Description xml:lang="en">Naso</structure:Description>
+      </structure:Code>
+      <structure:Code value="083061" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Nizza di Sicilia</structure:Description>
+        <structure:Description xml:lang="en">Nizza di Sicilia</structure:Description>
+      </structure:Code>
+      <structure:Code value="083062" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Novara di Sicilia</structure:Description>
+        <structure:Description xml:lang="en">Novara di Sicilia</structure:Description>
+      </structure:Code>
+      <structure:Code value="083063" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Oliveri</structure:Description>
+        <structure:Description xml:lang="en">Oliveri</structure:Description>
+      </structure:Code>
+      <structure:Code value="083064" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Pace del Mela</structure:Description>
+        <structure:Description xml:lang="en">Pace del Mela</structure:Description>
+      </structure:Code>
+      <structure:Code value="083065" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Pagliara</structure:Description>
+        <structure:Description xml:lang="en">Pagliara</structure:Description>
+      </structure:Code>
+      <structure:Code value="083066" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Patti</structure:Description>
+        <structure:Description xml:lang="en">Patti</structure:Description>
+      </structure:Code>
+      <structure:Code value="083067" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Pettineo</structure:Description>
+        <structure:Description xml:lang="en">Pettineo</structure:Description>
+      </structure:Code>
+      <structure:Code value="083068" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Piraino</structure:Description>
+        <structure:Description xml:lang="en">Piraino</structure:Description>
+      </structure:Code>
+      <structure:Code value="083069" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Raccuja</structure:Description>
+        <structure:Description xml:lang="en">Raccuja</structure:Description>
+      </structure:Code>
+      <structure:Code value="083070" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Reitano</structure:Description>
+        <structure:Description xml:lang="en">Reitano</structure:Description>
+      </structure:Code>
+      <structure:Code value="083071" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Roccafiorita</structure:Description>
+        <structure:Description xml:lang="en">Roccafiorita</structure:Description>
+      </structure:Code>
+      <structure:Code value="083072" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Roccalumera</structure:Description>
+        <structure:Description xml:lang="en">Roccalumera</structure:Description>
+      </structure:Code>
+      <structure:Code value="083073" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Roccavaldina</structure:Description>
+        <structure:Description xml:lang="en">Roccavaldina</structure:Description>
+      </structure:Code>
+      <structure:Code value="083074" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Roccella Valdemone</structure:Description>
+        <structure:Description xml:lang="en">Roccella Valdemone</structure:Description>
+      </structure:Code>
+      <structure:Code value="083075" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Rodì Milici</structure:Description>
+        <structure:Description xml:lang="en">Rodì Milici</structure:Description>
+      </structure:Code>
+      <structure:Code value="083076" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Rometta</structure:Description>
+        <structure:Description xml:lang="en">Rometta</structure:Description>
+      </structure:Code>
+      <structure:Code value="083077" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">San Filippo del Mela</structure:Description>
+        <structure:Description xml:lang="en">San Filippo del Mela</structure:Description>
+      </structure:Code>
+      <structure:Code value="083078" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">San Fratello</structure:Description>
+        <structure:Description xml:lang="en">San Fratello</structure:Description>
+      </structure:Code>
+      <structure:Code value="083079" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">San Marco d'Alunzio</structure:Description>
+        <structure:Description xml:lang="en">San Marco d'Alunzio</structure:Description>
+      </structure:Code>
+      <structure:Code value="083080" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">San Pier Niceto</structure:Description>
+        <structure:Description xml:lang="en">San Pier Niceto</structure:Description>
+      </structure:Code>
+      <structure:Code value="083081" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">San Piero Patti</structure:Description>
+        <structure:Description xml:lang="en">San Piero Patti</structure:Description>
+      </structure:Code>
+      <structure:Code value="083082" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">San Salvatore di Fitalia</structure:Description>
+        <structure:Description xml:lang="en">San Salvatore di Fitalia</structure:Description>
+      </structure:Code>
+      <structure:Code value="083083" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Santa Domenica Vittoria</structure:Description>
+        <structure:Description xml:lang="en">Santa Domenica Vittoria</structure:Description>
+      </structure:Code>
+      <structure:Code value="083084" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Sant'Agata di Militello</structure:Description>
+        <structure:Description xml:lang="en">Sant'Agata di Militello</structure:Description>
+      </structure:Code>
+      <structure:Code value="083085" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Sant'Alessio Siculo</structure:Description>
+        <structure:Description xml:lang="en">Sant'Alessio Siculo</structure:Description>
+      </structure:Code>
+      <structure:Code value="083086" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Santa Lucia del Mela</structure:Description>
+        <structure:Description xml:lang="en">Santa Lucia del Mela</structure:Description>
+      </structure:Code>
+      <structure:Code value="083087" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Santa Marina Salina</structure:Description>
+        <structure:Description xml:lang="en">Santa Marina Salina</structure:Description>
+      </structure:Code>
+      <structure:Code value="083088" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Sant'Angelo di Brolo</structure:Description>
+        <structure:Description xml:lang="en">Sant'Angelo di Brolo</structure:Description>
+      </structure:Code>
+      <structure:Code value="083089" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Santa Teresa di Riva</structure:Description>
+        <structure:Description xml:lang="en">Santa Teresa di Riva</structure:Description>
+      </structure:Code>
+      <structure:Code value="083090" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">San Teodoro</structure:Description>
+        <structure:Description xml:lang="en">San Teodoro</structure:Description>
+      </structure:Code>
+      <structure:Code value="083091" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Santo Stefano di Camastra</structure:Description>
+        <structure:Description xml:lang="en">Santo Stefano di Camastra</structure:Description>
+      </structure:Code>
+      <structure:Code value="083092" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Saponara</structure:Description>
+        <structure:Description xml:lang="en">Saponara</structure:Description>
+      </structure:Code>
+      <structure:Code value="083093" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Savoca</structure:Description>
+        <structure:Description xml:lang="en">Savoca</structure:Description>
+      </structure:Code>
+      <structure:Code value="083094" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Scaletta Zanclea</structure:Description>
+        <structure:Description xml:lang="en">Scaletta Zanclea</structure:Description>
+      </structure:Code>
+      <structure:Code value="083095" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Sinagra</structure:Description>
+        <structure:Description xml:lang="en">Sinagra</structure:Description>
+      </structure:Code>
+      <structure:Code value="083096" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Spadafora</structure:Description>
+        <structure:Description xml:lang="en">Spadafora</structure:Description>
+      </structure:Code>
+      <structure:Code value="083097" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Taormina</structure:Description>
+        <structure:Description xml:lang="en">Taormina</structure:Description>
+      </structure:Code>
+      <structure:Code value="083098" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Torregrotta</structure:Description>
+        <structure:Description xml:lang="en">Torregrotta</structure:Description>
+      </structure:Code>
+      <structure:Code value="083099" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Tortorici</structure:Description>
+        <structure:Description xml:lang="en">Tortorici</structure:Description>
+      </structure:Code>
+      <structure:Code value="083100" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Tripi</structure:Description>
+        <structure:Description xml:lang="en">Tripi</structure:Description>
+      </structure:Code>
+      <structure:Code value="083101" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Tusa</structure:Description>
+        <structure:Description xml:lang="en">Tusa</structure:Description>
+      </structure:Code>
+      <structure:Code value="083102" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Ucria</structure:Description>
+        <structure:Description xml:lang="en">Ucria</structure:Description>
+      </structure:Code>
+      <structure:Code value="083103" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Valdina</structure:Description>
+        <structure:Description xml:lang="en">Valdina</structure:Description>
+      </structure:Code>
+      <structure:Code value="083104" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Venetico</structure:Description>
+        <structure:Description xml:lang="en">Venetico</structure:Description>
+      </structure:Code>
+      <structure:Code value="083105" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Villafranca Tirrena</structure:Description>
+        <structure:Description xml:lang="en">Villafranca Tirrena</structure:Description>
+      </structure:Code>
+      <structure:Code value="083106" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Terme Vigliatore</structure:Description>
+        <structure:Description xml:lang="en">Terme Vigliatore</structure:Description>
+      </structure:Code>
+      <structure:Code value="083107" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Acquedolci</structure:Description>
+        <structure:Description xml:lang="en">Acquedolci</structure:Description>
+      </structure:Code>
+      <structure:Code value="083108" parentCode="ITG13" urn="">
+        <structure:Description xml:lang="it">Torrenova</structure:Description>
+        <structure:Description xml:lang="en">Torrenova</structure:Description>
+      </structure:Code>
+      <structure:Code value="084001" parentCode="ITG14" urn="">
+        <structure:Description xml:lang="it">Agrigento</structure:Description>
+        <structure:Description xml:lang="en">Agrigento</structure:Description>
+      </structure:Code>
+      <structure:Code value="084002" parentCode="ITG14" urn="">
+        <structure:Description xml:lang="it">Alessandria della Rocca</structure:Description>
+        <structure:Description xml:lang="en">Alessandria della Rocca</structure:Description>
+      </structure:Code>
+      <structure:Code value="084003" parentCode="ITG14" urn="">
+        <structure:Description xml:lang="it">Aragona</structure:Description>
+        <structure:Description xml:lang="en">Aragona</structure:Description>
+      </structure:Code>
+      <structure:Code value="084004" parentCode="ITG14" urn="">
+        <structure:Description xml:lang="it">Bivona</structure:Description>
+        <structure:Description xml:lang="en">Bivona</structure:Description>
+      </structure:Code>
+      <structure:Code value="084005" parentCode="ITG14" urn="">
+        <structure:Description xml:lang="it">Burgio</structure:Description>
+        <structure:Description xml:lang="en">Burgio</structure:Description>
+      </structure:Code>
+      <structure:Code value="084006" parentCode="ITG14" urn="">
+        <structure:Description xml:lang="it">Calamonaci</structure:Description>
+        <structure:Description xml:lang="en">Calamonaci</structure:Description>
+      </structure:Code>
+      <structure:Code value="084007" parentCode="ITG14" urn="">
+        <structure:Description xml:lang="it">Caltabellotta</structure:Description>
+        <structure:Description xml:lang="en">Caltabellotta</structure:Description>
+      </structure:Code>
+      <structure:Code value="084008" parentCode="ITG14" urn="">
+        <structure:Description xml:lang="it">Camastra</structure:Description>
+        <structure:Description xml:lang="en">Camastra</structure:Description>
+      </structure:Code>
+      <structure:Code value="084009" parentCode="ITG14" urn="">
+        <structure:Description xml:lang="it">Cammarata</structure:Description>
+        <structure:Description xml:lang="en">Cammarata</structure:Description>
+      </structure:Code>
+      <structure:Code value="084010" parentCode="ITG14" urn="">
+        <structure:Description xml:lang="it">Campobello di Licata</structure:Description>
+        <structure:Description xml:lang="en">Campobello di Licata</structure:Description>
+      </structure:Code>
+      <structure:Code value="084011" parentCode="ITG14" urn="">
+        <structure:Description xml:lang="it">Canicattì</structure:Description>
+        <structure:Description xml:lang="en">Canicattì</structure:Description>
+      </structure:Code>
+      <structure:Code value="084012" parentCode="ITG14" urn="">
+        <structure:Description xml:lang="it">Casteltermini</structure:Description>
+        <structure:Description xml:lang="en">Casteltermini</structure:Description>
+      </structure:Code>
+      <structure:Code value="084013" parentCode="ITG14" urn="">
+        <structure:Description xml:lang="it">Castrofilippo</structure:Description>
+        <structure:Description xml:lang="en">Castrofilippo</structure:Description>
+      </structure:Code>
+      <structure:Code value="084014" parentCode="ITG14" urn="">
+        <structure:Description xml:lang="it">Cattolica Eraclea</structure:Description>
+        <structure:Description xml:lang="en">Cattolica Eraclea</structure:Description>
+      </structure:Code>
+      <structure:Code value="084015" parentCode="ITG14" urn="">
+        <structure:Description xml:lang="it">Cianciana</structure:Description>
+        <structure:Description xml:lang="en">Cianciana</structure:Description>
+      </structure:Code>
+      <structure:Code value="084016" parentCode="ITG14" urn="">
+        <structure:Description xml:lang="it">Comitini</structure:Description>
+        <structure:Description xml:lang="en">Comitini</structure:Description>
+      </structure:Code>
+      <structure:Code value="084017" parentCode="ITG14" urn="">
+        <structure:Description xml:lang="it">Favara</structure:Description>
+        <structure:Description xml:lang="en">Favara</structure:Description>
+      </structure:Code>
+      <structure:Code value="084018" parentCode="ITG14" urn="">
+        <structure:Description xml:lang="it">Grotte</structure:Description>
+        <structure:Description xml:lang="en">Grotte</structure:Description>
+      </structure:Code>
+      <structure:Code value="084019" parentCode="ITG14" urn="">
+        <structure:Description xml:lang="it">Joppolo Giancaxio</structure:Description>
+        <structure:Description xml:lang="en">Joppolo Giancaxio</structure:Description>
+      </structure:Code>
+      <structure:Code value="084020" parentCode="ITG14" urn="">
+        <structure:Description xml:lang="it">Lampedusa e Linosa</structure:Description>
+        <structure:Description xml:lang="en">Lampedusa e Linosa</structure:Description>
+      </structure:Code>
+      <structure:Code value="084021" parentCode="ITG14" urn="">
+        <structure:Description xml:lang="it">Licata</structure:Description>
+        <structure:Description xml:lang="en">Licata</structure:Description>
+      </structure:Code>
+      <structure:Code value="084022" parentCode="ITG14" urn="">
+        <structure:Description xml:lang="it">Lucca Sicula</structure:Description>
+        <structure:Description xml:lang="en">Lucca Sicula</structure:Description>
+      </structure:Code>
+      <structure:Code value="084023" parentCode="ITG14" urn="">
+        <structure:Description xml:lang="it">Menfi</structure:Description>
+        <structure:Description xml:lang="en">Menfi</structure:Description>
+      </structure:Code>
+      <structure:Code value="084024" parentCode="ITG14" urn="">
+        <structure:Description xml:lang="it">Montallegro</structure:Description>
+        <structure:Description xml:lang="en">Montallegro</structure:Description>
+      </structure:Code>
+      <structure:Code value="084025" parentCode="ITG14" urn="">
+        <structure:Description xml:lang="it">Montevago</structure:Description>
+        <structure:Description xml:lang="en">Montevago</structure:Description>
+      </structure:Code>
+      <structure:Code value="084026" parentCode="ITG14" urn="">
+        <structure:Description xml:lang="it">Naro</structure:Description>
+        <structure:Description xml:lang="en">Naro</structure:Description>
+      </structure:Code>
+      <structure:Code value="084027" parentCode="ITG14" urn="">
+        <structure:Description xml:lang="it">Palma di Montechiaro</structure:Description>
+        <structure:Description xml:lang="en">Palma di Montechiaro</structure:Description>
+      </structure:Code>
+      <structure:Code value="084028" parentCode="ITG14" urn="">
+        <structure:Description xml:lang="it">Porto Empedocle</structure:Description>
+        <structure:Description xml:lang="en">Porto Empedocle</structure:Description>
+      </structure:Code>
+      <structure:Code value="084029" parentCode="ITG14" urn="">
+        <structure:Description xml:lang="it">Racalmuto</structure:Description>
+        <structure:Description xml:lang="en">Racalmuto</structure:Description>
+      </structure:Code>
+      <structure:Code value="084030" parentCode="ITG14" urn="">
+        <structure:Description xml:lang="it">Raffadali</structure:Description>
+        <structure:Description xml:lang="en">Raffadali</structure:Description>
+      </structure:Code>
+      <structure:Code value="084031" parentCode="ITG14" urn="">
+        <structure:Description xml:lang="it">Ravanusa</structure:Description>
+        <structure:Description xml:lang="en">Ravanusa</structure:Description>
+      </structure:Code>
+      <structure:Code value="084032" parentCode="ITG14" urn="">
+        <structure:Description xml:lang="it">Realmonte</structure:Description>
+        <structure:Description xml:lang="en">Realmonte</structure:Description>
+      </structure:Code>
+      <structure:Code value="084033" parentCode="ITG14" urn="">
+        <structure:Description xml:lang="it">Ribera</structure:Description>
+        <structure:Description xml:lang="en">Ribera</structure:Description>
+      </structure:Code>
+      <structure:Code value="084034" parentCode="ITG14" urn="">
+        <structure:Description xml:lang="it">Sambuca di Sicilia</structure:Description>
+        <structure:Description xml:lang="en">Sambuca di Sicilia</structure:Description>
+      </structure:Code>
+      <structure:Code value="084035" parentCode="ITG14" urn="">
+        <structure:Description xml:lang="it">San Biagio Platani</structure:Description>
+        <structure:Description xml:lang="en">San Biagio Platani</structure:Description>
+      </structure:Code>
+      <structure:Code value="084036" parentCode="ITG14" urn="">
+        <structure:Description xml:lang="it">San Giovanni Gemini</structure:Description>
+        <structure:Description xml:lang="en">San Giovanni Gemini</structure:Description>
+      </structure:Code>
+      <structure:Code value="084037" parentCode="ITG14" urn="">
+        <structure:Description xml:lang="it">Santa Elisabetta</structure:Description>
+        <structure:Description xml:lang="en">Santa Elisabetta</structure:Description>
+      </structure:Code>
+      <structure:Code value="084038" parentCode="ITG14" urn="">
+        <structure:Description xml:lang="it">Santa Margherita di Belice</structure:Description>
+        <structure:Description xml:lang="en">Santa Margherita di Belice</structure:Description>
+      </structure:Code>
+      <structure:Code value="084039" parentCode="ITG14" urn="">
+        <structure:Description xml:lang="it">Sant'Angelo Muxaro</structure:Description>
+        <structure:Description xml:lang="en">Sant'Angelo Muxaro</structure:Description>
+      </structure:Code>
+      <structure:Code value="084040" parentCode="ITG14" urn="">
+        <structure:Description xml:lang="it">Santo Stefano Quisquina</structure:Description>
+        <structure:Description xml:lang="en">Santo Stefano Quisquina</structure:Description>
+      </structure:Code>
+      <structure:Code value="084041" parentCode="ITG14" urn="">
+        <structure:Description xml:lang="it">Sciacca</structure:Description>
+        <structure:Description xml:lang="en">Sciacca</structure:Description>
+      </structure:Code>
+      <structure:Code value="084042" parentCode="ITG14" urn="">
+        <structure:Description xml:lang="it">Siculiana</structure:Description>
+        <structure:Description xml:lang="en">Siculiana</structure:Description>
+      </structure:Code>
+      <structure:Code value="084043" parentCode="ITG14" urn="">
+        <structure:Description xml:lang="it">Villafranca Sicula</structure:Description>
+        <structure:Description xml:lang="en">Villafranca Sicula</structure:Description>
+      </structure:Code>
+      <structure:Code value="085001" parentCode="ITG15" urn="">
+        <structure:Description xml:lang="it">Acquaviva Platani</structure:Description>
+        <structure:Description xml:lang="en">Acquaviva Platani</structure:Description>
+      </structure:Code>
+      <structure:Code value="085002" parentCode="ITG15" urn="">
+        <structure:Description xml:lang="it">Bompensiere</structure:Description>
+        <structure:Description xml:lang="en">Bompensiere</structure:Description>
+      </structure:Code>
+      <structure:Code value="085003" parentCode="ITG15" urn="">
+        <structure:Description xml:lang="it">Butera</structure:Description>
+        <structure:Description xml:lang="en">Butera</structure:Description>
+      </structure:Code>
+      <structure:Code value="085004" parentCode="ITG15" urn="">
+        <structure:Description xml:lang="it">Caltanissetta</structure:Description>
+        <structure:Description xml:lang="en">Caltanissetta</structure:Description>
+      </structure:Code>
+      <structure:Code value="085005" parentCode="ITG15" urn="">
+        <structure:Description xml:lang="it">Campofranco</structure:Description>
+        <structure:Description xml:lang="en">Campofranco</structure:Description>
+      </structure:Code>
+      <structure:Code value="085006" parentCode="ITG15" urn="">
+        <structure:Description xml:lang="it">Delia</structure:Description>
+        <structure:Description xml:lang="en">Delia</structure:Description>
+      </structure:Code>
+      <structure:Code value="085007" parentCode="ITG15" urn="">
+        <structure:Description xml:lang="it">Gela</structure:Description>
+        <structure:Description xml:lang="en">Gela</structure:Description>
+      </structure:Code>
+      <structure:Code value="085008" parentCode="ITG15" urn="">
+        <structure:Description xml:lang="it">Marianopoli</structure:Description>
+        <structure:Description xml:lang="en">Marianopoli</structure:Description>
+      </structure:Code>
+      <structure:Code value="085009" parentCode="ITG15" urn="">
+        <structure:Description xml:lang="it">Mazzarino</structure:Description>
+        <structure:Description xml:lang="en">Mazzarino</structure:Description>
+      </structure:Code>
+      <structure:Code value="085010" parentCode="ITG15" urn="">
+        <structure:Description xml:lang="it">Milena</structure:Description>
+        <structure:Description xml:lang="en">Milena</structure:Description>
+      </structure:Code>
+      <structure:Code value="085011" parentCode="ITG15" urn="">
+        <structure:Description xml:lang="it">Montedoro</structure:Description>
+        <structure:Description xml:lang="en">Montedoro</structure:Description>
+      </structure:Code>
+      <structure:Code value="085012" parentCode="ITG15" urn="">
+        <structure:Description xml:lang="it">Mussomeli</structure:Description>
+        <structure:Description xml:lang="en">Mussomeli</structure:Description>
+      </structure:Code>
+      <structure:Code value="085013" parentCode="ITG15" urn="">
+        <structure:Description xml:lang="it">Niscemi</structure:Description>
+        <structure:Description xml:lang="en">Niscemi</structure:Description>
+      </structure:Code>
+      <structure:Code value="085014" parentCode="ITG15" urn="">
+        <structure:Description xml:lang="it">Resuttano</structure:Description>
+        <structure:Description xml:lang="en">Resuttano</structure:Description>
+      </structure:Code>
+      <structure:Code value="085015" parentCode="ITG15" urn="">
+        <structure:Description xml:lang="it">Riesi</structure:Description>
+        <structure:Description xml:lang="en">Riesi</structure:Description>
+      </structure:Code>
+      <structure:Code value="085016" parentCode="ITG15" urn="">
+        <structure:Description xml:lang="it">San Cataldo</structure:Description>
+        <structure:Description xml:lang="en">San Cataldo</structure:Description>
+      </structure:Code>
+      <structure:Code value="085017" parentCode="ITG15" urn="">
+        <structure:Description xml:lang="it">Santa Caterina Villarmosa</structure:Description>
+        <structure:Description xml:lang="en">Santa Caterina Villarmosa</structure:Description>
+      </structure:Code>
+      <structure:Code value="085018" parentCode="ITG15" urn="">
+        <structure:Description xml:lang="it">Serradifalco</structure:Description>
+        <structure:Description xml:lang="en">Serradifalco</structure:Description>
+      </structure:Code>
+      <structure:Code value="085019" parentCode="ITG15" urn="">
+        <structure:Description xml:lang="it">Sommatino</structure:Description>
+        <structure:Description xml:lang="en">Sommatino</structure:Description>
+      </structure:Code>
+      <structure:Code value="085020" parentCode="ITG15" urn="">
+        <structure:Description xml:lang="it">Sutera</structure:Description>
+        <structure:Description xml:lang="en">Sutera</structure:Description>
+      </structure:Code>
+      <structure:Code value="085021" parentCode="ITG15" urn="">
+        <structure:Description xml:lang="it">Vallelunga Pratameno</structure:Description>
+        <structure:Description xml:lang="en">Vallelunga Pratameno</structure:Description>
+      </structure:Code>
+      <structure:Code value="085022" parentCode="ITG15" urn="">
+        <structure:Description xml:lang="it">Villalba</structure:Description>
+        <structure:Description xml:lang="en">Villalba</structure:Description>
+      </structure:Code>
+      <structure:Code value="086001" parentCode="ITG16" urn="">
+        <structure:Description xml:lang="it">Agira</structure:Description>
+        <structure:Description xml:lang="en">Agira</structure:Description>
+      </structure:Code>
+      <structure:Code value="086002" parentCode="ITG16" urn="">
+        <structure:Description xml:lang="it">Aidone</structure:Description>
+        <structure:Description xml:lang="en">Aidone</structure:Description>
+      </structure:Code>
+      <structure:Code value="086003" parentCode="ITG16" urn="">
+        <structure:Description xml:lang="it">Assoro</structure:Description>
+        <structure:Description xml:lang="en">Assoro</structure:Description>
+      </structure:Code>
+      <structure:Code value="086004" parentCode="ITG16" urn="">
+        <structure:Description xml:lang="it">Barrafranca</structure:Description>
+        <structure:Description xml:lang="en">Barrafranca</structure:Description>
+      </structure:Code>
+      <structure:Code value="086005" parentCode="ITG16" urn="">
+        <structure:Description xml:lang="it">Calascibetta</structure:Description>
+        <structure:Description xml:lang="en">Calascibetta</structure:Description>
+      </structure:Code>
+      <structure:Code value="086006" parentCode="ITG16" urn="">
+        <structure:Description xml:lang="it">Catenanuova</structure:Description>
+        <structure:Description xml:lang="en">Catenanuova</structure:Description>
+      </structure:Code>
+      <structure:Code value="086007" parentCode="ITG16" urn="">
+        <structure:Description xml:lang="it">Centuripe</structure:Description>
+        <structure:Description xml:lang="en">Centuripe</structure:Description>
+      </structure:Code>
+      <structure:Code value="086008" parentCode="ITG16" urn="">
+        <structure:Description xml:lang="it">Cerami</structure:Description>
+        <structure:Description xml:lang="en">Cerami</structure:Description>
+      </structure:Code>
+      <structure:Code value="086009" parentCode="ITG16" urn="">
+        <structure:Description xml:lang="it">Enna</structure:Description>
+        <structure:Description xml:lang="en">Enna</structure:Description>
+      </structure:Code>
+      <structure:Code value="086010" parentCode="ITG16" urn="">
+        <structure:Description xml:lang="it">Gagliano Castelferrato</structure:Description>
+        <structure:Description xml:lang="en">Gagliano Castelferrato</structure:Description>
+      </structure:Code>
+      <structure:Code value="086011" parentCode="ITG16" urn="">
+        <structure:Description xml:lang="it">Leonforte</structure:Description>
+        <structure:Description xml:lang="en">Leonforte</structure:Description>
+      </structure:Code>
+      <structure:Code value="086012" parentCode="ITG16" urn="">
+        <structure:Description xml:lang="it">Nicosia</structure:Description>
+        <structure:Description xml:lang="en">Nicosia</structure:Description>
+      </structure:Code>
+      <structure:Code value="086013" parentCode="ITG16" urn="">
+        <structure:Description xml:lang="it">Nissoria</structure:Description>
+        <structure:Description xml:lang="en">Nissoria</structure:Description>
+      </structure:Code>
+      <structure:Code value="086014" parentCode="ITG16" urn="">
+        <structure:Description xml:lang="it">Piazza Armerina</structure:Description>
+        <structure:Description xml:lang="en">Piazza Armerina</structure:Description>
+      </structure:Code>
+      <structure:Code value="086015" parentCode="ITG16" urn="">
+        <structure:Description xml:lang="it">Pietraperzia</structure:Description>
+        <structure:Description xml:lang="en">Pietraperzia</structure:Description>
+      </structure:Code>
+      <structure:Code value="086016" parentCode="ITG16" urn="">
+        <structure:Description xml:lang="it">Regalbuto</structure:Description>
+        <structure:Description xml:lang="en">Regalbuto</structure:Description>
+      </structure:Code>
+      <structure:Code value="086017" parentCode="ITG16" urn="">
+        <structure:Description xml:lang="it">Sperlinga</structure:Description>
+        <structure:Description xml:lang="en">Sperlinga</structure:Description>
+      </structure:Code>
+      <structure:Code value="086018" parentCode="ITG16" urn="">
+        <structure:Description xml:lang="it">Troina</structure:Description>
+        <structure:Description xml:lang="en">Troina</structure:Description>
+      </structure:Code>
+      <structure:Code value="086019" parentCode="ITG16" urn="">
+        <structure:Description xml:lang="it">Valguarnera Caropepe</structure:Description>
+        <structure:Description xml:lang="en">Valguarnera Caropepe</structure:Description>
+      </structure:Code>
+      <structure:Code value="086020" parentCode="ITG16" urn="">
+        <structure:Description xml:lang="it">Villarosa</structure:Description>
+        <structure:Description xml:lang="en">Villarosa</structure:Description>
+      </structure:Code>
+      <structure:Code value="087001" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Aci Bonaccorsi</structure:Description>
+        <structure:Description xml:lang="en">Aci Bonaccorsi</structure:Description>
+      </structure:Code>
+      <structure:Code value="087002" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Aci Castello</structure:Description>
+        <structure:Description xml:lang="en">Aci Castello</structure:Description>
+      </structure:Code>
+      <structure:Code value="087003" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Aci Catena</structure:Description>
+        <structure:Description xml:lang="en">Aci Catena</structure:Description>
+      </structure:Code>
+      <structure:Code value="087004" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Acireale</structure:Description>
+        <structure:Description xml:lang="en">Acireale</structure:Description>
+      </structure:Code>
+      <structure:Code value="087005" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Aci Sant'Antonio</structure:Description>
+        <structure:Description xml:lang="en">Aci Sant'Antonio</structure:Description>
+      </structure:Code>
+      <structure:Code value="087006" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Adrano</structure:Description>
+        <structure:Description xml:lang="en">Adrano</structure:Description>
+      </structure:Code>
+      <structure:Code value="087007" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Belpasso</structure:Description>
+        <structure:Description xml:lang="en">Belpasso</structure:Description>
+      </structure:Code>
+      <structure:Code value="087008" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Biancavilla</structure:Description>
+        <structure:Description xml:lang="en">Biancavilla</structure:Description>
+      </structure:Code>
+      <structure:Code value="087009" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Bronte</structure:Description>
+        <structure:Description xml:lang="en">Bronte</structure:Description>
+      </structure:Code>
+      <structure:Code value="087010" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Calatabiano</structure:Description>
+        <structure:Description xml:lang="en">Calatabiano</structure:Description>
+      </structure:Code>
+      <structure:Code value="087011" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Caltagirone</structure:Description>
+        <structure:Description xml:lang="en">Caltagirone</structure:Description>
+      </structure:Code>
+      <structure:Code value="087012" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Camporotondo Etneo</structure:Description>
+        <structure:Description xml:lang="en">Camporotondo Etneo</structure:Description>
+      </structure:Code>
+      <structure:Code value="087013" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Castel di Iudica</structure:Description>
+        <structure:Description xml:lang="en">Castel di Iudica</structure:Description>
+      </structure:Code>
+      <structure:Code value="087014" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Castiglione di Sicilia</structure:Description>
+        <structure:Description xml:lang="en">Castiglione di Sicilia</structure:Description>
+      </structure:Code>
+      <structure:Code value="087015" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Catania</structure:Description>
+        <structure:Description xml:lang="en">Catania</structure:Description>
+      </structure:Code>
+      <structure:Code value="087016" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Fiumefreddo di Sicilia</structure:Description>
+        <structure:Description xml:lang="en">Fiumefreddo di Sicilia</structure:Description>
+      </structure:Code>
+      <structure:Code value="087017" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Giarre</structure:Description>
+        <structure:Description xml:lang="en">Giarre</structure:Description>
+      </structure:Code>
+      <structure:Code value="087018" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Grammichele</structure:Description>
+        <structure:Description xml:lang="en">Grammichele</structure:Description>
+      </structure:Code>
+      <structure:Code value="087019" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Gravina di Catania</structure:Description>
+        <structure:Description xml:lang="en">Gravina di Catania</structure:Description>
+      </structure:Code>
+      <structure:Code value="087020" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Licodia Eubea</structure:Description>
+        <structure:Description xml:lang="en">Licodia Eubea</structure:Description>
+      </structure:Code>
+      <structure:Code value="087021" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Linguaglossa</structure:Description>
+        <structure:Description xml:lang="en">Linguaglossa</structure:Description>
+      </structure:Code>
+      <structure:Code value="087022" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Maletto</structure:Description>
+        <structure:Description xml:lang="en">Maletto</structure:Description>
+      </structure:Code>
+      <structure:Code value="087023" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Mascali</structure:Description>
+        <structure:Description xml:lang="en">Mascali</structure:Description>
+      </structure:Code>
+      <structure:Code value="087024" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Mascalucia</structure:Description>
+        <structure:Description xml:lang="en">Mascalucia</structure:Description>
+      </structure:Code>
+      <structure:Code value="087025" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Militello in Val di Catania</structure:Description>
+        <structure:Description xml:lang="en">Militello in Val di Catania</structure:Description>
+      </structure:Code>
+      <structure:Code value="087026" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Milo</structure:Description>
+        <structure:Description xml:lang="en">Milo</structure:Description>
+      </structure:Code>
+      <structure:Code value="087027" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Mineo</structure:Description>
+        <structure:Description xml:lang="en">Mineo</structure:Description>
+      </structure:Code>
+      <structure:Code value="087028" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Mirabella Imbaccari</structure:Description>
+        <structure:Description xml:lang="en">Mirabella Imbaccari</structure:Description>
+      </structure:Code>
+      <structure:Code value="087029" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Misterbianco</structure:Description>
+        <structure:Description xml:lang="en">Misterbianco</structure:Description>
+      </structure:Code>
+      <structure:Code value="087030" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Motta Sant'Anastasia</structure:Description>
+        <structure:Description xml:lang="en">Motta Sant'Anastasia</structure:Description>
+      </structure:Code>
+      <structure:Code value="087031" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Nicolosi</structure:Description>
+        <structure:Description xml:lang="en">Nicolosi</structure:Description>
+      </structure:Code>
+      <structure:Code value="087032" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Palagonia</structure:Description>
+        <structure:Description xml:lang="en">Palagonia</structure:Description>
+      </structure:Code>
+      <structure:Code value="087033" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Paternò</structure:Description>
+        <structure:Description xml:lang="en">Paternò</structure:Description>
+      </structure:Code>
+      <structure:Code value="087034" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Pedara</structure:Description>
+        <structure:Description xml:lang="en">Pedara</structure:Description>
+      </structure:Code>
+      <structure:Code value="087035" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Piedimonte Etneo</structure:Description>
+        <structure:Description xml:lang="en">Piedimonte Etneo</structure:Description>
+      </structure:Code>
+      <structure:Code value="087036" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Raddusa</structure:Description>
+        <structure:Description xml:lang="en">Raddusa</structure:Description>
+      </structure:Code>
+      <structure:Code value="087037" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Ramacca</structure:Description>
+        <structure:Description xml:lang="en">Ramacca</structure:Description>
+      </structure:Code>
+      <structure:Code value="087038" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Randazzo</structure:Description>
+        <structure:Description xml:lang="en">Randazzo</structure:Description>
+      </structure:Code>
+      <structure:Code value="087039" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Riposto</structure:Description>
+        <structure:Description xml:lang="en">Riposto</structure:Description>
+      </structure:Code>
+      <structure:Code value="087040" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">San Cono</structure:Description>
+        <structure:Description xml:lang="en">San Cono</structure:Description>
+      </structure:Code>
+      <structure:Code value="087041" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">San Giovanni la Punta</structure:Description>
+        <structure:Description xml:lang="en">San Giovanni la Punta</structure:Description>
+      </structure:Code>
+      <structure:Code value="087042" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">San Gregorio di Catania</structure:Description>
+        <structure:Description xml:lang="en">San Gregorio di Catania</structure:Description>
+      </structure:Code>
+      <structure:Code value="087043" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">San Michele di Ganzaria</structure:Description>
+        <structure:Description xml:lang="en">San Michele di Ganzaria</structure:Description>
+      </structure:Code>
+      <structure:Code value="087044" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">San Pietro Clarenza</structure:Description>
+        <structure:Description xml:lang="en">San Pietro Clarenza</structure:Description>
+      </structure:Code>
+      <structure:Code value="087045" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Sant'Agata li Battiati</structure:Description>
+        <structure:Description xml:lang="en">Sant'Agata li Battiati</structure:Description>
+      </structure:Code>
+      <structure:Code value="087046" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Sant'Alfio</structure:Description>
+        <structure:Description xml:lang="en">Sant'Alfio</structure:Description>
+      </structure:Code>
+      <structure:Code value="087047" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Santa Maria di Licodia</structure:Description>
+        <structure:Description xml:lang="en">Santa Maria di Licodia</structure:Description>
+      </structure:Code>
+      <structure:Code value="087048" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Santa Venerina</structure:Description>
+        <structure:Description xml:lang="en">Santa Venerina</structure:Description>
+      </structure:Code>
+      <structure:Code value="087049" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Scordia</structure:Description>
+        <structure:Description xml:lang="en">Scordia</structure:Description>
+      </structure:Code>
+      <structure:Code value="087050" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Trecastagni</structure:Description>
+        <structure:Description xml:lang="en">Trecastagni</structure:Description>
+      </structure:Code>
+      <structure:Code value="087051" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Tremestieri Etneo</structure:Description>
+        <structure:Description xml:lang="en">Tremestieri Etneo</structure:Description>
+      </structure:Code>
+      <structure:Code value="087052" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Valverde</structure:Description>
+        <structure:Description xml:lang="en">Valverde</structure:Description>
+      </structure:Code>
+      <structure:Code value="087053" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Viagrande</structure:Description>
+        <structure:Description xml:lang="en">Viagrande</structure:Description>
+      </structure:Code>
+      <structure:Code value="087054" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Vizzini</structure:Description>
+        <structure:Description xml:lang="en">Vizzini</structure:Description>
+      </structure:Code>
+      <structure:Code value="087055" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Zafferana Etnea</structure:Description>
+        <structure:Description xml:lang="en">Zafferana Etnea</structure:Description>
+      </structure:Code>
+      <structure:Code value="087056" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Mazzarrone</structure:Description>
+        <structure:Description xml:lang="en">Mazzarrone</structure:Description>
+      </structure:Code>
+      <structure:Code value="087057" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Maniace</structure:Description>
+        <structure:Description xml:lang="en">Maniace</structure:Description>
+      </structure:Code>
+      <structure:Code value="087058" parentCode="ITG17" urn="">
+        <structure:Description xml:lang="it">Ragalna</structure:Description>
+        <structure:Description xml:lang="en">Ragalna</structure:Description>
+      </structure:Code>
+      <structure:Code value="088001" parentCode="ITG18" urn="">
+        <structure:Description xml:lang="it">Acate</structure:Description>
+        <structure:Description xml:lang="en">Acate</structure:Description>
+      </structure:Code>
+      <structure:Code value="088002" parentCode="ITG18" urn="">
+        <structure:Description xml:lang="it">Chiaramonte Gulfi</structure:Description>
+        <structure:Description xml:lang="en">Chiaramonte Gulfi</structure:Description>
+      </structure:Code>
+      <structure:Code value="088003" parentCode="ITG18" urn="">
+        <structure:Description xml:lang="it">Comiso</structure:Description>
+        <structure:Description xml:lang="en">Comiso</structure:Description>
+      </structure:Code>
+      <structure:Code value="088004" parentCode="ITG18" urn="">
+        <structure:Description xml:lang="it">Giarratana</structure:Description>
+        <structure:Description xml:lang="en">Giarratana</structure:Description>
+      </structure:Code>
+      <structure:Code value="088005" parentCode="ITG18" urn="">
+        <structure:Description xml:lang="it">Ispica</structure:Description>
+        <structure:Description xml:lang="en">Ispica</structure:Description>
+      </structure:Code>
+      <structure:Code value="088006" parentCode="ITG18" urn="">
+        <structure:Description xml:lang="it">Modica</structure:Description>
+        <structure:Description xml:lang="en">Modica</structure:Description>
+      </structure:Code>
+      <structure:Code value="088007" parentCode="ITG18" urn="">
+        <structure:Description xml:lang="it">Monterosso Almo</structure:Description>
+        <structure:Description xml:lang="en">Monterosso Almo</structure:Description>
+      </structure:Code>
+      <structure:Code value="088008" parentCode="ITG18" urn="">
+        <structure:Description xml:lang="it">Pozzallo</structure:Description>
+        <structure:Description xml:lang="en">Pozzallo</structure:Description>
+      </structure:Code>
+      <structure:Code value="088009" parentCode="ITG18" urn="">
+        <structure:Description xml:lang="it">Ragusa</structure:Description>
+        <structure:Description xml:lang="en">Ragusa</structure:Description>
+      </structure:Code>
+      <structure:Code value="088010" parentCode="ITG18" urn="">
+        <structure:Description xml:lang="it">Santa Croce Camerina</structure:Description>
+        <structure:Description xml:lang="en">Santa Croce Camerina</structure:Description>
+      </structure:Code>
+      <structure:Code value="088011" parentCode="ITG18" urn="">
+        <structure:Description xml:lang="it">Scicli</structure:Description>
+        <structure:Description xml:lang="en">Scicli</structure:Description>
+      </structure:Code>
+      <structure:Code value="088012" parentCode="ITG18" urn="">
+        <structure:Description xml:lang="it">Vittoria</structure:Description>
+        <structure:Description xml:lang="en">Vittoria</structure:Description>
+      </structure:Code>
+      <structure:Code value="089001" parentCode="ITG19" urn="">
+        <structure:Description xml:lang="it">Augusta</structure:Description>
+        <structure:Description xml:lang="en">Augusta</structure:Description>
+      </structure:Code>
+      <structure:Code value="089002" parentCode="ITG19" urn="">
+        <structure:Description xml:lang="it">Avola</structure:Description>
+        <structure:Description xml:lang="en">Avola</structure:Description>
+      </structure:Code>
+      <structure:Code value="089003" parentCode="ITG19" urn="">
+        <structure:Description xml:lang="it">Buccheri</structure:Description>
+        <structure:Description xml:lang="en">Buccheri</structure:Description>
+      </structure:Code>
+      <structure:Code value="089004" parentCode="ITG19" urn="">
+        <structure:Description xml:lang="it">Buscemi</structure:Description>
+        <structure:Description xml:lang="en">Buscemi</structure:Description>
+      </structure:Code>
+      <structure:Code value="089005" parentCode="ITG19" urn="">
+        <structure:Description xml:lang="it">Canicattini Bagni</structure:Description>
+        <structure:Description xml:lang="en">Canicattini Bagni</structure:Description>
+      </structure:Code>
+      <structure:Code value="089006" parentCode="ITG19" urn="">
+        <structure:Description xml:lang="it">Carlentini</structure:Description>
+        <structure:Description xml:lang="en">Carlentini</structure:Description>
+      </structure:Code>
+      <structure:Code value="089007" parentCode="ITG19" urn="">
+        <structure:Description xml:lang="it">Cassaro</structure:Description>
+        <structure:Description xml:lang="en">Cassaro</structure:Description>
+      </structure:Code>
+      <structure:Code value="089008" parentCode="ITG19" urn="">
+        <structure:Description xml:lang="it">Ferla</structure:Description>
+        <structure:Description xml:lang="en">Ferla</structure:Description>
+      </structure:Code>
+      <structure:Code value="089009" parentCode="ITG19" urn="">
+        <structure:Description xml:lang="it">Floridia</structure:Description>
+        <structure:Description xml:lang="en">Floridia</structure:Description>
+      </structure:Code>
+      <structure:Code value="089010" parentCode="ITG19" urn="">
+        <structure:Description xml:lang="it">Francofonte</structure:Description>
+        <structure:Description xml:lang="en">Francofonte</structure:Description>
+      </structure:Code>
+      <structure:Code value="089011" parentCode="ITG19" urn="">
+        <structure:Description xml:lang="it">Lentini</structure:Description>
+        <structure:Description xml:lang="en">Lentini</structure:Description>
+      </structure:Code>
+      <structure:Code value="089012" parentCode="ITG19" urn="">
+        <structure:Description xml:lang="it">Melilli</structure:Description>
+        <structure:Description xml:lang="en">Melilli</structure:Description>
+      </structure:Code>
+      <structure:Code value="089013" parentCode="ITG19" urn="">
+        <structure:Description xml:lang="it">Noto</structure:Description>
+        <structure:Description xml:lang="en">Noto</structure:Description>
+      </structure:Code>
+      <structure:Code value="089014" parentCode="ITG19" urn="">
+        <structure:Description xml:lang="it">Pachino</structure:Description>
+        <structure:Description xml:lang="en">Pachino</structure:Description>
+      </structure:Code>
+      <structure:Code value="089015" parentCode="ITG19" urn="">
+        <structure:Description xml:lang="it">Palazzolo Acreide</structure:Description>
+        <structure:Description xml:lang="en">Palazzolo Acreide</structure:Description>
+      </structure:Code>
+      <structure:Code value="089016" parentCode="ITG19" urn="">
+        <structure:Description xml:lang="it">Rosolini</structure:Description>
+        <structure:Description xml:lang="en">Rosolini</structure:Description>
+      </structure:Code>
+      <structure:Code value="089017" parentCode="ITG19" urn="">
+        <structure:Description xml:lang="it">Siracusa</structure:Description>
+        <structure:Description xml:lang="en">Siracusa</structure:Description>
+      </structure:Code>
+      <structure:Code value="089018" parentCode="ITG19" urn="">
+        <structure:Description xml:lang="it">Solarino</structure:Description>
+        <structure:Description xml:lang="en">Solarino</structure:Description>
+      </structure:Code>
+      <structure:Code value="089019" parentCode="ITG19" urn="">
+        <structure:Description xml:lang="it">Sortino</structure:Description>
+        <structure:Description xml:lang="en">Sortino</structure:Description>
+      </structure:Code>
+      <structure:Code value="089020" parentCode="ITG19" urn="">
+        <structure:Description xml:lang="it">Portopalo di Capo Passero</structure:Description>
+        <structure:Description xml:lang="en">Portopalo di Capo Passero</structure:Description>
+      </structure:Code>
+      <structure:Code value="089021" parentCode="ITG19" urn="">
+        <structure:Description xml:lang="it">Priolo Gargallo</structure:Description>
+        <structure:Description xml:lang="en">Priolo Gargallo</structure:Description>
+      </structure:Code>
+      <structure:Code value="ITG1" parentCode="ITG" urn="">
+        <structure:Description xml:lang="it">Sicilia</structure:Description>
+        <structure:Description xml:lang="en">Sicilia</structure:Description>
+      </structure:Code>
+      <structure:Code value="ITG11" parentCode="ITG1" urn="">
+        <structure:Description xml:lang="it">Trapani</structure:Description>
+        <structure:Description xml:lang="en">Trapani</structure:Description>
+      </structure:Code>
+      <structure:Code value="ITG12" parentCode="ITG1" urn="">
+        <structure:Description xml:lang="it">Palermo</structure:Description>
+        <structure:Description xml:lang="en">Palermo</structure:Description>
+      </structure:Code>
+      <structure:Code value="ITG13" parentCode="ITG1" urn="">
+        <structure:Description xml:lang="it">Messina</structure:Description>
+        <structure:Description xml:lang="en">Messina</structure:Description>
+      </structure:Code>
+      <structure:Code value="ITG14" parentCode="ITG1" urn="">
+        <structure:Description xml:lang="it">Agrigento</structure:Description>
+        <structure:Description xml:lang="en">Agrigento</structure:Description>
+      </structure:Code>
+      <structure:Code value="ITG15" parentCode="ITG1" urn="">
+        <structure:Description xml:lang="it">Caltanissetta</structure:Description>
+        <structure:Description xml:lang="en">Caltanissetta</structure:Description>
+      </structure:Code>
+      <structure:Code value="ITG16" parentCode="ITG1" urn="">
+        <structure:Description xml:lang="it">Enna</structure:Description>
+        <structure:Description xml:lang="en">Enna</structure:Description>
+      </structure:Code>
+      <structure:Code value="ITG17" parentCode="ITG1" urn="">
+        <structure:Description xml:lang="it">Catania</structure:Description>
+        <structure:Description xml:lang="en">Catania</structure:Description>
+      </structure:Code>
+      <structure:Code value="ITG18" parentCode="ITG1" urn="">
+        <structure:Description xml:lang="it">Ragusa</structure:Description>
+        <structure:Description xml:lang="en">Ragusa</structure:Description>
+      </structure:Code>
+      <structure:Code value="ITG19" parentCode="ITG1" urn="">
+        <structure:Description xml:lang="it">Siracusa</structure:Description>
+        <structure:Description xml:lang="en">Siracusa</structure:Description>
+      </structure:Code>
+    </structure:CodeList>
+  </CodeLists>	
+</Structure>

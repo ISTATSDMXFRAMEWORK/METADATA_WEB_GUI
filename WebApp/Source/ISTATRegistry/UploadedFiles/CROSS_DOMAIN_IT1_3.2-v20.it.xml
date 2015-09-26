@@ -1,0 +1,606 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Structure xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message">
+  <Header>
+    <ID>ISTATRegistryRetrieveTemplate</ID>
+    <Test>false</Test>
+    <Prepared>2015-09-14T17:51:36.430978+02:00</Prepared>
+    <Sender id="MG" />
+    <Receiver id="unknown" />
+  </Header>
+  <Concepts>
+    <ConceptScheme agencyID="IT1" id="CROSS_DOMAIN" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.ConceptScheme=IT1:CROSS_DOMAIN(3.2)" version="3.2" isFinal="true" xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure">
+      <Name xml:lang="it">Concetti generali</Name>
+      <Name xml:lang="en">Cross domain concepts</Name>
+      <Concept id="ADJUSTMENT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).ADJUSTMENT">
+        <Name xml:lang="it">Correzione</Name>
+        <Name xml:lang="en">Adjustment</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="AGGR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).AGGR">
+        <Name xml:lang="it">Aggregato</Name>
+        <Name xml:lang="en">Aggregate</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="AGGR_PIL" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).AGGR_PIL">
+        <Name xml:lang="it">Aggregati del PIL</Name>
+        <Name xml:lang="en">GDP aggregates</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="ANNATA_AGRF" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).ANNATA_AGRF">
+        <Name xml:lang="it">Annata agraria fine</Name>
+        <Name xml:lang="en">Agrarian year end</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="ANNO" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).ANNO">
+        <Name xml:lang="it">Anno</Name>
+        <Name xml:lang="en">Year</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="ANNO_CENSIMENTO" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).ANNO_CENSIMENTO">
+        <Name xml:lang="it">Anno di Censimento</Name>
+        <Name xml:lang="en">Census Year</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="ANNO_IND" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).ANNO_IND">
+        <Name xml:lang="it">Anno indagine</Name>
+        <Name xml:lang="en">Year of reference</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="ANNO_INDAGINE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).ANNO_INDAGINE">
+        <Name xml:lang="it">Anno di indagine</Name>
+        <Name xml:lang="en">Year of reference</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="BASE_PER" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).BASE_PER">
+        <Name xml:lang="it">Periodo base</Name>
+        <Name xml:lang="en">Base period</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="BREAK" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).BREAK">
+        <Name xml:lang="it">Break</Name>
+        <Name xml:lang="en">Break</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="CONF_STATUS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).CONF_STATUS">
+        <Name xml:lang="it">Posizione relativa alla riservatezza</Name>
+        <Name xml:lang="en">Confidentiality status</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="EDI" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).EDI">
+        <Name xml:lang="it">Edizione</Name>
+        <Name xml:lang="en">Edition</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="FREQ" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).FREQ">
+        <Name xml:lang="it">Periodicità</Name>
+        <Name xml:lang="en">Frequency</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="FREQUENZA" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).FREQUENZA">
+        <Name xml:lang="it">Frequenza</Name>
+        <Name xml:lang="en">Frequency</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="FUNZ_BIO" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).FUNZ_BIO">
+        <Name xml:lang="it">Funzioni biometriche</Name>
+        <Name xml:lang="en">Biometric functions</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="IND" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).IND">
+        <Name xml:lang="it">Indicatore</Name>
+        <Name xml:lang="en">Indicator</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="INDS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).INDS">
+        <Name xml:lang="it">Indicatori</Name>
+        <Name xml:lang="en">Indicators</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="IND_CAPACITA" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).IND_CAPACITA">
+        <Name xml:lang="it">Indicatori di capacità</Name>
+        <Name xml:lang="en">Indicators</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="IND_COSTO" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).IND_COSTO">
+        <Name xml:lang="it">Indicatore di costo</Name>
+        <Name xml:lang="en">Indicator of cost</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="IND_RETR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).IND_RETR">
+        <Name xml:lang="it">Indicatore di retribuzione</Name>
+        <Name xml:lang="en">Indicator of earning</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="IND_SP" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).IND_SP">
+        <Name xml:lang="it">Indicatore di spesa</Name>
+        <Name xml:lang="en">Housing costs indicators</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="IND_TENS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).IND_TENS">
+        <Name xml:lang="it">Indicatore di tensione</Name>
+        <Name xml:lang="en">Bargaining tension</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="IND_TRASP_AEREO" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).IND_TRASP_AEREO">
+        <Name xml:lang="it">Indicatori trasporto aereo</Name>
+        <Name xml:lang="en">Air transport indicators</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="IND_TYPE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).IND_TYPE">
+        <Name xml:lang="it">Tipo indice</Name>
+        <Name xml:lang="en">Index type</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="MEASURE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).MEASURE">
+        <Name xml:lang="it">Operatore Statistico</Name>
+        <Name xml:lang="en">Statistical operator</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="MESE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).MESE">
+        <Name xml:lang="it">Mese</Name>
+        <Name xml:lang="en">Month</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="METADATA_EN" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).METADATA_EN">
+        <Name xml:lang="it">Metadati referenziali (in inglese)</Name>
+        <Name xml:lang="en">Reference metadata (in English)</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="METADATA_IT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).METADATA_IT">
+        <Name xml:lang="it">Metadati referenziali (in italiano)</Name>
+        <Name xml:lang="en">Reference metadata (in Italian)</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="MISURA1" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).MISURA1">
+        <Name xml:lang="it">Misura</Name>
+        <Name xml:lang="en">Measure</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="OBS_PRE_BREAK" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).OBS_PRE_BREAK">
+        <Name xml:lang="it">Valore osservato pre-break</Name>
+        <Name xml:lang="en">Observation pre-break value</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="OBS_STATUS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).OBS_STATUS">
+        <Name xml:lang="it">Stato dell'osservazione</Name>
+        <Name xml:lang="en">Observation status</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="OBS_VALUE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).OBS_VALUE">
+        <Name xml:lang="it">Valore osservato</Name>
+        <Name xml:lang="en">Observation value</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="OCC_NLCIG" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).OCC_NLCIG">
+        <Name xml:lang="it">Occupazione al netto/lordo CIG</Name>
+        <Name xml:lang="en">Employment gross/net of short time working allowances</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="RACNAMUNF" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).RACNAMUNF">
+        <Name xml:lang="it">Raccordo tra totali</Name>
+        <Name xml:lang="en">Bridging items between totals</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="REF_PERIOD" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).REF_PERIOD">
+        <Name xml:lang="it">Periodo di riferimento</Name>
+        <Name xml:lang="en">Reference period</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="SCEN" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).SCEN">
+        <Name xml:lang="it">Scenario</Name>
+        <Name xml:lang="en">Scenario</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="TIME" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).TIME">
+        <Name xml:lang="it">Tempo</Name>
+        <Name xml:lang="en">Time</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="TIMEFREQ" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).TIMEFREQ">
+        <Name xml:lang="it">Tempo e frequenza</Name>
+        <Name xml:lang="en">Time and frequency</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="TIME_PERIOD" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).TIME_PERIOD">
+        <Name xml:lang="it">Periodo di tempo</Name>
+        <Name xml:lang="en">Time period</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="TIPODATO" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).TIPODATO">
+        <Name xml:lang="it">Tipo Dato</Name>
+        <Name xml:lang="en">Datatype</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="TIPO_AGGR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).TIPO_AGGR">
+        <Name xml:lang="it">Tipo aggregato</Name>
+        <Name xml:lang="en">Aggregate</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="TIPO_DATO" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).TIPO_DATO">
+        <Name xml:lang="it">Tipo dato</Name>
+        <Name xml:lang="en">Data type</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="TIPO_INDDEM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).TIPO_INDDEM">
+        <Name xml:lang="it">Tipo di indicatore demografico</Name>
+        <Name xml:lang="en">Demographic data type</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="TIPO_IND_NUZ" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).TIPO_IND_NUZ">
+        <Name xml:lang="it">Tipo di indicatore di nuzialità</Name>
+        <Name xml:lang="en">Indicators of nuptiality</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="TIPO_RETR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).TIPO_RETR">
+        <Name xml:lang="it">Tipo di retribuzione</Name>
+        <Name xml:lang="en">Type of wages</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="TIPO_TASSO" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).TIPO_TASSO">
+        <Name xml:lang="it">Tipo di tasso</Name>
+        <Name xml:lang="en">Type of rate</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="TIP_AGGR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).TIP_AGGR">
+        <Name xml:lang="it">Tipologia aggregato</Name>
+        <Name xml:lang="en">Aggregate</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="TIP_AGGR1" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).TIP_AGGR1">
+        <Name xml:lang="it">Tipologia di aggregato</Name>
+        <Name xml:lang="en">Aggregate</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="TIP_INDI" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).TIP_INDI">
+        <Name xml:lang="it">Tipo di indicatore</Name>
+        <Name xml:lang="en">Type of indicator</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="TIP_INDI1" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).TIP_INDI1">
+        <Name xml:lang="it">Tipo indicatore</Name>
+        <Name xml:lang="en">Type of indicator</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="TIP_PROC" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).TIP_PROC">
+        <Name xml:lang="it">Tipo procedimento</Name>
+        <Name xml:lang="en">Type of proceeding</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="TIP_VAR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).TIP_VAR">
+        <Name xml:lang="it">Tipo variabile</Name>
+        <Name xml:lang="en">Data type</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="TRIM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).TRIM">
+        <Name xml:lang="it">Trimestre</Name>
+        <Name xml:lang="en">Quarter</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="UNIT_MEAS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).UNIT_MEAS">
+        <Name xml:lang="it">Unità di misura</Name>
+        <Name xml:lang="en">Unit of measurement</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="UNIT_MULT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).UNIT_MULT">
+        <Name xml:lang="it">Fattore di scala</Name>
+        <Name xml:lang="en">Unit multiplier</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="USE_BED" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).USE_BED">
+        <Name xml:lang="it">Indici di utilizzazione</Name>
+        <Name xml:lang="en">Use of bedplaces</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="VA" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).VA">
+        <Name xml:lang="it">Variabile</Name>
+        <Name xml:lang="en">Variable</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="VAL" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).VAL">
+        <Name xml:lang="it">Valutazione</Name>
+        <Name xml:lang="en">Valuation</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+      <Concept id="Y_CLOS_SCH" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(3.2).Y_CLOS_SCH">
+        <Name xml:lang="it">Anno di chiusura del periodo scolastico</Name>
+        <Name xml:lang="en">Year of closure of scholastic term</Name>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>DEFINIZIONE_IT</AnnotationTitle>
+            <AnnotationType>DEFINIZIONE</AnnotationType>
+          </Annotation>
+        </Annotations>
+      </Concept>
+    </ConceptScheme>
+  </Concepts>
+</Structure>

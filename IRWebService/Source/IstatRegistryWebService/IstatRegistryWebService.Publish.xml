@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="E:\ISTAT2\Source\ISTATRegistry_4.0\IstatRegistryWebService\IstatRegistryWebService\App" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="App" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="bin/IstatRegistryWebService.dll" publishTime="09/25/2015 16:53:41" />
+    <file relUrl="IRService.asmx" publishTime="07/06/2015 09:50:11" />
+    <file relUrl="bin/IstatRegistryWebService.pdb" publishTime="09/25/2015 16:53:41" />
+    <file relUrl="Web.config" publishTime="09/22/2015 09:50:34" />
+  </publishProfile>
+</publishData>

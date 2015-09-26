@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<languages>
+  <language>
+    <id>it</id>
+    <name>Italiano</name>
+  </language>
+  <language>
+    <id>en</id>
+    <name>English</name>
+  </language>
+  <language>
+    <id>fr</id>
+    <name>Français</name>
+  </language>
+  <language>
+    <id>es</id>
+    <name>Español</name>
+  </language>
+  <language>
+    <id>de</id>
+    <name>Deutsch</name>
+  </language>
+</languages>

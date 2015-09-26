@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Structure xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message" xmlns:structure="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message SDMXMessage.xsd" xmlns:com="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+  <Header>
+    <ID>REGISTRY_RESPONSE</ID>
+    <Test>true</Test>
+    <Truncated>false</Truncated>
+    <Prepared>2014-04-07T12:16:44.276Z</Prepared>
+    <Sender id="EUROSTAT" />
+    <Extracted>2014-04-07T12:16:44.276Z</Extracted>
+  </Header>
+  <Dataflows>
+    <structure:Dataflow id="DFL_1_CONSTR" agencyID="ECB" version="1.4" urn="http://www.istat.it" uri="http://www.istat.it" isFinal="false" validFrom="2014-04-07T12:16:44.276Z" validTo="2014-04-20T12:16:44.276Z">
+	<structure:Name xml:lang="it">Dataflow_1</structure:Name>
+      <structure:Name xml:lang="en">Dataflow_1</structure:Name>
+      <structure:Description xml:lang="it">Dataflow_1</structure:Description>
+      <structure:Description xml:lang="en">Dataflow_1</structure:Description>
+      <structure:KeyFamilyRef>
+        <structure:KeyFamilyID>NA_PENS</structure:KeyFamilyID>
+        <structure:KeyFamilyAgencyID>ESTAT</structure:KeyFamilyAgencyID>
+        <structure:Version>1.0</structure:Version>
+      </structure:KeyFamilyRef>
+    </structure:Dataflow>
+  </Dataflows>
+</Structure>
+

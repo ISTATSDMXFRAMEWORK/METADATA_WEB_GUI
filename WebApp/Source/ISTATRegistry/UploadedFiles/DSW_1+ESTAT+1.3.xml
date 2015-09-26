@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mes:Structure xmlns:mes="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message" xmlns:str="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure" xmlns:com="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+  <mes:Header>
+    <mes:ID>DSW_1</mes:ID>
+    <mes:Test>false</mes:Test>
+    <mes:Prepared>2014-05-06T23:32:48.820Z</mes:Prepared>
+    <mes:Sender id="DSW"/>
+    <mes:Receiver id="unknown"/>
+  </mes:Header>
+  <mes:Structures>
+    <str:CategorySchemes>
+      <str:CategoryScheme id="DSW_1" uri="http://sdmx.istat.it" urn="urn:sdmx:org.sdmx.infomodel.categoryscheme.CategoryScheme=ESTAT:DSW_1(1.3)" agencyID="ESTAT" version="1.3" validFrom="2014-04-09T05:48:59.000Z" validTo="2014-04-22T05:49:03.000Z" isFinal="true">
+        <com:Annotations>
+          <com:Annotation>
+            <com:AnnotationTitle>Category scheme</com:AnnotationTitle>
+            <com:AnnotationType>SEM</com:AnnotationType>
+            <com:AnnotationText xml:lang="it">annotation category scheme</com:AnnotationText>
+            <com:AnnotationText xml:lang="en">annotation category scheme</com:AnnotationText>
+          </com:Annotation>
+        </com:Annotations>
+        <com:Name xml:lang="it">category schema 2.1</com:Name>
+        <com:Name xml:lang="en">Category scheme 2.1</com:Name>
+        <com:Description xml:lang="it">category schema 2.1</com:Description>
+        <com:Description xml:lang="en">Category scheme 2.1</com:Description>
+        <str:Category id="cat_a" urn="urn:sdmx:org.sdmx.infomodel.categoryscheme.Category=ESTAT:DSW_1(1.3).cat_a">
+          <com:Name xml:lang="it">categoria_a</com:Name>
+          <com:Name xml:lang="en">category_a</com:Name>
+          <com:Description xml:lang="it">categoria_a</com:Description>
+          <com:Description xml:lang="en">categoria_a</com:Description>
+          <str:Category id="cat_b" urn="urn:sdmx:org.sdmx.infomodel.categoryscheme.Category=ESTAT:DSW_1(1.3).cat_a.cat_b">
+            <com:Annotations>
+              <com:Annotation>
+                <com:AnnotationTitle>Category b</com:AnnotationTitle>
+                <com:AnnotationType>sem</com:AnnotationType>
+                <com:AnnotationText xml:lang="it">prova categoria</com:AnnotationText>
+                <com:AnnotationText xml:lang="en">proof category</com:AnnotationText>
+              </com:Annotation>
+            </com:Annotations>
+            <com:Name xml:lang="en">category_b</com:Name>
+            <com:Description xml:lang="en">category_b</com:Description>
+            <str:Category id="cat_c" urn="urn:sdmx:org.sdmx.infomodel.categoryscheme.Category=ESTAT:DSW_1(1.3).cat_a.cat_b.cat_c">
+              <com:Annotations>
+                <com:Annotation>
+                  <com:AnnotationTitle>Category C</com:AnnotationTitle>
+                  <com:AnnotationType>SEM</com:AnnotationType>
+                  <com:AnnotationText xml:lang="it">categoria c</com:AnnotationText>
+                  <com:AnnotationText xml:lang="en">Category c</com:AnnotationText>
+                </com:Annotation>
+              </com:Annotations>
+              <com:Name xml:lang="it">categoria c</com:Name>
+              <com:Name xml:lang="en">category_c</com:Name>
+              <com:Description xml:lang="en">category_c</com:Description>
+              <com:Description xml:lang="lt">categoria c</com:Description>
+            </str:Category>
+          </str:Category>
+        </str:Category>
+		<str:Category id="cat_z" urn="urn:sdmx:org.sdmx.infomodel.categoryscheme.Category=ESTAT:DSW_1(1.3).cat_z">
+          <com:Name xml:lang="it">categoria_z</com:Name>
+          <com:Name xml:lang="en">category_z</com:Name>
+          <com:Description xml:lang="it">categoria_z</com:Description>
+          <com:Description xml:lang="en">categoria_z</com:Description>
+          <str:Category id="cat_x" urn="urn:sdmx:org.sdmx.infomodel.categoryscheme.Category=ESTAT:DSW_1(1.3).cat_a.cat_x">
+            <com:Annotations>
+              <com:Annotation>
+                <com:AnnotationTitle>Category x</com:AnnotationTitle>
+                <com:AnnotationType>sem</com:AnnotationType>
+                <com:AnnotationText xml:lang="it">prova categoria</com:AnnotationText>
+                <com:AnnotationText xml:lang="en">proof category</com:AnnotationText>
+              </com:Annotation>
+            </com:Annotations>
+            <com:Name xml:lang="en">category_x</com:Name>
+            <com:Description xml:lang="en">category_x</com:Description>
+          </str:Category>
+        </str:Category>
+      </str:CategoryScheme>
+    </str:CategorySchemes>
+  </mes:Structures>
+</mes:Structure>

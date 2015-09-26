@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<agencies>
+  <agency>
+    <id>ESTAT</id>
+    <name>Eurostat</name>
+  </agency>
+  <agency>
+    <id>IMF</id>
+    <name>International Monetary Fund</name>
+  </agency>
+  <agency>
+    <id>IT1</id>
+    <name>Italian Monetary Fund</name>
+  </agency>
+  <agency>
+    <id>WB</id>
+    <name>West Bank</name>
+  </agency>
+  <agency>
+    <id>CO</id>
+    <name>CO</name>
+  </agency>
+  <agency>
+    <id>ECB</id>
+    <name>European Central Bank</name>
+  </agency>  
+</agencies>

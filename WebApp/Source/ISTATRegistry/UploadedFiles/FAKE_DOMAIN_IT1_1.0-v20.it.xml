@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Structure xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message">
+  <Header>
+    <ID>ISTATRegistryRetrieveTemplate</ID>
+    <Test>false</Test>
+    <Prepared>2015-09-14T15:32:47.515318+02:00</Prepared>
+    <Sender id="MG" />
+    <Receiver id="unknown" />
+  </Header>
+  <Concepts>
+    <ConceptScheme agencyID="IT1" id="FAKE_DOMAIN" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.ConceptScheme=IT1:FAKE_DOMAIN(1.0)" version="1.0" isFinal="true" xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure">
+      <Name xml:lang="it">Concetti generali</Name>
+      <Name xml:lang="en">Cross domain concepts</Name>
+      <Concept id="FREQ" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:FAKE_DOMAIN(1.0).FREQ">
+        <Name xml:lang="it">Periodicità</Name>
+        <Name xml:lang="en">Frequency</Name>
+      </Concept>
+      <Concept id="DIM_FAKE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:FAKE_DOMAIN(1.0).DIM_FAKE">
+        <Name xml:lang="it">Concetto Fittizio</Name>
+        <Name xml:lang="en">Fake Concept</Name>
+      </Concept>
+      <Concept id="OBS_VALUE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:FAKE_DOMAIN(1.0).OBS_VALUE">
+        <Name xml:lang="it">Valore osservato</Name>
+        <Name xml:lang="en">Observation value</Name>
+      </Concept>
+      <Concept id="TIME_PERIOD" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:FAKE_DOMAIN(1.0).TIME_PERIOD">
+        <Name xml:lang="it">Periodo di tempo</Name>
+        <Name xml:lang="en">Time period</Name>
+      </Concept>
+    </ConceptScheme>
+  </Concepts>
+</Structure>

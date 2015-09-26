@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mes:Structure 
+xmlns:mes="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message" 
+xmlns:str="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure" 
+xmlns:com="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+  <mes:Header>
+    <mes:ID>CL_PARENT</mes:ID> 
+    <mes:Test>false</mes:Test>
+    <mes:Prepared>2014-05-06T21:53:11.874Z</mes:Prepared>
+    <mes:Sender id="DSW"/>
+    <mes:Receiver id="unknown"/>
+  </mes:Header>
+  <mes:Structures>
+    <str:Codelists>
+      <str:Codelist id="CL_PARENT" uri="" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=ESTAT:CL_PARENT(1.0)" agencyID="PIPPOZ" version="1.0" validFrom="2014-05-01T20:57:52.000Z" validTo="2014-05-25T20:57:55.000Z" isFinal="false">
+        <com:Name xml:lang="it">Codici di attività economica</com:Name>
+        <com:Name xml:lang="en">Activity codes</com:Name>
+        <com:Description xml:lang="it">Codici di attività economica</com:Description>
+        <com:Description xml:lang="en">Activity codes</com:Description>
+        <str:Code id="_T" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_PARENT(1.0)._T">
+          <com:Name xml:lang="en">Total - All activities</com:Name>
+        </str:Code>
+		<str:Code id="CODE_2" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_PARENT(1.0).CODE_2">
+          <com:Name xml:lang="en">CODE_2</com:Name>
+          <str:Parent>
+            <Ref id="CODE_4"/>
+          </str:Parent>
+        </str:Code>
+		<str:Code id="CODE_1" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_PARENT(1.0).CODE_1">
+          <com:Name xml:lang="en">CODE_1</com:Name>
+        </str:Code>
+		<str:Code id="CODE_5" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_PARENT(1.0).CODE_5">
+          <com:Name xml:lang="en">CODE_5</com:Name>
+          <str:Parent>
+            <Ref id="CODE_3"/>
+          </str:Parent>
+        </str:Code>
+		<str:Code id="CODE_3" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_PARENT(1.0).CODE_3">
+          <com:Name xml:lang="en">CODE_3</com:Name>
+          <str:Parent>
+            <Ref id="CODE_4"/>
+          </str:Parent>
+        </str:Code>
+		<str:Code id="CODE_4" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_PARENT(1.0).CODE_4">
+          <com:Name xml:lang="en">CODE_4</com:Name>
+        </str:Code>		
+      </str:Codelist>
+    </str:Codelists>
+  </mes:Structures>
+</mes:Structure>

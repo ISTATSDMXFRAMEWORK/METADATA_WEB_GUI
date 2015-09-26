@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mes:Structure xmlns:mes="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message" xmlns:str="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure" xmlns:com="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+  <mes:Header>
+    <mes:ID>CONS_1</mes:ID>
+    <mes:Test>false</mes:Test>
+    <mes:Prepared>2015-02-16T14:03:57.616Z</mes:Prepared>
+    <mes:Sender id="DSW"/>
+    <mes:Receiver id="unknown"/>
+  </mes:Header>
+  <mes:Structures>
+    <str:Constraints>
+      <str:ContentConstraint id="CONS_1" uri="" urn="urn:sdmx:org.sdmx.infomodel.registry.ContentConstraint=OECD:CONS_1(1.0)" agencyID="IT1" version="1.0" isFinal="false" type="Actual">
+        <com:Annotations>
+          <com:Annotation id="ann1">
+            <com:AnnotationTitle>Agency scheme</com:AnnotationTitle>
+            <com:AnnotationType>SEM</com:AnnotationType>
+			<com:AnnotationURL>http://www.istat.it</com:AnnotationURL>
+            <com:AnnotationText xml:lang="it">Annot_ag_sch_it</com:AnnotationText>
+            <com:AnnotationText xml:lang="en">Annot_ag_sch_eng</com:AnnotationText>
+          </com:Annotation>
+          <com:Annotation>
+            <com:AnnotationTitle>Agency scheme 2</com:AnnotationTitle>
+            <com:AnnotationType>SEM2</com:AnnotationType>
+            <com:AnnotationText xml:lang="it">Annot_ag_sch_it2</com:AnnotationText>
+            <com:AnnotationText xml:lang="en">Annot_ag_sch_eng2</com:AnnotationText>
+          </com:Annotation>
+        </com:Annotations>	  
+        <com:Name xml:lang="en">Cons Name</com:Name>
+        <str:ConstraintAttachment>
+          <str:DataStructure>
+            <Ref id="NA_PENS" version="1.0" agencyID="ESTAT" package="datastructure" class="DataStructure"/>
+          </str:DataStructure>
+       </str:ConstraintAttachment>
+        <str:CubeRegion include="true">
+          <com:KeyValue id="STO">
+            <com:Value>LS</com:Value>
+            <com:Value>B10</com:Value>
+            <com:Value>B101</com:Value>
+          </com:KeyValue>
+          <com:KeyValue id="REF_SECTOR">
+            <com:Value>S11003</com:Value>
+            <com:Value>S12</com:Value>
+            <com:Value>S12002</com:Value>
+          </com:KeyValue>
+        </str:CubeRegion>
+        <str:ReleaseCalendar>
+          <str:Periodicity>P15D</str:Periodicity>
+          <str:Offset>P1D</str:Offset>
+          <str:Tolerance>P1D</str:Tolerance>
+        </str:ReleaseCalendar>
+		<str:ReferencePeriod startTime="2015-02-20T12:43:17.243Z" endTime="2015-02-20T12:43:17.243Z">
+		</str:ReferencePeriod>
+      </str:ContentConstraint>
+    </str:Constraints>
+  </mes:Structures>
+</mes:Structure>

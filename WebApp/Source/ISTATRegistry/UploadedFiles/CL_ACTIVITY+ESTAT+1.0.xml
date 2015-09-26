@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mes:Structure xmlns:mes="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message" xmlns:str="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure" xmlns:com="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+  <mes:Header>
+    <mes:ID>CL_ACTIVITY</mes:ID> 
+    <mes:Test>false</mes:Test>
+    <mes:Prepared>2014-05-06T21:53:11.874Z</mes:Prepared>
+    <mes:Sender id="DSW"/>
+    <mes:Receiver id="unknown"/>
+  </mes:Header>
+  <mes:Structures>
+    <str:Codelists>
+      <str:Codelist id="CL_ACTIVITY" uri="" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=ESTAT:CL_ACTIVITY(1.0)" agencyID="ESTAT" version="1.0" validFrom="2014-05-01T20:57:52.000Z" validTo="2014-05-25T20:57:55.000Z" isFinal="false">
+        <com:Annotations>
+          <com:Annotation>
+            <com:AnnotationTitle>Annotation on activity</com:AnnotationTitle>
+            <com:AnnotationType>ANN</com:AnnotationType>
+            <com:AnnotationText xml:lang="it">annotazione sull'attività economica</com:AnnotationText>
+            <com:AnnotationText xml:lang="en">annotation on economic activity</com:AnnotationText>
+          </com:Annotation>
+          <com:Annotation>
+            <com:AnnotationTitle>annot on act</com:AnnotationTitle>
+            <com:AnnotationType>SEM</com:AnnotationType>
+            <com:AnnotationText xml:lang="it">Annotazione</com:AnnotationText>
+            <com:AnnotationText xml:lang="en">Annot on act</com:AnnotationText>
+          </com:Annotation>
+        </com:Annotations>
+        <com:Name xml:lang="it">Codici di attività economica</com:Name>
+        <com:Name xml:lang="en">Activity codes</com:Name>
+        <com:Description xml:lang="it">Codici di attività economica</com:Description>
+        <com:Description xml:lang="en">Activity codes</com:Description>
+        <str:Code id="_T" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0)._T">
+          <com:Name xml:lang="en">Total - All activities</com:Name>
+        </str:Code>
+        <str:Code id="A_B" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).A_B">
+			 <com:Annotations>
+			  <com:Annotation>
+				<com:AnnotationTitle>Annotation test</com:AnnotationTitle>
+				<com:AnnotationType>ANN</com:AnnotationType>
+				<com:AnnotationText xml:lang="it">annotazione sull'attività economica</com:AnnotationText>
+				<com:AnnotationText xml:lang="en">annotation on economic activity</com:AnnotationText>
+			  </com:Annotation>
+			  <com:Annotation>
+				<com:AnnotationTitle>Annotation ORDER Test</com:AnnotationTitle>
+				<com:AnnotationType>@ORDER@</com:AnnotationType>
+				<com:AnnotationText xml:lang="it">6</com:AnnotationText>
+			  </com:Annotation>
+			</com:Annotations>
+			<com:Name xml:lang="en">Total Primary sector</com:Name>
+        </str:Code>
+        <str:Code id="A" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).A">
+          	<com:Annotations>
+			  <com:Annotation>
+				<com:AnnotationTitle>Annotation ORDER Test</com:AnnotationTitle>
+				<com:AnnotationType>@ORDER@</com:AnnotationType>
+				<com:AnnotationText xml:lang="it">4</com:AnnotationText>
+			  </com:Annotation>
+			  <com:Annotation>
+				<com:AnnotationTitle>Annotation test</com:AnnotationTitle>
+				<com:AnnotationType>ANN</com:AnnotationType>
+				<com:AnnotationText xml:lang="it">annotazione sull'attività economica</com:AnnotationText>
+				<com:AnnotationText xml:lang="en">annotation on economic activity</com:AnnotationText>
+			  </com:Annotation>
+			</com:Annotations>
+			<com:Name xml:lang="en">Agriculture, forestry and fishing</com:Name>
+        </str:Code>
+        <str:Code id="A01" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).A01">
+          	<com:Annotations>
+			  <com:Annotation>
+				<com:AnnotationTitle>Annotation ORDER Test</com:AnnotationTitle>
+				<com:AnnotationType>@ORDER@</com:AnnotationType>
+				<com:AnnotationText xml:lang="it">2</com:AnnotationText>
+			  </com:Annotation>
+			</com:Annotations>
+			<com:Name xml:lang="en">Crop and animal production, hunting and related service activities</com:Name>
+        </str:Code>
+        <str:Code id="A02" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).A02">
+          <com:Name xml:lang="en">Forestry and logging</com:Name>
+        </str:Code>
+        <str:Code id="A03" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).A03">
+          	<com:Annotations>
+			  <com:Annotation>
+				<com:AnnotationTitle>Annotation ORDER Test</com:AnnotationTitle>
+				<com:AnnotationType>@ORDER@</com:AnnotationType>
+				<com:AnnotationText xml:lang="it">3</com:AnnotationText>
+			  </com:Annotation>
+			</com:Annotations>
+          <com:Name xml:lang="en">Fishing and aquaculture</com:Name>
+        </str:Code>
+        <str:Code id="BTE" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).BTE">
+          	<com:Annotations>
+			  <com:Annotation>
+				<com:AnnotationTitle>Annotation ORDER Test</com:AnnotationTitle>
+				<com:AnnotationType>@ORDER@</com:AnnotationType>
+				<com:AnnotationText xml:lang="it">1</com:AnnotationText>
+			  </com:Annotation>
+			</com:Annotations>
+          <com:Name xml:lang="en">Industry (except construction)</com:Name>
+        </str:Code>
+        <str:Code id="BTF" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).BTF">
+          <com:Name xml:lang="en">Industry and construction</com:Name>
+        </str:Code>
+        <str:Code id="B" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).B">
+          	<com:Annotations>
+			  <com:Annotation>
+				<com:AnnotationTitle>Annotation ORDER Test</com:AnnotationTitle>
+				<com:AnnotationType>@ORDER@</com:AnnotationType>
+				<com:AnnotationText xml:lang="it">5</com:AnnotationText>
+			  </com:Annotation>
+			</com:Annotations>
+          <com:Name xml:lang="en">Mining and quarrying</com:Name>
+        </str:Code>
+        <str:Code id="B05" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).B05">
+          <com:Name xml:lang="en">Mining of coal and lignite</com:Name>
+        </str:Code>
+        <str:Code id="B06_09" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).B06_09">
+          <com:Name xml:lang="en">Extraction of crude petroleum and natural gas; mining support service activities</com:Name>
+        </str:Code>
+        <str:Code id="B06" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).B06">
+          <com:Name xml:lang="en">Extraction of crude petroleum and natural gas</com:Name>
+        </str:Code>
+        <str:Code id="B07" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).B07">
+          <com:Name xml:lang="en">Mining of metal ores</com:Name>
+        </str:Code>
+        <str:Code id="B08" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).B08">
+          <com:Name xml:lang="en">Other mining and quarrying</com:Name>
+        </str:Code>
+        <str:Code id="B09" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).B09">
+          <com:Name xml:lang="en">Mining support service activities</com:Name>
+        </str:Code>
+        <str:Code id="C" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).C">
+          <com:Name xml:lang="en">Manufacturing</com:Name>
+        </str:Code>
+        <str:Code id="C10T12" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).C10T12">
+          <com:Name xml:lang="en">Manufacture of food products; beverages and tobacco products</com:Name>
+        </str:Code>
+        <str:Code id="C10" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).C10">
+          <com:Name xml:lang="en">Manufacture of food products</com:Name>
+        </str:Code>
+        <str:Code id="C11" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).C11">
+          <com:Name xml:lang="en">Manufacture of beverages</com:Name>
+        </str:Code>
+        <str:Code id="C13T18X15" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).C13T18X15">
+          <com:Name xml:lang="en">Manufacture of textiles, wearing apparel, wood and paper products; printing and reproduction</com:Name>
+        </str:Code>
+        <str:Code id="C12" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).C12">
+          <com:Name xml:lang="en">Manufacture of tobacco products</com:Name>
+        </str:Code>
+        <str:Code id="C13T15" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).C13T15">
+          <com:Name xml:lang="en">Manufacture of textiles, wearing apparel, leather and related products</com:Name>
+        </str:Code>
+        <str:Code id="C13_14" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).C13_14">
+          <com:Name xml:lang="en">Manufacture of textiles and wearing apparel</com:Name>
+        </str:Code>
+        <str:Code id="C13" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).C13">
+          <com:Name xml:lang="en">Manufacture of textiles</com:Name>
+        </str:Code>
+        <str:Code id="C14" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).C14">
+          <com:Name xml:lang="en">Manufacture of wearing apparel</com:Name>
+        </str:Code>
+        <str:Code id="C15" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).C15">
+          <com:Name xml:lang="en">Manufacture of leather and related products</com:Name>
+        </str:Code>
+        <str:Code id="C16T18" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).C16T18">
+          <com:Name xml:lang="en">Manufacture of wood, paper, and their products; printing and reproduction of recorded media</com:Name>
+        </str:Code>
+        <str:Code id="C16" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).C16">
+          <com:Name xml:lang="en">Manufacture of wood and of products of wood and cork, except furniture; manufacture of articles of straw and plaiting materials</com:Name>
+        </str:Code>
+        <str:Code id="C17" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).C17">
+          <com:Name xml:lang="en">Manufacture of paper and paper products</com:Name>
+        </str:Code>
+        <str:Code id="C18" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).C18">
+          <com:Name xml:lang="en">Printing and reproduction of recorded media</com:Name>
+        </str:Code>
+        <str:Code id="C19T22" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).C19T22">
+          <com:Name xml:lang="en">Manufacture of petroleum, chemical, pharmaceutical, rubber and plastic products</com:Name>
+        </str:Code>
+        <str:Code id="C19" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).C19">
+          <com:Name xml:lang="en">Manufacture of coke and refined petroleum products</com:Name>
+        </str:Code>
+        <str:Code id="C20" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).C20">
+          <com:Name xml:lang="en">Manufacture of chemicals and chemical products</com:Name>
+        </str:Code>
+        <str:Code id="C21" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).C21">
+          <com:Name xml:lang="en">Manufacture of basic pharmaceutical products and pharmaceutical preparations</com:Name>
+        </str:Code>
+        <str:Code id="C22_23" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).C22_23">
+          <com:Name xml:lang="en">Manufacture of rubber and plastic products and other non-metallic mineral products</com:Name>
+        </str:Code>
+        <str:Code id="C22" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).C22">
+          <com:Name xml:lang="en">Manufacture of rubber and plastic products</com:Name>
+        </str:Code>
+        <str:Code id="C23" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).C23">
+          <com:Name xml:lang="en">Manufacture of other non-metallic mineral products</com:Name>
+        </str:Code>
+        <str:Code id="C24T28X27" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).C24T28X27">
+          <com:Name xml:lang="en">Manufacture of metal and machinery products, except electrical equipment</com:Name>
+        </str:Code>
+        <str:Code id="C24_25" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).C24_25">
+          <com:Name xml:lang="en">Manufacture of basic metals and fabricated metal products, except machinery and equipment</com:Name>
+        </str:Code>
+        <str:Code id="C24" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).C24">
+          <com:Name xml:lang="en">Manufacture of basic metals</com:Name>
+        </str:Code>
+        <str:Code id="C25" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).C25">
+          <com:Name xml:lang="en">Manufacture of fabricated metal products, except machinery and equipment</com:Name>
+        </str:Code>
+        <str:Code id="C26" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).C26">
+          <com:Name xml:lang="en">Manufacture of computer, electronic and optical products</com:Name>
+        </str:Code>
+        <str:Code id="C262" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).C262">
+          <com:Name xml:lang="en">Manufacture of computers and peripheral equipment</com:Name>
+        </str:Code>
+        <str:Code id="C263_264" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).C263_264">
+          <com:Name xml:lang="en">Manufacture of communication equipment and consumer electronics.</com:Name>
+        </str:Code>
+        <str:Code id="C265_266" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).C265_266">
+          <com:Name xml:lang="en">Manufacture of instruments and appliances for measuring, testing and navigation; watches and clocks; manufacture of irradiation, electromedical and electrotherapeutic equipment</com:Name>
+        </str:Code>
+        <str:Code id="C27" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).C27">
+          <com:Name xml:lang="en">Manufacture of electrical equipment</com:Name>
+        </str:Code>
+        <str:Code id="C28" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).C28">
+          <com:Name xml:lang="en">Manufacture of machinery and equipment n.e.c.</com:Name>
+        </str:Code>
+        <str:Code id="C29_30" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).C29_30">
+          <com:Name xml:lang="en">Manufacture of motor vehicles, trailers, semi-trailers and of other transport equipment</com:Name>
+        </str:Code>
+        <str:Code id="C29" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).C29">
+          <com:Name xml:lang="en">Manufacture of motor vehicles, trailers and semi-trailers</com:Name>
+        </str:Code>
+        <str:Code id="C30" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).C30">
+          <com:Name xml:lang="en">Manufacture of other transport equipment</com:Name>
+        </str:Code>
+        <str:Code id="C303" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).C303">
+          <com:Name xml:lang="en">Manufacture of air and spacecraft and related machinery</com:Name>
+        </str:Code>
+        <str:Code id="C31_32" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).C31_32">
+          <com:Name xml:lang="en">Manufacture of furniture; other manufacturing</com:Name>
+        </str:Code>
+        <str:Code id="C31T33" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).C31T33">
+          <com:Name xml:lang="en">Manufacture of furniture; jewellery, musical instruments, toys, etc.; repair and installation of machinery and equipment</com:Name>
+        </str:Code>
+        <str:Code id="C31" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).C31">
+          <com:Name xml:lang="en">Manufacture of furniture</com:Name>
+        </str:Code>
+        <str:Code id="C32" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).C32">
+          <com:Name xml:lang="en">Other manufacturing</com:Name>
+        </str:Code>
+        <str:Code id="C33" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).C33">
+          <com:Name xml:lang="en">Repair and installation of machinery and equipment</com:Name>
+        </str:Code>
+        <str:Code id="C_OTH" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).C_OTH">
+          <com:Name xml:lang="en">Other manufacturing (C15, C23, C27, C31, C32, C33)</com:Name>
+        </str:Code>
+        <str:Code id="D" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).D">
+          <com:Name xml:lang="en">Electricity, gas, steam and air conditioning supply</com:Name>
+        </str:Code>
+        <str:Code id="D35" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).D35">
+          <com:Name xml:lang="en">Electricity, gas, steam and air conditioning supply</com:Name>
+        </str:Code>
+        <str:Code id="E" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).E">
+          <com:Name xml:lang="en">Water supply; sewerage, waste management and remediation activities</com:Name>
+        </str:Code>
+        <str:Code id="E36" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).E36">
+          <com:Name xml:lang="en">Water collection, treatment and supply</com:Name>
+        </str:Code>
+        <str:Code id="E37T39" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).E37T39">
+          <com:Name xml:lang="en">Sewerage, waste management, remediation activities</com:Name>
+        </str:Code>
+        <str:Code id="E37" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).E37">
+          <com:Name xml:lang="en">Sewerage</com:Name>
+        </str:Code>
+        <str:Code id="E38" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).E38">
+          <com:Name xml:lang="en">Waste collection, treatment and disposal activities; materials recovery</com:Name>
+        </str:Code>
+        <str:Code id="E39" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).E39">
+          <com:Name xml:lang="en">Remediation activities and other waste management services</com:Name>
+        </str:Code>
+        <str:Code id="F" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).F">
+          <com:Name xml:lang="en">Construction</com:Name>
+        </str:Code>
+        <str:Code id="F41" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).F41">
+          <com:Name xml:lang="en">Construction of buildings</com:Name>
+        </str:Code>
+        <str:Code id="F42" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).F42">
+          <com:Name xml:lang="en">Civil engineering</com:Name>
+        </str:Code>
+        <str:Code id="F43" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).F43">
+          <com:Name xml:lang="en">Specialised construction activities</com:Name>
+        </str:Code>
+        <str:Code id="G" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).G">
+          <com:Name xml:lang="en">Wholesale and retail trade; repair of motor vehicles and motorcycles</com:Name>
+        </str:Code>
+        <str:Code id="G45" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).G45">
+          <com:Name xml:lang="en">Wholesale and retail trade and repair of motor vehicles and motorcycles</com:Name>
+        </str:Code>
+        <str:Code id="G46" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).G46">
+          <com:Name xml:lang="en">Wholesale trade, except of motor vehicles and motorcycles</com:Name>
+        </str:Code>
+        <str:Code id="G47" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).G47">
+          <com:Name xml:lang="en">Retail trade, except of motor vehicles and motorcycles</com:Name>
+        </str:Code>
+        <str:Code id="GTI" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).GTI">
+          <com:Name xml:lang="en">Wholesale and retail trade, transport, accommodation and food service activities</com:Name>
+        </str:Code>
+        <str:Code id="GTJ" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).GTJ">
+          <com:Name xml:lang="en">Wholesale and retail trade; transport; accommodation and food service activities; information and communication</com:Name>
+        </str:Code>
+        <str:Code id="GTU" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).GTU">
+          <com:Name xml:lang="en">Services</com:Name>
+        </str:Code>
+        <str:Code id="H" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).H">
+          <com:Name xml:lang="en">Transportation and storage</com:Name>
+        </str:Code>
+        <str:Code id="HX53" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).HX53">
+          <com:Name xml:lang="en">Transport and storage except postal and courier activities</com:Name>
+        </str:Code>
+        <str:Code id="H49" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).H49">
+          <com:Name xml:lang="en">Land transport and transport via pipelines</com:Name>
+        </str:Code>
+        <str:Code id="H50" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).H50">
+          <com:Name xml:lang="en">Water transport</com:Name>
+        </str:Code>
+        <str:Code id="H51" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).H51">
+          <com:Name xml:lang="en">Air transport</com:Name>
+        </str:Code>
+        <str:Code id="H52" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).H52">
+          <com:Name xml:lang="en">Warehousing and support activities for transportation</com:Name>
+        </str:Code>
+        <str:Code id="H53" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).H53">
+          <com:Name xml:lang="en">Postal and courier activities</com:Name>
+        </str:Code>
+        <str:Code id="I" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).I">
+          <com:Name xml:lang="en">Accommodation and food service activities</com:Name>
+        </str:Code>
+        <str:Code id="I55" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).I55">
+          <com:Name xml:lang="en">Accommodation</com:Name>
+        </str:Code>
+        <str:Code id="I56" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).I56">
+          <com:Name xml:lang="en">Food and beverage service activities</com:Name>
+        </str:Code>
+        <str:Code id="J" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).J">
+          <com:Name xml:lang="en">Information and communication</com:Name>
+        </str:Code>
+        <str:Code id="J58T60" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).J58T60">
+          <com:Name xml:lang="en">Publishing, motion picture, video, television programme production; sound recording, programming and broadcasting activities</com:Name>
+        </str:Code>
+        <str:Code id="J58_62_63" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).J58_62_63">
+          <com:Name xml:lang="en">Publishing, computer programming and consultancy, information service activities</com:Name>
+        </str:Code>
+        <str:Code id="J58" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).J58">
+          <com:Name xml:lang="en">Publishing activities</com:Name>
+        </str:Code>
+        <str:Code id="J59_60" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).J59_60">
+          <com:Name xml:lang="en">Motion picture, video, television programme production; programming and broadcasting activities</com:Name>
+        </str:Code>
+        <str:Code id="J59" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).J59">
+          <com:Name xml:lang="en">Motion picture, video and television programme production, sound recording and music publishing activities</com:Name>
+        </str:Code>
+        <str:Code id="J60" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).J60">
+          <com:Name xml:lang="en">Programming and broadcasting activities</com:Name>
+        </str:Code>
+        <str:Code id="J61" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).J61">
+          <com:Name xml:lang="en">Telecommunications</com:Name>
+        </str:Code>
+        <str:Code id="J62_63" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).J62_63">
+          <com:Name xml:lang="en">Computer programming, consultancy, and information service activities</com:Name>
+        </str:Code>
+        <str:Code id="J62" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).J62">
+          <com:Name xml:lang="en">Computer programming, consultancy and related activities</com:Name>
+        </str:Code>
+        <str:Code id="J63" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).J63">
+          <com:Name xml:lang="en">Information service activities</com:Name>
+        </str:Code>
+        <str:Code id="KTN" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).KTN">
+          <com:Name xml:lang="en">Financial and insurance activities; real estate activities; professional, scientific and technical activities; administrative and support service activities</com:Name>
+        </str:Code>
+        <str:Code id="K" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).K">
+          <com:Name xml:lang="en">Financial and insurance activities</com:Name>
+        </str:Code>
+        <str:Code id="K64" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).K64">
+          <com:Name xml:lang="en">Financial service activities, except insurance and pension funding</com:Name>
+        </str:Code>
+        <str:Code id="K641" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).K641">
+          <com:Name xml:lang="en">Monetary intermediation</com:Name>
+        </str:Code>
+        <str:Code id="K642" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).K642">
+          <com:Name xml:lang="en">Activities of holding companies</com:Name>
+        </str:Code>
+        <str:Code id="K643" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).K643">
+          <com:Name xml:lang="en">Trusts, funds, and similar financial activities</com:Name>
+        </str:Code>
+        <str:Code id="K65" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).K65">
+          <com:Name xml:lang="en">Insurance, reinsurance and pension funding, except compulsory social security</com:Name>
+        </str:Code>
+        <str:Code id="K66" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).K66">
+          <com:Name xml:lang="en">Activities auxiliary to financial services and insurance activities</com:Name>
+        </str:Code>
+        <str:Code id="L" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).L">
+          <com:Name xml:lang="en">Real estate activities</com:Name>
+        </str:Code>
+        <str:Code id="L68A" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).L68A">
+          <com:Name xml:lang="en">Imputed rents of owner-occupied dwellings</com:Name>
+        </str:Code>
+        <str:Code id="L68B" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).L68B">
+          <com:Name xml:lang="en">Real estate activities excluding imputed rents</com:Name>
+        </str:Code>
+        <str:Code id="M_N" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).M_N">
+          <com:Name xml:lang="en">Professional, scientific and technical activities; administrative and support service activities</com:Name>
+        </str:Code>
+        <str:Code id="M" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).M">
+          <com:Name xml:lang="en">Professional, scientific and technical activities</com:Name>
+        </str:Code>
+        <str:Code id="M69T71" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).M69T71">
+          <com:Name xml:lang="en">Legal and accounting activities; activities of head offices; management consultancy activities; architectural and engineering activities; technical testing and analysis</com:Name>
+        </str:Code>
+        <str:Code id="M69_70" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).M69_70">
+          <com:Name xml:lang="en">Legal and accounting activities; activities of head offices; management consultancy activities</com:Name>
+        </str:Code>
+        <str:Code id="M69" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).M69">
+          <com:Name xml:lang="en">Legal and accounting activities</com:Name>
+        </str:Code>
+        <str:Code id="M691" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).M691">
+          <com:Name xml:lang="en">Legal activities</com:Name>
+        </str:Code>
+        <str:Code id="M692" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).M692">
+          <com:Name xml:lang="en">Accounting, bookkeeping and auditing activities; tax consultancy</com:Name>
+        </str:Code>
+        <str:Code id="M70" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).M70">
+          <com:Name xml:lang="en">Activities of head offices; management consultancy activities</com:Name>
+        </str:Code>
+        <str:Code id="M701" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).M701">
+          <com:Name xml:lang="en">Activities of head offices</com:Name>
+        </str:Code>
+        <str:Code id="M702" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).M702">
+          <com:Name xml:lang="it">Attività manageriali e di consulting</com:Name>
+          <com:Name xml:lang="en">Management consultancy activities</com:Name>
+          <com:Description xml:lang="it">Attività manageriali e di consulting</com:Description>
+          <com:Description xml:lang="en">Management consultancy activities</com:Description>
+          <str:Parent>
+            <Ref id="A01"/>
+          </str:Parent>
+        </str:Code>
+        <str:Code id="M71" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).M71">
+          <com:Name xml:lang="en">Architectural and engineering activities; technical testing and analysis</com:Name>
+        </str:Code>
+        <str:Code id="M72" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).M72">
+          <com:Name xml:lang="en">Scientific research and development</com:Name>
+        </str:Code>
+        <str:Code id="M73T75" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).M73T75">
+          <com:Name xml:lang="en">Advertising and market research; other professional, scientific and technical activities; veterinary activities</com:Name>
+        </str:Code>
+        <str:Code id="M73" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).M73">
+          <com:Name xml:lang="en">Advertising and market research</com:Name>
+        </str:Code>
+        <str:Code id="M731" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).M731">
+          <com:Name xml:lang="en">Advertising</com:Name>
+        </str:Code>
+        <str:Code id="M732" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).M732">
+          <com:Name xml:lang="en">Market research and public opinion polling</com:Name>
+        </str:Code>
+        <str:Code id="M74_75" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).M74_75">
+          <com:Name xml:lang="en">Other professional, scientific and technical activities; veterinary activities</com:Name>
+        </str:Code>
+        <str:Code id="M74" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).M74">
+          <com:Name xml:lang="it">Altri professionisti</com:Name>
+          <com:Name xml:lang="en">Other professional, scientific and technical activities</com:Name>
+          <com:Description xml:lang="it">Altri professionisti</com:Description>
+          <com:Description xml:lang="en">Other professional, scientific and technical activities</com:Description>
+          <str:Parent>
+            <Ref id="A03"/>
+          </str:Parent>
+        </str:Code>
+        <str:Code id="M75" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).M75">
+          <com:Name xml:lang="en">Veterinary activities</com:Name>
+        </str:Code>
+        <str:Code id="N" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).N">
+          <com:Name xml:lang="en">Administrative and support service activities</com:Name>
+        </str:Code>
+        <str:Code id="N77" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).N77">
+          <com:Name xml:lang="en">Rental and leasing activities</com:Name>
+        </str:Code>
+        <str:Code id="N78T82" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).N78T82">
+          <com:Name xml:lang="en">Employment, travel agency, security and investigation, service and landscape, office administrative and support activities</com:Name>
+        </str:Code>
+        <str:Code id="N78" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).N78">
+          <com:Name xml:lang="en">Employment activities</com:Name>
+        </str:Code>
+        <str:Code id="N79" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).N79">
+          <com:Name xml:lang="en">Travel agency, tour operator reservation service and related activities</com:Name>
+        </str:Code>
+        <str:Code id="N80T82" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).N80T82">
+          <com:Name xml:lang="en">Security and investigation, service and landscape, office administrative and support activities</com:Name>
+        </str:Code>
+        <str:Code id="N80" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).N80">
+          <com:Name xml:lang="en">Security and investigation activities</com:Name>
+        </str:Code>
+        <str:Code id="N81" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).N81">
+          <com:Name xml:lang="en">Services to buildings and landscape activities</com:Name>
+        </str:Code>
+        <str:Code id="N82" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).N82">
+          <com:Name xml:lang="en">Office administrative, office support and other business support activities</com:Name>
+        </str:Code>
+        <str:Code id="OTQ" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).OTQ">
+          <com:Name xml:lang="en">Public administration, defence, education, human health and social work activities</com:Name>
+        </str:Code>
+        <str:Code id="OTU" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).OTU">
+          <com:Name xml:lang="en">Public administration and defence; compulsory social security; education; human health and social work activities; arts, entertainment and recreation, repair of household goods and other services</com:Name>
+        </str:Code>
+        <str:Code id="O_T_U" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).O_T_U">
+          <com:Name xml:lang="en">Public administration; activities of households and of extraterritorial organisations</com:Name>
+        </str:Code>
+        <str:Code id="O" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).O">
+          <com:Name xml:lang="en">Public administration and defence; compulsory social security</com:Name>
+        </str:Code>
+        <str:Code id="O84" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).O84">
+          <com:Name xml:lang="en">Public administration and defence; compulsory social security</com:Name>
+        </str:Code>
+        <str:Code id="P" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).P">
+          <com:Name xml:lang="en">Education</com:Name>
+        </str:Code>
+        <str:Code id="P85" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).P85">
+          <com:Name xml:lang="en">Education</com:Name>
+        </str:Code>
+        <str:Code id="Q" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).Q">
+          <com:Name xml:lang="en">Human health and social work activities</com:Name>
+        </str:Code>
+        <str:Code id="Q86" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).Q86">
+          <com:Name xml:lang="en">Human health activities</com:Name>
+        </str:Code>
+        <str:Code id="Q87_88" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).Q87_88">
+          <com:Name xml:lang="en">Residential care activities and social work activities without accommodation</com:Name>
+        </str:Code>
+        <str:Code id="Q87" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).Q87">
+          <com:Name xml:lang="en">Residential care activities</com:Name>
+        </str:Code>
+        <str:Code id="Q88" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).Q88">
+          <com:Name xml:lang="en">Social work activities without accommodation</com:Name>
+        </str:Code>
+        <str:Code id="RTU" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).RTU">
+          <com:Name xml:lang="en">Arts, entertainment and recreation; other service activities; activities of household and extra-territorial organizations and bodies</com:Name>
+        </str:Code>
+        <str:Code id="R" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).R">
+          <com:Name xml:lang="en">Arts, entertainment and recreation</com:Name>
+        </str:Code>
+        <str:Code id="R90T92" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).R90T92">
+          <com:Name xml:lang="en">Creative, arts and entertainment activities; libraries, archives, museums and other cultural activities; gambling and betting activities</com:Name>
+        </str:Code>
+        <str:Code id="R90" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).R90">
+          <com:Name xml:lang="en">Creative, arts and entertainment activities</com:Name>
+        </str:Code>
+        <str:Code id="R91" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).R91">
+          <com:Name xml:lang="en">Libraries, archives, museums and other cultural activities</com:Name>
+        </str:Code>
+        <str:Code id="R92_93" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).R92_93">
+          <com:Name xml:lang="en">Gambling and betting activities; sporting and other recreational activities</com:Name>
+        </str:Code>
+        <str:Code id="R92" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).R92">
+          <com:Name xml:lang="en">Gambling and betting activities</com:Name>
+        </str:Code>
+        <str:Code id="R93" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).R93">
+          <com:Name xml:lang="en">Sports activities and amusement and recreation activities</com:Name>
+        </str:Code>
+        <str:Code id="S" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).S">
+          <com:Name xml:lang="en">Other service activities</com:Name>
+        </str:Code>
+        <str:Code id="S94" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).S94">
+          <com:Name xml:lang="en">Activities of membership organisations</com:Name>
+        </str:Code>
+        <str:Code id="S95_96" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).S95_96">
+          <com:Name xml:lang="en">Repair of computers, personal and household goods; other personal service activities</com:Name>
+        </str:Code>
+        <str:Code id="S95" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).S95">
+          <com:Name xml:lang="en">Repair of computers and personal and household goods</com:Name>
+        </str:Code>
+        <str:Code id="S96" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).S96">
+          <com:Name xml:lang="en">Other personal service activities</com:Name>
+        </str:Code>
+        <str:Code id="T" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).T">
+          <com:Name xml:lang="en">Activities of households as employers; undifferentiated goods- and services-producing activities of households for own use</com:Name>
+        </str:Code>
+        <str:Code id="T97" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).T97">
+          <com:Name xml:lang="en">Activities of households as employers of domestic personnel</com:Name>
+        </str:Code>
+        <str:Code id="T98" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).T98">
+          <com:Name xml:lang="en">Undifferentiated goods- and services-producing activities of private households for own use</com:Name>
+        </str:Code>
+        <str:Code id="U" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).U">
+          <com:Name xml:lang="en">Activities of extraterritorial organisations and bodies</com:Name>
+        </str:Code>
+        <str:Code id="U99" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).U99">
+          <com:Name xml:lang="en">Activities of extraterritorial organisations and bodies</com:Name>
+        </str:Code>
+        <str:Code id="NAL" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).NAL">
+          <com:Name xml:lang="en">Not allocated</com:Name>
+        </str:Code>
+        <str:Code id="FDI_T" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).FDI_T">
+          <com:Name xml:lang="en">All FDI activities</com:Name>
+        </str:Code>
+        <str:Code id="PRV_RE" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0).PRV_RE">
+          <com:Name xml:lang="en">Private real estate activities</com:Name>
+        </str:Code>
+        <str:Code id="_Z" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_ACTIVITY(1.0)._Z">
+          <com:Name xml:lang="en">Not applicable</com:Name>
+        </str:Code>
+      </str:Codelist>
+    </str:Codelists>
+  </mes:Structures>
+</mes:Structure>

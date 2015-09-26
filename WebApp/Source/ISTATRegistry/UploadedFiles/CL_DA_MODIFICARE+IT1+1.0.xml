@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Structure xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message" xmlns:structure="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message SDMXMessage.xsd">
+  <Header>
+    <ID>REGISTRY_RESPONSE</ID>
+    <Test>true</Test>
+    <Truncated>false</Truncated>
+    <Prepared>2015-07-17T10:11:36</Prepared>
+    <Sender id="EUROSTAT" />
+    <Extracted>2015-07-17T10:11:36</Extracted>
+  </Header>
+  <CodeLists>
+    <structure:CodeList id="CL_DA_MODIFICARE" agencyID="IT1" version="1.0" isFinal="false">
+      <structure:Name xml:lang="it">CL da modificare</structure:Name>
+      <structure:Name xml:lang="en">CL da modificare</structure:Name>
+      <structure:Code value="VAL1" parentCode="" urn="">
+        <structure:Description xml:lang="en">Valore 1</structure:Description>
+      </structure:Code>
+      <structure:Code value="VAL2" parentCode="" urn="">
+        <structure:Description xml:lang="en">Valore 2</structure:Description>
+      </structure:Code>
+    </structure:CodeList>
+  </CodeLists>
+</Structure>
+

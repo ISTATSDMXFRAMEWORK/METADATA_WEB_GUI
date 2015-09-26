@@ -1,0 +1,2847 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Structure xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message">
+  <Header>
+    <ID>ISTATRegistryRetrieveTemplate</ID>
+    <Test>false</Test>
+    <Prepared>2015-05-14T10:26:48.9853164+02:00</Prepared>
+    <Sender id="MG" />
+    <Receiver id="unknown" />
+  </Header>
+  <CodeLists>
+    <CodeList agencyID="ESTAT" id="CL_INSTR_ASSET_2" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=ESTAT:CL_INSTR_ASSET_2(1.1)" version="1.1" xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure">
+      <Name xml:lang="en">Instrument and Assets Classification</Name>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F12" value="F12">
+        <Description xml:lang="en">SDRs</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">1</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F" value="F">
+        <Description xml:lang="en">Total financial assets/liabilities</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">2</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F_NG" value="F_NG">
+        <Description xml:lang="en">Total Assets (financial and gross non-financial)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">3</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1)._Z" value="_Z" parentCode="F_NG">
+        <Description xml:lang="en">Not applicable</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">4</AnnotationText>
+          </Annotation>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationTitle>qwe</AnnotationTitle>
+            <AnnotationType>qwe</AnnotationType>
+            <AnnotationText xml:lang="it">qwe</AnnotationText>
+            <AnnotationText xml:lang="da">wwww</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F_NN" value="F_NN">
+        <Description xml:lang="en">Total Assets (financial and non-financial) (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">5</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F1" value="F1">
+        <Description xml:lang="en">Monetary gold and SDRs</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">6</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F11" value="F11">
+        <Description xml:lang="en">Monetary gold</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">7</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F11A" value="F11A">
+        <Description xml:lang="en">Gold bullion</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">8</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F11B" value="F11B">
+        <Description xml:lang="en">Unallocated gold accounts</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">9</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F2" value="F2">
+        <Description xml:lang="en">Currency and deposits</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">10</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F21" value="F21">
+        <Description xml:lang="en">Currency</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">11</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F22" value="F22">
+        <Description xml:lang="en">Transferable deposits</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">12</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F221" value="F221">
+        <Description xml:lang="en">Inter-bank positions</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">13</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F229" value="F229">
+        <Description xml:lang="en">Other transferable deposits</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">14</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F2291" value="F2291">
+        <Description xml:lang="en">Other transferable deposits, except overnight deposits</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">15</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F29" value="F29">
+        <Description xml:lang="en">Other deposits</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">16</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F29A" value="F29A">
+        <Description xml:lang="en">Deposits with agreed maturity</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">17</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F29B" value="F29B">
+        <Description xml:lang="en">Deposits redeemable at notice</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">18</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F29C" value="F29C">
+        <Description xml:lang="en">Repurchase agreements</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">19</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F2A" value="F2A">
+        <Description xml:lang="en">Currency and overnight deposits</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">20</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F2B" value="F2B">
+        <Description xml:lang="en">Currency and monetary deposits</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">21</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F2M" value="F2M">
+        <Description xml:lang="en">Deposits</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">22</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F2MF" value="F2MF">
+        <Description xml:lang="en">Non-monetary deposits</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">23</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F2MM" value="F2MM">
+        <Description xml:lang="en">Monetary deposits</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">24</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F3" value="F3">
+        <Description xml:lang="en">Debt securities</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">25</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F3A" value="F3A">
+        <Description xml:lang="en">Debt securities, fixed rate issues</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">26</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F3B" value="F3B">
+        <Description xml:lang="en">Debt securities, floating rate issues (e.g. variable interest)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">27</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F3C" value="F3C">
+        <Description xml:lang="en">Debt securities, zero coupon bonds</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">28</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F3D" value="F3D">
+        <Description xml:lang="en">Debt securities issued with embedded options (puttable bonds)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">29</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F4" value="F4">
+        <Description xml:lang="en">Loans</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">30</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F41" value="F41">
+        <Description xml:lang="en">Credit lines</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">31</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F41A" value="F41A">
+        <Description xml:lang="en">Credit lines; unconditional, undrawn</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">32</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F4A" value="F4A">
+        <Description xml:lang="en">Consumer credit</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">33</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F4A1" value="F4A1">
+        <Description xml:lang="en">Revolving credit</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">34</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F4A11" value="F4A11">
+        <Description xml:lang="en">Credit cards</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">35</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F4A19" value="F4A19">
+        <Description xml:lang="en">Other lines of credit</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">36</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F4A2" value="F4A2">
+        <Description xml:lang="en">Non-revolving credit</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">37</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F4A21" value="F4A21">
+        <Description xml:lang="en">Automobile loans</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">38</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F4A22" value="F4A22">
+        <Description xml:lang="en">Other loans for consumer durables</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">39</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F4A29" value="F4A29">
+        <Description xml:lang="en">Other installment credit, including student loans</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">40</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F4A291" value="F4A291">
+        <Description xml:lang="en">Student long term loans</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">41</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F4A299" value="F4A299">
+        <Description xml:lang="en">Other installment credit, excluding student loans</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">42</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F4AK" value="F4AK">
+        <Description xml:lang="en">Loans for consumer durables</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">43</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F4B" value="F4B">
+        <Description xml:lang="en">Loans for house purchasing</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">44</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F4B1" value="F4B1">
+        <Description xml:lang="en">Mortgage guaranteed</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">45</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F4B2" value="F4B2">
+        <Description xml:lang="en">Mortgage unguaranteed</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">46</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F4C" value="F4C">
+        <Description xml:lang="en">Loans for other purpose</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">47</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F5" value="F5">
+        <Description xml:lang="en">Equity and investment fund shares/units</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">48</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F51" value="F51">
+        <Description xml:lang="en">Equity</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">49</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F511" value="F511">
+        <Description xml:lang="en">Listed shares</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">50</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F512" value="F512">
+        <Description xml:lang="en">Unlisted shares</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">51</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F519" value="F519">
+        <Description xml:lang="en">Other equity</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">52</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F51A" value="F51A">
+        <Description xml:lang="en">Equity: other than reinvestment of earnings</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">53</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F51B" value="F51B">
+        <Description xml:lang="en">Equity: reinvestment of earnings</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">54</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F51M" value="F51M">
+        <Description xml:lang="en">Unlisted shares and other equity</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">55</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F52" value="F52">
+        <Description xml:lang="en">Investment fund shares/units</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">56</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F521" value="F521">
+        <Description xml:lang="en">Money market fund shares/units</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">57</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F522" value="F522">
+        <Description xml:lang="en">Non-MMF investment fund shares/units</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">58</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F5221" value="F5221">
+        <Description xml:lang="en">Real Estate Fund Shares</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">59</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F5222" value="F5222">
+        <Description xml:lang="en">Bond  Fund Shares</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">60</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F5223" value="F5223">
+        <Description xml:lang="en">Mixed Fund Shares</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">61</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F5224" value="F5224">
+        <Description xml:lang="en">Equity Fund Shares</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">62</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F5229" value="F5229">
+        <Description xml:lang="en">Other Fund Shares</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">63</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F52A" value="F52A">
+        <Description xml:lang="en">Investment fund shares/units: other than reinvestment of earnings</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">64</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F52B" value="F52B">
+        <Description xml:lang="en">Investment fund shares/units: reinvestment of earnings</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">65</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F5A" value="F5A">
+        <Description xml:lang="en">Equity and investment fund shares/units: other than reinvestment of earnings</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">66</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F5AE" value="F5AE">
+        <Description xml:lang="en">Equity and investment fund shares/units: other than reinvestment of earnings: Extension of capital</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">67</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F5AF" value="F5AF">
+        <Description xml:lang="en">Equity and investment fund shares/units: other than reinvestment of earnings: Financial restructuring</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">68</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F5AG" value="F5AG">
+        <Description xml:lang="en">Equity and investment fund shares/units: other than reinvestment of earnings: Greenfield</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">69</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F5AM" value="F5AM">
+        <Description xml:lang="en">Equity and investment fund shares/units: other than reinvestment of earnings: Merger &amp; Acquisitions (M&amp;A) type</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">70</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F5B" value="F5B">
+        <Description xml:lang="en">Equity and investment fund shares/units: reinvestment of earnings</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">71</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F5I" value="F5I">
+        <Description xml:lang="en">Equity and investment fund shares of which equity injection</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">72</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F5O" value="F5O">
+        <Description xml:lang="en">Other equity and investment fund shares</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">73</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F5OP" value="F5OP">
+        <Description xml:lang="en">Shares and other equity other than portfolio investments</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">74</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F5P" value="F5P">
+        <Description xml:lang="en">Equity and investment fund shares of which privatisation</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">75</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F5PN" value="F5PN">
+        <Description xml:lang="en">Portfolio investments, net</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">76</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F6" value="F6">
+        <Description xml:lang="en">Insurance, pension and standardized guarantee schemes</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">77</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F61" value="F61">
+        <Description xml:lang="en">Non-life insurance technical reserves</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">78</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F62" value="F62">
+        <Description xml:lang="en">Life insurance and annuity entitlements</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">79</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F62A" value="F62A">
+        <Description xml:lang="en">Life insurance and annuity entitlements, of which unit linked</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">80</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F62B" value="F62B">
+        <Description xml:lang="en">Life insurance and annuity entitlements, of which non-unit-linked</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">81</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F63" value="F63">
+        <Description xml:lang="en">Pension entitlements</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">82</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F63A" value="F63A">
+        <Description xml:lang="en">Pension entitlements, of which defined contribution</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">83</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F63A1" value="F63A1">
+        <Description xml:lang="en">Pension entitlements, defined contribution, managed by Autonomous Pension Funds</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">84</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F63A2" value="F63A2">
+        <Description xml:lang="en">Pension entitlements, defined contribution, managed by Non-autonomous Pension Funds</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">85</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F63A3" value="F63A3">
+        <Description xml:lang="en">Pension entitlements, defined contribution, managed by Insurers</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">86</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F63B" value="F63B">
+        <Description xml:lang="en">Pension entitlements, of which defined benefit</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">87</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F63B1" value="F63B1">
+        <Description xml:lang="en">Pension entitlements, defined benefit, managed by Autonomous Pension Funds</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">88</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F63B2" value="F63B2">
+        <Description xml:lang="en">Pension entitlements, defined benefit, managed by Non-autonomous Pension Funds</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">89</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F63B3" value="F63B3">
+        <Description xml:lang="en">Pension entitlements, defined benefit, managed by Insurers</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">90</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F63C" value="F63C">
+        <Description xml:lang="en">Pension entitlements, of which hybrid schemes</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">91</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F63C1" value="F63C1">
+        <Description xml:lang="en">Pension entitlements, hybrid schemes, managed by Autonomous Pension Funds</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">92</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F63C2" value="F63C2">
+        <Description xml:lang="en">Pension entitlements, hybrid schemes, managed by Non-autonomous Pension Funds</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">93</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F63C3" value="F63C3">
+        <Description xml:lang="en">Pension entitlements, hybrid schemes, managed by Insurers</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">94</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F63F" value="F63F">
+        <Description xml:lang="en">Pension entitlements, managed by Autonomous Pension Funds</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">95</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F63H" value="F63H">
+        <Description xml:lang="en">Pension entitlements, managed by Non-autonomous Pension Funds</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">96</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F63I" value="F63I">
+        <Description xml:lang="en">Pension entitlements, managed by Insurers</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">97</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F63O" value="F63O">
+        <Description xml:lang="en">Other Pension Plans, including Unfunded Pension Plans</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">98</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F63O1" value="F63O1">
+        <Description xml:lang="en">Unfunded Pension Plans</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">99</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F63O9" value="F63O9">
+        <Description xml:lang="en">Other Pension Plans</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">100</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F64" value="F64">
+        <Description xml:lang="en">Claims of pension funds on pension managers</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">101</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F65" value="F65">
+        <Description xml:lang="en">Entitlements to non-pension benefits</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">102</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F66" value="F66">
+        <Description xml:lang="en">Provisions for calls under standardized guarantees</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">103</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F6M" value="F6M">
+        <Description xml:lang="en">Pension entitlements, claims of pension funds on pension managers and entitlements to non-pension benefits</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">104</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F6O" value="F6O">
+        <Description xml:lang="en">Non-life insurance technical provisions and provisions for calls under standardized guarantees</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">105</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F7" value="F7">
+        <Description xml:lang="en">Financial derivatives and employee stock options</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">106</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F71" value="F71">
+        <Description xml:lang="en">Financial derivatives</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">107</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F711" value="F711">
+        <Description xml:lang="en">Options type</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">108</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F711A" value="F711A">
+        <Description xml:lang="en">Options</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">109</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F711B" value="F711B">
+        <Description xml:lang="en">Other option-type contracts</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">110</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F712" value="F712">
+        <Description xml:lang="en">Forward type</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">111</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F712A" value="F712A">
+        <Description xml:lang="en">Forwards</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">112</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F712B" value="F712B">
+        <Description xml:lang="en">Futures</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">113</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F712C" value="F712C">
+        <Description xml:lang="en">Swaps</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">114</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F712D" value="F712D">
+        <Description xml:lang="en">Other forward-type contracts</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">115</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F71FF" value="F71FF">
+        <Description xml:lang="en">Forwards and futures</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">116</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F71FO" value="F71FO">
+        <Description xml:lang="en">Forwards, futures and options</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">117</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F71R" value="F71R">
+        <Description xml:lang="en">Other derivatives</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">118</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F72" value="F72">
+        <Description xml:lang="en">Employee stock options</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">119</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F8" value="F8">
+        <Description xml:lang="en">Other accounts receivable/payable</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">120</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F81" value="F81">
+        <Description xml:lang="en">Trade credits and advances</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">121</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F81A" value="F81A">
+        <Description xml:lang="en">Trade credits</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">122</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F81B" value="F81B">
+        <Description xml:lang="en">Advances</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">123</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F81A1" value="F81A1">
+        <Description xml:lang="en">Trade credits relating to P.2 intermediate consumption and other</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">124</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F81A2" value="F81A2">
+        <Description xml:lang="en">Trade credits relating to D.7 current transfers</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">125</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F81A3" value="F81A3">
+        <Description xml:lang="en">Trade credits relating to D.9 capital transfers</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">126</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F81A4" value="F81A4">
+        <Description xml:lang="en">Trade credits relating to P.51 gross fixed capital formation</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">127</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F81AX" value="F81AX">
+        <Description xml:lang="en">Trade credits relating to military equipment</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">128</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F89" value="F89">
+        <Description xml:lang="en">Other accounts receivable/payable, excluding trade credits and advances</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">129</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F89A_B" value="F89A_B">
+        <Description xml:lang="en">Other accounts receivable/payable, other than trade credits, related to taxes and social contributions</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">130</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F89A" value="F89A">
+        <Description xml:lang="en">Other accounts receivable/payable, other than trade credits, related to taxes</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">131</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F89B" value="F89B">
+        <Description xml:lang="en">Other accounts receivable/payable, other than trade credits, related to social contributions</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">132</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F89C" value="F89C">
+        <Description xml:lang="en">Other accounts receivable/payable, other than trade credits, related to EU flows</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">133</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F89D" value="F89D">
+        <Description xml:lang="en">Other accounts receivable/payable, other than trade credits, related to Military Expenditure</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">134</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F89A1" value="F89A1">
+        <Description xml:lang="en">Other accounts receivable/payable, related to D.2 taxes on production and imports</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">135</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F89A2" value="F89A2">
+        <Description xml:lang="en">Other accounts receivable/payable, related to D.5 taxes on income, wealth, etc.</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">136</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F89A3" value="F89A3">
+        <Description xml:lang="en">Other accounts receivable/payable, related to D.91 capital taxes</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">137</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F89B1" value="F89B1">
+        <Description xml:lang="en">Other accounts receivable/payable, related to D.611 actual social contributions</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">138</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F9" value="F9">
+        <Description xml:lang="en">Other financial assets/liabilities, not elsewhere classified</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">139</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).FD" value="FD">
+        <Description xml:lang="en">Financing</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">140</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).FF" value="FF">
+        <Description xml:lang="en">Non-monetary financial assets</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">141</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).FGED" value="FGED">
+        <Description xml:lang="en">Gross external debt</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">142</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).FI" value="FI">
+        <Description xml:lang="en">Financial investment</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">143</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).FK" value="FK">
+        <Description xml:lang="en">Reserve Position in the IMF</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">144</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).FL" value="FL">
+        <Description xml:lang="en">Debt instruments (FDI)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">145</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).FLA" value="FLA">
+        <Description xml:lang="en">Debt instruments other than insurance, pension, and standardised schemes</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">146</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).FLD" value="FLD">
+        <Description xml:lang="en">Debt instruments, domestic creditors</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">147</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).FLE" value="FLE">
+        <Description xml:lang="en">Debt instruments, external creditors</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">148</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).FM" value="FM">
+        <Description xml:lang="en">Monetary financial assets</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">149</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).FN" value="FN">
+        <Description xml:lang="en">Other liabilities/assets (GFS concept)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">150</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).FNDL" value="FNDL">
+        <Description xml:lang="en">Other financial transactions within EDP of which: transactions in debt liabilities (+/-)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">151</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).FNDX" value="FNDX">
+        <Description xml:lang="en">Other financial transactions within EDP</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">152</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).FNED" value="FNED">
+        <Description xml:lang="en">Net external debt</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">153</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).FO" value="FO">
+        <Description xml:lang="en">Equity and debt instruments</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">154</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).FO1" value="FO1">
+        <Description xml:lang="en">Investment fund shares/units, insurance, pension, and standardized guaranteed schemes</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">155</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).FP" value="FP">
+        <Description xml:lang="en">Debt (sector specific)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">156</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).FPU" value="FPU">
+        <Description xml:lang="en">Amount outstanding in the government debt from the financing of public undertakings</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">157</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).FQ" value="FQ">
+        <Description xml:lang="en">Remaining net assets of non-financial corporations, insurance corporations and pension funds</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">158</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).FR" value="FR">
+        <Description xml:lang="en">Assets in remaining net flows of households</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">159</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).FR1" value="FR1">
+        <Description xml:lang="en">Securities (Equity, investment fund shares/units and debt securities)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">160</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).FR1Z" value="FR1Z">
+        <Description xml:lang="en">Securities under repo for cash collateral</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">161</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).FR2" value="FR2">
+        <Description xml:lang="en">Other reserve assets (currency, deposits, securities, financial derivatives and other claims)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">162</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).FR3" value="FR3">
+        <Description xml:lang="en">Securities, currency and deposits</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">163</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).FR4" value="FR4">
+        <Description xml:lang="en">Other reserve assets (financial derivatives, loans to non-banks and other)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">164</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).FR41" value="FR41">
+        <Description xml:lang="en">Other claims (other reserve assets than Currency, deposits, securities and financial derivatives) (loans to non-banks and other)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">165</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).FR411" value="FR411">
+        <Description xml:lang="en">Other reserve assets than financial derivatives and loans to non-bank</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">166</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).FR5" value="FR5">
+        <Description xml:lang="en">Other foreign currency assets (securities, deposits, loans, financial derivatives and gold not included in reserve assets)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">167</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).FR51" value="FR51">
+        <Description xml:lang="en">Other ( remaining part of other foreign currency assets (not included in reserve assets))</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">168</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).FR6" value="FR6">
+        <Description xml:lang="en">Currency, loans, securities and deposits</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">169</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).FR8" value="FR8">
+        <Description xml:lang="en">Other (flows related to repos and reverse repos, trade credits and other accounts payable/receivable)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">170</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).FR9" value="FR9">
+        <Description xml:lang="en">Other instruments than forwards, futures and options</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">171</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).FT" value="FT">
+        <Description xml:lang="en">Other, mainly inter-company loans</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">172</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).FU" value="FU">
+        <Description xml:lang="en">Remaining net assets of households</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">173</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).FV" value="FV">
+        <Description xml:lang="en">Other liabilities (F.5, F.6 and F.8)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">174</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).GD" value="GD">
+        <Description xml:lang="en">Maastricht debt</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">175</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).GDA" value="GDA">
+        <Description xml:lang="en">Maarstricht debt of which variable interest rate (GFS concept)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">176</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).GDM1" value="GDM1">
+        <Description xml:lang="en">Memo: Privatisation proceeds allocated to redemption of debt (GFS concept)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">177</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).GDM2" value="GDM2">
+        <Description xml:lang="en">Memo: Universal Mobile Telecommunications System proceeds allocated to redemption of debt  (GFS concept)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">178</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N11KG" value="N11KG">
+        <Description xml:lang="en">Total construction (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">179</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N11KN" value="N11KN">
+        <Description xml:lang="en">Total construction (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">180</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N111G" value="N111G">
+        <Description xml:lang="en">Dwellings (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">181</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N111N" value="N111N">
+        <Description xml:lang="en">Dwellings (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">182</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N1121G" value="N1121G">
+        <Description xml:lang="en">Buildings other than dwellings (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">183</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N1121N" value="N1121N">
+        <Description xml:lang="en">Buildings other than dwellings (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">184</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N1122G" value="N1122G">
+        <Description xml:lang="en">Other structures (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">185</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N1122N" value="N1122N">
+        <Description xml:lang="en">Other structures (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">186</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N1123G" value="N1123G">
+        <Description xml:lang="en">Land improvements (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">187</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N1123N" value="N1123N">
+        <Description xml:lang="en">Land improvements (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">188</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N112G" value="N112G">
+        <Description xml:lang="en">Other buildings and structures (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">189</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N112N" value="N112N">
+        <Description xml:lang="en">Other buildings and structures (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">190</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N1131G" value="N1131G">
+        <Description xml:lang="en">Transport equipment (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">191</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N1131N" value="N1131N">
+        <Description xml:lang="en">Transport equipment (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">192</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N11321G" value="N11321G">
+        <Description xml:lang="en">Computer hardware (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">193</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N11321N" value="N11321N">
+        <Description xml:lang="en">Computer hardware (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">194</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N11322G" value="N11322G">
+        <Description xml:lang="en">Telecommunications equipment (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">195</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N11322N" value="N11322N">
+        <Description xml:lang="en">Telecommunications equipment (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">196</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N1132G" value="N1132G">
+        <Description xml:lang="en">ICT equipment (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">197</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N1132N" value="N1132N">
+        <Description xml:lang="en">ICT equipment (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">198</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N1139G" value="N1139G">
+        <Description xml:lang="en">Other machinery and equipment (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">199</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N1139N" value="N1139N">
+        <Description xml:lang="en">Other machinery and equipment (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">200</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N113KG" value="N113KG">
+        <Description xml:lang="en">ICT equipment and other machinery and equipment (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">201</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N113KN" value="N113KN">
+        <Description xml:lang="en">ICT equipment and other machinery and equipment (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">202</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N113G" value="N113G">
+        <Description xml:lang="en">Machinery and equipment (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">203</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N113N" value="N113N">
+        <Description xml:lang="en">Machinery and equipment (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">204</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N114G" value="N114G">
+        <Description xml:lang="en">Weapons systems (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">205</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N114N" value="N114N">
+        <Description xml:lang="en">Weapons systems (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">206</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N1151G" value="N1151G">
+        <Description xml:lang="en">Animal resources yielding repeat products (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">207</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N1151N" value="N1151N">
+        <Description xml:lang="en">Animal resources yielding repeat products (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">208</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N1152G" value="N1152G">
+        <Description xml:lang="en">Tree, crop and plant resources yielding repeat products (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">209</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N1152N" value="N1152N">
+        <Description xml:lang="en">Tree, crop and plant resources yielding repeat products (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">210</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N115G" value="N115G">
+        <Description xml:lang="en">Cultivated biological resources (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">211</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N115N" value="N115N">
+        <Description xml:lang="en">Cultivated biological resources (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">212</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N116G" value="N116G">
+        <Description xml:lang="en">Costs of ownership transfer on non-produced assets (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">213</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N116N" value="N116N">
+        <Description xml:lang="en">Costs of ownership transfer on non-produced assets (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">214</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N1171G" value="N1171G">
+        <Description xml:lang="en">Research and development (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">215</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N1171N" value="N1171N">
+        <Description xml:lang="en">Research and development (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">216</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N1172G" value="N1172G">
+        <Description xml:lang="en">Mineral exploration and evaluation (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">217</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N1172N" value="N1172N">
+        <Description xml:lang="en">Mineral exploration and evaluation (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">218</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N11731G" value="N11731G">
+        <Description xml:lang="en">Computer software (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">219</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N11731N" value="N11731N">
+        <Description xml:lang="en">Computer software (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">220</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N11732G" value="N11732G">
+        <Description xml:lang="en">Databases (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">221</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N11732N" value="N11732N">
+        <Description xml:lang="en">Databases (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">222</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N1173G" value="N1173G">
+        <Description xml:lang="en">Computer software and databases (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">223</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N1173N" value="N1173N">
+        <Description xml:lang="en">Computer software and databases (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">224</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N1174G" value="N1174G">
+        <Description xml:lang="en">Entertainment, literary or artistic originals (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">225</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N1174N" value="N1174N">
+        <Description xml:lang="en">Entertainment, literary or artistic originals (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">226</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N1179G" value="N1179G">
+        <Description xml:lang="en">Other intellectual property products (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">227</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N1179N" value="N1179N">
+        <Description xml:lang="en">Other intellectual property products (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">228</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N117G" value="N117G">
+        <Description xml:lang="en">Intellectual property products (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">229</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N117N" value="N117N">
+        <Description xml:lang="en">Intellectual property products (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">230</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N11G" value="N11G">
+        <Description xml:lang="en">Fixed assets by type of asset (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">231</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N11MG" value="N11MG">
+        <Description xml:lang="en">Machinery and equipment and weapons systems (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">232</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N11MN" value="N11MN">
+        <Description xml:lang="en">Machinery and equipment and weapons systems (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">233</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N11N" value="N11N">
+        <Description xml:lang="en">Fixed assets by type of asset (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">234</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N11OG" value="N11OG">
+        <Description xml:lang="en">Other machinery and equipment and weapons systems (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">235</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N11ON" value="N11ON">
+        <Description xml:lang="en">Other machinery and equipment and weapons systems (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">236</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N121G" value="N121G">
+        <Description xml:lang="en">Materials and supplies (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">237</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N121N" value="N121N">
+        <Description xml:lang="en">Materials and supplies (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">238</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N1221G" value="N1221G">
+        <Description xml:lang="en">Work-in-progress on cultivated biological assets (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">239</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N1221N" value="N1221N">
+        <Description xml:lang="en">Work-in-progress on cultivated biological assets (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">240</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N1222G" value="N1222G">
+        <Description xml:lang="en">Other work-in-progress (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">241</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N1222N" value="N1222N">
+        <Description xml:lang="en">Other work-in-progress (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">242</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N122G" value="N122G">
+        <Description xml:lang="en">Work-in-progress (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">243</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N122N" value="N122N">
+        <Description xml:lang="en">Work-in-progress (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">244</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N123G" value="N123G">
+        <Description xml:lang="en">Finished goods (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">245</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N123N" value="N123N">
+        <Description xml:lang="en">Finished goods (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">246</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N124G" value="N124G">
+        <Description xml:lang="en">Military inventories (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">247</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N124N" value="N124N">
+        <Description xml:lang="en">Military inventories (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">248</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N125G" value="N125G">
+        <Description xml:lang="en">Goods for resale (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">249</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N125N" value="N125N">
+        <Description xml:lang="en">Goods for resale (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">250</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N12G" value="N12G">
+        <Description xml:lang="en">Inventories by type of inventory (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">251</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N12N" value="N12N">
+        <Description xml:lang="en">Inventories by type of inventory (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">252</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N131G" value="N131G">
+        <Description xml:lang="en">Precious metals and stones (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">253</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N131N" value="N131N">
+        <Description xml:lang="en">Precious metals and stones (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">254</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N132G" value="N132G">
+        <Description xml:lang="en">Antiques and other art objects (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">255</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N132N" value="N132N">
+        <Description xml:lang="en">Antiques and other art objects (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">256</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N133G" value="N133G">
+        <Description xml:lang="en">Other valuables (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">257</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N133N" value="N133N">
+        <Description xml:lang="en">Other valuables (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">258</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N13G" value="N13G">
+        <Description xml:lang="en">Valuables (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">259</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N13N" value="N13N">
+        <Description xml:lang="en">Valuables (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">260</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N1G" value="N1G">
+        <Description xml:lang="en">Produced non-financial assets (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">261</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N1N" value="N1N">
+        <Description xml:lang="en">Produced non-financial assets (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">262</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N1OG" value="N1OG">
+        <Description xml:lang="en">Fixed assets by type of assets and inventories (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">263</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N1ON" value="N1ON">
+        <Description xml:lang="en">Fixed assets by type of assets and inventories (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">264</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N2111AG" value="N2111AG">
+        <Description xml:lang="en">Land underlying dwellings (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">265</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N2111AN" value="N2111AN">
+        <Description xml:lang="en">Land underlying dwellings (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">266</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N2111G" value="N2111G">
+        <Description xml:lang="en">Land underlying buildings and structures (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">267</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N2111N" value="N2111N">
+        <Description xml:lang="en">Land underlying buildings and structures (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">268</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N2112G" value="N2112G">
+        <Description xml:lang="en">Land under cultivation (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">269</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N2112N" value="N2112N">
+        <Description xml:lang="en">Land under cultivation (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">270</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N2113G" value="N2113G">
+        <Description xml:lang="en">Recreational land and associated surface water (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">271</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N2113N" value="N2113N">
+        <Description xml:lang="en">Recreational land and associated surface water (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">272</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N2119G" value="N2119G">
+        <Description xml:lang="en">Other land and associated surface water (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">273</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N2119N" value="N2119N">
+        <Description xml:lang="en">Other land and associated surface water (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">274</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N211G" value="N211G">
+        <Description xml:lang="en">Land (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">275</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N211N" value="N211N">
+        <Description xml:lang="en">Land (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">276</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N212G" value="N212G">
+        <Description xml:lang="en">Mineral and energy reserves (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">277</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N212N" value="N212N">
+        <Description xml:lang="en">Mineral and energy reserves (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">278</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N213G" value="N213G">
+        <Description xml:lang="en">Non-cultivated biological resources (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">279</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N213N" value="N213N">
+        <Description xml:lang="en">Non-cultivated biological resources (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">280</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N214G" value="N214G">
+        <Description xml:lang="en">Water resources (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">281</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N214N" value="N214N">
+        <Description xml:lang="en">Water resources (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">282</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N2151G" value="N2151G">
+        <Description xml:lang="en">Radio spectra (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">283</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N2151N" value="N2151N">
+        <Description xml:lang="en">Radio spectra (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">284</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N2159G" value="N2159G">
+        <Description xml:lang="en">Other (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">285</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N2159N" value="N2159N">
+        <Description xml:lang="en">Other (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">286</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N215G" value="N215G">
+        <Description xml:lang="en">Other natural resources (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">287</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N215N" value="N215N">
+        <Description xml:lang="en">Other natural resources (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">288</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N215UN" value="N215UN">
+        <Description xml:lang="en">Universal Mobile Telecommunications System (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">289</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N21G" value="N21G">
+        <Description xml:lang="en">Natural resources (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">290</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N21N" value="N21N">
+        <Description xml:lang="en">Natural resources (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">291</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N21OG" value="N21OG">
+        <Description xml:lang="en">Non-cultivated biological resources and water resources (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">292</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N21ON" value="N21ON">
+        <Description xml:lang="en">Non-cultivated biological resources and water resources (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">293</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N221G" value="N221G">
+        <Description xml:lang="en">Marketable operating leases (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">294</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N221N" value="N221N">
+        <Description xml:lang="en">Marketable operating leases (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">295</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N222G" value="N222G">
+        <Description xml:lang="en">Permissions to use natural resources (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">296</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N222N" value="N222N">
+        <Description xml:lang="en">Permissions to use natural resources (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">297</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N223G" value="N223G">
+        <Description xml:lang="en">Permissions to undertake specific activities (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">298</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N223N" value="N223N">
+        <Description xml:lang="en">Permissions to undertake specific activities (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">299</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N224G" value="N224G">
+        <Description xml:lang="en">Entitlement to future goods and services on an exclusive basis (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">300</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N224N" value="N224N">
+        <Description xml:lang="en">Entitlement to future goods and services on an exclusive basis (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">301</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N22G" value="N22G">
+        <Description xml:lang="en">Contracts, leases and licences (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">302</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N22N" value="N22N">
+        <Description xml:lang="en">Contracts, leases and licences (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">303</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N23G" value="N23G">
+        <Description xml:lang="en">Purchases less sales of goodwill and marketing assets (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">304</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N23N" value="N23N">
+        <Description xml:lang="en">Purchases less sales of goodwill and marketing assets (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">305</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N2G" value="N2G">
+        <Description xml:lang="en">Non-produced non-financial assets (gross)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">306</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).N2N" value="N2N">
+        <Description xml:lang="en">Non-produced non-financial assets (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">307</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).NG" value="NG">
+        <Description xml:lang="en">All non-financial assets</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">308</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).NM111N" value="NM111N">
+        <Description xml:lang="en">Dwellings and land underlying buildings and structures (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">309</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).NMN" value="NMN">
+        <Description xml:lang="en">Consumer durable (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">310</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).NN" value="NN">
+        <Description xml:lang="en">All non-financial assets (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">311</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).NUN" value="NUN">
+        <Description xml:lang="en">Housing wealth (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">312</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).NYN" value="NYN">
+        <Description xml:lang="en">Non-financial assets (includes total produced fixed assets and land underlying dwellings) (net)</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">313</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+      <Code urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INSTR_ASSET_2(1.1).F11Z" value="F11Z">
+        <Description xml:lang="en">Monetary gold, of which gold under swap for cash collateral</Description>
+        <Annotations>
+          <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <AnnotationType>@ORDER@</AnnotationType>
+            <AnnotationText xml:lang="en">314</AnnotationText>
+          </Annotation>
+        </Annotations>
+      </Code>
+    </CodeList>
+  </CodeLists>
+</Structure>

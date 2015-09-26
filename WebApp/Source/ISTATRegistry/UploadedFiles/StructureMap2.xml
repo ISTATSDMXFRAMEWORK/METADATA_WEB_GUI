@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Structure xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message">
+  <Header>
+    <ID>IDREF1</ID>
+    <Test>false</Test>
+    <Prepared>2015-02-27T17:16:42.3425072+01:00</Prepared>
+    <Sender id="Unknown" />
+    <Receiver id="Unknown" />
+  </Header>
+  <Structures>
+    <StructureSets xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure">
+      <StructureSet id="NA_MAIN_T0101" urn="urn:sdmx:org.sdmx.infomodel.mapping.StructureSet=METATECH:NA_MAIN_T0101(1.0)" agencyID="METATECH" version="1.0" isFinal="false">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">NAMAIN to T0101</Name>
+        <StructureMap id="Dataflow_MAP" urn="urn:sdmx:org.sdmx.infomodel.mapping.StructureMap=METATECH:NA_MAIN_T0101(1.0).Dataflow_MAP" isExtension="false">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">ESTAT:NA_MAIN_T0101_A(1.0) map to METATECH:MT_NAMAIN_T0101_A(1.0)</Name>
+          <Source>
+            <Ref id="NA_PENS" version="1.0" agencyID="ESTAT" package="datastructure" class="Dataflow" xmlns="" />
+          </Source>
+          <Target>
+            <Ref id="DEMOGRAPHY" version="2.1" agencyID="FAO" package="datastructure" class="Dataflow" xmlns="" />
+          </Target>
+          <ComponentMap>
+            <Source>
+              <Ref id="FREQ" containerID="DimensionList" package="datastructure" class="Dimension" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="FREQ" containerID="DimensionList" package="datastructure" class="Dimension" xmlns="" />
+            </Target>
+          </ComponentMap>
+
+        </StructureMap>
+      </StructureSet>
+    </StructureSets>
+  </Structures>
+</Structure>

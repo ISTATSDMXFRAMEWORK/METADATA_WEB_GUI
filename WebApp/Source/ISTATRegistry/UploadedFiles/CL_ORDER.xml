@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mes:Structure xmlns:mes="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message" xmlns:str="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure" xmlns:com="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+  <mes:Header>
+    <mes:ID>NA_PENS</mes:ID>
+    <mes:Test>false</mes:Test>
+    <mes:Prepared>2014-05-07T09:24:06.684Z</mes:Prepared>
+    <mes:Sender id="DSW"/>
+    <mes:Receiver id="unknown"/>
+  </mes:Header>
+  <mes:Structures>
+      <str:Codelists>
+		<str:Codelist id="CL_ORDER" uri="urn:sdmx:org.sdmx.infomodel.base.Codelist=SDMX:CL_ORDER(1.0)" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=SDMX:CL_ORDER(1.0)" agencyID="SDMX" version="1.0" isFinal="false">
+        <com:Annotations>
+          <com:Annotation id="ann1">
+            <com:AnnotationTitle>CODELIST</com:AnnotationTitle>
+            <com:AnnotationType>TYPE</com:AnnotationType>
+			<com:AnnotationURL>http://www.istat.it</com:AnnotationURL>
+            <com:AnnotationText xml:lang="it">Annot_CL_it</com:AnnotationText>
+            <com:AnnotationText xml:lang="en">Annot_CL_eng</com:AnnotationText>
+          </com:Annotation>
+          <com:Annotation id="ann1">
+            <com:AnnotationTitle>CODELIST2</com:AnnotationTitle>
+            <com:AnnotationType>TYPE2</com:AnnotationType>
+			<com:AnnotationURL>http://www.istat.it</com:AnnotationURL>
+            <com:AnnotationText xml:lang="it">Annot_CL2_it</com:AnnotationText>
+            <com:AnnotationText xml:lang="en">Annot_CL2_eng</com:AnnotationText>
+          </com:Annotation>
+        </com:Annotations>		
+        <com:Name xml:lang="en">Code list for Frequency (FREQ)</com:Name>
+        <com:Description xml:lang="en">It provides a list of values indicating the "frequency" of the data (e.g. monthly) and, thus, indirectly, also implying the type of "time reference" that could be used for identifying the data with respect time.</com:Description>
+        <str:Code id="E" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_ORDER(1.0).A">
+          <com:Annotations>
+            <com:Annotation>
+              <com:AnnotationType>@ORDER@</com:AnnotationType>
+              <com:AnnotationText xml:lang="en">5</com:AnnotationText>
+            </com:Annotation>
+          <com:Annotation id="ann1">
+            <com:AnnotationTitle>CL CODE TITLE</com:AnnotationTitle>
+            <com:AnnotationType>ANNTYPE</com:AnnotationType>
+			<com:AnnotationURL>http://www.istat.it</com:AnnotationURL>
+            <com:AnnotationText xml:lang="it">Annot_CL_CODE_it</com:AnnotationText>
+            <com:AnnotationText xml:lang="en">Annot_CL_CODE_eng</com:AnnotationText>
+            </com:Annotation>
+          </com:Annotations>
+          <com:Name xml:lang="en">Annual</com:Name>
+        </str:Code>
+        <str:Code id="D" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_ORDER(1.0).B">
+          <com:Annotations>
+            <com:Annotation>
+              <com:AnnotationType>@ORDER@</com:AnnotationType>
+              <com:AnnotationText xml:lang="en">4</com:AnnotationText>
+            </com:Annotation>
+            <com:Annotation>
+				<com:AnnotationTitle>CL CODE TITLE</com:AnnotationTitle>
+				<com:AnnotationType>ANNTYPE</com:AnnotationType>
+				<com:AnnotationURL>http://www.istat.it</com:AnnotationURL>
+				<com:AnnotationText xml:lang="it">Annot_CL_CODE_it</com:AnnotationText>
+				<com:AnnotationText xml:lang="en">Annot_CL_CODE_eng</com:AnnotationText>
+			</com:Annotation>
+            <com:Annotation>
+				<com:AnnotationTitle>CL CODE TITLE2</com:AnnotationTitle>
+				<com:AnnotationType>ANNTYPE</com:AnnotationType>
+				<com:AnnotationURL>http://www.istat.it</com:AnnotationURL>
+				<com:AnnotationText xml:lang="it">Annot_CL_CODE_it</com:AnnotationText>
+				<com:AnnotationText xml:lang="en">Annot_CL_CODE_eng</com:AnnotationText>
+			</com:Annotation>
+            <com:Annotation>
+				<com:AnnotationTitle>CL CODE TITLE3</com:AnnotationTitle>
+				<com:AnnotationType>ANNTYPE</com:AnnotationType>
+				<com:AnnotationURL>http://www.istat.it</com:AnnotationURL>
+				<com:AnnotationText xml:lang="it">Annot_CL_CODE_it</com:AnnotationText>
+				<com:AnnotationText xml:lang="en">Annot_CL_CODE_eng</com:AnnotationText>
+			</com:Annotation>
+          </com:Annotations>
+          <com:Name xml:lang="en">Daily - business week</com:Name>
+        </str:Code>
+        <str:Code id="A" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_ORDER(1.0).D">
+          <com:Annotations>
+            <com:Annotation>
+              <com:AnnotationType>@ORDER@</com:AnnotationType>
+              <com:AnnotationText xml:lang="en">1</com:AnnotationText>
+            </com:Annotation>
+          </com:Annotations>
+          <com:Name xml:lang="en">Daily</com:Name>
+		  </str:Code>
+        <str:Code id="C" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_ORDER(1.0).M">
+          <com:Annotations>
+            <com:Annotation>
+              <com:AnnotationType>@ORDER@</com:AnnotationType>
+              <com:AnnotationText xml:lang="en">3</com:AnnotationText>
+            </com:Annotation>
+          </com:Annotations>
+          <com:Name xml:lang="en">Monthly</com:Name>
+        </str:Code>
+        <str:Code id="B" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_ORDER(1.0).N">
+          <com:Annotations>
+            <com:Annotation>
+              <com:AnnotationType>@ORDER@</com:AnnotationType>
+              <com:AnnotationText xml:lang="en">2</com:AnnotationText>
+            </com:Annotation>
+          </com:Annotations>
+          <com:Name xml:lang="en">Minutely</com:Name>
+        </str:Code>
+      </str:Codelist>
+    </str:Codelists>
+  </mes:Structures>
+</mes:Structure>	

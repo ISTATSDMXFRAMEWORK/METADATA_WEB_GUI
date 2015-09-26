@@ -1,0 +1,1252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btn_add_code" xml:space="preserve">
+    <value>Aggiungi code</value>
+  </data>
+  <data name="btn_goto_first" xml:space="preserve">
+    <value>Primo</value>
+  </data>
+  <data name="btn_goto_last" xml:space="preserve">
+    <value>Ultimo</value>
+  </data>
+  <data name="btn_update_code" xml:space="preserve">
+    <value>Aggiorna code</value>
+  </data>
+  <data name="lbl_add_code" xml:space="preserve">
+    <value>Aggiungi code</value>
+  </data>
+  <data name="lbl_agency" xml:space="preserve">
+    <value>Agenzia</value>
+  </data>
+  <data name="lbl_back" xml:space="preserve">
+    <value>Indietro</value>
+  </data>
+  <data name="lbl_category_scheme" xml:space="preserve">
+    <value>Category Scheme</value>
+  </data>
+  <data name="lbl_codelist" xml:space="preserve">
+    <value>Codelist</value>
+  </data>
+  <data name="lbl_codes" xml:space="preserve">
+    <value>Codes</value>
+  </data>
+  <data name="lbl_concepts" xml:space="preserve">
+    <value>Concepts</value>
+  </data>
+  <data name="lbl_concept_scheme" xml:space="preserve">
+    <value>Concept Scheme</value>
+  </data>
+  <data name="lbl_confirm_change_lang" xml:space="preserve">
+    <value>Il cambiamento della lingua comportarà la perdita dei dati non salvati.\nContinuare senza salvare?</value>
+  </data>
+  <data name="lbl_data_flow" xml:space="preserve">
+    <value>DataFlow</value>
+  </data>
+  <data name="lbl_description" xml:space="preserve">
+    <value>Descrizione</value>
+  </data>
+  <data name="lbl_developer" xml:space="preserve">
+    <value>Istat - Istituto nazionale di statistica EN</value>
+  </data>
+  <data name="lbl_developer_address" xml:space="preserve">
+    <value>Via Cesare Balbo 16 00184 - Roma tel. +39 06 46731</value>
+  </data>
+  <data name="lbl_general" xml:space="preserve">
+    <value>Generale</value>
+  </data>
+  <data name="lbl_id" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="lbl_importated_aterfacts" xml:space="preserve">
+    <value>Artefatti importati</value>
+  </data>
+  <data name="lbl_is_final" xml:space="preserve">
+    <value>Finalizzata</value>
+  </data>
+  <data name="lbl_item_dettail" xml:space="preserve">
+    <value>dettaglio</value>
+  </data>
+  <data name="lbl_key_family" xml:space="preserve">
+    <value>DSD</value>
+  </data>
+  <data name="lbl_message_title" xml:space="preserve">
+    <value>SDMX ISTAT Registry Message</value>
+  </data>
+  <data name="lbl_name" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="lbl_order" xml:space="preserve">
+    <value>Ordine</value>
+  </data>
+  <data name="lbl_parent_code" xml:space="preserve">
+    <value>Parent Code</value>
+  </data>
+  <data name="lbl_parent_concept" xml:space="preserve">
+    <value>Parent Concept</value>
+  </data>
+  <data name="lbl_please_wait" xml:space="preserve">
+    <value>Attende prego...</value>
+  </data>
+  <data name="lbl_select_file_sdmxml" xml:space="preserve">
+    <value>Seleziona file SDMX-ML</value>
+  </data>
+  <data name="lbl_site_title" xml:space="preserve">
+    <value>Istat Registry</value>
+  </data>
+  <data name="lbl_update_code" xml:space="preserve">
+    <value>Aggiorna code</value>
+  </data>
+  <data name="lbl_upload_structure" xml:space="preserve">
+    <value>Importa Structure</value>
+  </data>
+  <data name="lbl_uri" xml:space="preserve">
+    <value>URI</value>
+  </data>
+  <data name="lbl_urn" xml:space="preserve">
+    <value>URN</value>
+  </data>
+  <data name="lbl_valid_from" xml:space="preserve">
+    <value>Valida da</value>
+  </data>
+  <data name="lbl_valid_to" xml:space="preserve">
+    <value>Valida fino</value>
+  </data>
+  <data name="lbl_version" xml:space="preserve">
+    <value>Versione</value>
+  </data>
+  <data name="msg_welcome" xml:space="preserve">
+    <value>Benvenuti nel Registro della meta informazione dei dati statistici di diffusione dell'istituto in formato SDMX.
+Per navigare la meta informazione è possibile utilizzare il menù posto a sinistra.</value>
+  </data>
+  <data name="btn_add_concept" xml:space="preserve">
+    <value>Aggiungi concept</value>
+  </data>
+  <data name="btn_new_codelist" xml:space="preserve">
+    <value>Nuova codelist</value>
+  </data>
+  <data name="btn_new_conceptscheme" xml:space="preserve">
+    <value>Nuovo concept scheme</value>
+  </data>
+  <data name="btn_save" xml:space="preserve">
+    <value>Salva</value>
+  </data>
+  <data name="btn_update_concept" xml:space="preserve">
+    <value>Aggiorna concept</value>
+  </data>
+  <data name="lbl_add_concept" xml:space="preserve">
+    <value>Aggiungi concept</value>
+  </data>
+  <data name="lbl_update_concept" xml:space="preserve">
+    <value>Aggiorna concept</value>
+  </data>
+  <data name="btn_add_category" xml:space="preserve">
+    <value>Aggiungi category</value>
+  </data>
+  <data name="btn_new_categoryscheme" xml:space="preserve">
+    <value>Nuovo category scheme</value>
+  </data>
+  <data name="btn_update_category" xml:space="preserve">
+    <value>Aggiorna category</value>
+  </data>
+  <data name="lbl_add_category" xml:space="preserve">
+    <value>Aggiungi category</value>
+  </data>
+  <data name="lbl_categories" xml:space="preserve">
+    <value>Categories</value>
+  </data>
+  <data name="lbl_parent_category" xml:space="preserve">
+    <value>Parent Category</value>
+  </data>
+  <data name="lbl_update_category" xml:space="preserve">
+    <value>Aggiorna category</value>
+  </data>
+  <data name="btn_add_annotation" xml:space="preserve">
+    <value>Aggiungi annotazione</value>
+  </data>
+  <data name="err_id_exist" xml:space="preserve">
+    <value>ID inserito già presente</value>
+  </data>
+  <data name="err_id_format" xml:space="preserve">
+    <value>Immettere ID valido</value>
+  </data>
+  <data name="err_list_value_format" xml:space="preserve">
+    <value>Inserire almeno un valore</value>
+  </data>
+  <data name="err_title" xml:space="preserve">
+    <value>Errore!</value>
+  </data>
+  <data name="err_title_format" xml:space="preserve">
+    <value>Immettere titolo valido</value>
+  </data>
+  <data name="err_type_format" xml:space="preserve">
+    <value>Immettere type valido</value>
+  </data>
+  <data name="err_uri_format" xml:space="preserve">
+    <value>Immettere URI valido</value>
+  </data>
+  <data name="lbl_add_annotation" xml:space="preserve">
+    <value>Aggiungi Annotazioni</value>
+  </data>
+  <data name="lbl_annotation" xml:space="preserve">
+    <value>Annotazioni</value>
+  </data>
+  <data name="lbl_title" xml:space="preserve">
+    <value>Titolo</value>
+  </data>
+  <data name="lbl_type" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="lbl_value" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="btn_import_csv" xml:space="preserve">
+    <value>Importa CSV</value>
+  </data>
+  <data name="btn_import_csv_file" xml:space="preserve">
+    <value>Importa file CSV</value>
+  </data>
+  <data name="err_code_insert" xml:space="preserve">
+    <value>Un errore è stato riscontrato nella aggiunta del code</value>
+  </data>
+  <data name="err_code_is_parent" xml:space="preserve">
+    <value>Attenzione Code ID usato come Parent ID</value>
+  </data>
+  <data name="err_date_diff" xml:space="preserve">
+    <value>La data iniziale non può essere maggiore della data finale!</value>
+  </data>
+  <data name="err_date_from_format" xml:space="preserve">
+    <value>Correggere data iniziale</value>
+  </data>
+  <data name="err_date_to_format" xml:space="preserve">
+    <value>Correggere data finale</value>
+  </data>
+  <data name="err_list_name_format" xml:space="preserve">
+    <value>Immettere almeno un Name</value>
+  </data>
+  <data name="err_parent_id_not_found" xml:space="preserve">
+    <value>Parent ID non appartenente alla lista</value>
+  </data>
+  <data name="err_version_format" xml:space="preserve">
+    <value>Immettere Versione valida.</value>
+  </data>
+  <data name="lbl_csv_file" xml:space="preserve">
+    <value>CSV File</value>
+  </data>
+  <data name="lbl_import_csv" xml:space="preserve">
+    <value>Importa CSV</value>
+  </data>
+  <data name="lbl_language" xml:space="preserve">
+    <value>Lingua del file</value>
+  </data>
+  <data name="succ_codelist_insert" xml:space="preserve">
+    <value>Codelist inserita correttamente</value>
+  </data>
+  <data name="succ_codelist_update" xml:space="preserve">
+    <value>Codelist aggiornata correttamente</value>
+  </data>
+  <data name="succ_operation" xml:space="preserve">
+    <value>Operazione riuscita</value>
+  </data>
+  <data name="lbl_delete_category" xml:space="preserve">
+    <value>Elimina category</value>
+  </data>
+  <data name="lbl_confirm_move_category" xml:space="preserve">
+    <value>Conferma spostamento</value>
+  </data>
+  <data name="lbl_deselect_category" xml:space="preserve">
+    <value>Deseleziona</value>
+  </data>
+  <data name="lbl_init_move_category" xml:space="preserve">
+    <value>Setta per spostamento</value>
+  </data>
+  <data name="btn_edit_annotation" xml:space="preserve">
+    <value>Aggiorna Annotazioni</value>
+  </data>
+  <data name="lbl_add" xml:space="preserve">
+    <value>Aggiungi</value>
+  </data>
+  <data name="lbl_add_description" xml:space="preserve">
+    <value>Aggiungi descrizione</value>
+  </data>
+  <data name="lbl_add_name" xml:space="preserve">
+    <value>Aggiungi name</value>
+  </data>
+  <data name="lbl_add_text" xml:space="preserve">
+    <value>Aggiungi Testo</value>
+  </data>
+  <data name="lbl_delete" xml:space="preserve">
+    <value>Elimina</value>
+  </data>
+  <data name="lbl_lang" xml:space="preserve">
+    <value>Lingua</value>
+  </data>
+  <data name="lbl_text" xml:space="preserve">
+    <value>Testo</value>
+  </data>
+  <data name="btn_cancel" xml:space="preserve">
+    <value>Cancella</value>
+  </data>
+  <data name="btn_delete" xml:space="preserve">
+    <value>Elimina</value>
+  </data>
+  <data name="btn_new_dataflow" xml:space="preserve">
+    <value>Aggiungi Dataflow</value>
+  </data>
+  <data name="btn_new_keyFamily" xml:space="preserve">
+    <value>Aggiungi KeyFamily</value>
+  </data>
+  <data name="btn_ok" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="lbl_artefact_type" xml:space="preserve">
+    <value>Tipo Artefatto</value>
+  </data>
+  <data name="lbl_delete_question" xml:space="preserve">
+    <value>Sicuro di voler eliminare l'artefatto?</value>
+  </data>
+  <data name="lbl_send" xml:space="preserve">
+    <value>Invia</value>
+  </data>
+  <data name="missing_fields_for_category_scheme_message" xml:space="preserve">
+    <value>Per poter accedere alla gestione Category è necessario inserire i dati relativi alla Category Scheme</value>
+  </data>
+  <data name="txt_move_instructions_first" xml:space="preserve">
+    <value>Per effettuare lo spostamento di un category, seleziona la category che vuoi spostare e dopo premi il pulsante "Setta per spostamento"</value>
+  </data>
+  <data name="txt_move_instructions_second" xml:space="preserve">
+    <value>Ora la category è settata per lo spostamento. Seleziona la category da utilizzare come parent, dopo di che premi il pulsante "Conferma spostamento". Se premi il pulsante senza avere un parent selezionato, la category verrà spostata a livello di category scheme. Per annullare la procedura premi "Annulla spostamento".</value>
+  </data>
+  <data name="err_add_attribute" xml:space="preserve">
+    <value>Errore nell\'aggiunta dell'attributo.</value>
+  </data>
+  <data name="err_add_dimension" xml:space="preserve">
+    <value>Errore nell\'aggiunta della dimensione.</value>
+  </data>
+  <data name="err_add_group" xml:space="preserve">
+    <value>Errore nell\'aggiunta del gruppo.</value>
+  </data>
+  <data name="err_add_normal_dimension" xml:space="preserve">
+    <value>Aggiungi una dimensione normale</value>
+  </data>
+  <data name="err_add_time_dimension" xml:space="preserve">
+    <value>Aggiungi una dimensione temporale.</value>
+  </data>
+  <data name="err_assign_status_empty" xml:space="preserve">
+    <value>Selezionare un stato di assegnazione.</value>
+  </data>
+  <data name="err_attachment_level_empty" xml:space="preserve">
+    <value>Selezionare un livello di attaccamento.</value>
+  </data>
+  <data name="err_attribute_attachment_level_empty" xml:space="preserve">
+    <value>Selezionare un livello di attaccamento per l'attributo.</value>
+  </data>
+  <data name="err_conceptscheme_ref_empty" xml:space="preserve">
+    <value>Selezionare un riferimento allo schema del concetto.</value>
+  </data>
+  <data name="err_concept_ref_empty" xml:space="preserve">
+    <value>Selezionare un riferimento al concetto.</value>
+  </data>
+  <data name="err_delete_attribute" xml:space="preserve">
+    <value>Errore nell'eliminazione dell\'attributo.</value>
+  </data>
+  <data name="err_delete_dimension" xml:space="preserve">
+    <value>Errore nell\'eliminazione della dimensione.</value>
+  </data>
+  <data name="err_delete_goup" xml:space="preserve">
+    <value>Errore nell\'eliminazione del gruppo.</value>
+  </data>
+  <data name="err_dimension_count" xml:space="preserve">
+    <value>Devi avere almeno una dimensione.</value>
+  </data>
+  <data name="err_dimension_count_out" xml:space="preserve">
+    <value>Non si possono selezionare tutte le dimensioni</value>
+  </data>
+  <data name="err_group_attachment_level_empty" xml:space="preserve">
+    <value>Selezionare un livello di attaccamento per il gruppo.</value>
+  </data>
+  <data name="err_id_group_format" xml:space="preserve">
+    <value>ID del gruppo non valido</value>
+  </data>
+  <data name="err_primary_measure_empty" xml:space="preserve">
+    <value>Selezionare un concetto per la misura principale.</value>
+  </data>
+  <data name="err_save_dsd" xml:space="preserve">
+    <value>Errore nel salvataggio della DSD.</value>
+  </data>
+  <data name="lbl_add_dimension" xml:space="preserve">
+    <value>Aggiungi dimensione</value>
+  </data>
+  <data name="lbl_add_group" xml:space="preserve">
+    <value>Aggiungi gruppo</value>
+  </data>
+  <data name="lbl_artefact" xml:space="preserve">
+    <value>Artefatto</value>
+  </data>
+  <data name="lbl_attribute" xml:space="preserve">
+    <value>Attributi</value>
+  </data>
+  <data name="lbl_codelsit" xml:space="preserve">
+    <value>Codelist</value>
+  </data>
+  <data name="lbl_code_rappresentation" xml:space="preserve">
+    <value>Lista Codificata</value>
+  </data>
+  <data name="lbl_concept" xml:space="preserve">
+    <value>Concetto</value>
+  </data>
+  <data name="lbl_concept_reference" xml:space="preserve">
+    <value>Riferimento al concetto</value>
+  </data>
+  <data name="lbl_dimension" xml:space="preserve">
+    <value>Dimensioni</value>
+  </data>
+  <data name="lbl_dimension_type" xml:space="preserve">
+    <value>Tipo dimensione</value>
+  </data>
+  <data name="lbl_download" xml:space="preserve">
+    <value>Scarica</value>
+  </data>
+  <data name="lbl_download_artefact" xml:space="preserve">
+    <value>Scarica Artefatto</value>
+  </data>
+  <data name="lbl_download_title" xml:space="preserve">
+    <value>Personalizza download</value>
+  </data>
+  <data name="lbl_export_type" xml:space="preserve">
+    <value>Tipo export</value>
+  </data>
+  <data name="lbl_group" xml:space="preserve">
+    <value>Gruppi</value>
+  </data>
+  <data name="lbl_primary_measure" xml:space="preserve">
+    <value>Misura principale</value>
+  </data>
+  <data name="lbl_question_delete_attribute" xml:space="preserve">
+    <value>Sei sicuro di voler eliminare l'attributo?</value>
+  </data>
+  <data name="lbl_question_delete_dimension" xml:space="preserve">
+    <value>Sei sicuro di voler eliminare la dimensione?</value>
+  </data>
+  <data name="lbl_question_delete_group" xml:space="preserve">
+    <value>Sei sicuro di voler eliminare il gruppo?</value>
+  </data>
+  <data name="lbl_question_exit_page" xml:space="preserve">
+    <value>Attenzione! Uscendo dalla pagina tutte le modifiche verranno perse.</value>
+  </data>
+  <data name="lbl_select" xml:space="preserve">
+    <value>Seleziona</value>
+  </data>
+  <data name="lbl_select_codelist" xml:space="preserve">
+    <value>Seleziona Codelist</value>
+  </data>
+  <data name="lbl_select_concept" xml:space="preserve">
+    <value>Seleziona Concetto</value>
+  </data>
+  <data name="lbl_stub" xml:space="preserve">
+    <value>Stub</value>
+  </data>
+  <data name="msg_category_index_not_valid" xml:space="preserve">
+    <value>L'indice di ordinamento inserito non è valido!</value>
+  </data>
+  <data name="msg_loading" xml:space="preserve">
+    <value>Caricamento in corso ...</value>
+  </data>
+  <data name="msg_select_destination_node" xml:space="preserve">
+    <value>Seleziona il nodo di destinazione!</value>
+  </data>
+  <data name="err_category_insert" xml:space="preserve">
+    <value>Errore nell\'inserimento della categoria</value>
+  </data>
+  <data name="err_category_update" xml:space="preserve">
+    <value>Errore nell\'aggiornamento della categoria</value>
+  </data>
+  <data name="err_concept_insert" xml:space="preserve">
+    <value>Errore nell\'inserimento del concetto</value>
+  </data>
+  <data name="err_concept_is_parent" xml:space="preserve">
+    <value>Concept ID utilizzato come parent.</value>
+  </data>
+  <data name="err_concept_update" xml:space="preserve">
+    <value>Errore nell'aggiornamento del concetto</value>
+  </data>
+  <data name="succ_categoryscheme_insert" xml:space="preserve">
+    <value>Category scheme inserita</value>
+  </data>
+  <data name="succ_categoryscheme_update" xml:space="preserve">
+    <value>Category scheme aggiornata</value>
+  </data>
+  <data name="succ_concept_insert" xml:space="preserve">
+    <value>Concetto inserito</value>
+  </data>
+  <data name="succ_concept_update" xml:space="preserve">
+    <value>Concetto aggiornata</value>
+  </data>
+  <data name="err_generic_category_order" xml:space="preserve">
+    <value>Operazione non consentita</value>
+  </data>
+  <data name="lbl_cancel_move_category" xml:space="preserve">
+    <value>Annulla spostamento</value>
+  </data>
+  <data name="lbl_category_order" xml:space="preserve">
+    <value>Indice</value>
+  </data>
+  <data name="msg_category_move_canceled" xml:space="preserve">
+    <value>Spostamento annullato</value>
+  </data>
+  <data name="btn_update_dataflow" xml:space="preserve">
+    <value>Aggiorna dataflow</value>
+  </data>
+  <data name="lbl_set_dsd_for_dataflow" xml:space="preserve">
+    <value>DSD</value>
+  </data>
+  <data name="btn_save_dataflow" xml:space="preserve">
+    <value>Salva</value>
+  </data>
+  <data name="lbl_dsd" xml:space="preserve">
+    <value>DSD</value>
+  </data>
+  <data name="msg_at_least_one_dsd" xml:space="preserve">
+    <value>Per salvare il dataflow è necessario aver selezionato la DSD</value>
+  </data>
+  <data name="btn_new_categorization" xml:space="preserve">
+    <value>Nuova categorisation</value>
+  </data>
+  <data name="lbl_categorization" xml:space="preserve">
+    <value>Categorisation</value>
+  </data>
+  <data name="lbl_available_items_list" xml:space="preserve">
+    <value>Elementi disponibili</value>
+  </data>
+  <data name="lbl_available_structures_list" xml:space="preserve">
+    <value>Artefatti disponibili</value>
+  </data>
+  <data name="lbl_category_scheme_list" xml:space="preserve">
+    <value>Category Scheme disponibili</value>
+  </data>
+  <data name="lbl_structure" xml:space="preserve">
+    <value>Structure</value>
+  </data>
+  <data name="btn_open_grid_div" xml:space="preserve">
+    <value>Seleziona un elemento</value>
+  </data>
+  <data name="btn_open_tree_div" xml:space="preserve">
+    <value>Seleziona una categoria</value>
+  </data>
+  <data name="lbl_selected_category" xml:space="preserve">
+    <value>Categoria selezionata</value>
+  </data>
+  <data name="lbl_selected_item" xml:space="preserve">
+    <value>Elemento selezionato</value>
+  </data>
+  <data name="lbl_select_keyfamily" xml:space="preserve">
+    <value>Seleziona Key Family</value>
+  </data>
+  <data name="err_dsd_ref_empty" xml:space="preserve">
+    <value>Selezionare la Key Family</value>
+  </data>
+  <data name="succ_categorization_insert" xml:space="preserve">
+    <value>Categorization inserita correttamente</value>
+  </data>
+  <data name="succ_categorization_update" xml:space="preserve">
+    <value>Categorization aggiornata correttamente</value>
+  </data>
+  <data name="lbl_number_of_rows" xml:space="preserve">
+    <value>Numero di righe</value>
+  </data>
+  <data name="msg_category_scheme_imported" xml:space="preserve">
+    <value>Category Scheme [ {0} - {1} - {2} ] aggiunto!&lt;br /&gt;&lt;br /&gt;</value>
+  </data>
+  <data name="msg_codelist_imported" xml:space="preserve">
+    <value>Codelist [ {0} - {1} - {2} ] aggiunta!&lt;br /&gt;&lt;br /&gt;</value>
+  </data>
+  <data name="msg_concept_scheme_imported" xml:space="preserve">
+    <value>Concept Scheme [ {0} - {1} - {2} ] aggiunto!&lt;br /&gt;&lt;br /&gt;</value>
+  </data>
+  <data name="msg_data_structure_imported" xml:space="preserve">
+    <value>Data structure [ {0} - {1} - {2} ] aggiunto!&lt;br /&gt;&lt;br /&gt;</value>
+  </data>
+  <data name="btn_confirm_import" xml:space="preserve">
+    <value>Importa</value>
+  </data>
+  <data name="btn_upload_file" xml:space="preserve">
+    <value>Upload</value>
+  </data>
+  <data name="err_at_least_one_row" xml:space="preserve">
+    <value>Almeno un elemento deve essere selezionato</value>
+  </data>
+  <data name="lbl_select_all_items" xml:space="preserve">
+    <value>Seleziona tutti gli elementi</value>
+  </data>
+  <data name="err_no_file_uploaded" xml:space="preserve">
+    <value>Non è stato selezionato un file dati!</value>
+  </data>
+  <data name="btn_cancel_operation" xml:space="preserve">
+    <value>Annulla</value>
+  </data>
+  <data name="lbl_include_codelist_and_conceptscheme" xml:space="preserve">
+    <value>Includi Codelits e ConceptScheme referenziati nell'export</value>
+  </data>
+  <data name="lbl_change_number_of_rows" xml:space="preserve">
+    <value>Aggiorna</value>
+  </data>
+  <data name="err_wrong_rows_number_pagination" xml:space="preserve">
+    <value>Immettere un valore per la paginazione corretto!</value>
+  </data>
+  <data name="err_empty_string" xml:space="preserve">
+    <value>Non è possibile inserire un valore nullo!</value>
+  </data>
+  <data name="err_missing_language_file" xml:space="preserve">
+    <value>L'applicazione non supporta ancora la lingua selezionata!</value>
+  </data>
+  <data name="btn_add_agency" xml:space="preserve">
+    <value>Aggiungi agency</value>
+  </data>
+  <data name="btn_new_agencyscheme" xml:space="preserve">
+    <value>Nuovo agency scheme</value>
+  </data>
+  <data name="btn_update_agency" xml:space="preserve">
+    <value>Aggiorna agency</value>
+  </data>
+  <data name="err_agency_insert" xml:space="preserve">
+    <value>Errore nell\'inserimento dell\'agency</value>
+  </data>
+  <data name="err_agency_update" xml:space="preserve">
+    <value>Errore nell\'aggiornamento dell\'agency</value>
+  </data>
+  <data name="lbl_add_agency" xml:space="preserve">
+    <value>Aggiungi agency</value>
+  </data>
+  <data name="lbl_agencies" xml:space="preserve">
+    <value>Agencies</value>
+  </data>
+  <data name="lbl_agency_scheme" xml:space="preserve">
+    <value>Agency Scheme</value>
+  </data>
+  <data name="lbl_update_agency" xml:space="preserve">
+    <value>Aggiorna agency</value>
+  </data>
+  <data name="succ_agency_insert" xml:space="preserve">
+    <value>Agency inserita correttamente</value>
+  </data>
+  <data name="succ_agency_update" xml:space="preserve">
+    <value>Agency aggiornata correttamente</value>
+  </data>
+  <data name="lbl_annotation_dimension" xml:space="preserve">
+    <value>Annotazioni per la Dimensione</value>
+  </data>
+  <data name="lbl_annotation_attribute" xml:space="preserve">
+    <value>Annotazioni per l'Attributo</value>
+  </data>
+  <data name="lbl_annotation_group" xml:space="preserve">
+    <value>Annotazioni per il Gruppo</value>
+  </data>
+  <data name="btn_add_data_provider" xml:space="preserve">
+    <value>Aggiungi data provider</value>
+  </data>
+  <data name="btn_new_dataproviderscheme" xml:space="preserve">
+    <value>Aggiungi Data Provider Scheme</value>
+  </data>
+  <data name="btn_updata_data_provider" xml:space="preserve">
+    <value>Aggiorna data provider</value>
+  </data>
+  <data name="btn_update_data_provider" xml:space="preserve">
+    <value>Aggiorna data provider</value>
+  </data>
+  <data name="lbl_add_data_provider" xml:space="preserve">
+    <value>Aggiungi data provider</value>
+  </data>
+  <data name="lbl_dataproviders" xml:space="preserve">
+    <value>Data Providers</value>
+  </data>
+  <data name="lbl_data_provider_scheme" xml:space="preserve">
+    <value>Data Provider Scheme</value>
+  </data>
+  <data name="lbl_update_data_provider" xml:space="preserve">
+    <value>Aggiorna data provider</value>
+  </data>
+  <data name="btn_duplicate" xml:space="preserve">
+    <value>Duplica</value>
+  </data>
+  <data name="btn_Duplicate_Artefact" xml:space="preserve">
+    <value>Duplicazione Artefatto</value>
+  </data>
+  <data name="err_duplicate_artefact" xml:space="preserve">
+    <value>Errore nella duplicazione dell'artefatto</value>
+  </data>
+  <data name="lbl_source" xml:space="preserve">
+    <value>Origine</value>
+  </data>
+  <data name="lbl_target" xml:space="preserve">
+    <value>Destinazione</value>
+  </data>
+  <data name="btn_add_data_consumer" xml:space="preserve">
+    <value>Aggiungi data consumer</value>
+  </data>
+  <data name="btn_new_dataconsumerscheme" xml:space="preserve">
+    <value>Aggiungi Data Consumer Scheme</value>
+  </data>
+  <data name="btn_update_data_consumer" xml:space="preserve">
+    <value>Aggiorna data consumer</value>
+  </data>
+  <data name="lbl_add_data_consumer" xml:space="preserve">
+    <value>Aggiungi data consumer</value>
+  </data>
+  <data name="lbl_dataconsumers" xml:space="preserve">
+    <value>Data Consumers</value>
+  </data>
+  <data name="lbl_data_consumer_scheme" xml:space="preserve">
+    <value>Data Consumer Scheme</value>
+  </data>
+  <data name="lbl_update_data_consumer" xml:space="preserve">
+    <value>Aggiorna data consumer</value>
+  </data>
+  <data name="btn_new_organizationunitscheme" xml:space="preserve">
+    <value>Aggiungi Organization Unit Scheme</value>
+  </data>
+  <data name="lbl_organization_unit_scheme" xml:space="preserve">
+    <value>Organization Unit Scheme</value>
+  </data>
+  <data name="lbl_content_constraint" xml:space="preserve">
+    <value>Content Constraint</value>
+  </data>
+  <data name="btn_new_contentconstraint" xml:space="preserve">
+    <value>Aggiungi Content Constraint</value>
+  </data>
+  <data name="btn_add_organization_unit" xml:space="preserve">
+    <value>Aggiungi Organization Unit</value>
+  </data>
+  <data name="btn_update_organization_unit" xml:space="preserve">
+    <value>Aggiorna Organization Unit</value>
+  </data>
+  <data name="lbl_add_organization_unit" xml:space="preserve">
+    <value>Aggiungi Organization Unit</value>
+  </data>
+  <data name="lbl_organization_unit" xml:space="preserve">
+    <value>Organization Unit</value>
+  </data>
+  <data name="msg_no_result_found" xml:space="preserve">
+    <value>Nessun risultato trovato</value>
+  </data>
+  <data name="lbl_constraintselements" xml:space="preserve">
+    <value>Elementi Constraint</value>
+  </data>
+  <data name="err_organization_unit_insert" xml:space="preserve">
+    <value>Errore nell\'inserimento dell\'Organization Unit</value>
+  </data>
+  <data name="err_organization_unit_is_parent" xml:space="preserve">
+    <value>Attenzione! Organization Unit ID usato come Parent ID</value>
+  </data>
+  <data name="err_organization_unit_update" xml:space="preserve">
+    <value>Errore nell\'aggiornamento dell\'Organization Unit</value>
+  </data>
+  <data name="succ_organization_unit_insert" xml:space="preserve">
+    <value>Organization Unit inserita correttamente</value>
+  </data>
+  <data name="succ_organization_unit_update" xml:space="preserve">
+    <value>Organization Unit aggiornata correttamente</value>
+  </data>
+  <data name="lbl_select_dataflow" xml:space="preserve">
+    <value>Seleziona DataFlow</value>
+  </data>
+  <data name="lbl_parent_organization_unit" xml:space="preserve">
+    <value>Parent Organization Unit</value>
+  </data>
+  <data name="lbl_update_organization_unit" xml:space="preserve">
+    <value>Aggiorna Organization Unit</value>
+  </data>
+  <data name="err_agency_missing" xml:space="preserve">
+    <value>L\'agency non può essere vuota</value>
+  </data>
+  <data name="err_order_format_invalid" xml:space="preserve">
+    <value>Inserire un valore numerico per l'Order</value>
+  </data>
+  <data name="err_parent_item_is_child" xml:space="preserve">
+    <value>L'elemento specificato come parent è già figlio dell'elemento corrente</value>
+  </data>
+  <data name="err_code_update" xml:space="preserve">
+    <value>Errore nell'aggiornamento del code</value>
+  </data>
+  <data name="err_parent_id_same_value" xml:space="preserve">
+    <value>Id e parent non possono avere lo stesso valore</value>
+  </data>
+  <data name="msg_agency_scheme_imported" xml:space="preserve">
+    <value>Agency Scheme [ {0} - {1} - {2} ] aggiunto!&lt;br /&gt;&lt;br /&gt;</value>
+  </data>
+  <data name="msg_data_consumer_scheme_imported" xml:space="preserve">
+    <value>Data Consumer Scheme [ {0} - {1} - {2} ] aggiunto!&lt;br /&gt;&lt;br /&gt;</value>
+  </data>
+  <data name="msg_data_provider_scheme_imported" xml:space="preserve">
+    <value>Data Provider Scheme [ {0} - {1} - {2} ] aggiunto!&lt;br /&gt;&lt;br /&gt;</value>
+  </data>
+  <data name="msg_organization_unit_scheme_imported" xml:space="preserve">
+    <value>Organization Unit Scheme [ {0} - {1} - {2} ] aggiunto!&lt;br /&gt;&lt;br /&gt;</value>
+  </data>
+  <data name="err_data_provider_insert" xml:space="preserve">
+    <value>Errore nell\'inserimento del Data Provider</value>
+  </data>
+  <data name="succ_data_consumer_insert" xml:space="preserve">
+    <value>Data Consumer inserito correttamente</value>
+  </data>
+  <data name="succ_data_consumer_update" xml:space="preserve">
+    <value>Data Consumer aggiornato correttamente</value>
+  </data>
+  <data name="succ_data_provider_insert" xml:space="preserve">
+    <value>Data Provider inserito correttamente</value>
+  </data>
+  <data name="succ_data_provider_update" xml:space="preserve">
+    <value>Data Provider aggiornato correttamente</value>
+  </data>
+  <data name="lbl_offset" xml:space="preserve">
+    <value>Scostamento</value>
+  </data>
+  <data name="lbl_periodicity" xml:space="preserve">
+    <value>Periodicità</value>
+  </data>
+  <data name="lbl_tolerance" xml:space="preserve">
+    <value>Tolleranza</value>
+  </data>
+  <data name="err_offset" xml:space="preserve">
+    <value>Inserire uno Scostamento valido (Release Calendar)</value>
+  </data>
+  <data name="err_periodicity" xml:space="preserve">
+    <value>Inserire una Periodicità valida (Release Calendar)</value>
+  </data>
+  <data name="err_tolerance" xml:space="preserve">
+    <value>Inserire una Tolleranza valida (Release Calendar)</value>
+  </data>
+  <data name="err_constraintattachment" xml:space="preserve">
+    <value>Selezionare almeno un Constraint Attachment</value>
+  </data>
+  <data name="lbl_number_of_total_rows" xml:space="preserve">
+    <value>Numero di elementi totali: {0}</value>
+  </data>
+  <data name="lbl_organization_unit_parent" xml:space="preserve">
+    <value>Parent Organization Unit</value>
+  </data>
+  <data name="lbl_codelistmap" xml:space="preserve">
+    <value>Codelist Map</value>
+  </data>
+  <data name="lbl_structuremap" xml:space="preserve">
+    <value>Structure Map</value>
+  </data>
+  <data name="btn_new_codelistmap" xml:space="preserve">
+    <value>Nuova Codelist Map</value>
+  </data>
+  <data name="btn_new_structuremap" xml:space="preserve">
+    <value>Nuova Structure Map</value>
+  </data>
+  <data name="btn_new_structureset" xml:space="preserve">
+    <value>Nuovo StructureSet</value>
+  </data>
+  <data name="lbl_structureset" xml:space="preserve">
+    <value>StructureSet</value>
+  </data>
+  <data name="err_save_structureset" xml:space="preserve">
+    <value>Errore nel salvataggio dello StructureSet</value>
+  </data>
+  <data name="lbl_question_delete_clm" xml:space="preserve">
+    <value>Sei sicuro di voler eliminare la CodeListMap?</value>
+  </data>
+  <data name="equal_global_identificators" xml:space="preserve">
+    <value>Id, Agency e Version dei due artefatti non possono essere uguali</value>
+  </data>
+  <data name="err_delete_clm" xml:space="preserve">
+    <value>Errore nella eliminazione della CodeListMap</value>
+  </data>
+  <data name="lbl_no_items_in_grid" xml:space="preserve">
+    <value>Non ci sono elementi presenti</value>
+  </data>
+  <data name="err_delete_clm_mapping" xml:space="preserve">
+    <value>Errore nell eliminazione del mapping!</value>
+  </data>
+  <data name="msg_save_before_duplicate" xml:space="preserve">
+    <value>Salvare l\'oggetto corrente prima della duplicazione. Le modifiche non salvate non verranno duplicate.</value>
+  </data>
+  <data name="err_save_clm" xml:space="preserve">
+    <value>Errore nella creazione della CodeListMap</value>
+  </data>
+  <data name="succ_clm_update" xml:space="preserve">
+    <value>CodelistMap aggiornata correttamente</value>
+  </data>
+  <data name="err_missing_id" xml:space="preserve">
+    <value>L\'id non può essere vuoto</value>
+  </data>
+  <data name="lbl_add_text_first_column" xml:space="preserve">
+    <value>Lingua</value>
+  </data>
+  <data name="lbl_add_text_second_column" xml:space="preserve">
+    <value>Valore</value>
+  </data>
+  <data name="lbl_question_delete_sm" xml:space="preserve">
+    <value>Sei sicuro di voler eliminare lo StructureMap?</value>
+  </data>
+  <data name="err_delete_sm" xml:space="preserve">
+    <value>Errore nella eliminazione dello StructureMap</value>
+  </data>
+  <data name="err_delete_sm_mapping" xml:space="preserve">
+    <value>Errore nella eliminazione del mapping</value>
+  </data>
+  <data name="err_save_sm" xml:space="preserve">
+    <value>Errore nella creazione dello StructureMap</value>
+  </data>
+  <data name="succ_sm_update" xml:space="preserve">
+    <value>StructureMap aggiornata correttamente</value>
+  </data>
+  <data name="err_clm_missing_source_target" xml:space="preserve">
+    <value>Selezionare le Codelist Sorgente e Destinazione</value>
+  </data>
+  <data name="err_sm_missing_source_target" xml:space="preserve">
+    <value>Selezionare gli Artefatti Sorgente e Destinazione</value>
+  </data>
+  <data name="err_sm_commonApi_BUG" xml:space="preserve">
+    <value>A Causa di un bug delle Common API le StructureMap non possono contenere più di un mapping</value>
+  </data>
+  <data name="err_add_mapping" xml:space="preserve">
+    <value>Aggiungere almeno un mapping</value>
+  </data>
+  <data name="btn_add_codelistmap" xml:space="preserve">
+    <value>Aggiungi CodelistMap</value>
+  </data>
+  <data name="btn_add_mapping" xml:space="preserve">
+    <value>Aggiungi mapping</value>
+  </data>
+  <data name="btn_add_structuremap" xml:space="preserve">
+    <value>Aggiungi StructureMap</value>
+  </data>
+  <data name="btn_delete_structuremap" xml:space="preserve">
+    <value>Elimina Structuremap</value>
+  </data>
+  <data name="err_existing_mapping" xml:space="preserve">
+    <value>Mapping Esistente</value>
+  </data>
+  <data name="lbl_add_edit_codelistmap" xml:space="preserve">
+    <value>Aggiungi/Modifica CodelistMap</value>
+  </data>
+  <data name="lbl_add_edit_structuremap" xml:space="preserve">
+    <value>Aggiungi/modifica StructureMap</value>
+  </data>
+  <data name="lbl_artefact_source" xml:space="preserve">
+    <value>Artefatto sorgente</value>
+  </data>
+  <data name="lbl_artefact_target" xml:space="preserve">
+    <value>Artefatto destinazione</value>
+  </data>
+  <data name="lbl_codelist_source" xml:space="preserve">
+    <value>Codelist Sorgente</value>
+  </data>
+  <data name="lbl_codelist_target" xml:space="preserve">
+    <value>Codelist Destinazione</value>
+  </data>
+  <data name="lbl_details" xml:space="preserve">
+    <value>Dettagli</value>
+  </data>
+  <data name="lbl_mapping" xml:space="preserve">
+    <value>Mapping</value>
+  </data>
+  <data name="lbl_source_code" xml:space="preserve">
+    <value>Codice sorgente</value>
+  </data>
+  <data name="lbl_target_code" xml:space="preserve">
+    <value>Codice destinazione</value>
+  </data>
+  <data name="lbl_view_edit_details" xml:space="preserve">
+    <value>Visualizza/modifica dettagli</value>
+  </data>
+  <data name="err_save_contentconstraint" xml:space="preserve">
+    <value>Errore nel salvataggio del Content Constraint</value>
+  </data>
+  <data name="err_duplicate_id" xml:space="preserve">
+    <value>ID Esistente</value>
+  </data>
+  <data name="err_artefact_is_a_reference" xml:space="preserve">
+    <value>Non è possibile eliminare questo elemento. Un vincolo di riferimento ad un altro oggetto è associato ad esso.</value>
+  </data>
+  <data name="err_reference_or_structure_is_missing" xml:space="preserve">
+    <value>Prima di salvare l'elemento è necessario settare la reference al category scheme e all'artefatto</value>
+  </data>
+  <data name="err_csv_import_id_missing" xml:space="preserve">
+    <value>Il valore dell'ID nella riga {0} del file CSV non può essere null!\\n\\n</value>
+  </data>
+  <data name="err_csv_import_id_missing_gui" xml:space="preserve">
+    <value>Il valore dell'ID nella riga {0} del file CSV non può essere null!&lt;br/&gt;&lt;br/&gt;</value>
+  </data>
+  <data name="err_csv_import_line_bad_format" xml:space="preserve">
+    <value>Il formato della riga {0} del file CSV non è corretto!\\n\\n</value>
+  </data>
+  <data name="err_csv_import_line_bad_format_gui" xml:space="preserve">
+    <value>Il formato della riga {0} del file CSV non è corretto!&lt;br/&gt;&lt;br/&gt;</value>
+  </data>
+  <data name="err_csv_import_name_missing" xml:space="preserve">
+    <value>Il valore NAME nella riga {0} del file CSV non può essere null!\\n\\n</value>
+  </data>
+  <data name="err_csv_import_name_missing_gui" xml:space="preserve">
+    <value>Il valore NAME nella riga {0} del file CSV non può essere null!&lt;br/&gt;&lt;br/&gt;</value>
+  </data>
+  <data name="err_csv_import_parent_code_error" xml:space="preserve">
+    <value>Il PARENT CODE [ {0} ] specificato per il CODE [ {1} ] non esiste! Il CODE [ {2} ] non è stato inserito!&lt;br/&gt;&lt;br/&gt;</value>
+  </data>
+  <data name="err_order_less_than_zero" xml:space="preserve">
+    <value>Il valore di ordine non può essere negativo</value>
+  </data>
+  <data name="lbl_use_this_separator" xml:space="preserve">
+    <value>Separatore [ ; ]</value>
+  </data>
+  <data name="lbl_used_separator" xml:space="preserve">
+    <value>Separatore [ default ' ; ' ]</value>
+  </data>
+  <data name="msg_content_constraint_imported" xml:space="preserve">
+    <value>Content Constraint [ {0} - {1} - {2} ] aggiunto!&lt;br /&gt;&lt;br /&gt;</value>
+  </data>
+  <data name="msg_structure_set_imported" xml:space="preserve">
+    <value>Structure Set [ {0} - {1} - {2} ] aggiunto!&lt;br /&gt;&lt;br /&gt;</value>
+  </data>
+  <data name="lbl_hcl" xml:space="preserve">
+    <value>Hierarchical Codelist</value>
+  </data>
+  <data name="btn_new_hcl" xml:space="preserve">
+    <value>Nuova HCL</value>
+  </data>
+  <data name="msg_hierarchical_codelist_imported" xml:space="preserve">
+    <value>Hierarchical Codelist [ {0} - {1} - {2} ] aggiunto!&lt;br /&gt;&lt;br /&gt;</value>
+  </data>
+  <data name="lbl_hierarchy" xml:space="preserve">
+    <value>Gerarchie</value>
+  </data>
+  <data name="lbl_included_codelist" xml:space="preserve">
+    <value>Codelist incluse</value>
+  </data>
+  <data name="lbl_wrong_lines" xml:space="preserve">
+    <value>Righe errate nel CSV</value>
+  </data>
+  <data name="btn_next_step" xml:space="preserve">
+    <value>Prossimo step &gt;&gt;</value>
+  </data>
+  <data name="lblUserCredentials" xml:space="preserve">
+    <value>Credenziali utente</value>
+  </data>
+  <data name="lblWelcomeUserMessagge" xml:space="preserve">
+    <value>Sei connesso come {0} |</value>
+  </data>
+  <data name="lbl_no_items_allowed" xml:space="preserve">
+    <value>Non ti è permesso salvare nessuna delle strutture contenute nel file caricato</value>
+  </data>
+  <data name="msg_error_deleting" xml:space="preserve">
+    <value>Non sei autorizzato a cancellare questo oggetto</value>
+  </data>
+  <data name="msg_generic_error_messagge" xml:space="preserve">
+    <value>Errore</value>
+  </data>
+  <data name="lbl_working_on_a_final" xml:space="preserve">
+    <value>Stai lavorando su una codelist finalizzata. Non sarà più possibile eliminare o modificare il code inserito.</value>
+  </data>
+  <data name="err_while_inserting_code" xml:space="preserve">
+    <value>Errore nel salvataggio del code nel db</value>
+  </data>
+  <data name="err_while_inserting_code_desc" xml:space="preserve">
+    <value>Errore nel salvataggio della descrizione del code</value>
+  </data>
+  <data name="err_while_inserting_code_name" xml:space="preserve">
+    <value>Errore nel salvataggio del name del code</value>
+  </data>
+  <data name="err_while_retrieving_code" xml:space="preserve">
+    <value>Errore nella query di recupero del parent code</value>
+  </data>
+  <data name="lbl_administration_page" xml:space="preserve">
+    <value>Area Amministrazione</value>
+  </data>
+  <data name="btn_save_new_user" xml:space="preserve">
+    <value>Salva utente</value>
+  </data>
+  <data name="lbl_new_user_name" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="lbl_new_user_password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="lbl_new_user_surname" xml:space="preserve">
+    <value>Cognome</value>
+  </data>
+  <data name="lbl_new_user_username" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="btn_delete_user_button" xml:space="preserve">
+    <value>Elimina</value>
+  </data>
+  <data name="btn_set_agencies_for_user" xml:space="preserve">
+    <value>Imposta Agencies</value>
+  </data>
+  <data name="btn_update_user_button" xml:space="preserve">
+    <value>Aggiorna</value>
+  </data>
+  <data name="err_user_deleting_failed" xml:space="preserve">
+    <value>Errore nella cancellazione dell'utente</value>
+  </data>
+  <data name="err_user_insert_all_data_required" xml:space="preserve">
+    <value>Tutti i campi sono necessari!</value>
+  </data>
+  <data name="err_user_insert_failed_saving" xml:space="preserve">
+    <value>Errore nel salvataggio dell\'utente</value>
+  </data>
+  <data name="err_user_insert_user_already_exists" xml:space="preserve">
+    <value>Un utente con il seguente username già esiste!</value>
+  </data>
+  <data name="lbl_update_user" xml:space="preserve">
+    <value>Aggiorna utente</value>
+  </data>
+  <data name="msg_user_deleting_succed" xml:space="preserve">
+    <value>Utente cancellato con successo</value>
+  </data>
+  <data name="msg_user_insert_success_saving" xml:space="preserve">
+    <value>Utente salvato correttamente</value>
+  </data>
+  <data name="btn_set_agency" xml:space="preserve">
+    <value>Imposta Agency</value>
+  </data>
+  <data name="btn_cancel_set_agency" xml:space="preserve">
+    <value>Annulla</value>
+  </data>
+  <data name="btn_confirm_set_agency" xml:space="preserve">
+    <value>Conferma impostazione agencies</value>
+  </data>
+  <data name="err_getting_agencies_from_session" xml:space="preserve">
+    <value>Si è verificato un errore durante il recupero delle agencies dalla sessione</value>
+  </data>
+  <data name="err_missing_agencies_from_session" xml:space="preserve">
+    <value>Non ci sono agencies in sessione da salvare</value>
+  </data>
+  <data name="msg_categorisation_imported" xml:space="preserve">
+    <value>Categorisation [ {0} - {1} - {2} ] aggiunto!&lt;br /&gt;&lt;br /&gt;</value>
+  </data>
+  <data name="msg_session_expired" xml:space="preserve">
+    <value>Sessione scaduta!&lt;br&gt; E' stata ricaricata la Home Page!</value>
+  </data>
+  <data name="msg_add_endpoint" xml:space="preserve">
+    <value>Selezionare l'endpoint</value>
+  </data>
+  <data name="msg_add_password" xml:space="preserve">
+    <value>Inserire la Password</value>
+  </data>
+  <data name="msg_add_username" xml:space="preserve">
+    <value>Inserire la Username</value>
+  </data>
+  <data name="lbl_admin" xml:space="preserve">
+    <value>Admin</value>
+  </data>
+</root>
