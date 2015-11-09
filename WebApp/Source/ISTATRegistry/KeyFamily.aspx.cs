@@ -21,7 +21,7 @@ namespace ISTATRegistry
     {
         ISdmxObjects _sdmxObjects;
 
-        private ISdmxObjects GetSdmxObjects()
+       private ISdmxObjects GetSdmxObjects()
         {
             WSModel wsModel = new WSModel();
             ISdmxObjects sdmxInput;

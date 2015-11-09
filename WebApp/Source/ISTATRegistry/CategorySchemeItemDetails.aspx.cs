@@ -620,7 +620,7 @@ namespace ISTATRegistry
             // TEMPORARY LOG
             TemporaryLog("In caricamento pagina");
 
-            _epe = (EndPointElement)Session["CurrentEndPointObject"];
+            _epe = (EndPointElement)Session[SESSION_KEYS.CURRENT_ENDPOINT_OBJECT];
 
             lblDSDID.DataBind();
             lblVersion.DataBind();

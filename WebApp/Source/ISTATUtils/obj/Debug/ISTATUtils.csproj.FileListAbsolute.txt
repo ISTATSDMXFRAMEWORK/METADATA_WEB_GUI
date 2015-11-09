@@ -18,3 +18,4 @@ E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATUtils\bin\Debug\SdmxApi.dll
 E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATUtils\bin\Debug\log4net.dll
 E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATUtils\obj\Debug\ISTATUtils.dll
 E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATUtils\obj\Debug\ISTATUtils.pdb
+E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATUtils\obj\Debug\ISTATUtils.csprojResolveAssemblyReference.cache

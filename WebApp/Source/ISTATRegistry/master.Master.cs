@@ -14,17 +14,20 @@ using System.Globalization;
 using System.IO;
 using System.Collections.Specialized;
 using ISTATRegistry.IRServiceReference;
+using System.Xml.Linq;
 
 namespace ISTATRegistry
 {
 
-    public static class SESSION_KEYS{
+    public static class SESSION_KEYS
+    {
         public static readonly string KEY_LANG = "Language";
         public static readonly string OLD_KEY_LANG = "OldLanguage";
         public static readonly string USER_OK = "USER_OK";
         public static readonly string USER_DATA = "USER_DATA";
         public static readonly string USER_AGENCIES = "USER_AGENCIES";
         public static readonly string AGENCIES_TO_SET = "AGENCIES_TO_SET";
+        public static readonly string CURRENT_ENDPOINT_OBJECT = "CurrentEndPointObject";
     }
 
     public partial class master : System.Web.UI.MasterPage
@@ -58,7 +61,7 @@ namespace ISTATRegistry
                 lnkAdmin.Visible = epe.EnableAdministration;
                 loginButton.Visible = epe.EnableAuthentication;
                 pnlExtraArtefact.Visible = !epe.PartialArtefact;
-                Session["CurrentEndPointObject"] = epe;
+                Session[SESSION_KEYS.CURRENT_ENDPOINT_OBJECT] = epe;
 
                 if (Session[SESSION_KEYS.KEY_LANG] != null)
                 {
@@ -78,13 +81,13 @@ namespace ISTATRegistry
             {
                 CheckSessioneExpired();
             }
-           
-            if ( Session[SESSION_KEYS.USER_OK] != null && (bool)Session[SESSION_KEYS.USER_OK] == true )
+
+            if (Session[SESSION_KEYS.USER_OK] != null && (bool)Session[SESSION_KEYS.USER_OK] == true)
             {
                 lblWelcomeUser.Visible = true;
                 User currentUser = (User)Session[SESSION_KEYS.USER_DATA];
-                string userCompleteName = string.Format( "{0} {1}", currentUser.name.ToString(), currentUser.surname.ToString() );
-                lblWelcomeUser.Text = string.Format( Resources.Messages.lblWelcomeUserMessagge, userCompleteName );
+                string userCompleteName = string.Format("{0} {1}", currentUser.name.ToString(), currentUser.surname.ToString());
+                lblWelcomeUser.Text = string.Format(Resources.Messages.lblWelcomeUserMessagge, userCompleteName);
                 loginButton.Visible = false;
                 logoutButton.Visible = true;
             }
@@ -94,20 +97,20 @@ namespace ISTATRegistry
         protected void cmbLanguage_SelectedIndexChanged(object sender, EventArgs e)
         {
             bool foundLanguage = false;
-            string[] resources = Directory.GetFiles( Server.MapPath( "~/App_GlobalResources" ), "*.resx");
+            string[] resources = Directory.GetFiles(Server.MapPath("~/App_GlobalResources"), "*.resx");
             foreach (string resourceFile in resources)
             {
                 string[] splittedPath = resourceFile.Split('\\');
-                string fileName = splittedPath[ splittedPath.Length - 1 ];
-                string languageName = fileName.Split( '.' )[1];
-                if ( languageName.Equals( cmbLanguage.SelectedItem.Value ) )
+                string fileName = splittedPath[splittedPath.Length - 1];
+                string languageName = fileName.Split('.')[1];
+                if (languageName.Equals(cmbLanguage.SelectedItem.Value))
                 {
                     foundLanguage = true;
                     break;
                 }
             }
 
-            if ( foundLanguage )
+            if (foundLanguage)
             {
                 Session[SESSION_KEYS.KEY_LANG] = cmbLanguage.SelectedItem.Value;
                 Session[SESSION_KEYS.OLD_KEY_LANG] = cmbLanguage.SelectedItem.Value;
@@ -117,7 +120,7 @@ namespace ISTATRegistry
             else
             {
                 string defaultLanguage = ConfigurationManager.AppSettings["DefaultLanguageForResources"].ToString();
-                if ( defaultLanguage.Equals( cmbLanguage.SelectedValue ) )
+                if (defaultLanguage.Equals(cmbLanguage.SelectedValue))
                 {
                     Session[SESSION_KEYS.KEY_LANG] = cmbLanguage.SelectedItem.Value;
                     Session[SESSION_KEYS.OLD_KEY_LANG] = cmbLanguage.SelectedItem.Value;
@@ -126,8 +129,8 @@ namespace ISTATRegistry
                     return;
                 }
                 cmbLanguage.SelectedValue = Session[SESSION_KEYS.OLD_KEY_LANG].ToString();
-                Utils.ShowDialog( Resources.Messages.err_missing_language_file ); 
-            }                   
+                Utils.ShowDialog(Resources.Messages.err_missing_language_file);
+            }
         }
 
         protected void cmbLanguage_DataBound(object sender, EventArgs e)
@@ -146,33 +149,78 @@ namespace ISTATRegistry
         {
             string myUserName = txtLoginUserName.Text.Trim();
             string myPassword = txtLoginPassword.Text.Trim();
-            //string myEncriptedPassword = Utils.StringCryptography.Encrypt( myPassword );
-
             // Qui vengono recuperate le credenziali
 
-            WSClient wsClient = new WSClient(IRConfiguration.GetEndPointByName(cmbEPoints.SelectedValue).IREndPoint);
-            IRService authClient = wsClient.GetClient();
+            EndPointElement epe = (EndPointElement)Session[SESSION_KEYS.CURRENT_ENDPOINT_OBJECT];
 
-            //Service1SoapClient authClient = new Service1SoapClient();
+            User currentUser;
 
-            //bool bb = authClient.CheckIfUserExists("pippo");
+            if (epe.GetUsersFromFile)
+            {
+                currentUser = GetUserFromFile(myUserName, myPassword);
+            }
+            else
+            {
+                WSClient wsClient = new WSClient(epe.IREndPoint);
+                IRService authClient = wsClient.GetClient();
+                currentUser = authClient.GetUserByCredentials(myUserName, myPassword);
+            }
 
-            User currentUser = authClient.GetUserByCredentials(myUserName, myPassword);
-            if ( currentUser != null )
+            if (currentUser != null)
             {
                 Session[SESSION_KEYS.USER_OK] = true;
                 Session[SESSION_KEYS.USER_DATA] = currentUser;
                 lblWelcomeUser.Visible = true;
-                string userCompleteName = string.Format( "{0} {1}", currentUser.name.ToString(), currentUser.surname.ToString() );
-                lblWelcomeUser.Text = string.Format( Resources.Messages.lblWelcomeUserMessagge, userCompleteName);
+                string userCompleteName = string.Format("{0} {1}", currentUser.name.ToString(), currentUser.surname.ToString());
+                lblWelcomeUser.Text = string.Format(Resources.Messages.lblWelcomeUserMessagge, userCompleteName);
                 loginButton.Visible = false;
                 logoutButton.Visible = true;
                 Response.Redirect(Request.RawUrl);
             }
             else
             {
-                Utils.ShowDialog( "Le credenziali di accesso non sono corrette!" );
+                Utils.ShowDialog("Le credenziali di accesso non sono corrette!");
             }
+        }
+
+        private User GetUserFromFile(string myUserName, string myPassword)
+        {
+            User currentUser = new User();
+
+            string filePath = IRConfiguration.GetEndPointByName(cmbEPoints.SelectedValue).UsersFilePath;
+
+            XElement xelement = XElement.Load(Server.MapPath(filePath));
+            IEnumerable<XElement> users = xelement.Elements();
+
+            var user = from u in xelement.Elements("user")
+                       where (string)u.Attribute("username") == myUserName
+                            && (string)u.Attribute("password") == myPassword
+                       select u;
+
+            if (user.Count() == 0)
+                return null;
+
+            var us = user.First();
+
+            currentUser.username = us.Attribute("username").Value;
+            currentUser.name = us.Attribute("name").Value;
+            currentUser.surname = us.Attribute("surname").Value;
+
+            var agencies = from ags in us.Descendants("agency")
+                select ags;
+
+            UserAgency[] userAgencies = new UserAgency[agencies.Count()];
+            int count = 0;
+
+            foreach (string agencyId in agencies.Attributes("id"))
+            {
+                userAgencies[count] = new UserAgency(){id=agencyId, lang="en"};
+                ++count;
+            }
+
+            currentUser.agencies = userAgencies;
+
+            return currentUser;
         }
 
         private void LogOutUser()
@@ -192,7 +240,7 @@ namespace ISTATRegistry
         protected void logoutButton_Click(object sender, EventArgs e)
         {
             LogOutUser();
-            
+
         }
 
         protected void cmbEPoints_SelectedIndexChanged(object sender, EventArgs e)
@@ -200,8 +248,8 @@ namespace ISTATRegistry
             Session["SelectedEndPoint"] = cmbEPoints.SelectedValue;
 
             EndPointElement epe = IRConfiguration.GetEndPointByName(cmbEPoints.SelectedValue);
-            Session["CurrentEndPointObject"] = epe;
-            
+            Session[SESSION_KEYS.CURRENT_ENDPOINT_OBJECT] = epe;
+
             LogOutUser();
         }
 

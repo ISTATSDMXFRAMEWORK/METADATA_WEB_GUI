@@ -517,14 +517,14 @@ namespace ISTATRegistry
                     {
                         string currentAgencyId = ag.id;
                         ListItem tmpItem = null;
-                        if (!ag.text.Trim().Equals(string.Empty))
-                        {
-                            tmpItem = new ListItem(string.Format("{0} - {1}", ag.id, ag.text));
-                        }
-                        else
-                        {
+                        //if (!ag.text.Trim().Equals(string.Empty))
+                        //{
+                        //    tmpItem = new ListItem(string.Format("{0} - {1}", ag.id, ag.text));
+                        //}
+                        //else
+                        //{
                             tmpItem = new ListItem(ag.id);
-                        }
+                        //}
                         ddlAgencies.Items.Add(tmpItem);
                         agenciesAlreadyAdded.Add(currentAgencyId);
                     }
@@ -580,15 +580,6 @@ namespace ISTATRegistry
             }
         }
 
-        public bool EnableAnnotationTypes
-        {
-            get { return bool.Parse(ConfigurationManager.AppSettings["EnableAnnotationTypes"].ToString()); }
-        }
-
-        public bool EnableAnnotationTextBuilder
-        {
-            get { return bool.Parse(ConfigurationManager.AppSettings["EnableAnnotationTextBuilder"].ToString()); }
-        }
 
         //public static void PopulateCmbAnnotationTypes(DropDownList cmbAnnType)
         //{

@@ -73,6 +73,21 @@ namespace ISTATRegistry
             get { return (bool)this["EnableAdministration"]; }
             set { this["EnableAdministration"] = value; }
         }
+
+        [ConfigurationProperty("GetUsersFromFile", IsRequired = false)]
+        public bool GetUsersFromFile
+        {
+            get { return (bool)this["GetUsersFromFile"]; }
+            set { this["GetUsersFromFile"] = value; }
+        }
+
+        [ConfigurationProperty("UsersFilePath", IsRequired = false)]
+        public string UsersFilePath
+        {
+            get { return (string)this["UsersFilePath"]; }
+            set { this["UsersFilePath"] = value; }
+        }
+
     }
 
     [ConfigurationCollection(typeof(EndPointElement))]

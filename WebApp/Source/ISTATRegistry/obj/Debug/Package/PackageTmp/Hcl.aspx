@@ -60,7 +60,7 @@
                         <HeaderStyle Width="50px" HorizontalAlign="Center" />
                         <ItemStyle HorizontalAlign="Center" />
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="" ShowHeader="False">
+                    <asp:TemplateField HeaderText="" ShowHeader="False" Visible="false">
                         <ItemTemplate>
                             <asp:ImageButton ID="btnDetails" runat="server" CausesValidation="False" CommandName="Details"
                                 CommandArgument="<%# Container.DataItemIndex %>" ImageUrl="~/images/Details2.png"
@@ -90,7 +90,7 @@
                     OnClick="btnChangePaging_Click" />
             <br />
             <br />
-            <asp:Button ID="btnAdd" runat="server" OnClick="btnAdd_Click" Text="<%$ Resources:Messages, btn_new_hcl %>" />
+            <asp:Button ID="btnAdd" runat="server" OnClick="btnAdd_Click" Text="<%$ Resources:Messages, btn_new_hcl %>" Visible="false" />
         </ContentTemplate>
     </asp:UpdatePanel>
 </asp:Content>

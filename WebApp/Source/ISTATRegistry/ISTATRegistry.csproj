@@ -276,6 +276,7 @@
     <Content Include="SdmxQueryTemplate\SubmitStructureDelete.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="test.aspx" />
     <Content Include="UploadedFiles\ReadMe.txt" />
     <Content Include="UploadStructure.aspx" />
     <Content Include="UserControls\AddText.ascx" />
@@ -294,6 +295,8 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="Web References\IRServiceReference\IRService.disco" />
+    <Content Include="UserFiles\ws_istat2.xml" />
+    <Content Include="UserFiles\ws_istat.xml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -577,6 +580,13 @@
       <DependentUpon>organizationunitschemes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UploadStructure.aspx.cs">
       <DependentUpon>UploadStructure.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

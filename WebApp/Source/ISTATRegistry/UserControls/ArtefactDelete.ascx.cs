@@ -229,6 +229,9 @@ namespace ISTATRegistry.UserControls
                 case "StructureSet":
                     sdmxObjects = dal.GetStructureSet(new ISTAT.Entity.ArtefactIdentity(ucID, ucAgency, ucVersion), true, false);
                     break;
+                case "Hcl":
+                    sdmxObjects = dal.GetHcl(new ISTAT.Entity.ArtefactIdentity(ucID, ucAgency, ucVersion), true, false);
+                    break;
                 default:
                     return null;
             }

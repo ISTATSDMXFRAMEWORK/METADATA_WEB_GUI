@@ -75,10 +75,6 @@ namespace ISTATRegistry.UserControls
                 ucCLSelectedEH(sender, new GetCodeListEventArgs() { GetCLDataTable = dt });
         }
 
-        #endregion
-
-        #region Public Events
-
         public event EventHandler<GetCodeListEventArgs> ucCodeListSelectedEH;
 
         public void ucCodeListSelected(object sender, ArtefactIdentity ai)
@@ -86,6 +82,7 @@ namespace ISTATRegistry.UserControls
             if (ucCodeListSelectedEH != null)
                 ucCodeListSelectedEH(sender, new GetCodeListEventArgs() { GetCodeListArtefactIdentity = ai });
         }
+
 
         #endregion
 

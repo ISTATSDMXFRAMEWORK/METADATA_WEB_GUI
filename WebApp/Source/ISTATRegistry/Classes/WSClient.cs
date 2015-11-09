@@ -31,7 +31,8 @@ namespace ISTATRegistry
         public WSClient(string endPointAddress)
         {
             _client = new IRService();
-            _client.Url = endPointAddress;
+            if (endPointAddress != string.Empty)
+                _client.Url = endPointAddress;
         }
 
         public IRService GetClient()

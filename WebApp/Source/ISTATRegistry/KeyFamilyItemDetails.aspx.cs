@@ -131,7 +131,7 @@ namespace ISTATRegistry
         protected void Page_Load(object sender, EventArgs e)
         {
             Org.Sdmxsource.Sdmx.Api.Exception.SdmxException.SetMessageResolver(new Org.Sdmxsource.Util.ResourceBundle.MessageDecoder());
-            _epe = (EndPointElement)Session["CurrentEndPointObject"];
+            _epe = (EndPointElement)Session[SESSION_KEYS.CURRENT_ENDPOINT_OBJECT];
 
             _dsdMutable = null;
 

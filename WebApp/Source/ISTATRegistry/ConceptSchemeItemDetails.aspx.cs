@@ -580,7 +580,7 @@ namespace ISTATRegistry
             lblSeparator.DataBind();
 
             _localizedUtils = new LocalizedUtils(Utils.LocalizedCulture);
-            _epe = (EndPointElement)Session["CurrentEndPointObject"];
+            _epe = (EndPointElement)Session[SESSION_KEYS.CURRENT_ENDPOINT_OBJECT];
 
             SetAction();
 

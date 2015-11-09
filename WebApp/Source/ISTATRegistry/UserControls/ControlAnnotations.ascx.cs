@@ -308,7 +308,7 @@ namespace ISTATRegistry.UserControls
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            _epe = (EndPointElement)Session["CurrentEndPointObject"];
+            _epe = (EndPointElement)Session[SESSION_KEYS.CURRENT_ENDPOINT_OBJECT];
 
             if (!Page.IsPostBack)
             {

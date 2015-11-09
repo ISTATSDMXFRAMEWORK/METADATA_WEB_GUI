@@ -186,9 +186,9 @@
         <div style="float: left">
 		    <a href="./"><img src="./images/SdmxLogo.png" alt="Sdmx Logo"/></a>
 
-            <div style="margin-left:10px;">Ver. 3.0.2 
+            <div style="margin-left:10px;">Ver. 3.0.4 
                 <asp:LinkButton ID="loginButton" runat="server" CssClass="button" OnClientClick= "$('#login').toggle(); return false;">Login</asp:LinkButton>
-                <asp:LinkButton ID="lnkAdmin" runat="server" CssClass="button" PostBackUrl="~/admin.aspx" Visible="false">Admin</asp:LinkButton>
+                <asp:LinkButton ID="lnkAdmin" runat="server" CssClass="button" PostBackUrl="./admin.aspx" Visible="false">Admin</asp:LinkButton>
             </div>
             
             <div id="login">
@@ -230,6 +230,7 @@
                             <li><a href="CategorySchemes.aspx?m=y"><%= Resources.Messages.lbl_category_scheme %></a></li>
                             <li><a href="DataFlow.aspx?m=y"><%= Resources.Messages.lbl_data_flow %></a></li>
                             <li><a href="Categorization.aspx?m=y"><%= Resources.Messages.lbl_categorization %></a></li>
+                            <li><a href="Hcl.aspx?m=y"><%= Resources.Messages.lbl_hcl %></a></li>
                             <asp:Panel ID="pnlExtraArtefact" runat="server">
                             <li><a href="AgencySchemes.aspx?m=y"><%= Resources.Messages.lbl_agency_scheme %></a></li>
                             <li><a href="DataProviderSchemes.aspx?m=y"><%= Resources.Messages.lbl_data_provider_scheme %></a></li>

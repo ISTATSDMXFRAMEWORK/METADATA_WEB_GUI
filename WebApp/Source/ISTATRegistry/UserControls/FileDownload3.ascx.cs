@@ -142,7 +142,7 @@ namespace ISTATRegistry.UserControls
                     break;
             }
 
-            Utils.AppendScript("location.reload();");
+            //Utils.AppendScript("location.reload();");
         }
 
 
@@ -166,7 +166,7 @@ namespace ISTATRegistry.UserControls
                 case "CategoryScheme":
                     sdmxObjects = dal.GetCategoryScheme(new ISTAT.Entity.ArtefactIdentity(ucID, ucAgency, ucVersion), chkStub.Checked, false);
                     break;
-                case "DataFlow":
+                case "Dataflow":
                     sdmxObjects = dal.GetDataFlow(new ISTAT.Entity.ArtefactIdentity(ucID, ucAgency, ucVersion), chkStub.Checked, false);
                     break;
                 case "KeyFamily":

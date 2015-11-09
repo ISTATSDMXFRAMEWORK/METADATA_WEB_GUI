@@ -11,3 +11,4 @@ E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATEntity\ISTATEntity\bin\Debug\ISTATEntity
 E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATEntity\ISTATEntity\bin\Debug\ISTATEntity.pdb
 E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATEntity\ISTATEntity\obj\Debug\ISTATEntity.dll
 E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATEntity\ISTATEntity\obj\Debug\ISTATEntity.pdb
+E:\ISTAT2\Source\ISTATRegistry_4.0\ISTATEntity\ISTATEntity\obj\Debug\ISTATEntity.csprojResolveAssemblyReference.cache

@@ -291,7 +291,7 @@ namespace ISTATRegistry.UserControls
 
             lblTitle.Text = labelDescription;
 
-            if (ucEnableSuggest && ucEditMode && ((EndPointElement)Session["CurrentEndPointObject"]).EnableAnnotationSuggest)
+            if (ucEnableSuggest && ucEditMode && ((EndPointElement)Session[SESSION_KEYS.CURRENT_ENDPOINT_OBJECT]).EnableAnnotationSuggest)
             {
                 Utils.PopulateCmbAnnotationValue(cmbAnnotationValue);
                 cmbAnnotationValue.Visible = true;

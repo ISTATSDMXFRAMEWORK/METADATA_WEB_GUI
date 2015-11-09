@@ -113,7 +113,7 @@ namespace ISTATRegistry
 
                 if (!IsPostBack)
                 {
-                    btnAdd.Visible = !Utils.ViewMode;
+                    //btnAdd.Visible = !Utils.ViewMode;
                     gridView.Columns[7].Visible = !Utils.ViewMode;
 
                     ViewState["SortExpr"] = SortDirection.Ascending;

@@ -641,7 +641,7 @@ namespace ISTATRegistry
         protected void Page_Load(object sender, EventArgs e)
         {
             _localizedUtils = new LocalizedUtils(Utils.LocalizedCulture);
-            _epe = (EndPointElement)Session["CurrentEndPointObject"];
+            _epe = (EndPointElement)Session[SESSION_KEYS.CURRENT_ENDPOINT_OBJECT];
 
             SetAction();
 
@@ -1570,6 +1570,7 @@ namespace ISTATRegistry
                         txt_order_new.Visible = false;
                         lbl_order_new.Visible = false;
                         lblYouAreWorkingOnAFinal.Visible = true;
+                        btnAddNewCode.Visible = !_epe.GetUsersFromFile;
                     }
                 }
                 AddTextName_update.ucEditMode = false;
@@ -1772,7 +1773,7 @@ namespace ISTATRegistry
             int v2 = (versionsAvailable[1] ? Convert.ToInt32( tmpVersionParts[1] ) : 0 );
             int v3 = (versionsAvailable[2] ? Convert.ToInt32( tmpVersionParts[2] ) : 0 );
 
-            EndPointElement epe = (EndPointElement)Session["CurrentEndPointObject"];
+            EndPointElement epe = (EndPointElement)Session[SESSION_KEYS.CURRENT_ENDPOINT_OBJECT];
             WSClient wsClient = new WSClient(epe.IREndPoint);
             IRService client = wsClient.GetClient();
 
