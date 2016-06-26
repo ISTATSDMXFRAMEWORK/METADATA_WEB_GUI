@@ -1,0 +1,450 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Structure xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message">
+  <Header>
+    <ID>IDREF1</ID>
+    <Test>false</Test>
+    <Prepared>2015-02-26T17:47:29.6793671+01:00</Prepared>
+    <Sender id="Unknown" />
+    <Receiver id="Unknown" />
+  </Header>
+  <Structures>
+    <StructureSets xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure">
+      <StructureSet id="MAP_REF_AREA_ARCH" urn="urn:sdmx:org.sdmx.infomodel.mapping.StructureSet=IT1:MAP_REF_AREA_ARCH(1.0)" agencyID="IT1" version="1.0" isFinal="false">
+        <Annotations xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+          <Annotation>
+            <AnnotationTitle>ANN_TITLE</AnnotationTitle>
+            <AnnotationType>ANN_TYPE</AnnotationType>
+            <AnnotationURL>http://www.istat.it/</AnnotationURL>
+            <AnnotationText xml:lang="it">ann text ita</AnnotationText>
+            <AnnotationText xml:lang="en">ann text eng</AnnotationText>
+          </Annotation>
+        </Annotations>
+        <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">NameIta SS</Name>
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">NameEng SS</Name>
+        <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">DescrIta SS</Description>
+        <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">DescrEng SS</Description>
+        <CodelistMap id="MAP1" urn="urn:sdmx:org.sdmx.infomodel.mapping.CodelistMap=IT1:MAP_REF_AREA_ARCH(1.0).MAP1">
+          <Annotations xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+            <Annotation>
+              <AnnotationTitle>ANN_TITLE</AnnotationTitle>
+              <AnnotationType>ANN_TYPE</AnnotationType>
+              <AnnotationURL>http://www.istat.it/</AnnotationURL>
+              <AnnotationText xml:lang="it">ann text ita</AnnotationText>
+              <AnnotationText xml:lang="en">ann text eng</AnnotationText>
+            </Annotation>
+          </Annotations>
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">NameIta CLM</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">NameEng CLM</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">DescrIta CLM</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">DescrEng CLM</Description>
+          <Source>
+            <Ref id="CL_REFAREA" version="1.4" agencyID="IT1" package="codelist" class="Codelist" xmlns="" />
+          </Source>
+          <Target>
+            <Ref id="CL_ARCH_NOT" version="1.1" agencyID="IT1" package="codelist" class="Codelist" xmlns="" />
+          </Target>
+          <CodeMap>
+            <Source>
+              <Ref id="ITC18" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="A182" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITC17" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="A479" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITC13" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="A859" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITC16" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="D205" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITC15" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="F952" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITC11" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="L219" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITC14" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="L746" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITC20" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="A326" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ATO34" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="D969" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITC46" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="A794" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITC47" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="B157" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITC42" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="C933" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITC4A" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="D150" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITC4B" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="E897" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITC45" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="F205" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITC48" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="G388" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITC44" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="I829" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITD10" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="A952" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITD20" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="L378" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITD33" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="A757" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITD36" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="G224" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITD37" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="H620" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITD34" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="L407" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITD35" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="L736" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITD31" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="L781" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITD32" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="L840" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITD43" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="E098" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITD41" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="G888" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITD44" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="L424" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITD42" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="L483" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITD56" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="D548" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITD58" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="D704" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITD54" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="F257" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITD52" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="G337" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITD51" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="G535" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITD57" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="H199" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITD53" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="H223" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITE18" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="A390" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITE14" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="D612" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITE1A" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="E202" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITE16" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="E625" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITE12" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="E715" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITE17" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="G702" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITE19" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="I726" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ATO53" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="G478" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ATO54" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="L117" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITE32" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="A271" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITE34" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="A462" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="ITF22" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="B519" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="IT" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="9999" xmlns="" />
+            </Target>
+          </CodeMap>
+        </CodelistMap>
+      </StructureSet>
+    </StructureSets>
+  </Structures>
+</Structure>

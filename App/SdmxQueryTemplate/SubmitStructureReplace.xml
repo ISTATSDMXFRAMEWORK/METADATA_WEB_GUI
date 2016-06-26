@@ -1,0 +1,20 @@
+   <web:SubmitStructure 
+		xmlns:web="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/webservices"
+		xmlns:mes="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message"
+		xmlns:str="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure">
+         <mes:SubmitStructureRequest>
+            <mes:Header>
+               <mes:ID>Replace</mes:ID>
+               <mes:Test>true</mes:Test>
+               <mes:Prepared>2014-11-19</mes:Prepared>
+               <mes:Sender id="ISTAT"/>
+               <mes:Receiver id="ISTAT"/>
+            </mes:Header>
+            <mes:SubmitStructureRequest action="Replace">
+               <str:Structures>
+
+               </str:Structures>
+            </mes:SubmitStructureRequest>
+         </mes:SubmitStructureRequest>
+	  </web:SubmitStructure>
+	  

@@ -1,0 +1,1736 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Structure xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message" xmlns:structure="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message SDMXMessage.xsd">
+  <Header>
+    <ID>REGISTRY_RESPONSE</ID>
+    <Test>true</Test>
+    <Truncated>false</Truncated>
+    <Prepared>2015-06-09T12:28:25</Prepared>
+    <Sender id="EUROSTAT" />
+    <Extracted>2015-06-09T12:28:25</Extracted>
+  </Header>
+  <CodeLists>
+    <structure:CodeList id="CL_FREQ" agencyID="IT1" version="1.0" isFinal="true">
+      <structure:Name xml:lang="it">Frequenza</structure:Name>
+      <structure:Name xml:lang="en">Frequency</structure:Name>
+      <structure:Code value="A" parentCode="" urn="">
+        <structure:Description xml:lang="it">annuale</structure:Description>
+        <structure:Description xml:lang="en">annual</structure:Description>
+      </structure:Code>
+      <structure:Code value="B" parentCode="" urn="">
+        <structure:Description xml:lang="it">business (non supportato)</structure:Description>
+        <structure:Description xml:lang="en">business (not supported)</structure:Description>
+      </structure:Code>
+      <structure:Code value="D" parentCode="" urn="">
+        <structure:Description xml:lang="it">giornaliero</structure:Description>
+        <structure:Description xml:lang="en">daily</structure:Description>
+      </structure:Code>
+      <structure:Code value="E" parentCode="" urn="">
+        <structure:Description xml:lang="it">event (non supportato)</structure:Description>
+        <structure:Description xml:lang="en">event (not supported)</structure:Description>
+      </structure:Code>
+      <structure:Code value="H" parentCode="" urn="">
+        <structure:Description xml:lang="it">semestrale</structure:Description>
+        <structure:Description xml:lang="en">half-yearly</structure:Description>
+      </structure:Code>
+      <structure:Code value="M" parentCode="" urn="">
+        <structure:Description xml:lang="it">mensile</structure:Description>
+        <structure:Description xml:lang="en">monthly</structure:Description>
+      </structure:Code>
+      <structure:Code value="Q" parentCode="" urn="">
+        <structure:Description xml:lang="it">trimestrale</structure:Description>
+        <structure:Description xml:lang="en">quarterly</structure:Description>
+      </structure:Code>
+      <structure:Code value="W" parentCode="" urn="">
+        <structure:Description xml:lang="it">settimanale</structure:Description>
+        <structure:Description xml:lang="en">weekly</structure:Description>
+      </structure:Code>
+    </structure:CodeList>
+    <structure:CodeList id="CL_ITTER107_HUB_8221" agencyID="IT1" version="1.0" isFinal="true">
+      <structure:Name xml:lang="en">Territory</structure:Name>
+      <structure:Name xml:lang="it">Territorio</structure:Name>
+      <structure:Code value="ITC1" parentCode="" urn="">
+        <structure:Description xml:lang="en">Piemonte</structure:Description>
+        <structure:Description xml:lang="it">Piemonte</structure:Description>
+      </structure:Code>
+      <structure:Code value="ITC4" parentCode="" urn="">
+        <structure:Description xml:lang="en">Lombardia</structure:Description>
+        <structure:Description xml:lang="it">Lombardia</structure:Description>
+      </structure:Code>
+      <structure:Code value="ITC2" parentCode="" urn="">
+        <structure:Description xml:lang="en">Valle d'Aosta / Vallée d'Aoste</structure:Description>
+        <structure:Description xml:lang="it">Valle d'Aosta / Vallée d'Aoste</structure:Description>
+      </structure:Code>
+      <structure:Code value="ITC3" parentCode="" urn="">
+        <structure:Description xml:lang="en">Liguria</structure:Description>
+        <structure:Description xml:lang="it">Liguria</structure:Description>
+      </structure:Code>
+      <structure:Code value="ITDA" parentCode="" urn="">
+        <structure:Description xml:lang="en">Trentino Alto Adige / Südtirol</structure:Description>
+        <structure:Description xml:lang="it">Trentino Alto Adige / Südtirol</structure:Description>
+      </structure:Code>
+      <structure:Code value="ITD1" parentCode="" urn="">
+        <structure:Description xml:lang="en">Provincia Autonoma Bolzano / Bozen</structure:Description>
+        <structure:Description xml:lang="it">Provincia Autonoma Bolzano / Bozen</structure:Description>
+      </structure:Code>
+      <structure:Code value="ITD2" parentCode="" urn="">
+        <structure:Description xml:lang="en">Provincia Autonoma Trento</structure:Description>
+        <structure:Description xml:lang="it">Provincia Autonoma Trento</structure:Description>
+      </structure:Code>
+      <structure:Code value="ITD3" parentCode="" urn="">
+        <structure:Description xml:lang="en">Veneto</structure:Description>
+        <structure:Description xml:lang="it">Veneto</structure:Description>
+      </structure:Code>
+      <structure:Code value="ITD4" parentCode="" urn="">
+        <structure:Description xml:lang="en">Friuli-Venezia Giulia</structure:Description>
+        <structure:Description xml:lang="it">Friuli-Venezia Giulia</structure:Description>
+      </structure:Code>
+      <structure:Code value="ITD5" parentCode="" urn="">
+        <structure:Description xml:lang="en">Emilia-Romagna</structure:Description>
+        <structure:Description xml:lang="it">Emilia-Romagna</structure:Description>
+      </structure:Code>
+      <structure:Code value="ITE1" parentCode="" urn="">
+        <structure:Description xml:lang="en">Toscana</structure:Description>
+        <structure:Description xml:lang="it">Toscana</structure:Description>
+      </structure:Code>
+      <structure:Code value="ITE2" parentCode="" urn="">
+        <structure:Description xml:lang="en">Umbria</structure:Description>
+        <structure:Description xml:lang="it">Umbria</structure:Description>
+      </structure:Code>
+      <structure:Code value="ITE4" parentCode="" urn="">
+        <structure:Description xml:lang="en">Lazio</structure:Description>
+        <structure:Description xml:lang="it">Lazio</structure:Description>
+      </structure:Code>
+      <structure:Code value="ITE3" parentCode="" urn="">
+        <structure:Description xml:lang="en">Marche</structure:Description>
+        <structure:Description xml:lang="it">Marche</structure:Description>
+      </structure:Code>
+      <structure:Code value="ITF1" parentCode="" urn="">
+        <structure:Description xml:lang="en">Abruzzo</structure:Description>
+        <structure:Description xml:lang="it">Abruzzo</structure:Description>
+      </structure:Code>
+      <structure:Code value="ITF2" parentCode="" urn="">
+        <structure:Description xml:lang="en">Molise</structure:Description>
+        <structure:Description xml:lang="it">Molise</structure:Description>
+      </structure:Code>
+      <structure:Code value="ITF3" parentCode="" urn="">
+        <structure:Description xml:lang="en">Campania</structure:Description>
+        <structure:Description xml:lang="it">Campania</structure:Description>
+      </structure:Code>
+      <structure:Code value="ITF4" parentCode="" urn="">
+        <structure:Description xml:lang="en">Puglia</structure:Description>
+        <structure:Description xml:lang="it">Puglia</structure:Description>
+      </structure:Code>
+      <structure:Code value="ITF5" parentCode="" urn="">
+        <structure:Description xml:lang="en">Basilicata</structure:Description>
+        <structure:Description xml:lang="it">Basilicata</structure:Description>
+      </structure:Code>
+      <structure:Code value="ITF6" parentCode="" urn="">
+        <structure:Description xml:lang="en">Calabria</structure:Description>
+        <structure:Description xml:lang="it">Calabria</structure:Description>
+      </structure:Code>
+      <structure:Code value="ITG1" parentCode="" urn="">
+        <structure:Description xml:lang="en">Sicilia</structure:Description>
+        <structure:Description xml:lang="it">Sicilia</structure:Description>
+      </structure:Code>
+      <structure:Code value="ITG2" parentCode="" urn="">
+        <structure:Description xml:lang="en">Sardegna</structure:Description>
+        <structure:Description xml:lang="it">Sardegna</structure:Description>
+      </structure:Code>
+      <structure:Code value="001272" parentCode="" urn="">
+        <structure:Description xml:lang="en">Torino</structure:Description>
+        <structure:Description xml:lang="it">Torino</structure:Description>
+      </structure:Code>
+      <structure:Code value="010025" parentCode="" urn="">
+        <structure:Description xml:lang="en">Genova</structure:Description>
+        <structure:Description xml:lang="it">Genova</structure:Description>
+      </structure:Code>
+      <structure:Code value="015146" parentCode="" urn="">
+        <structure:Description xml:lang="en">Milano</structure:Description>
+        <structure:Description xml:lang="it">Milano</structure:Description>
+      </structure:Code>
+      <structure:Code value="023091" parentCode="" urn="">
+        <structure:Description xml:lang="en">Verona</structure:Description>
+        <structure:Description xml:lang="it">Verona</structure:Description>
+      </structure:Code>
+      <structure:Code value="027042" parentCode="" urn="">
+        <structure:Description xml:lang="en">Venezia</structure:Description>
+        <structure:Description xml:lang="it">Venezia</structure:Description>
+      </structure:Code>
+      <structure:Code value="048017" parentCode="" urn="">
+        <structure:Description xml:lang="en">Firenze</structure:Description>
+        <structure:Description xml:lang="it">Firenze</structure:Description>
+      </structure:Code>
+      <structure:Code value="037006" parentCode="" urn="">
+        <structure:Description xml:lang="en">Bologna</structure:Description>
+        <structure:Description xml:lang="it">Bologna</structure:Description>
+      </structure:Code>
+      <structure:Code value="058091" parentCode="" urn="">
+        <structure:Description xml:lang="en">Roma</structure:Description>
+        <structure:Description xml:lang="it">Roma</structure:Description>
+      </structure:Code>
+      <structure:Code value="063049" parentCode="" urn="">
+        <structure:Description xml:lang="en">Napoli</structure:Description>
+        <structure:Description xml:lang="it">Napoli</structure:Description>
+      </structure:Code>
+      <structure:Code value="072006" parentCode="" urn="">
+        <structure:Description xml:lang="en">Bari</structure:Description>
+        <structure:Description xml:lang="it">Bari</structure:Description>
+      </structure:Code>
+      <structure:Code value="082053" parentCode="" urn="">
+        <structure:Description xml:lang="en">Palermo</structure:Description>
+        <structure:Description xml:lang="it">Palermo</structure:Description>
+      </structure:Code>
+      <structure:Code value="087015" parentCode="" urn="">
+        <structure:Description xml:lang="en">Catania</structure:Description>
+        <structure:Description xml:lang="it">Catania</structure:Description>
+      </structure:Code>
+      <structure:Code value="IT" parentCode="" urn="">
+        <structure:Description xml:lang="en">italy</structure:Description>
+        <structure:Description xml:lang="it">italia</structure:Description>
+      </structure:Code>
+    </structure:CodeList>
+    <structure:CodeList id="CL_REATI_PS_HUB_8221" agencyID="IT1" version="1.0" isFinal="true">
+      <structure:Name xml:lang="en">Type of crime</structure:Name>
+      <structure:Name xml:lang="it">Tipo di reato</structure:Name>
+      <structure:Code value="TOT" parentCode="" urn="">
+        <structure:Description xml:lang="en">total</structure:Description>
+        <structure:Description xml:lang="it">totale</structure:Description>
+      </structure:Code>
+      <structure:Code value="ARSON" parentCode="" urn="">
+        <structure:Description xml:lang="en">arson</structure:Description>
+        <structure:Description xml:lang="it">incendi</structure:Description>
+      </structure:Code>
+      <structure:Code value="ATTACK" parentCode="" urn="">
+        <structure:Description xml:lang="en">attacks</structure:Description>
+        <structure:Description xml:lang="it">attentati</structure:Description>
+      </structure:Code>
+      <structure:Code value="ATTEMPHOM" parentCode="" urn="">
+        <structure:Description xml:lang="en">attempted homicides</structure:Description>
+        <structure:Description xml:lang="it">tentati omicidi</structure:Description>
+      </structure:Code>
+      <structure:Code value="BLOWS" parentCode="" urn="">
+        <structure:Description xml:lang="en">blows</structure:Description>
+        <structure:Description xml:lang="it">percosse</structure:Description>
+      </structure:Code>
+      <structure:Code value="CORRUPUN18" parentCode="" urn="">
+        <structure:Description xml:lang="en">corruption of a minor</structure:Description>
+        <structure:Description xml:lang="it">corruzione di minorenne</structure:Description>
+      </structure:Code>
+      <structure:Code value="COUNTER" parentCode="" urn="">
+        <structure:Description xml:lang="en">counteractions of goods and industrial products</structure:Description>
+        <structure:Description xml:lang="it">contraffazione di marchi e prodotti industriali</structure:Description>
+      </structure:Code>
+      <structure:Code value="CRIMASS" parentCode="" urn="">
+        <structure:Description xml:lang="en">criminal association</structure:Description>
+        <structure:Description xml:lang="it">associazione per delinquere</structure:Description>
+      </structure:Code>
+      <structure:Code value="CULPINJU" parentCode="" urn="">
+        <structure:Description xml:lang="en">culpable injuries</structure:Description>
+        <structure:Description xml:lang="it">lesioni dolose</structure:Description>
+      </structure:Code>
+      <structure:Code value="CYBERCRIM" parentCode="" urn="">
+        <structure:Description xml:lang="en">cybercrime</structure:Description>
+        <structure:Description xml:lang="it">delitti informatici</structure:Description>
+      </structure:Code>
+      <structure:Code value="DAMAGE" parentCode="" urn="">
+        <structure:Description xml:lang="en">damages</structure:Description>
+        <structure:Description xml:lang="it">danneggiamenti</structure:Description>
+      </structure:Code>
+      <structure:Code value="DAMARS" parentCode="" urn="">
+        <structure:Description xml:lang="en">damage followed by arson</structure:Description>
+        <structure:Description xml:lang="it">danneggiamento seguito da incendio</structure:Description>
+      </structure:Code>
+      <structure:Code value="DRUG" parentCode="" urn="">
+        <structure:Description xml:lang="en">trafficking and drugs possession</structure:Description>
+        <structure:Description xml:lang="it">normativa sugli stupefacenti</structure:Description>
+      </structure:Code>
+      <structure:Code value="EXTORT" parentCode="" urn="">
+        <structure:Description xml:lang="en">extortions</structure:Description>
+        <structure:Description xml:lang="it">estorsioni</structure:Description>
+      </structure:Code>
+      <structure:Code value="INFANTHOM" parentCode="" urn="">
+        <structure:Description xml:lang="en">infanticides</structure:Description>
+        <structure:Description xml:lang="it">infanticidi</structure:Description>
+      </structure:Code>
+      <structure:Code value="INTENHOM" parentCode="" urn="">
+        <structure:Description xml:lang="en">intentional homicides</structure:Description>
+        <structure:Description xml:lang="it">omicidi volontari consumati</structure:Description>
+      </structure:Code>
+      <structure:Code value="INTPROP" parentCode="" urn="">
+        <structure:Description xml:lang="en">intellectual property violations</structure:Description>
+        <structure:Description xml:lang="it">violazione della proprietà intellettuale</structure:Description>
+      </structure:Code>
+      <structure:Code value="KIDNAPP" parentCode="" urn="">
+        <structure:Description xml:lang="en">kidnappings</structure:Description>
+        <structure:Description xml:lang="it">sequestri di persona</structure:Description>
+      </structure:Code>
+      <structure:Code value="MAFIASS" parentCode="" urn="">
+        <structure:Description xml:lang="en">mafia criminal association</structure:Description>
+        <structure:Description xml:lang="it">associazione di tipo mafioso</structure:Description>
+      </structure:Code>
+      <structure:Code value="MANSHOM" parentCode="" urn="">
+        <structure:Description xml:lang="en">manslaughter</structure:Description>
+        <structure:Description xml:lang="it">omicidi preterintenzionali</structure:Description>
+      </structure:Code>
+      <structure:Code value="MASSMURD" parentCode="" urn="">
+        <structure:Description xml:lang="en">mass murder</structure:Description>
+        <structure:Description xml:lang="it">strage</structure:Description>
+      </structure:Code>
+      <structure:Code value="MENACE" parentCode="" urn="">
+        <structure:Description xml:lang="en">menaces</structure:Description>
+        <structure:Description xml:lang="it">minacce</structure:Description>
+      </structure:Code>
+      <structure:Code value="MONEYLAU" parentCode="" urn="">
+        <structure:Description xml:lang="en">money laundering</structure:Description>
+        <structure:Description xml:lang="it">riciclaggio e impiego di denaro, beni o utilità di provenienza illecita</structure:Description>
+      </structure:Code>
+      <structure:Code value="OFFENCE" parentCode="" urn="">
+        <structure:Description xml:lang="en">offences</structure:Description>
+        <structure:Description xml:lang="it">ingiurie</structure:Description>
+      </structure:Code>
+      <structure:Code value="OTHCRIM" parentCode="" urn="">
+        <structure:Description xml:lang="en">other crimes</structure:Description>
+        <structure:Description xml:lang="it">altri delitti</structure:Description>
+      </structure:Code>
+      <structure:Code value="PORNO" parentCode="" urn="">
+        <structure:Description xml:lang="en">child pornography and possession of paedo-pornographic materials</structure:Description>
+        <structure:Description xml:lang="it">pornografia minorile e detenzione di materiale pedopornografico</structure:Description>
+      </structure:Code>
+      <structure:Code value="PROSTI" parentCode="" urn="">
+        <structure:Description xml:lang="en">exploitation and abetting prostitution</structure:Description>
+        <structure:Description xml:lang="it">sfruttamento e favoreggiamento della prostituzione</structure:Description>
+      </structure:Code>
+      <structure:Code value="RAPE" parentCode="" urn="">
+        <structure:Description xml:lang="en">rapes</structure:Description>
+        <structure:Description xml:lang="it">violenze sessuali</structure:Description>
+      </structure:Code>
+      <structure:Code value="RAPEUN18" parentCode="" urn="">
+        <structure:Description xml:lang="en">sexual activity with a minor</structure:Description>
+        <structure:Description xml:lang="it">atti sessuali con minorenne</structure:Description>
+      </structure:Code>
+      <structure:Code value="RECEIV" parentCode="" urn="">
+        <structure:Description xml:lang="en">receiving stolen goods</structure:Description>
+        <structure:Description xml:lang="it">ricettazione</structure:Description>
+      </structure:Code>
+      <structure:Code value="ROBBER" parentCode="" urn="">
+        <structure:Description xml:lang="en">robberies</structure:Description>
+        <structure:Description xml:lang="it">rapine</structure:Description>
+      </structure:Code>
+      <structure:Code value="SMUGGL" parentCode="" urn="">
+        <structure:Description xml:lang="en">smuggling</structure:Description>
+        <structure:Description xml:lang="it">contrabbando</structure:Description>
+      </structure:Code>
+      <structure:Code value="SWINCYB" parentCode="" urn="">
+        <structure:Description xml:lang="en">swindles and cyber frauds</structure:Description>
+        <structure:Description xml:lang="it">truffe e frodi informatiche</structure:Description>
+      </structure:Code>
+      <structure:Code value="THEFT" parentCode="" urn="">
+        <structure:Description xml:lang="en">thefts</structure:Description>
+        <structure:Description xml:lang="it">furti</structure:Description>
+      </structure:Code>
+      <structure:Code value="UNINTHOM" parentCode="" urn="">
+        <structure:Description xml:lang="en">unintentional homicides</structure:Description>
+        <structure:Description xml:lang="it">omicidi colposi</structure:Description>
+      </structure:Code>
+      <structure:Code value="USURY" parentCode="" urn="">
+        <structure:Description xml:lang="en">usury</structure:Description>
+        <structure:Description xml:lang="it">usura</structure:Description>
+      </structure:Code>
+      <structure:Code value="FOREARS" parentCode="" urn="">
+        <structure:Description xml:lang="en">forest arson</structure:Description>
+        <structure:Description xml:lang="it">incendi boschivi</structure:Description>
+      </structure:Code>
+      <structure:Code value="MAFIAHOM" parentCode="" urn="">
+        <structure:Description xml:lang="en">homicides of mafia</structure:Description>
+        <structure:Description xml:lang="it">omicidi volontari consumati di tipo mafioso</structure:Description>
+      </structure:Code>
+      <structure:Code value="ROBBHOM" parentCode="" urn="">
+        <structure:Description xml:lang="en">homicides for theft or robbery</structure:Description>
+        <structure:Description xml:lang="it">omicidi volontari consumati a scopo di furto o rapina</structure:Description>
+      </structure:Code>
+      <structure:Code value="TERRORHOM" parentCode="" urn="">
+        <structure:Description xml:lang="en">terrorist homicides</structure:Description>
+        <structure:Description xml:lang="it">omicidi volontari consumati a scopo terroristico</structure:Description>
+      </structure:Code>
+      <structure:Code value="BANKROB" parentCode="" urn="">
+        <structure:Description xml:lang="en">bank robbery</structure:Description>
+        <structure:Description xml:lang="it">rapine in banca</structure:Description>
+      </structure:Code>
+      <structure:Code value="HOUSEROB" parentCode="" urn="">
+        <structure:Description xml:lang="en">house robbery</structure:Description>
+        <structure:Description xml:lang="it">rapine in abitazione</structure:Description>
+      </structure:Code>
+      <structure:Code value="POSTROB" parentCode="" urn="">
+        <structure:Description xml:lang="en">post office robbery</structure:Description>
+        <structure:Description xml:lang="it">rapine in uffici postali</structure:Description>
+      </structure:Code>
+      <structure:Code value="SHOPROB" parentCode="" urn="">
+        <structure:Description xml:lang="en">shop robbery</structure:Description>
+        <structure:Description xml:lang="it">rapine in esercizi commerciali</structure:Description>
+      </structure:Code>
+      <structure:Code value="STREETROB" parentCode="" urn="">
+        <structure:Description xml:lang="en">street robbery</structure:Description>
+        <structure:Description xml:lang="it">rapine in pubblica via</structure:Description>
+      </structure:Code>
+      <structure:Code value="ARTTHEF" parentCode="" urn="">
+        <structure:Description xml:lang="en">theft of art objets</structure:Description>
+        <structure:Description xml:lang="it">furti di opere d'arte e materiale archeologico</structure:Description>
+      </structure:Code>
+      <structure:Code value="BAGTHEF" parentCode="" urn="">
+        <structure:Description xml:lang="en">bag-snatching</structure:Description>
+        <structure:Description xml:lang="it">furti con strappo</structure:Description>
+      </structure:Code>
+      <structure:Code value="BURGTHEF" parentCode="" urn="">
+        <structure:Description xml:lang="en">burglary</structure:Description>
+        <structure:Description xml:lang="it">furti in abitazioni</structure:Description>
+      </structure:Code>
+      <structure:Code value="CARTHEF" parentCode="" urn="">
+        <structure:Description xml:lang="en">car theft</structure:Description>
+        <structure:Description xml:lang="it">furti di autovetture</structure:Description>
+      </structure:Code>
+      <structure:Code value="MOPETHEF" parentCode="" urn="">
+        <structure:Description xml:lang="en">moped theft</structure:Description>
+        <structure:Description xml:lang="it">furti di ciclomotori</structure:Description>
+      </structure:Code>
+      <structure:Code value="MOTORTHEF" parentCode="" urn="">
+        <structure:Description xml:lang="en">motorcycle theft</structure:Description>
+        <structure:Description xml:lang="it">furti di motocicli</structure:Description>
+      </structure:Code>
+      <structure:Code value="PICKTHEF" parentCode="" urn="">
+        <structure:Description xml:lang="en">pickpocketing</structure:Description>
+        <structure:Description xml:lang="it">furti con destrezza</structure:Description>
+      </structure:Code>
+      <structure:Code value="SHOPTHEF" parentCode="" urn="">
+        <structure:Description xml:lang="en">shoplifting</structure:Description>
+        <structure:Description xml:lang="it">furti in esercizi commerciali</structure:Description>
+      </structure:Code>
+      <structure:Code value="TRUCKTHEF" parentCode="" urn="">
+        <structure:Description xml:lang="en">theft of cargo trucks carrying freights</structure:Description>
+        <structure:Description xml:lang="it">furti di automezzi pesanti trasportanti merci</structure:Description>
+      </structure:Code>
+      <structure:Code value="VEHITHEF" parentCode="" urn="">
+        <structure:Description xml:lang="en">theft from vehicle</structure:Description>
+        <structure:Description xml:lang="it">furti in auto in sosta</structure:Description>
+      </structure:Code>
+      <structure:Code value="ROADHOM" parentCode="" urn="">
+        <structure:Description xml:lang="en">homicides from road accident</structure:Description>
+        <structure:Description xml:lang="it">omicidi colposi da incidente stradale</structure:Description>
+      </structure:Code>
+    </structure:CodeList>
+    <structure:CodeList id="CL_RIF_TIME_HUB_8221" agencyID="IT1" version="1.0" isFinal="true">
+      <structure:Name xml:lang="en">Event reference with respect to a period</structure:Name>
+      <structure:Name xml:lang="it">Riferimento evento rispetto a un periodo</structure:Name>
+      <structure:Code value="YRDUR" parentCode="" urn="">
+        <structure:Description xml:lang="en">during the reference year</structure:Description>
+        <structure:Description xml:lang="it">durante l'anno di riferimento</structure:Description>
+      </structure:Code>
+    </structure:CodeList>
+    <structure:CodeList id="CL_TIPO_DATO35_HUB_8221" agencyID="IT1" version="1.0" isFinal="true">
+      <structure:Name xml:lang="en">Data type</structure:Name>
+      <structure:Name xml:lang="it">Tipo dato</structure:Name>
+      <structure:Code value="CRIMEN" parentCode="" urn="">
+        <structure:Description xml:lang="en">number of crimes reported by the police forces to the judicial authority</structure:Description>
+        <structure:Description xml:lang="it">numero di delitti denunciati dalle forze di polizia all'autorità giudiziaria</structure:Description>
+      </structure:Code>
+    </structure:CodeList>
+    <structure:CodeList id="CL_SI_NO_HUB_8221" agencyID="IT1" version="1.0" isFinal="true">
+      <structure:Name xml:lang="en">Yes and no</structure:Name>
+      <structure:Name xml:lang="it">Si e no</structure:Name>
+      <structure:Code value="9" parentCode="" urn="">
+        <structure:Description xml:lang="en">total</structure:Description>
+        <structure:Description xml:lang="it">totale</structure:Description>
+      </structure:Code>
+    </structure:CodeList>
+    <structure:CodeList id="CL_BASE_YEAR" agencyID="IT1" version="1.2" isFinal="true">
+      <structure:Name xml:lang="it">Anno base</structure:Name>
+      <structure:Name xml:lang="en">Base year</structure:Name>
+      <structure:Code value="0000" parentCode="" urn="">
+        <structure:Description xml:lang="it">non specificato</structure:Description>
+        <structure:Description xml:lang="en">unspecified</structure:Description>
+      </structure:Code>
+      <structure:Code value="1980" parentCode="" urn="">
+        <structure:Description xml:lang="it">anno 1980</structure:Description>
+        <structure:Description xml:lang="en">year 1980</structure:Description>
+      </structure:Code>
+      <structure:Code value="1981" parentCode="" urn="">
+        <structure:Description xml:lang="it">anno 1981</structure:Description>
+        <structure:Description xml:lang="en">year 1981</structure:Description>
+      </structure:Code>
+      <structure:Code value="1982" parentCode="" urn="">
+        <structure:Description xml:lang="it">anno 1982</structure:Description>
+        <structure:Description xml:lang="en">year 1982</structure:Description>
+      </structure:Code>
+      <structure:Code value="1989" parentCode="" urn="">
+        <structure:Description xml:lang="it">anno 1989</structure:Description>
+        <structure:Description xml:lang="en">year 1989</structure:Description>
+      </structure:Code>
+      <structure:Code value="1990" parentCode="" urn="">
+        <structure:Description xml:lang="it">anno 1990</structure:Description>
+        <structure:Description xml:lang="en">year 1990</structure:Description>
+      </structure:Code>
+      <structure:Code value="1991" parentCode="" urn="">
+        <structure:Description xml:lang="it">anno 1991</structure:Description>
+        <structure:Description xml:lang="en">year 1991</structure:Description>
+      </structure:Code>
+      <structure:Code value="1992" parentCode="" urn="">
+        <structure:Description xml:lang="it">anno 1992</structure:Description>
+        <structure:Description xml:lang="en">year 1992</structure:Description>
+      </structure:Code>
+      <structure:Code value="1993" parentCode="" urn="">
+        <structure:Description xml:lang="it">anno 1993</structure:Description>
+        <structure:Description xml:lang="en">year 1993</structure:Description>
+      </structure:Code>
+      <structure:Code value="1994" parentCode="" urn="">
+        <structure:Description xml:lang="it">anno 1994</structure:Description>
+        <structure:Description xml:lang="en">year 1994</structure:Description>
+      </structure:Code>
+      <structure:Code value="1995" parentCode="" urn="">
+        <structure:Description xml:lang="it">anno 1995</structure:Description>
+        <structure:Description xml:lang="en">year 1995</structure:Description>
+      </structure:Code>
+      <structure:Code value="1996" parentCode="" urn="">
+        <structure:Description xml:lang="it">anno 1996</structure:Description>
+        <structure:Description xml:lang="en">year 1996</structure:Description>
+      </structure:Code>
+      <structure:Code value="1997" parentCode="" urn="">
+        <structure:Description xml:lang="it">anno 1997</structure:Description>
+        <structure:Description xml:lang="en">year 1997</structure:Description>
+      </structure:Code>
+      <structure:Code value="1998" parentCode="" urn="">
+        <structure:Description xml:lang="it">anno 1998</structure:Description>
+        <structure:Description xml:lang="en">year 1998</structure:Description>
+      </structure:Code>
+      <structure:Code value="1999" parentCode="" urn="">
+        <structure:Description xml:lang="it">anno 1999</structure:Description>
+        <structure:Description xml:lang="en">year 1999</structure:Description>
+      </structure:Code>
+      <structure:Code value="2000" parentCode="" urn="">
+        <structure:Description xml:lang="it">anno 2000</structure:Description>
+        <structure:Description xml:lang="en">year 2000</structure:Description>
+      </structure:Code>
+      <structure:Code value="2001" parentCode="" urn="">
+        <structure:Description xml:lang="it">anno 2001</structure:Description>
+        <structure:Description xml:lang="en">year 2001</structure:Description>
+      </structure:Code>
+      <structure:Code value="2002" parentCode="" urn="">
+        <structure:Description xml:lang="it">anno 2002</structure:Description>
+        <structure:Description xml:lang="en">year 2002</structure:Description>
+      </structure:Code>
+      <structure:Code value="2003" parentCode="" urn="">
+        <structure:Description xml:lang="it">anno 2003</structure:Description>
+        <structure:Description xml:lang="en">year 2003</structure:Description>
+      </structure:Code>
+      <structure:Code value="2004" parentCode="" urn="">
+        <structure:Description xml:lang="it">anno 2004</structure:Description>
+        <structure:Description xml:lang="en">year 2004</structure:Description>
+      </structure:Code>
+      <structure:Code value="2005" parentCode="" urn="">
+        <structure:Description xml:lang="it">anno 2005</structure:Description>
+        <structure:Description xml:lang="en">year 2005</structure:Description>
+      </structure:Code>
+      <structure:Code value="2005_12" parentCode="" urn="">
+        <structure:Description xml:lang="it">dicembre 2005</structure:Description>
+        <structure:Description xml:lang="en">December 2005</structure:Description>
+      </structure:Code>
+      <structure:Code value="2006" parentCode="" urn="">
+        <structure:Description xml:lang="it">anno 2006</structure:Description>
+        <structure:Description xml:lang="en">year 2006</structure:Description>
+      </structure:Code>
+      <structure:Code value="2007" parentCode="" urn="">
+        <structure:Description xml:lang="it">anno 2007</structure:Description>
+        <structure:Description xml:lang="en">year 2007</structure:Description>
+      </structure:Code>
+      <structure:Code value="2008" parentCode="" urn="">
+        <structure:Description xml:lang="it">anno 2008</structure:Description>
+        <structure:Description xml:lang="en">year 2008</structure:Description>
+      </structure:Code>
+      <structure:Code value="2009" parentCode="" urn="">
+        <structure:Description xml:lang="it">anno 2009</structure:Description>
+        <structure:Description xml:lang="en">year 2009</structure:Description>
+      </structure:Code>
+      <structure:Code value="2010" parentCode="" urn="">
+        <structure:Description xml:lang="it">anno 2010</structure:Description>
+        <structure:Description xml:lang="en">year 2010</structure:Description>
+      </structure:Code>
+      <structure:Code value="2011" parentCode="" urn="">
+        <structure:Description xml:lang="it">anno 2011</structure:Description>
+        <structure:Description xml:lang="en">year 2011</structure:Description>
+      </structure:Code>
+    </structure:CodeList>
+    <structure:CodeList id="CL_UNIT_MEASURE" agencyID="IT1" version="1.6" isFinal="true">
+      <structure:Name xml:lang="it">Unità di misura</structure:Name>
+      <structure:Name xml:lang="en">Measure unit</structure:Name>
+      <structure:Code value="PPS" parentCode="" urn="">
+        <structure:Description xml:lang="it">standard di potere d'acquisto (SPA)</structure:Description>
+        <structure:Description xml:lang="en">purchasing power standard (PPS)</structure:Description>
+      </structure:Code>
+      <structure:Code value="T" parentCode="" urn="">
+        <structure:Description xml:lang="it">tonnellate</structure:Description>
+        <structure:Description xml:lang="en">tonnes</structure:Description>
+      </structure:Code>
+      <structure:Code value="TME" parentCode="" urn="">
+        <structure:Description xml:lang="it">tonnellate/milioni di euro</structure:Description>
+        <structure:Description xml:lang="en">ton/million euro</structure:Description>
+      </structure:Code>
+      <structure:Code value="TTFTE" parentCode="" urn="">
+        <structure:Description xml:lang="it">tonnellate/migliaia di ula</structure:Description>
+        <structure:Description xml:lang="en">ton/thousand fte</structure:Description>
+      </structure:Code>
+      <structure:Code value="TONKM" parentCode="" urn="">
+        <structure:Description xml:lang="it">tonnellate/Km</structure:Description>
+        <structure:Description xml:lang="en">tonne/km</structure:Description>
+      </structure:Code>
+      <structure:Code value="KME" parentCode="" urn="">
+        <structure:Description xml:lang="it">chilogrammi/milioni di euro</structure:Description>
+        <structure:Description xml:lang="en">kg/million euro</structure:Description>
+      </structure:Code>
+      <structure:Code value="KTFTE" parentCode="" urn="">
+        <structure:Description xml:lang="it">chilogrammi/migliaia di ula</structure:Description>
+        <structure:Description xml:lang="en">kg/thousand fte</structure:Description>
+      </structure:Code>
+      <structure:Code value="TPW" parentCode="" urn="">
+        <structure:Description xml:lang="it">tonnellate di peso del prodotto</structure:Description>
+        <structure:Description xml:lang="en">Tonnes product weight</structure:Description>
+      </structure:Code>
+      <structure:Code value="TLW" parentCode="" urn="">
+        <structure:Description xml:lang="it">tonnellate di peso vivo</structure:Description>
+        <structure:Description xml:lang="en">Tonnes live weight</structure:Description>
+      </structure:Code>
+      <structure:Code value="TOE" parentCode="" urn="">
+        <structure:Description xml:lang="it">tonnellate equivalenti di petrolio</structure:Description>
+        <structure:Description xml:lang="en">Tonnes of oil equivalent (TOE)</structure:Description>
+      </structure:Code>
+      <structure:Code value="GT" parentCode="" urn="">
+        <structure:Description xml:lang="it">stazza lorda</structure:Description>
+        <structure:Description xml:lang="en">Gross tonnage (GT)</structure:Description>
+      </structure:Code>
+      <structure:Code value="TKM" parentCode="" urn="">
+        <structure:Description xml:lang="it">tonnellate per chilometro</structure:Description>
+        <structure:Description xml:lang="en">Tonnes per km (Tkm)</structure:Description>
+      </structure:Code>
+      <structure:Code value="PKM" parentCode="" urn="">
+        <structure:Description xml:lang="it">passeggero/kilometro</structure:Description>
+        <structure:Description xml:lang="en">Passenger/kilometres (transport of one passenger over one km)</structure:Description>
+      </structure:Code>
+      <structure:Code value="M" parentCode="" urn="">
+        <structure:Description xml:lang="it">metri</structure:Description>
+        <structure:Description xml:lang="en">metres</structure:Description>
+      </structure:Code>
+      <structure:Code value="M2" parentCode="" urn="">
+        <structure:Description xml:lang="it">metri quadrati</structure:Description>
+        <structure:Description xml:lang="en">square metres</structure:Description>
+      </structure:Code>
+      <structure:Code value="M3" parentCode="" urn="">
+        <structure:Description xml:lang="it">metri cubi</structure:Description>
+        <structure:Description xml:lang="en">cubic metres</structure:Description>
+      </structure:Code>
+      <structure:Code value="KM" parentCode="" urn="">
+        <structure:Description xml:lang="it">chilometri</structure:Description>
+        <structure:Description xml:lang="en">kilometre</structure:Description>
+      </structure:Code>
+      <structure:Code value="KM2" parentCode="" urn="">
+        <structure:Description xml:lang="it">chilometri quadrati</structure:Description>
+        <structure:Description xml:lang="en">square kilometre</structure:Description>
+      </structure:Code>
+      <structure:Code value="HA" parentCode="" urn="">
+        <structure:Description xml:lang="it">ettari</structure:Description>
+        <structure:Description xml:lang="en">hectares</structure:Description>
+      </structure:Code>
+      <structure:Code value="GR" parentCode="" urn="">
+        <structure:Description xml:lang="it">grammi</structure:Description>
+        <structure:Description xml:lang="en">grams</structure:Description>
+      </structure:Code>
+      <structure:Code value="KG" parentCode="" urn="">
+        <structure:Description xml:lang="it">chilogrammi</structure:Description>
+        <structure:Description xml:lang="en">kilograms</structure:Description>
+      </structure:Code>
+      <structure:Code value="LT" parentCode="" urn="">
+        <structure:Description xml:lang="it">litri</structure:Description>
+        <structure:Description xml:lang="en">litres</structure:Description>
+      </structure:Code>
+      <structure:Code value="OZ" parentCode="" urn="">
+        <structure:Description xml:lang="it">once</structure:Description>
+        <structure:Description xml:lang="en">ounce</structure:Description>
+      </structure:Code>
+      <structure:Code value="KW" parentCode="" urn="">
+        <structure:Description xml:lang="it">kilowatt</structure:Description>
+        <structure:Description xml:lang="en">kilowatt</structure:Description>
+      </structure:Code>
+      <structure:Code value="MW" parentCode="" urn="">
+        <structure:Description xml:lang="it">megawatt</structure:Description>
+        <structure:Description xml:lang="en">megawatt</structure:Description>
+      </structure:Code>
+      <structure:Code value="GW" parentCode="" urn="">
+        <structure:Description xml:lang="it">gigawatt</structure:Description>
+        <structure:Description xml:lang="en">gigawatt</structure:Description>
+      </structure:Code>
+      <structure:Code value="KWH" parentCode="" urn="">
+        <structure:Description xml:lang="it">kilowatt/ora</structure:Description>
+        <structure:Description xml:lang="en">kilowatt/hour</structure:Description>
+      </structure:Code>
+      <structure:Code value="GWH" parentCode="" urn="">
+        <structure:Description xml:lang="it">gigawatt ora</structure:Description>
+        <structure:Description xml:lang="en">gigawatt hour</structure:Description>
+      </structure:Code>
+      <structure:Code value="TJ" parentCode="" urn="">
+        <structure:Description xml:lang="it">terajoule</structure:Description>
+        <structure:Description xml:lang="en">terajoule</structure:Description>
+      </structure:Code>
+      <structure:Code value="AWU" parentCode="" urn="">
+        <structure:Description xml:lang="it">unità di lavoro annuali (ULA)</structure:Description>
+        <structure:Description xml:lang="en">Annual working unit</structure:Description>
+      </structure:Code>
+      <structure:Code value="LSU" parentCode="" urn="">
+        <structure:Description xml:lang="it">unità di bovino adulto (UBA)</structure:Description>
+        <structure:Description xml:lang="en">livestock unit</structure:Description>
+      </structure:Code>
+      <structure:Code value="FTE" parentCode="" urn="">
+        <structure:Description xml:lang="it">equivalente a tempo pieno</structure:Description>
+        <structure:Description xml:lang="en">Full time equivalent</structure:Description>
+      </structure:Code>
+      <structure:Code value="Q" parentCode="" urn="">
+        <structure:Description xml:lang="it">quintali</structure:Description>
+        <structure:Description xml:lang="en">quintals</structure:Description>
+      </structure:Code>
+      <structure:Code value="QF" parentCode="" urn="">
+        <structure:Description xml:lang="it">quintali (unità foraggere per i gruppi erbosi, prati e pascoli)</structure:Description>
+        <structure:Description xml:lang="en">quintals (fodder unit for the types of crop under the groups grass meadows, grasses and grazing)</structure:Description>
+      </structure:Code>
+      <structure:Code value="DAYS" parentCode="" urn="">
+        <structure:Description xml:lang="it">giorni</structure:Description>
+        <structure:Description xml:lang="en">days</structure:Description>
+      </structure:Code>
+      <structure:Code value="HOURS" parentCode="" urn="">
+        <structure:Description xml:lang="it">ore</structure:Description>
+        <structure:Description xml:lang="en">hours</structure:Description>
+      </structure:Code>
+      <structure:Code value="KLITRE" parentCode="" urn="">
+        <structure:Description xml:lang="it">chilolitri</structure:Description>
+        <structure:Description xml:lang="en">kilolitres</structure:Description>
+      </structure:Code>
+      <structure:Code value="MAN-DY" parentCode="" urn="">
+        <structure:Description xml:lang="it">giorni uomo</structure:Description>
+        <structure:Description xml:lang="en">man days</structure:Description>
+      </structure:Code>
+      <structure:Code value="MAN-YR" parentCode="" urn="">
+        <structure:Description xml:lang="it">anni uomo</structure:Description>
+        <structure:Description xml:lang="en">man years</structure:Description>
+      </structure:Code>
+      <structure:Code value="MONTHS" parentCode="" urn="">
+        <structure:Description xml:lang="it">mesi</structure:Description>
+        <structure:Description xml:lang="en">months</structure:Description>
+      </structure:Code>
+      <structure:Code value="PERS" parentCode="" urn="">
+        <structure:Description xml:lang="it">persone</structure:Description>
+        <structure:Description xml:lang="en">persons</structure:Description>
+      </structure:Code>
+      <structure:Code value="POINTS" parentCode="" urn="">
+        <structure:Description xml:lang="it">punti</structure:Description>
+        <structure:Description xml:lang="en">points</structure:Description>
+      </structure:Code>
+      <structure:Code value="PURE_NUMB" parentCode="" urn="">
+        <structure:Description xml:lang="it">numero puro</structure:Description>
+        <structure:Description xml:lang="en">dimensionless value</structure:Description>
+      </structure:Code>
+      <structure:Code value="UNITS" parentCode="" urn="">
+        <structure:Description xml:lang="it">unità descritte nel titolo</structure:Description>
+        <structure:Description xml:lang="en">unit described in title</structure:Description>
+      </structure:Code>
+      <structure:Code value="EURO" parentCode="" urn="">
+        <structure:Description xml:lang="it">euro</structure:Description>
+        <structure:Description xml:lang="en">euro</structure:Description>
+      </structure:Code>
+      <structure:Code value="C_K" parentCode="" urn="">
+        <structure:Description xml:lang="it">numero dei carati (1 carato metrico = 2×10^-4Kg)</structure:Description>
+        <structure:Description xml:lang="en">carats</structure:Description>
+      </structure:Code>
+      <structure:Code value="GJ" parentCode="" urn="">
+        <structure:Description xml:lang="it">gigajoule (potere calorifico lordo)</structure:Description>
+        <structure:Description xml:lang="en">gigajoule (gross calorific value)</structure:Description>
+      </structure:Code>
+      <structure:Code value="EFFECT_TON" parentCode="" urn="">
+        <structure:Description xml:lang="it">tonnellata effettiva</structure:Description>
+        <structure:Description xml:lang="en">effective ton</structure:Description>
+      </structure:Code>
+      <structure:Code value="YEAR" parentCode="" urn="">
+        <structure:Description xml:lang="it">anni</structure:Description>
+        <structure:Description xml:lang="en">year</structure:Description>
+      </structure:Code>
+    </structure:CodeList>
+    <structure:CodeList id="CL_UNIT_MULT" agencyID="IT1" version="1.0" isFinal="true">
+      <structure:Name xml:lang="it">Unit multiplier</structure:Name>
+      <structure:Name xml:lang="en">Unit multiplier</structure:Name>
+      <structure:Code value="0" parentCode="" urn="">
+        <structure:Description xml:lang="it">Unità</structure:Description>
+        <structure:Description xml:lang="en">Units</structure:Description>
+      </structure:Code>
+      <structure:Code value="1" parentCode="" urn="">
+        <structure:Description xml:lang="it">Decine</structure:Description>
+        <structure:Description xml:lang="en">Tens</structure:Description>
+      </structure:Code>
+      <structure:Code value="2" parentCode="" urn="">
+        <structure:Description xml:lang="it">Centinaia</structure:Description>
+        <structure:Description xml:lang="en">Hundreds</structure:Description>
+      </structure:Code>
+      <structure:Code value="3" parentCode="" urn="">
+        <structure:Description xml:lang="it">Migliaia</structure:Description>
+        <structure:Description xml:lang="en">Thousands</structure:Description>
+      </structure:Code>
+      <structure:Code value="4" parentCode="" urn="">
+        <structure:Description xml:lang="it">Decine di migliaia</structure:Description>
+        <structure:Description xml:lang="en">Tens of thousands</structure:Description>
+      </structure:Code>
+      <structure:Code value="6" parentCode="" urn="">
+        <structure:Description xml:lang="it">Milioni</structure:Description>
+        <structure:Description xml:lang="en">Millions</structure:Description>
+      </structure:Code>
+      <structure:Code value="9" parentCode="" urn="">
+        <structure:Description xml:lang="it">Miliardi</structure:Description>
+        <structure:Description xml:lang="en">Billions</structure:Description>
+      </structure:Code>
+    </structure:CodeList>
+    <structure:CodeList id="CL_FLAG" agencyID="IT1" version="1.6" isFinal="true">
+      <structure:Name xml:lang="it">Flag</structure:Name>
+      <structure:Name xml:lang="en">Flag</structure:Name>
+      <structure:Code value="-" parentCode="" urn="">
+        <structure:Description xml:lang="it">il fenomeno non esiste oppure esiste e viene rilevato, ma i casi non si sono verificati</structure:Description>
+        <structure:Description xml:lang="en">the instance does not exist or any case has not occurred</structure:Description>
+      </structure:Code>
+      <structure:Code value="0" parentCode="" urn="">
+        <structure:Description xml:lang="it">il dato non raggiunge la metà della cifra minima considerata</structure:Description>
+        <structure:Description xml:lang="en">less than half of the unit used</structure:Description>
+      </structure:Code>
+      <structure:Code value="b" parentCode="" urn="">
+        <structure:Description xml:lang="it">break nella serie</structure:Description>
+        <structure:Description xml:lang="en">break in series</structure:Description>
+      </structure:Code>
+      <structure:Code value="c" parentCode="" urn="">
+        <structure:Description xml:lang="it">dato oscurato per la tutela del segreto statistico</structure:Description>
+        <structure:Description xml:lang="en">unseen data because of the statistical confidenciality</structure:Description>
+      </structure:Code>
+      <structure:Code value="e" parentCode="" urn="">
+        <structure:Description xml:lang="it">dato stimato</structure:Description>
+        <structure:Description xml:lang="en">estimate data</structure:Description>
+      </structure:Code>
+      <structure:Code value="f" parentCode="" urn="">
+        <structure:Description xml:lang="it">dato previsto</structure:Description>
+        <structure:Description xml:lang="en">forecast</structure:Description>
+      </structure:Code>
+      <structure:Code value="g" parentCode="" urn="">
+        <structure:Description xml:lang="it">il fenomeno esiste, ma i dati non si conoscono per qualsiasi ragione</structure:Description>
+        <structure:Description xml:lang="en">the instance exists, but is not known for any reason</structure:Description>
+      </structure:Code>
+      <structure:Code value="n" parentCode="" urn="">
+        <structure:Description xml:lang="it">dato statisticamente non significativo (vedasi metadati di dataset)</structure:Description>
+        <structure:Description xml:lang="en">data statistically not significant (see explanatory texts)</structure:Description>
+      </structure:Code>
+      <structure:Code value="p" parentCode="" urn="">
+        <structure:Description xml:lang="it">dato provvisorio</structure:Description>
+        <structure:Description xml:lang="en">provisional data</structure:Description>
+      </structure:Code>
+      <structure:Code value="r" parentCode="" urn="">
+        <structure:Description xml:lang="it">dato aggiornato</structure:Description>
+        <structure:Description xml:lang="en">revised data</structure:Description>
+      </structure:Code>
+      <structure:Code value="s" parentCode="" urn="">
+        <structure:Description xml:lang="it">sciopero</structure:Description>
+        <structure:Description xml:lang="en">strike</structure:Description>
+      </structure:Code>
+      <structure:Code value="t" parentCode="" urn="">
+        <structure:Description xml:lang="it">è voce da considerarsi come titolo di raggruppamento</structure:Description>
+        <structure:Description xml:lang="en">title for the grouping</structure:Description>
+      </structure:Code>
+      <structure:Code value="u" parentCode="" urn="">
+        <structure:Description xml:lang="it">dato indisponibile o incerto (vedasi metadati di dataset)</structure:Description>
+        <structure:Description xml:lang="en">unreliable or uncertain data (see explanatory texts)</structure:Description>
+      </structure:Code>
+      <structure:Code value="y" parentCode="" urn="">
+        <structure:Description xml:lang="it">dato non ricostruito rispetto alla popolazione del censimento 2011</structure:Description>
+        <structure:Description xml:lang="en">data not yet revised according to the 2011 Census</structure:Description>
+      </structure:Code>
+      <structure:Code value="a54" parentCode="" urn="">
+        <structure:Description xml:lang="it">il valore è relativo all'insieme di più province della stessa regione</structure:Description>
+        <structure:Description xml:lang="en">the value is referred to the set of more provinces in the same region</structure:Description>
+      </structure:Code>
+      <structure:Code value="o54" parentCode="" urn="">
+        <structure:Description xml:lang="it">il valore è diffuso insieme a quello della provincia della stessa regione indicata con (a)</structure:Description>
+        <structure:Description xml:lang="en">the value is released together with the value of the province of the same region with (a)</structure:Description>
+      </structure:Code>
+      <structure:Code value="gr" parentCode="" urn="">
+        <structure:Description xml:lang="it">il fenomeno esiste, ma i dati non si conoscono per qualsiasi ragione - dato aggiornato</structure:Description>
+        <structure:Description xml:lang="en">the instance exists, but is not known for any reason - revised data</structure:Description>
+      </structure:Code>
+      <structure:Code value="pr" parentCode="" urn="">
+        <structure:Description xml:lang="it">dato provvisorio - dato aggiornato</structure:Description>
+        <structure:Description xml:lang="en">provisional data - revised data</structure:Description>
+      </structure:Code>
+    </structure:CodeList>
+  </CodeLists>
+  <Concepts>
+    <structure:ConceptScheme id="CROSS_DOMAIN" agencyID="IT1" version="3.2" isFinal="true">
+      <structure:Name xml:lang="it">Concetti generali</structure:Name>
+      <structure:Name xml:lang="en">Cross domain concepts</structure:Name>
+      <structure:Concept id="ADJUSTMENT">
+        <structure:Name xml:lang="it">Correzione</structure:Name>
+        <structure:Name xml:lang="en">Adjustment</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="AGGR">
+        <structure:Name xml:lang="it">Aggregato</structure:Name>
+        <structure:Name xml:lang="en">Aggregate</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="AGGR_PIL">
+        <structure:Name xml:lang="it">Aggregati del PIL</structure:Name>
+        <structure:Name xml:lang="en">GDP aggregates</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="ANNATA_AGRF">
+        <structure:Name xml:lang="it">Annata agraria fine</structure:Name>
+        <structure:Name xml:lang="en">Agrarian year end</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="ANNO">
+        <structure:Name xml:lang="it">Anno</structure:Name>
+        <structure:Name xml:lang="en">Year</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="ANNO_CENSIMENTO">
+        <structure:Name xml:lang="it">Anno di Censimento</structure:Name>
+        <structure:Name xml:lang="en">Census Year</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="ANNO_IND">
+        <structure:Name xml:lang="it">Anno indagine</structure:Name>
+        <structure:Name xml:lang="en">Year of reference</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="ANNO_INDAGINE">
+        <structure:Name xml:lang="it">Anno di indagine</structure:Name>
+        <structure:Name xml:lang="en">Year of reference</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="BASE_PER">
+        <structure:Name xml:lang="it">Periodo base</structure:Name>
+        <structure:Name xml:lang="en">Base period</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="BREAK">
+        <structure:Name xml:lang="it">Break</structure:Name>
+        <structure:Name xml:lang="en">Break</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="CONF_STATUS">
+        <structure:Name xml:lang="it">Posizione relativa alla riservatezza</structure:Name>
+        <structure:Name xml:lang="en">Confidentiality status</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="EDI">
+        <structure:Name xml:lang="it">Edizione</structure:Name>
+        <structure:Name xml:lang="en">Edition</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="FREQ">
+        <structure:Name xml:lang="it">Periodicità</structure:Name>
+        <structure:Name xml:lang="en">Frequency</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="FREQUENZA">
+        <structure:Name xml:lang="it">Frequenza</structure:Name>
+        <structure:Name xml:lang="en">Frequency</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="FUNZ_BIO">
+        <structure:Name xml:lang="it">Funzioni biometriche</structure:Name>
+        <structure:Name xml:lang="en">Biometric functions</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="IND">
+        <structure:Name xml:lang="it">Indicatore</structure:Name>
+        <structure:Name xml:lang="en">Indicator</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="INDS">
+        <structure:Name xml:lang="it">Indicatori</structure:Name>
+        <structure:Name xml:lang="en">Indicators</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="IND_CAPACITA">
+        <structure:Name xml:lang="it">Indicatori di capacità</structure:Name>
+        <structure:Name xml:lang="en">Indicators</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="IND_COSTO">
+        <structure:Name xml:lang="it">Indicatore di costo</structure:Name>
+        <structure:Name xml:lang="en">Indicator of cost</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="IND_RETR">
+        <structure:Name xml:lang="it">Indicatore di retribuzione</structure:Name>
+        <structure:Name xml:lang="en">Indicator of earning</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="IND_SP">
+        <structure:Name xml:lang="it">Indicatore di spesa</structure:Name>
+        <structure:Name xml:lang="en">Housing costs indicators</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="IND_TENS">
+        <structure:Name xml:lang="it">Indicatore di tensione</structure:Name>
+        <structure:Name xml:lang="en">Bargaining tension</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="IND_TRASP_AEREO">
+        <structure:Name xml:lang="it">Indicatori trasporto aereo</structure:Name>
+        <structure:Name xml:lang="en">Air transport indicators</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="IND_TYPE">
+        <structure:Name xml:lang="it">Tipo indice</structure:Name>
+        <structure:Name xml:lang="en">Index type</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="MEASURE">
+        <structure:Name xml:lang="it">Operatore Statistico</structure:Name>
+        <structure:Name xml:lang="en">Statistical operator</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="MESE">
+        <structure:Name xml:lang="it">Mese</structure:Name>
+        <structure:Name xml:lang="en">Month</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="METADATA_EN">
+        <structure:Name xml:lang="it">Metadati referenziali (in inglese)</structure:Name>
+        <structure:Name xml:lang="en">Reference metadata (in English)</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="METADATA_IT">
+        <structure:Name xml:lang="it">Metadati referenziali (in italiano)</structure:Name>
+        <structure:Name xml:lang="en">Reference metadata (in Italian)</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="MISURA1">
+        <structure:Name xml:lang="it">Misura</structure:Name>
+        <structure:Name xml:lang="en">Measure</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="OBS_PRE_BREAK">
+        <structure:Name xml:lang="it">Valore osservato pre-break</structure:Name>
+        <structure:Name xml:lang="en">Observation pre-break value</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="OBS_STATUS">
+        <structure:Name xml:lang="it">Stato dell'osservazione</structure:Name>
+        <structure:Name xml:lang="en">Observation status</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="OBS_VALUE">
+        <structure:Name xml:lang="it">Valore osservato</structure:Name>
+        <structure:Name xml:lang="en">Observation value</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="OCC_NLCIG">
+        <structure:Name xml:lang="it">Occupazione al netto/lordo CIG</structure:Name>
+        <structure:Name xml:lang="en">Employment gross/net of short time working allowances</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="RACNAMUNF">
+        <structure:Name xml:lang="it">Raccordo tra totali</structure:Name>
+        <structure:Name xml:lang="en">Bridging items between totals</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="REF_PERIOD">
+        <structure:Name xml:lang="it">Periodo di riferimento</structure:Name>
+        <structure:Name xml:lang="en">Reference period</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="SCEN">
+        <structure:Name xml:lang="it">Scenario</structure:Name>
+        <structure:Name xml:lang="en">Scenario</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="TIME">
+        <structure:Name xml:lang="it">Tempo</structure:Name>
+        <structure:Name xml:lang="en">Time</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="TIMEFREQ">
+        <structure:Name xml:lang="it">Tempo e frequenza</structure:Name>
+        <structure:Name xml:lang="en">Time and frequency</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="TIME_PERIOD">
+        <structure:Name xml:lang="it">Periodo di tempo</structure:Name>
+        <structure:Name xml:lang="en">Time period</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="TIPODATO">
+        <structure:Name xml:lang="it">Tipo Dato</structure:Name>
+        <structure:Name xml:lang="en">Datatype</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="TIPO_AGGR">
+        <structure:Name xml:lang="it">Tipo aggregato</structure:Name>
+        <structure:Name xml:lang="en">Aggregate</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="TIPO_DATO">
+        <structure:Name xml:lang="it">Tipo dato</structure:Name>
+        <structure:Name xml:lang="en">Data type</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="TIPO_INDDEM">
+        <structure:Name xml:lang="it">Tipo di indicatore demografico</structure:Name>
+        <structure:Name xml:lang="en">Demographic data type</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="TIPO_IND_NUZ">
+        <structure:Name xml:lang="it">Tipo di indicatore di nuzialità</structure:Name>
+        <structure:Name xml:lang="en">Indicators of nuptiality</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="TIPO_RETR">
+        <structure:Name xml:lang="it">Tipo di retribuzione</structure:Name>
+        <structure:Name xml:lang="en">Type of wages</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="TIPO_TASSO">
+        <structure:Name xml:lang="it">Tipo di tasso</structure:Name>
+        <structure:Name xml:lang="en">Type of rate</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="TIP_AGGR">
+        <structure:Name xml:lang="it">Tipologia aggregato</structure:Name>
+        <structure:Name xml:lang="en">Aggregate</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="TIP_AGGR1">
+        <structure:Name xml:lang="it">Tipologia di aggregato</structure:Name>
+        <structure:Name xml:lang="en">Aggregate</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="TIP_INDI">
+        <structure:Name xml:lang="it">Tipo di indicatore</structure:Name>
+        <structure:Name xml:lang="en">Type of indicator</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="TIP_INDI1">
+        <structure:Name xml:lang="it">Tipo indicatore</structure:Name>
+        <structure:Name xml:lang="en">Type of indicator</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="TIP_PROC">
+        <structure:Name xml:lang="it">Tipo procedimento</structure:Name>
+        <structure:Name xml:lang="en">Type of proceeding</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="TIP_VAR">
+        <structure:Name xml:lang="it">Tipo variabile</structure:Name>
+        <structure:Name xml:lang="en">Data type</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="TRIM">
+        <structure:Name xml:lang="it">Trimestre</structure:Name>
+        <structure:Name xml:lang="en">Quarter</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="UNIT_MEAS">
+        <structure:Name xml:lang="it">Unità di misura</structure:Name>
+        <structure:Name xml:lang="en">Unit of measurement</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="UNIT_MULT">
+        <structure:Name xml:lang="it">Fattore di scala</structure:Name>
+        <structure:Name xml:lang="en">Unit multiplier</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="USE_BED">
+        <structure:Name xml:lang="it">Indici di utilizzazione</structure:Name>
+        <structure:Name xml:lang="en">Use of bedplaces</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="VA">
+        <structure:Name xml:lang="it">Variabile</structure:Name>
+        <structure:Name xml:lang="en">Variable</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="VAL">
+        <structure:Name xml:lang="it">Valutazione</structure:Name>
+        <structure:Name xml:lang="en">Valuation</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="Y_CLOS_SCH">
+        <structure:Name xml:lang="it">Anno di chiusura del periodo scolastico</structure:Name>
+        <structure:Name xml:lang="en">Year of closure of scholastic term</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+    </structure:ConceptScheme>
+    <structure:ConceptScheme id="VARIAB_ALL" agencyID="IT1" version="6.7" isFinal="true">
+      <structure:Name xml:lang="it">Tutte le Variabili - Tutti i concetti</structure:Name>
+      <structure:Name xml:lang="en">All Variables - All Concepts</structure:Name>
+      <structure:Concept id="ID_AUTORE">
+        <structure:Name xml:lang="it">Identità autore nota</structure:Name>
+        <structure:Name xml:lang="en">Known offender identity</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="ITTER107">
+        <structure:Name xml:lang="it">Territorio</structure:Name>
+        <structure:Name xml:lang="en">Territory</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="TIPO_DELITTO">
+        <structure:Name xml:lang="it">Tipo di delitto</structure:Name>
+        <structure:Name xml:lang="en">Type of crime</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+      <structure:Concept id="PERIODO_DELITTO">
+        <structure:Name xml:lang="it">Periodo del commesso delitto</structure:Name>
+        <structure:Name xml:lang="en">Reference period of crime</structure:Name>
+        <structure:Annotations>
+          <common:Annotation xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+            <common:AnnotationTitle>DEFINIZIONE_IT</common:AnnotationTitle>
+            <common:AnnotationType>DEFINIZIONE</common:AnnotationType>
+            <common:AnnotationURL />
+            <common:AnnotationText xml:lang="it" />
+            <common:AnnotationText xml:lang="en" />
+          </common:Annotation>
+        </structure:Annotations>
+      </structure:Concept>
+    </structure:ConceptScheme>
+  </Concepts>
+  <KeyFamilies>
+    <structure:KeyFamily id="HUB_8221" agencyID="IT1" version="1.0" urn="urn:estat:sdmx.infomodel.keyfamily.keyFamily=IT1:DCCV_DELITTIPS:1.0" isFinal="true" validFrom="2015-04-20" validTo="2099-12-31">
+      <structure:Name xml:lang="en">Crimes reported by the police forces to the judicial authority</structure:Name>
+      <structure:Name xml:lang="it">Delitti denunciati dalle forze di polizia all¿autorità giudiziaria</structure:Name>
+      <structure:Description xml:lang="en" />
+      <structure:Description xml:lang="it" />
+      <structure:Components>
+        <structure:Dimension conceptRef="FREQ" conceptSchemeRef="CROSS_DOMAIN" conceptSchemeVersion="3.2" conceptSchemeAgency="IT1" codelist="CL_FREQ" codelistVersion="1.0" codelistAgency="IT1" isFrequencyDimension="true" />
+        <structure:Dimension conceptRef="ITTER107" conceptSchemeRef="VARIAB_ALL" conceptSchemeVersion="6.7" conceptSchemeAgency="IT1" codelist="CL_ITTER107_HUB_8221" codelistVersion="1.0" codelistAgency="IT1" />
+        <structure:Dimension conceptRef="TIPO_DELITTO" conceptSchemeRef="VARIAB_ALL" conceptSchemeVersion="6.7" conceptSchemeAgency="IT1" codelist="CL_REATI_PS_HUB_8221" codelistVersion="1.0" codelistAgency="IT1" />
+        <structure:Dimension conceptRef="PERIODO_DELITTO" conceptSchemeRef="VARIAB_ALL" conceptSchemeVersion="6.7" conceptSchemeAgency="IT1" codelist="CL_RIF_TIME_HUB_8221" codelistVersion="1.0" codelistAgency="IT1" />
+        <structure:Dimension conceptRef="TIPO_DATO" conceptSchemeRef="CROSS_DOMAIN" conceptSchemeVersion="3.2" conceptSchemeAgency="IT1" codelist="CL_TIPO_DATO35_HUB_8221" codelistVersion="1.0" codelistAgency="IT1" />
+        <structure:Dimension conceptRef="ID_AUTORE" conceptSchemeRef="VARIAB_ALL" conceptSchemeVersion="6.7" conceptSchemeAgency="IT1" codelist="CL_SI_NO_HUB_8221" codelistVersion="1.0" codelistAgency="IT1" />
+        <structure:TimeDimension conceptRef="ANNO" conceptSchemeRef="CROSS_DOMAIN" conceptSchemeVersion="3.2" conceptSchemeAgency="IT1">
+          <structure:TextFormat textType="String" />
+        </structure:TimeDimension>
+        <structure:Group id="X_MEASURE">
+          <structure:DimensionRef>TIPO_DATO</structure:DimensionRef>
+        </structure:Group>
+        <structure:PrimaryMeasure conceptRef="OBS_VALUE" conceptSchemeRef="CROSS_DOMAIN" conceptSchemeVersion="3.2" conceptSchemeAgency="IT1">
+          <structure:TextFormat textType="Double" />
+        </structure:PrimaryMeasure>
+        <structure:Attribute conceptRef="OBS_STATUS" conceptSchemeRef="CROSS_DOMAIN" conceptSchemeVersion="3.2" conceptSchemeAgency="IT1" codelist="CL_FLAG" codelistVersion="1.6" codelistAgency="IT1" attachmentLevel="Observation" assignmentStatus="Conditional">
+          <structure:TextFormat textType="String" />
+        </structure:Attribute>
+        <structure:Attribute conceptRef="BASE_PER" conceptSchemeRef="CROSS_DOMAIN" conceptSchemeVersion="3.2" conceptSchemeAgency="IT1" codelist="CL_BASE_YEAR" codelistVersion="1.2" codelistAgency="IT1" attachmentLevel="Group" assignmentStatus="Conditional">
+          <structure:AttachmentGroup>X_MEASURE</structure:AttachmentGroup>
+        </structure:Attribute>
+        <structure:Attribute conceptRef="UNIT_MEAS" conceptSchemeRef="CROSS_DOMAIN" conceptSchemeVersion="3.2" conceptSchemeAgency="IT1" codelist="CL_UNIT_MEASURE" codelistVersion="1.6" codelistAgency="IT1" attachmentLevel="Group" assignmentStatus="Conditional">
+          <structure:AttachmentGroup>X_MEASURE</structure:AttachmentGroup>
+        </structure:Attribute>
+        <structure:Attribute conceptRef="UNIT_MULT" conceptSchemeRef="CROSS_DOMAIN" conceptSchemeVersion="3.2" conceptSchemeAgency="IT1" codelist="CL_UNIT_MULT" codelistVersion="1.0" codelistAgency="IT1" attachmentLevel="Group" assignmentStatus="Conditional">
+          <structure:AttachmentGroup>X_MEASURE</structure:AttachmentGroup>
+        </structure:Attribute>
+      </structure:Components>
+    </structure:KeyFamily>
+  </KeyFamilies>
+</Structure>
+

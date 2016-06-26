@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Structure xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message" xmlns:structure="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message SDMXMessage.xsd">
+  <Header>
+    <ID>REGISTRY_RESPONSE</ID>
+    <Test>true</Test>
+    <Truncated>false</Truncated>
+    <Prepared>2015-07-17T10:53:54</Prepared>
+    <Sender id="EUROSTAT" />
+    <Extracted>2015-07-17T10:53:54</Extracted>
+  </Header>
+  <CategorySchemes>
+    <structure:CategoryScheme id="CS_PROVA" agencyID="IT1" version="1.0" isFinal="true">
+      <structure:Name xml:lang="it">CS di Prova 1</structure:Name>
+      <structure:Category id="C_TEST1">
+        <structure:Name xml:lang="it">Categoria Test 1</structure:Name>
+        <structure:Category id="C_TEST11">
+          <structure:Name xml:lang="it">Sottocategoria Test 1</structure:Name>
+        </structure:Category>
+      </structure:Category>
+      <structure:Category id="C_TEST2">
+        <structure:Name xml:lang="en">Categoria Test 2</structure:Name>
+      </structure:Category>
+    </structure:CategoryScheme>
+  </CategorySchemes>
+</Structure>
+

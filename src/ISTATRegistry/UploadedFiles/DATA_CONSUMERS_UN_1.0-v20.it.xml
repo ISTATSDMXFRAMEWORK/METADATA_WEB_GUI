@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Structure xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message">
+  <Header>
+    <ID>ISTATRegistryRetrieveTemplate</ID>
+    <Test>false</Test>
+    <Prepared>2015-05-12T16:21:32.7235653+02:00</Prepared>
+    <Sender id="MG" />
+    <Receiver id="unknown" />
+  </Header>
+  <OrganisationSchemes>
+    <OrganisationScheme agencyID="UN" id="DATA_CONSUMERS" uri="http://www.istat.it/" urn="urn:sdmx:org.sdmx.infomodel.base.DataConsumerScheme=UN:DATA_CONSUMERS(1.0)" version="1.0" validFrom="2014-05-01T11:19:56" validTo="2014-05-23T11:19:58" xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure">
+      <Name xml:lang="it">Schema di data consumer</Name>
+      <Name xml:lang="en">Data consumer scheme</Name>
+      <Description xml:lang="it">Schema di data consumer</Description>
+      <Description xml:lang="en">Data consumer scheme</Description>
+      <DataConsumers>
+        <DataConsumer id="OECD" urn="urn:sdmx:org.sdmx.infomodel.base.DataConsumer=UN:DATA_CONSUMERS(1.0).OECD">
+          <Name xml:lang="it">OCSE</Name>
+          <Name xml:lang="en">OECD</Name>
+          <Description xml:lang="it">Organizzazione OCSE</Description>
+          <Description xml:lang="en">OECD organization</Description>
+          <Annotations>
+            <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+              <AnnotationTitle>Annotation ocse</AnnotationTitle>
+              <AnnotationType>SEM</AnnotationType>
+              <AnnotationText xml:lang="en">Ocse organization</AnnotationText>
+            </Annotation>
+          </Annotations>
+        </DataConsumer>
+        <DataConsumer id="INSEE" urn="urn:sdmx:org.sdmx.infomodel.base.DataConsumer=UN:DATA_CONSUMERS(1.0).INSEE">
+          <Name xml:lang="it">INSEE</Name>
+          <Name xml:lang="en">INSEE</Name>
+          <Description xml:lang="it">Istituto nazionale di statistica di Francia</Description>
+          <Description xml:lang="en">National statistical institute of France</Description>
+        </DataConsumer>
+      </DataConsumers>
+      <Annotations>
+        <Annotation xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common">
+          <AnnotationTitle>Data consumer schema</AnnotationTitle>
+          <AnnotationType>SEM</AnnotationType>
+          <AnnotationText xml:lang="it">annotation su schema di data consumer</AnnotationText>
+          <AnnotationText xml:lang="en">Data consumer schema</AnnotationText>
+        </Annotation>
+      </Annotations>
+    </OrganisationScheme>
+  </OrganisationSchemes>
+</Structure>

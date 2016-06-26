@@ -1,0 +1,1857 @@
+********** 28/01/2016 16:18:11 **********
+Inner Exception Type: System.Net.Sockets.SocketException
+Inner Exception: Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione 127.0.0.1:2631
+Inner Source: System
+Inner Stack Trace: 
+   in System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   in System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+Exception Type: System.Net.WebException
+Exception: Impossibile effettuare la connessione al server remoto.
+Source: Generic Error Page
+Stack Trace: 
+   in System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   in System.Net.HttpWebRequest.GetRequestStream()
+   in System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   in ISTATRegistry.IRServiceReference.IRService.GetUserByCredentials(String username, String password) in c:\ISTAT\Source\ISTATRegistry_4.0\ISTATRegistry\Web References\IRServiceReference\Reference.cs:riga 149
+   in ISTATRegistry.master.btnLoginSubmit_Click(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.0\ISTATRegistry\master.Master.cs:riga 166
+   in System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   in System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 29/01/2016 16:08:47 **********
+Exception Type: System.ArgumentOutOfRangeException
+Exception: Index non compreso nell'intervallo. Richiesto valore non negativo e minore della dimensione della raccolta.
+Nome parametro: index
+Source: Generic Error Page
+Stack Trace: 
+   in System.Collections.ArrayList.get_Item(Int32 index)
+   in System.Web.UI.WebControls.GridViewRowCollection.get_Item(Int32 index)
+   in ISTATRegistry.categorizationItemDetails.structuresGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\categorizationItemDetails.aspx.cs:riga 1825
+   in System.Web.UI.WebControls.GridView.OnRowCommand(GridViewCommandEventArgs e)
+   in System.Web.UI.WebControls.GridView.HandleEvent(EventArgs e, Boolean causesValidation, String validationGroup)
+   in System.Web.UI.WebControls.GridView.OnBubbleEvent(Object source, EventArgs e)
+   in System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   in System.Web.UI.WebControls.GridViewRow.OnBubbleEvent(Object source, EventArgs e)
+   in System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   in System.Web.UI.WebControls.LinkButton.OnCommand(CommandEventArgs e)
+   in System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.LinkButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 29/01/2016 16:11:01 **********
+Exception Type: System.ArgumentOutOfRangeException
+Exception: Index non compreso nell'intervallo. Richiesto valore non negativo e minore della dimensione della raccolta.
+Nome parametro: index
+Source: Generic Error Page
+Stack Trace: 
+   in System.Collections.ArrayList.get_Item(Int32 index)
+   in System.Web.UI.WebControls.GridViewRowCollection.get_Item(Int32 index)
+   in ISTATRegistry.categorizationItemDetails.structuresGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\categorizationItemDetails.aspx.cs:riga 1825
+   in System.Web.UI.WebControls.GridView.OnRowCommand(GridViewCommandEventArgs e)
+   in System.Web.UI.WebControls.GridView.HandleEvent(EventArgs e, Boolean causesValidation, String validationGroup)
+   in System.Web.UI.WebControls.GridView.OnBubbleEvent(Object source, EventArgs e)
+   in System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   in System.Web.UI.WebControls.GridViewRow.OnBubbleEvent(Object source, EventArgs e)
+   in System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   in System.Web.UI.WebControls.LinkButton.OnCommand(CommandEventArgs e)
+   in System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.LinkButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 29/01/2016 16:11:02 **********
+Inner Exception Type: System.Web.UI.ViewStateException
+Inner Exception: Viewstate non valido. 
+	Client IP: ::1
+	Port: 
+	Referer: http://localhost:18844/categorizationItemDetails.aspx?ACTION=INSERT
+	Path: /categorizationItemDetails.aspx
+	User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 Safari/537.36
+	ViewState: /wEPDwULLTIwMjY0MzM5MjIPZBYCZg9kFgICAw9kFg4CAQ8PFgIeB1Zpc2libGVoZGQCAg8PFgIfAGdkZAIIDw8WAh4EVGV4dAUqU2VpIGNvbm5lc3NvIGNvbWUgYWRtaW5uYW1lIGFkbWluc3VybmFtZSB8ZGQCCQ8PFgIfAGdkZAIKDxBkDxYDZgIBAgIWAxAFCHdzX2lzdGF0BQh3c19pc3RhdGcQBQl3c19pc3RhdDIFCXdzX2lzdGF0MmcQBQt3c19ldXJvc3RhdAULd3NfZXVyb3N0YXRnFgFmZAILDxAPFgYeDURhdGFUZXh0RmllbGQFBFRleHQeDkRhdGFWYWx1ZUZpZWxkBQVWYWx1ZR4LXyFEYXRhQm91bmRnZBAVAgdJbmdsZXNlCEl0YWxpYW5vFQICZW4CaXQUKwMCZ2cWAQIBZAIOD2QWTgICDw8WAh8BBQQqSUQ6ZGQCAw8PFgIeB0VuYWJsZWRnZGQCBA8PFgIfAQUJKkFnZW56aWE6ZGQCBQ8QDxYCHwVnZBAVBwAEU0RNWAVFU1RBVANJTUYDSVQxAldCA0ZBTxUHAARTRE1YBUVTVEFUA0lNRgNJVDECV0IDRkFPFCsDB2dnZ2dnZ2dkZAIHDw8WAh8BBQoqVmVyc2lvbmU6ZGQCCA8PFgIfBWdkZAIJDw8WAh8BBQxGaW5hbGl6emF0YTpkZAIKDxAPFgQeB0NoZWNrZWRoHwVoZGRkZA...
+Inner Source: 
+Exception Type: System.Web.HttpException
+Exception: Le informazioni sullo stato non sono valide per questa pagina e potrebbero essere danneggiate.
+Source: Generic Error Page
+Stack Trace: 
+   in System.Web.UI.ViewStateException.ThrowError(Exception inner, String persistedState, String errorPageMessage, Boolean macValidationError)
+   in System.Web.UI.HiddenFieldPageStatePersister.Load()
+   in System.Web.UI.Page.LoadPageStateFromPersistenceMedium()
+   in System.Web.UI.Page.LoadAllState()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 29/01/2016 16:11:02 **********
+Inner Exception Type: System.Web.UI.ViewStateException
+Inner Exception: Viewstate non valido. 
+	Client IP: ::1
+	Port: 
+	Referer: http://localhost:18844/categorizationItemDetails.aspx?ACTION=INSERT
+	Path: /categorizationItemDetails.aspx
+	User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 Safari/537.36
+	ViewState: /wEPDwULLTIwMjY0MzM5MjIPZBYCZg9kFgICAw9kFg4CAQ8PFgIeB1Zpc2libGVoZGQCAg8PFgIfAGdkZAIIDw8WAh4EVGV4dAUqU2VpIGNvbm5lc3NvIGNvbWUgYWRtaW5uYW1lIGFkbWluc3VybmFtZSB8ZGQCCQ8PFgIfAGdkZAIKDxBkDxYDZgIBAgIWAxAFCHdzX2lzdGF0BQh3c19pc3RhdGcQBQl3c19pc3RhdDIFCXdzX2lzdGF0MmcQBQt3c19ldXJvc3RhdAULd3NfZXVyb3N0YXRnFgFmZAILDxAPFgYeDURhdGFUZXh0RmllbGQFBFRleHQeDkRhdGFWYWx1ZUZpZWxkBQVWYWx1ZR4LXyFEYXRhQm91bmRnZBAVAgdJbmdsZXNlCEl0YWxpYW5vFQICZW4CaXQUKwMCZ2cWAQIBZAIOD2QWTgICDw8WAh8BBQQqSUQ6ZGQCAw8PFgIeB0VuYWJsZWRnZGQCBA8PFgIfAQUJKkFnZW56aWE6ZGQCBQ8QDxYCHwVnZBAVBwAEU0RNWAVFU1RBVANJTUYDSVQxAldCA0ZBTxUHAARTRE1YBUVTVEFUA0lNRgNJVDECV0IDRkFPFCsDB2dnZ2dnZ2dkZAIHDw8WAh8BBQoqVmVyc2lvbmU6ZGQCCA8PFgIfBWdkZAIJDw8WAh8BBQxGaW5hbGl6emF0YTpkZAIKDxAPFgQeB0NoZWNrZWRoHwVoZGRkZA...
+Inner Source: 
+Exception Type: System.Web.HttpException
+Exception: Le informazioni sullo stato non sono valide per questa pagina e potrebbero essere danneggiate.
+Source: Generic Error Page
+Stack Trace: 
+   in System.Web.UI.ViewStateException.ThrowError(Exception inner, String persistedState, String errorPageMessage, Boolean macValidationError)
+   in System.Web.UI.HiddenFieldPageStatePersister.Load()
+   in System.Web.UI.Page.LoadPageStateFromPersistenceMedium()
+   in System.Web.UI.Page.LoadAllState()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 29/01/2016 16:11:03 **********
+Inner Exception Type: System.Web.UI.ViewStateException
+Inner Exception: Viewstate non valido. 
+	Client IP: ::1
+	Port: 
+	Referer: http://localhost:18844/categorizationItemDetails.aspx?ACTION=INSERT
+	Path: /categorizationItemDetails.aspx
+	User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 Safari/537.36
+	ViewState: /wEPDwULLTIwMjY0MzM5MjIPZBYCZg9kFgICAw9kFg4CAQ8PFgIeB1Zpc2libGVoZGQCAg8PFgIfAGdkZAIIDw8WAh4EVGV4dAUqU2VpIGNvbm5lc3NvIGNvbWUgYWRtaW5uYW1lIGFkbWluc3VybmFtZSB8ZGQCCQ8PFgIfAGdkZAIKDxBkDxYDZgIBAgIWAxAFCHdzX2lzdGF0BQh3c19pc3RhdGcQBQl3c19pc3RhdDIFCXdzX2lzdGF0MmcQBQt3c19ldXJvc3RhdAULd3NfZXVyb3N0YXRnFgFmZAILDxAPFgYeDURhdGFUZXh0RmllbGQFBFRleHQeDkRhdGFWYWx1ZUZpZWxkBQVWYWx1ZR4LXyFEYXRhQm91bmRnZBAVAgdJbmdsZXNlCEl0YWxpYW5vFQICZW4CaXQUKwMCZ2cWAQIBZAIOD2QWTgICDw8WAh8BBQQqSUQ6ZGQCAw8PFgIeB0VuYWJsZWRnZGQCBA8PFgIfAQUJKkFnZW56aWE6ZGQCBQ8QDxYCHwVnZBAVBwAEU0RNWAVFU1RBVANJTUYDSVQxAldCA0ZBTxUHAARTRE1YBUVTVEFUA0lNRgNJVDECV0IDRkFPFCsDB2dnZ2dnZ2dkZAIHDw8WAh8BBQoqVmVyc2lvbmU6ZGQCCA8PFgIfBWdkZAIJDw8WAh8BBQxGaW5hbGl6emF0YTpkZAIKDxAPFgQeB0NoZWNrZWRoHwVoZGRkZA...
+Inner Source: 
+Exception Type: System.Web.HttpException
+Exception: Le informazioni sullo stato non sono valide per questa pagina e potrebbero essere danneggiate.
+Source: Generic Error Page
+Stack Trace: 
+   in System.Web.UI.ViewStateException.ThrowError(Exception inner, String persistedState, String errorPageMessage, Boolean macValidationError)
+   in System.Web.UI.HiddenFieldPageStatePersister.Load()
+   in System.Web.UI.Page.LoadPageStateFromPersistenceMedium()
+   in System.Web.UI.Page.LoadAllState()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 29/01/2016 16:11:05 **********
+Exception Type: System.ArgumentOutOfRangeException
+Exception: Index non compreso nell'intervallo. Richiesto valore non negativo e minore della dimensione della raccolta.
+Nome parametro: index
+Source: Generic Error Page
+Stack Trace: 
+   in System.Collections.ArrayList.get_Item(Int32 index)
+   in System.Web.UI.WebControls.GridViewRowCollection.get_Item(Int32 index)
+   in ISTATRegistry.categorizationItemDetails.structuresGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\categorizationItemDetails.aspx.cs:riga 1825
+   in System.Web.UI.WebControls.GridView.OnRowCommand(GridViewCommandEventArgs e)
+   in System.Web.UI.WebControls.GridView.HandleEvent(EventArgs e, Boolean causesValidation, String validationGroup)
+   in System.Web.UI.WebControls.GridView.OnBubbleEvent(Object source, EventArgs e)
+   in System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   in System.Web.UI.WebControls.GridViewRow.OnBubbleEvent(Object source, EventArgs e)
+   in System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   in System.Web.UI.WebControls.LinkButton.OnCommand(CommandEventArgs e)
+   in System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.LinkButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 29/01/2016 16:11:05 **********
+Inner Exception Type: System.Web.UI.ViewStateException
+Inner Exception: Viewstate non valido. 
+	Client IP: ::1
+	Port: 
+	Referer: http://localhost:18844/categorizationItemDetails.aspx?ACTION=INSERT
+	Path: /categorizationItemDetails.aspx
+	User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 Safari/537.36
+	ViewState: /wEPDwULLTIwMjY0MzM5MjIPZBYCZg9kFgICAw9kFg4CAQ8PFgIeB1Zpc2libGVoZGQCAg8PFgIfAGdkZAIIDw8WAh4EVGV4dAUqU2VpIGNvbm5lc3NvIGNvbWUgYWRtaW5uYW1lIGFkbWluc3VybmFtZSB8ZGQCCQ8PFgIfAGdkZAIKDxBkDxYDZgIBAgIWAxAFCHdzX2lzdGF0BQh3c19pc3RhdGcQBQl3c19pc3RhdDIFCXdzX2lzdGF0MmcQBQt3c19ldXJvc3RhdAULd3NfZXVyb3N0YXRnFgFmZAILDxAPFgYeDURhdGFUZXh0RmllbGQFBFRleHQeDkRhdGFWYWx1ZUZpZWxkBQVWYWx1ZR4LXyFEYXRhQm91bmRnZBAVAgdJbmdsZXNlCEl0YWxpYW5vFQICZW4CaXQUKwMCZ2cWAQIBZAIOD2QWTgICDw8WAh8BBQQqSUQ6ZGQCAw8PFgIeB0VuYWJsZWRnZGQCBA8PFgIfAQUJKkFnZW56aWE6ZGQCBQ8QDxYCHwVnZBAVBwAEU0RNWAVFU1RBVANJTUYDSVQxAldCA0ZBTxUHAARTRE1YBUVTVEFUA0lNRgNJVDECV0IDRkFPFCsDB2dnZ2dnZ2dkZAIHDw8WAh8BBQoqVmVyc2lvbmU6ZGQCCA8PFgIfBWdkZAIJDw8WAh8BBQxGaW5hbGl6emF0YTpkZAIKDxAPFgQeB0NoZWNrZWRoHwVoZGRkZA...
+Inner Source: 
+Exception Type: System.Web.HttpException
+Exception: Le informazioni sullo stato non sono valide per questa pagina e potrebbero essere danneggiate.
+Source: Generic Error Page
+Stack Trace: 
+   in System.Web.UI.ViewStateException.ThrowError(Exception inner, String persistedState, String errorPageMessage, Boolean macValidationError)
+   in System.Web.UI.HiddenFieldPageStatePersister.Load()
+   in System.Web.UI.Page.LoadPageStateFromPersistenceMedium()
+   in System.Web.UI.Page.LoadAllState()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 29/01/2016 16:13:40 **********
+Exception Type: System.ArgumentOutOfRangeException
+Exception: Index non compreso nell'intervallo. Richiesto valore non negativo e minore della dimensione della raccolta.
+Nome parametro: index
+Source: Generic Error Page
+Stack Trace: 
+   in System.Collections.ArrayList.get_Item(Int32 index)
+   in System.Web.UI.WebControls.GridViewRowCollection.get_Item(Int32 index)
+   in ISTATRegistry.categorizationItemDetails.structuresGrid_RowCommand(Object sender, GridViewCommandEventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\categorizationItemDetails.aspx.cs:riga 1825
+   in System.Web.UI.WebControls.GridView.OnRowCommand(GridViewCommandEventArgs e)
+   in System.Web.UI.WebControls.GridView.HandleEvent(EventArgs e, Boolean causesValidation, String validationGroup)
+   in System.Web.UI.WebControls.GridView.OnBubbleEvent(Object source, EventArgs e)
+   in System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   in System.Web.UI.WebControls.GridViewRow.OnBubbleEvent(Object source, EventArgs e)
+   in System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   in System.Web.UI.WebControls.LinkButton.OnCommand(CommandEventArgs e)
+   in System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.LinkButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 29/01/2016 17:14:22 **********
+Inner Exception Type: System.Net.Sockets.SocketException
+Inner Exception: Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione 127.0.0.1:2631
+Inner Source: System
+Inner Stack Trace: 
+   in System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   in System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+Exception Type: System.Net.WebException
+Exception: Impossibile effettuare la connessione al server remoto.
+Source: Generic Error Page
+Stack Trace: 
+   in System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   in System.Net.HttpWebRequest.GetRequestStream()
+   in System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   in ISTATRegistry.IRServiceReference.IRService.GetAllUsers() in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\Web References\IRServiceReference\Reference.cs:riga 409
+   in ISTATRegistry.admin.IsUserAdmin(String username, String password) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\admin.aspx.cs:riga 122
+   in ISTATRegistry.admin.btnLoginSubmit_Click(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\admin.aspx.cs:riga 108
+   in System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   in System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 01/02/2016 12:58:13 **********
+Exception Type: System.Runtime.Remoting.RemotingException
+Exception: Oggetto '/e1c4f8bd_0003_4817_acd3_ff8cd8bfa57b/7sq+slzd79x2yhb+xdnlyfxx_129.rem' disconnesso o inesistente nel server.
+Source: Generic Error Page
+Stack Trace: 
+   in Microsoft.VisualStudio.WebHost.Connection.get_LocalIP()
+   in Microsoft.VisualStudio.WebHost.Request.GetLocalAddress()
+   in System.Web.HttpRequest.FillInServerVariablesCollection()
+   in System.Web.HttpServerVarsCollection.Populate()
+   in System.Web.HttpServerVarsCollection.Get(String name)
+   in System.Web.HttpRequest.get_Item(String key)
+   in ISTATRegistry.master.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\master.Master.cs:riga 42
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 02/02/2016 18:23:23 **********
+Exception Type: System.Xml.XmlException
+Exception: Syntax Error
+Source: Generic Error Page
+Stack Trace: 
+   in ISTAT.WSDAL.WSModel.WSExecute(ArtefactIdentity artIdentity, wsOperation operation, Boolean stub, Boolean withLike) in c:\ISTAT\Source\ISTATRegistry_4.1\WSDAL\WSDAL\WSModel.cs:riga 386
+   in ISTAT.WSDAL.WSModel.GetCategorySchemeWithParents(ArtefactIdentity artIdentity, Boolean stub, Boolean withLike) in c:\ISTAT\Source\ISTATRegistry_4.1\WSDAL\WSDAL\WSModel.cs:riga 61
+   in ISTATRegistry.CategorySchemeGraph.btnView_Click(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\CategorySchemeGraph.aspx.cs:riga 55
+   in System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   in System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 02/02/2016 18:26:21 **********
+Exception Type: System.Xml.XmlException
+Exception: Syntax Error
+Source: Generic Error Page
+Stack Trace: 
+   in ISTAT.WSDAL.WSModel.WSExecute(ArtefactIdentity artIdentity, wsOperation operation, Boolean stub, Boolean withLike) in c:\ISTAT\Source\ISTATRegistry_4.1\WSDAL\WSDAL\WSModel.cs:riga 386
+   in ISTAT.WSDAL.WSModel.GetCategorySchemeWithParents(ArtefactIdentity artIdentity, Boolean stub, Boolean withLike) in c:\ISTAT\Source\ISTATRegistry_4.1\WSDAL\WSDAL\WSModel.cs:riga 61
+   in ISTATRegistry.CategorySchemeGraph.btnView_Click(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\CategorySchemeGraph.aspx.cs:riga 55
+   in System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   in System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 02/02/2016 18:28:42 **********
+Exception Type: System.Xml.XmlException
+Exception: Syntax Error
+Source: Generic Error Page
+Stack Trace: 
+   in ISTAT.WSDAL.WSModel.WSExecute(ArtefactIdentity artIdentity, wsOperation operation, Boolean stub, Boolean withLike) in c:\ISTAT\Source\ISTATRegistry_4.1\WSDAL\WSDAL\WSModel.cs:riga 386
+   in ISTAT.WSDAL.WSModel.GetCategorySchemeWithParents(ArtefactIdentity artIdentity, Boolean stub, Boolean withLike) in c:\ISTAT\Source\ISTATRegistry_4.1\WSDAL\WSDAL\WSModel.cs:riga 61
+   in ISTATRegistry.CategorySchemeGraph.btnView_Click(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\CategorySchemeGraph.aspx.cs:riga 55
+   in System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   in System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 02/02/2016 18:35:59 **********
+Exception Type: System.Xml.XmlException
+Exception: Syntax Error
+Source: Generic Error Page
+Stack Trace: 
+   in ISTAT.WSDAL.WSModel.WSExecute(ArtefactIdentity artIdentity, wsOperation operation, Boolean stub, Boolean withLike) in c:\ISTAT\Source\ISTATRegistry_4.1\WSDAL\WSDAL\WSModel.cs:riga 386
+   in ISTAT.WSDAL.WSModel.GetCategorySchemeWithParents(ArtefactIdentity artIdentity, Boolean stub, Boolean withLike) in c:\ISTAT\Source\ISTATRegistry_4.1\WSDAL\WSDAL\WSModel.cs:riga 61
+   in ISTATRegistry.CategorySchemeGraph.btnView_Click(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\CategorySchemeGraph.aspx.cs:riga 55
+   in System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   in System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 02/02/2016 18:36:59 **********
+Exception Type: System.Runtime.InteropServices.SEHException
+Exception: Eccezione lanciata da un componente esterno.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTAT.WSDAL.WSModel.WSExecute(ArtefactIdentity artIdentity, wsOperation operation, Boolean stub, Boolean withLike) in c:\ISTAT\Source\ISTATRegistry_4.1\WSDAL\WSDAL\WSModel.cs:riga 386
+   in ISTAT.WSDAL.WSModel.GetCategorySchemeWithParents(ArtefactIdentity artIdentity, Boolean stub, Boolean withLike) in c:\ISTAT\Source\ISTATRegistry_4.1\WSDAL\WSDAL\WSModel.cs:riga 61
+   in ISTATRegistry.CategorySchemeGraph.btnView_Click(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\CategorySchemeGraph.aspx.cs:riga 55
+   in System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   in System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 02/02/2016 18:41:01 **********
+Exception Type: System.Xml.XmlException
+Exception: Syntax Error
+Source: Generic Error Page
+Stack Trace: 
+   in ISTAT.WSDAL.WSModel.WSExecute(ArtefactIdentity artIdentity, wsOperation operation, Boolean stub, Boolean withLike) in c:\ISTAT\Source\ISTATRegistry_4.1\WSDAL\WSDAL\WSModel.cs:riga 386
+   in ISTAT.WSDAL.WSModel.GetCategorySchemeWithParents(ArtefactIdentity artIdentity, Boolean stub, Boolean withLike) in c:\ISTAT\Source\ISTATRegistry_4.1\WSDAL\WSDAL\WSModel.cs:riga 61
+   in ISTATRegistry.CategorySchemeGraph.btnView_Click(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\CategorySchemeGraph.aspx.cs:riga 55
+   in System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   in System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 03/02/2016 15:12:45 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTAT.WSDAL.WSModel.WSExecute(ArtefactIdentity artIdentity, wsOperation operation, Boolean stub, Boolean withLike) in c:\ISTAT\Source\ISTATRegistry_4.1\WSDAL\WSDAL\WSModel.cs:riga 390
+   in ISTAT.WSDAL.WSModel.GetAllCategoryScheme(Boolean stub) in c:\ISTAT\Source\ISTATRegistry_4.1\WSDAL\WSDAL\WSModel.cs:riga 56
+   in ISTATRegistry.CategorySchemeGraph.FillForm() in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\CategorySchemeGraph.aspx.cs:riga 33
+   in ISTATRegistry.CategorySchemeGraph.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\CategorySchemeGraph.aspx.cs:riga 27
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 05/02/2016 15:16:44 **********
+Exception Type: System.Web.HttpException
+Exception: I controlli del contenuto sono consentiti solo in una pagina contenuto che fa riferimento a una pagina master.
+Source: Generic Error Page
+Stack Trace: 
+   in System.Web.UI.MasterPage.CreateMaster(TemplateControl owner, HttpContext context, VirtualPath masterPageFile, IDictionary contentTemplateCollection)
+   in System.Web.UI.Page.get_Master()
+   in System.Web.UI.Page.ApplyMasterPage()
+   in System.Web.UI.Page.PerformPreInit()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 05/02/2016 15:16:46 **********
+Exception Type: System.Web.HttpException
+Exception: I controlli del contenuto sono consentiti solo in una pagina contenuto che fa riferimento a una pagina master.
+Source: Generic Error Page
+Stack Trace: 
+   in System.Web.UI.MasterPage.CreateMaster(TemplateControl owner, HttpContext context, VirtualPath masterPageFile, IDictionary contentTemplateCollection)
+   in System.Web.UI.Page.get_Master()
+   in System.Web.UI.Page.ApplyMasterPage()
+   in System.Web.UI.Page.PerformPreInit()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 05/02/2016 15:16:48 **********
+Exception Type: System.Web.HttpException
+Exception: I controlli del contenuto sono consentiti solo in una pagina contenuto che fa riferimento a una pagina master.
+Source: Generic Error Page
+Stack Trace: 
+   in System.Web.UI.MasterPage.CreateMaster(TemplateControl owner, HttpContext context, VirtualPath masterPageFile, IDictionary contentTemplateCollection)
+   in System.Web.UI.Page.get_Master()
+   in System.Web.UI.Page.ApplyMasterPage()
+   in System.Web.UI.Page.PerformPreInit()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 05/02/2016 15:16:54 **********
+Exception Type: System.Web.HttpException
+Exception: I controlli del contenuto sono consentiti solo in una pagina contenuto che fa riferimento a una pagina master.
+Source: Generic Error Page
+Stack Trace: 
+   in System.Web.UI.MasterPage.CreateMaster(TemplateControl owner, HttpContext context, VirtualPath masterPageFile, IDictionary contentTemplateCollection)
+   in System.Web.UI.Page.get_Master()
+   in System.Web.UI.Page.ApplyMasterPage()
+   in System.Web.UI.Page.PerformPreInit()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 05/02/2016 15:38:43 **********
+Exception Type: System.InvalidOperationException
+Exception: Il controllo con ID 'UpdatePanel1' richiede uno ScriptManager nella pagina. Lo ScriptManager deve essere specificato prima dei controlli che lo richiedono.
+Source: Generic Error Page
+Stack Trace: 
+   in System.Web.UI.UpdatePanel.get_ScriptManager()
+   in System.Web.UI.UpdatePanel.RegisterPanel()
+   in System.Web.UI.UpdatePanel.OnInit(EventArgs e)
+   in System.Web.UI.Control.InitRecursive(Control namingContainer)
+   in System.Web.UI.Control.InitRecursive(Control namingContainer)
+   in System.Web.UI.Control.InitRecursive(Control namingContainer)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 05/02/2016 16:14:43 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.Utils.PopulateSDMXCmbArtefacts(ListBox ddlArtefacts, List`1 skipElements) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\Classes\Utils.cs:riga 692
+   in ISTATRegistry.CategorySchemeGraph.FillForm() in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\CategorySchemeGraph.aspx.cs:riga 57
+   in ISTATRegistry.CategorySchemeGraph.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\CategorySchemeGraph.aspx.cs:riga 32
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 10/02/2016 15:11:39 **********
+Exception Type: System.InvalidOperationException
+Exception: La sequenza non contiene elementi
+Source: Generic Error Page
+Stack Trace: 
+   in System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   in ISTATRegistry.CategorySchemeGraph.GetArtefactName(ISdmxObjects sdmxObject) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\CategorySchemeGraph.aspx.cs:riga 143
+   in ISTATRegistry.CategorySchemeGraph.FillArtefacts(TreeNode tn, ICategoryObject cat) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\CategorySchemeGraph.aspx.cs:riga 131
+   in ISTATRegistry.CategorySchemeGraph.FillTree(IList`1 catList, TreeNode tn) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\CategorySchemeGraph.aspx.cs:riga 102
+   in ISTATRegistry.CategorySchemeGraph.FillTree(IList`1 catList, TreeNode tn) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\CategorySchemeGraph.aspx.cs:riga 104
+   in ISTATRegistry.CategorySchemeGraph.btnView_Click(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\CategorySchemeGraph.aspx.cs:riga 87
+   in System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   in System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 11/02/2016 17:38:51 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.CategorySchemeGraph.tvCategory_SelectedNodeChanged(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\CategorySchemeGraph.aspx.cs:riga 206
+   in System.Web.UI.WebControls.TreeView.OnSelectedNodeChanged(EventArgs e)
+   in System.Web.UI.WebControls.TreeView.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.TreeView.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 12/02/2016 10:00:19 **********
+Exception Type: System.ArgumentException
+Exception: La matrice di input è più lunga del numero di colonne di questa tabella.
+Source: Generic Error Page
+Stack Trace: 
+   in System.Data.DataTable.NewRecordFromArray(Object[] value)
+   in System.Data.DataRowCollection.Add(Object[] values)
+   in ISTATRegistry.CategorySchemeGraph.FillGeneralDetail(IMaintainableObject maintObject) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\CategorySchemeGraph.aspx.cs:riga 251
+   in ISTATRegistry.CategorySchemeGraph.tvCategory_SelectedNodeChanged(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\CategorySchemeGraph.aspx.cs:riga 199
+   in System.Web.UI.WebControls.TreeView.OnSelectedNodeChanged(EventArgs e)
+   in System.Web.UI.WebControls.TreeView.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.TreeView.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 12/02/2016 10:00:20 **********
+Exception Type: System.ArgumentException
+Exception: La matrice di input è più lunga del numero di colonne di questa tabella.
+Source: Generic Error Page
+Stack Trace: 
+   in System.Data.DataTable.NewRecordFromArray(Object[] value)
+   in System.Data.DataRowCollection.Add(Object[] values)
+   in ISTATRegistry.CategorySchemeGraph.FillGeneralDetail(IMaintainableObject maintObject) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\CategorySchemeGraph.aspx.cs:riga 251
+   in ISTATRegistry.CategorySchemeGraph.tvCategory_SelectedNodeChanged(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\CategorySchemeGraph.aspx.cs:riga 199
+   in System.Web.UI.WebControls.TreeView.OnSelectedNodeChanged(EventArgs e)
+   in System.Web.UI.WebControls.TreeView.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.TreeView.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 12/02/2016 11:30:52 **********
+Exception Type: System.Runtime.Remoting.RemotingException
+Exception: Oggetto '/724ad043_a21c_4f70_bdea_f4d32f291239/jvoh5au71ggrmsx6esxbjpej_732.rem' disconnesso o inesistente nel server.
+Source: Generic Error Page
+Stack Trace: 
+   in Microsoft.VisualStudio.WebHost.Connection.get_LocalIP()
+   in Microsoft.VisualStudio.WebHost.Request.GetLocalAddress()
+   in Microsoft.VisualStudio.WebHost.Request.GetServerName()
+   in System.Web.HttpRequest.BuildUrl(Func`1 pathAccessor)
+   in System.Web.HttpRequest.get_Url()
+   in System.Web.UI.ClientScriptManager.GetCallbackEventReference(String target, String argument, String clientCallback, String context, String clientErrorCallback, Boolean useAsync)
+   in System.Web.UI.WebControls.TreeView.OnPreRender(EventArgs e)
+   in System.Web.UI.Control.PreRenderRecursiveInternal()
+   in System.Web.UI.Control.PreRenderRecursiveInternal()
+   in System.Web.UI.Control.PreRenderRecursiveInternal()
+   in System.Web.UI.Control.PreRenderRecursiveInternal()
+   in System.Web.UI.Control.PreRenderRecursiveInternal()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 12/02/2016 12:17:15 **********
+Exception Type: System.Runtime.Remoting.RemotingException
+Exception: Oggetto '/724ad043_a21c_4f70_bdea_f4d32f291239/ga7fzvvdgclo0a9tm4jcrlg3_1713.rem' disconnesso o inesistente nel server.
+Source: Generic Error Page
+Stack Trace: 
+   in Microsoft.VisualStudio.WebHost.Connection.get_LocalIP()
+   in Microsoft.VisualStudio.WebHost.Request.GetLocalAddress()
+   in Microsoft.VisualStudio.WebHost.Request.GetServerName()
+   in System.Web.HttpRequest.BuildUrl(Func`1 pathAccessor)
+   in System.Web.HttpRequest.get_Url()
+   in System.Web.UI.ClientScriptManager.GetCallbackEventReference(String target, String argument, String clientCallback, String context, String clientErrorCallback, Boolean useAsync)
+   in System.Web.UI.WebControls.TreeView.OnPreRender(EventArgs e)
+   in System.Web.UI.Control.PreRenderRecursiveInternal()
+   in System.Web.UI.Control.PreRenderRecursiveInternal()
+   in System.Web.UI.Control.PreRenderRecursiveInternal()
+   in System.Web.UI.Control.PreRenderRecursiveInternal()
+   in System.Web.UI.Control.PreRenderRecursiveInternal()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 12/02/2016 15:53:29 **********
+Exception Type: System.ArgumentException
+Exception: La matrice di input è più lunga del numero di colonne di questa tabella.
+Source: Generic Error Page
+Stack Trace: 
+   in System.Data.DataTable.NewRecordFromArray(Object[] value)
+   in System.Data.DataRowCollection.Add(Object[] values)
+   in ISTATRegistry.CategorySchemeGraph.FillDataflow(IDataflowObject dfObject) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\CategorySchemeGraph.aspx.cs:riga 227
+   in ISTATRegistry.CategorySchemeGraph.tvCategory_SelectedNodeChanged(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\CategorySchemeGraph.aspx.cs:riga 205
+   in System.Web.UI.WebControls.TreeView.OnSelectedNodeChanged(EventArgs e)
+   in System.Web.UI.WebControls.TreeView.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.TreeView.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 15/02/2016 15:51:23 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.categorySchemeItemDetails.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\CategorySchemeItemDetails.aspx.cs:riga 673
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 09/03/2016 14:50:45 **********
+Exception Type: System.InvalidOperationException
+Exception: I controlli Script non possono essere registrati prima di PreRender.
+Source: Generic Error Page
+Stack Trace: 
+   in System.Web.UI.ScriptControlManager.RegisterScriptControl[TScriptControl](TScriptControl scriptControl)
+   in System.Web.UI.UpdateProgress.OnPreRender(EventArgs e)
+   in System.Web.UI.Control.PreRenderRecursiveInternal()
+   in System.Web.UI.Control.PreRenderRecursiveInternal()
+   in System.Web.UI.Control.PreRenderRecursiveInternal()
+   in System.Web.UI.Control.PreRenderRecursiveInternal()
+   in System.Web.UI.Control.PreRenderRecursiveInternal()
+   in System.Web.UI.Control.PreRenderRecursiveInternal()
+   in System.Web.UI.Control.PreRenderRecursiveInternal()
+   in System.Web.UI.Control.PreRenderRecursiveInternal()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 09/03/2016 15:13:54 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.codelistItemDetails.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\codelistItemDetails.aspx.cs:riga 650
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 09/03/2016 16:37:49 **********
+Exception Type: System.IndexOutOfRangeException
+Exception: Indice oltre i limiti della matrice.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.Utils.GetArtefactIdentityFromString(String aiString) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\Classes\Utils.cs:riga 303
+   in ISTATRegistry.UserControls.Categorisations.StartSearching() in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\Categorisations.ascx.cs:riga 166
+   in ISTATRegistry.UserControls.Categorisations.cmbCategorySchemes_SelectedIndexChanged(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\Categorisations.ascx.cs:riga 200
+   in System.Web.UI.WebControls.ListControl.OnSelectedIndexChanged(EventArgs e)
+   in System.Web.UI.WebControls.DropDownList.RaisePostDataChangedEvent()
+   in System.Web.UI.WebControls.DropDownList.System.Web.UI.IPostBackDataHandler.RaisePostDataChangedEvent()
+   in System.Web.UI.Page.RaiseChangedEvents()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 09/03/2016 16:39:24 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.UserControls.Categorisations.StartSearching() in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\Categorisations.ascx.cs:riga 170
+   in ISTATRegistry.UserControls.Categorisations.cmbCategorySchemes_SelectedIndexChanged(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\Categorisations.ascx.cs:riga 200
+   in System.Web.UI.WebControls.ListControl.OnSelectedIndexChanged(EventArgs e)
+   in System.Web.UI.WebControls.DropDownList.RaisePostDataChangedEvent()
+   in System.Web.UI.WebControls.DropDownList.System.Web.UI.IPostBackDataHandler.RaisePostDataChangedEvent()
+   in System.Web.UI.Page.RaiseChangedEvents()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 09/03/2016 16:42:27 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.codelistItemDetails.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\codelistItemDetails.aspx.cs:riga 651
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 15/03/2016 13:50:03 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.codelistItemDetails.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\codelistItemDetails.aspx.cs:riga 768
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 15/03/2016 14:29:02 **********
+Inner Exception Type: Org.Sdmxsource.Sdmx.Api.Exception.SdmxSemmanticException
+Inner Exception: Semantic Error - Invalid Id DSW_1_ESTAT_1.3_cat_b-CL_DECI_IT1_1.0, id may only contains the following: A-Z, a-z, 0-9, and characters '*@_$-'
+Inner Source: SdmxSourceUtil
+Inner Stack Trace: 
+   in Org.Sdmxsource.Sdmx.Util.Objects.ValidationUtil.CleanAndValidateId(String id, Boolean startWithIntAllowed)
+   in Org.Sdmxsource.Sdmx.SdmxObjects.Model.Objects.Base.IdentifiableCore.ValidateId(Boolean startWithIntAllowed)
+   in Org.Sdmxsource.Sdmx.SdmxObjects.Model.Objects.CategoryScheme.CategorisationObjectCore.Validate()
+   in Org.Sdmxsource.Sdmx.SdmxObjects.Model.Objects.CategoryScheme.CategorisationObjectCore..ctor(ICategorisationMutableObject itemMutableObject)
+Exception Type: Org.Sdmxsource.Sdmx.Api.Exception.SdmxSemmanticException
+Exception: Semantic Error - Invalid Id DSW_1_ESTAT_1.3_cat_b-CL_DECI_IT1_1.0, id may only contains the following: A-Z, a-z, 0-9, and characters '*@_$-' - Error while creating structure: urn:sdmx:org.sdmx.infomodel.categoryscheme.Categorisation=IT1:DSW_1_ESTAT_1.3_cat_b-CL_DECI_IT1_1.0(1.0)
+Source: Generic Error Page
+Stack Trace: 
+   in Org.Sdmxsource.Sdmx.SdmxObjects.Model.Objects.CategoryScheme.CategorisationObjectCore..ctor(ICategorisationMutableObject itemMutableObject)
+   in Org.Sdmxsource.Sdmx.SdmxObjects.Model.Mutable.CategoryScheme.CategorisationMutableCore.get_ImmutableInstance()
+   in ISTATRegistry.UserControls.Categorisations.btnSaveCategorisation_Click(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\Categorisations.ascx.cs:riga 266
+   in System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   in System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 15/03/2016 14:32:34 **********
+Inner Exception Type: Org.Sdmxsource.Sdmx.Api.Exception.SdmxSemmanticException
+Inner Exception: Semantic Error - Invalid Id DSW_1_ESTAT_1.3_cat_b-CL_DECI_IT1_10, id may only contains the following: A-Z, a-z, 0-9, and characters '*@_$-'
+Inner Source: SdmxSourceUtil
+Inner Stack Trace: 
+   in Org.Sdmxsource.Sdmx.Util.Objects.ValidationUtil.CleanAndValidateId(String id, Boolean startWithIntAllowed)
+   in Org.Sdmxsource.Sdmx.SdmxObjects.Model.Objects.Base.IdentifiableCore.ValidateId(Boolean startWithIntAllowed)
+   in Org.Sdmxsource.Sdmx.SdmxObjects.Model.Objects.CategoryScheme.CategorisationObjectCore.Validate()
+   in Org.Sdmxsource.Sdmx.SdmxObjects.Model.Objects.CategoryScheme.CategorisationObjectCore..ctor(ICategorisationMutableObject itemMutableObject)
+Exception Type: Org.Sdmxsource.Sdmx.Api.Exception.SdmxSemmanticException
+Exception: Semantic Error - Invalid Id DSW_1_ESTAT_1.3_cat_b-CL_DECI_IT1_10, id may only contains the following: A-Z, a-z, 0-9, and characters '*@_$-' - Error while creating structure: urn:sdmx:org.sdmx.infomodel.categoryscheme.Categorisation=IT1:DSW_1_ESTAT_1.3_cat_b-CL_DECI_IT1_10(1.0)
+Source: Generic Error Page
+Stack Trace: 
+   in Org.Sdmxsource.Sdmx.SdmxObjects.Model.Objects.CategoryScheme.CategorisationObjectCore..ctor(ICategorisationMutableObject itemMutableObject)
+   in Org.Sdmxsource.Sdmx.SdmxObjects.Model.Mutable.CategoryScheme.CategorisationMutableCore.get_ImmutableInstance()
+   in ISTATRegistry.UserControls.Categorisations.btnSaveCategorisation_Click(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\Categorisations.ascx.cs:riga 270
+   in System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   in System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 15/03/2016 14:33:37 **********
+Inner Exception Type: Org.Sdmxsource.Sdmx.Api.Exception.SdmxSemmanticException
+Inner Exception: Semantic Error - Identifiable structure Categorisation  DSW_1_ESTAT_13_cat_b-CL_DECI_IT1_10 is missing name
+Inner Source: SdmxObjects
+Inner Stack Trace: 
+   in Org.Sdmxsource.Sdmx.SdmxObjects.Model.Objects.Base.NameableCore.ValidateNameableAttributes()
+   in Org.Sdmxsource.Sdmx.SdmxObjects.Model.Objects.CategoryScheme.CategorisationObjectCore.Validate()
+   in Org.Sdmxsource.Sdmx.SdmxObjects.Model.Objects.CategoryScheme.CategorisationObjectCore..ctor(ICategorisationMutableObject itemMutableObject)
+Exception Type: Org.Sdmxsource.Sdmx.Api.Exception.SdmxSemmanticException
+Exception: Semantic Error - Identifiable structure Categorisation  DSW_1_ESTAT_13_cat_b-CL_DECI_IT1_10 is missing name - Error while creating structure: urn:sdmx:org.sdmx.infomodel.categoryscheme.Categorisation=IT1:DSW_1_ESTAT_13_cat_b-CL_DECI_IT1_10(1.0)
+Source: Generic Error Page
+Stack Trace: 
+   in Org.Sdmxsource.Sdmx.SdmxObjects.Model.Objects.CategoryScheme.CategorisationObjectCore..ctor(ICategorisationMutableObject itemMutableObject)
+   in Org.Sdmxsource.Sdmx.SdmxObjects.Model.Mutable.CategoryScheme.CategorisationMutableCore.get_ImmutableInstance()
+   in ISTATRegistry.UserControls.Categorisations.btnSaveCategorisation_Click(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\Categorisations.ascx.cs:riga 270
+   in System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   in System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 15/03/2016 16:22:16 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.codelistItemDetails.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\codelistItemDetails.aspx.cs:riga 648
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 15/03/2016 16:52:13 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.codelistItemDetails.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\codelistItemDetails.aspx.cs:riga 648
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 15/03/2016 16:52:44 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.UserControls.Categorisations.<>c__DisplayClass3.<PopolateGVCategorisations>b__2(ICategorisationObject c) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\Categorisations.ascx.cs:riga 125
+   in System.Linq.Enumerable.WhereEnumerableIterator`1.MoveNext()
+   in ISTATRegistry.UserControls.Categorisations.PopolateGVCategorisations() in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\Categorisations.ascx.cs:riga 130
+   in ISTATRegistry.UserControls.Categorisations.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\Categorisations.ascx.cs:riga 69
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 15/03/2016 16:59:48 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.UserControls.Categorisations.<>c__DisplayClass3.<PopolateGVCategorisations>b__2(ICategorisationObject c) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\Categorisations.ascx.cs:riga 103
+   in System.Linq.Enumerable.WhereEnumerableIterator`1.MoveNext()
+   in ISTATRegistry.UserControls.Categorisations.PopolateGVCategorisations() in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\Categorisations.ascx.cs:riga 108
+   in ISTATRegistry.UserControls.Categorisations.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\Categorisations.ascx.cs:riga 68
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 15/03/2016 17:31:19 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.UserControls.Categorisations.<>c__DisplayClass3.<PopolateGVCategorisations>b__2(ICategorisationObject c) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\Categorisations.ascx.cs:riga 107
+   in System.Linq.Enumerable.WhereEnumerableIterator`1.MoveNext()
+   in ISTATRegistry.UserControls.Categorisations.PopolateGVCategorisations() in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\Categorisations.ascx.cs:riga 112
+   in ISTATRegistry.UserControls.Categorisations.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\Categorisations.ascx.cs:riga 72
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 04/04/2016 15:47:33 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.codelistItemDetails.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\codelistItemDetails.aspx.cs:riga 648
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 04/04/2016 15:55:15 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.codelistItemDetails.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\codelistItemDetails.aspx.cs:riga 648
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 04/04/2016 16:26:02 **********
+Exception Type: System.UnauthorizedAccessException
+Exception: Accesso al percorso 'C:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\OutputFiles\tvunesudoiphkmgqfnmohjex.xml' negato.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTAT.WSDAL.WSModel.WSExecute(ArtefactIdentity artIdentity, wsOperation operation, Boolean stub, Boolean withLike) in c:\ISTAT\Source\ISTATRegistry_4.1\WSDAL\WSDAL\WSModel.cs:riga 390
+   in ISTAT.WSDAL.WSModel.GetAllCategorisation(Boolean stub) in c:\ISTAT\Source\ISTATRegistry_4.1\WSDAL\WSDAL\WSModel.cs:riga 46
+   in ISTATRegistry.UserControls.Categorisations.PopolateGVCategorisations() in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\Categorisations.ascx.cs:riga 101
+   in ISTATRegistry.UserControls.Categorisations.btnSaveCategorisation_Click(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\Categorisations.ascx.cs:riga 272
+   in System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   in System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 05/04/2016 11:16:28 **********
+Exception Type: System.IO.FileNotFoundException
+Exception: Impossibile trovare il file 'C:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserFiles\ws_eurostat.xml'.
+Source: Generic Error Page
+Stack Trace: 
+   in System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   in System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   in System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   in System.Xml.XmlDownloadManager.GetStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   in System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   in System.Xml.XmlTextReaderImpl.FinishInitUriString()
+   in System.Xml.XmlTextReaderImpl..ctor(String uriStr, XmlReaderSettings settings, XmlParserContext context, XmlResolver uriResolver)
+   in System.Xml.XmlReaderSettings.CreateReader(String inputUri, XmlParserContext inputContext)
+   in System.Xml.XmlReader.Create(String inputUri, XmlReaderSettings settings, XmlParserContext inputContext)
+   in System.Xml.Linq.XElement.Load(String uri, LoadOptions options)
+   in System.Xml.Linq.XElement.Load(String uri)
+   in ISTATRegistry.master.GetUserFromFile(String myUserName, String myPassword) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\master.Master.cs:riga 192
+   in ISTATRegistry.master.btnLoginSubmit_Click(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\master.Master.cs:riga 160
+   in System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   in System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 06/04/2016 09:49:00 **********
+Exception Type: System.Xml.XmlException
+Exception: No Results Found
+Source: Generic Error Page
+Stack Trace: 
+   in ISTAT.WSDAL.WSModel.WSExecute(ArtefactIdentity artIdentity, wsOperation operation, Boolean stub, Boolean withLike) in c:\ISTAT\Source\ISTATRegistry_4.1\WSDAL\WSDAL\WSModel.cs:riga 390
+   in ISTAT.WSDAL.WSModel.GetAllCategoryScheme(Boolean stub) in c:\ISTAT\Source\ISTATRegistry_4.1\WSDAL\WSDAL\WSModel.cs:riga 56
+   in ISTATRegistry.UserControls.Categorisations.PopolateCmbCategoryScheme() in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\Categorisations.ascx.cs:riga 168
+   in ISTATRegistry.UserControls.Categorisations.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\Categorisations.ascx.cs:riga 72
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 06/04/2016 09:52:13 **********
+Exception Type: System.Xml.XmlException
+Exception: No Results Found
+Source: Generic Error Page
+Stack Trace: 
+   in ISTAT.WSDAL.WSModel.WSExecute(ArtefactIdentity artIdentity, wsOperation operation, Boolean stub, Boolean withLike) in c:\ISTAT\Source\ISTATRegistry_4.1\WSDAL\WSDAL\WSModel.cs:riga 390
+   in ISTAT.WSDAL.WSModel.GetAllCategoryScheme(Boolean stub) in c:\ISTAT\Source\ISTATRegistry_4.1\WSDAL\WSDAL\WSModel.cs:riga 56
+   in ISTATRegistry.UserControls.Categorisations.PopolateCmbCategoryScheme() in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\Categorisations.ascx.cs:riga 168
+   in ISTATRegistry.UserControls.Categorisations.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\Categorisations.ascx.cs:riga 72
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 06/04/2016 09:53:05 **********
+Exception Type: System.Xml.XmlException
+Exception: No Results Found
+Source: Generic Error Page
+Stack Trace: 
+   in ISTAT.WSDAL.WSModel.WSExecute(ArtefactIdentity artIdentity, wsOperation operation, Boolean stub, Boolean withLike) in c:\ISTAT\Source\ISTATRegistry_4.1\WSDAL\WSDAL\WSModel.cs:riga 390
+   in ISTAT.WSDAL.WSModel.GetAllCategoryScheme(Boolean stub) in c:\ISTAT\Source\ISTATRegistry_4.1\WSDAL\WSDAL\WSModel.cs:riga 56
+   in ISTATRegistry.UserControls.Categorisations.PopolateCmbCategoryScheme() in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\Categorisations.ascx.cs:riga 168
+   in ISTATRegistry.UserControls.Categorisations.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\Categorisations.ascx.cs:riga 72
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 06/04/2016 09:55:40 **********
+Exception Type: System.Xml.XmlException
+Exception: No Results Found
+Source: Generic Error Page
+Stack Trace: 
+   in ISTAT.WSDAL.WSModel.WSExecute(ArtefactIdentity artIdentity, wsOperation operation, Boolean stub, Boolean withLike) in c:\ISTAT\Source\ISTATRegistry_4.1\WSDAL\WSDAL\WSModel.cs:riga 390
+   in ISTAT.WSDAL.WSModel.GetAllCategoryScheme(Boolean stub) in c:\ISTAT\Source\ISTATRegistry_4.1\WSDAL\WSDAL\WSModel.cs:riga 56
+   in ISTATRegistry.UserControls.Categorisations.PopolateCmbCategoryScheme() in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\Categorisations.ascx.cs:riga 168
+   in ISTATRegistry.UserControls.Categorisations.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\Categorisations.ascx.cs:riga 72
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 06/04/2016 09:56:33 **********
+Exception Type: System.Xml.XmlException
+Exception: No Results Found
+Source: Generic Error Page
+Stack Trace: 
+   in ISTAT.WSDAL.WSModel.WSExecute(ArtefactIdentity artIdentity, wsOperation operation, Boolean stub, Boolean withLike) in c:\ISTAT\Source\ISTATRegistry_4.1\WSDAL\WSDAL\WSModel.cs:riga 390
+   in ISTAT.WSDAL.WSModel.GetAllCategorisation(Boolean stub) in c:\ISTAT\Source\ISTATRegistry_4.1\WSDAL\WSDAL\WSModel.cs:riga 46
+   in ISTATRegistry.UserControls.Categorisations.PopolateGVCategorisations() in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\Categorisations.ascx.cs:riga 101
+   in ISTATRegistry.UserControls.Categorisations.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\Categorisations.ascx.cs:riga 73
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 06/04/2016 09:58:49 **********
+Exception Type: System.Xml.XmlException
+Exception: No Results Found
+Source: Generic Error Page
+Stack Trace: 
+   in ISTAT.WSDAL.WSModel.WSExecute(ArtefactIdentity artIdentity, wsOperation operation, Boolean stub, Boolean withLike) in c:\ISTAT\Source\ISTATRegistry_4.1\WSDAL\WSDAL\WSModel.cs:riga 390
+   in ISTAT.WSDAL.WSModel.GetAllCategorisation(Boolean stub) in c:\ISTAT\Source\ISTATRegistry_4.1\WSDAL\WSDAL\WSModel.cs:riga 46
+   in ISTATRegistry.UserControls.Categorisations.PopolateGVCategorisations() in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\Categorisations.ascx.cs:riga 101
+   in ISTATRegistry.UserControls.Categorisations.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\Categorisations.ascx.cs:riga 73
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 06/04/2016 10:16:12 **********
+Inner Exception Type: System.NullReferenceException
+Inner Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Inner Source: SdmxObjects
+Inner Stack Trace: 
+   in Org.Sdmxsource.Sdmx.SdmxObjects.Util.RefUtil.CreateReference(ReferenceType objectReference)
+   in Org.Sdmxsource.Sdmx.SdmxObjects.Util.RefUtil.CreateReference(ISdmxObject referencedFrom, ReferenceType objectReference)
+   in Org.Sdmxsource.Sdmx.SdmxObjects.Model.Objects.CategoryScheme.CategorisationObjectCore..ctor(CategorisationType cs)
+   in Org.Sdmxsource.Sdmx.Structureparser.Builder.SdmxObjects.SdmxObjectsV21Builder.ProcessCategorisations(CategorisationsType categorisations, ISdmxObjects beans)
+Exception Type: Org.Sdmxsource.Sdmx.Api.Exception.MaintainableObjectException
+Exception: Error with maintainable artefact of type Categorisation and identifiers ESTAT:DSW_1_ESTAT_13_cat_b-CL_INSTR_ASSET_ESTAT_10(1.0)
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.UserControls.Categorisations.PopolateGVCategorisations() in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\Categorisations.ascx.cs:riga 112
+   in ISTATRegistry.UserControls.Categorisations.btnSaveCategorisation_Click(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\Categorisations.ascx.cs:riga 296
+   in System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   in System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 06/04/2016 10:16:27 **********
+Inner Exception Type: System.NullReferenceException
+Inner Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Inner Source: SdmxObjects
+Inner Stack Trace: 
+   in Org.Sdmxsource.Sdmx.SdmxObjects.Util.RefUtil.CreateReference(ReferenceType objectReference)
+   in Org.Sdmxsource.Sdmx.SdmxObjects.Util.RefUtil.CreateReference(ISdmxObject referencedFrom, ReferenceType objectReference)
+   in Org.Sdmxsource.Sdmx.SdmxObjects.Model.Objects.CategoryScheme.CategorisationObjectCore..ctor(CategorisationType cs)
+   in Org.Sdmxsource.Sdmx.Structureparser.Builder.SdmxObjects.SdmxObjectsV21Builder.ProcessCategorisations(CategorisationsType categorisations, ISdmxObjects beans)
+Exception Type: Org.Sdmxsource.Sdmx.Api.Exception.MaintainableObjectException
+Exception: Error with maintainable artefact of type Categorisation and identifiers ESTAT:DSW_1_ESTAT_13_cat_b-CL_INSTR_ASSET_ESTAT_10(1.0)
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.UserControls.Categorisations.PopolateGVCategorisations() in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\Categorisations.ascx.cs:riga 112
+   in ISTATRegistry.UserControls.Categorisations.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\Categorisations.ascx.cs:riga 73
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 06/04/2016 10:16:53 **********
+Inner Exception Type: System.NullReferenceException
+Inner Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Inner Source: SdmxObjects
+Inner Stack Trace: 
+   in Org.Sdmxsource.Sdmx.SdmxObjects.Util.RefUtil.CreateReference(ReferenceType objectReference)
+   in Org.Sdmxsource.Sdmx.SdmxObjects.Util.RefUtil.CreateReference(ISdmxObject referencedFrom, ReferenceType objectReference)
+   in Org.Sdmxsource.Sdmx.SdmxObjects.Model.Objects.CategoryScheme.CategorisationObjectCore..ctor(CategorisationType cs)
+   in Org.Sdmxsource.Sdmx.Structureparser.Builder.SdmxObjects.SdmxObjectsV21Builder.ProcessCategorisations(CategorisationsType categorisations, ISdmxObjects beans)
+Exception Type: Org.Sdmxsource.Sdmx.Api.Exception.MaintainableObjectException
+Exception: Error with maintainable artefact of type Categorisation and identifiers ESTAT:DSW_1_ESTAT_13_cat_b-CL_INSTR_ASSET_ESTAT_10(1.0)
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.UserControls.Categorisations.PopolateGVCategorisations() in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\Categorisations.ascx.cs:riga 112
+   in ISTATRegistry.UserControls.Categorisations.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\Categorisations.ascx.cs:riga 73
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 06/04/2016 10:17:49 **********
+Inner Exception Type: System.NullReferenceException
+Inner Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Inner Source: SdmxObjects
+Inner Stack Trace: 
+   in Org.Sdmxsource.Sdmx.SdmxObjects.Util.RefUtil.CreateReference(ReferenceType objectReference)
+   in Org.Sdmxsource.Sdmx.SdmxObjects.Util.RefUtil.CreateReference(ISdmxObject referencedFrom, ReferenceType objectReference)
+   in Org.Sdmxsource.Sdmx.SdmxObjects.Model.Objects.CategoryScheme.CategorisationObjectCore..ctor(CategorisationType cs)
+   in Org.Sdmxsource.Sdmx.Structureparser.Builder.SdmxObjects.SdmxObjectsV21Builder.ProcessCategorisations(CategorisationsType categorisations, ISdmxObjects beans)
+Exception Type: Org.Sdmxsource.Sdmx.Api.Exception.MaintainableObjectException
+Exception: Error with maintainable artefact of type Categorisation and identifiers ESTAT:DSW_1_ESTAT_13_cat_b-CL_INSTR_ASSET_ESTAT_10(1.0)
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.UserControls.Categorisations.PopolateGVCategorisations() in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\Categorisations.ascx.cs:riga 112
+   in ISTATRegistry.UserControls.Categorisations.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\Categorisations.ascx.cs:riga 73
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 06/04/2016 10:23:57 **********
+Inner Exception Type: System.NullReferenceException
+Inner Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Inner Source: SdmxObjects
+Inner Stack Trace: 
+   in Org.Sdmxsource.Sdmx.SdmxObjects.Util.RefUtil.CreateReference(ReferenceType objectReference)
+   in Org.Sdmxsource.Sdmx.SdmxObjects.Util.RefUtil.CreateReference(ISdmxObject referencedFrom, ReferenceType objectReference)
+   in Org.Sdmxsource.Sdmx.SdmxObjects.Model.Objects.CategoryScheme.CategorisationObjectCore..ctor(CategorisationType cs)
+   in Org.Sdmxsource.Sdmx.Structureparser.Builder.SdmxObjects.SdmxObjectsV21Builder.ProcessCategorisations(CategorisationsType categorisations, ISdmxObjects beans)
+Exception Type: Org.Sdmxsource.Sdmx.Api.Exception.MaintainableObjectException
+Exception: Error with maintainable artefact of type Categorisation and identifiers ESTAT:DSW_1_ESTAT_13_cat_b-CL_INSTR_ASSET_ESTAT_10(1.0)
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.UserControls.Categorisations.PopolateGVCategorisations() in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\Categorisations.ascx.cs:riga 112
+   in ISTATRegistry.UserControls.Categorisations.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\Categorisations.ascx.cs:riga 73
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 06/04/2016 10:29:05 **********
+Inner Exception Type: System.NullReferenceException
+Inner Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Inner Source: SdmxObjects
+Inner Stack Trace: 
+   in Org.Sdmxsource.Sdmx.SdmxObjects.Util.RefUtil.CreateReference(ReferenceType objectReference)
+   in Org.Sdmxsource.Sdmx.SdmxObjects.Util.RefUtil.CreateReference(ISdmxObject referencedFrom, ReferenceType objectReference)
+   in Org.Sdmxsource.Sdmx.SdmxObjects.Model.Objects.CategoryScheme.CategorisationObjectCore..ctor(CategorisationType cs)
+   in Org.Sdmxsource.Sdmx.Structureparser.Builder.SdmxObjects.SdmxObjectsV21Builder.ProcessCategorisations(CategorisationsType categorisations, ISdmxObjects beans)
+Exception Type: Org.Sdmxsource.Sdmx.Api.Exception.MaintainableObjectException
+Exception: Error with maintainable artefact of type Categorisation and identifiers ESTAT:DSW_1_ESTAT_13_cat_b-CL_INSTR_ASSET_ESTAT_10(1.0)
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.UserControls.Categorisations.PopolateGVCategorisations() in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\Categorisations.ascx.cs:riga 112
+   in ISTATRegistry.UserControls.Categorisations.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\Categorisations.ascx.cs:riga 73
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 08/04/2016 10:21:01 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.dataFlowItemDetails.EnableDownload() in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\DataFlowItemDetails.aspx.cs:riga 393
+   in ISTATRegistry.dataFlowItemDetails.SetViewForm() in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\DataFlowItemDetails.aspx.cs:riga 421
+   in ISTATRegistry.dataFlowItemDetails.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\DataFlowItemDetails.aspx.cs:riga 138
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 08/04/2016 10:22:19 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.codelistItemDetails.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\codelistItemDetails.aspx.cs:riga 648
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 08/04/2016 15:47:16 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.codelistItemDetails.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\codelistItemDetails.aspx.cs:riga 648
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 08/04/2016 15:47:30 **********
+Exception Type: System.Exception
+Exception: Impossibile effettuare la connessione al server remoto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTAT.WSDAL.WSModel.WSExecute(ArtefactIdentity artIdentity, wsOperation operation, Boolean stub, Boolean withLike) in c:\ISTAT\Source\ISTATRegistry_4.1\WSDAL\WSDAL\WSModel.cs:riga 390
+   in ISTAT.WSDAL.WSModel.GetAllAgencyScheme(Boolean stub) in c:\ISTAT\Source\ISTATRegistry_4.1\WSDAL\WSDAL\WSModel.cs:riga 36
+   in ISTATRegistry.Utils.PopulateCmbAgencies(DropDownList ddlAgencies, Boolean excludeAgenciesForUser) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\Classes\Utils.cs:riga 560
+   in ISTATRegistry.codelistItemDetails.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\codelistItemDetails.aspx.cs:riga 650
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 08/04/2016 15:47:54 **********
+Exception Type: System.Xml.XmlException
+Exception: Not Implemented
+Source: Generic Error Page
+Stack Trace: 
+   in ISTAT.WSDAL.WSModel.WSExecute(ArtefactIdentity artIdentity, wsOperation operation, Boolean stub, Boolean withLike) in c:\ISTAT\Source\ISTATRegistry_4.1\WSDAL\WSDAL\WSModel.cs:riga 390
+   in ISTAT.WSDAL.WSModel.GetAllAgencyScheme(Boolean stub) in c:\ISTAT\Source\ISTATRegistry_4.1\WSDAL\WSDAL\WSModel.cs:riga 36
+   in ISTATRegistry.Utils.PopulateCmbAgencies(DropDownList ddlAgencies, Boolean excludeAgenciesForUser) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\Classes\Utils.cs:riga 560
+   in ISTATRegistry.codelistItemDetails.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\codelistItemDetails.aspx.cs:riga 650
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 08/04/2016 15:52:27 **********
+Exception Type: System.Xml.XmlException
+Exception: Not Implemented
+Source: Generic Error Page
+Stack Trace: 
+   in ISTAT.WSDAL.WSModel.WSExecute(ArtefactIdentity artIdentity, wsOperation operation, Boolean stub, Boolean withLike) in c:\ISTAT\Source\ISTATRegistry_4.1\WSDAL\WSDAL\WSModel.cs:riga 390
+   in ISTAT.WSDAL.WSModel.GetAllAgencyScheme(Boolean stub) in c:\ISTAT\Source\ISTATRegistry_4.1\WSDAL\WSDAL\WSModel.cs:riga 36
+   in ISTATRegistry.Utils.PopulateCmbAgencies(DropDownList ddlAgencies, Boolean excludeAgenciesForUser) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\Classes\Utils.cs:riga 560
+   in ISTATRegistry.UserControls.DuplicateArtefact.SetForm() in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\DuplicateArtefact.ascx.cs:riga 41
+   in ISTATRegistry.UserControls.DuplicateArtefact.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\DuplicateArtefact.ascx.cs:riga 31
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 08/04/2016 15:58:16 **********
+Exception Type: System.Xml.XmlException
+Exception: Not Implemented
+Source: Generic Error Page
+Stack Trace: 
+   in ISTAT.WSDAL.WSModel.WSExecute(ArtefactIdentity artIdentity, wsOperation operation, Boolean stub, Boolean withLike) in c:\ISTAT\Source\ISTATRegistry_4.1\WSDAL\WSDAL\WSModel.cs:riga 390
+   in ISTAT.WSDAL.WSModel.GetAllAgencyScheme(Boolean stub) in c:\ISTAT\Source\ISTATRegistry_4.1\WSDAL\WSDAL\WSModel.cs:riga 36
+   in ISTATRegistry.Utils.PopulateCmbAgencies(DropDownList ddlAgencies, Boolean excludeAgenciesForUser) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\Classes\Utils.cs:riga 560
+   in ISTATRegistry.UserControls.DuplicateArtefact.SetForm() in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\DuplicateArtefact.ascx.cs:riga 41
+   in ISTATRegistry.UserControls.DuplicateArtefact.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\DuplicateArtefact.ascx.cs:riga 31
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 08/04/2016 15:59:41 **********
+Exception Type: System.Xml.XmlException
+Exception: Not Implemented
+Source: Generic Error Page
+Stack Trace: 
+   in ISTAT.WSDAL.WSModel.WSExecute(ArtefactIdentity artIdentity, wsOperation operation, Boolean stub, Boolean withLike) in c:\ISTAT\Source\ISTATRegistry_4.1\WSDAL\WSDAL\WSModel.cs:riga 390
+   in ISTAT.WSDAL.WSModel.GetAllAgencyScheme(Boolean stub) in c:\ISTAT\Source\ISTATRegistry_4.1\WSDAL\WSDAL\WSModel.cs:riga 36
+   in ISTATRegistry.Utils.PopulateCmbAgencies(DropDownList ddlAgencies, Boolean excludeAgenciesForUser) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\Classes\Utils.cs:riga 560
+   in ISTATRegistry.codelistItemDetails.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\codelistItemDetails.aspx.cs:riga 650
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 08/04/2016 16:02:05 **********
+Exception Type: System.Xml.XmlException
+Exception: Not Implemented
+Source: Generic Error Page
+Stack Trace: 
+   in ISTAT.WSDAL.WSModel.WSExecute(ArtefactIdentity artIdentity, wsOperation operation, Boolean stub, Boolean withLike) in c:\ISTAT\Source\ISTATRegistry_4.1\WSDAL\WSDAL\WSModel.cs:riga 390
+   in ISTAT.WSDAL.WSModel.GetAllAgencyScheme(Boolean stub) in c:\ISTAT\Source\ISTATRegistry_4.1\WSDAL\WSDAL\WSModel.cs:riga 36
+   in ISTATRegistry.Utils.PopulateCmbAgencies(DropDownList ddlAgencies, Boolean excludeAgenciesForUser) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\Classes\Utils.cs:riga 560
+   in ISTATRegistry.codelistItemDetails.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\codelistItemDetails.aspx.cs:riga 650
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 11/04/2016 16:27:33 **********
+Exception Type: System.ArgumentOutOfRangeException
+Exception: SelectedIndex in 'cmbAttachedGroupID' non valido, poiché non è incluso nell'elenco di elementi.
+Nome parametro: value
+Source: Generic Error Page
+Stack Trace: 
+   in System.Web.UI.WebControls.ListControl.set_SelectedIndex(Int32 value)
+   in System.Web.UI.WebControls.DropDownList.set_SelectedIndex(Int32 value)
+   in ISTATRegistry.keyFamilyItemDetails.gvAttribute_RowCommand(Object sender, GridViewCommandEventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\KeyFamilyItemDetails.aspx.cs:riga 350
+   in System.Web.UI.WebControls.GridView.OnRowCommand(GridViewCommandEventArgs e)
+   in System.Web.UI.WebControls.GridView.HandleEvent(EventArgs e, Boolean causesValidation, String validationGroup)
+   in System.Web.UI.WebControls.GridView.OnBubbleEvent(Object source, EventArgs e)
+   in System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   in System.Web.UI.WebControls.GridViewRow.OnBubbleEvent(Object source, EventArgs e)
+   in System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   in System.Web.UI.WebControls.ImageButton.OnCommand(CommandEventArgs e)
+   in System.Web.UI.WebControls.ImageButton.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.ImageButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 11/04/2016 17:09:16 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.keyFamilyItemDetails.CommonInit() in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\KeyFamilyItemDetails.aspx.cs:riga 1409
+   in ISTATRegistry.keyFamilyItemDetails.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\KeyFamilyItemDetails.aspx.cs:riga 149
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 5/4/2016 11:45:45 AM **********
+Exception Type: System.IO.IOException
+Exception: Handle non valido.
+
+Source: Generic Error Page
+Stack Trace: 
+   at ISTATRegistry.UserControls.Categorisations.PopolateGVCategorisations() in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\Categorisations.ascx.cs:line 112
+   at ISTATRegistry.UserControls.Categorisations.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\Categorisations.ascx.cs:line 73
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 04/05/2016 12:35:44 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.UserControls.GetCodeList.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\GetCodeList.ascx.cs:riga 116
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 04/05/2016 15:45:02 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.ContentConstraintItemDetails.FillComponentDataTable(IDataStructureObject dsd, DataTable dt) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\ContentConstraintItemDetails.aspx.cs:riga 752
+   in ISTATRegistry.ContentConstraintItemDetails.PopolateConstraintComponents() in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\ContentConstraintItemDetails.aspx.cs:riga 635
+   in ISTATRegistry.ContentConstraintItemDetails.GetDataFlow1_ucDFSelectedEH(Object sender, GetDFEventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\ContentConstraintItemDetails.aspx.cs:riga 310
+   in ISTATRegistry.UserControls.GetDataFlow.ucDFSelected(Object sender, DataTable dt) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\GetDataFlow.ascx.cs:riga 75
+   in ISTATRegistry.UserControls.GetDataFlow.gvDataFlow_SelectedIndexChanged(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\GetDataFlow.ascx.cs:riga 194
+   in System.Web.UI.WebControls.GridView.OnSelectedIndexChanged(EventArgs e)
+   in System.Web.UI.WebControls.GridView.HandleSelect(Int32 rowIndex)
+   in System.Web.UI.WebControls.GridView.HandleEvent(EventArgs e, Boolean causesValidation, String validationGroup)
+   in System.Web.UI.WebControls.GridView.OnBubbleEvent(Object source, EventArgs e)
+   in System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   in System.Web.UI.WebControls.GridViewRow.OnBubbleEvent(Object source, EventArgs e)
+   in System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   in System.Web.UI.WebControls.LinkButton.OnCommand(CommandEventArgs e)
+   in System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.LinkButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 04/05/2016 18:03:44 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.categorizationItemDetails.SetLabelDetail() in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\categorizationItemDetails.aspx.cs:riga 1261
+   in ISTATRegistry.categorizationItemDetails.SetViewForm() in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\categorizationItemDetails.aspx.cs:riga 1627
+   in ISTATRegistry.categorizationItemDetails.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\categorizationItemDetails.aspx.cs:riga 774
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 05/05/2016 10:50:01 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.Utils.PopulateCmbLanguages(DropDownList ddlLanguages, AVAILABLE_MODES mode, String[] availableResources) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\Classes\Utils.cs:riga 486
+   in ISTATRegistry.UserControls.AddText.gvText_RowDataBound(Object sender, GridViewRowEventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\AddText.ascx.cs:riga 268
+   in System.Web.UI.WebControls.GridView.OnRowDataBound(GridViewRowEventArgs e)
+   in System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   in System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   in System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   in System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   in System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   in System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   in System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   in System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   in System.Web.UI.WebControls.GridView.DataBind()
+   in ISTATRegistry.UserControls.AddText.GVDataBind() in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\AddText.ascx.cs:riga 314
+   in ISTATRegistry.UserControls.AddText.gvText_RowEditing(Object sender, GridViewEditEventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\AddText.ascx.cs:riga 234
+   in System.Web.UI.WebControls.GridView.OnRowEditing(GridViewEditEventArgs e)
+   in System.Web.UI.WebControls.GridView.HandleEdit(Int32 rowIndex)
+   in System.Web.UI.WebControls.GridView.HandleEvent(EventArgs e, Boolean causesValidation, String validationGroup)
+   in System.Web.UI.WebControls.GridView.OnBubbleEvent(Object source, EventArgs e)
+   in System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   in System.Web.UI.WebControls.GridViewRow.OnBubbleEvent(Object source, EventArgs e)
+   in System.Web.UI.Control.RaiseBubbleEvent(Object source, EventArgs args)
+   in System.Web.UI.WebControls.ImageButton.OnCommand(CommandEventArgs e)
+   in System.Web.UI.WebControls.ImageButton.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.ImageButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 05/05/2016 11:13:38 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.conceptschemeItemDetails.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\ConceptSchemeItemDetails.aspx.cs:riga 690
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 05/05/2016 11:33:34 **********
+Exception Type: System.InvalidOperationException
+Exception: La raccolta è stata modificata. L'operazione di enumerazione potrebbe non essere eseguita.
+Source: Generic Error Page
+Stack Trace: 
+   in System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   in System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   in System.Collections.Generic.List`1.Enumerator.MoveNext()
+   in ISTATRegistry.UserControls.AddText.btnAdd_Click(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\AddText.ascx.cs:riga 209
+   in System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   in System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 05/05/2016 11:35:04 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.Utils.PopulateCmbLanguages(DropDownList ddlLanguages, AVAILABLE_MODES mode, String[] availableResources) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\Classes\Utils.cs:riga 486
+   in ISTATRegistry.UserControls.AddText.gvText_RowDataBound(Object sender, GridViewRowEventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\AddText.ascx.cs:riga 275
+   in System.Web.UI.WebControls.GridView.OnRowDataBound(GridViewRowEventArgs e)
+   in System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   in System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   in System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   in System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   in System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   in System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   in System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   in System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   in System.Web.UI.WebControls.GridView.DataBind()
+   in ISTATRegistry.UserControls.AddText.GVDataBind() in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\AddText.ascx.cs:riga 330
+   in ISTATRegistry.UserControls.AddText.btnAdd_Click(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\AddText.ascx.cs:riga 224
+   in System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   in System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 05/05/2016 11:36:56 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.Utils.PopulateCmbLanguages(DropDownList ddlLanguages, AVAILABLE_MODES mode, String[] availableResources) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\Classes\Utils.cs:riga 486
+   in ISTATRegistry.UserControls.AddText.gvText_RowDataBound(Object sender, GridViewRowEventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\AddText.ascx.cs:riga 275
+   in System.Web.UI.WebControls.GridView.OnRowDataBound(GridViewRowEventArgs e)
+   in System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   in System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   in System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   in System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   in System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   in System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   in System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   in System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   in System.Web.UI.WebControls.GridView.DataBind()
+   in ISTATRegistry.UserControls.AddText.GVDataBind() in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\AddText.ascx.cs:riga 330
+   in ISTATRegistry.UserControls.AddText.btnAdd_Click(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\AddText.ascx.cs:riga 224
+   in System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   in System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 05/05/2016 11:42:02 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.Utils.PopulateCmbLanguages(DropDownList ddlLanguages, AVAILABLE_MODES mode, String[] availableResources) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\Classes\Utils.cs:riga 486
+   in ISTATRegistry.UserControls.AddText.gvText_RowDataBound(Object sender, GridViewRowEventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\AddText.ascx.cs:riga 275
+   in System.Web.UI.WebControls.GridView.OnRowDataBound(GridViewRowEventArgs e)
+   in System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   in System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   in System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   in System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   in System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   in System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   in System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   in System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   in System.Web.UI.WebControls.GridView.DataBind()
+   in ISTATRegistry.UserControls.AddText.GVDataBind() in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\AddText.ascx.cs:riga 330
+   in ISTATRegistry.UserControls.AddText.btnAdd_Click(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\AddText.ascx.cs:riga 224
+   in System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   in System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 05/05/2016 14:14:15 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.keyFamilyItemDetails.CommonInit()
+   in ISTATRegistry.keyFamilyItemDetails.Page_Load(Object sender, EventArgs e)
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 05/05/2016 16:19:15 **********
+Exception Type: System.IndexOutOfRangeException
+Exception: Indice oltre i limiti della matrice.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.keyFamilyItemDetails.btnAddDimension_Click(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\KeyFamilyItemDetails.aspx.cs:riga 962
+   in System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   in System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 06/05/2016 13:24:21 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.codelistItemDetails.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\codelistItemDetails.aspx.cs:riga 757
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 06/05/2016 13:50:33 **********
+Exception Type: System.InvalidOperationException
+Exception: È possibile aggiungere alla pagina una sola istanza di uno ScriptManager.
+Source: Generic Error Page
+Stack Trace: 
+   in System.Web.UI.ScriptManager.OnInit(EventArgs e)
+   in System.Web.UI.Control.InitRecursive(Control namingContainer)
+   in System.Web.UI.Control.InitRecursive(Control namingContainer)
+   in System.Web.UI.Control.InitRecursive(Control namingContainer)
+   in System.Web.UI.Control.InitRecursive(Control namingContainer)
+   in System.Web.UI.Control.InitRecursive(Control namingContainer)
+   in System.Web.UI.Control.InitRecursive(Control namingContainer)
+   in System.Web.UI.Control.InitRecursive(Control namingContainer)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 06/05/2016 14:00:55 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.codelistItemDetails.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\codelistItemDetails.aspx.cs:riga 648
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 13/05/2016 10:50:20 **********
+Inner Exception Type: Org.Sdmxsource.Sdmx.Api.Exception.SdmxSemmanticException
+Inner Exception: DSD must have at least one dimension
+Inner Source: SdmxObjects
+Inner Stack Trace: 
+   in Org.Sdmxsource.Sdmx.SdmxObjects.Model.Objects.DataStructure.DataStructureObjectCore.Validate()
+   in Org.Sdmxsource.Sdmx.SdmxObjects.Model.Objects.DataStructure.DataStructureObjectCore..ctor(IDataStructureMutableObject itemMutableObject)
+Exception Type: Org.Sdmxsource.Sdmx.Api.Exception.SdmxSemmanticException
+Exception: DSD must have at least one dimension - Error while creating structure: urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=WeBrEgIsTrYAGENCY:WeBrEgIsTrYDSD_ID(1010101010)
+Source: Generic Error Page
+Stack Trace: 
+   in Org.Sdmxsource.Sdmx.SdmxObjects.Model.Objects.DataStructure.DataStructureObjectCore..ctor(IDataStructureMutableObject itemMutableObject)
+   in Org.Sdmxsource.Sdmx.SdmxObjects.Model.Mutable.DataStructure.DataStructureMutableCore.get_ImmutableInstance()
+   in ISTATRegistry.keyFamilyItemDetails.get__sdmxObjects() in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\KeyFamilyItemDetails.aspx.cs:riga 119
+   in ISTATRegistry.keyFamilyItemDetails.BindData() in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\KeyFamilyItemDetails.aspx.cs:riga 1848
+   in ISTATRegistry.keyFamilyItemDetails.SetInsertForm() in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\KeyFamilyItemDetails.aspx.cs:riga 1731
+   in ISTATRegistry.keyFamilyItemDetails.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\KeyFamilyItemDetails.aspx.cs:riga 155
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 17/05/2016 11:31:09 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.keyFamilyItemDetails.OrderDimension(IDataStructureObject ds) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\KeyFamilyItemDetails.aspx.cs:riga 2032
+   in ISTATRegistry.keyFamilyItemDetails.SetDimensionTab(IDataStructureObject ds) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\KeyFamilyItemDetails.aspx.cs:riga 2002
+   in ISTATRegistry.keyFamilyItemDetails.BindData() in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\KeyFamilyItemDetails.aspx.cs:riga 1901
+   in ISTATRegistry.keyFamilyItemDetails.SetEditForm() in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\KeyFamilyItemDetails.aspx.cs:riga 1756
+   in ISTATRegistry.keyFamilyItemDetails.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\KeyFamilyItemDetails.aspx.cs:riga 158
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 17/05/2016 11:33:55 **********
+Exception Type: System.ArgumentNullException
+Exception: Il valore non può essere null.
+Nome parametro: source
+Source: Generic Error Page
+Stack Trace: 
+   in System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   in ISTATRegistry.keyFamilyItemDetails.ValidateDSDData() in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\KeyFamilyItemDetails.aspx.cs:riga 1481
+   in ISTATRegistry.keyFamilyItemDetails.btnSaveDSD_Click(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\KeyFamilyItemDetails.aspx.cs:riga 1102
+   in System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   in System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 17/05/2016 11:42:08 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.keyFamilyItemDetails.btnAddDimension_Click(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\KeyFamilyItemDetails.aspx.cs:riga 942
+   in System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   in System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 17/05/2016 15:27:45 **********
+Exception Type: System.Exception
+Exception: Artefatto esistente e final!
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.codelistItemDetails.SendQuerySubmit(ICodelistMutableObject cl) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\codelistItemDetails.aspx.cs:riga 627
+   in ISTATRegistry.codelistItemDetails.btnSaveMemoryCodeList_Click(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\codelistItemDetails.aspx.cs:riga 852
+   in System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   in System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 17/05/2016 15:55:08 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.codelistItemDetails.SendQuerySubmit(ICodelistMutableObject cl) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\codelistItemDetails.aspx.cs:riga 627
+   in ISTATRegistry.codelistItemDetails.btnSaveMemoryCodeList_Click(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\codelistItemDetails.aspx.cs:riga 852
+   in System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   in System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 17/05/2016 16:00:54 **********
+Exception Type: System.InvalidOperationException
+Exception: Impossibile impostare un valore su un nodo di tipo: 'Element'.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.codelistItemDetails.SendQuerySubmit(ICodelistMutableObject cl) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\codelistItemDetails.aspx.cs:riga 627
+   in ISTATRegistry.codelistItemDetails.btnSaveMemoryCodeList_Click(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\codelistItemDetails.aspx.cs:riga 852
+   in System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   in System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 17/05/2016 16:02:14 **********
+Exception Type: System.InvalidOperationException
+Exception: Impossibile impostare un valore su un nodo di tipo: 'Element'.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.codelistItemDetails.SendQuerySubmit(ICodelistMutableObject cl) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\codelistItemDetails.aspx.cs:riga 627
+   in ISTATRegistry.codelistItemDetails.btnSaveMemoryCodeList_Click(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\codelistItemDetails.aspx.cs:riga 852
+   in System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   in System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 17/05/2016 16:04:27 **********
+Exception Type: System.InvalidOperationException
+Exception: Impossibile impostare un valore su un nodo di tipo: 'Element'.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.codelistItemDetails.SendQuerySubmit(ICodelistMutableObject cl) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\codelistItemDetails.aspx.cs:riga 627
+   in ISTATRegistry.codelistItemDetails.btnSaveMemoryCodeList_Click(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\codelistItemDetails.aspx.cs:riga 852
+   in System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   in System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 17/05/2016 16:51:52 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.codelistItemDetails.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\codelistItemDetails.aspx.cs:riga 651
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 17/05/2016 17:43:13 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.keyFamilyItemDetails.CommonInit() in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\KeyFamilyItemDetails.aspx.cs:riga 1530
+   in ISTATRegistry.keyFamilyItemDetails.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\KeyFamilyItemDetails.aspx.cs:riga 149
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 17/05/2016 18:01:31 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.keyFamilyItemDetails.CommonInit() in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\KeyFamilyItemDetails.aspx.cs:riga 1530
+   in ISTATRegistry.keyFamilyItemDetails.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\KeyFamilyItemDetails.aspx.cs:riga 149
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 19/05/2016 12:05:41 **********
+Exception Type: System.Xml.XmlException
+Exception: Not Implemented
+Source: Generic Error Page
+Stack Trace: 
+   in ISTAT.WSDAL.WSModel.WSExecute(ArtefactIdentity artIdentity, wsOperation operation, Boolean stub, Boolean withLike) in c:\ISTAT\Source\ISTATRegistry_4.1\WSDAL\WSDAL\WSModel.cs:riga 466
+   in ISTAT.WSDAL.WSModel.GetAllAgencyScheme(Boolean stub) in c:\ISTAT\Source\ISTATRegistry_4.1\WSDAL\WSDAL\WSModel.cs:riga 36
+   in ISTATRegistry.Utils.PopulateCmbAgencySchemes(DropDownList ddlAgencySchemes) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\Classes\Utils.cs:riga 524
+   in ISTATRegistry.admin.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\admin.aspx.cs:riga 69
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 19/05/2016 12:07:14 **********
+Exception Type: System.Xml.XmlException
+Exception: Not Implemented
+Source: Generic Error Page
+Stack Trace: 
+   in ISTAT.WSDAL.WSModel.WSExecute(ArtefactIdentity artIdentity, wsOperation operation, Boolean stub, Boolean withLike) in c:\ISTAT\Source\ISTATRegistry_4.1\WSDAL\WSDAL\WSModel.cs:riga 466
+   in ISTAT.WSDAL.WSModel.GetAllAgencyScheme(Boolean stub) in c:\ISTAT\Source\ISTATRegistry_4.1\WSDAL\WSDAL\WSModel.cs:riga 36
+   in ISTATRegistry.Utils.PopulateCmbAgencySchemes(DropDownList ddlAgencySchemes) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\Classes\Utils.cs:riga 524
+   in ISTATRegistry.admin.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\admin.aspx.cs:riga 69
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 19/05/2016 12:42:49 **********
+Exception Type: System.ArgumentException
+Exception: La colonna 'admin' non appartiene alla tabella users.
+Source: Generic Error Page
+Stack Trace: 
+   in System.Data.DataRow.GetDataColumn(String columnName)
+   in System.Data.DataRow.get_Item(String columnName)
+   in ISTATRegistry.admin.IsUserAdmin(String username, String password) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\admin.aspx.cs:riga 126
+   in ISTATRegistry.admin.btnLoginSubmit_Click(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\admin.aspx.cs:riga 108
+   in System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   in System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 19/05/2016 12:46:22 **********
+Exception Type: System.Net.WebException
+Exception: Timeout dell'operazione.
+Source: Generic Error Page
+Stack Trace: 
+   in System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   in System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   in System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   in ISTATRegistry.IRServiceReference.IRService.GetAllUsers() in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\Web References\IRServiceReference\Reference.cs:riga 409
+   in ISTATRegistry.admin.IsUserAdmin(String username, String password) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\admin.aspx.cs:riga 122
+   in ISTATRegistry.admin.btnLoginSubmit_Click(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\admin.aspx.cs:riga 108
+   in System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   in System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 20/05/2016 13:43:09 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.codelistItemDetails.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\codelistItemDetails.aspx.cs:riga 760
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 20/05/2016 13:44:48 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.codelistItemDetails.btnImportFromCsv_Click(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\codelistItemDetails.aspx.cs:riga 1365
+   in System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   in System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 24/05/2016 16:23:49 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.codelistItemDetails.btnImportFromCsv_Click(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\codelistItemDetails.aspx.cs:riga 1414
+   in System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   in System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 25/05/2016 11:47:12 **********
+Exception Type: System.IndexOutOfRangeException
+Exception: Impossibile trovare la colonna 0.
+Source: Generic Error Page
+Stack Trace: 
+   in System.Data.DataColumnCollection.get_Item(Int32 index)
+   in System.Data.DataRow.set_Item(Int32 columnIndex, Object value)
+   in ISTATRegistry.codelistItemDetails.ConvertCSVtoDataTable(String strFilePath, Char separator, String textDelimiter, Boolean hasHeader) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\codelistItemDetails.aspx.cs:riga 2064
+   in ISTATRegistry.codelistItemDetails.btnPreview_Click(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\codelistItemDetails.aspx.cs:riga 2027
+   in System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   in System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   in System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 27/05/2016 15:07:02 **********
+Exception Type: System.Exception
+Exception: CSVImporter: Artefact not found
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.UserControls.CSVImporter.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\CSVImporter.ascx.cs:riga 62
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 27/05/2016 15:28:35 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.codelistItemDetails.GetCodelistForm(Boolean errorBypass) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\codelistItemDetails.aspx.cs:riga 213
+   in ISTATRegistry.codelistItemDetails.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\codelistItemDetails.aspx.cs:riga 708
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 27/05/2016 15:40:11 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.codelistItemDetails.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\codelistItemDetails.aspx.cs:riga 801
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 27/05/2016 15:40:44 **********
+Exception Type: System.Exception
+Exception: CSVImporter: Artefact not found
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.UserControls.CSVImporter.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\CSVImporter.ascx.cs:riga 62
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 27/05/2016 15:40:59 **********
+Exception Type: System.Exception
+Exception: CSVImporter: Artefact not found
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.UserControls.CSVImporter.Page_Load(Object sender, EventArgs e) in c:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\UserControls\CSVImporter.ascx.cs:riga 62
+   in System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   in System.Web.UI.Control.OnLoad(EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Structure xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message" xmlns:structure="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message SDMXMessage.xsd">
+  <Header>
+    <ID>REGISTRY_RESPONSE</ID>
+    <Test>true</Test>
+    <Truncated>false</Truncated>
+    <Prepared>2015-07-17T10:02:55</Prepared>
+    <Sender id="EUROSTAT" />
+    <Extracted>2015-07-17T10:02:55</Extracted>
+  </Header>
+  <OrganisationSchemes>
+    <structure:OrganisationScheme id="ISTAT_ORGSCH" agencyID="IT1" version="1.0" isFinal="true">
+      <structure:Name xml:lang="en">ESTAT Organisations</structure:Name>
+      <structure:Agencies>
+        <structure:Agency id="ESTAT" version="1.0">
+          <structure:Name xml:lang="en">ESTAT</structure:Name>
+        </structure:Agency>
+        <structure:Agency id="IT1" version="1.0">
+          <structure:Name xml:lang="it">ISTAT</structure:Name>
+          <structure:Name xml:lang="en">ISTAT</structure:Name>
+        </structure:Agency>
+        <structure:Agency id="ECB" version="1.0">
+          <structure:Name xml:lang="en">European Central Bank</structure:Name>
+        </structure:Agency>
+        <structure:Agency id="ITG1" version="1.0" parentOrganisation="IT1">
+          <structure:Name xml:lang="it">Sicilia</structure:Name>
+          <structure:Name xml:lang="en">Sicily</structure:Name>
+        </structure:Agency>
+      </structure:Agencies>
+    </structure:OrganisationScheme>
+  </OrganisationSchemes>
+</Structure>
+

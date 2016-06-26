@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mes:Structure xmlns:mes="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message" xmlns:str="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure" xmlns:com="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+  <mes:Header>
+    <mes:ID>HCL_ARCH_NOT</mes:ID>
+    <mes:Test>false</mes:Test>
+    <mes:Prepared>2014-04-09T13:35:06.202Z</mes:Prepared>
+    <mes:Sender id="DSW"/>
+    <mes:Receiver id="unknown"/>
+  </mes:Header>
+  <mes:Structures>
+    <str:HierarchicalCodelists>
+      <str:HierarchicalCodelist id="HCL_ARCH_NOT2" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCodelist=BIS:HCL_ARCH_NOT2(1.0)" agencyID="BIS" version="1.0" isExternalReference="false" isFinal="false">
+		 <com:Annotations>
+          <com:Annotation>
+            <com:AnnotationTitle>Annotation on HCL</com:AnnotationTitle>
+            <com:AnnotationType>ANN</com:AnnotationType>
+            <com:AnnotationText xml:lang="it">ann1 it</com:AnnotationText>
+            <com:AnnotationText xml:lang="en">ann1 en</com:AnnotationText>
+          </com:Annotation>
+          <com:Annotation>
+            <com:AnnotationTitle>Annotation on HCL2</com:AnnotationTitle>
+            <com:AnnotationType>SEM</com:AnnotationType>
+            <com:AnnotationText xml:lang="it">Annotazione 2</com:AnnotationText>
+            <com:AnnotationText xml:lang="en">Annot on act 2</com:AnnotationText>
+          </com:Annotation>
+        </com:Annotations>
+        <com:Name xml:lang="en">HCL_ARCH_NOT2</com:Name>
+        <com:Description xml:lang="en">HCL_ARCH_NOT2</com:Description>
+        <str:IncludedCodelist>
+          <Ref id="CL_INSTR_ASSET" version="1.0" agencyID="ESTAT" package="codelist" class="Codelist"/>
+        </str:IncludedCodelist>
+        <str:Hierarchy id="HIERARCHY_ACC_IT_TST" urn="urn:sdmx:org.sdmx.infomodel.codelist.Hierarchy=BIS:HCL_ARCH_NOT(1.0).HIERARCHY_ACC_IT_TST" leveled="false">
+		 <com:Annotations>
+          <com:Annotation>
+            <com:AnnotationTitle>Annotation on Hierarchy</com:AnnotationTitle>
+            <com:AnnotationType>ANN</com:AnnotationType>
+            <com:AnnotationText xml:lang="it">ann1 it h</com:AnnotationText>
+            <com:AnnotationText xml:lang="en">ann1 en h</com:AnnotationText>
+          </com:Annotation>
+          <com:Annotation>
+            <com:AnnotationTitle>Annotation on Hierarchy 2</com:AnnotationTitle>
+            <com:AnnotationType>SEM</com:AnnotationType>
+            <com:AnnotationText xml:lang="it">Annotazione 2 h</com:AnnotationText>
+            <com:AnnotationText xml:lang="en">Annot on act 2 h</com:AnnotationText>
+          </com:Annotation>
+        </com:Annotations>
+		<com:Name xml:lang="en">BOP_ACC_IT_TST</com:Name>
+          <str:HierarchicalCode id="F_NG" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=BIS:HCL_ARCH_NOT(1.0).HIERARCHY_ACC_IT_TST.CA">
+            <str:Code>
+              <Ref id="F_NG" maintainableParentID="CL_INSTR_ASSET" maintainableParentVersion="1.0" agencyID="ESTAT" package="codelist" class="Code"/>
+            </str:Code>
+            <str:HierarchicalCode id="F_NN" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=BIS:HCL_ARCH_NOT(1.0).HIERARCHY_ACC_IT_TST.CA.GS">
+              <str:Code>
+                <Ref id="F_NN" maintainableParentID="CL_INSTR_ASSET" maintainableParentVersion="1.0" agencyID="ESTAT" package="codelist" class="Code"/>
+              </str:Code>
+              <str:HierarchicalCode id="F11A" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=BIS:HCL_ARCH_NOT(1.0).HIERARCHY_ACC_IT_TST.CA.GS.G">
+                <str:Code>
+                  <Ref id="F11A" maintainableParentID="CL_INSTR_ASSET" maintainableParentVersion="1.0" agencyID="ESTAT" package="codelist" class="Code"/>
+                </str:Code>
+                <str:HierarchicalCode id="F11Z" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=BIS:HCL_ARCH_NOT(1.0).HIERARCHY_ACC_IT_TST.CA.GS.G.G1">
+                  <str:Code>
+                    <Ref id="F11Z" maintainableParentID="CL_INSTR_ASSET" maintainableParentVersion="1.0" agencyID="ESTAT" package="codelist" class="Code"/>
+                  </str:Code>
+                </str:HierarchicalCode>
+              </str:HierarchicalCode>
+            </str:HierarchicalCode>
+          </str:HierarchicalCode>
+        </str:Hierarchy>
+      </str:HierarchicalCodelist>
+	  </str:HierarchicalCodelists>
+  </mes:Structures>
+</mes:Structure>

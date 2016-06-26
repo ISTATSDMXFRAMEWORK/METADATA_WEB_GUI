@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Structure xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message">
+  <Header>
+    <ID>ISTATRegistryRetrieveTemplate</ID>
+    <Test>false</Test>
+    <Prepared>2015-03-09T10:48:40.8786745+01:00</Prepared>
+    <Sender id="MG" />
+    <Receiver id="unknown" />
+  </Header>
+  <Structures>
+    <Dataflows xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure">
+      <Dataflow id="DF_TEST_MAX" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ESTAT:DF_TEST_MAX(1.0)" agencyID="ESTAT" version="1.0">
+        <Annotations xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+          <Annotation id="ANN_ID">
+            <AnnotationTitle>ANN_TITLE</AnnotationTitle>
+            <AnnotationType>ANN_TYPE</AnnotationType>
+            <AnnotationText xml:lang="it">sdfgsdfgsdfg</AnnotationText>
+          </Annotation>
+        </Annotations>
+        <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">hhghhg</Name>
+        <Structure>
+          <Ref id="NA_PENS" version="1.0" agencyID="ESTAT" package="datastructure" class="DataStructure" xmlns="" />
+        </Structure>
+      </Dataflow>
+    </Dataflows>
+  </Structures>
+</Structure>

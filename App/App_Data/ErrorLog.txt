@@ -1,0 +1,224 @@
+********** 28/05/2016 23:23:12 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.conceptschemeItemDetails.Page_Load(Object sender, EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 28/05/2016 23:23:21 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.conceptschemeItemDetails.SetLabelDetail()
+   in ISTATRegistry.conceptschemeItemDetails.SetViewForm()
+   in ISTATRegistry.conceptschemeItemDetails.Page_Load(Object sender, EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 28/05/2016 23:58:38 **********
+Exception Type: System.Xml.XmlException
+Exception: Not Implemented
+Source: Generic Error Page
+Stack Trace: 
+   in ISTAT.WSDAL.WSModel.WSExecute(ArtefactIdentity artIdentity, wsOperation operation, Boolean stub, Boolean withLike)
+   in ISTAT.WSDAL.WSModel.GetAllAgencyScheme(Boolean stub)
+   in ISTATRegistry.Utils.PopulateCmbAgencySchemes(DropDownList ddlAgencySchemes)
+   in ISTATRegistry.admin.Page_Load(Object sender, EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 29/05/2016 00:01:01 **********
+Exception Type: System.Xml.XmlException
+Exception: Not Implemented
+Source: Generic Error Page
+Stack Trace: 
+   in ISTAT.WSDAL.WSModel.WSExecute(ArtefactIdentity artIdentity, wsOperation operation, Boolean stub, Boolean withLike)
+   in ISTAT.WSDAL.WSModel.GetAllAgencyScheme(Boolean stub)
+   in ISTATRegistry.Utils.PopulateCmbAgencySchemes(DropDownList ddlAgencySchemes)
+   in ISTATRegistry.admin.Page_Load(Object sender, EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 29/05/2016 00:01:21 **********
+Exception Type: System.Xml.XmlException
+Exception: Not Implemented
+Source: Generic Error Page
+Stack Trace: 
+   in ISTAT.WSDAL.WSModel.WSExecute(ArtefactIdentity artIdentity, wsOperation operation, Boolean stub, Boolean withLike)
+   in ISTAT.WSDAL.WSModel.GetAllAgencyScheme(Boolean stub)
+   in ISTATRegistry.Utils.PopulateCmbAgencySchemes(DropDownList ddlAgencySchemes)
+   in ISTATRegistry.admin.Page_Load(Object sender, EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 15/06/2016 10:36:18 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTAT.WSDAL.WSModel.WSExecute(ArtefactIdentity artIdentity, wsOperation operation, Boolean stub, Boolean withLike)
+   in ISTATRegistry.keyFamilyItemDetails.get__sdmxObjects()
+   in ISTATRegistry.keyFamilyItemDetails.BindData()
+   in ISTATRegistry.keyFamilyItemDetails.Page_Load(Object sender, EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 15/06/2016 23:42:08 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.dataFlowItemDetails.EnableDownload()
+   in ISTATRegistry.dataFlowItemDetails.SetViewForm()
+   in ISTATRegistry.dataFlowItemDetails.Page_Load(Object sender, EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 15/06/2016 23:42:11 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.dataFlowItemDetails.EnableDownload()
+   in ISTATRegistry.dataFlowItemDetails.SetViewForm()
+   in ISTATRegistry.dataFlowItemDetails.Page_Load(Object sender, EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 15/06/2016 23:42:11 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.dataFlowItemDetails.EnableDownload()
+   in ISTATRegistry.dataFlowItemDetails.SetViewForm()
+   in ISTATRegistry.dataFlowItemDetails.Page_Load(Object sender, EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 15/06/2016 23:42:19 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.dataFlowItemDetails.EnableDownload()
+   in ISTATRegistry.dataFlowItemDetails.SetViewForm()
+   in ISTATRegistry.dataFlowItemDetails.Page_Load(Object sender, EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 15/06/2016 23:42:19 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.dataFlowItemDetails.EnableDownload()
+   in ISTATRegistry.dataFlowItemDetails.SetViewForm()
+   in ISTATRegistry.dataFlowItemDetails.Page_Load(Object sender, EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 15/06/2016 23:42:21 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.dataFlowItemDetails.EnableDownload()
+   in ISTATRegistry.dataFlowItemDetails.SetViewForm()
+   in ISTATRegistry.dataFlowItemDetails.Page_Load(Object sender, EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 18/06/2016 16:54:27 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.dataFlowItemDetails.EnableDownload()
+   in ISTATRegistry.dataFlowItemDetails.SetViewForm()
+   in ISTATRegistry.dataFlowItemDetails.Page_Load(Object sender, EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 18/06/2016 16:54:33 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.dataFlowItemDetails.EnableDownload()
+   in ISTATRegistry.dataFlowItemDetails.SetViewForm()
+   in ISTATRegistry.dataFlowItemDetails.Page_Load(Object sender, EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 18/06/2016 16:54:40 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.dataFlowItemDetails.EnableDownload()
+   in ISTATRegistry.dataFlowItemDetails.SetViewForm()
+   in ISTATRegistry.dataFlowItemDetails.Page_Load(Object sender, EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 18/06/2016 23:51:02 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.dataFlowItemDetails.EnableDownload()
+   in ISTATRegistry.dataFlowItemDetails.SetViewForm()
+   in ISTATRegistry.dataFlowItemDetails.Page_Load(Object sender, EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 18/06/2016 23:51:05 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.dataFlowItemDetails.EnableDownload()
+   in ISTATRegistry.dataFlowItemDetails.SetViewForm()
+   in ISTATRegistry.dataFlowItemDetails.Page_Load(Object sender, EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 18/06/2016 23:51:14 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTATRegistry.dataFlowItemDetails.EnableDownload()
+   in ISTATRegistry.dataFlowItemDetails.SetViewForm()
+   in ISTATRegistry.dataFlowItemDetails.Page_Load(Object sender, EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 21/06/2016 15:27:16 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTAT.WSDAL.WSModel.WSExecute(ArtefactIdentity artIdentity, wsOperation operation, Boolean stub, Boolean withLike)
+   in ISTATRegistry.dataFlowItemDetails.get__sdmxObjects()
+   in ISTATRegistry.dataFlowItemDetails.BindData()
+   in ISTATRegistry.dataFlowItemDetails.Page_Load(Object sender, EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 21/06/2016 16:57:10 **********
+Exception Type: System.NullReferenceException
+Exception: Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Source: Generic Error Page
+Stack Trace: 
+   in ISTAT.WSDAL.WSModel.WSExecute(ArtefactIdentity artIdentity, wsOperation operation, Boolean stub, Boolean withLike)
+   in ISTATRegistry.dataFlowItemDetails.get__sdmxObjects()
+   in ISTATRegistry.dataFlowItemDetails.BindData()
+   in ISTATRegistry.dataFlowItemDetails.Page_Load(Object sender, EventArgs e)
+   in System.Web.UI.Control.LoadRecursive()
+   in System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+

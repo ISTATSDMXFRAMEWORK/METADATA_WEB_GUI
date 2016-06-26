@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Structure xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message">
+  <Header>
+    <ID>ISTATRegistryRetrieveTemplate</ID>
+    <Test>false</Test>
+    <Prepared>2015-05-13T16:13:24.162812+02:00</Prepared>
+    <Sender id="MG" />
+    <Receiver id="unknown" />
+  </Header>
+  <Structures>
+    <StructureSets xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure">
+      <StructureSet id="ss1" urn="urn:sdmx:org.sdmx.infomodel.mapping.StructureSet=SDMX:ss1(1.0)" agencyID="SDMX" version="1.0" validFrom="2015-05-13T00:00:00" validTo="2015-05-14T00:00:00">
+        <Annotations xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+          <Annotation id="a1">
+            <AnnotationTitle>SS_Ann</AnnotationTitle>
+            <AnnotationType>0</AnnotationType>
+            <AnnotationURL>uri:aaa</AnnotationURL>
+            <AnnotationText xml:lang="it">nome ann it</AnnotationText>
+            <AnnotationText xml:lang="en">name ann en</AnnotationText>
+          </Annotation>
+        </Annotations>
+        <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">nomeIT</Name>
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">nameEN</Name>
+        <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">descrIT</Description>
+        <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">descrEN</Description>
+        <CodelistMap id="clmap1" urn="urn:sdmx:org.sdmx.infomodel.mapping.CodelistMap=SDMX:ss1(1.0).clmap1">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">mmm</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">mmm</Description>
+          <Source>
+            <Ref id="CL_SEX" version="1.0" agencyID="ESTAT" package="codelist" class="Codelist" xmlns="" />
+          </Source>
+          <Target>
+            <Ref id="cl_and5" version="3.0" agencyID="ESTAT" package="codelist" class="Codelist" xmlns="" />
+          </Target>
+          <CodeMap>
+            <Source>
+              <Ref id="F" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="nuovo_code" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="M" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="nuovo_code" xmlns="" />
+            </Target>
+          </CodeMap>
+          <CodeMap>
+            <Source>
+              <Ref id="T" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="nuovo_code" xmlns="" />
+            </Target>
+          </CodeMap>
+        </CodelistMap>
+        <StructureMap id="sm1" urn="urn:sdmx:org.sdmx.infomodel.mapping.StructureMap=SDMX:ss1(1.0).sm1" isExtension="false">
+          <Annotations xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+            <Annotation id="a1">
+              <AnnotationURL>http://www.istat.it/</AnnotationURL>
+              <AnnotationText xml:lang="it">ann sm it</AnnotationText>
+            </Annotation>
+          </Annotations>
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">map1</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">descrizione in italiano di una annotation per lo structure map</Description>
+          <Source>
+            <Ref id="KF_AND" version="1.1" agencyID="OECD" package="datastructure" class="Dataflow" xmlns="" />
+          </Source>
+          <Target>
+            <Ref id="NA_PENS" version="1.0" agencyID="ESTAT" package="datastructure" class="Dataflow" xmlns="" />
+          </Target>
+          <ComponentMap>
+            <Source>
+              <Ref id="TIME_PERIOD" containerID="DimensionList" package="datastructure" class="Dimension" xmlns="" />
+            </Source>
+            <Target>
+              <Ref id="ACCOUNTING_ENTRY" containerID="DimensionList" package="datastructure" class="Dimension" xmlns="" />
+            </Target>
+          </ComponentMap>
+        </StructureMap>
+      </StructureSet>
+    </StructureSets>
+  </Structures>
+</Structure>

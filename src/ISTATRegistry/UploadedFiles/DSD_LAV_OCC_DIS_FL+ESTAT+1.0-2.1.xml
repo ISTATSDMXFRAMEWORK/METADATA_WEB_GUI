@@ -1,0 +1,986 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Structure xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message">
+  <Header>
+    <ID>REGISTRY_RESPONSE</ID>
+    <Test>true</Test>
+    <Prepared>2015-03-20T10:37:08.5978195+01:00</Prepared>
+    <Sender id="EUROSTAT" />
+    <Receiver id="unknown" />
+  </Header>
+  <Structures>
+    <Codelists xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure">
+      <Codelist id="CL_INDICATOR" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=ESTAT:CL_INDICATOR(1.0)" agencyID="ESTAT" version="1.0" isFinal="true">
+        <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Indicatori</Name>
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Indicators</Name>
+        <Code id="EMP" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INDICATOR(1.0).EMP">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Totale occupati 15 anni e oltre (valori in migliaia)  -  dati mensili destagionalizzati</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Total employed persons 15 years and more (thousands) - monthly seasonally adjusted data</Name>
+        </Code>
+        <Code id="UNEMP" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INDICATOR(1.0).UNEMP">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Totale persone in cerca di occupazione 15 anni e oltre (valori in migliaia) - dati mensili destagionalizzati</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Total unemployed persons 15 years and more (thousands) - monthly seasonally adjusted data</Name>
+        </Code>
+        <Code id="FLAV" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_INDICATOR(1.0).FLAV">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Totale  forze di lavoro15 anni e oltre (valori in migliaia) - dati mensili destagionalizzati</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Total labour forces 15 years and more (thousands) - monthly seasonally adjusted data</Name>
+        </Code>
+      </Codelist>
+      <Codelist id="CL_FLAG" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=IT1:CL_FLAG(1.4)" agencyID="IT1" version="1.4" isFinal="true">
+        <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Flag</Name>
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Flag</Name>
+        <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Questa code list raggruppa i concetti di "Observation status" definiti a livello internazionale. Include i valori di flag definiti in I.Stat</Description>
+        <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">This codelist includes the concepts "Observation status" defined at the international level. It also includes the flag values as defined in the I.Stat standard</Description>
+        <Code id="p_z" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=IT1:CL_FLAG(1.4).p_z">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">il fenomeno non esiste oppure esiste e viene rilevato, ma i casi non si sono verificati</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">the instance does not exist or any case has not occurred</Name>
+        </Code>
+        <Code id="p_0" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=IT1:CL_FLAG(1.4).p_0">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">il dato non raggiunge la metà della cifra minima considerata</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">less than half of the unit used</Name>
+        </Code>
+        <Code id="p_c" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=IT1:CL_FLAG(1.4).p_c">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">dato oscurato per la tutela del segreto statistico</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">unseen data because of the statistical confidenciality</Name>
+        </Code>
+        <Code id="p_d" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=IT1:CL_FLAG(1.4).p_d">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">l'indicatore risulta non calcolabile in quanto il denominatore della formula è pari a zero</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">the indicator is not calculated because the denominator of the formula is zero</Name>
+        </Code>
+        <Code id="p_e" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=IT1:CL_FLAG(1.4).p_e">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">dato stimato</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">estimate data</Name>
+        </Code>
+        <Code id="p_n" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=IT1:CL_FLAG(1.4).p_n">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">dato statisticamente non significativo (vedasi metadati di dataset)</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">data statistically not significant (see explanatory texts)</Name>
+        </Code>
+        <Code id="p_g" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=IT1:CL_FLAG(1.4).p_g">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">il fenomeno esiste, ma i dati non si conoscono per qualsiasi ragione</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">the instance exists, but is not known for any reason</Name>
+        </Code>
+        <Code id="p_p" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=IT1:CL_FLAG(1.4).p_p">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">dato provvisorio</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">provisional data</Name>
+        </Code>
+        <Code id="p_r" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=IT1:CL_FLAG(1.4).p_r">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">dato aggiornato</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">revised data</Name>
+        </Code>
+        <Code id="p_t" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=IT1:CL_FLAG(1.4).p_t">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">è voce da considerarsi come titolo di raggruppamento</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">title for the grouping</Name>
+        </Code>
+        <Code id="p_u" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=IT1:CL_FLAG(1.4).p_u">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">dato indisponibile o incerto (vedasi metadati di dataset)</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">unreliable or uncertain data (see explanatory texts)</Name>
+        </Code>
+        <Code id="276_a" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=IT1:CL_FLAG(1.4).276_a">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">il valore è relativo all'insieme di più province della stessa regione</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">the value is referred to the set of more provinces in the same region</Name>
+        </Code>
+        <Code id="276_o" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=IT1:CL_FLAG(1.4).276_o">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">il valore è diffuso insieme a quello della provincia della stessa regione indicata con (a)</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">the value is released together with the value of the province of the same region with (a)</Name>
+        </Code>
+        <Code id="b" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=IT1:CL_FLAG(1.4).b">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">break</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">break</Name>
+        </Code>
+        <Code id="f" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=IT1:CL_FLAG(1.4).f">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">valore previsto</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">forecast value</Name>
+        </Code>
+        <Code id="h" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=IT1:CL_FLAG(1.4).h">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">valore mancante; vacanza o weekend</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">missing value; holiday or weekend</Name>
+        </Code>
+        <Code id="l" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=IT1:CL_FLAG(1.4).l">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">valore mancante; il dato esiste ma non è stato osservato</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">missing value; data exist but were not collected</Name>
+        </Code>
+        <Code id="m" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=IT1:CL_FLAG(1.4).m">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">valore mancante; il dato non può esistere</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">missing value; data cannot exist</Name>
+        </Code>
+        <Code id="s" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=IT1:CL_FLAG(1.4).s">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">sciopero</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">strike</Name>
+        </Code>
+        <Code id="q" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=IT1:CL_FLAG(1.4).q">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">valore mancante; soppresso</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">missing value; suppressed</Name>
+        </Code>
+        <Code id="y" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=IT1:CL_FLAG(1.4).y">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">dato non ricostruito rispetto alla popolazione del censimento 2011</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">data not yet revised according to the 2011 Census</Name>
+        </Code>
+      </Codelist>
+      <Codelist id="CL_FREQ" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=IT1:CL_FREQ(1.0)" agencyID="IT1" version="1.0" isFinal="true">
+        <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Periodicità</Name>
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Frequency</Name>
+        <Code id="A" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=IT1:CL_FREQ(1.0).A">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">annuale</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">annual</Name>
+        </Code>
+        <Code id="B" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=IT1:CL_FREQ(1.0).B">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">business (non supportato)</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">business (not supported)</Name>
+        </Code>
+        <Code id="D" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=IT1:CL_FREQ(1.0).D">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">giornaliero</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">daily</Name>
+        </Code>
+        <Code id="E" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=IT1:CL_FREQ(1.0).E">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">event (non supportato)</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">event (not supported)</Name>
+        </Code>
+        <Code id="H" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=IT1:CL_FREQ(1.0).H">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">semestrale</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">half-yearly</Name>
+        </Code>
+        <Code id="M" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=IT1:CL_FREQ(1.0).M">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">mensile</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">monthly</Name>
+        </Code>
+        <Code id="Q" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=IT1:CL_FREQ(1.0).Q">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">trimestrale</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">quarterly</Name>
+        </Code>
+        <Code id="W" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=IT1:CL_FREQ(1.0).W">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">settimanale</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">weekly</Name>
+        </Code>
+      </Codelist>
+      <Codelist id="CL_OBS_CONF" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=IT1:CL_OBS_CONF(1.0)" agencyID="IT1" version="1.0" isFinal="true">
+        <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Riservatezza del dato</Name>
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Observation confidentiality</Name>
+        <Code id="C" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=IT1:CL_OBS_CONF(1.0).C">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Non pubblicabile e riservato</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Non-publishable and confidential</Name>
+        </Code>
+        <Code id="F" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=IT1:CL_OBS_CONF(1.0).F">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Libero</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Free</Name>
+        </Code>
+        <Code id="N" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=IT1:CL_OBS_CONF(1.0).N">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Non pubblicabile ma non riservato</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Non-publishable, but non-confidential</Name>
+        </Code>
+        <Code id="R" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=IT1:CL_OBS_CONF(1.0).R">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Informazione statistica riservata a causa di rispondenti identificabili</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Confidential statistical information due to identifiable respondents</Name>
+        </Code>
+        <Code id="D" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=IT1:CL_OBS_CONF(1.0).D">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Secondary confidentiality set by the sender, not for publication</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Secondary confidentiality set by the sender, not for publication</Name>
+        </Code>
+        <Code id="S" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=IT1:CL_OBS_CONF(1.0).S">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">INTERNAL EUROSTAT?: Secondary confidentiality set and managed  by the: receiver, not for publication</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">INTERNAL EUROSTAT?: Secondary confidentiality set and managed  by the: receiver, not for publication</Name>
+        </Code>
+      </Codelist>
+    </Codelists>
+    <Concepts xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure">
+      <ConceptScheme id="CROSS_DOMAIN" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.ConceptScheme=ESTAT:CROSS_DOMAIN(2.1)" agencyID="ESTAT" version="2.1" isFinal="true">
+        <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Concetti generali</Name>
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Cross domain concepts</Name>
+        <Concept id="ADJUSTMENT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).ADJUSTMENT">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Correzione</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Adjustment</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">The set of procedures employed to modify statistical data to enable it to conform to national or international standards or to address data quality differences when compiling specific data sets. 
+Context: Adjustments may be associated with changes in definitions, exchange rates, prices, seasons and other factors. Adjustments are in particular applied to compile consistent time series, but the concept is also used for describing adjustments related to other types of data. 
+Adjustment can be distinguished from editing and imputation, in that before adjustment, the data are already of sufficient quality to be considered usable. "Adjustment - coded" refers to the type of adjustment used, represented by a code, while "Adjustment - detail" refers to the textual description of the type of adjustment
+used.</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">The set of procedures employed to modify statistical data to enable it to conform to national or international standards or to address data quality differences when compiling specific data sets.
+Context: Adjustments may be associated with changes in definitions, exchange rates, prices, seasons and other factors. Adjustments are in particular applied to compile consistent time series, but the concept is also used for describing adjustments related to other types of data. 
+Adjustment can be distinguished from editing and imputation, in that before adjustment, the data are already of sufficient quality to be considered usable. "Adjustment - coded" refers to the type of adjustment used, represented by a code, while "Adjustment - detail" refers to the textual description of the type of adjustment
+used.</Description>
+        </Concept>
+        <Concept id="BASE_PER" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).BASE_PER">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Periodo base</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Base period</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">The period of time used as the base of an index number, or to which a constant series refers.
+Context: The base period refers to the period when the published index is 100, or to which weights or base data refer to. It can be one single year (e.g. 1995=100) but it may be as short as one day or as long as a specified number of years. "Base period" may include an indication of the value of the series in the base period (usually 1 or 100).</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">The period of time used as the base of an index number, or to which a constant series refers.
+Context: The base period refers to the period when the published index is 100, or to which weights or base data refer to. It can be one single year (e.g. 1995=100) but it may be as short as one day or as long as a specified number of years. "Base period" may include an indication of the value of the series in the base period (usually 1 or 100).</Description>
+        </Concept>
+        <Concept id="COMMENT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).COMMENT">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Commento</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Comment</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Supplementary descriptive text which can be attached to data or metadata.
+Context: In SDMX messages, a comment may contain a descriptive text which can be attached to an agency, provision agreement, dataflow, data set, group, time series, or observation.
+A list of ID broken down by attachment level is therefore needed: COMMENT_AGENCY, COMMENT_AGR, COMMENT_DFL, COMMENT_DSET, COMMENT_GRP, COMMENT_TS, COMMENT_OBS.</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Supplementary descriptive text which can be attached to data or metadata.
+Context: In SDMX messages, a comment may contain a descriptive text which can be attached to an agency, provision agreement, dataflow, data set, group, time series, or observation.
+A list of ID broken down by attachment level is therefore needed: COMMENT_AGENCY, COMMENT_AGR, COMMENT_DFL, COMMENT_DSET, COMMENT_GRP, COMMENT_TS, COMMENT_OBS.</Description>
+        </Concept>
+        <Concept id="CONF_STATUS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).CONF_STATUS">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Posizione relativa alla riservatezza</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Confidentiality status</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Information about the confidentiality status of the object to which this attribute is attached.
+Context: This concept is related to data and determines the exact status of the value. i.e. if a specific value is confidential or not. This concept is always coded, i.e. it takes its value from the respective code list.
+A list of ID broken down by attachment level is recommended: CONF_STATUS_DFL (dataflow), CONF_STATUS_DSET (dataset), CONF_STATUS_GRP (group), CONF_STATUS_TS (series) or CONF_STATUS_OBS (observation).</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Information about the confidentiality status of the object to which this attribute is attached.
+Context: This concept is related to data and determines the exact status of the value. i.e. if a specific value is confidential or not. This concept is always coded, i.e. it takes its value from the respective code list.
+A list of ID broken down by attachment level is recommended: CONF_STATUS_DFL (dataflow), CONF_STATUS_DSET (dataset), CONF_STATUS_GRP (group), CONF_STATUS_TS (series) or CONF_STATUS_OBS (observation).</Description>
+        </Concept>
+        <Concept id="CONTACT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).CONTACT">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Contatti</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Contact</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Individual or organisational contact points for the data or metadata, including information on how to reach the contact points.
+Context: "Contact" describes contact points for the data or metadata, including how to reach the contact points.
+The main attributes of "contacts" are:
+Contact mail address: The mailing address of the contact.
+Contact name: The name of the contact.
+Contact title: The name of the position held by the contact.
+Contact email address: An e-mail address for correspondence with the contact.
+Contect phone number: A telephone number for spoken correspondence.
+Other detailed attributes (e.g. country code, city code, first name, family name, etc.) can be identified for the purpose of database storage.</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Individual or organisational contact points for the data or metadata, including information on how to reach the contact points.
+Context: "Contact" describes contact points for the data or metadata, including how to reach the contact points.
+The main attributes of "contacts" are:
+Contact mail address: The mailing address of the contact.
+Contact name: The name of the contact.
+Contact title: The name of the position held by the contact.
+Contact email address: An e-mail address for correspondence with the contact.
+Contect phone number: A telephone number for spoken correspondence.
+Other detailed attributes (e.g. country code, city code, first name, family name, etc.) can be identified for the purpose of database storage.</Description>
+        </Concept>
+        <Concept id="DATA_PROVIDER" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).DATA_PROVIDER">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Fornitore dei dati</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Data provider</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Organisation which produces data or metadata.</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Organisation which produces data or metadata.</Description>
+        </Concept>
+        <Concept id="DATA_REV" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).DATA_REV">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Revisione dati</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Data revision</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Any change in a value of a statistic released to the public.
+Context: Preliminary data are revised when more and better source data become available, or due to a change in methodology. "Data revision" describes the policy and practice for identifying the revision status of the data, as well as the availability of revision studies and analyses.</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Any change in a value of a statistic released to the public.
+Context: Preliminary data are revised when more and better source data become available, or due to a change in methodology. "Data revision" describes the policy and practice for identifying the revision status of the data, as well as the availability of revision studies and analyses.</Description>
+        </Concept>
+        <Concept id="DECIMALS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).DECIMALS">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Decimali</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Decimals</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">The number of digits of an observation to the right of a decimal point</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">The number of digits of an observation to the right of a decimal point</Description>
+        </Concept>
+        <Concept id="FREQ" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).FREQ">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Periodicità</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Frequency</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">The time interval at which observations occur over a given time period.
+Context: If a data series has a constant time interval between its observations, this interval determines the frequency of the series (e.g. monthly, quarterly, yearly). "Frequency" - also called "periodicity" - may refer to several stages in the production process, e.g. in data collection or in data dissemination. (e.g., a time series could be available at annual
+frequency but the underlying data are compiled monthly). Therefore, "Frequency" can be broken down into "Frequency - data collection" and "Frequency - data dissemination".
+For data messages, the frequency is represented through codes. Any additional detail needed (e.g. "weekly on Thursday") must be inserted as free text within "Frequency detail".</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">The time interval at which observations occur over a given time period.
+Context: If a data series has a constant time interval between its observations, this interval determines the frequency of the series (e.g. monthly, quarterly, yearly). "Frequency" - also called "periodicity" - may refer to several stages in the production process, e.g. in data collection or in data dissemination. (e.g., a time series could be available at annual
+frequency but the underlying data are compiled monthly). Therefore, "Frequency" can be broken down into "Frequency - data collection" and "Frequency - data dissemination".
+For data messages, the frequency is represented through codes. Any additional detail needed (e.g. "weekly on Thursday") must be inserted as free text within "Frequency detail".</Description>
+        </Concept>
+        <Concept id="GROSS_NET" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).GROSS_NET">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Lordo/Netto</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Grossing/Netting</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Form of consolidation used in presenting the data.
+Context: Combinations in which all statistical items are shown for their full values are called "gross" recordings. Combinations whereby the values of some elementary items are offset against items on the other side of the account or which have an opposite sign are called "net" or consolidated recordings.
+Individual units or sectors may have the same kind of transactions both as a use and as a resource (e.g., they both pay and receive interest) and the same kind of financial instrument as an asset and as a liability.
+Examples of the application of this concept include gross versus net domestic product (GDP less consumption of fixed capital), and various consolidations across units in presentations of statements of operations and balance sheets for general government and for financial corporations, among others.</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Form of consolidation used in presenting the data.
+Context: Combinations in which all statistical items are shown for their full values are called "gross" recordings. Combinations whereby the values of some elementary items are offset against items on the other side of the account or which have an opposite sign are called "net" or consolidated recordings.
+Individual units or sectors may have the same kind of transactions both as a use and as a resource (e.g., they both pay and receive interest) and the same kind of financial instrument as an asset and as a liability.
+Examples of the application of this concept include gross versus net domestic product (GDP less consumption of fixed capital), and various consolidations across units in presentations of statements of operations and balance sheets for general government and for financial corporations, among others.</Description>
+        </Concept>
+        <Concept id="IND_TYPE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).IND_TYPE">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Tipo di indice</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Index type</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">The type of index number used in the statistical production process.
+Context: Index type refers to the various indices used in the statistical production process (Laspeyres, modified Laspeyres, Paasche, Value-Added, Fisher, Tornqvist or other indexes). Important features in the construction of an index number are its coverage, base period, weighting system and method of averaging statistical results.</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">The type of index number used in the statistical production process.
+Context: Index type refers to the various indices used in the statistical production process (Laspeyres, modified Laspeyres, Paasche, Value-Added, Fisher, Tornqvist or other indexes). Important features in the construction of an index number are its coverage, base period, weighting system and method of averaging statistical results.</Description>
+        </Concept>
+        <Concept id="OBS_VALUE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).OBS_VALUE">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Valore osservato</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Observation value</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">The value of a particular variable at a particular period.
+Context: The "observation value" is the field which holds the data.</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">The value of a particular variable at a particular period.
+Context: The "observation value" is the field which holds the data.</Description>
+        </Concept>
+        <Concept id="OBS_PRE_BREAK" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).OBS_PRE_BREAK">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Valore osservato pre-break</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Observation pre-break value</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">The observation, at a time series break period, that was calculated using the old methodology.
+Context: At a time series break period, two observations may be recorded: the pre-break value produced on the basis of the old methodology and the post-break value, as measured by the new methodology. SDMX allows for a pre-break value in the case of a series break, where one would use the observation value to show the post-break value.</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">The observation, at a time series break period, that was calculated using the old methodology.
+Context: At a time series break period, two observations may be recorded: the pre-break value produced on the basis of the old methodology and the post-break value, as measured by the new methodology. SDMX allows for a pre-break value in the case of a series break, where one would use the observation value to show the post-break value.</Description>
+        </Concept>
+        <Concept id="OBS_STATUS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).OBS_STATUS">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Stato dell'osservazione</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Observation status</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Information on the quality of a value or an unusual or missing value.
+Context: This item is normally coded and uses codes providing information about the status of a value, with respect to events such as "break", "estimated value", "forecast", "missing value", or "provisional value". In some cases, there is more than one event that may have influenced the value (e.g. a break in methodology may be accompanied with the fact that an observation is an estimate).
+A textual comment providing more detailed information on important events related to an observation can be added via the attribute "Comment".</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Information on the quality of a value or an unusual or missing value.
+Context: This item is normally coded and uses codes providing information about the status of a value, with respect to events such as "break", "estimated value", "forecast", "missing value", or "provisional value". In some cases, there is more than one event that may have influenced the value (e.g. a break in methodology may be accompanied with the fact that an observation is an estimate).
+A textual comment providing more detailed information on important events related to an observation can be added via the attribute "Comment".</Description>
+        </Concept>
+        <Concept id="REF_PERIOD" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).REF_PERIOD">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Periodo di riferimento</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Reference period</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">The period of time or point in time to which the measured observation is intended to refer.
+Context: In many cases, the reference period and time period will be identical, but there are also cases where they are different. This can happen if data are not available for the target reference period, but are available for a time period which is judged to be sufficiently close. For example, the reference period may be a calendar year, whereas
+data may only be available for a fiscal year. In such cases, “reference period” should refer to the target reference period rather than the actual time period of the data. The difference between target and actual reference period can be highlighted in a free text note.</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">The period of time or point in time to which the measured observation is intended to refer.
+Context: In many cases, the reference period and time period will be identical, but there are also cases where they are different. This can happen if data are not available for the target reference period, but are available for a time period which is judged to be sufficiently close. For example, the reference period may be a calendar year, whereas
+data may only be available for a fiscal year. In such cases, “reference period” should refer to the target reference period rather than the actual time period of the data. The difference between target and actual reference period can be highlighted in a free text note.</Description>
+        </Concept>
+        <Concept id="STAT_POP" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).STAT_POP">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Popolazione statistica</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Statistical population</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">The total membership or population or "universe" of a defined class of people, objects or events.
+Context: There are two types of population: target population and survey population. A "target population" is the population outlined in the survey objects about which information is to be sought and a "survey population" is the population from which information is obtained in a survey. The target population is also known as the scope of the survey and the survey population as the coverage of the survey. For administrative data sources, the corresponding populations are the "target population", as defined by the relevant legislation and regulations, and the actual "client population" ("United Nations Glossary of Classification Terms" prepared by the Expert Group on International Economic and Social Classifications).</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">The total membership or population or "universe" of a defined class of people, objects or events.
+Context: There are two types of population: target population and survey population. A "target population" is the population outlined in the survey objects about which information is to be sought and a "survey population" is the population from which information is obtained in a survey. The target population is also known as the scope of the survey and the survey population as the coverage of the survey. For administrative data sources, the corresponding populations are the "target population", as defined by the relevant legislation and regulations, and the actual "client population" ("United Nations Glossary of Classification Terms" prepared by the Expert Group on International Economic and Social Classifications).</Description>
+        </Concept>
+        <Concept id="STAT_UNIT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).STAT_UNIT">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Unità statistica</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Statistical unit</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Entity for which information is sought and for which statistics are ultimately compiled.
+Context: The statistical unit is the object of a statistical survey and the bearer of statistical characteristics. These units can, in turn, be divided into observation units and analytical units.
+Statistical units for economic statistics are defined on the basis of three criteria: 1) Legal, accounting or organisational criteria; 2) Geographical criteria; 3) Activity criteria.
+Statistical units comprise the enterprise, enterprise group, kind-of-activity unit (KAU), local unit, establishment, homogeneous unit of production, persons, households, geographical areas, events etc.
+Statistical units can be categorised into basic statistical units, i.e. those for which data is collected, and derived statistical units, i.e. those which are constructed during the statistical production process. A basic statistical unit is the most detailed level to which the obtained characteristics can be attached.</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Entity for which information is sought and for which statistics are ultimately compiled.
+Context: The statistical unit is the object of a statistical survey and the bearer of statistical characteristics. These units can, in turn, be divided into observation units and analytical units.
+Statistical units for economic statistics are defined on the basis of three criteria: 1) Legal, accounting or organisational criteria; 2) Geographical criteria; 3) Activity criteria.
+Statistical units comprise the enterprise, enterprise group, kind-of-activity unit (KAU), local unit, establishment, homogeneous unit of production, persons, households, geographical areas, events etc.
+Statistical units can be categorised into basic statistical units, i.e. those for which data is collected, and derived statistical units, i.e. those which are constructed during the statistical production process. A basic statistical unit is the most detailed level to which the obtained characteristics can be attached.</Description>
+        </Concept>
+        <Concept id="TIME_FORMAT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).TIME_FORMAT">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Formato del tempo</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Time format</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Technical format in which time is represented for the measured phenomenon.
+Context: The technical time format and its related code list are part of the technical standards for SDMX-EDI and SDMX-XML</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Technical format in which time is represented for the measured phenomenon.
+Context: The technical time format and its related code list are part of the technical standards for SDMX-EDI and SDMX-XML</Description>
+        </Concept>
+        <Concept id="TIME_PERIOD" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).TIME_PERIOD">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Periodo di tempo</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Time period</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">The period of time or point in time to which the measured observation refers.
+Context: The measurement represented by each observation corresponds to a specific point in time (e.g. a single day) or a period (e.g. a month, a fiscal year, or a calendar year). This is used as a time stamp and is of particular importance for time series data. In cases where the actual time period of the data differs from the target reference period, “time period” refers to the actual period.</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">The period of time or point in time to which the measured observation refers.
+Context: The measurement represented by each observation corresponds to a specific point in time (e.g. a single day) or a period (e.g. a month, a fiscal year, or a calendar year). This is used as a time stamp and is of particular importance for time series data. In cases where the actual time period of the data differs from the target reference period, “time period” refers to the actual period.</Description>
+        </Concept>
+        <Concept id="UNIT_MULT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).UNIT_MULT">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Fattore di scala</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Unit multiplier</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Exponent in base 10 specified so that multiplying the observation numeric values by 10^UNIT_MULT gives a value expressed in the unit of measure.
+Context: In some data bases, it is referred to as SCALE, MAGNITUDE or POWER, e.g. "UM=6" means that observations are in millions.</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Exponent in base 10 specified so that multiplying the observation numeric values by 10^UNIT_MULT gives a value expressed in the unit of measure.
+Context: In some data bases, it is referred to as SCALE, MAGNITUDE or POWER, e.g. "UM=6" means that observations are in millions.</Description>
+        </Concept>
+        <Concept id="UNIT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).UNIT">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Unità</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Unit</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">***da fare: lista di misure, dalle valute, alle unità di misura, agli oggetti che vengono contati. la code list corrispondente si chiama CL_UNIT***********</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">***da fare: lista di misure, dalle valute, alle unità di misura, agli oggetti che vengono contati. la code list corrispondente si chiama CL_UNIT***********</Description>
+        </Concept>
+        <Concept id="UNIT_MEAS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).UNIT_MEAS">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Unità di misura</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Unit of measurement</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Lista di unità di misura</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Unit of measurement list</Description>
+        </Concept>
+        <Concept id="COLLECTION" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).COLLECTION">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Collection</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Collection</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">********da fare: descrive il significato di alcuni dati che si riferiscono a intervalli di tempo, ad esempio se viene rappresentato il valore massimo del periodo, il minimo, se si fa la media fra i due estremi temporali*******</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">********da fare: descrive il significato di alcuni dati che si riferiscono a intervalli di tempo, ad esempio se viene rappresentato il valore massimo del periodo, il minimo, se si fa la media fra i due estremi temporali*******</Description>
+        </Concept>
+        <Concept id="BREAK" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).BREAK">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Break</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Break</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">*****da definire********</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">*****da definire********</Description>
+        </Concept>
+        <Concept id="AGGR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).AGGR">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Tipo di aggregato</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Aggregate</Name>
+        </Concept>
+        <Concept id="MEASURE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).MEASURE">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Operatore statistico</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Statistical operator</Name>
+        </Concept>
+        <Concept id="VAL" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).VAL">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Valutazione</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Valuation</Name>
+        </Concept>
+        <Concept id="EDI" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).EDI">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Edizione</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Edition</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">La variabile edizione riporta la data del comunicato stampa.
+Ad ogni comunicato stampa si dispone di un dato in più nella serie storica e quindi viene ripetuta la procedura di destagionalizzazione che si basa sulla stima di modelli che si applicano all'intera serie di dati, dal più vecchio al più recente.
+Per questo possono cambiare anche i dati precedentemente diffusi.
+Quindi in corrispondenza di una nuova edizione si ha una nuova serie di dati destagionalizzati che contiene un dato in più (il più recente) e modifica i dati precedentemente diffusi.</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Edition shows the press release date. For each press release, new data are shown and a new series of seasonally adjusted data is computed, with respect to the newly released data.</Description>
+        </Concept>
+        <Concept id="RACNAMUNF" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).RACNAMUNF">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Raccordo tra totali</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Bridging items between totals</Name>
+        </Concept>
+        <Concept id="NOTA_IT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).NOTA_IT">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Nota non codificata a livello osservazionale o raggruppato (in italiano)</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Non-coded note at observational or grouped level (in Italian)</Name>
+        </Concept>
+        <Concept id="NOTA_EN" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).NOTA_EN">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Nota non codificata a livello osservazionale o raggruppato (in inglese)</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Non-coded note at observational or grouped level (in English)</Name>
+        </Concept>
+        <Concept id="METADATA_EN" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).METADATA_EN">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Metadati referenziali a livello data flow (in inglese)</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Reference metadata at dataflow level (in English)</Name>
+        </Concept>
+        <Concept id="METADATA_IT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).METADATA_IT">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Metadati referenziali a livello data flow (in italiano)</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Reference metadata at dataflow level (in Italian)</Name>
+        </Concept>
+        <Concept id="TIPO_INDDEM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).TIPO_INDDEM">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Tipo di indicatore demografico</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Demographic data type</Name>
+        </Concept>
+        <Concept id="SCEN" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).SCEN">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Scenario</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Scenario</Name>
+        </Concept>
+        <Concept id="CURR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).CURR">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Valuta</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Currency</Name>
+        </Concept>
+        <Concept id="ARGO" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).ARGO">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Argomento</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Theme</Name>
+        </Concept>
+        <Concept id="IND_CAPACITA" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).IND_CAPACITA">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Indicatori di capacità</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Indicators</Name>
+        </Concept>
+        <Concept id="USE_BED" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).USE_BED">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Indici di utilizzazione</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Use of bedplaces</Name>
+        </Concept>
+        <Concept id="OCC_NLCIG" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).OCC_NLCIG">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Occupazione al netto/lordo CIG</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Employment gross/net of short time working allowances</Name>
+        </Concept>
+        <Concept id="TIPO_RETR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).TIPO_RETR">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Tipo di retribuzione</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Type of wages</Name>
+        </Concept>
+        <Concept id="IND_RETR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).IND_RETR">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Indicatore di retribuzione</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Indicator of earning</Name>
+        </Concept>
+        <Concept id="IND_TENS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).IND_TENS">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Indicatore di tensione</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Bargaining tension</Name>
+        </Concept>
+        <Concept id="TIPO_ORE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).TIPO_ORE">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Tipo di ore</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Type of hours</Name>
+        </Concept>
+        <Concept id="TIPO_TASSO" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).TIPO_TASSO">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Tipo di tasso</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Type of rate</Name>
+        </Concept>
+        <Concept id="IND_COSTO" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).IND_COSTO">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Indicatore di costo</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Indicator of cost</Name>
+        </Concept>
+        <Concept id="Y_CLOS_SCH" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).Y_CLOS_SCH">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Anno di chiusura del periodo scolastico</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Year of closure of scholastic term</Name>
+        </Concept>
+        <Concept id="FUNZ_BIO" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).FUNZ_BIO">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Funzioni biometriche</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Biometric functions</Name>
+        </Concept>
+        <Concept id="IND_TRASP_AEREO" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).IND_TRASP_AEREO">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Indicatori trasporto aereo</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Air Transport Indicators</Name>
+        </Concept>
+        <Concept id="ANNATA_AGRF" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).ANNATA_AGRF">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Annata agraria fine</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Agrarian year end</Name>
+        </Concept>
+        <Concept id="VAR_NUM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).VAR_NUM">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Variabile numerica</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Numerical variable</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Variabile numerica</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Numerical variable</Description>
+        </Concept>
+        <Concept id="TIPO_IND_NUZ" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).TIPO_IND_NUZ">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Tipo di indicatore di nuzialità</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Indicators of nuptiality</Name>
+        </Concept>
+        <Concept id="ID_INDAGINE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).ID_INDAGINE">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Codice indagine SIDI (sistema informativo documentazione indagini)</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Survey code derived by the system SIDI</Name>
+        </Concept>
+        <Concept id="NOTE_DS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).NOTE_DS">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Nota a livello di dataset</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Dataset note</Name>
+        </Concept>
+        <Concept id="NOTE_TS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CROSS_DOMAIN(2.1).NOTE_TS">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Nota a livello di serie storica</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Time series note</Name>
+        </Concept>
+      </ConceptScheme>
+      <ConceptScheme id="CROSS_DOMAIN" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.ConceptScheme=IT1:CROSS_DOMAIN(2.0)" agencyID="IT1" version="2.0" isFinal="true">
+        <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Concetti generali</Name>
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Cross domain concepts</Name>
+        <Concept id="ADJUSTMENT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).ADJUSTMENT">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Correzione</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Adjustment</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">The set of procedures employed to modify statistical data to enable it to conform to national or international standards or to address data quality differences when compiling specific data sets. 
+Context: Adjustments may be associated with changes in definitions, exchange rates, prices, seasons and other factors. Adjustments are in particular applied to compile consistent time series, but the concept is also used for describing adjustments related to other types of data. 
+Adjustment can be distinguished from editing and imputation, in that before adjustment, the data are already of sufficient quality to be considered usable. "Adjustment - coded" refers to the type of adjustment used, represented by a code, while "Adjustment - detail" refers to the textual description of the type of adjustment
+used.</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">The set of procedures employed to modify statistical data to enable it to conform to national or international standards or to address data quality differences when compiling specific data sets.
+Context: Adjustments may be associated with changes in definitions, exchange rates, prices, seasons and other factors. Adjustments are in particular applied to compile consistent time series, but the concept is also used for describing adjustments related to other types of data. 
+Adjustment can be distinguished from editing and imputation, in that before adjustment, the data are already of sufficient quality to be considered usable. "Adjustment - coded" refers to the type of adjustment used, represented by a code, while "Adjustment - detail" refers to the textual description of the type of adjustment
+used.</Description>
+        </Concept>
+        <Concept id="BASE_PER" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).BASE_PER">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Periodo base</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Base period</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">The period of time used as the base of an index number, or to which a constant series refers.
+Context: The base period refers to the period when the published index is 100, or to which weights or base data refer to. It can be one single year (e.g. 1995=100) but it may be as short as one day or as long as a specified number of years. "Base period" may include an indication of the value of the series in the base period (usually 1 or 100).</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">The period of time used as the base of an index number, or to which a constant series refers.
+Context: The base period refers to the period when the published index is 100, or to which weights or base data refer to. It can be one single year (e.g. 1995=100) but it may be as short as one day or as long as a specified number of years. "Base period" may include an indication of the value of the series in the base period (usually 1 or 100).</Description>
+        </Concept>
+        <Concept id="COMMENT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).COMMENT">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Commento</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Comment</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Supplementary descriptive text which can be attached to data or metadata.
+Context: In SDMX messages, a comment may contain a descriptive text which can be attached to an agency, provision agreement, dataflow, data set, group, time series, or observation.
+A list of ID broken down by attachment level is therefore needed: COMMENT_AGENCY, COMMENT_AGR, COMMENT_DFL, COMMENT_DSET, COMMENT_GRP, COMMENT_TS, COMMENT_OBS.</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Supplementary descriptive text which can be attached to data or metadata.
+Context: In SDMX messages, a comment may contain a descriptive text which can be attached to an agency, provision agreement, dataflow, data set, group, time series, or observation.
+A list of ID broken down by attachment level is therefore needed: COMMENT_AGENCY, COMMENT_AGR, COMMENT_DFL, COMMENT_DSET, COMMENT_GRP, COMMENT_TS, COMMENT_OBS.</Description>
+        </Concept>
+        <Concept id="CONF_STATUS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).CONF_STATUS">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Posizione relativa alla riservatezza</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Confidentiality status</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Information about the confidentiality status of the object to which this attribute is attached.
+Context: This concept is related to data and determines the exact status of the value. i.e. if a specific value is confidential or not. This concept is always coded, i.e. it takes its value from the respective code list.
+A list of ID broken down by attachment level is recommended: CONF_STATUS_DFL (dataflow), CONF_STATUS_DSET (dataset), CONF_STATUS_GRP (group), CONF_STATUS_TS (series) or CONF_STATUS_OBS (observation).</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Information about the confidentiality status of the object to which this attribute is attached.
+Context: This concept is related to data and determines the exact status of the value. i.e. if a specific value is confidential or not. This concept is always coded, i.e. it takes its value from the respective code list.
+A list of ID broken down by attachment level is recommended: CONF_STATUS_DFL (dataflow), CONF_STATUS_DSET (dataset), CONF_STATUS_GRP (group), CONF_STATUS_TS (series) or CONF_STATUS_OBS (observation).</Description>
+        </Concept>
+        <Concept id="CONTACT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).CONTACT">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Contatti</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Contact</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Individual or organisational contact points for the data or metadata, including information on how to reach the contact points.
+Context: "Contact" describes contact points for the data or metadata, including how to reach the contact points.
+The main attributes of "contacts" are:
+Contact mail address: The mailing address of the contact.
+Contact name: The name of the contact.
+Contact title: The name of the position held by the contact.
+Contact email address: An e-mail address for correspondence with the contact.
+Contect phone number: A telephone number for spoken correspondence.
+Other detailed attributes (e.g. country code, city code, first name, family name, etc.) can be identified for the purpose of database storage.</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Individual or organisational contact points for the data or metadata, including information on how to reach the contact points.
+Context: "Contact" describes contact points for the data or metadata, including how to reach the contact points.
+The main attributes of "contacts" are:
+Contact mail address: The mailing address of the contact.
+Contact name: The name of the contact.
+Contact title: The name of the position held by the contact.
+Contact email address: An e-mail address for correspondence with the contact.
+Contect phone number: A telephone number for spoken correspondence.
+Other detailed attributes (e.g. country code, city code, first name, family name, etc.) can be identified for the purpose of database storage.</Description>
+        </Concept>
+        <Concept id="DATA_PROVIDER" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).DATA_PROVIDER">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Fornitore dei dati</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Data provider</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Organisation which produces data or metadata.</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Organisation which produces data or metadata.</Description>
+        </Concept>
+        <Concept id="DATA_REV" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).DATA_REV">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Revisione dati</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Data revision</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Any change in a value of a statistic released to the public.
+Context: Preliminary data are revised when more and better source data become available, or due to a change in methodology. "Data revision" describes the policy and practice for identifying the revision status of the data, as well as the availability of revision studies and analyses.</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Any change in a value of a statistic released to the public.
+Context: Preliminary data are revised when more and better source data become available, or due to a change in methodology. "Data revision" describes the policy and practice for identifying the revision status of the data, as well as the availability of revision studies and analyses.</Description>
+        </Concept>
+        <Concept id="DECIMALS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).DECIMALS">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Decimali</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Decimals</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">The number of digits of an observation to the right of a decimal point</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">The number of digits of an observation to the right of a decimal point</Description>
+        </Concept>
+        <Concept id="FREQ" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).FREQ">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Periodicità</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Frequency</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">The time interval at which observations occur over a given time period.
+Context: If a data series has a constant time interval between its observations, this interval determines the frequency of the series (e.g. monthly, quarterly, yearly). "Frequency" - also called "periodicity" - may refer to several stages in the production process, e.g. in data collection or in data dissemination. (e.g., a time series could be available at annual
+frequency but the underlying data are compiled monthly). Therefore, "Frequency" can be broken down into "Frequency - data collection" and "Frequency - data dissemination".
+For data messages, the frequency is represented through codes. Any additional detail needed (e.g. "weekly on Thursday") must be inserted as free text within "Frequency detail".</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">The time interval at which observations occur over a given time period.
+Context: If a data series has a constant time interval between its observations, this interval determines the frequency of the series (e.g. monthly, quarterly, yearly). "Frequency" - also called "periodicity" - may refer to several stages in the production process, e.g. in data collection or in data dissemination. (e.g., a time series could be available at annual
+frequency but the underlying data are compiled monthly). Therefore, "Frequency" can be broken down into "Frequency - data collection" and "Frequency - data dissemination".
+For data messages, the frequency is represented through codes. Any additional detail needed (e.g. "weekly on Thursday") must be inserted as free text within "Frequency detail".</Description>
+        </Concept>
+        <Concept id="GROSS_NET" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).GROSS_NET">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Lordo/Netto</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Grossing/Netting</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Form of consolidation used in presenting the data.
+Context: Combinations in which all statistical items are shown for their full values are called "gross" recordings. Combinations whereby the values of some elementary items are offset against items on the other side of the account or which have an opposite sign are called "net" or consolidated recordings.
+Individual units or sectors may have the same kind of transactions both as a use and as a resource (e.g., they both pay and receive interest) and the same kind of financial instrument as an asset and as a liability.
+Examples of the application of this concept include gross versus net domestic product (GDP less consumption of fixed capital), and various consolidations across units in presentations of statements of operations and balance sheets for general government and for financial corporations, among others.</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Form of consolidation used in presenting the data.
+Context: Combinations in which all statistical items are shown for their full values are called "gross" recordings. Combinations whereby the values of some elementary items are offset against items on the other side of the account or which have an opposite sign are called "net" or consolidated recordings.
+Individual units or sectors may have the same kind of transactions both as a use and as a resource (e.g., they both pay and receive interest) and the same kind of financial instrument as an asset and as a liability.
+Examples of the application of this concept include gross versus net domestic product (GDP less consumption of fixed capital), and various consolidations across units in presentations of statements of operations and balance sheets for general government and for financial corporations, among others.</Description>
+        </Concept>
+        <Concept id="IND_TYPE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).IND_TYPE">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Tipo di indice</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Index type</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">The type of index number used in the statistical production process.
+Context: Index type refers to the various indices used in the statistical production process (Laspeyres, modified Laspeyres, Paasche, Value-Added, Fisher, Tornqvist or other indexes). Important features in the construction of an index number are its coverage, base period, weighting system and method of averaging statistical results.</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">The type of index number used in the statistical production process.
+Context: Index type refers to the various indices used in the statistical production process (Laspeyres, modified Laspeyres, Paasche, Value-Added, Fisher, Tornqvist or other indexes). Important features in the construction of an index number are its coverage, base period, weighting system and method of averaging statistical results.</Description>
+        </Concept>
+        <Concept id="OBS_VALUE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).OBS_VALUE">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Valore osservato</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Observation value</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">The value of a particular variable at a particular period.
+Context: The "observation value" is the field which holds the data.</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">The value of a particular variable at a particular period.
+Context: The "observation value" is the field which holds the data.</Description>
+        </Concept>
+        <Concept id="OBS_PRE_BREAK" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).OBS_PRE_BREAK">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Valore osservato pre-break</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Observation pre-break value</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">The observation, at a time series break period, that was calculated using the old methodology.
+Context: At a time series break period, two observations may be recorded: the pre-break value produced on the basis of the old methodology and the post-break value, as measured by the new methodology. SDMX allows for a pre-break value in the case of a series break, where one would use the observation value to show the post-break value.</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">The observation, at a time series break period, that was calculated using the old methodology.
+Context: At a time series break period, two observations may be recorded: the pre-break value produced on the basis of the old methodology and the post-break value, as measured by the new methodology. SDMX allows for a pre-break value in the case of a series break, where one would use the observation value to show the post-break value.</Description>
+        </Concept>
+        <Concept id="OBS_STATUS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).OBS_STATUS">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Stato dell'osservazione</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Observation status</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Information on the quality of a value or an unusual or missing value.
+Context: This item is normally coded and uses codes providing information about the status of a value, with respect to events such as "break", "estimated value", "forecast", "missing value", or "provisional value". In some cases, there is more than one event that may have influenced the value (e.g. a break in methodology may be accompanied with the fact that an observation is an estimate).
+A textual comment providing more detailed information on important events related to an observation can be added via the attribute "Comment".</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Information on the quality of a value or an unusual or missing value.
+Context: This item is normally coded and uses codes providing information about the status of a value, with respect to events such as "break", "estimated value", "forecast", "missing value", or "provisional value". In some cases, there is more than one event that may have influenced the value (e.g. a break in methodology may be accompanied with the fact that an observation is an estimate).
+A textual comment providing more detailed information on important events related to an observation can be added via the attribute "Comment".</Description>
+        </Concept>
+        <Concept id="REF_PERIOD" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).REF_PERIOD">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Periodo di riferimento</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Reference period</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">The period of time or point in time to which the measured observation is intended to refer.
+Context: In many cases, the reference period and time period will be identical, but there are also cases where they are different. This can happen if data are not available for the target reference period, but are available for a time period which is judged to be sufficiently close. For example, the reference period may be a calendar year, whereas
+data may only be available for a fiscal year. In such cases, “reference period” should refer to the target reference period rather than the actual time period of the data. The difference between target and actual reference period can be highlighted in a free text note.</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">The period of time or point in time to which the measured observation is intended to refer.
+Context: In many cases, the reference period and time period will be identical, but there are also cases where they are different. This can happen if data are not available for the target reference period, but are available for a time period which is judged to be sufficiently close. For example, the reference period may be a calendar year, whereas
+data may only be available for a fiscal year. In such cases, “reference period” should refer to the target reference period rather than the actual time period of the data. The difference between target and actual reference period can be highlighted in a free text note.</Description>
+        </Concept>
+        <Concept id="STAT_POP" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).STAT_POP">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Popolazione statistica</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Statistical population</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">The total membership or population or "universe" of a defined class of people, objects or events.
+Context: There are two types of population: target population and survey population. A "target population" is the population outlined in the survey objects about which information is to be sought and a "survey population" is the population from which information is obtained in a survey. The target population is also known as the scope of the survey and the survey population as the coverage of the survey. For administrative data sources, the corresponding populations are the "target population", as defined by the relevant legislation and regulations, and the actual "client population" ("United Nations Glossary of Classification Terms" prepared by the Expert Group on International Economic and Social Classifications).</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">The total membership or population or "universe" of a defined class of people, objects or events.
+Context: There are two types of population: target population and survey population. A "target population" is the population outlined in the survey objects about which information is to be sought and a "survey population" is the population from which information is obtained in a survey. The target population is also known as the scope of the survey and the survey population as the coverage of the survey. For administrative data sources, the corresponding populations are the "target population", as defined by the relevant legislation and regulations, and the actual "client population" ("United Nations Glossary of Classification Terms" prepared by the Expert Group on International Economic and Social Classifications).</Description>
+        </Concept>
+        <Concept id="STAT_UNIT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).STAT_UNIT">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Unità statistica</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Statistical unit</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Entity for which information is sought and for which statistics are ultimately compiled.
+Context: The statistical unit is the object of a statistical survey and the bearer of statistical characteristics. These units can, in turn, be divided into observation units and analytical units.
+Statistical units for economic statistics are defined on the basis of three criteria: 1) Legal, accounting or organisational criteria; 2) Geographical criteria; 3) Activity criteria.
+Statistical units comprise the enterprise, enterprise group, kind-of-activity unit (KAU), local unit, establishment, homogeneous unit of production, persons, households, geographical areas, events etc.
+Statistical units can be categorised into basic statistical units, i.e. those for which data is collected, and derived statistical units, i.e. those which are constructed during the statistical production process. A basic statistical unit is the most detailed level to which the obtained characteristics can be attached.</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Entity for which information is sought and for which statistics are ultimately compiled.
+Context: The statistical unit is the object of a statistical survey and the bearer of statistical characteristics. These units can, in turn, be divided into observation units and analytical units.
+Statistical units for economic statistics are defined on the basis of three criteria: 1) Legal, accounting or organisational criteria; 2) Geographical criteria; 3) Activity criteria.
+Statistical units comprise the enterprise, enterprise group, kind-of-activity unit (KAU), local unit, establishment, homogeneous unit of production, persons, households, geographical areas, events etc.
+Statistical units can be categorised into basic statistical units, i.e. those for which data is collected, and derived statistical units, i.e. those which are constructed during the statistical production process. A basic statistical unit is the most detailed level to which the obtained characteristics can be attached.</Description>
+        </Concept>
+        <Concept id="TIME_FORMAT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).TIME_FORMAT">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Formato del tempo</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Time format</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Technical format in which time is represented for the measured phenomenon.
+Context: The technical time format and its related code list are part of the technical standards for SDMX-EDI and SDMX-XML</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Technical format in which time is represented for the measured phenomenon.
+Context: The technical time format and its related code list are part of the technical standards for SDMX-EDI and SDMX-XML</Description>
+        </Concept>
+        <Concept id="TIME_PERIOD" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).TIME_PERIOD">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Periodo di tempo</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Time period</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">The period of time or point in time to which the measured observation refers.
+Context: The measurement represented by each observation corresponds to a specific point in time (e.g. a single day) or a period (e.g. a month, a fiscal year, or a calendar year). This is used as a time stamp and is of particular importance for time series data. In cases where the actual time period of the data differs from the target reference period, “time period” refers to the actual period.</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">The period of time or point in time to which the measured observation refers.
+Context: The measurement represented by each observation corresponds to a specific point in time (e.g. a single day) or a period (e.g. a month, a fiscal year, or a calendar year). This is used as a time stamp and is of particular importance for time series data. In cases where the actual time period of the data differs from the target reference period, “time period” refers to the actual period.</Description>
+        </Concept>
+        <Concept id="UNIT_MULT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).UNIT_MULT">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Fattore di scala</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Unit multiplier</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Exponent in base 10 specified so that multiplying the observation numeric values by 10^UNIT_MULT gives a value expressed in the unit of measure.
+Context: In some data bases, it is referred to as SCALE, MAGNITUDE or POWER, e.g. "UM=6" means that observations are in millions.</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Exponent in base 10 specified so that multiplying the observation numeric values by 10^UNIT_MULT gives a value expressed in the unit of measure.
+Context: In some data bases, it is referred to as SCALE, MAGNITUDE or POWER, e.g. "UM=6" means that observations are in millions.</Description>
+        </Concept>
+        <Concept id="UNIT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).UNIT">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Unità</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Unit</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">***da fare: lista di misure, dalle valute, alle unità di misura, agli oggetti che vengono contati. la code list corrispondente si chiama CL_UNIT***********</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">***da fare: lista di misure, dalle valute, alle unità di misura, agli oggetti che vengono contati. la code list corrispondente si chiama CL_UNIT***********</Description>
+        </Concept>
+        <Concept id="UNIT_MEAS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).UNIT_MEAS">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Unità di misura</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Unit of measurement</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Lista di unità di misura</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Unit of measurement list</Description>
+        </Concept>
+        <Concept id="COLLECTION" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).COLLECTION">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Collection</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Collection</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">********da fare: descrive il significato di alcuni dati che si riferiscono a intervalli di tempo, ad esempio se viene rappresentato il valore massimo del periodo, il minimo, se si fa la media fra i due estremi temporali*******</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">********da fare: descrive il significato di alcuni dati che si riferiscono a intervalli di tempo, ad esempio se viene rappresentato il valore massimo del periodo, il minimo, se si fa la media fra i due estremi temporali*******</Description>
+        </Concept>
+        <Concept id="BREAK" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).BREAK">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Break</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Break</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">*****da definire********</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">*****da definire********</Description>
+        </Concept>
+        <Concept id="AGGR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).AGGR">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Tipo di aggregato</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Aggregate</Name>
+        </Concept>
+        <Concept id="MEASURE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).MEASURE">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Operatore statistico</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Statistical operator</Name>
+        </Concept>
+        <Concept id="VAL" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).VAL">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Valutazione</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Valuation</Name>
+        </Concept>
+        <Concept id="EDI" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).EDI">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Edizione</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Edition</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">La variabile edizione riporta la data del comunicato stampa.
+Ad ogni comunicato stampa si dispone di un dato in più nella serie storica e quindi viene ripetuta la procedura di destagionalizzazione che si basa sulla stima di modelli che si applicano all'intera serie di dati, dal più vecchio al più recente.
+Per questo possono cambiare anche i dati precedentemente diffusi.
+Quindi in corrispondenza di una nuova edizione si ha una nuova serie di dati destagionalizzati che contiene un dato in più (il più recente) e modifica i dati precedentemente diffusi.</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Edition shows the press release date. For each press release, new data are shown and a new series of seasonally adjusted data is computed, with respect to the newly released data.</Description>
+        </Concept>
+        <Concept id="RACNAMUNF" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).RACNAMUNF">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Raccordo tra totali</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Bridging items between totals</Name>
+        </Concept>
+        <Concept id="NOTA_IT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).NOTA_IT">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Nota non codificata a livello osservazionale o raggruppato (in italiano)</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Non-coded note at observational or grouped level (in Italian)</Name>
+        </Concept>
+        <Concept id="NOTA_EN" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).NOTA_EN">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Nota non codificata a livello osservazionale o raggruppato (in inglese)</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Non-coded note at observational or grouped level (in English)</Name>
+        </Concept>
+        <Concept id="METADATA_EN" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).METADATA_EN">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Metadati referenziali a livello data flow (in inglese)</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Reference metadata at dataflow level (in English)</Name>
+        </Concept>
+        <Concept id="METADATA_IT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).METADATA_IT">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Metadati referenziali a livello data flow (in italiano)</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Reference metadata at dataflow level (in Italian)</Name>
+        </Concept>
+        <Concept id="TIPO_INDDEM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).TIPO_INDDEM">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Tipo di indicatore demografico</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Demographic data type</Name>
+        </Concept>
+        <Concept id="SCEN" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).SCEN">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Scenario</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Scenario</Name>
+        </Concept>
+        <Concept id="CURR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).CURR">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Valuta</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Currency</Name>
+        </Concept>
+        <Concept id="ARGO" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).ARGO">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Argomento</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Theme</Name>
+        </Concept>
+        <Concept id="IND_CAPACITA" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).IND_CAPACITA">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Indicatori di capacità</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Indicators</Name>
+        </Concept>
+        <Concept id="USE_BED" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).USE_BED">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Indici di utilizzazione</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Use of bedplaces</Name>
+        </Concept>
+        <Concept id="OCC_NLCIG" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).OCC_NLCIG">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Occupazione al netto/lordo CIG</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Employment gross/net of short time working allowances</Name>
+        </Concept>
+        <Concept id="TIPO_RETR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).TIPO_RETR">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Tipo di retribuzione</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Type of wages</Name>
+        </Concept>
+        <Concept id="IND_RETR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).IND_RETR">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Indicatore di retribuzione</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Indicator of earning</Name>
+        </Concept>
+        <Concept id="IND_TENS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).IND_TENS">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Indicatore di tensione</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Bargaining tension</Name>
+        </Concept>
+        <Concept id="TIPO_ORE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).TIPO_ORE">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Tipo di ore</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Type of hours</Name>
+        </Concept>
+        <Concept id="TIPO_TASSO" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).TIPO_TASSO">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Tipo di tasso</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Type of rate</Name>
+        </Concept>
+        <Concept id="IND_COSTO" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).IND_COSTO">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Indicatore di costo</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Indicator of cost</Name>
+        </Concept>
+        <Concept id="Y_CLOS_SCH" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).Y_CLOS_SCH">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Anno di chiusura del periodo scolastico</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Year of closure of scholastic term</Name>
+        </Concept>
+        <Concept id="FUNZ_BIO" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).FUNZ_BIO">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Funzioni biometriche</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Biometric functions</Name>
+        </Concept>
+        <Concept id="IND_TRASP_AEREO" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).IND_TRASP_AEREO">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Indicatori trasporto aereo</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Air Transport Indicators</Name>
+        </Concept>
+        <Concept id="ANNATA_AGRF" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).ANNATA_AGRF">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Annata agraria fine</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Agrarian year end</Name>
+        </Concept>
+        <Concept id="VAR_NUM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).VAR_NUM">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Variabile numerica</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Numerical variable</Name>
+          <Description xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Variabile numerica</Description>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Numerical variable</Description>
+        </Concept>
+        <Concept id="TIPO_IND_NUZ" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).TIPO_IND_NUZ">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Tipo di indicatore di nuzialità</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Indicators of nuptiality</Name>
+        </Concept>
+        <Concept id="ID_INDAGINE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=IT1:CROSS_DOMAIN(2.0).ID_INDAGINE">
+          <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Codice indagine SIDI (sistema informativo documentazione indagini)</Name>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Survey code derived by the system SIDI</Name>
+        </Concept>
+      </ConceptScheme>
+    </Concepts>
+    <DataStructures xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure">
+      <DataStructure id="DSD_LAV_OCC_DIS_FL" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ESTAT:DSD_LAV_OCC_DIS_FL(1.0)" agencyID="ESTAT" version="1.0" isFinal="false">
+        <Name xml:lang="it" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Indicatori per il SEP con l'edizione</Name>
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Indicators for SEP with edition</Name>
+        <DataStructureComponents>
+          <DimensionList id="DimensionDescriptor" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DimensionDescriptor=ESTAT:DSD_LAV_OCC_DIS_FL(1.0).DimensionDescriptor">
+            <Dimension id="FREQ" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Dimension=ESTAT:DSD_LAV_OCC_DIS_FL(1.0).FREQ" position="1">
+              <ConceptIdentity>
+                <Ref id="FREQ" maintainableParentID="CROSS_DOMAIN" maintainableParentVersion="2.0" agencyID="IT1" package="conceptscheme" class="Concept" xmlns="" />
+              </ConceptIdentity>
+              <LocalRepresentation>
+                <Enumeration>
+                  <Ref id="CL_FREQ" version="1.0" agencyID="IT1" package="codelist" class="Codelist" xmlns="" />
+                </Enumeration>
+              </LocalRepresentation>
+            </Dimension>
+            <Dimension id="IND_TYPE" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Dimension=ESTAT:DSD_LAV_OCC_DIS_FL(1.0).IND_TYPE" position="2">
+              <ConceptIdentity>
+                <Ref id="IND_TYPE" maintainableParentID="CROSS_DOMAIN" maintainableParentVersion="2.0" agencyID="IT1" package="conceptscheme" class="Concept" xmlns="" />
+              </ConceptIdentity>
+              <LocalRepresentation>
+                <Enumeration>
+                  <Ref id="CL_INDICATOR" version="1.0" agencyID="ESTAT" package="codelist" class="Codelist" xmlns="" />
+                </Enumeration>
+              </LocalRepresentation>
+            </Dimension>
+            <TimeDimension id="TIME_PERIOD" urn="urn:sdmx:org.sdmx.infomodel.datastructure.TimeDimension=ESTAT:DSD_LAV_OCC_DIS_FL(1.0).TIME_PERIOD" position="3">
+              <ConceptIdentity>
+                <Ref id="TIME_PERIOD" maintainableParentID="CROSS_DOMAIN" maintainableParentVersion="2.0" agencyID="IT1" package="conceptscheme" class="Concept" xmlns="" />
+              </ConceptIdentity>
+              <LocalRepresentation>
+                <TextFormat />
+              </LocalRepresentation>
+            </TimeDimension>
+          </DimensionList>
+          <AttributeList id="AttributeDescriptor" urn="urn:sdmx:org.sdmx.infomodel.datastructure.AttributeDescriptor=ESTAT:DSD_LAV_OCC_DIS_FL(1.0).AttributeDescriptor">
+            <Attribute id="OBS_STATUS" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataAttribute=ESTAT:DSD_LAV_OCC_DIS_FL(1.0).OBS_STATUS" assignmentStatus="Conditional">
+              <ConceptIdentity>
+                <Ref id="OBS_STATUS" maintainableParentID="CROSS_DOMAIN" maintainableParentVersion="2.0" agencyID="IT1" package="conceptscheme" class="Concept" xmlns="" />
+              </ConceptIdentity>
+              <LocalRepresentation>
+                <Enumeration>
+                  <Ref id="CL_FLAG" version="1.4" agencyID="IT1" package="codelist" class="Codelist" xmlns="" />
+                </Enumeration>
+              </LocalRepresentation>
+              <AttributeRelationship>
+                <PrimaryMeasure>
+                  <Ref id="OBS_VALUE" xmlns="" />
+                </PrimaryMeasure>
+              </AttributeRelationship>
+            </Attribute>
+            <Attribute id="CONF_STATUS" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataAttribute=ESTAT:DSD_LAV_OCC_DIS_FL(1.0).CONF_STATUS" assignmentStatus="Conditional">
+              <ConceptIdentity>
+                <Ref id="CONF_STATUS" maintainableParentID="CROSS_DOMAIN" maintainableParentVersion="2.0" agencyID="IT1" package="conceptscheme" class="Concept" xmlns="" />
+              </ConceptIdentity>
+              <LocalRepresentation>
+                <Enumeration>
+                  <Ref id="CL_OBS_CONF" version="1.0" agencyID="IT1" package="codelist" class="Codelist" xmlns="" />
+                </Enumeration>
+              </LocalRepresentation>
+              <AttributeRelationship>
+                <PrimaryMeasure>
+                  <Ref id="OBS_VALUE" xmlns="" />
+                </PrimaryMeasure>
+              </AttributeRelationship>
+            </Attribute>
+            <Attribute id="NOTE_TS" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataAttribute=ESTAT:DSD_LAV_OCC_DIS_FL(1.0).NOTE_TS" assignmentStatus="Conditional">
+              <ConceptIdentity>
+                <Ref id="NOTE_TS" maintainableParentID="CROSS_DOMAIN" maintainableParentVersion="2.1" agencyID="ESTAT" package="conceptscheme" class="Concept" xmlns="" />
+              </ConceptIdentity>
+              <AttributeRelationship>
+                <Dimension>
+                  <Ref id="FREQ" xmlns="" />
+                </Dimension>
+                <Dimension>
+                  <Ref id="IND_TYPE" xmlns="" />
+                </Dimension>
+              </AttributeRelationship>
+            </Attribute>
+            <Attribute id="NOTE_DS" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataAttribute=ESTAT:DSD_LAV_OCC_DIS_FL(1.0).NOTE_DS" assignmentStatus="Conditional">
+              <ConceptIdentity>
+                <Ref id="NOTE_DS" maintainableParentID="CROSS_DOMAIN" maintainableParentVersion="2.1" agencyID="ESTAT" package="conceptscheme" class="Concept" xmlns="" />
+              </ConceptIdentity>
+              <AttributeRelationship>
+                <None />
+              </AttributeRelationship>
+            </Attribute>
+          </AttributeList>
+          <MeasureList id="MeasureDescriptor" urn="urn:sdmx:org.sdmx.infomodel.datastructure.MeasureDescriptor=ESTAT:DSD_LAV_OCC_DIS_FL(1.0).MeasureDescriptor">
+            <PrimaryMeasure id="OBS_VALUE" urn="urn:sdmx:org.sdmx.infomodel.datastructure.PrimaryMeasure=ESTAT:DSD_LAV_OCC_DIS_FL(1.0).OBS_VALUE">
+              <ConceptIdentity>
+                <Ref id="OBS_VALUE" maintainableParentID="CROSS_DOMAIN" maintainableParentVersion="2.0" agencyID="IT1" package="conceptscheme" class="Concept" xmlns="" />
+              </ConceptIdentity>
+            </PrimaryMeasure>
+          </MeasureList>
+        </DataStructureComponents>
+      </DataStructure>
+    </DataStructures>
+  </Structures>
+</Structure>

@@ -1,0 +1,832 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mes:Structure xmlns:mes="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message" xmlns:str="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure" xmlns:com="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+  <mes:Header>
+    <mes:ID>DEMOGRAPHY</mes:ID>
+    <mes:Test>false</mes:Test>
+    <mes:Prepared>2014-09-03T12:00:54.189Z</mes:Prepared>
+    <mes:Sender id="DSW"/>
+    <mes:Receiver id="unknown"/>
+  </mes:Header>
+  <mes:Structures>
+    <str:Codelists>
+      <str:Codelist id="CL_COUNTRY" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=ESTAT:CL_COUNTRY(1.0)" agencyID="ESTAT" version="1.0" isFinal="true">
+        <com:Name xml:lang="en">Country Codelist</com:Name>
+        <str:Code id="BE" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.0).BE">
+          <com:Name xml:lang="en">Belgium</com:Name>
+        </str:Code>
+        <str:Code id="EL" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.0).EL">
+          <com:Name xml:lang="en">Greece</com:Name>
+        </str:Code>
+        <str:Code id="LU" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.0).LU">
+          <com:Name xml:lang="en">Luxembourg</com:Name>
+        </str:Code>
+        <str:Code id="UK" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.0).UK">
+          <com:Name xml:lang="en">United Kingdom</com:Name>
+        </str:Code>
+      </str:Codelist>
+      <str:Codelist id="CL_SEX" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=ESTAT:CL_SEX(1.0)" agencyID="ESTAT" version="1.0" isFinal="true">
+        <com:Name xml:lang="en">Sex codelist</com:Name>
+        <str:Code id="F" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_SEX(1.0).F">
+          <com:Name xml:lang="en">Female</com:Name>
+        </str:Code>
+        <str:Code id="M" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_SEX(1.0).M">
+          <com:Name xml:lang="en">Male</com:Name>
+        </str:Code>
+        <str:Code id="T" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_SEX(1.0).T">
+          <com:Name xml:lang="en">Total</com:Name>
+        </str:Code>
+      </str:Codelist>
+      <str:Codelist id="CL_UNIT" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=ESTAT:CL_UNIT(1.0)" agencyID="ESTAT" version="1.0" isFinal="true">
+        <com:Name xml:lang="en">Unit code list</com:Name>
+        <str:Code id="PERS" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).PERS">
+          <com:Name xml:lang="en">Persons</com:Name>
+        </str:Code>
+        <str:Code id="CPW" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).CPW">
+          <com:Name xml:lang="en">Children per woman (fertility rate)</com:Name>
+        </str:Code>
+        <str:Code id="YRS" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).YRS">
+          <com:Name xml:lang="en">Years</com:Name>
+        </str:Code>
+      </str:Codelist>
+      <str:Codelist id="CL_DECIMALS" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=SDMX:CL_DECIMALS(1.0)" agencyID="SDMX" version="1.0" isFinal="true">
+        <com:Name xml:lang="en">Code list for Decimals (DECIMALS)</com:Name>
+        <com:Description xml:lang="en">It provides a list of values showing the number of decimal digits used in the data.</com:Description>
+        <str:Code id="0" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_DECIMALS(1.0).0">
+          <com:Name xml:lang="en">Zero</com:Name>
+        </str:Code>
+        <str:Code id="1" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_DECIMALS(1.0).1">
+          <com:Name xml:lang="en">One</com:Name>
+        </str:Code>
+        <str:Code id="2" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_DECIMALS(1.0).2">
+          <com:Name xml:lang="en">Two</com:Name>
+        </str:Code>
+        <str:Code id="3" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_DECIMALS(1.0).3">
+          <com:Name xml:lang="en">Three</com:Name>
+        </str:Code>
+        <str:Code id="4" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_DECIMALS(1.0).4">
+          <com:Name xml:lang="en">Four</com:Name>
+        </str:Code>
+        <str:Code id="5" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_DECIMALS(1.0).5">
+          <com:Name xml:lang="en">Five</com:Name>
+        </str:Code>
+        <str:Code id="6" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_DECIMALS(1.0).6">
+          <com:Name xml:lang="en">Six</com:Name>
+        </str:Code>
+        <str:Code id="7" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_DECIMALS(1.0).7">
+          <com:Name xml:lang="en">Seven</com:Name>
+        </str:Code>
+        <str:Code id="8" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_DECIMALS(1.0).8">
+          <com:Name xml:lang="en">Eight</com:Name>
+        </str:Code>
+        <str:Code id="9" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_DECIMALS(1.0).9">
+          <com:Name xml:lang="en">Nine</com:Name>
+        </str:Code>
+      </str:Codelist>
+      <str:Codelist id="CL_FREQ" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=SDMX:CL_FREQ(1.0)" agencyID="SDMX" version="1.0" isFinal="true">
+        <com:Name xml:lang="en">Code list for Frequency (FREQ)</com:Name>
+        <com:Description xml:lang="en">It provides a list of values indicating the "frequency" of the data (e.g. monthly) and, thus, indirectly, also implying the type of "time reference" that could be used for identifying the data with respect time.</com:Description>
+        <str:Code id="A" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_FREQ(1.0).A">
+          <com:Annotations>
+            <com:Annotation>
+              <com:AnnotationType>NOTE</com:AnnotationType>
+              <com:AnnotationText xml:lang="en">It is typically used for annual data. This can also serve cases of multi-annual data (data that appear once every two, three or, possibly, five years). Descriptive information on the multiannual characteristics (e.g. frequency of the series in practice and other methodological information can be provided at the dataflow level, as long as these characteristics are applicable for the entire dataflow).</com:AnnotationText>
+            </com:Annotation>
+          </com:Annotations>
+          <com:Name xml:lang="en">Annual</com:Name>
+        </str:Code>
+        <str:Code id="B" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_FREQ(1.0).B">
+          <com:Annotations>
+            <com:Annotation>
+              <com:AnnotationType>NOTE</com:AnnotationType>
+              <com:AnnotationText xml:lang="en">Similar to "daily", however there are no observations for Saturday and Sunday (so, neither "missing values" nor "numeric values" should be provided for Saturday and Sunday). This treatment ("business") is one way to deal with such cases, but it is not the only option. Such a time series could alternatively be considered daily ("D"), thus, with missing values in the weekend.</com:AnnotationText>
+            </com:Annotation>
+          </com:Annotations>
+          <com:Name xml:lang="en">Daily - business week</com:Name>
+        </str:Code>
+        <str:Code id="D" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_FREQ(1.0).D">
+          <com:Name xml:lang="en">Daily</com:Name>
+        </str:Code>
+        <str:Code id="M" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_FREQ(1.0).M">
+          <com:Name xml:lang="en">Monthly</com:Name>
+        </str:Code>
+        <str:Code id="N" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_FREQ(1.0).N">
+          <com:Annotations>
+            <com:Annotation>
+              <com:AnnotationType>NOTE</com:AnnotationType>
+              <com:AnnotationText xml:lang="en">While N denotes "minutely", usually, there may be no observations every minute (for several series the frequency is usually "irregular" within a day/days). And though observations may be sparse (not collected every minute), missing values do not need to be given for the minutes when no observations exist: in any case the time stamp determines when an observation is observed.</com:AnnotationText>
+            </com:Annotation>
+          </com:Annotations>
+          <com:Name xml:lang="en">Minutely</com:Name>
+        </str:Code>
+        <str:Code id="Q" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_FREQ(1.0).Q">
+          <com:Name xml:lang="en">Quarterly</com:Name>
+        </str:Code>
+        <str:Code id="S" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_FREQ(1.0).S">
+          <com:Name xml:lang="en">Half Yearly, semester</com:Name>
+        </str:Code>
+        <str:Code id="W" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_FREQ(1.0).W">
+          <com:Name xml:lang="en">Weekly</com:Name>
+        </str:Code>
+      </str:Codelist>
+      <str:Codelist id="CL_OBS_STATUS" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=SDMX:CL_OBS_STATUS(1.0)" agencyID="SDMX" version="1.0" isFinal="true">
+        <com:Name xml:lang="en">Observation status</com:Name>
+        <com:Description xml:lang="en">This code list provides coded information about the "status" of an observation (with respect events such as the ones reflected in the codes composing the code list).</com:Description>
+        <str:Code id="A" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_OBS_STATUS(1.0).A">
+          <com:Annotations>
+            <com:Annotation>
+              <com:AnnotationType>NOTE</com:AnnotationType>
+              <com:AnnotationText xml:lang="en">Normal is the default value (if no value is provided) and is used when no special coded qualification is assumed. Usually, in this case, it can be assumed that the source agency assigns sufficient confidence to the provided observation and/or the value is not expected to be dramatically revised.</com:AnnotationText>
+            </com:Annotation>
+          </com:Annotations>
+          <com:Name xml:lang="en">Normal</com:Name>
+        </str:Code>
+        <str:Code id="B" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_OBS_STATUS(1.0).B">
+          <com:Annotations>
+            <com:Annotation>
+              <com:AnnotationType>NOTE</com:AnnotationType>
+              <com:AnnotationText xml:lang="en">Break observations are characterised as such when different content exist or a different methodology has been applied to this observation as compared with the preceding one (the one given for the previous period).</com:AnnotationText>
+            </com:Annotation>
+          </com:Annotations>
+          <com:Name xml:lang="en">Break</com:Name>
+        </str:Code>
+        <str:Code id="E" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_OBS_STATUS(1.0).E">
+          <com:Annotations>
+            <com:Annotation>
+              <com:AnnotationType>NOTE</com:AnnotationType>
+              <com:AnnotationText xml:lang="en">Observation obtained through an estimation methodology (e.g. to produce back-casts) or based on the use of a limited amount of data or ad hoc sampling and through additional calculations (e.g. to produce a value at an early stage of the production stage while not all data are available). It may also be used in case of experimental data (e.g. in the context of a pilot ahead of a full scale production process) or in case of data of (anticipated/assessed) low quality. If needed, additional (uncoded) information can be provided through (free text) "comments" at the observation level or at a higher level.</com:AnnotationText>
+            </com:Annotation>
+          </com:Annotations>
+          <com:Name xml:lang="en">Estimated value</com:Name>
+        </str:Code>
+        <str:Code id="F" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_OBS_STATUS(1.0).F">
+          <com:Name xml:lang="en">Forecast value</com:Name>
+        </str:Code>
+        <str:Code id="I" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_OBS_STATUS(1.0).I">
+          <com:Annotations>
+            <com:Annotation>
+              <com:AnnotationType>NOTE</com:AnnotationType>
+              <com:AnnotationText xml:lang="en">Observation imputed by international organisations to replace or fill gaps in national data series, in line with the recommendations of the Committee for the Coordination of Statistical Activities (CCSA).</com:AnnotationText>
+            </com:Annotation>
+          </com:Annotations>
+          <com:Name xml:lang="en">Imputed value (CCSA definition)</com:Name>
+        </str:Code>
+        <str:Code id="M" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_OBS_STATUS(1.0).M">
+          <com:Annotations>
+            <com:Annotation>
+              <com:AnnotationType>NOTE</com:AnnotationType>
+              <com:AnnotationText xml:lang="en">Data can be missing due to various reasons: data do not exist, are insignificant (or not collected because they are below a certain threshold), are unreliable, are not relevant for the period, or other reason not elsewhere specified.</com:AnnotationText>
+            </com:Annotation>
+          </com:Annotations>
+          <com:Name xml:lang="en">Missing value</com:Name>
+        </str:Code>
+        <str:Code id="P" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_OBS_STATUS(1.0).P">
+          <com:Annotations>
+            <com:Annotation>
+              <com:AnnotationType>NOTE</com:AnnotationType>
+              <com:AnnotationText xml:lang="en">An observation is characterised as "provisional" when the source agency - while it bases its calculations on its standard production methodology - considers that the data, almost certainly, are expected to be revised.</com:AnnotationText>
+            </com:Annotation>
+          </com:Annotations>
+          <com:Name xml:lang="en">Provisional value</com:Name>
+        </str:Code>
+        <str:Code id="S" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_OBS_STATUS(1.0).S">
+          <com:Annotations>
+            <com:Annotation>
+              <com:AnnotationType>NOTE</com:AnnotationType>
+              <com:AnnotationText xml:lang="en">A known strike that occurred in the corresponding period that may have affected the observation or caused a missing value.</com:AnnotationText>
+            </com:Annotation>
+          </com:Annotations>
+          <com:Name xml:lang="en">Strike</com:Name>
+        </str:Code>
+      </str:Codelist>
+      <str:Codelist id="CL_UNIT_MULT" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=SDMX:CL_UNIT_MULT(1.0)" agencyID="SDMX" version="1.0" isFinal="true">
+        <com:Name xml:lang="en">code list for the Unit Multiplier (UNIT_MULT)</com:Name>
+        <str:Code id="0" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_UNIT_MULT(1.0).0">
+          <com:Name xml:lang="en">Units</com:Name>
+        </str:Code>
+        <str:Code id="1" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_UNIT_MULT(1.0).1">
+          <com:Name xml:lang="en">Tens</com:Name>
+        </str:Code>
+        <str:Code id="2" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_UNIT_MULT(1.0).2">
+          <com:Name xml:lang="en">Hundreds</com:Name>
+        </str:Code>
+        <str:Code id="3" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_UNIT_MULT(1.0).3">
+          <com:Name xml:lang="en">Thousands</com:Name>
+        </str:Code>
+        <str:Code id="4" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_UNIT_MULT(1.0).4">
+          <com:Name xml:lang="en">Tens of thousands</com:Name>
+        </str:Code>
+        <str:Code id="6" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_UNIT_MULT(1.0).6">
+          <com:Name xml:lang="en">Millions</com:Name>
+        </str:Code>
+        <str:Code id="9" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_UNIT_MULT(1.0).9">
+          <com:Name xml:lang="en">Billions</com:Name>
+        </str:Code>
+        <str:Code id="12" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_UNIT_MULT(1.0).12">
+          <com:Name xml:lang="en">Trillions</com:Name>
+        </str:Code>
+        <str:Code id="15" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_UNIT_MULT(1.0).15">
+          <com:Name xml:lang="en">Quadrillions</com:Name>
+        </str:Code>
+      </str:Codelist>
+    </str:Codelists>
+    <str:Concepts>
+      <str:ConceptScheme id="CS_NA" uri="urn:sdmx:org.sdmx.infomodel.conceptscheme.ConceptScheme=ESTAT:CS_NA(1.0)" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.ConceptScheme=ESTAT:CS_NA(1.1)" agencyID="ESTAT" version="1.1" validFrom="2014-04-01T19:56:37.000Z" validTo="2014-04-25T19:56:40.000Z" isFinal="true">
+        <com:Annotations>
+          <com:Annotation>
+            <com:AnnotationTitle>conectto 1</com:AnnotationTitle>
+            <com:AnnotationType>annot</com:AnnotationType>
+            <com:AnnotationText xml:lang="it">prova dei concetti</com:AnnotationText>
+            <com:AnnotationText xml:lang="en">proof_concept</com:AnnotationText>
+          </com:Annotation>
+          <com:Annotation>
+            <com:AnnotationTitle>prova concetto 2</com:AnnotationTitle>
+            <com:AnnotationType>conc</com:AnnotationType>
+            <com:AnnotationText xml:lang="it">annotation di concetto</com:AnnotationText>
+            <com:AnnotationText xml:lang="en">concept annot</com:AnnotationText>
+          </com:Annotation>
+        </com:Annotations>
+        <com:Name xml:lang="it">Lista di concepts for National Accounts DSDs</com:Name>
+        <com:Name xml:lang="en">List of concepts for National Accounts DSDs</com:Name>
+        <com:Description xml:lang="it">Lista di concepts for National Accounts DSDs</com:Description>
+        <com:Description xml:lang="en">List of concepts for National Accounts DSDs</com:Description>
+        <str:Concept id="FREQ" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).FREQ">
+          <com:Name xml:lang="en">Frequency</com:Name>
+        </str:Concept>
+        <str:Concept id="ADJUSTMENT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).ADJUSTMENT">
+          <com:Name xml:lang="en">Adjustment indicator</com:Name>
+        </str:Concept>
+        <str:Concept id="REF_AREA" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).REF_AREA">
+          <com:Annotations>
+            <com:Annotation>
+              <com:AnnotationTitle>annotation reference area</com:AnnotationTitle>
+              <com:AnnotationType>sem</com:AnnotationType>
+              <com:AnnotationText xml:lang="it">annotazione area di riferimento</com:AnnotationText>
+              <com:AnnotationText xml:lang="en">annotation reference area</com:AnnotationText>
+            </com:Annotation>
+          </com:Annotations>
+          <com:Name xml:lang="it">Area territoriale</com:Name>
+          <com:Name xml:lang="en">Reference area</com:Name>
+          <com:Description xml:lang="it">Area territoriale</com:Description>
+          <com:Description xml:lang="en">Reference area</com:Description>
+          <str:Parent>
+            <Ref id="COUNTERPART_AREA"/>
+          </str:Parent>
+        </str:Concept>
+        <str:Concept id="COUNTERPART_AREA" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).COUNTERPART_AREA">
+          <com:Name xml:lang="en">Counterpart area</com:Name>
+        </str:Concept>
+        <str:Concept id="REF_SECTOR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).REF_SECTOR">
+          <com:Name xml:lang="en">Reporting institutional sector</com:Name>
+        </str:Concept>
+        <str:Concept id="COUNTERPART_SECTOR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).COUNTERPART_SECTOR">
+          <com:Name xml:lang="en">Counterpart institutional sector</com:Name>
+        </str:Concept>
+        <str:Concept id="CONSOLIDATION" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).CONSOLIDATION">
+          <com:Name xml:lang="en">Consolidation Status</com:Name>
+        </str:Concept>
+        <str:Concept id="ACCOUNTING_ENTRY" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).ACCOUNTING_ENTRY">
+          <com:Name xml:lang="en">Accounting Entry</com:Name>
+        </str:Concept>
+        <str:Concept id="STO" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).STO">
+          <com:Name xml:lang="en">Stocks, Transactions, Other Flows</com:Name>
+        </str:Concept>
+        <str:Concept id="INSTR_ASSET" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).INSTR_ASSET">
+          <com:Name xml:lang="en">Instrument and Assets Classification</com:Name>
+        </str:Concept>
+        <str:Concept id="MATURITY" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).MATURITY">
+          <com:Name xml:lang="en">Original and Residual Maturity</com:Name>
+        </str:Concept>
+        <str:Concept id="ACTIVITY" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).ACTIVITY">
+          <com:Name xml:lang="en">Activity classification</com:Name>
+        </str:Concept>
+        <str:Concept id="ACTIVITY_TO" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).ACTIVITY_TO">
+          <com:Name xml:lang="en">Activity classification</com:Name>
+        </str:Concept>
+        <str:Concept id="PRODUCT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).PRODUCT">
+          <com:Name xml:lang="en">Product classification</com:Name>
+        </str:Concept>
+        <str:Concept id="PRODUCT_TO" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).PRODUCT_TO">
+          <com:Name xml:lang="en">Product classification</com:Name>
+        </str:Concept>
+        <str:Concept id="EXPENDITURE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).EXPENDITURE">
+          <com:Name xml:lang="en">Expenditure (COFOG, COICOP, COPP or COPNI)</com:Name>
+        </str:Concept>
+        <str:Concept id="PENSION_FUNDTYPE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).PENSION_FUNDTYPE">
+          <com:Name xml:lang="en">Pension Fund Type</com:Name>
+        </str:Concept>
+        <str:Concept id="UNIT_MEASURE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).UNIT_MEASURE">
+          <com:Name xml:lang="en">Unit</com:Name>
+        </str:Concept>
+        <str:Concept id="CURRENCY_DENOM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).CURRENCY_DENOM">
+          <com:Name xml:lang="en">Currency of denomination</com:Name>
+        </str:Concept>
+        <str:Concept id="VALUATION" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).VALUATION">
+          <com:Name xml:lang="en">Valuation</com:Name>
+        </str:Concept>
+        <str:Concept id="PRICES" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).PRICES">
+          <com:Name xml:lang="en">Prices</com:Name>
+        </str:Concept>
+        <str:Concept id="TRANSFORMATION" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).TRANSFORMATION">
+          <com:Name xml:lang="en">Transformation</com:Name>
+        </str:Concept>
+        <str:Concept id="CUST_BREAKDOWN" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).CUST_BREAKDOWN">
+          <com:Name xml:lang="en">Custom breakdown codification</com:Name>
+        </str:Concept>
+        <str:Concept id="TIME_PERIOD" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).TIME_PERIOD">
+          <com:Name xml:lang="en">Time period</com:Name>
+        </str:Concept>
+        <str:Concept id="OBS_VALUE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).OBS_VALUE">
+          <com:Name xml:lang="en">Observation value</com:Name>
+        </str:Concept>
+        <str:Concept id="REF_YEAR_PRICE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).REF_YEAR_PRICE">
+          <com:Name xml:lang="en">Reference year (price)</com:Name>
+        </str:Concept>
+        <str:Concept id="COLL_PERIOD" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).COLL_PERIOD">
+          <com:Name xml:lang="en">Collection period</com:Name>
+          <com:Description xml:lang="en">Period in which data was collected</com:Description>
+        </str:Concept>
+        <str:Concept id="EMBARGO_DATE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).EMBARGO_DATE">
+          <com:Name xml:lang="en">Embargo date</com:Name>
+        </str:Concept>
+        <str:Concept id="OBS_EDP_WBB" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).OBS_EDP_WBB">
+          <com:Name xml:lang="en">EDP working balance basis</com:Name>
+        </str:Concept>
+        <str:Concept id="GFS_ECOFUNC" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).GFS_ECOFUNC">
+          <com:Name xml:lang="en">GFS economic function</com:Name>
+        </str:Concept>
+        <str:Concept id="GFS_TAXCAT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).GFS_TAXCAT">
+          <com:Name xml:lang="en">GFS tax category</com:Name>
+        </str:Concept>
+        <str:Concept id="TABLE_IDENTIFIER" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).TABLE_IDENTIFIER">
+          <com:Name xml:lang="en">Table identifier</com:Name>
+        </str:Concept>
+        <str:Concept id="REF_PERIOD_DETAIL" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).REF_PERIOD_DETAIL">
+          <com:Name xml:lang="en">Reference period detail</com:Name>
+        </str:Concept>
+        <str:Concept id="COMMENT_DSET" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).COMMENT_DSET">
+          <com:Name xml:lang="en">Dataset comment</com:Name>
+        </str:Concept>
+        <str:Concept id="COMMENT_OBS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).COMMENT_OBS">
+          <com:Name xml:lang="en">Comments to the observation value</com:Name>
+        </str:Concept>
+        <str:Concept id="COMMENT_TS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).COMMENT_TS">
+          <com:Name xml:lang="en">Series comment</com:Name>
+        </str:Concept>
+        <str:Concept id="CONF_STATUS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).CONF_STATUS">
+          <com:Name xml:lang="en">Confidentiality status</com:Name>
+        </str:Concept>
+        <str:Concept id="DECIMALS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).DECIMALS">
+          <com:Name xml:lang="en">Decimals</com:Name>
+        </str:Concept>
+        <str:Concept id="OBS_STATUS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).OBS_STATUS">
+          <com:Name xml:lang="en">Observation status</com:Name>
+        </str:Concept>
+        <str:Concept id="TIME_FORMAT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).TIME_FORMAT">
+          <com:Name xml:lang="en">Time format</com:Name>
+        </str:Concept>
+        <str:Concept id="TIME_PER_COLLECT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).TIME_PER_COLLECT">
+          <com:Name xml:lang="en">Time period collection</com:Name>
+        </str:Concept>
+        <str:Concept id="TITLE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).TITLE">
+          <com:Name xml:lang="en">Title</com:Name>
+        </str:Concept>
+        <str:Concept id="UNIT_MULT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).UNIT_MULT">
+          <com:Name xml:lang="en">Unit multiplier</com:Name>
+        </str:Concept>
+        <str:Concept id="LAST_UPDATE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).LAST_UPDATE">
+          <com:Name xml:lang="en">Last Update Date</com:Name>
+        </str:Concept>
+        <str:Concept id="CUST_BREAKDOWN_LB" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).CUST_BREAKDOWN_LB">
+          <com:Name xml:lang="en">Label for custom breakdown</com:Name>
+        </str:Concept>
+        <str:Concept id="COMPILING_ORG" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CS_NA(1.1).COMPILING_ORG">
+          <com:Name xml:lang="en">Compiling organisation</com:Name>
+        </str:Concept>
+      </str:ConceptScheme>
+      <str:ConceptScheme id="DEMO_CONCEPTS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.ConceptScheme=ESTAT:DEMO_CONCEPTS(1.0)" agencyID="ESTAT" version="1.0" isFinal="true">
+        <com:Name xml:lang="en">Demography domain concept scheme</com:Name>
+        <str:Concept id="COUNTRY" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:DEMO_CONCEPTS(1.0).COUNTRY">
+          <com:Name xml:lang="en">Reporting Country</com:Name>
+        </str:Concept>
+        <str:Concept id="SEX" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:DEMO_CONCEPTS(1.0).SEX">
+          <com:Name xml:lang="en">Sex</com:Name>
+        </str:Concept>
+        <str:Concept id="DEMO" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:DEMO_CONCEPTS(1.0).DEMO">
+          <com:Name xml:lang="en">Demography</com:Name>
+        </str:Concept>
+      </str:ConceptScheme>
+      <str:ConceptScheme id="DEMO_MEASURES" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.ConceptScheme=ESTAT:DEMO_MEASURES(1.0)" agencyID="ESTAT" version="1.0" isFinal="true">
+        <com:Name xml:lang="en">Demography measures concept scheme</com:Name>
+        <str:Concept id="PJANT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:DEMO_MEASURES(1.0).PJANT">
+          <com:Name xml:lang="en">Population on 1 January of Year X</com:Name>
+          <str:CoreRepresentation>
+            <str:TextFormat textType="Integer"/>
+          </str:CoreRepresentation>
+        </str:Concept>
+        <str:Concept id="LBIRTHST" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:DEMO_MEASURES(1.0).LBIRTHST">
+          <com:Name xml:lang="en">Births in Year X</com:Name>
+          <str:CoreRepresentation>
+            <str:TextFormat textType="Integer"/>
+          </str:CoreRepresentation>
+        </str:Concept>
+        <str:Concept id="DEATHST" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:DEMO_MEASURES(1.0).DEATHST">
+          <com:Name xml:lang="en">Deaths in Year X</com:Name>
+          <str:CoreRepresentation>
+            <str:TextFormat textType="Integer"/>
+          </str:CoreRepresentation>
+        </str:Concept>
+        <str:Concept id="ADJT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:DEMO_MEASURES(1.0).ADJT">
+          <com:Name xml:lang="en">Statistical adjustment in Year X</com:Name>
+          <str:CoreRepresentation>
+            <str:TextFormat textType="Integer"/>
+          </str:CoreRepresentation>
+        </str:Concept>
+        <str:Concept id="PJAN1T" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:DEMO_MEASURES(1.0).PJAN1T">
+          <com:Name xml:lang="en">Population on 1 January Year X+1</com:Name>
+          <str:CoreRepresentation>
+            <str:TextFormat textType="Integer"/>
+          </str:CoreRepresentation>
+        </str:Concept>
+        <str:Concept id="LBIRTHOUT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:DEMO_MEASURES(1.0).LBIRTHOUT">
+          <com:Name xml:lang="en">Births outside marriage in Year X</com:Name>
+          <str:CoreRepresentation>
+            <str:TextFormat textType="Integer"/>
+          </str:CoreRepresentation>
+        </str:Concept>
+        <str:Concept id="DEATHUN1" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:DEMO_MEASURES(1.0).DEATHUN1">
+          <com:Name xml:lang="en">Deaths under 1 year in Year X</com:Name>
+          <str:CoreRepresentation>
+            <str:TextFormat textType="Integer"/>
+          </str:CoreRepresentation>
+        </str:Concept>
+        <str:Concept id="MAR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:DEMO_MEASURES(1.0).MAR">
+          <com:Name xml:lang="en">Marriages in Year X</com:Name>
+          <str:CoreRepresentation>
+            <str:TextFormat textType="Integer"/>
+          </str:CoreRepresentation>
+        </str:Concept>
+        <str:Concept id="DIV" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:DEMO_MEASURES(1.0).DIV">
+          <com:Name xml:lang="en">Divorces in Year X</com:Name>
+          <str:CoreRepresentation>
+            <str:TextFormat textType="Integer"/>
+          </str:CoreRepresentation>
+        </str:Concept>
+        <str:Concept id="IMMIT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:DEMO_MEASURES(1.0).IMMIT">
+          <com:Name xml:lang="en">Immigrants in Year X</com:Name>
+          <str:CoreRepresentation>
+            <str:TextFormat textType="Integer"/>
+          </str:CoreRepresentation>
+        </str:Concept>
+        <str:Concept id="EMIGT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:DEMO_MEASURES(1.0).EMIGT">
+          <com:Name xml:lang="en">Emigrants in Year X</com:Name>
+          <str:CoreRepresentation>
+            <str:TextFormat textType="Integer"/>
+          </str:CoreRepresentation>
+        </str:Concept>
+        <str:Concept id="NETMT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:DEMO_MEASURES(1.0).NETMT">
+          <com:Name xml:lang="en">Net migration in Year X</com:Name>
+          <str:CoreRepresentation>
+            <str:TextFormat textType="Integer"/>
+          </str:CoreRepresentation>
+        </str:Concept>
+        <str:Concept id="TFRNSI" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:DEMO_MEASURES(1.0).TFRNSI">
+          <com:Name xml:lang="en">Total fertility rate in Year X</com:Name>
+          <str:CoreRepresentation>
+            <str:TextFormat textType="Decimal" decimals="2"/>
+          </str:CoreRepresentation>
+        </str:Concept>
+        <str:Concept id="LEXPNSIT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:DEMO_MEASURES(1.0).LEXPNSIT">
+          <com:Name xml:lang="en">Life expectancy at birth in Year X</com:Name>
+          <str:CoreRepresentation>
+            <str:TextFormat textType="Decimal" decimals="1"/>
+          </str:CoreRepresentation>
+        </str:Concept>
+      </str:ConceptScheme>
+      <str:ConceptScheme id="CROSS_DOMAIN_CONCEPTS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.ConceptScheme=SDMX:CROSS_DOMAIN_CONCEPTS(1.0)" agencyID="SDMX" version="1.0" isFinal="true">
+        <com:Name xml:lang="en">SDMX Cross Domain Concept Scheme</com:Name>
+        <str:Concept id="COLL_METHOD" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(1.0).COLL_METHOD">
+          <com:Annotations>
+            <com:Annotation>
+              <com:AnnotationType>CONTEXT</com:AnnotationType>
+              <com:AnnotationText xml:lang="en">There are a number of data collection methods used for official statistics, including computer-aided personal or telephone interview CAPI/CATI, mailed questionnaires, electronic or internet questionnaires and direct observation. The data collection may be exclusively for statistical purposes, or primarily for non-statistical purposes. Descriptions of data collection methods should include the purpose for which the data were collected, the period the data refer to, the classifications and definitions used, and any constraints related to further use of these data.</com:AnnotationText>
+            </com:Annotation>
+          </com:Annotations>
+          <com:Name xml:lang="en">Data Collection Method</com:Name>
+          <com:Description xml:lang="en">Systematic process of gathering data for official statistics.</com:Description>
+          <str:CoreRepresentation>
+            <str:TextFormat textType="String"/>
+          </str:CoreRepresentation>
+        </str:Concept>
+        <str:Concept id="CONF" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(1.0).CONF">
+          <com:Annotations>
+            <com:Annotation>
+              <com:AnnotationType>CONTEXT</com:AnnotationType>
+              <com:AnnotationText xml:lang="en">Confidentiality refers to a property of data with respect to whether, for example, they are public or their disclosure is subject to restrictions. For instance, data allowing the identification of a physical or legal person, either directly or indirectly, may be characterised as confidential according to the relevant national or international legislation. Unauthorised disclosure of data that are restricted or confidential is not permitted and even legislative measures or other formal provisions may be used to prevent disclosure. Often, there are procedures in place to prevent disclosure of restricted or confidential data, including rules applying to staff, aggregation rules when disseminating data, provision of unit records, etc. Sensitivity (of information) is sometimes used as a synonym to confidentiality. This concept can be broken down into: Confidentiality - policy; Confidentiality - status; Confidentiality - data treatment.</com:AnnotationText>
+            </com:Annotation>
+          </com:Annotations>
+          <com:Name xml:lang="en">Confidentiality</com:Name>
+          <com:Description xml:lang="en">A property of data indicating the extent to which their unauthorised disclosure could be prejudicial or harmful to the interest of the source or other relevant parties.</com:Description>
+          <str:CoreRepresentation>
+            <str:TextFormat textType="String"/>
+          </str:CoreRepresentation>
+        </str:Concept>
+        <str:Concept id="CONF_STATUS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(1.0).CONF_STATUS">
+          <com:Annotations>
+            <com:Annotation>
+              <com:AnnotationType>CONTEXT</com:AnnotationType>
+              <com:AnnotationText xml:lang="en">This concept is related to data and determines the exact status of the value. i.e. if a specific value is confidential or not. This concept is always coded, i.e. it takes its value from the respective code list. A list of ID broken down by attachment level is recommended: CONF_STATUS_DFL (dataflow), CONF_STATUS_DSET (dataset), CONF_STATUS_GRP (group), CONF_STATUS_TS (series) or CONF_STATUS_OBS (observation).</com:AnnotationText>
+            </com:Annotation>
+          </com:Annotations>
+          <com:Name xml:lang="en">Confidentiality - status</com:Name>
+          <com:Description xml:lang="en">Information about the confidentiality status of the object to which this attribute is attached.</com:Description>
+          <str:Parent>
+            <Ref id="CONF"/>
+          </str:Parent>
+          <str:CoreRepresentation>
+            <str:Enumeration>
+              <Ref id="CL_CONF_STATUS" version="1.0" agencyID="SDMX" package="codelist" class="Codelist"/>
+            </str:Enumeration>
+          </str:CoreRepresentation>
+        </str:Concept>
+        <str:Concept id="CURRENCY" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(1.0).CURRENCY">
+          <com:Name xml:lang="en">Currency</com:Name>
+          <com:Description xml:lang="en">Monetary denomination of the object being measured.</com:Description>
+        </str:Concept>
+        <str:Concept id="DECIMALS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(1.0).DECIMALS">
+          <com:Name xml:lang="en">Decimals</com:Name>
+          <com:Description xml:lang="en">The number of digits of an observation to the right of a decimal point.</com:Description>
+          <str:CoreRepresentation>
+            <str:Enumeration>
+              <Ref id="CL_DECIMALS" version="1.0" agencyID="SDMX" package="codelist" class="Codelist"/>
+            </str:Enumeration>
+          </str:CoreRepresentation>
+        </str:Concept>
+        <str:Concept id="FREQ" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(1.0).FREQ">
+          <com:Annotations>
+            <com:Annotation>
+              <com:AnnotationType>CONTEXT</com:AnnotationType>
+              <com:AnnotationText xml:lang="en">If a data series has a constant time interval between its observations, this interval determines the frequency of the series (e.g. monthly, quarterly, yearly). "Frequency" - also called "periodicity" - may refer to several stages in the production process, e.g. in data collection or in data dissemination. (e.g., a time series could be available at annual frequency but the underlying data are compiled monthly). Therefore, "Frequency" can be broken down into "Frequency - data collection" and "Frequency - data dissemination". For data messages, the frequency is represented through codes. Any additional detail needed (e.g. "weekly on Thursday") must be inserted as free text within "Frequency detail".</com:AnnotationText>
+            </com:Annotation>
+          </com:Annotations>
+          <com:Name xml:lang="en">Frequency</com:Name>
+          <com:Description xml:lang="en">The time interval at which observations occur over a given time period.</com:Description>
+          <str:CoreRepresentation>
+            <str:Enumeration>
+              <Ref id="CL_FREQ" version="1.0" agencyID="SDMX" package="codelist" class="Codelist"/>
+            </str:Enumeration>
+          </str:CoreRepresentation>
+        </str:Concept>
+        <str:Concept id="OBS_VALUE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(1.0).OBS_VALUE">
+          <com:Annotations>
+            <com:Annotation>
+              <com:AnnotationType>CONTEXT</com:AnnotationType>
+              <com:AnnotationText xml:lang="en">The "observation value" is the field which holds the data.</com:AnnotationText>
+            </com:Annotation>
+          </com:Annotations>
+          <com:Name xml:lang="en">Observation value</com:Name>
+          <com:Description xml:lang="en">The value of a particular variable at a particular period.</com:Description>
+          <str:CoreRepresentation>
+            <str:TextFormat textType="String"/>
+          </str:CoreRepresentation>
+        </str:Concept>
+        <str:Concept id="OBS_STATUS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(1.0).OBS_STATUS">
+          <com:Annotations>
+            <com:Annotation>
+              <com:AnnotationType>CONTEXT</com:AnnotationType>
+              <com:AnnotationText xml:lang="en">This item is normally coded and uses codes providing information about the status of a value, with respect to events such as "break", "estimated value", "forecast", "missing value", or "provisional value". In some cases, there is more than one event that may have influenced the value (e.g. a break in methodology may be accompanied with the fact that an observation is an estimate). A textual comment providing more detailed information on important events related to an observation can be added via the attribute "Comment".</com:AnnotationText>
+            </com:Annotation>
+          </com:Annotations>
+          <com:Name xml:lang="en">Observation Status</com:Name>
+          <com:Description xml:lang="en">Information on the quality of a value or an unusual or missing value.</com:Description>
+          <str:CoreRepresentation>
+            <str:Enumeration>
+              <Ref id="CL_OBS_STATUS" version="1.0" agencyID="SDMX" package="codelist" class="Codelist"/>
+            </str:Enumeration>
+          </str:CoreRepresentation>
+        </str:Concept>
+        <str:Concept id="TIME_PERIOD" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(1.0).TIME_PERIOD">
+          <com:Annotations>
+            <com:Annotation>
+              <com:AnnotationType>CONTEXT</com:AnnotationType>
+              <com:AnnotationText xml:lang="en">The measurement represented by each observation corresponds to a specific point in time (e.g. a single day) or a period (e.g. a month, a fiscal year, or a calendar year). This is used as a time stamp and is of particular importance for time series data. In cases where the actual time period of the data differs from the target reference period, "time period" refers to the actual period.</com:AnnotationText>
+            </com:Annotation>
+          </com:Annotations>
+          <com:Name xml:lang="en">Time Period</com:Name>
+          <com:Description xml:lang="en">The period of time or point in time to which the measured observation refers.</com:Description>
+          <str:CoreRepresentation>
+            <str:TextFormat textType="ObservationalTimePeriod"/>
+          </str:CoreRepresentation>
+        </str:Concept>
+        <str:Concept id="TITLE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(1.0).TITLE">
+          <com:Annotations>
+            <com:Annotation>
+              <com:AnnotationType>CONTEXT</com:AnnotationType>
+              <com:AnnotationText xml:lang="en">"Title" is a short name describing and identifying a statistical object it is attached to. IN SDMX, a title can be referred, for example, to a time series as a "time series title", or to a group as a "group title". A list of ID broken down by attachment level is therefore needed: TITLE_TS, or TITLE_GRP.</com:AnnotationText>
+            </com:Annotation>
+          </com:Annotations>
+          <com:Name xml:lang="en">Title</com:Name>
+          <com:Description xml:lang="en">Textual label used as identification of a statistical object.</com:Description>
+          <str:CoreRepresentation>
+            <str:TextFormat textType="String"/>
+          </str:CoreRepresentation>
+        </str:Concept>
+        <str:Concept id="UNIT_MULT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(1.0).UNIT_MULT">
+          <com:Annotations>
+            <com:Annotation>
+              <com:AnnotationType>CONTEXT</com:AnnotationType>
+              <com:AnnotationText xml:lang="en">In some data bases, it is referred to as SCALE, MAGNITUDE or POWER., e.g. "UM=6" means that observations are in millions.</com:AnnotationText>
+            </com:Annotation>
+          </com:Annotations>
+          <com:Name xml:lang="en">Unit Multiplier</com:Name>
+          <com:Description xml:lang="en">Exponent in base 10 specified so that multiplying the observation numeric values by 10^UNIT_MULT gives a value expressed in the UNIT.</com:Description>
+          <str:CoreRepresentation>
+            <str:Enumeration>
+              <Ref id="CL_UNIT_MULT" version="1.0" agencyID="SDMX" package="codelist" class="Codelist"/>
+            </str:Enumeration>
+          </str:CoreRepresentation>
+        </str:Concept>
+        <str:Concept id="UNIT_MEASURE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(1.0).UNIT_MEASURE">
+          <com:Annotations>
+            <com:Annotation>
+              <com:AnnotationType>CONTEXT</com:AnnotationType>
+              <com:AnnotationText xml:lang="en">The unit of measure is a quantity or increment by which something is counted or described, such as kg, mm, Ãƒâ€šÃ‚Â°C, Ãƒâ€šÃ‚Â°F, monetary units such as Euro or US dollar, simple number counts or index numbers. The unit of measure has a type (e.g. currency) and, in connection with the unit multiplier, provides the level of detail for the value of the variable (e.g. Euro, 1000 Euro). For data messages, the concept is always represented by codes. Any additional detail needed must be inserted as free text within "unit of measure detail".</com:AnnotationText>
+            </com:Annotation>
+          </com:Annotations>
+          <com:Name xml:lang="en">Unit of Measure</com:Name>
+          <com:Description xml:lang="en">The unit in which the data values are measured.</com:Description>
+        </str:Concept>
+      </str:ConceptScheme>
+    </str:Concepts>
+    <str:DataStructures>
+      <str:DataStructure id="DEMOGRAPHY" uri="http://sdmx.istat.it" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=FAO:DEMOGRAPHY(2.1)" agencyID="FAO" version="2.1" validFrom="2014-08-01T18:48:36.000Z" validTo="2016-08-31T18:48:40.000Z" isFinal="false">
+        <com:Annotations>
+          <com:Annotation>
+            <com:AnnotationTitle>Annotation of Demography</com:AnnotationTitle>
+            <com:AnnotationType>Test</com:AnnotationType>
+            <com:AnnotationText xml:lang="it">Questa ÃƒÂ¨ una annotazione collegata alla Demographia (DEM_ANNO:Test)</com:AnnotationText>
+            <com:AnnotationText xml:lang="en">This is the annotation related to Demography (DEMO_ANNO:Test)</com:AnnotationText>
+          </com:Annotation>
+        </com:Annotations>
+        <com:Name xml:lang="it">Descrizione struttura dati per la demografia</com:Name>
+        <com:Name xml:lang="en">DEMOGRAPHY Data Structure</com:Name>
+        <com:Description xml:lang="it">Questionario rapida della demografia</com:Description>
+        <com:Description xml:lang="en">Demography Rapid questonnaire</com:Description>
+        <str:DataStructureComponents>
+          <str:DimensionList id="DimensionDescriptor" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DimensionDescriptor=FAO:DEMOGRAPHY(2.1).DimensionDescriptor">
+            <str:Dimension id="FREQ" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Dimension=FAO:DEMOGRAPHY(2.1).FREQ" position="1">
+              <str:ConceptIdentity>
+                <Ref id="FREQ" maintainableParentID="CROSS_DOMAIN_CONCEPTS" maintainableParentVersion="1.0" agencyID="SDMX" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:Enumeration>
+                  <Ref id="CL_FREQ" version="1.0" agencyID="SDMX" package="codelist" class="Codelist"/>
+                </str:Enumeration>
+                <str:EnumerationFormat textType="String" minLength="1" maxLength="5"/>
+              </str:LocalRepresentation>
+              <str:ConceptRole>
+                <Ref id="FREQ" maintainableParentID="CS_NA" maintainableParentVersion="1.1" agencyID="ESTAT" package="conceptscheme" class="Concept"/>
+              </str:ConceptRole>
+            </str:Dimension>
+            <str:Dimension id="COUNTRY" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Dimension=FAO:DEMOGRAPHY(2.1).COUNTRY" position="2">
+              <str:ConceptIdentity>
+                <Ref id="COUNTRY" maintainableParentID="DEMO_CONCEPTS" maintainableParentVersion="1.0" agencyID="ESTAT" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:Enumeration>
+                  <Ref id="CL_COUNTRY" version="1.0" agencyID="ESTAT" package="codelist" class="Codelist"/>
+                </str:Enumeration>
+                <str:EnumerationFormat textType="String" minLength="4" maxLength="8" pattern="ciao ciao"/>
+              </str:LocalRepresentation>
+              <str:ConceptRole>
+                <Ref id="COUNTRY" maintainableParentID="DEMO_CONCEPTS" maintainableParentVersion="1.0" agencyID="ESTAT" package="conceptscheme" class="Concept"/>
+              </str:ConceptRole>
+            </str:Dimension>
+            <str:Dimension id="SEX" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Dimension=FAO:DEMOGRAPHY(2.1).SEX" position="3">
+              <str:ConceptIdentity>
+                <Ref id="SEX" maintainableParentID="DEMO_CONCEPTS" maintainableParentVersion="1.0" agencyID="ESTAT" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:Enumeration>
+                  <Ref id="CL_SEX" version="1.0" agencyID="ESTAT" package="codelist" class="Codelist"/>
+                </str:Enumeration>
+              </str:LocalRepresentation>
+            </str:Dimension>
+            <str:MeasureDimension id="DEMO" urn="urn:sdmx:org.sdmx.infomodel.datastructure.MeasureDimension=FAO:DEMOGRAPHY(2.1).DEMO" position="4">
+              <str:ConceptIdentity>
+                <Ref id="DEMO" maintainableParentID="DEMO_CONCEPTS" maintainableParentVersion="1.0" agencyID="ESTAT" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:Enumeration>
+                  <Ref id="DEMO_MEASURES" version="1.0" agencyID="ESTAT" package="conceptscheme" class="ConceptScheme"/>
+                </str:Enumeration>
+              </str:LocalRepresentation>
+            </str:MeasureDimension>
+            <str:TimeDimension id="TIME_PERIOD" urn="urn:sdmx:org.sdmx.infomodel.datastructure.TimeDimension=FAO:DEMOGRAPHY(2.1).TIME_PERIOD" position="5">
+              <str:ConceptIdentity>
+                <Ref id="TIME_PERIOD" maintainableParentID="CROSS_DOMAIN_CONCEPTS" maintainableParentVersion="1.0" agencyID="SDMX" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:TextFormat textType="ObservationalTimePeriod"/>
+              </str:LocalRepresentation>
+            </str:TimeDimension>
+          </str:DimensionList>
+          <str:Group id="Group1" urn="urn:sdmx:org.sdmx.infomodel.datastructure.GroupDimensionDescriptor=FAO:DEMOGRAPHY(2.1).Group1">
+            <str:GroupDimension>
+              <str:DimensionReference>
+                <Ref id="FREQ"/>
+              </str:DimensionReference>
+            </str:GroupDimension>
+            <str:GroupDimension>
+              <str:DimensionReference>
+                <Ref id="SEX"/>
+              </str:DimensionReference>
+            </str:GroupDimension>
+            <str:GroupDimension>
+              <str:DimensionReference>
+                <Ref id="DEMO"/>
+              </str:DimensionReference>
+            </str:GroupDimension>
+          </str:Group>
+          <str:AttributeList id="AttributeDescriptor" urn="urn:sdmx:org.sdmx.infomodel.datastructure.AttributeDescriptor=FAO:DEMOGRAPHY(2.1).AttributeDescriptor">
+            <str:Attribute id="DECIMALS" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataAttribute=FAO:DEMOGRAPHY(2.1).DECIMALS" assignmentStatus="Mandatory">
+              <str:ConceptIdentity>
+                <Ref id="DECIMALS" maintainableParentID="CROSS_DOMAIN_CONCEPTS" maintainableParentVersion="1.0" agencyID="SDMX" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:Enumeration>
+                  <Ref id="CL_DECIMALS" version="1.0" agencyID="SDMX" package="codelist" class="Codelist"/>
+                </str:Enumeration>
+              </str:LocalRepresentation>
+              <str:AttributeRelationship>
+                <str:Dimension>
+                  <Ref id="DEMO"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="COUNTRY"/>
+                </str:Dimension>
+              </str:AttributeRelationship>
+            </str:Attribute>
+            <str:Attribute id="UNIT_MEASURE" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataAttribute=FAO:DEMOGRAPHY(2.1).UNIT_MEASURE" assignmentStatus="Mandatory">
+              <str:ConceptIdentity>
+                <Ref id="UNIT_MEASURE" maintainableParentID="CROSS_DOMAIN_CONCEPTS" maintainableParentVersion="1.0" agencyID="SDMX" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:Enumeration>
+                  <Ref id="CL_UNIT" version="1.0" agencyID="ESTAT" package="codelist" class="Codelist"/>
+                </str:Enumeration>
+              </str:LocalRepresentation>
+              <str:AttributeRelationship>
+                <str:Dimension>
+                  <Ref id="DEMO"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="SEX"/>
+                </str:Dimension>
+              </str:AttributeRelationship>
+            </str:Attribute>
+            <str:Attribute id="UNIT_MULT" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataAttribute=FAO:DEMOGRAPHY(2.1).UNIT_MULT" assignmentStatus="Mandatory">
+              <str:ConceptIdentity>
+                <Ref id="UNIT_MULT" maintainableParentID="CROSS_DOMAIN_CONCEPTS" maintainableParentVersion="1.0" agencyID="SDMX" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:Enumeration>
+                  <Ref id="CL_UNIT_MULT" version="1.0" agencyID="SDMX" package="codelist" class="Codelist"/>
+                </str:Enumeration>
+              </str:LocalRepresentation>
+              <str:AttributeRelationship>
+                <str:Dimension>
+                  <Ref id="DEMO"/>
+                </str:Dimension>
+              </str:AttributeRelationship>
+            </str:Attribute>
+            <str:Attribute id="OBS_STATUS" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataAttribute=FAO:DEMOGRAPHY(2.1).OBS_STATUS" assignmentStatus="Mandatory">
+              <str:ConceptIdentity>
+                <Ref id="OBS_STATUS" maintainableParentID="CROSS_DOMAIN_CONCEPTS" maintainableParentVersion="1.0" agencyID="SDMX" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:Enumeration>
+                  <Ref id="CL_OBS_STATUS" version="1.0" agencyID="SDMX" package="codelist" class="Codelist"/>
+                </str:Enumeration>
+              </str:LocalRepresentation>
+              <str:AttributeRelationship>
+                <str:PrimaryMeasure>
+                  <Ref id="OBS_VALUE"/>
+                </str:PrimaryMeasure>
+              </str:AttributeRelationship>
+            </str:Attribute>
+          </str:AttributeList>
+          <str:MeasureList id="MeasureDescriptor" urn="urn:sdmx:org.sdmx.infomodel.datastructure.MeasureDescriptor=FAO:DEMOGRAPHY(2.1).MeasureDescriptor">
+            <str:PrimaryMeasure id="OBS_VALUE" urn="urn:sdmx:org.sdmx.infomodel.datastructure.PrimaryMeasure=FAO:DEMOGRAPHY(2.1).OBS_VALUE">
+              <str:ConceptIdentity>
+                <Ref id="OBS_VALUE" maintainableParentID="CROSS_DOMAIN_CONCEPTS" maintainableParentVersion="1.0" agencyID="SDMX" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:TextFormat textType="Decimal"/>
+              </str:LocalRepresentation>
+            </str:PrimaryMeasure>
+          </str:MeasureList>
+        </str:DataStructureComponents>
+      </str:DataStructure>
+    </str:DataStructures>
+  </mes:Structures>
+</mes:Structure>

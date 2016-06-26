@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mes:Structure xmlns:mes="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message" xmlns:str="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure" xmlns:com="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+  <mes:Header>
+    <mes:ID>DATA_CONSUMERS</mes:ID>
+    <mes:Test>false</mes:Test>
+    <mes:Prepared>2014-05-07T11:25:19.874Z</mes:Prepared>
+    <mes:Sender id="DSW"/>
+    <mes:Receiver id="unknown"/>
+  </mes:Header>
+  <mes:Structures>
+    <str:OrganisationSchemes>
+      <str:DataConsumerScheme id="DATA_CONSUMERS" uri="http://www.istat.it" urn="urn:sdmx:org.sdmx.infomodel.base.DataConsumerScheme=UN:DATA_CONSUMERS(1.0)" agencyID="UN" version="1.0" validFrom="2014-05-01T11:19:56.000Z" validTo="2014-05-23T11:19:58.000Z" isFinal="false">
+        <com:Annotations>
+          <com:Annotation>
+            <com:AnnotationTitle>Data consumer schema</com:AnnotationTitle>
+            <com:AnnotationType>SEM</com:AnnotationType>
+            <com:AnnotationText xml:lang="it">annotation su schema di data consumer</com:AnnotationText>
+            <com:AnnotationText xml:lang="en">Data consumer schema</com:AnnotationText>
+          </com:Annotation>
+        </com:Annotations>
+        <com:Name xml:lang="it">Schema di data consumer</com:Name>
+        <com:Name xml:lang="en">Data consumer scheme</com:Name>
+        <com:Description xml:lang="it">Schema di data consumer</com:Description>
+        <com:Description xml:lang="en">Data consumer scheme</com:Description>
+        <str:DataConsumer id="OECD" urn="urn:sdmx:org.sdmx.infomodel.base.DataConsumer=UN:DATA_CONSUMERS(1.0).OECD">
+          <com:Annotations>
+            <com:Annotation>
+              <com:AnnotationTitle>Annotation ocse</com:AnnotationTitle>
+              <com:AnnotationType>SEM</com:AnnotationType>
+              <com:AnnotationText xml:lang="en">Ocse organization</com:AnnotationText>
+            </com:Annotation>
+          </com:Annotations>
+          <com:Name xml:lang="it">OCSE</com:Name>
+          <com:Name xml:lang="en">OECD</com:Name>
+          <com:Description xml:lang="it">Organizzazione OCSE</com:Description>
+          <com:Description xml:lang="en">OECD organization</com:Description>
+        </str:DataConsumer>
+        <str:DataConsumer id="INSEE" urn="urn:sdmx:org.sdmx.infomodel.base.DataConsumer=UN:DATA_CONSUMERS(1.0).INSEE">
+          <com:Name xml:lang="it">INSEE</com:Name>
+          <com:Name xml:lang="en">INSEE</com:Name>
+          <com:Description xml:lang="it">Istituto nazionale di statistica di Francia</com:Description>
+          <com:Description xml:lang="en">National statistical institute of France</com:Description>
+        </str:DataConsumer>
+      </str:DataConsumerScheme>
+    </str:OrganisationSchemes>
+  </mes:Structures>
+</mes:Structure>

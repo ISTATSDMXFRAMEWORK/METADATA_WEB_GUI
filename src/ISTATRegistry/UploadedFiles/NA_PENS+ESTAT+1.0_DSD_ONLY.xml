@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mes:Structure xmlns:mes="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message" xmlns:str="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure" xmlns:com="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+  <mes:Header>
+    <mes:ID>xxxx</mes:ID>
+    <mes:Test>false</mes:Test>
+    <mes:Prepared>2014-05-07T09:24:06.684Z</mes:Prepared>
+    <mes:Sender id="DSW"/>
+    <mes:Receiver id="unknown"/>
+  </mes:Header>
+	  <mes:Structures>
+	<str:DataStructures>
+      <str:DataStructure id="NA_PENS" uri="urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ESTAT:NA_PENS(1.0)" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ESTAT:NA_PENS(1.0)" agencyID="ESTAT" version="1.9" validFrom="2014-05-01T09:16:39.000Z" validTo="2014-05-23T09:16:42.000Z" isFinal="true">
+        <com:Annotations>
+          <com:Annotation>
+            <com:AnnotationTitle>Annotation DSD</com:AnnotationTitle>
+            <com:AnnotationType>SEM</com:AnnotationType>
+            <com:AnnotationText xml:lang="it">Annotazione DSD</com:AnnotationText>
+            <com:AnnotationText xml:lang="en">DSD annotation</com:AnnotationText>
+          </com:Annotation>
+        </com:Annotations>
+        <com:Name xml:lang="it">Pensioni CN</com:Name>
+        <com:Name xml:lang="en">NA Pensions</com:Name>
+        <com:Description xml:lang="it">Pensioni CN</com:Description>
+        <com:Description xml:lang="en">NA Pensions</com:Description>
+        <str:DataStructureComponents>
+          <str:DimensionList id="DimensionDescriptor" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DimensionDescriptor=ESTAT:NA_PENS(1.0).DimensionDescriptor">
+            <str:Dimension id="FREQ" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Dimension=ESTAT:NA_PENS(1.0).FREQ" position="1">
+			<com:Annotations>
+			  <com:Annotation>
+				<com:AnnotationTitle>Annotation DIMENSION</com:AnnotationTitle>
+				<com:AnnotationType>SEM</com:AnnotationType>
+				<com:AnnotationText xml:lang="it">Annotazione DIMENSION</com:AnnotationText>
+				<com:AnnotationText xml:lang="en">DIMENSION annotation</com:AnnotationText>
+			  </com:Annotation>
+			</com:Annotations>			
+              <str:ConceptIdentity>
+                <Ref id="FREQ" maintainableParentID="CS_NA" maintainableParentVersion="1.0" agencyID="ESTAT" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:Enumeration>
+                  <Ref id="CL_FREQ" version="1.0" agencyID="SDMX" package="codelist" class="Codelist"/>
+                </str:Enumeration>
+              </str:LocalRepresentation>
+            </str:Dimension>
+            <str:Dimension id="REF_AREA" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Dimension=ESTAT:NA_PENS(1.0).REF_AREA" position="2">
+              <str:ConceptIdentity>
+                <Ref id="REF_AREA" maintainableParentID="CS_NA" maintainableParentVersion="1.0" agencyID="ESTAT" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:Enumeration>
+                  <Ref id="CL_AREA" version="1.0" agencyID="IMF" package="codelist" class="Codelist"/>
+                </str:Enumeration>
+              </str:LocalRepresentation>
+            </str:Dimension>
+            <str:Dimension id="COUNTERPART_AREA" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Dimension=ESTAT:NA_PENS(1.0).COUNTERPART_AREA" position="3">
+              <str:ConceptIdentity>
+                <Ref id="COUNTERPART_AREA" maintainableParentID="CS_NA" maintainableParentVersion="1.0" agencyID="ESTAT" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:Enumeration>
+                  <Ref id="CL_AREA" version="1.0" agencyID="IMF" package="codelist" class="Codelist"/>
+                </str:Enumeration>
+              </str:LocalRepresentation>
+            </str:Dimension>
+            <str:Dimension id="REF_SECTOR" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Dimension=ESTAT:NA_PENS(1.0).REF_SECTOR" position="4">
+              <str:ConceptIdentity>
+                <Ref id="REF_SECTOR" maintainableParentID="CS_NA" maintainableParentVersion="1.0" agencyID="ESTAT" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:Enumeration>
+                  <Ref id="CL_SECTOR" version="1.0" agencyID="ESTAT" package="codelist" class="Codelist"/>
+                </str:Enumeration>
+              </str:LocalRepresentation>
+            </str:Dimension>
+            <str:Dimension id="COUNTERPART_SECTOR" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Dimension=ESTAT:NA_PENS(1.0).COUNTERPART_SECTOR" position="5">
+              <str:ConceptIdentity>
+                <Ref id="COUNTERPART_SECTOR" maintainableParentID="CS_NA" maintainableParentVersion="1.0" agencyID="ESTAT" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:Enumeration>
+                  <Ref id="CL_SECTOR" version="1.0" agencyID="ESTAT" package="codelist" class="Codelist"/>
+                </str:Enumeration>
+              </str:LocalRepresentation>
+            </str:Dimension>
+            <str:Dimension id="STO" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Dimension=ESTAT:NA_PENS(1.0).STO" position="6">
+              <str:ConceptIdentity>
+                <Ref id="STO" maintainableParentID="CS_NA" maintainableParentVersion="1.0" agencyID="ESTAT" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:Enumeration>
+                  <Ref id="CL_NA_STO" version="1.0" agencyID="ESTAT" package="codelist" class="Codelist"/>
+                </str:Enumeration>
+              </str:LocalRepresentation>
+            </str:Dimension>
+            <str:Dimension id="INSTR_ASSET" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Dimension=ESTAT:NA_PENS(1.0).INSTR_ASSET" position="7">
+              <str:ConceptIdentity>
+                <Ref id="INSTR_ASSET" maintainableParentID="CS_NA" maintainableParentVersion="1.0" agencyID="ESTAT" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:Enumeration>
+                  <Ref id="CL_INSTR_ASSET" version="1.0" agencyID="ESTAT" package="codelist" class="Codelist"/>
+                </str:Enumeration>
+              </str:LocalRepresentation>
+            </str:Dimension>
+            <str:Dimension id="PENSION_FUNDTYPE" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Dimension=ESTAT:NA_PENS(1.0).PENSION_FUNDTYPE" position="8">
+              <str:ConceptIdentity>
+                <Ref id="PENSION_FUNDTYPE" maintainableParentID="CS_NA" maintainableParentVersion="1.0" agencyID="ESTAT" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:Enumeration>
+                  <Ref id="CL_PENS_FUNDTYPE" version="1.0" agencyID="ESTAT" package="codelist" class="Codelist"/>
+                </str:Enumeration>
+              </str:LocalRepresentation>
+            </str:Dimension>
+            <str:Dimension id="ACCOUNTING_ENTRY" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Dimension=ESTAT:NA_PENS(1.0).ACCOUNTING_ENTRY" position="9">
+              <str:ConceptIdentity>
+                <Ref id="ACCOUNTING_ENTRY" maintainableParentID="CS_NA" maintainableParentVersion="1.0" agencyID="ESTAT" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:Enumeration>
+                  <Ref id="CL_ACCOUNT_ENTRY" version="1.0" agencyID="IMF" package="codelist" class="Codelist"/>
+                </str:Enumeration>
+              </str:LocalRepresentation>
+            </str:Dimension>
+            <str:Dimension id="UNIT_MEASURE" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Dimension=ESTAT:NA_PENS(1.0).UNIT_MEASURE" position="10">
+              <str:ConceptIdentity>
+                <Ref id="UNIT_MEASURE" maintainableParentID="CS_NA" maintainableParentVersion="1.0" agencyID="ESTAT" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:Enumeration>
+                  <Ref id="CL_UNIT" version="1.0" agencyID="IMF" package="codelist" class="Codelist"/>
+                </str:Enumeration>
+              </str:LocalRepresentation>
+            </str:Dimension>
+            <str:TimeDimension id="TIME_PERIOD" urn="urn:sdmx:org.sdmx.infomodel.datastructure.TimeDimension=ESTAT:NA_PENS(1.0).TIME_PERIOD" position="11">
+              <str:ConceptIdentity>
+                <Ref id="TIME_PERIOD" maintainableParentID="CS_NA" maintainableParentVersion="1.0" agencyID="ESTAT" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:TextFormat textType="ObservationalTimePeriod"/>
+              </str:LocalRepresentation>
+            </str:TimeDimension>
+          </str:DimensionList>
+          <str:Group id="GR_3" urn="urn:sdmx:org.sdmx.infomodel.datastructure.GroupDimensionDescriptor=ESTAT:NA_PENS(1.0).GR_3">
+			<com:Annotations>
+			  <com:Annotation>
+				<com:AnnotationTitle>Annotation on group</com:AnnotationTitle>
+				<com:AnnotationType>ANN</com:AnnotationType>
+				<com:AnnotationText xml:lang="it">annotazione sull'attività economica</com:AnnotationText>
+				<com:AnnotationText xml:lang="en">annotation on economic activity</com:AnnotationText>
+			  </com:Annotation>
+			  <com:Annotation>
+				<com:AnnotationTitle>annot on group 2</com:AnnotationTitle>
+				<com:AnnotationType>SEM</com:AnnotationType>
+				<com:AnnotationText xml:lang="it">Annotazione</com:AnnotationText>
+				<com:AnnotationText xml:lang="en">Annot on act</com:AnnotationText>
+			  </com:Annotation>
+			</com:Annotations>		  
+            <str:GroupDimension>
+              <str:DimensionReference>
+                <Ref id="REF_AREA"/>
+              </str:DimensionReference>
+            </str:GroupDimension>
+            <str:GroupDimension>
+              <str:DimensionReference>
+                <Ref id="REF_SECTOR"/>
+              </str:DimensionReference>
+            </str:GroupDimension>
+            <str:GroupDimension>
+              <str:DimensionReference>
+                <Ref id="COUNTERPART_SECTOR"/>
+              </str:DimensionReference>
+            </str:GroupDimension>
+          </str:Group>
+          <str:AttributeList id="AttributeDescriptor" urn="urn:sdmx:org.sdmx.infomodel.datastructure.AttributeDescriptor=ESTAT:NA_PENS(1.0).AttributeDescriptor">
+            <str:Attribute id="OBS_STATUS" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataAttribute=ESTAT:NA_PENS(1.0).OBS_STATUS" assignmentStatus="Conditional">
+			<com:Annotations>
+			  <com:Annotation>
+				<com:AnnotationTitle>Annotation Attribute</com:AnnotationTitle>
+				<com:AnnotationType>SEM</com:AnnotationType>
+				<com:AnnotationText xml:lang="it">Annotazione Attribute</com:AnnotationText>
+				<com:AnnotationText xml:lang="en">Attribute annotation</com:AnnotationText>
+			  </com:Annotation>
+			</com:Annotations>			
+              <str:ConceptIdentity>
+                <Ref id="OBS_STATUS" maintainableParentID="CS_NA" maintainableParentVersion="1.0" agencyID="ESTAT" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:Enumeration>
+                  <Ref id="CL_OBS_STATUS" version="1.0" agencyID="SDMX" package="codelist" class="Codelist"/>
+                </str:Enumeration>
+              </str:LocalRepresentation>
+              <str:AttributeRelationship>
+                <str:PrimaryMeasure>
+                  <Ref id="OBS_VALUE"/>
+                </str:PrimaryMeasure>
+              </str:AttributeRelationship>
+            </str:Attribute>
+            <str:Attribute id="CONF_STATUS" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataAttribute=ESTAT:NA_PENS(1.0).CONF_STATUS" assignmentStatus="Conditional">
+              <str:ConceptIdentity>
+                <Ref id="CONF_STATUS" maintainableParentID="CS_NA" maintainableParentVersion="1.0" agencyID="ESTAT" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:Enumeration>
+                  <Ref id="CL_CONF_STATUS" version="1.0" agencyID="SDMX" package="codelist" class="Codelist"/>
+                </str:Enumeration>
+              </str:LocalRepresentation>
+              <str:AttributeRelationship>
+                <str:PrimaryMeasure>
+                  <Ref id="OBS_VALUE"/>
+                </str:PrimaryMeasure>
+              </str:AttributeRelationship>
+            </str:Attribute>
+            <str:Attribute id="COMMENT_OBS" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataAttribute=ESTAT:NA_PENS(1.0).COMMENT_OBS" assignmentStatus="Conditional">
+              <str:ConceptIdentity>
+                <Ref id="COMMENT_OBS" maintainableParentID="CS_NA" maintainableParentVersion="1.0" agencyID="ESTAT" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:TextFormat textType="String"/>
+              </str:LocalRepresentation>
+              <str:AttributeRelationship>
+                <str:PrimaryMeasure>
+                  <Ref id="OBS_VALUE"/>
+                </str:PrimaryMeasure>
+              </str:AttributeRelationship>
+            </str:Attribute>
+            <str:Attribute id="EMBARGO_DATE" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataAttribute=ESTAT:NA_PENS(1.0).EMBARGO_DATE" assignmentStatus="Conditional">
+              <str:ConceptIdentity>
+                <Ref id="EMBARGO_DATE" maintainableParentID="CS_NA" maintainableParentVersion="1.0" agencyID="ESTAT" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:TextFormat textType="DateTime"/>
+              </str:LocalRepresentation>
+              <str:AttributeRelationship>
+                <str:PrimaryMeasure>
+                  <Ref id="OBS_VALUE"/>
+                </str:PrimaryMeasure>
+              </str:AttributeRelationship>
+            </str:Attribute>
+            <str:Attribute id="REF_PERIOD_DETAIL" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataAttribute=ESTAT:NA_PENS(1.0).REF_PERIOD_DETAIL" assignmentStatus="Conditional">
+              <str:ConceptIdentity>
+                <Ref id="REF_PERIOD_DETAIL" maintainableParentID="CS_NA" maintainableParentVersion="1.0" agencyID="ESTAT" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:Enumeration>
+                  <Ref id="CL_REF_PERIOD_DTL" version="1.0" agencyID="ESTAT" package="codelist" class="Codelist"/>
+                </str:Enumeration>
+              </str:LocalRepresentation>
+              <str:AttributeRelationship>
+                <str:Dimension>
+                  <Ref id="FREQ"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="REF_AREA"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="STO"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="INSTR_ASSET"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="REF_SECTOR"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="COUNTERPART_AREA"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="COUNTERPART_SECTOR"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="ACCOUNTING_ENTRY"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="UNIT_MEASURE"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="PENSION_FUNDTYPE"/>
+                </str:Dimension>
+              </str:AttributeRelationship>
+            </str:Attribute>
+            <str:Attribute id="TIME_FORMAT" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataAttribute=ESTAT:NA_PENS(1.0).TIME_FORMAT" assignmentStatus="Conditional">
+              <str:ConceptIdentity>
+                <Ref id="TIME_FORMAT" maintainableParentID="CS_NA" maintainableParentVersion="1.0" agencyID="ESTAT" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:Enumeration>
+                  <Ref id="CL_TIME_FORMAT" version="1.0" agencyID="SDMX" package="codelist" class="Codelist"/>
+                </str:Enumeration>
+              </str:LocalRepresentation>
+              <str:AttributeRelationship>
+                <str:Dimension>
+                  <Ref id="FREQ"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="REF_AREA"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="STO"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="INSTR_ASSET"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="REF_SECTOR"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="COUNTERPART_AREA"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="COUNTERPART_SECTOR"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="ACCOUNTING_ENTRY"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="UNIT_MEASURE"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="PENSION_FUNDTYPE"/>
+                </str:Dimension>
+              </str:AttributeRelationship>
+            </str:Attribute>
+            <str:Attribute id="TIME_PER_COLLECT" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataAttribute=ESTAT:NA_PENS(1.0).TIME_PER_COLLECT" assignmentStatus="Conditional">
+              <str:ConceptIdentity>
+                <Ref id="TIME_PER_COLLECT" maintainableParentID="CS_NA" maintainableParentVersion="1.0" agencyID="ESTAT" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:Enumeration>
+                  <Ref id="CL_TIME_COLLECT" version="1.0" agencyID="IMF" package="codelist" class="Codelist"/>
+                </str:Enumeration>
+              </str:LocalRepresentation>
+              <str:AttributeRelationship>
+                <str:Dimension>
+                  <Ref id="FREQ"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="REF_AREA"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="STO"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="INSTR_ASSET"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="REF_SECTOR"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="COUNTERPART_AREA"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="COUNTERPART_SECTOR"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="ACCOUNTING_ENTRY"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="UNIT_MEASURE"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="PENSION_FUNDTYPE"/>
+                </str:Dimension>
+              </str:AttributeRelationship>
+            </str:Attribute>
+            <str:Attribute id="DECIMALS" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataAttribute=ESTAT:NA_PENS(1.0).DECIMALS" assignmentStatus="Mandatory">
+              <str:ConceptIdentity>
+                <Ref id="DECIMALS" maintainableParentID="CS_NA" maintainableParentVersion="1.0" agencyID="ESTAT" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:Enumeration>
+                  <Ref id="CL_DECIMALS" version="1.0" agencyID="SDMX" package="codelist" class="Codelist"/>
+                </str:Enumeration>
+              </str:LocalRepresentation>
+              <str:AttributeRelationship>
+                <str:Dimension>
+                  <Ref id="FREQ"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="REF_AREA"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="STO"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="INSTR_ASSET"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="REF_SECTOR"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="COUNTERPART_AREA"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="COUNTERPART_SECTOR"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="ACCOUNTING_ENTRY"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="UNIT_MEASURE"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="PENSION_FUNDTYPE"/>
+                </str:Dimension>
+              </str:AttributeRelationship>
+            </str:Attribute>
+            <str:Attribute id="TABLE_IDENTIFIER" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataAttribute=ESTAT:NA_PENS(1.0).TABLE_IDENTIFIER" assignmentStatus="Conditional">
+              <str:ConceptIdentity>
+                <Ref id="TABLE_IDENTIFIER" maintainableParentID="CS_NA" maintainableParentVersion="1.0" agencyID="ESTAT" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:Enumeration>
+                  <Ref id="CL_NA_TABLEID" version="1.0" agencyID="ESTAT" package="codelist" class="Codelist"/>
+                </str:Enumeration>
+              </str:LocalRepresentation>
+              <str:AttributeRelationship>
+                <str:Dimension>
+                  <Ref id="FREQ"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="REF_AREA"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="STO"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="INSTR_ASSET"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="REF_SECTOR"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="COUNTERPART_AREA"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="COUNTERPART_SECTOR"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="ACCOUNTING_ENTRY"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="UNIT_MEASURE"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="PENSION_FUNDTYPE"/>
+                </str:Dimension>
+              </str:AttributeRelationship>
+            </str:Attribute>
+            <str:Attribute id="TITLE" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataAttribute=ESTAT:NA_PENS(1.0).TITLE" assignmentStatus="Conditional">
+              <str:ConceptIdentity>
+                <Ref id="TITLE" maintainableParentID="CS_NA" maintainableParentVersion="1.0" agencyID="ESTAT" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:TextFormat textType="String" endValue="200.0"/>
+              </str:LocalRepresentation>
+              <str:AttributeRelationship>
+                <str:Dimension>
+                  <Ref id="FREQ"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="REF_AREA"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="STO"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="INSTR_ASSET"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="REF_SECTOR"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="COUNTERPART_AREA"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="COUNTERPART_SECTOR"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="ACCOUNTING_ENTRY"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="UNIT_MEASURE"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="PENSION_FUNDTYPE"/>
+                </str:Dimension>
+              </str:AttributeRelationship>
+            </str:Attribute>
+            <str:Attribute id="UNIT_MULT" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataAttribute=ESTAT:NA_PENS(1.0).UNIT_MULT" assignmentStatus="Conditional">
+              <str:ConceptIdentity>
+                <Ref id="UNIT_MULT" maintainableParentID="CS_NA" maintainableParentVersion="1.0" agencyID="ESTAT" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:Enumeration>
+                  <Ref id="CL_UNIT_MULT" version="1.0" agencyID="SDMX" package="codelist" class="Codelist"/>
+                </str:Enumeration>
+              </str:LocalRepresentation>
+              <str:AttributeRelationship>
+                <str:Dimension>
+                  <Ref id="FREQ"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="REF_AREA"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="STO"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="INSTR_ASSET"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="REF_SECTOR"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="COUNTERPART_AREA"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="COUNTERPART_SECTOR"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="ACCOUNTING_ENTRY"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="UNIT_MEASURE"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="PENSION_FUNDTYPE"/>
+                </str:Dimension>
+              </str:AttributeRelationship>
+            </str:Attribute>
+            <str:Attribute id="LAST_UPDATE" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataAttribute=ESTAT:NA_PENS(1.0).LAST_UPDATE" assignmentStatus="Conditional">
+              <str:ConceptIdentity>
+                <Ref id="LAST_UPDATE" maintainableParentID="CS_NA" maintainableParentVersion="1.0" agencyID="ESTAT" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:TextFormat textType="DateTime"/>
+              </str:LocalRepresentation>
+              <str:AttributeRelationship>
+                <str:Dimension>
+                  <Ref id="FREQ"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="REF_AREA"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="STO"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="INSTR_ASSET"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="REF_SECTOR"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="COUNTERPART_AREA"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="COUNTERPART_SECTOR"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="ACCOUNTING_ENTRY"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="UNIT_MEASURE"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="PENSION_FUNDTYPE"/>
+                </str:Dimension>
+              </str:AttributeRelationship>
+            </str:Attribute>
+            <str:Attribute id="COMPILING_ORG" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataAttribute=ESTAT:NA_PENS(1.0).COMPILING_ORG" assignmentStatus="Conditional">
+              <str:ConceptIdentity>
+                <Ref id="COMPILING_ORG" maintainableParentID="CS_NA" maintainableParentVersion="1.0" agencyID="ESTAT" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:Enumeration>
+                  <Ref id="CL_ORGANISATION" version="1.0" agencyID="IMF" package="codelist" class="Codelist"/>
+                </str:Enumeration>
+              </str:LocalRepresentation>
+              <str:AttributeRelationship>
+                <str:Dimension>
+                  <Ref id="FREQ"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="REF_AREA"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="STO"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="INSTR_ASSET"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="REF_SECTOR"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="COUNTERPART_AREA"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="COUNTERPART_SECTOR"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="ACCOUNTING_ENTRY"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="UNIT_MEASURE"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="PENSION_FUNDTYPE"/>
+                </str:Dimension>
+              </str:AttributeRelationship>
+            </str:Attribute>
+            <str:Attribute id="COMMENT_DSET" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataAttribute=ESTAT:NA_PENS(1.0).COMMENT_DSET" assignmentStatus="Conditional">
+              <str:ConceptIdentity>
+                <Ref id="COMMENT_DSET" maintainableParentID="CS_NA" maintainableParentVersion="1.0" agencyID="ESTAT" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:TextFormat textType="String"/>
+              </str:LocalRepresentation>
+              <str:AttributeRelationship>
+                <str:None/>
+              </str:AttributeRelationship>
+            </str:Attribute>
+            <str:Attribute id="COMMENT_TS" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataAttribute=ESTAT:NA_PENS(1.0).COMMENT_TS" assignmentStatus="Conditional">
+              <str:ConceptIdentity>
+                <Ref id="COMMENT_TS" maintainableParentID="CS_NA" maintainableParentVersion="1.0" agencyID="ESTAT" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:AttributeRelationship>
+                <str:Dimension>
+                  <Ref id="FREQ"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="REF_AREA"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="COUNTERPART_AREA"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="REF_SECTOR"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="COUNTERPART_SECTOR"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="STO"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="INSTR_ASSET"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="PENSION_FUNDTYPE"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="ACCOUNTING_ENTRY"/>
+                </str:Dimension>
+                <str:Dimension>
+                  <Ref id="UNIT_MEASURE"/>
+                </str:Dimension>
+              </str:AttributeRelationship>
+            </str:Attribute>
+          </str:AttributeList>
+          <str:MeasureList id="MeasureDescriptor" urn="urn:sdmx:org.sdmx.infomodel.datastructure.MeasureDescriptor=ESTAT:NA_PENS(1.0).MeasureDescriptor">
+            <str:PrimaryMeasure id="OBS_VALUE" urn="urn:sdmx:org.sdmx.infomodel.datastructure.PrimaryMeasure=ESTAT:NA_PENS(1.0).OBS_VALUE">
+			<com:Annotations>
+			  <com:Annotation>
+				<com:AnnotationTitle>Annotation PM</com:AnnotationTitle>
+				<com:AnnotationType>SEM</com:AnnotationType>
+				<com:AnnotationText xml:lang="it">Annotazione PM</com:AnnotationText>
+				<com:AnnotationText xml:lang="en">PM annotation</com:AnnotationText>
+			  </com:Annotation>
+			</com:Annotations>
+			<str:ConceptIdentity>
+                <Ref id="OBS_VALUE" maintainableParentID="CS_NA" maintainableParentVersion="1.0" agencyID="ESTAT" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:TextFormat textType="Double"/>
+              </str:LocalRepresentation>
+            </str:PrimaryMeasure>
+          </str:MeasureList>
+        </str:DataStructureComponents>
+      </str:DataStructure>
+    </str:DataStructures>
+	  </mes:Structures>
+</mes:Structure>
