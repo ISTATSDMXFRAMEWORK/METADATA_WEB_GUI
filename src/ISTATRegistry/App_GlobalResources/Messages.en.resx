@@ -500,7 +500,7 @@ To navigate the meta information you can use the menu on the left.</value>
     <value>Artefact</value>
   </data>
   <data name="lbl_attribute" xml:space="preserve">
-    <value>Attributs</value>
+    <value>Attributes</value>
   </data>
   <data name="lbl_codelsit" xml:space="preserve">
     <value>Codelist</value>
@@ -1007,7 +1007,7 @@ To navigate the meta information you can use the menu on the left.</value>
     <value>Errore nella creazione dello StructureMap</value>
   </data>
   <data name="succ_sm_update" xml:space="preserve">
-    <value>StructureMap aggiornata correttamente</value>
+    <value>StructureMap updated successfully</value>
   </data>
   <data name="err_clm_missing_source_target" xml:space="preserve">
     <value>Select Source and Target Codelists</value>
@@ -1368,5 +1368,74 @@ To navigate the meta information you can use the menu on the left.</value>
   </data>
   <data name="lbl_csv_preview" xml:space="preserve">
     <value>CSV Preview</value>
+  </data>
+  <data name="lbl_Directory" xml:space="preserve">
+    <value>Directory</value>
+  </data>
+  <data name="lbl_Server" xml:space="preserve">
+    <value>Server</value>
+  </data>
+  <data name="lbl_theme" xml:space="preserve">
+    <value>Theme</value>
+  </data>
+  <data name="lbl_contactdirection" xml:space="preserve">
+    <value>Direction</value>
+  </data>
+  <data name="lbl_contactemail" xml:space="preserve">
+    <value>E-Mail</value>
+  </data>
+  <data name="lbl_contactname" xml:space="preserve">
+    <value>Contact name</value>
+  </data>
+  <data name="lbl_securitydomain" xml:space="preserve">
+    <value>Domain</value>
+  </data>
+  <data name="lbl_securityuser" xml:space="preserve">
+    <value>Security user group</value>
+  </data>
+  <data name="err_no_delete_artefact" xml:space="preserve">
+    <value>Non è possibile modificare o eliminare un artefatto categorizzato.</value>
+  </data>
+  <data name="app_version" xml:space="preserve">
+    <value>Ver. </value>
+  </data>
+  <data name="lbl_wsExport" xml:space="preserve">
+    <value>WS Target</value>
+  </data>
+  <data name="lbl_upload" xml:space="preserve">
+    <value>Upload</value>
+  </data>
+  <data name="lbl_WSNewAgency" xml:space="preserve">
+    <value>New Agency</value>
+  </data>
+  <data name="lbl_WSNewID" xml:space="preserve">
+    <value>New ID</value>
+  </data>
+  <data name="lbl_WSNewVersion" xml:space="preserve">
+    <value>New Version</value>
+  </data>
+  <data name="lbl_WSPassword" xml:space="preserve">
+    <value>WS Password</value>
+  </data>
+  <data name="lbl_WSUserName" xml:space="preserve">
+    <value>WS User</value>
+  </data>
+  <data name="err_wrong_credentials" xml:space="preserve">
+    <value>Wrong Credentials!</value>
+  </data>
+  <data name="btn_authentication" xml:space="preserve">
+    <value>Authentication</value>
+  </data>
+  <data name="lbl_importedArtefact" xml:space="preserve">
+    <value>Imported Artefacts</value>
+  </data>
+  <data name="msg_dataflow_imported" xml:space="preserve">
+    <value>Dataflow [ {0} - {1} - {2} ] added!&lt;br /&gt;&lt;br /&gt;</value>
+  </data>
+  <data name="btn_download" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="lbl_download_multiple_artefact" xml:space="preserve">
+    <value>Download Multiple Artefact</value>
   </data>
 </root>

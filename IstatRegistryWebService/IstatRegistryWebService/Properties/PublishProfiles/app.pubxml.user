@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+Questo file viene utilizzato dal processo di pubblicazione/creazione pacchetto del progetto Web. È possibile personalizzare il comportamento del processo
+modificando il file MSBuild. Per ulteriori informazioni su questo argomento, visitare http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\ISTAT\Source\ISTATRegistry_4.5\IstatRegistryWebService\app</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/IstatRegistryWebService.dll">
+      <publishTime>10/28/2016 10:57:07</publishTime>
+    </File>
+    <File Include="IRService.asmx">
+      <publishTime>01/27/2016 17:10:33</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>10/28/2016 10:57:07</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

@@ -62,7 +62,7 @@ namespace ISTATRegistry
 
         private void SetAction()
         {
-            if (Request["ACTION"] == null || Utils.ViewMode)
+            if (Request["ACTION"] == null || Utils.ViewMode || (Request["ISFINAL"] != null && bool.Parse(Request["ISFINAL"])))
                 _action = Action.VIEW;
             else
             {
@@ -70,15 +70,20 @@ namespace ISTATRegistry
                 {
                     IRServiceReference.User currentUser = Session[SESSION_KEYS.USER_DATA] as User;
                     _artIdentity = Utils.GetIdentityFromRequest(Request);
-                    int agencyOccurence = currentUser.agencies.Count(agency => agency.id.Equals(_artIdentity.Agency));
-                    if (agencyOccurence > 0)
+                    if (currentUser != null)
                     {
-                        _action = (Action)Enum.Parse(typeof(Action), Request["ACTION"].ToString());
+                        int agencyOccurence = currentUser.agencies.Count(agency => agency.id.Equals(_artIdentity.Agency));
+                        if (agencyOccurence > 0)
+                        {
+                            _action = (Action)Enum.Parse(typeof(Action), Request["ACTION"].ToString());
+                        }
+                        else
+                        {
+                            _action = Action.VIEW;
+                        }
                     }
                     else
-                    {
                         _action = Action.VIEW;
-                    }
                 }
                 else
                 {
@@ -206,11 +211,19 @@ namespace ISTATRegistry
             tmpCodelist.Uri = (!txt_uri.Text.Trim().Equals(string.Empty) && ValidationUtils.CheckUriFormat(txt_uri.Text)) ? new Uri(txt_uri.Text) : null;
             if (!txt_valid_from.Text.Trim().Equals(string.Empty))
             {
-                tmpCodelist.StartDate = DateTime.ParseExact(txt_valid_from.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                tmpCodelist.StartDate = DateTime.ParseExact(txt_valid_from.Text, "d/M/yyyy", CultureInfo.InvariantCulture);
+            }
+            else
+            {
+                tmpCodelist.StartDate = null;
             }
             if (!txt_valid_to.Text.Trim().Equals(string.Empty))
             {
-                tmpCodelist.EndDate = DateTime.ParseExact(txt_valid_to.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                tmpCodelist.EndDate = DateTime.ParseExact(txt_valid_to.Text, "d/M/yyyy", CultureInfo.InvariantCulture);
+            }
+            else
+            {
+                tmpCodelist.EndDate = null;
             }
             foreach (var tmpName in AddTextName.TextObjectList)
             {
@@ -320,7 +333,7 @@ namespace ISTATRegistry
             }
             #endregion
 
-            if (isInError && errorBypass)
+            if ((isInError && errorBypass))// || cl.FinalStructure.IsTrue)
                 return null;
             else if (isInError)
             {
@@ -337,11 +350,19 @@ namespace ISTATRegistry
             cl.Uri = (!txt_uri.Text.Trim().Equals(string.Empty) && ValidationUtils.CheckUriFormat(txt_uri.Text)) ? new Uri(txt_uri.Text) : null;
             if (!txt_valid_from.Text.Trim().Equals(string.Empty))
             {
-                cl.StartDate = DateTime.ParseExact(txt_valid_from.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                cl.StartDate = DateTime.ParseExact(txt_valid_from.Text, "d/M/yyyy", CultureInfo.InvariantCulture);
+            }
+            else
+            {
+                cl.StartDate = null;
             }
             if (!txt_valid_to.Text.Trim().Equals(string.Empty))
             {
-                cl.EndDate = DateTime.ParseExact(txt_valid_to.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                cl.EndDate = DateTime.ParseExact(txt_valid_to.Text, "d/M/yyyy", CultureInfo.InvariantCulture);
+            }
+            else
+            {
+                cl.EndDate = null;
             }
             if (cl.Names.Count != 0)
             {
@@ -681,8 +702,8 @@ namespace ISTATRegistry
                     txtNumberOfRows.Visible = false;
                     btnChangePaging.Visible = false;
 
-                    chk_isFinal.Checked = false;
-                    chk_isFinal.Enabled = false;
+                    //chk_isFinal.Checked = false;
+                    //chk_isFinal.Enabled = false;
 
                     AddTextName_update.ucOpenTabName = "codes";
                     AddTextName_update.ucOpenPopUpWidth = 600;
@@ -723,6 +744,7 @@ namespace ISTATRegistry
                     }
 
                     CSVImporter1.ucCodelist = cl;
+                    CSVImporter1.ucTabName = "codes";
 
                     break;
                 case Action.UPDATE:
@@ -751,14 +773,14 @@ namespace ISTATRegistry
                     Categorisations.ucArtefactType = AvailableStructures.CODELIST;
                     Categorisations.ucArtIdentity = _artIdentity;
 
-
                     // NEW
                     bool b = (bool)_artIdentity.IsFinal;
 
                     cl = GetCodeListFromSession();
                     if (cl == null) cl = GetCodelistForm(b);
-                    else cl = GetCodelistForm(cl,b);
+                    else cl = GetCodelistForm(cl, b);
                     CSVImporter1.ucCodelist = cl;
+                    CSVImporter1.ucTabName = "codes";
 
                     /*if (gvCodelistsItem.Rows.Count > 0 )
                     {
@@ -855,7 +877,7 @@ namespace ISTATRegistry
             lblYouAreWorkingOnAFinal.DataBind();
         }
 
-        void CSVImporter1_OperationComplete(object sender, object e)
+        protected void CSVImporter1_OperationComplete(object sender, object e)
         {
             ICodelistMutableObject cl;
             ICodelistMutableObject clCSV = (ICodelistMutableObject)e;
@@ -885,7 +907,7 @@ namespace ISTATRegistry
             BindData();
             //if (!errorInUploading)
             //{
-                Utils.ShowDialog(Resources.Messages.succ_operation);
+            Utils.ShowDialog(Resources.Messages.succ_operation);
             //}
             Utils.AppendScript("location.href='#codes'");
 
@@ -933,26 +955,39 @@ namespace ISTATRegistry
                 successMessage = Resources.Messages.succ_codelist_update;
             }
 
-            string jsYes, jsNo;
 
-            jsYes = String.Format("location.href='codelistItemDetails.aspx?ACTION=UPDATE&ID={0}&AGENCY={1}&VERSION={2}&ISFINAL={3}",
+
+            string jsYes, jsNo, script;
+
+            script = "CloseConfirm();";
+
+            jsNo = String.Format("location.href='codelistItemDetails.aspx?ACTION=UPDATE&ID={0}&AGENCY={1}&VERSION={2}&ISFINAL={3}'",
                         cl.Id, cl.AgencyId, cl.Version, cl.FinalStructure.IsTrue.ToString());
-            //jsNo = "location.href='Codelists.aspx?m=y'";
+            //jsYes = "location.href='Codelists.aspx?m=y'";
 
-            successMessage += "\n\r" + Resources.Messages.lbl_manage_categorisations;
+            //successMessage += "\n\r" + Resources.Messages.lbl_continue;
 
-            if (_action == Action.INSERT)
+            //if (_action == Action.UPDATE)
+            //{
+            //    jsNo = "CloseConfirm();";
+            //}
+
+            //Utils.ShowConfirm(successMessage, jsYes, jsNo);
+
+
+            //Utils.ShowDialog(successMessage);
+            //if (_action == Action.INSERT)
+            //{
+            //    Utils.AppendScript("exitf()"); 
+            //    //Utils.AppendScript(jsNo);
+            //}
+
+            if (_action == Action.INSERT || cl.FinalStructure.IsTrue)
             {
-                jsNo = jsYes + "'";
-                jsYes += "&OCT=true'";
-            }
-            else
-            {
-                jsYes += "&OCT=true'";
-                jsNo = "CloseConfirm();";
+                script = jsNo;
             }
 
-            Utils.ShowConfirm(successMessage, jsYes, jsNo);
+            Utils.ShowDialogBeforeScript(successMessage, script);
         }
 
         protected void btnAddNewCode_Click(object sender, EventArgs e)
@@ -1222,7 +1257,11 @@ namespace ISTATRegistry
                         if (gvr.RowIndex < 0 && gvr.RowIndex > cl.Items.Count) return;
 
                         bool canDelete = true;
-                        var parent_code = cl.Items[gvr.RowIndex].Id;
+
+                        int selectedRecordCount = gvCodelistsItem.PageSize * gvCodelistsItem.PageIndex + gvr.RowIndex;
+
+                        //var parent_code = cl.Items[gvr.RowIndex].Id;
+                        var parent_code = cl.Items[selectedRecordCount].Id;
 
                         #region PARANT ID
                         if (parent_code != null)
@@ -1240,7 +1279,7 @@ namespace ISTATRegistry
 
                         if (canDelete)
                         {
-                            cl.Items.RemoveAt(gvr.RowIndex);
+                            cl.Items.RemoveAt(selectedRecordCount);
 
                             Session[KEY_PAGE_SESSION] = cl;
 
@@ -1636,7 +1675,7 @@ namespace ISTATRegistry
             txt_version.Enabled = false;
             cmb_agencies.Enabled = false;
 
-            if (_action == Action.VIEW || cl.IsFinal.IsTrue)
+            if (_action == Action.VIEW)// || cl.IsFinal.IsTrue)
             {
                 AddTextName.Visible = false;
                 txt_all_names.Visible = true;
@@ -1660,10 +1699,12 @@ namespace ISTATRegistry
                 AddTextDescription.InitTextObjectList = cl.Descriptions;
             }
 
-            if (_action != Action.VIEW)
+            if (!Utils.ViewMode && _action != Action.INSERT)
             {
                 DuplicateArtefact1.Visible = true;
             }
+            else
+                DuplicateArtefact1.ucDisable = true;
 
             AnnotationGeneralControl.AddText_ucOpenTabName = AnnotationGeneralControl.ClientID;
             AnnotationGeneralControl.AnnotationObjectList = cl.MutableInstance.Annotations;
@@ -1671,7 +1712,7 @@ namespace ISTATRegistry
             AnnotationGeneralControl.OwnerAgency = txtAgenciesReadOnly.Text;
             ctr_annotation_update.EditMode = (cl.IsFinal.IsTrue || _action == Action.VIEW) ? false : true;
 
-            if (_action == Action.VIEW || cl.IsFinal.IsTrue)
+            if (_action == Action.VIEW) // || cl.IsFinal.IsTrue)
             {
                 txt_valid_from.Enabled = false;
                 txt_valid_to.Enabled = false;
@@ -1717,18 +1758,17 @@ namespace ISTATRegistry
                 {
                     btnAddNewCode.Visible = false;
                 }
-                else
+
+                if (cl.IsFinal.IsTrue && Utils.IsAuthUser(cl.AgencyId))
                 {
-                    if (cl.IsFinal.IsTrue)
-                    {
-                        btnNewCodeOnFinalStructure.Visible = true;
-                        btnNewCode.Visible = false;
-                        txt_order_new.Visible = false;
-                        lbl_order_new.Visible = false;
-                        lblYouAreWorkingOnAFinal.Visible = true;
-                        btnAddNewCode.Visible = !_epe.GetUsersFromFile;
-                    }
+                    btnNewCodeOnFinalStructure.Visible = true;
+                    btnNewCode.Visible = false;
+                    txt_order_new.Visible = true;
+                    lbl_order_new.Visible = true;
+                    lblYouAreWorkingOnAFinal.Visible = true;
+                    btnAddNewCode.Visible = _epe.EnableIREndPoint;
                 }
+
                 AddTextName_update.ucEditMode = false;
                 AddTextDescription_update.ucEditMode = false;
                 txt_parentid_update.Enabled = false;
@@ -1920,6 +1960,11 @@ namespace ISTATRegistry
                 ICodeMutableObject code = cl.GetCodeById(codeId);
                 Label lblNumber = (Label)e.Row.Cells[6].Controls[1];
                 ImageButton btnImage = (ImageButton)e.Row.Cells[6].Controls[3];
+                if (code == null)
+                {
+                    lblNumber.Text = "0";
+                    return;
+                }
                 int numberOfAnnotation = code.Annotations.Where(ann => (ann.Type != null && !ann.Type.Equals("@ORDER@")) || ann.Type == null).Count();
                 lblNumber.Text = numberOfAnnotation.ToString();
                 if (numberOfAnnotation == 0 && (cl.FinalStructure.IsTrue || _action == Action.VIEW))
@@ -1927,10 +1972,6 @@ namespace ISTATRegistry
                     btnImage.Enabled = false;
                 }
             }
-        }
-
-        protected void btnAddNewCodeOnFinalStructure_Click(object sender, EventArgs e)
-        {
         }
 
         protected void btnNewCodeOnFinalStructure_Click(object sender, EventArgs e)
@@ -1953,7 +1994,7 @@ namespace ISTATRegistry
 
             // Recupero l'id della codelist
             int foundCodelistId = 0, foundParentCodeId = 0, insertedCodeId = 0, foundLocalizedNameStringId = 0, foundLocalizedDescStringId = 0;
-            client.GetCodelistId(id, agency, versionsAvailable[0], v1, versionsAvailable[1], v2, versionsAvailable[2], v3, ref foundCodelistId);
+            client.GetCodelistId(id, agency, v1, v2, ref foundCodelistId);
 
             string codeId = txt_id_new.Text.Trim(), parentCode = txt_parentid_new.Text.Trim(), codeOrder = txt_order_new.Text.Trim();
 
@@ -2019,7 +2060,7 @@ namespace ISTATRegistry
                 return;
             }
 
-            if (!client.InsertDsdCode(codeId, foundCodelistId.ToString(), foundParentCodeId, ref insertedCodeId))
+            if (!client.InsertDsdCode(codeId, foundCodelistId.ToString(), codeOrder, foundParentCodeId, ref insertedCodeId))
             {
                 lblErrorOnNewInsert.Text = Resources.Messages.err_while_inserting_code;
                 Utils.AppendScript("openPopUp('df-Dimension', 600);");
@@ -2061,81 +2102,14 @@ namespace ISTATRegistry
             WSModel wsModel = new WSModel();
             ISdmxObjects sdmxObject = wsModel.GetCodeList(_artIdentity, false, false);
             ICodelistObject cl = sdmxObject.Codelists.FirstOrDefault();
-            Session[KEY_PAGE_SESSION] = cl.MutableInstance;
+
+            Session[KEY_PAGE_SESSION] = null;
 
             BindData();
             Utils.AppendScript("location.href= '#codes';");
         }
 
-        //protected void btnPreview_Click(object sender, EventArgs e)
-        //{
-        //    // Click su preview senza che sia stato selezionato un file
-        //    if (csvFile.Visible && !csvFile.HasFile)
-        //    {
-        //        Session["FileUpload1"] = null;
-        //        OpenCsvImportPopUp();
-        //        Utils.ShowDialog(Resources.Messages.err_no_file_uploaded);
-        //        return;
-        //    }
 
-        //    // Prima volta che si chiede la preview
-        //    if (csvFile.Visible && csvFile.HasFile)
-        //    {
-        //        Session["FileUpload1"] = csvFile;
-        //        lblCsvFileName.Text = csvFile.FileName;
-        //        csvFile.Visible = false;
-        //        lblCsvFileName.Visible = true;
-        //        ibDeleteFileSelection.Visible = true;
-        //        SaveCsvFile();
-        //    }
-        //    else if (!csvFile.Visible && Session["FileUpload1"] != null)
-        //    {
-        //        csvFile = (FileUpload)Session["FileUpload1"];
-        //    }
-
-        //    DataTable dt = Utils.ConvertCSVtoDataTable(GetCsvFilePath(),
-        //                                        (txtSeparator.Text != String.Empty ? Char.Parse(txtSeparator.Text) : ';'),
-        //                                        txtTextDelimiter.Text, chkHeaderRow.Checked, 50);
-        //    gvCsvPreview.DataSource = dt;
-        //    gvCsvPreview.DataBind();
-
-        //    OpenCsvImportPopUp();
-        //    OpenCsvPreview();
-        //}
-
-        //private string GetCsvFilePath()
-        //{
-        //    return Server.MapPath("~/csv_codelists_files/") + csvFile.FileName;
-        //}
-
-        //private void SaveCsvFile()
-        //{
-        //    try
-        //    {
-        //        csvFile.SaveAs(GetCsvFilePath());
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw ex;
-        //    }
-        //}
-
-        //private StreamReader GetCsvReader()
-        //{
-        //    return new StreamReader(GetCsvFilePath());
-        //}
-
-
-        //protected void ibDeleteFileSelection_Click(object sender, ImageClickEventArgs e)
-        //{
-        //    Session["FileUpload1"] = null;
-
-        //    ibDeleteFileSelection.Visible = false;
-        //    csvFile.Visible = true;
-        //    lblCsvFileName.Visible = false;
-
-        //    OpenCsvImportPopUp();
-        //}
     }
 
 }

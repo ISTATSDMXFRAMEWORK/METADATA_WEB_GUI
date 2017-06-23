@@ -58,6 +58,15 @@ namespace ISTATRegistry.UserControls {
         protected global::System.Web.UI.WebControls.Label lblcsvFile;
         
         /// <summary>
+        /// Controllo pnlFileUpload.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlFileUpload;
+        
+        /// <summary>
         /// Controllo csvFile.
         /// </summary>
         /// <remarks>
@@ -65,6 +74,15 @@ namespace ISTATRegistry.UserControls {
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FileUpload csvFile;
+        
+        /// <summary>
+        /// Controllo pnlTextUpload.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlTextUpload;
         
         /// <summary>
         /// Controllo lblCsvFileName.

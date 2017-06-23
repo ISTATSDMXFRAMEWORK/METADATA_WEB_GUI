@@ -1,0 +1,107 @@
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\WSDAL\WSDAL\bin\Release\WSDAL.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\WSDAL\WSDAL\bin\Release\WSDAL.pdb
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\WSDAL\WSDAL\bin\Release\EstatSdmxSourceExtension.CustomRequests.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\WSDAL\WSDAL\bin\Release\FlyCallWS.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\WSDAL\WSDAL\bin\Release\ISTATEntity.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\WSDAL\WSDAL\bin\Release\Org.Sdmx.Resources.SdmxMl.Schemas.V21.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\WSDAL\WSDAL\bin\Release\SdmxApi.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\WSDAL\WSDAL\bin\Release\SdmxObjects.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\WSDAL\WSDAL\bin\Release\SdmxQueryBuilder.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\WSDAL\WSDAL\bin\Release\SdmxSourceUtil.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\WSDAL\WSDAL\bin\Release\SdmxStructureParser.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\WSDAL\WSDAL\bin\Release\Org.Sdmx.Resources.SdmxMl.Schemas.V20.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\WSDAL\WSDAL\bin\Release\Xml.Schema.Linq.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\WSDAL\WSDAL\bin\Release\log4net.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\WSDAL\WSDAL\bin\Release\Org.Sdmx.Resources.SdmxMl.Schemas.V10.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\WSDAL\WSDAL\bin\Release\SdmxStructureRetrieval.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\WSDAL\WSDAL\bin\Release\ISTATEntity.pdb
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\WSDAL\WSDAL\obj\Release\ISTATWSDAL.csprojResolveAssemblyReference.cache
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\WSDAL\WSDAL\obj\Release\WSDAL.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\WSDAL\WSDAL\obj\Release\WSDAL.pdb
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\WSDAL\WSDAL\bin\Release\WSDAL.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\WSDAL\WSDAL\bin\Release\WSDAL.pdb
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\WSDAL\WSDAL\bin\Release\ISTATEntity.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\WSDAL\WSDAL\bin\Release\Org.Sdmx.Resources.SdmxMl.Schemas.V20.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\WSDAL\WSDAL\bin\Release\Xml.Schema.Linq.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\WSDAL\WSDAL\bin\Release\log4net.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\WSDAL\WSDAL\bin\Release\Org.Sdmx.Resources.SdmxMl.Schemas.V10.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\WSDAL\WSDAL\bin\Release\SdmxStructureRetrieval.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\WSDAL\WSDAL\bin\Release\ISTATEntity.pdb
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\WSDAL\WSDAL\obj\Release\ISTATWSDAL.csprojResolveAssemblyReference.cache
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\WSDAL\WSDAL\obj\Release\WSDAL.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\WSDAL\WSDAL\obj\Release\WSDAL.pdb
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\WSDAL\WSDAL\bin\Release\WSDAL.dll
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\WSDAL\WSDAL\bin\Release\WSDAL.pdb
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\WSDAL\WSDAL\bin\Release\ISTATEntity.dll
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\WSDAL\WSDAL\bin\Release\Org.Sdmx.Resources.SdmxMl.Schemas.V20.dll
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\WSDAL\WSDAL\bin\Release\Xml.Schema.Linq.dll
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\WSDAL\WSDAL\bin\Release\log4net.dll
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\WSDAL\WSDAL\bin\Release\Org.Sdmx.Resources.SdmxMl.Schemas.V10.dll
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\WSDAL\WSDAL\bin\Release\SdmxStructureRetrieval.dll
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\WSDAL\WSDAL\bin\Release\ISTATEntity.pdb
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\WSDAL\WSDAL\obj\Release\ISTATWSDAL.csprojResolveAssemblyReference.cache
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\WSDAL\WSDAL\obj\Release\WSDAL.dll
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\WSDAL\WSDAL\obj\Release\WSDAL.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\WSDAL\WSDAL\bin\Release\WSDAL.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\WSDAL\WSDAL\bin\Release\WSDAL.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\WSDAL\WSDAL\bin\Release\ISTATEntity.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\WSDAL\WSDAL\bin\Release\Org.Sdmx.Resources.SdmxMl.Schemas.V20.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\WSDAL\WSDAL\bin\Release\Xml.Schema.Linq.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\WSDAL\WSDAL\bin\Release\log4net.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\WSDAL\WSDAL\bin\Release\Org.Sdmx.Resources.SdmxMl.Schemas.V10.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\WSDAL\WSDAL\bin\Release\SdmxStructureRetrieval.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\WSDAL\WSDAL\bin\Release\ISTATEntity.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\WSDAL\WSDAL\obj\Release\ISTATWSDAL.csprojResolveAssemblyReference.cache
+C:\ISTAT\Source\ISTATRegistry_4.5\WSDAL\WSDAL\obj\Release\WSDAL.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\WSDAL\WSDAL\obj\Release\WSDAL.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\WSDAL\WSDAL\bin\Release\FlyCallWS.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\WSDAL\WSDAL\bin\Release\Org.Sdmx.Resources.SdmxMl.Schemas.V21.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\WSDAL\WSDAL\bin\Release\SdmxApi.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\WSDAL\WSDAL\bin\Release\SdmxObjects.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\WSDAL\WSDAL\bin\Release\SdmxSourceUtil.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\WSDAL\WSDAL\bin\Release\SdmxStructureParser.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\WSDAL\WSDAL\bin\Release\FlyCallWS.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\WSDAL\WSDAL\bin\Release\ISTATUtils.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\WSDAL\WSDAL\bin\Release\ISTATUtils.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\WSDAL\WSDAL\bin\Release\WSDAL.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\WSDAL\WSDAL\bin\Release\WSDAL.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\WSDAL\WSDAL\bin\Release\FlyCallWS.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\WSDAL\WSDAL\bin\Release\ISTATEntity.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\WSDAL\WSDAL\bin\Release\ISTATUtils.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\WSDAL\WSDAL\bin\Release\Org.Sdmx.Resources.SdmxMl.Schemas.V21.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\WSDAL\WSDAL\bin\Release\SdmxApi.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\WSDAL\WSDAL\bin\Release\SdmxObjects.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\WSDAL\WSDAL\bin\Release\SdmxSourceUtil.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\WSDAL\WSDAL\bin\Release\SdmxStructureParser.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\WSDAL\WSDAL\bin\Release\Org.Sdmx.Resources.SdmxMl.Schemas.V20.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\WSDAL\WSDAL\bin\Release\Xml.Schema.Linq.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\WSDAL\WSDAL\bin\Release\log4net.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\WSDAL\WSDAL\bin\Release\Org.Sdmx.Resources.SdmxMl.Schemas.V10.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\WSDAL\WSDAL\bin\Release\SdmxStructureRetrieval.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\WSDAL\WSDAL\bin\Release\FlyCallWS.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\WSDAL\WSDAL\bin\Release\ISTATEntity.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\WSDAL\WSDAL\bin\Release\ISTATUtils.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\WSDAL\WSDAL\obj\Release\ISTATWSDAL.csprojResolveAssemblyReference.cache
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\WSDAL\WSDAL\obj\Release\WSDAL.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\WSDAL\WSDAL\obj\Release\WSDAL.pdb
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Release\WSDAL.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Release\WSDAL.pdb
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Release\FlyCallWS.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Release\ISTATEntity.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Release\ISTATUtils.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Release\Org.Sdmx.Resources.SdmxMl.Schemas.V21.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Release\SdmxApi.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Release\SdmxObjects.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Release\SdmxSourceUtil.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Release\SdmxStructureParser.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Release\Org.Sdmx.Resources.SdmxMl.Schemas.V20.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Release\Xml.Schema.Linq.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Release\log4net.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Release\Org.Sdmx.Resources.SdmxMl.Schemas.V10.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Release\SdmxStructureRetrieval.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Release\FlyCallWS.pdb
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Release\ISTATEntity.pdb
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Release\ISTATUtils.pdb
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\WSDAL\WSDAL\obj\Release\ISTATWSDAL.csprojResolveAssemblyReference.cache
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\WSDAL\WSDAL\obj\Release\WSDAL.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\WSDAL\WSDAL\obj\Release\WSDAL.pdb

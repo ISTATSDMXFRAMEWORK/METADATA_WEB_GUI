@@ -64,6 +64,7 @@
     <Compile Include="Agency.cs" />
     <Compile Include="ContentConstraint.cs" />
     <Compile Include="CodeListMap.cs" />
+    <Compile Include="DotStatProperties.cs" />
     <Compile Include="HierarchicalCodelist.cs" />
     <Compile Include="StructureMap.cs" />
     <Compile Include="StructureSet.cs" />

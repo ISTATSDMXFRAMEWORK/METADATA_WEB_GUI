@@ -31,12 +31,9 @@
                 AllowSorting="True"
                 OnSorted="OnSorted"
                 OnSorting="OnSorting"
-                
+         
                 AutoGenerateColumns="False"
-                
-               
                 OnPageIndexChanging="OnPageIndexChanging" 
-                OnRowCommand="OnRowCommand" 
                 OnRowCreated="OnRowCreated"
                 PagerSettings-Position="TopAndBottom" 
                 onrowdatabound="gridView_RowDataBound">
@@ -94,14 +91,12 @@
 
                     <asp:TemplateField HeaderText="" ShowHeader="False">
                         <ItemTemplate>
-                            <asp:ImageButton 
-                            ID="btmDattail" 
-                            runat="server" 
-                            CausesValidation="False" 
-                            CommandName="Details"
-                            CommandArgument="<%# Container.DataItemIndex %>" 
-                            ImageUrl="~/images/Details2.png"
-                            ToolTip="View details" />
+                            <asp:HyperLink ID="hplDetails" 
+                                runat="server" 
+                                ImageUrl="~/images/Details2.png" 
+                                NavigateUrl="s"
+                                ToolTip="View details">
+                            </asp:HyperLink>
                         </ItemTemplate>
                         <HeaderStyle Width="50px" HorizontalAlign="Center" />
                         <ItemStyle HorizontalAlign="Center" />

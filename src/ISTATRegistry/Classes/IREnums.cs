@@ -33,7 +33,7 @@ namespace ISTATRegistry
         CONCEPT_SCHEME,
         CATEGORY_SCHEME,
         DATAFLOW,
-        KEY_FAMILY,
+        DSD,
         CATEGORIZATION,
         AGENCY_SCHEME,
         DATA_PROVIDER_SCHEME,

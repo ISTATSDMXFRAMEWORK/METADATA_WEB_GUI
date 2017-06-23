@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Security;
@@ -13,6 +14,10 @@ namespace ISTATRegistry
         protected void Application_Start(object sender, EventArgs e)
         {
             Org.Sdmxsource.Sdmx.Api.Exception.SdmxException.SetMessageResolver(new Org.Sdmxsource.Util.ResourceBundle.MessageDecoder());
+
+            Array.ForEach(Directory.GetFiles(Server.MapPath("OutputFiles")), File.Delete);
+            Array.ForEach(Directory.GetFiles(Server.MapPath("UploadedFiles")), File.Delete);
+            Array.ForEach(Directory.GetFiles(Server.MapPath("csv_files")), File.Delete);
         }
 
         protected void Session_Start(object sender, EventArgs e)

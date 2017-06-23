@@ -31,6 +31,15 @@ namespace ISTATRegistry {
         protected global::System.Web.UI.WebControls.HyperLink HyperLink2;
         
         /// <summary>
+        /// Controllo IstatUpdatePanel1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::ISTATRegistry.Classes.IstatUpdatePanel IstatUpdatePanel1;
+        
+        /// <summary>
         /// Controllo lbl_id.
         /// </summary>
         /// <remarks>
@@ -319,6 +328,15 @@ namespace ISTATRegistry {
         protected global::ISTATRegistry.UserControls.ControlAnnotations AnnotationGeneralControl;
         
         /// <summary>
+        /// Controllo IstatUpdatePanel2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::ISTATRegistry.Classes.IstatUpdatePanel IstatUpdatePanel2;
+        
+        /// <summary>
         /// Controllo lblCategorySchemeList.
         /// </summary>
         /// <remarks>
@@ -409,33 +427,6 @@ namespace ISTATRegistry {
         protected global::System.Web.UI.WebControls.Label txtSelectedItem;
         
         /// <summary>
-        /// Controllo btnSaveMemoryCategorization.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSaveMemoryCategorization;
-        
-        /// <summary>
-        /// Controllo FileDownload31.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::ISTATRegistry.UserControls.FileDownload3 FileDownload31;
-        
-        /// <summary>
-        /// Controllo UserPopUp1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::ISTATRegistry.UserControls.UserPopUp UserPopUp1;
-        
-        /// <summary>
         /// Controllo TreeView1.
         /// </summary>
         /// <remarks>
@@ -461,6 +452,33 @@ namespace ISTATRegistry {
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ObjectDataSource ObjectDataSource1;
+        
+        /// <summary>
+        /// Controllo btnSaveMemoryCategorization.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSaveMemoryCategorization;
+        
+        /// <summary>
+        /// Controllo FileDownload31.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::ISTATRegistry.UserControls.FileDownload3 FileDownload31;
+        
+        /// <summary>
+        /// Controllo UserPopUp1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::ISTATRegistry.UserControls.UserPopUp UserPopUp1;
         
         /// <summary>
         /// Controllo DuplicateArtefact1.

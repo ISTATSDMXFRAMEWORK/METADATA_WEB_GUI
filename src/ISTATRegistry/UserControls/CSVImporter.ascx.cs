@@ -3,7 +3,9 @@ using Org.Sdmxsource.Sdmx.Api.Model.Mutable.Base;
 using Org.Sdmxsource.Sdmx.Api.Model.Mutable.CategoryScheme;
 using Org.Sdmxsource.Sdmx.Api.Model.Mutable.Codelist;
 using Org.Sdmxsource.Sdmx.Api.Model.Mutable.ConceptScheme;
+using Org.Sdmxsource.Sdmx.SdmxObjects.Model.Mutable.CategoryScheme;
 using Org.Sdmxsource.Sdmx.SdmxObjects.Model.Mutable.Codelist;
+using Org.Sdmxsource.Sdmx.SdmxObjects.Model.Mutable.ConceptScheme;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -22,6 +24,8 @@ namespace ISTATRegistry.UserControls
         public ICodelistMutableObject ucCodelist { get; set; }
         public IConceptSchemeMutableObject ucConceptScheme { get; set; }
         public ICategorySchemeMutableObject ucCategoryScheme { get; set; }
+        public string ucTabName { get; set; }
+
         public event OperationCompleteEventHandler OperationComplete;
 
         private SdmxStructureEnumType _structureType;
@@ -71,7 +75,7 @@ namespace ISTATRegistry.UserControls
         protected void btnPreview_Click(object sender, EventArgs e)
         {
             // Click su preview senza che sia stato selezionato un file
-            if (csvFile.Visible && !csvFile.HasFile)
+            if (pnlFileUpload.Visible && !csvFile.HasFile)
             {
                 Session["FileUpload1"] = null;
                 OpenCsvImportPopUp();
@@ -80,16 +84,20 @@ namespace ISTATRegistry.UserControls
             }
 
             // Prima volta che si chiede la preview
-            if (csvFile.Visible && csvFile.HasFile)
+            if (pnlFileUpload.Visible && csvFile.HasFile)
             {
                 Session["FileUpload1"] = csvFile;
                 lblCsvFileName.Text = csvFile.FileName;
-                csvFile.Visible = false;
+
+                pnlFileUpload.Visible = false;
+
+                pnlTextUpload.Visible = true;
+
                 lblCsvFileName.Visible = true;
                 ibDeleteFileSelection.Visible = true;
                 SaveCsvFile();
             }
-            else if (!csvFile.Visible && Session["FileUpload1"] != null)
+            else if (!pnlFileUpload.Visible && Session["FileUpload1"] != null)
             {
                 csvFile = (FileUpload)Session["FileUpload1"];
             }
@@ -108,9 +116,10 @@ namespace ISTATRegistry.UserControls
         {
             Session["FileUpload1"] = null;
 
-            ibDeleteFileSelection.Visible = false;
-            csvFile.Visible = true;
-            lblCsvFileName.Visible = false;
+            pnlTextUpload.Visible = false;
+            //ibDeleteFileSelection.Visible = false;
+            pnlFileUpload.Visible = true;
+            //lblCsvFileName.Visible = false;
 
             OpenCsvImportPopUp();
         }
@@ -120,7 +129,7 @@ namespace ISTATRegistry.UserControls
 
         protected void btnImportFromCsv_Click(object sender, EventArgs e)
         {
-            if (csvFile.Visible && !csvFile.HasFile)
+            if (pnlFileUpload.Visible && !csvFile.HasFile)
             {
                 Session["FileUpload1"] = null;
                 OpenCsvImportPopUp();
@@ -128,13 +137,13 @@ namespace ISTATRegistry.UserControls
                 return;
             }
 
-            if (!csvFile.Visible && Session["FileUpload1"] != null)
+            if (!pnlFileUpload.Visible && Session["FileUpload1"] != null)
             {
                 csvFile = (FileUpload)Session["FileUpload1"];
                 //Session["FileUpload1"] = null;
                 ibDeleteFileSelection.Visible = false;
                 lblCsvFileName.Visible = false;
-                csvFile.Visible = true;
+                pnlFileUpload.Visible = true;
             }
 
             //ICodelistMutableObject cl = GetCodeListFromSession();
@@ -182,15 +191,15 @@ namespace ISTATRegistry.UserControls
                     else
                         fields = currentFileLine.Split(separator);
 
-                    if (fields.Length != 2 + extraFieldCount)
-                    {
-                        errorInUploading = true;
-                        wrongRowsMessage += string.Format(Resources.Messages.err_csv_import_line_bad_format, currentRow + 1);
-                        wrongRowsMessageForUser += string.Format(Resources.Messages.err_csv_import_line_bad_format_gui, currentRow + 1);
-                        wrongFileLines += string.Format("{0}\n", currentFileLine);
-                        currentRow++;
-                        continue;
-                    }
+                    //if (fields.Length != 2 + extraFieldCount)
+                    //{
+                    //    errorInUploading = true;
+                    //    wrongRowsMessage += string.Format(Resources.Messages.err_csv_import_line_bad_format, currentRow + 1);
+                    //    wrongRowsMessageForUser += string.Format(Resources.Messages.err_csv_import_line_bad_format_gui, currentRow + 1);
+                    //    wrongFileLines += string.Format("{0}\n", currentFileLine);
+                    //    currentRow++;
+                    //    continue;
+                    //}
                     if (fields[0].Trim().Equals("\"\"") || fields[0].Trim().Equals(string.Empty))
                     {
                         errorInUploading = true;
@@ -212,8 +221,18 @@ namespace ISTATRegistry.UserControls
 
                     cCode.code = fields[0].ToString();
                     cCode.name = fields[1].ToString();
-                    cCode.description = haveDescription ? fields[2].ToString() : "";
-                    cCode.parentCode = haveParent ? fields[1 + (haveDescription ? 2 : 1)].ToString() : "";
+
+                    if (haveDescription && fields.Count() >= 3)
+                        cCode.description = fields[2].ToString();
+                    else
+                        cCode.description = "";
+
+                    int parentIndex = 1 + (haveDescription ? 2 : 1);
+
+                    if (haveParent && fields.Count() - 1 == parentIndex)
+                        cCode.parentCode = fields[parentIndex].ToString();
+                    else
+                        cCode.parentCode = "";
 
                     codes.Add(cCode);
 
@@ -226,8 +245,13 @@ namespace ISTATRegistry.UserControls
                 Utils.AppendScript(string.Format("Upload status: The file could not be uploaded. The following error occured: {0}", ex.Message));
             }
 
+            IEnumerable<ICategoryMutableObject> tmpCategories = null;
+            ICategoryMutableObject foundCategory = null;
+
             foreach (csvCode code in codes)
             {
+                foundCategory = null;
+                
                 if (!code.parentCode.Trim().Equals(string.Empty))
                 {
                     int cont = 0;
@@ -235,6 +259,35 @@ namespace ISTATRegistry.UserControls
                     switch (_structureType)
                     {
                         case SdmxStructureEnumType.CategoryScheme:
+                            //cont = (from myCode in ucCategoryScheme.Items
+                            //        where myCode.Id.Equals(code.parentCode)
+                            //        select myCode).Count();
+
+                            string[] sequence = code.parentCode.Split('.');
+                            foundCategory = (ICategoryMutableObject)((from c in ucCategoryScheme.Items
+                                                                      where c.Id.Equals(sequence[0])
+                                                                      select c).FirstOrDefault());
+
+                            for (int i = 1; i < sequence.Length; i++)
+                            {
+                                foundCategory = (ICategoryMutableObject)((from c in foundCategory.Items
+                                                                          where c.Id.Equals(sequence[i])
+                                                                          select c).FirstOrDefault());
+                            }
+
+                            cont = foundCategory == null ? 0 : 1;
+
+                            //tmpCategories = null;
+
+                            //if (foundCategory != null)
+                            //{
+                            //    tmpCategories = (from conc in foundCategory.Items where conc.Id == code.code select conc).OfType<ICategoryMutableObject>();
+                            //}
+                            //else
+                            //{
+                            //    tmpCategories = (from conc in ucCategoryScheme.Items where conc.Id == code.code select conc).OfType<ICategoryMutableObject>();
+                            //}
+
                             break;
                         case SdmxStructureEnumType.CodeList:
                             cont = (from myCode in ucCodelist.Items
@@ -242,9 +295,12 @@ namespace ISTATRegistry.UserControls
                                     select myCode).Count();
                             break;
                         case SdmxStructureEnumType.ConceptScheme:
+                            cont = (from myCode in ucConceptScheme.Items
+                                    where myCode.Id.Equals(code.parentCode)
+                                    select myCode).Count();
                             break;
                     }
-                    
+
                     if (cont == 0)
                     {
                         errorInUploading = true;
@@ -253,7 +309,7 @@ namespace ISTATRegistry.UserControls
                     }
                 }
 
-                ManageCode(code);
+                ManageCode(code, tmpCategories, foundCategory);
 
             }
 
@@ -261,7 +317,7 @@ namespace ISTATRegistry.UserControls
             {
                 lblImportCsvErrors.Text = wrongRowsMessageForUser;
                 lblImportCsvWrongLines.Text = wrongFileLines;
-                csvFile.Visible = true;
+                pnlFileUpload.Visible = true;
                 Utils.AppendScript("openP('importCsvErrors',500);");
             }
 
@@ -271,15 +327,25 @@ namespace ISTATRegistry.UserControls
             switch (_structureType)
             {
                 case SdmxStructureEnumType.CategoryScheme:
+                    OnValueChanged(ucCategoryScheme);
                     break;
                 case SdmxStructureEnumType.CodeList:
                     OnValueChanged(ucCodelist);
                     break;
                 case SdmxStructureEnumType.ConceptScheme:
+                    OnValueChanged(ucConceptScheme);
                     break;
             }
 
-            
+            Session["FileUpload1"] = null;
+            pnlFileUpload.Visible = true;
+            pnlTextUpload.Visible = false;
+            //lblCsvFileName.Visible = false;
+            //ibDeleteFileSelection.Visible = false;
+            txtTextDelimiter.Text = "";
+            lbExtraFields.ClearSelection();
+
+
 
             //if (!SaveInMemory(cl)) return;
 
@@ -291,11 +357,37 @@ namespace ISTATRegistry.UserControls
             //Utils.AppendScript("location.href='#codes'");
         }
 
-        private void ManageCode(csvCode code)
+        private void ManageCode(csvCode code, IEnumerable<ICategoryMutableObject> tmpCategories = null, ICategoryMutableObject foundCategory = null)
         {
             switch (_structureType)
             {
                 case SdmxStructureEnumType.CategoryScheme:
+
+                    ICategoryMutableObject tmpCategory;
+
+                    //if (tmpCategories == null || tmpCategories.Count() <= 0)
+                    //{
+                        tmpCategory = new CategoryMutableCore();
+                        tmpCategory.Id = code.code;
+                        tmpCategory.AddName(cmbLanguageForCsv.SelectedValue.ToString(), code.name);
+                        tmpCategory.AddDescription(cmbLanguageForCsv.SelectedValue.ToString(), code.description);
+                        if (foundCategory != null)
+                        {
+                            foundCategory.AddItem(tmpCategory);
+                        }
+                        else
+                        {
+                            ucCategoryScheme.AddItem(tmpCategory);
+                        }
+                    //}
+                    //else
+                    //{
+                    //    tmpCategory = tmpCategories.First();
+                    //    tmpCategory.Id = code.code;
+                    //    tmpCategory.AddName(cmbLanguageForCsv.SelectedValue.ToString(), code.name);
+                    //    tmpCategory.AddDescription(cmbLanguageForCsv.SelectedValue.ToString(), code.description);
+                    //}
+
                     break;
                 case SdmxStructureEnumType.CodeList:
                     ICodeMutableObject tmpClCode = ucCodelist.GetCodeById(code.code);
@@ -319,17 +411,35 @@ namespace ISTATRegistry.UserControls
 
                     break;
                 case SdmxStructureEnumType.ConceptScheme:
+                    IConceptMutableObject tmpCsCode = ucConceptScheme.Items.Where(c => c.Id == code.code).FirstOrDefault();
+
+                    if (tmpCsCode == null)
+                    {
+                        tmpCsCode = new ConceptMutableCore();
+                        tmpCsCode.Id = code.code;
+                        tmpCsCode.ParentConcept = code.parentCode;
+                        tmpCsCode.AddName(cmbLanguageForCsv.SelectedValue.ToString(), code.name);
+                        tmpCsCode.AddDescription(cmbLanguageForCsv.SelectedValue.ToString(), code.description);
+                        ucConceptScheme.AddItem(tmpCsCode);
+                    }
+                    else
+                    {
+                        tmpCsCode.Id = code.code;
+                        tmpCsCode.ParentConcept = code.parentCode;
+                        tmpCsCode.AddName(cmbLanguageForCsv.SelectedValue.ToString(), code.name);
+                        tmpCsCode.AddDescription(cmbLanguageForCsv.SelectedValue.ToString(), code.description);
+                    }
                     break;
             }
         }
 
-        #endregion 
+        #endregion
 
         #region METHODS
 
         private string GetCsvFilePath()
         {
-            return Server.MapPath("~/csv_codelists_files/") + csvFile.FileName;
+            return Server.MapPath("~/csv_files/") + csvFile.FileName;
         }
 
         private void SaveCsvFile()
@@ -351,7 +461,7 @@ namespace ISTATRegistry.UserControls
 
         private void OpenCsvImportPopUp()
         {
-            Utils.AppendScript("location.href='#codes';");
+            Utils.AppendScript("location.href='#" + ucTabName + "';");
             Utils.AppendScript("openP('importCsv',550);");
         }
 

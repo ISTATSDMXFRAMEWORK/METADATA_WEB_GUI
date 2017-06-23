@@ -1,0 +1,10 @@
+C:\ISTAT\Source\ISTATRegistry_4.1\IstatRegistryWebService\IstatRegistryWebService\bin\IstatRegistryWebService.dll
+C:\ISTAT\Source\ISTATRegistry_4.1\IstatRegistryWebService\IstatRegistryWebService\bin\IstatRegistryWebService.pdb
+C:\ISTAT\Source\ISTATRegistry_4.1\IstatRegistryWebService\IstatRegistryWebService\obj\Release\IstatRegistryWebService.dll
+C:\ISTAT\Source\ISTATRegistry_4.1\IstatRegistryWebService\IstatRegistryWebService\obj\Release\IstatRegistryWebService.pdb
+C:\ISTAT\Source\ISTATRegistry_4.1\IstatRegistryWebService\IstatRegistryWebService\obj\Release\IstatRegistryWebService.csprojResolveAssemblyReference.cache
+C:\ISTAT\Source\ISTATRegistry_4.5\IstatRegistryWebService\IstatRegistryWebService\bin\IstatRegistryWebService.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\IstatRegistryWebService\IstatRegistryWebService\bin\IstatRegistryWebService.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\IstatRegistryWebService\IstatRegistryWebService\obj\Release\IstatRegistryWebService.csprojResolveAssemblyReference.cache
+C:\ISTAT\Source\ISTATRegistry_4.5\IstatRegistryWebService\IstatRegistryWebService\obj\Release\IstatRegistryWebService.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\IstatRegistryWebService\IstatRegistryWebService\obj\Release\IstatRegistryWebService.pdb

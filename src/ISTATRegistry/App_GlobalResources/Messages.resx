@@ -1369,4 +1369,73 @@ Per navigare la meta informazione è possibile utilizzare il menù posto a sinis
   <data name="lbl_csv_preview" xml:space="preserve">
     <value>Anteprima CSV</value>
   </data>
+  <data name="lbl_Directory" xml:space="preserve">
+    <value>Directory</value>
+  </data>
+  <data name="lbl_Server" xml:space="preserve">
+    <value>Server</value>
+  </data>
+  <data name="lbl_theme" xml:space="preserve">
+    <value>Tema</value>
+  </data>
+  <data name="lbl_contactdirection" xml:space="preserve">
+    <value>Direzione</value>
+  </data>
+  <data name="lbl_contactemail" xml:space="preserve">
+    <value>E-Mail</value>
+  </data>
+  <data name="lbl_contactname" xml:space="preserve">
+    <value>Nome contatto</value>
+  </data>
+  <data name="lbl_securitydomain" xml:space="preserve">
+    <value>Dominio</value>
+  </data>
+  <data name="lbl_securityuser" xml:space="preserve">
+    <value>Gruppo utente</value>
+  </data>
+  <data name="err_no_delete_artefact" xml:space="preserve">
+    <value>Non è possibile modificare o eliminare un artefatto categorizzato.</value>
+  </data>
+  <data name="app_version" xml:space="preserve">
+    <value>Ver. </value>
+  </data>
+  <data name="lbl_wsExport" xml:space="preserve">
+    <value>WS Destinazione</value>
+  </data>
+  <data name="lbl_upload" xml:space="preserve">
+    <value>Carica</value>
+  </data>
+  <data name="lbl_WSNewAgency" xml:space="preserve">
+    <value>Nuova Agenzia</value>
+  </data>
+  <data name="lbl_WSNewID" xml:space="preserve">
+    <value>Nuovo ID</value>
+  </data>
+  <data name="lbl_WSNewVersion" xml:space="preserve">
+    <value>Nuova Versione</value>
+  </data>
+  <data name="lbl_WSPassword" xml:space="preserve">
+    <value>Password WS</value>
+  </data>
+  <data name="lbl_WSUserName" xml:space="preserve">
+    <value>Utente WS</value>
+  </data>
+  <data name="err_wrong_credentials" xml:space="preserve">
+    <value>Credenziali di accesso non corrette!</value>
+  </data>
+  <data name="btn_authentication" xml:space="preserve">
+    <value>Autenticazione</value>
+  </data>
+  <data name="lbl_importedArtefact" xml:space="preserve">
+    <value>Artefatti Importati</value>
+  </data>
+  <data name="msg_dataflow_imported" xml:space="preserve">
+    <value>Dataflow [ {0} - {1} - {2} ] aggiunto!&lt;br /&gt;&lt;br /&gt;</value>
+  </data>
+  <data name="btn_download" xml:space="preserve">
+    <value>Scarica</value>
+  </data>
+  <data name="lbl_download_multiple_artefact" xml:space="preserve">
+    <value>Scarica Artefatti Multipli</value>
+  </data>
 </root>

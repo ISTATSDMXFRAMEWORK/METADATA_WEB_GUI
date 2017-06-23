@@ -7,7 +7,7 @@
     <asp:Label ID="lblImportCsvTitle" runat="server" Text="<%$ Resources:Messages,lbl_import_csv %>" CssClass="PageTitle"></asp:Label>
     <br />
     <br />
-    <div style="padding: 10px; overflow: auto; text-align:left; width: 450px; height: 250px; border: solid 1px #999; -moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0; margin-left: 10px;">
+    <div style="padding: 10px; overflow: auto; text-align: left; width: 450px; height: 250px; border: solid 1px #999; -moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0; margin-left: 10px;">
         <table class="tblForm">
             <tr>
                 <td>
@@ -19,8 +19,12 @@
                 <td>
                     <asp:Label ID="lblcsvFile" runat="server" Text="<%$ Resources:Messages,lbl_csv_file%>"></asp:Label></td>
                 <td>
-                    <asp:FileUpload ID="csvFile" runat="server" />
-                    <asp:Label ID="lblCsvFileName" runat="server" Text="" Visible="false"></asp:Label><asp:ImageButton ID="ibDeleteFileSelection" runat="server" ImageUrl="~/images/Delete_mini.png" OnClick="ibDeleteFileSelection_Click" Visible="false" />
+                    <asp:Panel ID="pnlFileUpload" runat="server">
+                        <asp:FileUpload ID="csvFile" runat="server" />
+                    </asp:Panel>
+                    <asp:Panel ID="pnlTextUpload" runat="server" Visible="false">
+                        <asp:Label ID="lblCsvFileName" runat="server" Text=""></asp:Label><asp:ImageButton ID="ibDeleteFileSelection" runat="server" ImageUrl="~/images/Delete_mini.png" OnClick="ibDeleteFileSelection_Click" />
+                    </asp:Panel>
                 </td>
             </tr>
             <tr>
@@ -61,7 +65,7 @@
     </center>
 </div>
 
-<div id="df-csvPreview" class="popup_block" style="text-align:left">
+<div id="df-csvPreview" class="popup_block" style="text-align: left">
     <asp:Label ID="Label1" runat="server" Text="<%$ Resources:Messages,lbl_csv_preview %>" CssClass="PageTitle"></asp:Label>
     <br />
     <hr style="width: 100%;" />

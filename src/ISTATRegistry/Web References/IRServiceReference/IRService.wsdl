@@ -198,12 +198,8 @@
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="agency" type="s:string" />
-            <s:element minOccurs="1" maxOccurs="1" name="version1IsPresent" type="s:boolean" />
             <s:element minOccurs="1" maxOccurs="1" name="version1" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="version2IsPresent" type="s:boolean" />
             <s:element minOccurs="1" maxOccurs="1" name="version2" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="version3IsPresent" type="s:boolean" />
-            <s:element minOccurs="1" maxOccurs="1" name="version3" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="foundId" type="s:int" />
           </s:sequence>
         </s:complexType>
@@ -216,11 +212,31 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="GetConceptSchemeId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agency" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="version1" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="version2" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="foundId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetConceptSchemeIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetConceptSchemeIdResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="foundId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="InsertDsdCode">
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="codelistId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cOrder" type="s:string" />
             <s:element minOccurs="1" maxOccurs="1" name="parentCode" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="insertedId" type="s:int" />
           </s:sequence>
@@ -230,6 +246,24 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="1" maxOccurs="1" name="InsertDsdCodeResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="insertedId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertConceptCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="conSchemaId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="parentCode" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="insertedId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertConceptCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertConceptCodeResult" type="s:boolean" />
             <s:element minOccurs="1" maxOccurs="1" name="insertedId" type="s:int" />
           </s:sequence>
         </s:complexType>
@@ -247,6 +281,23 @@
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="1" maxOccurs="1" name="GetDsdCodeIdResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="foundId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetConceptCodeId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="csId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="codeId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="foundId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetConceptCodeIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetConceptCodeIdResult" type="s:boolean" />
             <s:element minOccurs="1" maxOccurs="1" name="foundId" type="s:int" />
           </s:sequence>
         </s:complexType>
@@ -353,17 +404,35 @@
   <wsdl:message name="GetCodelistIdSoapOut">
     <wsdl:part name="parameters" element="tns:GetCodelistIdResponse" />
   </wsdl:message>
+  <wsdl:message name="GetConceptSchemeIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetConceptSchemeId" />
+  </wsdl:message>
+  <wsdl:message name="GetConceptSchemeIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetConceptSchemeIdResponse" />
+  </wsdl:message>
   <wsdl:message name="InsertDsdCodeSoapIn">
     <wsdl:part name="parameters" element="tns:InsertDsdCode" />
   </wsdl:message>
   <wsdl:message name="InsertDsdCodeSoapOut">
     <wsdl:part name="parameters" element="tns:InsertDsdCodeResponse" />
   </wsdl:message>
+  <wsdl:message name="InsertConceptCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertConceptCode" />
+  </wsdl:message>
+  <wsdl:message name="InsertConceptCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertConceptCodeResponse" />
+  </wsdl:message>
   <wsdl:message name="GetDsdCodeIdSoapIn">
     <wsdl:part name="parameters" element="tns:GetDsdCodeId" />
   </wsdl:message>
   <wsdl:message name="GetDsdCodeIdSoapOut">
     <wsdl:part name="parameters" element="tns:GetDsdCodeIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetConceptCodeIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetConceptCodeId" />
+  </wsdl:message>
+  <wsdl:message name="GetConceptCodeIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetConceptCodeIdResponse" />
   </wsdl:message>
   <wsdl:message name="InsertLocalizedStringSoapIn">
     <wsdl:part name="parameters" element="tns:InsertLocalizedString" />
@@ -422,13 +491,25 @@
       <wsdl:input message="tns:GetCodelistIdSoapIn" />
       <wsdl:output message="tns:GetCodelistIdSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="GetConceptSchemeId">
+      <wsdl:input message="tns:GetConceptSchemeIdSoapIn" />
+      <wsdl:output message="tns:GetConceptSchemeIdSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="InsertDsdCode">
       <wsdl:input message="tns:InsertDsdCodeSoapIn" />
       <wsdl:output message="tns:InsertDsdCodeSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="InsertConceptCode">
+      <wsdl:input message="tns:InsertConceptCodeSoapIn" />
+      <wsdl:output message="tns:InsertConceptCodeSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="GetDsdCodeId">
       <wsdl:input message="tns:GetDsdCodeIdSoapIn" />
       <wsdl:output message="tns:GetDsdCodeIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConceptCodeId">
+      <wsdl:input message="tns:GetConceptCodeIdSoapIn" />
+      <wsdl:output message="tns:GetConceptCodeIdSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="InsertLocalizedString">
       <wsdl:input message="tns:InsertLocalizedStringSoapIn" />
@@ -540,6 +621,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetConceptSchemeId">
+      <soap:operation soapAction="http://tempuri.org/GetConceptSchemeId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="InsertDsdCode">
       <soap:operation soapAction="http://tempuri.org/InsertDsdCode" style="document" />
       <wsdl:input>
@@ -549,8 +639,26 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="InsertConceptCode">
+      <soap:operation soapAction="http://tempuri.org/InsertConceptCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="GetDsdCodeId">
       <soap:operation soapAction="http://tempuri.org/GetDsdCodeId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConceptCodeId">
+      <soap:operation soapAction="http://tempuri.org/GetConceptCodeId" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -678,6 +786,15 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetConceptSchemeId">
+      <soap12:operation soapAction="http://tempuri.org/GetConceptSchemeId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="InsertDsdCode">
       <soap12:operation soapAction="http://tempuri.org/InsertDsdCode" style="document" />
       <wsdl:input>
@@ -687,8 +804,26 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="InsertConceptCode">
+      <soap12:operation soapAction="http://tempuri.org/InsertConceptCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="GetDsdCodeId">
       <soap12:operation soapAction="http://tempuri.org/GetDsdCodeId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConceptCodeId">
+      <soap12:operation soapAction="http://tempuri.org/GetConceptCodeId" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

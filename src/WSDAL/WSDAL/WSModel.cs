@@ -12,6 +12,7 @@ using FlyCallWS;
 using System.IO;
 using ISTAT.Entity;
 using Org.Sdmxsource.Sdmx.Util.Objects.Container;
+using ISTATUtils;
 
 namespace ISTAT.WSDAL
 {
@@ -264,13 +265,21 @@ namespace ISTAT.WSDAL
 
             XmlDocument xDomOutput = new XmlDocument();
 
+            // Quirini Fix (DataType Double)
+
+            FixXmlDoc FixXml = new FixXmlDoc();
+
+            xDom = FixXml.FixDataType(xDom);
+
+            // ----------------------------
+
             try
             {
                 WSUtils wsUtils = new WSUtils();
 
                 WsConfigurationSettings wsSettings = wsUtils.GetSettings(WSConstants.wsOperation.SubmitStructure.ToString());
 
-                string OutputFilePath = HttpContext.Current.Server.MapPath("OutputFiles" + "\\" + HttpContext.Current.Session.SessionID + ".xml");
+                string OutputFilePath = HttpContext.Current.Server.MapPath(@"~\OutputFiles" + "\\" + HttpContext.Current.Session.SessionID + ".xml");
 
                 FlyCallWS.Streaming.CallWS objWS = new FlyCallWS.Streaming.CallWS(OutputFilePath, WSConstants.MaxOutputFileLength);
 
@@ -294,51 +303,27 @@ namespace ISTAT.WSDAL
         {
             XmlDocument xDomOutput = new XmlDocument();
 
-            WSUtils wsUtils = new WSUtils();
-
             ISdmxObjects SdmxObject, FilteredSdmxObject;
 
             FilteredSdmxObject = new SdmxObjectsImpl();
 
             try
             {
-                // File di appoggio per la creazione del xDom
-                string OutputFilePath = HttpContext.Current.Server.MapPath("OutputFiles" + "\\" + HttpContext.Current.Session.SessionID + ".xml");
+                var ret = CallWebService(operation, withLike, artIdentity, stub);
 
-                WsConfigurationSettings wsSettings = null;
+                if (ret == null || IsNotResult(ret))
+                    throw new Exception("no results found");
 
-                if (operation == WSConstants.wsOperation.GetDataStructureWithRef)
-                {
-                    wsSettings = wsUtils.GetSettings(WSConstants.wsOperation.GetDataStructure.ToString());
-                }
-                else if (operation == WSConstants.wsOperation.GetCategorySchemeWithParents)
-                {
-                    wsSettings = wsUtils.GetSettings(WSConstants.wsOperation.GetCategoryScheme.ToString());
-                }
-                else
-                {
-                    wsSettings = wsUtils.GetSettings(FindException(operation));
-                }
+                xDomOutput.InnerXml = ret;
 
-                XmlDocument xDom = new XmlDocument();
+                // Quirini Fix ----------------
 
-                // Carico il template
-                xDom.Load(getTemplate(operation));
+                FixXmlDoc FixXml = new FixXmlDoc();
 
-                // Imposto ID,Agency e Version
-                if (!withLike && artIdentity != null)
-                    SetKey(ref xDom, artIdentity);
-                else
-                    RemoveFilter(xDom);
+                xDomOutput = FixXml.FixDataType(xDomOutput);
+                xDomOutput = FixXml.FixLocale(xDomOutput, "la", "lo");
 
-                if (stub)
-                    SetStub(ref xDom);
-
-                FlyCallWS.Streaming.CallWS objWS = new FlyCallWS.Streaming.CallWS(OutputFilePath, WSConstants.MaxOutputFileLength);
-
-                xDomOutput.InnerXml = objWS.SendSOAPQuery(xDom, wsSettings);
-
-                File.Delete(OutputFilePath);
+                // ----------------------------
 
                 SdmxObject = LoadSDMXObject(xDomOutput);
 
@@ -468,6 +453,166 @@ namespace ISTAT.WSDAL
 
         }
 
+        private bool IsNotResult(string message)
+        {
+            return message.IndexOf("Could not find requested structures") >= 0 || message.IndexOf("ErrorMessage code=\"100\"") >= 0;
+        }
+
+        private string CallWebService(WSConstants.wsOperation operation, bool withLike, ArtefactIdentity artIdentity, bool stub)
+        {
+            EndPointElement epe = (EndPointElement)HttpContext.Current.Session["WSEndPoint"];
+
+            if (epe.ActiveEndPointType == ActiveEndPointType.SOAP)
+                return CallSOAPWebService(operation,withLike,artIdentity,stub);
+            else
+                return CallRESTWebService(operation, withLike, artIdentity, stub);
+        }
+
+        private string CallRESTWebService(WSConstants.wsOperation operation, bool withLike, ArtefactIdentity artIdentity, bool stub)
+        {
+
+            WsConfigurationSettings wsSettings = null;
+            WSUtils wsUtils = new WSUtils();
+            wsSettings = wsUtils.GetSettings("");
+
+            // File di appoggio per la creazione del xDom
+            string OutputFilePath = HttpContext.Current.Server.MapPath(@"~\OutputFiles" + "\\" + HttpContext.Current.Session.SessionID + ".xml");
+
+            string restquery = ComposeRestQuery(operation, withLike, artIdentity, stub);
+
+            FlyCallWS.Streaming.CallWS objWS = new FlyCallWS.Streaming.CallWS(OutputFilePath, WSConstants.MaxOutputFileLength);
+
+            File.Delete(OutputFilePath);
+
+            return objWS.SendRESTQuery(restquery, @"application/vnd.sdmx.structure+xml;version=2.1", wsSettings);
+        }
+
+        private string ComposeRestQuery(WSConstants.wsOperation operation, bool withLike, ArtefactIdentity artIdentity, bool stub)
+        {
+            string QueryRest = "";
+
+            switch (operation)
+            {
+                case WSConstants.wsOperation.GetAgencyScheme:
+                    QueryRest += "agencyscheme";
+                    break;
+                case WSConstants.wsOperation.GetCategorisation:
+                    QueryRest += "categorisation";
+                    break;
+                case WSConstants.wsOperation.GetCategorySchemeWithParents:
+                case WSConstants.wsOperation.GetCategoryScheme:
+                    QueryRest += "categoryScheme";
+                    break;
+                case WSConstants.wsOperation.GetCodelist:
+                    QueryRest += "codelist";
+                    break;
+                case WSConstants.wsOperation.GetConceptScheme:
+                    QueryRest += "conceptscheme";
+                    break;
+                case WSConstants.wsOperation.GetContentConstraint:
+                    QueryRest += "contentconstraint";
+                    break;
+                case WSConstants.wsOperation.GetDataConsumerScheme:
+                    QueryRest += "dataconsumerscheme";
+                    break;
+                case WSConstants.wsOperation.GetDataflow:
+                    QueryRest += "dataflow";
+                    break;
+                case WSConstants.wsOperation.GetDataProviderScheme:
+                    QueryRest += "dataproviderscheme";
+                    break;
+                case WSConstants.wsOperation.GetDataStructureWithRef:
+                case WSConstants.wsOperation.GetDataStructure:
+                    QueryRest += "datastructure";
+                    break;
+                case WSConstants.wsOperation.GetHierarchicalCodelist:
+                    QueryRest += "hierarchicalcodelist";
+                    break;
+                case WSConstants.wsOperation.GetOrganisationUnitScheme:
+                    QueryRest += "organisationunitscheme";
+                    break;
+                case WSConstants.wsOperation.GetStructureSet:
+                    QueryRest += "structureset";
+                    break;
+                case WSConstants.wsOperation.GetStructures:
+                    QueryRest += "xxx";
+                    break;
+                case WSConstants.wsOperation.SubmitStructure:
+                    QueryRest += "xxx";
+                    break;
+                default:
+                    break;
+            }
+
+            //@"codelist/ESTAT/CL_COUNTRY/"
+
+            // Imposto ID,Agency e Version
+            if (!withLike && artIdentity != null)
+            {
+                QueryRest += @"/" + (artIdentity.Agency != string.Empty ? artIdentity.Agency : "all");
+                QueryRest += @"/" + (artIdentity.ID != string.Empty ? artIdentity.ID : "all");
+                //QueryRest += @"/" + (artIdentity.Version != string.Empty ? artIdentity.Version : "LATEST");
+            }
+            else
+                QueryRest += @"/all/all";
+
+            if (operation == WSConstants.wsOperation.GetDataStructureWithRef)
+                QueryRest += @"/?detail=full&references=children";
+            else if(operation == WSConstants.wsOperation.GetCategorySchemeWithParents)
+                QueryRest += @"/?detail=full&references=parents";
+            else
+            {
+                if (stub)
+                    QueryRest += @"/?detail=allstubs";
+                else
+                    QueryRest += @"/?detail=full";
+            }
+
+            return QueryRest;
+        }
+
+        private string CallSOAPWebService(WSConstants.wsOperation operation, bool withLike, ArtefactIdentity artIdentity, bool stub)
+        {
+            XmlDocument xDom = new XmlDocument();
+            WSUtils wsUtils = new WSUtils();
+            WsConfigurationSettings wsSettings = null;
+
+            // File di appoggio per la creazione del xDom
+            string OutputFilePath = HttpContext.Current.Server.MapPath(@"~\OutputFiles" + "\\" + HttpContext.Current.Session.SessionID + ".xml");
+
+            // Carico il template
+            xDom.Load(getTemplate(operation));
+
+            if (operation == WSConstants.wsOperation.GetDataStructureWithRef)
+            {
+                wsSettings = wsUtils.GetSettings(WSConstants.wsOperation.GetDataStructure.ToString());
+            }
+            else if (operation == WSConstants.wsOperation.GetCategorySchemeWithParents)
+            {
+                wsSettings = wsUtils.GetSettings(WSConstants.wsOperation.GetCategoryScheme.ToString());
+            }
+            else
+            {
+                wsSettings = wsUtils.GetSettings(FindException(operation));
+            }
+
+            // Imposto ID,Agency e Version
+            if (!withLike && artIdentity != null)
+                SetKey(ref xDom, artIdentity);
+            else
+                RemoveFilter(xDom);
+
+            if (stub)
+                SetStub(ref xDom);
+
+            FlyCallWS.Streaming.CallWS objWS = new FlyCallWS.Streaming.CallWS(OutputFilePath, WSConstants.MaxOutputFileLength);
+
+            File.Delete(OutputFilePath);
+
+            return objWS.SendSOAPQuery(xDom, wsSettings);
+        }
+
+
         private string FindException(WSConstants.wsOperation operation)
         {
             string sOperation = string.Empty;
@@ -539,7 +684,7 @@ namespace ISTAT.WSDAL
                     break;
             }
 
-            return HttpContext.Current.Server.MapPath("SdmxQueryTemplate") + "\\" + fileName;
+            return HttpContext.Current.Server.MapPath(@"~\SdmxQueryTemplate") + "\\" + fileName;
         }
 
         /// <summary>

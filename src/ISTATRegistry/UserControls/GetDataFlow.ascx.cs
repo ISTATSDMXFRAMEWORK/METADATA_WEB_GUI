@@ -130,6 +130,8 @@ namespace ISTATRegistry.UserControls
             }
             catch (Exception ex)
             {
+                if (ex.Message.ToLower().Equals("no results found"))
+                    return;
                 Utils.ShowDialog(ex.Message);
             }
         }

@@ -31,6 +31,15 @@ namespace ISTATRegistry {
         protected global::System.Web.UI.WebControls.HyperLink HyperLink2;
         
         /// <summary>
+        /// Controllo IstatUpdatePanel1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::ISTATRegistry.Classes.IstatUpdatePanel IstatUpdatePanel1;
+        
+        /// <summary>
         /// Controllo lbl_id.
         /// </summary>
         /// <remarks>

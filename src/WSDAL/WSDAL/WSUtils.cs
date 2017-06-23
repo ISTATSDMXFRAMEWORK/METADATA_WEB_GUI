@@ -15,16 +15,13 @@ using Org.Sdmxsource.Sdmx.Api.Model.Format;
 using System.IO;
 using Org.Sdmxsource.Sdmx.SdmxObjects.Model;
 using System.Collections.Specialized;
+using ISTAT.Entity;
+using ISTATUtils;
 
 namespace ISTAT.WSDAL
 {
     public class WSUtils
     {
-        #region "Private Properties"
-        
-        private WsConfigurationSettings _wsConfigSettings = null;
-
-        #endregion
 
         #region "Constructors"
 
@@ -54,37 +51,45 @@ namespace ISTAT.WSDAL
         /// <returns></returns>
         public WsConfigurationSettings GetSettings(string operation)
         {
-
-            NameValueCollection endPointSection = (NameValueCollection)ConfigurationManager.GetSection("EndPoints");
+            EndPointElement epe = (EndPointElement)HttpContext.Current.Session["WSEndPoint"];
 
             WsConfigurationSettings wsConfigSettings = new WsConfigurationSettings()
             {
                 //WebService
-                RestEndPoint = "",
+                //RestEndPoint = @"http://localhost/LatestWSISTAT/rest",
                 Prefix = ConfigurationManager.AppSettings["Prefix"],
 
-
-                //Credenziali Http
-                EnableHTTPAuthenication = Convert.ToBoolean(ConfigurationManager.AppSettings["EnableHTTPAuthenication"]),
-                Domain = ConfigurationManager.AppSettings["Domain"],
-                Username = ConfigurationManager.AppSettings["Username"],
-                Password = ConfigurationManager.AppSettings["Password"],
-
                 //Proxy
-                EnableProxy = Convert.ToBoolean(ConfigurationManager.AppSettings["EnableProxy"]),
-                UseSystemProxy = Convert.ToBoolean(ConfigurationManager.AppSettings["UseSystemProxy"]),
-                ProxyServer = ConfigurationManager.AppSettings["ProxyServer"],
-                ProxyServerPort = Convert.ToInt32(ConfigurationManager.AppSettings["ProxyServerPort"]),
-                ProxyUsername = ConfigurationManager.AppSettings["ProxyUsername"],
-                ProxyPassword = ConfigurationManager.AppSettings["ProxyPassword"],
+                EnableProxy = epe.EnableProxy,
+                UseSystemProxy = epe.UseSystemProxy,
+                ProxyServer = epe.ProxyServer,
+                ProxyServerPort = epe.ProxyServerPort != String.Empty ? Convert.ToInt32(epe.ProxyServerPort) : 0,
+                ProxyUsername = epe.ProxyUsername,
+                ProxyPassword = epe.ProxyPassword,
 
-                EndPoint = HttpContext.Current.Session["WSEndPoint"].ToString(),
-                WSDL = HttpContext.Current.Session["WSEndPoint"].ToString() + "?wsdl",
-
-                //EndPoint = WSConstants.wsEndPoint,
-                //WSDL = WSConstants.wsEndPoint + "?wsdl",
-                Operation = operation
             };
+
+            //Credenziali Http
+            wsConfigSettings.EnableHTTPAuthenication = epe.EnableHTTPAuthenication;
+            if (epe.EnableHTTPAuthenication)
+            {
+                wsConfigSettings.Domain = epe.HTTPDomain;
+                wsConfigSettings.Username = epe.HTTPUsername;
+                wsConfigSettings.Password = epe.HTTPPassword;
+            }
+
+            if (epe.ActiveEndPointType == ActiveEndPointType.SOAP)
+            {
+                wsConfigSettings.EndPoint = epe.NSIEndPoint;
+                wsConfigSettings.WSDL = epe.NSIEndPoint + "?wsdl";
+                wsConfigSettings.Operation = operation;
+            }
+            else
+            {
+                wsConfigSettings.EndPoint = epe.RestEndPoint;
+                wsConfigSettings.WSDL = "";
+                wsConfigSettings.Operation = "";
+            }
 
             return wsConfigSettings;
         }
@@ -137,7 +142,7 @@ namespace ISTAT.WSDAL
 
             //Carico il template
             xDocTemplate = new XmlDocument();
-            xDocTemplate.Load(HttpContext.Current.Server.MapPath(@".\SdmxQueryTemplate\SubmitStructureReplace.xml"));
+            xDocTemplate.Load(HttpContext.Current.Server.MapPath(@"~/SdmxQueryTemplate/SubmitStructureReplace.xml"));
 
             // Il nodo root "Structure" del template
             XmlNode xTempStructNode = xDocTemplate.SelectSingleNode("//*[local-name()='Structures']");

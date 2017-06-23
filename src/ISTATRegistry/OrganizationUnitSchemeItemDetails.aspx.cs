@@ -180,12 +180,20 @@ namespace ISTATRegistry
             tmpOrganizationUnitscheme.Uri = (!txtDSDURI.Text.Trim().Equals( string.Empty ) && ValidationUtils.CheckUriFormat(txtDSDURI.Text)) ? new Uri(txtDSDURI.Text) : null;
             if (!txtValidFrom.Text.Trim().Equals(string.Empty))
             {
-                tmpOrganizationUnitscheme.StartDate = DateTime.ParseExact(txtValidFrom.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                tmpOrganizationUnitscheme.StartDate = DateTime.ParseExact(txtValidFrom.Text, "d/M/yyyy", CultureInfo.InvariantCulture);
             }
+			else
+			{
+				tmpOrganizationUnitscheme.StartDate = null;
+			}
             if (!txtValidTo.Text.Trim().Equals(string.Empty))
             {
-                tmpOrganizationUnitscheme.EndDate = DateTime.ParseExact(txtValidTo.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                tmpOrganizationUnitscheme.EndDate = DateTime.ParseExact(txtValidTo.Text, "d/M/yyyy", CultureInfo.InvariantCulture);
             }
+			else
+			{
+				tmpOrganizationUnitscheme.EndDate = null;
+			}
             foreach (var tmpName in AddTextName.TextObjectList)
             {
                 tmpOrganizationUnitscheme.AddName(tmpName.Locale, tmpName.Value);
@@ -310,12 +318,20 @@ namespace ISTATRegistry
             ous.Uri = (!txtDSDURI.Text.Trim().Equals( string.Empty) && ValidationUtils.CheckUriFormat(txtDSDURI.Text)) ? new Uri(txtDSDURI.Text) : null;
             if (!txtValidFrom.Text.Trim().Equals(string.Empty))
             {
-                ous.StartDate = DateTime.ParseExact(txtValidFrom.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                ous.StartDate = DateTime.ParseExact(txtValidFrom.Text, "d/M/yyyy", CultureInfo.InvariantCulture);
             }
+			else
+			{
+				ous.StartDate = null;
+			}
             if (!txtValidTo.Text.Trim().Equals(string.Empty))
             {
-                ous.EndDate = DateTime.ParseExact(txtValidTo.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                ous.EndDate = DateTime.ParseExact(txtValidTo.Text, "d/M/yyyy", CultureInfo.InvariantCulture);
             }
+			else
+			{
+				ous.EndDate = null;
+			}
             if (ous.Names.Count != 0)
             {
                 ous.Names.Clear();
@@ -494,7 +510,6 @@ namespace ISTATRegistry
 
             try
             {
-
                 ISdmxObjects sdmxObjects = new SdmxObjectsImpl();
 
                 sdmxObjects.AddOrganisationUnitScheme(ous.ImmutableInstance);
@@ -510,8 +525,10 @@ namespace ISTATRegistry
             }
             catch (Exception ex)
             {
-                return false;
+                Utils.ShowDialog(ex.Source + " - " + ex.Message, 300, "IR Error"); 
             }
+
+            return false;
         }
 
         private void ClearSessionPage()
@@ -947,9 +964,11 @@ namespace ISTATRegistry
                         if (gvr.RowIndex < 0 && gvr.RowIndex > ous.Items.Count) return;
 
                         bool canDelete = true;
-                        var parent_organization_unit = ous.Items[gvr.RowIndex].Id;
+                        int selectedRecordCount = gvOrganizationunitschemesItem.PageSize * gvOrganizationunitschemesItem.PageIndex + gvr.RowIndex;
 
-                        #region PARANT ID
+                        var parent_organization_unit = ous.Items[selectedRecordCount].Id;
+
+                        #region PARENT ID
                         if (parent_organization_unit != null)
                         {
                             IEnumerable<IOrganisationUnitMutableObject> parentOrganizationUnit = (from c in ous.Items where c.ParentUnit == parent_organization_unit select c).OfType<IOrganisationUnitMutableObject>();
@@ -964,7 +983,7 @@ namespace ISTATRegistry
 
                         if (canDelete)
                         {
-                            ous.Items.RemoveAt(gvr.RowIndex);
+                            ous.Items.RemoveAt(selectedRecordCount);
                             Session[KEY_PAGE_SESSION] = ous;
                             BindData();
                         }
@@ -1342,8 +1361,8 @@ namespace ISTATRegistry
                 //gvOrganizationunitschemesItem.Columns[3].Visible = false;
                 //gvOrganizationunitschemesItem.Columns[4].Visible = false;
                 gvOrganizationunitschemesItem.Columns[5].Visible = false;
-                cmbLanguageForCsv.Visible = false;
-                imgImportCsv.Visible = false;
+                //cmbLanguageForCsv.Visible = false;
+                //imgImportCsv.Visible = false;
             }
             else
             {
@@ -1352,9 +1371,9 @@ namespace ISTATRegistry
                 gvOrganizationunitschemesItem.Columns[3].Visible = true;
                 gvOrganizationunitschemesItem.Columns[4].Visible = true;
                 gvOrganizationunitschemesItem.Columns[5].Visible = true;
-                Utils.PopulateCmbLanguages(cmbLanguageForCsv, AVAILABLE_MODES.MODE_FOR_ADD_TEXT);
-                cmbLanguageForCsv.Visible = true;
-                imgImportCsv.Visible = true;
+                //Utils.PopulateCmbLanguages(cmbLanguageForCsv, AVAILABLE_MODES.MODE_FOR_ADD_TEXT);
+                //cmbLanguageForCsv.Visible = true;
+                //imgImportCsv.Visible = true;
             }
         }
         private void SetInsertForm()

@@ -76,7 +76,7 @@
             <input id="chbSelectAll" type="checkbox" onchange= "SelectDeselectAll()"/>&nbsp;<asp:Label runat="server" ID="lblSelectAll" Text="<%# Resources.Messages.lbl_select_all_items %>"/> 
             <br /><br />           
             <center>          
-            <div id= "importGridDiv" style="overflow: auto">   
+            <div id="importGridDiv" style="overflow: auto; width: 100%; height: 380px;">
                 <asp:GridView 
                     ID="gridView" 
                     runat="server"
@@ -134,6 +134,7 @@
                 </asp:GridView>
                 <asp:Label ID="lblNoItemsAllowed" runat="server" Visible="false" Text="<%# Resources.Messages.lbl_no_items_allowed %>"></asp:Label>
                 </div>
+
                 <br />
 
                 <asp:Button ID="btnConfirmImport" runat="server" Text="<%# Resources.Messages.btn_confirm_import %>" OnClientClick = "BlockScreenForImport(); return true;" 

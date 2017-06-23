@@ -65,15 +65,20 @@ namespace ISTATRegistry
                 {
                     IRServiceReference.User currentUser = Session[SESSION_KEYS.USER_DATA] as User;
                     _artIdentity = Utils.GetIdentityFromRequest(Request);
-                    int agencyOccurence = currentUser.agencies.Count( agency => agency.id.Equals( _artIdentity.Agency) );
-                    if ( agencyOccurence > 0 )
+                    if (currentUser != null)
                     {
-                        _action = (Action)Enum.Parse(typeof(Action), Request["ACTION"].ToString());
+                        int agencyOccurence = currentUser.agencies.Count(agency => agency.id.Equals(_artIdentity.Agency));
+                        if (agencyOccurence > 0)
+                        {
+                            _action = (Action)Enum.Parse(typeof(Action), Request["ACTION"].ToString());
+                        }
+                        else
+                        {
+                            _action = Action.VIEW;
+                        }
                     }
                     else
-                    {
                         _action = Action.VIEW;
-                    }
                 }
                 else
                 {
@@ -196,12 +201,20 @@ namespace ISTATRegistry
             tmpDataProviderscheme.Uri = (!txtDSDURI.Text.Trim().Equals( string.Empty ) && ValidationUtils.CheckUriFormat(txtDSDURI.Text)) ? new Uri(txtDSDURI.Text) : null;
             if (!txtValidFrom.Text.Trim().Equals(string.Empty))
             {
-                tmpDataProviderscheme.StartDate = DateTime.ParseExact(txtValidFrom.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                tmpDataProviderscheme.StartDate = DateTime.ParseExact(txtValidFrom.Text, "d/M/yyyy", CultureInfo.InvariantCulture);
             }
+			else
+			{
+				tmpDataProviderscheme.StartDate = null;
+			}
             if (!txtValidTo.Text.Trim().Equals(string.Empty))
             {
-                tmpDataProviderscheme.EndDate = DateTime.ParseExact(txtValidTo.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                tmpDataProviderscheme.EndDate = DateTime.ParseExact(txtValidTo.Text, "d/M/yyyy", CultureInfo.InvariantCulture);
             }
+			else
+			{
+				tmpDataProviderscheme.EndDate = null;
+			}
             foreach (var tmpName in AddTextName.TextObjectList)
             {
                 tmpDataProviderscheme.AddName(tmpName.Locale, tmpName.Value);
@@ -326,12 +339,20 @@ namespace ISTATRegistry
             dataProviderScheme.Uri = (!txtDSDURI.Text.Trim().Equals( string.Empty ) && ValidationUtils.CheckUriFormat(txtDSDURI.Text)) ? new Uri(txtDSDURI.Text) : null;
             if (!txtValidFrom.Text.Trim().Equals(string.Empty))
             {
-                dataProviderScheme.StartDate = DateTime.ParseExact(txtValidFrom.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                dataProviderScheme.StartDate = DateTime.ParseExact(txtValidFrom.Text, "d/M/yyyy", CultureInfo.InvariantCulture);
             }
+			else
+			{
+				dataProviderScheme.StartDate = null;
+			}
             if (!txtValidTo.Text.Trim().Equals(string.Empty))
             {
-                dataProviderScheme.EndDate = DateTime.ParseExact(txtValidTo.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                dataProviderScheme.EndDate = DateTime.ParseExact(txtValidTo.Text, "d/M/yyyy", CultureInfo.InvariantCulture);
             }
+			else
+			{
+				dataProviderScheme.EndDate = null;
+			}
             if (dataProviderScheme.Names.Count != 0)
             {
                 dataProviderScheme.Names.Clear();
@@ -886,7 +907,10 @@ namespace ISTATRegistry
                         IDataProviderSchemeMutableObject dataProviderScheme = GetDataProviderSchemeFromSession();
 
                         if (gvr.RowIndex < 0 && gvr.RowIndex > dataProviderScheme.Items.Count) return;
-                        dataProviderScheme.Items.RemoveAt(gvr.RowIndex);
+
+                        int selectedRecordCount = gvDataProviderschemesItem.PageSize * gvDataProviderschemesItem.PageIndex + gvr.RowIndex;
+
+                        dataProviderScheme.Items.RemoveAt(selectedRecordCount);
                         Session[KEY_PAGE_SESSION] = dataProviderScheme;
                         BindData();
                         
@@ -1259,8 +1283,8 @@ namespace ISTATRegistry
                 //gvDataProviderschemesItem.Columns[3].Visible = false;
                 gvDataProviderschemesItem.Columns[4].Visible = false;
                 //gvDataProviderschemesItem.Columns[5].Visible = false;
-                cmbLanguageForCsv.Visible = false;
-                imgImportCsv.Visible = false;
+                //cmbLanguageForCsv.Visible = false;
+                //imgImportCsv.Visible = false;
             }
             else
             {
@@ -1269,9 +1293,9 @@ namespace ISTATRegistry
                 gvDataProviderschemesItem.Columns[3].Visible = true;
                 gvDataProviderschemesItem.Columns[4].Visible = true;
                 gvDataProviderschemesItem.Columns[5].Visible = true;
-                Utils.PopulateCmbLanguages(cmbLanguageForCsv, AVAILABLE_MODES.MODE_FOR_ADD_TEXT);
-                cmbLanguageForCsv.Visible = true;
-                imgImportCsv.Visible = true;
+                //Utils.PopulateCmbLanguages(cmbLanguageForCsv, AVAILABLE_MODES.MODE_FOR_ADD_TEXT);
+                //cmbLanguageForCsv.Visible = true;
+                //imgImportCsv.Visible = true;
             }
         }
         private void SetInsertForm()

@@ -24,7 +24,7 @@
                 changeYear: true,
                 dateFormat: 'dd/mm/yy'
             });
-
+            $(".datepicker").datepicker($.datepicker.regional['<%=Session["Language"]%>']);
             $(".datepicker").datepicker("option", "showAnim", "drop");
 
             jQuery(function ($) {
@@ -75,7 +75,7 @@
         <ul class='etabs'>
             <li class='tab'><a href="#general">
                 <%= Resources.Messages.lbl_general %></a></li>
-            <li class='tab'><a href="#categorisation"><%= Resources.Messages.lbl_categorisation %></a></li>
+            <li class='tab ircats'><a href="#categorisation" class="ircats"><%= Resources.Messages.lbl_categorisation %></a></li>
         </ul>
         <div class='panel-container'>
             <div id="general">
@@ -84,14 +84,14 @@
                         <table class="tableForm">
                             <tr>
                                 <td>
-                                    <asp:Label ID="lblDFID" runat="server" Text="<%# Resources.Messages.lbl_id + ':' %>"
+                                    <asp:Label ID="lblDFID" runat="server" Text="<%# '*' + Resources.Messages.lbl_id + ':' %>"
                                         CssClass="tdProperty"></asp:Label>
                                 </td>
                                 <td width="45%">
                                     <asp:TextBox ID="txtDFID" runat="server" Enabled="false" ValidationGroup="dsd"></asp:TextBox>
                                 </td>
                                 <td>
-                                    <asp:Label ID="lblAgency" runat="server" Text="<%# Resources.Messages.lbl_agency + ':' %>"
+                                    <asp:Label ID="lblAgency" runat="server" Text="<%# '*' + Resources.Messages.lbl_agency + ':' %>"
                                         CssClass="tdProperty"></asp:Label>
                                 </td>
                                 <td width="45%">
@@ -102,7 +102,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <asp:Label ID="lblVersion" runat="server" Text="<%# Resources.Messages.lbl_version + ':' %>"
+                                    <asp:Label ID="lblVersion" runat="server" Text="<%# '*' + Resources.Messages.lbl_version + ':' %>"
                                         CssClass="tdProperty"></asp:Label>
                                 </td>
                                 <td>
@@ -162,7 +162,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <asp:Label ID="lblDFNames" runat="server" Text="<%# Resources.Messages.lbl_name + ':' %>"
+                                    <asp:Label ID="lblDFNames" runat="server" Text="<%# '*' + Resources.Messages.lbl_name + ':' %>"
                                         CssClass="tdProperty"></asp:Label>
                                 </td>
                                 <td>
@@ -203,7 +203,7 @@
                     </ContentTemplate>
                 </iup:IstatUpdatePanel>
             </div>
-            <div id= "categorisation">
+            <div id= "categorisation" class="ircats">
                 <uc1:Categorisations runat="server" id="Categorisations" />
             </div>
         </div>

@@ -31,23 +31,6 @@ namespace ISTATRegistry
 
     public partial class conceptschemeItemDetails : ISTATRegistry.Classes.ISTATWebPage
     {
-
-        public struct csvConcept
-        {
-            public string concept;
-            public string name;
-            public string description;
-            public string parentConcept;
-
-            public csvConcept(string concept, string name, string description, string parentConcept)
-            {
-                this.concept = concept;
-                this.name = name;
-                this.description = description;
-                this.parentConcept = parentConcept;
-            }
-        }
-
         public static string KEY_PAGE_SESSION = "TempConceptscheme";
 
         ArtefactIdentity _artIdentity;
@@ -67,15 +50,21 @@ namespace ISTATRegistry
                 {
                     IRServiceReference.User currentUser = Session[SESSION_KEYS.USER_DATA] as User;
                     _artIdentity = Utils.GetIdentityFromRequest(Request);
-                    int agencyOccurence = currentUser.agencies.Count(agency => agency.id.Equals(_artIdentity.Agency));
-                    if (agencyOccurence > 0)
+
+                    if (currentUser != null)
                     {
-                        _action = (Action)Enum.Parse(typeof(Action), Request["ACTION"].ToString());
+                        int agencyOccurence = currentUser.agencies.Count(agency => agency.id.Equals(_artIdentity.Agency));
+                        if (agencyOccurence > 0)
+                        {
+                            _action = (Action)Enum.Parse(typeof(Action), Request["ACTION"].ToString());
+                        }
+                        else
+                        {
+                            _action = Action.VIEW;
+                        }
                     }
                     else
-                    {
                         _action = Action.VIEW;
-                    }
                 }
                 else
                 {
@@ -98,7 +87,7 @@ namespace ISTATRegistry
             }
         }
 
-        private IConceptSchemeMutableObject GetConceptschemeForm()
+        private IConceptSchemeMutableObject GetConceptschemeForm(bool errorBypass = false)
         {
             bool isInError = false;                 // Indicatore di errore
             string messagesGroup = string.Empty;    // Stringa di raggruppamento errori
@@ -184,7 +173,10 @@ namespace ISTATRegistry
             }
             #endregion
 
-            if (isInError)
+
+            if (isInError && errorBypass)
+                return null;
+            else if (isInError)
             {
                 Utils.ShowDialog(messagesGroup, 300);
                 return null;
@@ -200,11 +192,19 @@ namespace ISTATRegistry
             tmpConceptscheme.Uri = (!txtDSDURI.Text.Trim().Equals(string.Empty) && ValidationUtils.CheckUriFormat(txtDSDURI.Text)) ? new Uri(txtDSDURI.Text) : null;
             if (!txtValidFrom.Text.Trim().Equals(string.Empty))
             {
-                tmpConceptscheme.StartDate = DateTime.ParseExact(txtValidFrom.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                tmpConceptscheme.StartDate = DateTime.ParseExact(txtValidFrom.Text, "d/M/yyyy", CultureInfo.InvariantCulture);
+            }
+            else
+            {
+                tmpConceptscheme.StartDate = null;
             }
             if (!txtValidTo.Text.Trim().Equals(string.Empty))
             {
-                tmpConceptscheme.EndDate = DateTime.ParseExact(txtValidTo.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                tmpConceptscheme.EndDate = DateTime.ParseExact(txtValidTo.Text, "d/M/yyyy", CultureInfo.InvariantCulture);
+            }
+            else
+            {
+                tmpConceptscheme.EndDate = null;
             }
             foreach (var tmpName in AddTextName.TextObjectList)
             {
@@ -225,7 +225,7 @@ namespace ISTATRegistry
 
             return tmpConceptscheme;
         }
-        private IConceptSchemeMutableObject GetConceptschemeForm(IConceptSchemeMutableObject cs)
+        private IConceptSchemeMutableObject GetConceptschemeForm(IConceptSchemeMutableObject cs, bool errorBypass = false)
         {
 
             if (cs == null) return GetConceptschemeForm();
@@ -314,7 +314,11 @@ namespace ISTATRegistry
             }
             #endregion
 
-            if (isInError)
+            if (isInError && errorBypass)
+            {
+                return (cs != null) ? cs : null;
+            }
+            else if (isInError)
             {
                 Utils.ShowDialog(messagesGroup, 300);
                 return null;
@@ -328,11 +332,19 @@ namespace ISTATRegistry
             cs.Uri = (!txtDSDURI.Text.Trim().Equals(string.Empty) && ValidationUtils.CheckUriFormat(txtDSDURI.Text)) ? new Uri(txtDSDURI.Text) : null;
             if (!txtValidFrom.Text.Trim().Equals(string.Empty))
             {
-                cs.StartDate = DateTime.ParseExact(txtValidFrom.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                cs.StartDate = DateTime.ParseExact(txtValidFrom.Text, "d/M/yyyy", CultureInfo.InvariantCulture);
+            }
+            else
+            {
+                cs.StartDate = null;
             }
             if (!txtValidTo.Text.Trim().Equals(string.Empty))
             {
-                cs.EndDate = DateTime.ParseExact(txtValidTo.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                cs.EndDate = DateTime.ParseExact(txtValidTo.Text, "d/M/yyyy", CultureInfo.InvariantCulture);
+            }
+            else
+            {
+                cs.EndDate = null;
             }
             if (cs.Names.Count != 0)
             {
@@ -547,10 +559,6 @@ namespace ISTATRegistry
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            lblImportCsvTitle.DataBind();
-            lblCsvLanguage.DataBind();
-            lblcsvFile.DataBind();
-            btnImportFromCsv.DataBind();
             lblDSDID.DataBind();
             lblVersion.DataBind();
             lblAgency.DataBind();
@@ -573,7 +581,6 @@ namespace ISTATRegistry
             lbl_description_update.DataBind();
             lbl_parentid_update.DataBind();
             btnUpdateConcept.DataBind();
-            btnAddNewConcept.DataBind();
             btnSaveMemoryConceptScheme.DataBind();
             btnSaveAnnotationCode.DataBind();
             lblNumberOfRows.DataBind();
@@ -581,7 +588,9 @@ namespace ISTATRegistry
             btnClearFieldForUpdate.DataBind();
             btnChangePaging.DataBind();
             lbl_annotation.DataBind();
-            lblSeparator.DataBind();
+
+
+            CSVImporter1.OperationComplete += CSVImporter1_OperationComplete;
 
             _localizedUtils = new LocalizedUtils(Utils.LocalizedCulture);
             _epe = (EndPointElement)Session[SESSION_KEYS.CURRENT_ENDPOINT_OBJECT];
@@ -598,11 +607,11 @@ namespace ISTATRegistry
                 AnnotationGeneralControl.ClearAnnotationsSession();
             }
 
+            IConceptSchemeMutableObject cs;
+
             switch (_action)
             {
                 case Action.INSERT:
-
-                    //ClearSessionPage();
 
                     AspConfirmationExit = "true";
 
@@ -637,6 +646,26 @@ namespace ISTATRegistry
                         cmbAgencies.SelectedIndex = 0;
                         FileDownload31.Visible = false;
                     }
+
+                    cs = GetConceptSchemeFromSession();
+                    if (cs == null) cs = GetConceptschemeForm(true);
+                    else cs = GetConceptschemeForm(cs);
+
+                    if (cs == null)
+                    {
+                        cs = new ConceptSchemeMutableCore();
+                        cs.Id = "@fitt@";
+                        cs.AgencyId = "@fitt@";
+                        cs.Version = "1.0";
+                        cs.AddName("it", "@fitt@");
+
+                    }
+
+                    CSVImporter1.ucConceptScheme = cs;
+                    CSVImporter1.ucTabName = "concepts";
+
+                    btnAddNewConcept.Visible = true;
+
                     break;
                 case Action.UPDATE:
 
@@ -665,10 +694,16 @@ namespace ISTATRegistry
                     Categorisations.ucArtefactType = AvailableStructures.CONCEPT_SCHEME;
                     Categorisations.ucArtIdentity = _artIdentity;
 
-                    /*if (gvConceptschemesItem.Rows.Count > 0)
-                        chkIsFinal.Enabled = true;
-                    else
-                        chkIsFinal.Enabled = false;*/
+                    bool bIsFinal = (bool)_artIdentity.IsFinal;
+
+                    cs = GetConceptSchemeFromSession();
+                    if (cs == null) cs = GetConceptschemeForm(bIsFinal);
+                    else cs = GetConceptschemeForm(cs, bIsFinal);
+                    CSVImporter1.ucConceptScheme = cs;
+                    CSVImporter1.ucTabName = "concepts";
+
+                    if ((bIsFinal && _epe.EnableIREndPoint) || !bIsFinal)
+                        btnAddNewConcept.Visible = true;
 
                     break;
                 case Action.VIEW:
@@ -692,11 +727,6 @@ namespace ISTATRegistry
                     AddTextDescription_new.ucOpenTabName = "concepts";
                     AddTextDescription_new.ucOpenPopUpWidth = 600;
                     AddTextDescription_new.ucOpenPopUpName = "df-Dimension";
-                    /*
-                    FileDownload31.ucID = _artIdentity.ID;
-                    FileDownload31.ucAgency = _artIdentity.Agency;
-                    FileDownload31.ucVersion = _artIdentity.Version;
-                    FileDownload31.ucArtefactType = "ConceptScheme";*/
 
                     break;
             }
@@ -713,7 +743,44 @@ namespace ISTATRegistry
             if (_action == Action.INSERT)
                 DuplicateArtefact1.Visible = false;
 
+
             lblNoItemsPresent.DataBind();
+
+        }
+
+        protected void CSVImporter1_OperationComplete(object sender, object e)
+        {
+            IConceptSchemeMutableObject cs;
+            IConceptSchemeMutableObject csCSV = (IConceptSchemeMutableObject)e;
+
+            if (_action == Action.INSERT)
+            {
+                cs = GetConceptSchemeFromSession();
+                if (cs == null) cs = GetConceptschemeForm();
+                else cs = GetConceptschemeForm(cs);
+
+                // Primo insert senza Item
+                if (cs != null && cs.Items.Count == 0)
+                {
+                    List<IConceptMutableObject> lItems = csCSV.Items.ToList();
+
+                    foreach (IConceptMutableObject code in lItems)
+                    {
+                        cs.Items.Add(code);
+                    }
+                }
+            }
+            else
+                cs = csCSV;
+
+            if (!SaveInMemory(cs)) return;
+
+            BindData();
+            //if (!errorInUploading)
+            //{
+            Utils.ShowDialog(Resources.Messages.succ_operation);
+            //}
+            Utils.AppendScript("location.href='#codes'");
 
         }
 
@@ -747,34 +814,20 @@ namespace ISTATRegistry
             {
                 successMessage = Resources.Messages.succ_concept_update;
             }
-            //Utils.ShowDialog(successMessage, 300, Resources.Messages.succ_operation);
-            //if (_action == Action.INSERT)
-            //{
-            //    Utils.AppendScript("~/conceptschemes.aspx");
-            //}
 
+            string jsYes, jsNo, script;
 
+            script = "CloseConfirm();";
 
-            string jsYes, jsNo;
-
-            jsYes = String.Format("location.href='ConceptSchemeItemDetails.aspx?ACTION=UPDATE&ID={0}&AGENCY={1}&VERSION={2}&ISFINAL={3}",
+            jsNo = String.Format("location.href='ConceptSchemeItemDetails.aspx?ACTION=UPDATE&ID={0}&AGENCY={1}&VERSION={2}&ISFINAL={3}'",
                                     cs.Id, cs.AgencyId, cs.Version, cs.FinalStructure.IsTrue.ToString());
-            //jsNo = "location.href='conceptschemes.aspx?m=y'";
-
-            successMessage += " " + Resources.Messages.lbl_manage_categorisations;
 
             if (_action == Action.INSERT)
             {
-                jsNo = jsYes + "'";
-                jsYes += "&OCT=true'";
-            }
-            else
-            {
-                jsYes += "&OCT=true'";
-                jsNo = "CloseConfirm();";
+                script = jsNo;
             }
 
-            Utils.ShowConfirm(successMessage, jsYes, jsNo);
+            Utils.ShowDialogBeforeScript(successMessage, script);
 
 
         }
@@ -784,7 +837,7 @@ namespace ISTATRegistry
 
             IConceptSchemeMutableObject cs = GetConceptSchemeFromSession();
 
-            cs = GetConceptschemeForm(cs);
+            cs = GetConceptschemeForm(cs, true);
 
             // form codelist validation
             if (cs == null)
@@ -860,8 +913,9 @@ namespace ISTATRegistry
                 }
                 else
                 {
-                    lblErrorOnUpdate.Text = Resources.Messages.err_id_format;
+                    //lblErrorOnUpdate.Text = Resources.Messages.err_id_format;
                     Utils.AppendScript("openPopUp('df-Dimension-update', 600 );");
+                    Utils.ShowDialog(Resources.Messages.err_id_format);
                     Utils.AppendScript("location.href= '#concepts';");
                     return;
                 }
@@ -877,9 +931,12 @@ namespace ISTATRegistry
                 }
                 else
                 {
-                    lblErrorOnUpdate.Text = Resources.Messages.err_list_name_format;
                     Utils.AppendScript("openPopUp('df-Dimension-update', 600 );");
+                    Utils.ShowDialog(Resources.Messages.err_list_name_format);
+                    //lblErrorOnUpdate.Text = Resources.Messages.err_list_name_format;
                     Utils.AppendScript("location.href= '#concepts';");
+
+
                     return;
                 }
                 #endregion
@@ -898,8 +955,9 @@ namespace ISTATRegistry
 
                 if (concept_id.Equals(concept_parent_id))
                 {
-                    lblErrorOnUpdate.Text = Resources.Messages.err_parent_id_same_value;
+                    //lblErrorOnUpdate.Text = Resources.Messages.err_parent_id_same_value;
                     Utils.AppendScript("openPopUp('df-Dimension-update', 600 );");
+                    Utils.ShowDialog(Resources.Messages.err_list_name_format);
                     Utils.AppendScript("location.href= '#concepts';");
                     return;
                 }
@@ -914,8 +972,9 @@ namespace ISTATRegistry
                     else
                     {
 
-                        lblErrorOnUpdate.Text = Resources.Messages.err_parent_id_not_found;
+                        //lblErrorOnUpdate.Text = Resources.Messages.err_parent_id_not_found;
                         Utils.AppendScript("openPopUp('df-Dimension-update', 600 );");
+                        Utils.ShowDialog(Resources.Messages.err_parent_id_not_found);
                         Utils.AppendScript("location.href= '#concepts';");
                         return;
                     }
@@ -933,12 +992,14 @@ namespace ISTATRegistry
                 cs.Items.Insert(indexConcept, concept);
                 if (ex.Message.Contains("- 706 -"))
                 {
-                    lblErrorOnUpdate.Text = Resources.Messages.err_parent_item_is_child;
+                    //lblErrorOnUpdate.Text = Resources.Messages.err_parent_item_is_child;
+                    Utils.ShowDialog(Resources.Messages.err_parent_item_is_child);
                     Utils.AppendScript("openPopUp('df-Dimension-update', 600);");
                 }
                 else
                 {
-                    lblErrorOnUpdate.Text = Resources.Messages.err_concept_update;
+                    //lblErrorOnUpdate.Text = Resources.Messages.err_concept_update;
+                    Utils.ShowDialog(Resources.Messages.err_concept_update);
                     Utils.AppendScript("openPopUp('df-Dimension-update', 600);");
                 }
                 Utils.AppendScript("location.href='#concepts';");
@@ -949,7 +1010,7 @@ namespace ISTATRegistry
                 return;
 
             BindData();
-            lblErrorOnUpdate.Text = string.Empty;
+            //lblErrorOnUpdate.Text = string.Empty;
             Utils.AppendScript("location.href='#concepts';");
         }
 
@@ -1010,9 +1071,11 @@ namespace ISTATRegistry
                         if (gvr.RowIndex < 0 && gvr.RowIndex > cs.Items.Count) return;
 
                         bool canDelete = true;
-                        var parent_concept = cs.Items[gvr.RowIndex].Id;
 
-                        #region PARANT ID
+                        int selectedRecordCount = gvConceptschemesItem.PageSize * gvConceptschemesItem.PageIndex + gvr.RowIndex;
+                        var parent_concept = cs.Items[selectedRecordCount].Id;
+
+                        #region PARENT ID
                         if (parent_concept != null)
                         {
                             IEnumerable<IConceptMutableObject> parentConcept = (from c in cs.Items where c.ParentConcept == parent_concept select c).OfType<IConceptMutableObject>();
@@ -1028,7 +1091,7 @@ namespace ISTATRegistry
 
                         if (canDelete)
                         {
-                            cs.Items.RemoveAt(gvr.RowIndex);
+                            cs.Items.RemoveAt(selectedRecordCount);
 
                             Session[KEY_PAGE_SESSION] = cs;
 
@@ -1042,7 +1105,7 @@ namespace ISTATRegistry
                 case "ANNOTATION":
                     {
                         IConceptSchemeMutableObject cs = GetConceptSchemeFromSession();
-                        cs = GetConceptschemeForm(cs);
+                        cs = GetConceptschemeForm(cs, true);
 
                         GridViewRow gvr = (GridViewRow)(((ImageButton)e.CommandSource).NamingContainer);
 
@@ -1072,167 +1135,6 @@ namespace ISTATRegistry
             }
 
         }
-        protected void gvConceptschemesItem_RowUpdating(object sender, GridViewUpdateEventArgs e)
-        {
-            // NULL
-        }
-        protected void gvConceptschemesItem_RowDeleting(object sender, GridViewDeleteEventArgs e)
-        {
-            // NULL
-        }
-        protected void gvConceptschemesItem_Sorting(object sender, GridViewSortEventArgs e)
-        {
-
-        }
-        protected void gvCodelistsItem_Sorted(object sender, EventArgs e)
-        {
-            // NULL
-        }
-        protected void btnImportFromCsv_Click(object sender, EventArgs e)
-        {
-            if (!csvFile.HasFile)
-            {
-                Utils.AppendScript("openPopUp( 'importCsv' );");
-                Utils.AppendScript("location.href='#concepts'");
-                Utils.AppendScript(string.Format("alert( '{0}' );", Resources.Messages.err_no_file_uploaded));
-                return;
-            }
-
-            IConceptSchemeMutableObject cs = GetConceptSchemeFromSession();
-
-            if (cs == null) return;
-
-            List<csvConcept> concepts = new List<csvConcept>();
-            bool errorInUploading = false;
-            StreamReader reader = null;
-            StreamWriter logWriter = null;
-            string wrongRowsMessage = string.Empty;
-            string wrongRowsMessageForUser = string.Empty;
-            string wrongFileLines = string.Empty;
-
-            try
-            {
-                string filenameWithoutExtension = string.Format("{0}_{1}_{2}", Path.GetFileName(csvFile.FileName).Substring(0, csvFile.FileName.Length - 4), Session.SessionID, DateTime.Now.ToString().Replace('/', '_').Replace(':', '_').Replace(' ', '_'));
-                string filename = string.Format("{0}.csv", filenameWithoutExtension);
-                string logFilename = string.Format("{0}.log", filenameWithoutExtension);
-                csvFile.SaveAs(Server.MapPath("~/csv_conceptschemes_files/") + filename);
-
-                reader = new StreamReader(Server.MapPath("~/csv_conceptschemes_files/") + filename);
-                logWriter = new StreamWriter(Server.MapPath("~/csv_conceptschemes_import_logs/") + logFilename, true);
-                logWriter.WriteLine(string.Format("LOG RELATIVO A CARICAMENTO DEL CONCEPT SCHEME [ ID => \"{0}\"  AGENCY_ID => \"{1}\"  VERSION => \"{2}\" ]  |  LINGUA SELEZIONATA: {3}\n", cs.Id.ToString(), cs.AgencyId.ToString(), cs.Version.ToString(), cmbLanguageForCsv.SelectedValue.ToString()));
-                logWriter.WriteLine("-----------------------------------------------------------------------------------------------------------------------------\n");
-                reader.ReadLine();
-                int currentRow = 1;
-
-                char separator = txtSeparator.Text.Trim().Equals(string.Empty) ? ';' : txtSeparator.Text.Trim().ElementAt(0);
-
-                while (!reader.EndOfStream)
-                {
-                    string currentFileLine = reader.ReadLine();
-                    string[] fields = currentFileLine.Split(separator);
-                    if (fields.Length != 4)
-                    {
-                        errorInUploading = true;
-                        wrongRowsMessage += string.Format(Resources.Messages.err_csv_import_line_bad_format, currentRow + 1);
-                        wrongRowsMessageForUser += string.Format(Resources.Messages.err_csv_import_line_bad_format_gui, currentRow + 1);
-                        wrongFileLines += string.Format("{0}\n", currentFileLine);
-                        logWriter.WriteLine(string.Format(Resources.Messages.err_csv_import_line_bad_format, currentRow + 1));
-                        logWriter.Flush();
-                        currentRow++;
-                        continue;
-                    }
-                    if (fields[0].Trim().Equals("\"\"") || fields[0].Trim().Equals(string.Empty))
-                    {
-                        errorInUploading = true;
-                        wrongRowsMessage += string.Format(Resources.Messages.err_csv_import_id_missing, currentRow + 1);
-                        wrongRowsMessageForUser += string.Format(Resources.Messages.err_csv_import_id_missing_gui, currentRow + 1);
-                        wrongFileLines += string.Format("{0}\n", currentFileLine);
-                        logWriter.WriteLine(string.Format(Resources.Messages.err_csv_import_id_missing, currentRow + 1));
-                        logWriter.Flush();
-                        currentRow++;
-                        continue;
-                    }
-                    if (fields[1].Trim().Equals("\"\"") || fields[1].Trim().Equals(string.Empty))
-                    {
-                        errorInUploading = true;
-                        wrongRowsMessage += string.Format(Resources.Messages.err_csv_import_name_missing, currentRow + 1);
-                        wrongRowsMessageForUser += string.Format(Resources.Messages.err_csv_import_name_missing_gui, currentRow + 1);
-                        wrongFileLines += string.Format("{0}\n", currentFileLine);
-                        logWriter.WriteLine(string.Format(Resources.Messages.err_csv_import_name_missing, currentRow + 1));
-                        logWriter.Flush();
-                        currentRow++;
-                        continue;
-                    }
-                    concepts.Add(new csvConcept(fields[0].ToString().Replace("\"", ""), fields[1].ToString().Replace("\"", ""), fields[2].ToString().Replace("\"", ""), fields[3].ToString().Replace("\"", "")));
-                    currentRow++;
-                }
-            }
-            catch (Exception ex)
-            {
-                Utils.AppendScript(string.Format("Upload status: The file could not be uploaded. The following error occured: {0}", ex.Message));
-            }
-
-            foreach (csvConcept concept in concepts)
-            {
-
-                if (!concept.parentConcept.Trim().Equals(string.Empty))
-                {
-                    int cont = (from myConcept in cs.Items
-                                where myConcept.Id.Equals(concept.parentConcept)
-                                select myConcept).Count();
-                    if (cont == 0)
-                    {
-                        errorInUploading = true;
-                        wrongRowsMessageForUser += string.Format(Resources.Messages.err_csv_import_parent_code_error, concept.parentConcept, concept.concept, concept.concept);
-                        continue;
-                    }
-                }
-
-                IEnumerable<IConceptMutableObject> tmpConcepts = (from conc in cs.Items where conc.Id == concept.concept select conc).OfType<IConceptMutableObject>();
-
-                IConceptMutableObject tmpConcept;
-
-                if (!(tmpConcepts.Count() > 0))
-                {
-                    tmpConcept = new ConceptMutableCore();
-                    tmpConcept.Id = concept.concept;
-                    tmpConcept.ParentConcept = concept.parentConcept;
-                    tmpConcept.AddName(cmbLanguageForCsv.SelectedValue.ToString(), concept.name);
-                    tmpConcept.AddDescription(cmbLanguageForCsv.SelectedValue.ToString(), concept.description);
-                    cs.AddItem(tmpConcept);
-                }
-                else
-                {
-                    tmpConcept = tmpConcepts.First();
-                    tmpConcept.Id = concept.concept;
-                    tmpConcept.ParentConcept = concept.parentConcept;
-                    tmpConcept.AddName(cmbLanguageForCsv.SelectedValue.ToString(), concept.name);
-                    tmpConcept.AddDescription(cmbLanguageForCsv.SelectedValue.ToString(), concept.description);
-                }
-            }
-
-            if (errorInUploading)
-            {
-                lblImportCsvErrors.Text = wrongRowsMessageForUser;
-                lblImportCsvWrongLines.Text = wrongFileLines;
-                Utils.AppendScript("openP('importCsvErrors',500);");
-            }
-
-            logWriter.Close();
-            reader.Close();
-
-            if (!SaveInMemory(cs))
-                return;
-
-            BindData();
-            if (!errorInUploading)
-            {
-                Utils.ShowDialog(Resources.Messages.succ_operation);
-            }
-            Utils.AppendScript("location.href='#concepts';");
-
-        }
-
         #endregion
 
         #region LAYOUT
@@ -1412,29 +1314,31 @@ namespace ISTATRegistry
                 // Se final il pulsante di add e le colonne di modifica
                 // dei codici non devono apparire
                 btnSaveMemoryConceptScheme.Visible = false;
-                btnAddNewConcept.Visible = false;
+                //btnAddNewConcept.Visible = false;
                 AddTextName_Update.ucEditMode = false;
                 AddTextDescription_Update.ucEditMode = false;
                 txt_parentid_update.Enabled = false;
                 AnnotationGeneralControl.EditMode = false;
                 btnSaveAnnotationCode.Enabled = false;
                 btnUpdateConcept.Enabled = false;
-                //gvConceptschemesItem.Columns[3].Visible = false;
-                //gvConceptschemesItem.Columns[4].Visible = false;
+                btnNewConcept.Visible = false;
+
                 gvConceptschemesItem.Columns[5].Visible = false;
-                cmbLanguageForCsv.Visible = false;
-                imgImportCsv.Visible = false;
+                CSVImporter1.Visible = false;
+
+                //if ((cs.IsFinal.IsTrue && _epe.EnableIREndPoint) || _action != Action.VIEW)
+                //{
+                //    btnAddNewConcept.Visible = true;
+                //}
             }
             else
             {
                 btnSaveMemoryConceptScheme.Visible = true;
-                btnAddNewConcept.Visible = true;
                 gvConceptschemesItem.Columns[3].Visible = true;
                 gvConceptschemesItem.Columns[4].Visible = true;
                 gvConceptschemesItem.Columns[5].Visible = true;
-                Utils.PopulateCmbLanguages(cmbLanguageForCsv, AVAILABLE_MODES.MODE_FOR_ADD_TEXT);
-                cmbLanguageForCsv.Visible = true;
-                imgImportCsv.Visible = true;
+
+                CSVImporter1.Visible = true;
             }
         }
         private void SetInsertForm()
@@ -1535,7 +1439,7 @@ namespace ISTATRegistry
 
         protected void btnClearFieldsForUpdate_Click(object sender, EventArgs e)
         {
-            lblErrorOnUpdate.Text = string.Empty;
+            //lblErrorOnUpdate.Text = string.Empty;
             Utils.AppendScript("location.href= '#concepts';");
         }
 
@@ -1601,6 +1505,134 @@ namespace ISTATRegistry
                 }
             }
         }
+
+
+        protected void btnAddConceptToFinalStructure_Click(object sender, EventArgs e)
+        {
+
+            string id = txtDSDID.Text;
+            string agency = txtAgenciesReadOnly.Text;
+            string[] tmpVersionParts = txtVersion.Text.Split('.');
+
+            int v1 = Convert.ToInt32(tmpVersionParts[0]);
+            int v2 = Convert.ToInt32(tmpVersionParts[1]);
+
+            EndPointElement epe = (EndPointElement)Session[SESSION_KEYS.CURRENT_ENDPOINT_OBJECT];
+            WSClient wsClient = new WSClient(epe.IREndPoint);
+            IRService client = wsClient.GetClient();
+
+            // Recupero l'id della codelist
+            int foundCSId = 0,
+                foundParentCodeId = 0,
+                insertedCodeId = 0,
+                foundLocalizedNameStringId = 0,
+                foundLocalizedDescStringId = 0;
+
+            client.GetConceptSchemeId(id, agency, v1, v2, ref foundCSId);
+
+            string codeId = txt_id_new.Text.Trim(),
+                parentCode = txt_parentid_new.Text.Trim();
+
+            #region CODE ID
+            if (!ValidationUtils.CheckIdFormat(codeId))
+            {
+                lblErrorOnNewInsert.Text = Resources.Messages.err_id_format;
+                Utils.AppendScript("openPopUp('df-Dimension', 600);");
+                Utils.AppendScript("location.href= '#codes';");
+                return;
+            }
+
+            #endregion
+
+            #region CODE NAMES
+            if ((AddTextName_new.TextObjectList == null) || (AddTextName_new.TextObjectList != null && AddTextName_new.TextObjectList.Count == 0))
+            {
+                lblErrorOnNewInsert.Text = Resources.Messages.err_list_name_format;
+                Utils.AppendScript("openPopUp('df-Dimension', 600);");
+                Utils.AppendScript("location.href= '#codes';");
+                return;
+            }
+            #endregion
+
+            #region PARENT ID
+
+            if (codeId.Equals(parentCode))
+            {
+                lblErrorOnNewInsert.Text = Resources.Messages.err_parent_id_same_value;
+                Utils.AppendScript("openPopUp('df-Dimension-update', 600 );");
+                Utils.AppendScript("location.href= '#codes';");
+                return;
+            }
+
+            #endregion
+
+            if (!client.GetConceptCodeId(foundCSId, parentCode, ref foundParentCodeId))
+            {
+                lblErrorOnNewInsert.Text = Resources.Messages.err_while_retrieving_code;
+                Utils.AppendScript("openPopUp('df-Dimension', 600);");
+                Utils.AppendScript("location.href= '#codes';");
+                return;
+            }
+
+            if (!client.InsertConceptCode(codeId, foundCSId.ToString(), foundParentCodeId, ref insertedCodeId))
+            {
+                lblErrorOnNewInsert.Text = Resources.Messages.err_while_inserting_code;
+                Utils.AppendScript("openPopUp('df-Dimension', 600);");
+                Utils.AppendScript("location.href= '#codes';");
+                return;
+            }
+            if (AddTextName_new.TextObjectList != null)
+            {
+                foreach (var name in AddTextName_new.TextObjectList)
+                {
+                    if (!client.InsertLocalizedString(insertedCodeId, name.Value, "Name", name.Locale, ref foundLocalizedNameStringId))
+                    {
+                        lblErrorOnNewInsert.Text = Resources.Messages.err_while_inserting_code_name;
+                        Utils.AppendScript("openPopUp('df-Dimension', 600);");
+                        Utils.AppendScript("location.href= '#codes';");
+                        return;
+                    }
+                }
+            }
+            if (AddTextDescription_new.TextObjectList != null)
+            {
+                foreach (var desc in AddTextDescription_new.TextObjectList)
+                {
+                    if (!client.InsertLocalizedString(insertedCodeId, desc.Value, "Desc", desc.Locale, ref foundLocalizedDescStringId))
+                    {
+                        lblErrorOnNewInsert.Text = Resources.Messages.err_while_inserting_code_desc;
+                        Utils.AppendScript("openPopUp('df-Dimension', 600);");
+                        Utils.AppendScript("location.href= '#codes';");
+                        return;
+                    }
+                }
+            }
+
+            txt_id_new.Text = string.Empty;
+            txt_parentid_new.Text = string.Empty;
+            AddTextDescription_new.ClearTextObjectListWithOutJS();
+            AddTextName_new.ClearTextObjectListWithOutJS();
+
+            WSModel wsModel = new WSModel();
+            ISdmxObjects sdmxObject = wsModel.GetConceptScheme(_artIdentity, false, false);
+            IConceptSchemeObject cs = sdmxObject.ConceptSchemes.FirstOrDefault();
+
+            Session[KEY_PAGE_SESSION] = null;
+
+            BindData();
+            Utils.AppendScript("location.href= '#concepts';");
+        }
+
+        protected void gvConceptschemesItem_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        {
+
+        }
+
+        protected void gvConceptschemesItem_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+
+        }
+
 
     }
 

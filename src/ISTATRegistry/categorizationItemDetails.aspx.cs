@@ -32,6 +32,7 @@ using Org.Sdmxsource.Sdmx.Api.Model.Objects.Base;
 using Org.Sdmxsource.Sdmx.Api.Model.Objects.Mapping;
 using Org.Sdmxsource.Sdmx.Api.Model.Objects.Registry;
 using ISTATRegistry.IRServiceReference;
+using System.Collections.Specialized;
 
 namespace ISTATRegistry
 {
@@ -49,11 +50,6 @@ namespace ISTATRegistry
 
         private void SetAction()
         {
-            /* if (Request["ACTION"] == null)
-                 _action = Action.VIEW;
-             else
-                 _action = (Action)Enum.Parse(typeof(Action), Request["ACTION"].ToString());*/
-
             if (Request["ACTION"] == null || Utils.ViewMode)
                 _action = Action.VIEW;
             else
@@ -62,33 +58,26 @@ namespace ISTATRegistry
                 {
                     IRServiceReference.User currentUser = Session[SESSION_KEYS.USER_DATA] as User;
                     _artIdentity = Utils.GetIdentityFromRequest(Request);
-                    int agencyOccurence = currentUser.agencies.Count(agency => agency.id.Equals(_artIdentity.Agency));
-                    if (agencyOccurence > 0)
+                    if (currentUser != null)
                     {
-                        _action = (Action)Enum.Parse(typeof(Action), Request["ACTION"].ToString());
+                        int agencyOccurence = currentUser.agencies.Count(agency => agency.id.Equals(_artIdentity.Agency));
+                        if (agencyOccurence > 0)
+                        {
+                            _action = (Action)Enum.Parse(typeof(Action), Request["ACTION"].ToString());
+                        }
+                        else
+                        {
+                            _action = Action.VIEW;
+                        }
                     }
                     else
-                    {
                         _action = Action.VIEW;
-                    }
                 }
                 else
                 {
                     _action = (Action)Enum.Parse(typeof(Action), Request["ACTION"].ToString());
                 }
             }
-
-            /*
-            if (Request["ACTION"] == null || Utils.ViewMode)
-            {
-                _action = Action.VIEW;
-                return;
-            }
-
-            if (Request["ISFINAL"] != null && bool.Parse(Request["ISFINAL"]))
-                _action = Action.VIEW;
-            else
-                _action = (Action)Enum.Parse(typeof(Action), Request["ACTION"].ToString());*/
         }
 
         private string GetAgencyValue()
@@ -208,12 +197,20 @@ namespace ISTATRegistry
             tmpCategorization.Uri = (!txt_uri.Text.Trim().Equals(string.Empty) && ValidationUtils.CheckUriFormat(txt_uri.Text)) ? new Uri(txt_uri.Text) : null;
             if (!txt_valid_from.Text.Trim().Equals(string.Empty))
             {
-                tmpCategorization.StartDate = DateTime.ParseExact(txt_valid_from.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                tmpCategorization.StartDate = DateTime.ParseExact(txt_valid_from.Text, "d/M/yyyy", CultureInfo.InvariantCulture);
             }
+			else
+			{
+				tmpCategorization.StartDate = null;
+			}
             if (!txt_valid_to.Text.Trim().Equals(string.Empty))
             {
-                tmpCategorization.EndDate = DateTime.ParseExact(txt_valid_to.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                tmpCategorization.EndDate = DateTime.ParseExact(txt_valid_to.Text, "d/M/yyyy", CultureInfo.InvariantCulture);
             }
+			else
+			{
+				tmpCategorization.EndDate = null;
+			}
             foreach (var tmpName in AddTextName.TextObjectList)
             {
                 tmpCategorization.AddName(tmpName.Locale, tmpName.Value);
@@ -265,7 +262,7 @@ namespace ISTATRegistry
                 case "CONTENT_CONSTRAINT":
                     typeOfTheStructure = SdmxStructureEnumType.ContentConstraint;
                     break;
-                case "KEY_FAMILY":
+                case "DSD":
                     typeOfTheStructure = SdmxStructureEnumType.Dsd;
                     break;
             }
@@ -277,6 +274,7 @@ namespace ISTATRegistry
             tmpCategorization.StructureReference = structureRef;
 
             string[] referenceOfTheCategory = { Session["tmpCategoryReference"].ToString() };
+
             string referenceOfTheCategoryScheme = Session["tmpCategorySchemeReference"].ToString();
             string[] elementsOfTheCategoryScheme = referenceOfTheCategoryScheme.Split('-');
             IStructureReference categoryRef = new StructureReferenceImpl(elementsOfTheCategoryScheme[1], elementsOfTheCategoryScheme[0], elementsOfTheCategoryScheme[2], SdmxStructureEnumType.Category, referenceOfTheCategory);
@@ -389,12 +387,20 @@ namespace ISTATRegistry
             cat.Uri = (!txt_uri.Text.Trim().Equals(string.Empty) && ValidationUtils.CheckUriFormat(txt_uri.Text)) ? new Uri(txt_uri.Text) : null;
             if (!txt_valid_from.Text.Trim().Equals(string.Empty))
             {
-                cat.StartDate = DateTime.ParseExact(txt_valid_from.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                cat.StartDate = DateTime.ParseExact(txt_valid_from.Text, "d/M/yyyy", CultureInfo.InvariantCulture);
             }
+			else
+			{
+				cat.StartDate = null;
+			}
             if (!txt_valid_to.Text.Trim().Equals(string.Empty))
             {
-                cat.EndDate = DateTime.ParseExact(txt_valid_to.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                cat.EndDate = DateTime.ParseExact(txt_valid_to.Text, "d/M/yyyy", CultureInfo.InvariantCulture);
             }
+			else
+			{
+				cat.EndDate = null;
+			}
             if (cat.Names.Count != 0)
             {
                 cat.Names.Clear();
@@ -459,7 +465,7 @@ namespace ISTATRegistry
                 case "CONTENT_CONSTRAINT":
                     typeOfTheStructure = SdmxStructureEnumType.ContentConstraint;
                     break;
-                case "KEY_FAMILY":
+                case "DSD":
                     typeOfTheStructure = SdmxStructureEnumType.Dsd;
                     break;
             }
@@ -478,108 +484,6 @@ namespace ISTATRegistry
 
             return cat;
         }
-
-        /*private ICodelistMutableObject InsertCodeInCodelist(ICodelistMutableObject cl)
-        {
-            if (cl == null) return null;
-
-            ICodeMutableObject code = new CodeMutableCore();
-
-            string code_id = txt_id_new.Text.Trim();
-
-            IList<ITextTypeWrapperMutableObject> code_names = AddTextName_new.TextObjectList;
-            IList<ITextTypeWrapperMutableObject> code_descs = AddTextDescription_new.TextObjectList;
-            string code_parent_id = txt_parentid_new.Text.Trim();
-            string code_order_str = txt_order_new.Text.Trim();
-
-            #region CODE ID
-            if ( ValidationUtils.CheckIdFormat( code_id ) )
-            {
-                code.Id = code_id;
-            }
-            else
-            {
-                Utils.ShowDialog(Resources.Messages.err_id_format, 300, Resources.Messages.err_title);
-                Utils.AppendScript("location.href= '#codes';");
-                return null;
-            }
-
-            IEnumerable<ICodeMutableObject> codes = (from c in cl.Items where c.Id == code_id select c).OfType<ICodeMutableObject>();
-            if (codes.Count() > 0)
-            {
-                Utils.ShowDialog(Resources.Messages.err_id_exist, 300, Resources.Messages.err_title);
-                Utils.AppendScript("location.href= '#codes';");
-                return null;
-            }
-            #endregion
-
-            #region CODE NAMES
-            if (code_names != null)
-            {
-                foreach (var tmpName in code_names)
-                {
-                    code.AddName(tmpName.Locale, tmpName.Value);
-                }
-            }
-            else
-            {
-                Utils.ShowDialog(Resources.Messages.err_list_name_format, 300, Resources.Messages.err_title);
-                Utils.AppendScript("location.href= '#codes';");
-                return null;
-            }
-            #endregion
-
-            #region CODE DESCRIPTIONS
-            if (code_descs != null)
-            {
-                foreach (var tmpDescription in code_descs)
-                {
-                    code.AddDescription(tmpDescription.Locale, tmpDescription.Value);
-                }
-            }
-            #endregion
-
-            #region PARANT ID
-            if (!code_parent_id.Equals(string.Empty) && ValidationUtils.CheckIdFormat(code_id))
-            {
-                IEnumerable<ICodeMutableObject> parentCode = (from c in cl.Items where c.Id == code_parent_id select c).OfType<ICodeMutableObject>();
-                if (parentCode.Count() > 0)
-                    code.ParentCode = code_parent_id;
-                else
-                {
-                    Utils.ShowDialog(Resources.Messages.err_parent_id_not_found, 300, Resources.Messages.err_title);
-                    Utils.AppendScript("location.href= '#codes';");
-                    return null;
-                }
-            }
-            #endregion
-
-            int indexOrder;
-            if (!int.TryParse(code_order_str, out indexOrder))
-                indexOrder = cl.Items.Count + 1;
-            else { indexOrder--; }
-            if (indexOrder < 0
-                || indexOrder > cl.Items.Count) indexOrder = cl.Items.Count;
-
-            cl.Items.Insert(indexOrder, code);
-
-            try
-            {
-                // Ultimo controllo se ottengo Immutable istanze validazione completa
-                var canRead = cl.ImmutableInstance;
-            }
-            catch (Exception ex)
-            {
-                cl.Items.RemoveAt(indexOrder);
-
-                return null;
-
-            }
-
-
-            return cl;
-
-        }*/
 
         private IAnnotationMutableObject GetAnnotationOrder(int index)
         {
@@ -638,17 +542,6 @@ namespace ISTATRegistry
 
                 ISdmxObjects sdmxObjects = new SdmxObjectsImpl();
 
-                /* int indexOrder = 1;
-                 foreach (ICodeMutableObject code in cl.Items)
-                 {
-                     IEnumerable<IAnnotationMutableObject> annotations = (from a in code.Annotations where a.Type == "@ORDER@" select a).OfType<IAnnotationMutableObject>();
-                     IAnnotationMutableObject annotation = (annotations.Count() > 0) ? annotations.First() : GetAnnotationOrder(indexOrder++);
-                     code.AddAnnotation(annotation);
-
-                     lblCodeListDetail.Text = code.Names[0].Value ;
-
-                 }*/
-
                 sdmxObjects.AddCategorisation(cat.ImmutableInstance);
 
                 WSModel modelCategorization = new WSModel();
@@ -692,14 +585,12 @@ namespace ISTATRegistry
                     Utils.PopulateCmbAgencies(cmb_agencies, true);
                 ClearSessionPage();
 
-                //ViewState["SortExpr"] = "Code ASC";
             }
 
             switch (_action)
             {
                 case Action.INSERT:
 
-                    //ClearSessionPage();
                     AspConfirmationExit = "true";
 
                     SetInitControls();
@@ -707,22 +598,6 @@ namespace ISTATRegistry
                     SetStructureDetailPanel();
                     chk_isFinal.Checked = false;
                     chk_isFinal.Enabled = false;
-
-                    /* AddTextName_update.ucOpenTabName = "codes";        
-                     AddTextName_update.ucOpenPopUpWidth = 600;                
-                     AddTextName_update.ucOpenPopUpName = "df-Dimension-update";
-
-                     AddTextDescription_update.ucOpenTabName = "codes";
-                     AddTextDescription_update.ucOpenPopUpWidth = 600;
-                     AddTextDescription_update.ucOpenPopUpName = "df-Dimension-update";
-
-                     AddTextName_new.ucOpenTabName = "codes";
-                     AddTextName_new.ucOpenPopUpWidth = 600;
-                     AddTextName_new.ucOpenPopUpName = "df-Dimension"; 
-
-                     AddTextDescription_new.ucOpenTabName = "codes";
-                     AddTextDescription_new.ucOpenPopUpWidth = 600;
-                     AddTextDescription_new.ucOpenPopUpName = "df-Dimension";*/
 
                     if (!Page.IsPostBack)
                     {
@@ -738,31 +613,6 @@ namespace ISTATRegistry
 
                     SetInitControls();
                     SetEditForm();
-
-                    /*AddTextName_update.ucOpenTabName = "codes";
-                    AddTextName_update.ucOpenPopUpWidth = 600;
-                    AddTextName_update.ucOpenPopUpName = "df-Dimension-update";
-
-                    AddTextDescription_update.ucOpenTabName = "codes";
-                    AddTextDescription_update.ucOpenPopUpWidth = 600;
-                    AddTextDescription_update.ucOpenPopUpName = "df-Dimension-update";
-
-                    AddTextName_new.ucOpenTabName = "codes";
-                    AddTextName_new.ucOpenPopUpWidth = 600;
-                    AddTextName_new.ucOpenPopUpName = "df-Dimension"; 
-
-                    AddTextDescription_new.ucOpenTabName = "codes";
-                    AddTextDescription_new.ucOpenPopUpWidth = 600;
-                    AddTextDescription_new.ucOpenPopUpName = "df-Dimension";
-
-                    if (gvCodelistsItem.Rows.Count > 0)
-                    {
-                        chk_isFinal.Enabled = true;
-                    }
-                    else
-                    {
-                        chk_isFinal.Enabled = false;
-                    }*/
                     break;
                 case Action.VIEW:
 
@@ -804,38 +654,11 @@ namespace ISTATRegistry
             lblSelectedCategory.DataBind();
             lblSelectedItem.DataBind();
 
-            /*lblImportCsvTitle.DataBind();
-            lblCsvLanguage.DataBind();
-            lblcsvFile.DataBind();
-
-            lbl_title_popup_code.DataBind();
-
-            lbl_id_update.DataBind();
-            lbl_order_update.DataBind();
-            lbl_parentid_update.DataBind();
-            lbl_description_update.DataBind();
-            lbl_name_update.DataBind();
-
-            lbl_id_new.DataBind();
-            lbl_order_new.DataBind();
-            lbl_parentid_new.DataBind();
-            lbl_description_new.DataBind();
-            lbl_name_new.DataBind();
-
-
-            imgImportCsv.DataBind();
-            btnAddNewCode.DataBind();*/
             btnSaveMemoryCategorization.DataBind();
-            /* btnImportFromCsv.DataBind();
-             btnSaveAnnotationCode.DataBind();
-             btnUpdateCode.DataBind();
-             btnNewCode.DataBind();*/
 
         }
         protected void gvCodelistsItem_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
-            /*gvCodelistsItem.PageSize = 12;
-            gvCodelistsItem.PageIndex = e.NewPageIndex;*/
             BindData();
             Utils.AppendScript("location.href= '#codes';");
         }
@@ -888,247 +711,13 @@ namespace ISTATRegistry
 
         protected void btnAddNewCode_Click(object sender, EventArgs e)
         {
-
-            /* ICodelistMutableObject cl = GetCodeListFromSession();
-
-             cl = GetCodelistForm(cl);
-                  
-             // form codelist validation
-             if (cl == null) return;
-
-             cl = InsertCodeInCodelist(cl);
-
-             if (cl == null) {
-                 Utils.ShowDialog(Resources.Messages.err_code_insert, 300, Resources.Messages.err_title);
-                 Utils.AppendScript("location.href= '#codes';");
-                 return;
-             }
-
-             if (!SaveInMemory(cl)) return;
-
-             BindData();
-
-
-             txt_id_new.Text = string.Empty;
-             txt_parentid_new.Text = string.Empty;
-             txt_order_new.Text = string.Empty;
-             AddTextName_new.ClearTextObjectListWithOutJS();
-             AddTextDescription_new.ClearTextObjectListWithOutJS();
-
-             Utils.AppendScript("location.href='#codes';");*/
-
         }
-
         protected void btnUpdateCode_Click(object sender, EventArgs e)
         {
-            /*
-            // Get Input field
-            string code_id = txt_id_update.Text.Trim();
-            IList<ITextTypeWrapperMutableObject> code_names = AddTextName_update.TextObjectList;
-            IList<ITextTypeWrapperMutableObject> code_descs = AddTextDescription_update.TextObjectList;
-            string code_parent_id = txt_parentid_update.Text.Trim();
-            string code_order_str = txt_order_update.Text.Trim();
-
-
-            // Get Current Object Session
-            ICodelistMutableObject cl = cl = GetCodeListFromSession();
-            IEnumerable<ICodeMutableObject> _rc = (from x in cl.Items where x.Id == code_id select x).OfType<ICodeMutableObject>();
-            if (_rc.Count() == 0) return;
-
-            ICodeMutableObject code = _rc.First();
-
-            ICodeMutableObject _bCode = new CodeMutableCore();
-
-            int indexCode = cl.Items.IndexOf(code);
-            int indexOrder=0;
-            try
-            {
-
-                #region CODE ID
-                if (!code_id.Equals(string.Empty) && ValidationUtils.CheckIdFormat(code_id))
-                {
-                    _bCode.Id = code_id;
-                }
-                else
-                {
-                    Utils.ShowDialog(Resources.Messages.err_id_format, 300, Resources.Messages.err_title);
-                    Utils.AppendScript("location.href= '#codes';");
-                    return;
-                }
-                #endregion
-
-                #region CODE NAMES
-                if (code_names != null)
-                {
-                    foreach (var tmpName in code_names)
-                    {
-                        _bCode.AddName(tmpName.Locale, tmpName.Value);
-                    }
-                }
-                else
-                {
-                    Utils.ShowDialog(Resources.Messages.err_list_name_format, 300, Resources.Messages.err_title);
-                    Utils.AppendScript("location.href= '#codes';");
-                    return;
-                }
-                #endregion
-
-                #region CODE DESCRIPTIONS
-                if (code_descs != null)
-                {
-                    foreach (var tmpDescription in code_descs)
-                    {
-                        _bCode.AddDescription(tmpDescription.Locale, tmpDescription.Value);
-                    }
-                }
-                #endregion
-
-                #region PARANT ID
-                if (!code_parent_id.Equals(string.Empty) && ValidationUtils.CheckIdFormat(code_id))
-                {
-                    IEnumerable<ICodeMutableObject> parentCode = (from c in cl.Items where c.Id == code_parent_id select c).OfType<ICodeMutableObject>();
-                    if (parentCode.Count() > 0)
-                        _bCode.ParentCode = code_parent_id;
-                    else
-                    {
-                        Utils.ShowDialog(Resources.Messages.err_parent_id_not_found, 300, Resources.Messages.err_title);
-                        Utils.AppendScript("location.href= '#codes';");
-                        return;
-                    }
-                }
-                #endregion
-
-                if (!int.TryParse(code_order_str, out indexOrder))
-                    indexOrder = cl.Items.Count + 1;
-                else { indexOrder--; }
-                if (indexOrder < 0
-                    || indexOrder > cl.Items.Count) indexOrder = cl.Items.Count;
-
-                cl.Items.RemoveAt(indexCode);
-                cl.Items.Insert(indexOrder, _bCode);
-                
-                // Ultimo controllo se ottengo Immutable istanze validazione completa
-                var canRead = cl.ImmutableInstance;
-
-            }
-            catch (Exception ex)
-            {
-                cl.Items.RemoveAt(indexOrder);
-                cl.Items.Insert(indexCode, code);
-
-                Utils.ShowDialog(Resources.Messages.err_code_insert, 300, Resources.Messages.err_title);
-                Utils.AppendScript("location.href='#codes';");
-                
-            }
-
-            if (!SaveInMemory(cl))
-                return;
-
-            BindData();
-
-            Utils.AppendScript("location.href='#codes';");
-
-            */
         }
 
         protected void gvCode_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            /*switch (e.CommandName)
-            {
-                case "UPDATE":
-                    {
-                        // Svuoto i controlli
-                        // ---------------------------------
-                        txt_id_update.Text = string.Empty;
-                        txt_order_update.Text = string.Empty;
-                        txt_parentid_update.Text = string.Empty;
-                        AddTextName_update.ClearTextObjectList();
-                        AddTextDescription_update.ClearTextObjectList();
-                        // ---------------------------------
-
-                        GridViewRow gvr = (GridViewRow)(((ImageButton)e.CommandSource).NamingContainer);
-                        txt_id_update.Text = ((Label)gvr.Cells[1].Controls[1]).Text;
-                        txt_parentid_update.Text = ((Label)gvr.Cells[3].Controls[1]).Text;
-
-                        ICodelistMutableObject cl = GetCodeListFromSession();
-
-                        if (gvr.RowIndex < 0 && gvr.RowIndex > cl.ImmutableInstance.Items.Count) return;
-
-                        ICode currentCode = ((ICode)cl.ImmutableInstance.Items[gvr.RowIndex]);
-
-                        AddTextName_update.ArtefactType = Org.Sdmxsource.Sdmx.Api.Constants.SdmxStructureEnumType.Code;
-                        AddTextName_update.TType = TextType.NAME;
-                        AddTextName_update.ClearTextObjectList();
-                        AddTextName_update.InitTextObjectList = currentCode.Names;
-
-                        AddTextDescription_update.ArtefactType = Org.Sdmxsource.Sdmx.Api.Constants.SdmxStructureEnumType.Code;
-                        AddTextDescription_update.TType = TextType.DESCRIPTION;
-                        AddTextDescription_update.ClearTextObjectList();
-                        AddTextDescription_update.InitTextObjectList = currentCode.Descriptions;
-                        
-                        txt_order_update.Text = (gvr.RowIndex + 1).ToString();
-
-
-
-                    } break;
-                case "DELETE":
-                    {
-
-                        GridViewRow gvr = (GridViewRow)(((ImageButton)e.CommandSource).NamingContainer);
-
-                        ICodelistMutableObject cl = GetCodeListFromSession();
-
-                        if (gvr.RowIndex < 0 && gvr.RowIndex > cl.Items.Count) return;
-
-                        bool canDelete = true;
-                        var parent_code = cl.Items[gvr.RowIndex].Id;
-
-                        #region PARANT ID
-                        if (parent_code != null)
-                        {
-                            IEnumerable<ICodeMutableObject> parentCode = (from c in cl.Items where c.ParentCode == parent_code select c).OfType<ICodeMutableObject>();
-                            if (parentCode.Count() > 0)
-                            {
-                                Utils.ShowDialog(Resources.Messages.err_code_is_parent, 300, Resources.Messages.err_title);
-                                Utils.AppendScript("location.href= '#codes';");
-
-                                canDelete = false;
-                            }
-                        }
-                        #endregion
-
-                        if (canDelete)
-                        {
-                            cl.Items.RemoveAt(gvr.RowIndex);
-
-                            Session[KEY_PAGE_SESSION] = cl;
-
-                            BindData();
-                        }
-
-                        Utils.AppendScript("location.href='#codes'");
-
-                    } break;
-                case "ANNOTATION": {
-
-
-                    GridViewRow gvr = (GridViewRow)(((ImageButton)e.CommandSource).NamingContainer);
-
-                    ICodelistMutableObject cl = GetCodeListFromSession();
-
-                    if (gvr.RowIndex < 0 && gvr.RowIndex > cl.Items.Count) return;
-
-                    CurrentCodeIndex = gvr.RowIndex;
-
-                    ctr_annotation_update.AnnotationObjectList = cl.Items[CurrentCodeIndex].Annotations;
-                   
-                    Utils.AppendScript("openP('code_annotation',650);");
-
-                    Utils.AppendScript("location.href= '#codes';");
-
-                } break;
-            }
-            */
         }
         protected void gvCodelistsItem_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
@@ -1148,100 +737,6 @@ namespace ISTATRegistry
         }
         protected void btnImportFromCsv_Click(object sender, EventArgs e)
         {
-
-            /* ICodelistMutableObject cl = GetCodeListFromSession();
-
-             if (cl == null) return;
-
-             List<csvCode> codes = new List<csvCode>();
-
-             try
-             {
-                 string filenameWithoutExtension = string.Format("{0}_{1}_{2}", Path.GetFileName(csvFile.FileName).Substring(0, csvFile.FileName.Length - 4), Session.SessionID, DateTime.Now.ToString().Replace('/', '_').Replace(':', '_').Replace(' ', '_'));
-                 string filename = string.Format("{0}.csv", filenameWithoutExtension);
-                 string logFilename = string.Format("{0}.log", filenameWithoutExtension);
-                 csvFile.SaveAs(Server.MapPath("~/csv_codelists_files/") + filename);
-
-                 StreamReader reader = new StreamReader(Server.MapPath("~/csv_codelists_files/") + filename);
-                 StreamWriter logWriter = new StreamWriter(Server.MapPath("~/csv_codelists_import_logs/") + logFilename, true);
-                 logWriter.WriteLine(string.Format("LOG RELATIVO A CARICAMENTO DELLA CODELIST [ ID => \"{0}\"  AGENCY_ID => \"{1}\"  VERSION => \"{2}\" ]  |  LINGUA SELEZIONATA: {3}\n", cl.Id.ToString(), cl.AgencyId.ToString(), cl.Version.ToString(), cmbLanguageForCsv.SelectedValue.ToString()));
-                 logWriter.WriteLine("-----------------------------------------------------------------------------------------------------------------------------\n");
-                 reader.ReadLine();
-                 string wrongRowsMessage = string.Empty;
-                 int currentRow = 1;
-                 while (!reader.EndOfStream)
-                 {
-                     string[] fields = reader.ReadLine().Split(';');
-                     if (fields.Length != 5)
-                     {
-                         wrongRowsMessage += string.Format("Il formato della riga {0} del file CSV non è corretto!\\n\\n", currentRow + 1);
-                         logWriter.WriteLine(string.Format("Il formato della riga {0} del file CSV non è corretto!\n", currentRow + 1));
-                         logWriter.Flush();
-                         currentRow++;
-                         continue;
-                     }
-                     if (fields[0].Trim().Equals(string.Empty))
-                     {
-                         wrongRowsMessage += string.Format("Il valore dell'ID nella riga {0} del file CSV non può essere null!\\n\\n", currentRow + 1);
-                         logWriter.WriteLine(string.Format("Il valore dell'ID nella riga {0} del file CSV non può essere null!\n", currentRow + 1));
-                         logWriter.Flush();
-                         currentRow++;
-                         continue;
-                     }
-                     if (fields[1].Trim().Equals(string.Empty))
-                     {
-                         wrongRowsMessage += string.Format("Il valore NAME nella riga {0} del file CSV non può essere null!\\n\\n", currentRow + 1);
-                         logWriter.WriteLine(string.Format("Il valore NAME nella riga {0} del file CSV non può essere null!\n", currentRow + 1));
-                         logWriter.Flush();
-                         currentRow++;
-                         continue;
-                     }
-                     codes.Add(new csvCode(fields[0].ToString(), fields[1].ToString(), fields[2].ToString(), fields[3].ToString()));
-                     currentRow++;
-                 }
-                 if (wrongRowsMessage.Trim().Equals(string.Empty))
-                 {
-                     logWriter.WriteLine("Andato tutto a buon fine con questo file!");
-                 }
-                 logWriter.Close();
-                 reader.Close();
-             }
-             catch (Exception ex)
-             {
-                 Utils.AppendScript(string.Format("Upload status: The file could not be uploaded. The following error occured: {0}", ex.Message));
-             }
-
-             foreach (csvCode code in codes)
-             {
-                 ICodeMutableObject tmpCode = cl.GetCodeById(code.code);
-                 if (tmpCode == null)
-                 {
-                     tmpCode = new CodeMutableCore();
-                     tmpCode.Id = code.code;
-                     tmpCode.ParentCode = code.parentCode;
-                     tmpCode.AddName(cmbLanguageForCsv.SelectedValue.ToString(), code.name);
-                     tmpCode.AddDescription(cmbLanguageForCsv.SelectedValue.ToString(), code.description);
-
-                     cl.AddItem(tmpCode);
-
-                 }
-                 else
-                 {
-                     tmpCode.Id = code.code;
-                     tmpCode.ParentCode = code.parentCode;
-                     tmpCode.AddName(cmbLanguageForCsv.SelectedValue.ToString(), code.name);
-                     tmpCode.AddDescription(cmbLanguageForCsv.SelectedValue.ToString(), code.description);
-                 }
-
-
-             }
-
-             if (!SaveInMemory(cl)) return;
-
-             BindData();
-
-             Utils.AppendScript("location.href='#codes'");*/
-
 
         }
 
@@ -1272,18 +767,6 @@ namespace ISTATRegistry
             if (cat == null) return;
 
             SetGeneralTab(cat.ImmutableInstance);
-
-            /*LocalizedUtils localUtils = new LocalizedUtils(Utils.LocalizedCulture);
-            EntityMapper eMapper = new EntityMapper(Utils.LocalizedLanguage);
-
-            IList<CodeItem> lCodeListItem = new List<CodeItem>();
-            foreach (ICode code in cat.ImmutableInstance.Items)
-            {
-                lCodeListItem.Add(new CodeItem(code.Id, localUtils.GetNameableName(code), localUtils.GetNameableDescription(code), code.ParentCode));
-            }
-
-            gvCodelistsItem.DataSource = lCodeListItem;
-            gvCodelistsItem.DataBind();*/
         }
 
         private void SetGeneralTab(ICategorisationObject cat)
@@ -1418,7 +901,7 @@ namespace ISTATRegistry
                     ddlAvailableStructures.SelectedValue = "DATAFLOW";
                     break;
                 case SdmxStructureEnumType.Dsd:
-                    ddlAvailableStructures.SelectedValue = "KEY_FAMILY";
+                    ddlAvailableStructures.SelectedValue = "DSD";
                     break;
                 case SdmxStructureEnumType.AgencyScheme:
                     ddlAvailableStructures.SelectedValue = "AGENCY_SCHEME";
@@ -1484,10 +967,25 @@ namespace ISTATRegistry
             {
                 try
                 {
-                    string[] skipElements = { "CATEGORIZATION" };
-                    Utils.PopulateCmbArtefacts(ddlAvailableStructures, skipElements);
+                    NameValueCollection supportedArtefacts = SupportedCategorisationArtefacts.Artefacts;
+                    List<String> Artefacts = new List<string>();
+
+                    foreach (var art in supportedArtefacts)
+                    {
+                        if (!bool.Parse(supportedArtefacts[art.ToString()]))
+                            Artefacts.Add(art.ToString());
+                    }
+
+                    //string[] skipElements = { "CATEGORIZATION" };
+
+//                    Utils.PopulateCmbArtefacts(ddlAvailableStructures, skipElements);
+                    Utils.PopulateCmbArtefacts(ddlAvailableStructures, Artefacts.ToArray());
+
                     WSModel wsModel = new WSModel();
                     ISdmxObjects sdmxInput = wsModel.GetCategoryScheme(new ArtefactIdentity(string.Empty, string.Empty, string.Empty), true, true);
+
+
+
 
                     foreach (ICategorySchemeObject cs in sdmxInput.CategorySchemes)
                     {
@@ -1536,13 +1034,8 @@ namespace ISTATRegistry
                         case "DATAFLOW":
                             sdmxInput = wsModel.GetDataFlow(new ArtefactIdentity(string.Empty, string.Empty, string.Empty), true, false);
                             break;
-                        case "KEY_FAMILY":
+                        case "DSD":
                             sdmxInput = wsModel.GetDataStructure(new ArtefactIdentity(string.Empty, string.Empty, string.Empty), true, false);
-                            /* List<ICodelistObject> codelist = sdmxInput.Codelists.ToList();
-                             foreach ( var currentCodelist in codelist )
-                             {
-                                 ddlAvailableItems.Items.Add( new ListItem( string.Format( "{0} - {1} - {2}", currentCodelist.Id, currentCodelist.AgencyId, currentCodelist.Version ),  string.Format( "{0} - {1} - {2}", currentCodelist.Id, currentCodelist.AgencyId, currentCodelist.Version ) ) );
-                             }*/
                             break;
                         case "DATA_PROVIDER_SCHEME":
                             sdmxInput = wsModel.GetDataProviderScheme(new ArtefactIdentity(string.Empty, string.Empty, string.Empty), true, false);
@@ -1562,6 +1055,10 @@ namespace ISTATRegistry
                         case "AGENCY_SCHEME":
                             sdmxInput = wsModel.GetAgencyScheme(new ArtefactIdentity(string.Empty, string.Empty, string.Empty), true, false);
                             break;
+                        case "HIERARCHICAL_CODELIST":
+                            sdmxInput = wsModel.GetHcl(new ArtefactIdentity(string.Empty, string.Empty, string.Empty), true, false);
+                            break;
+
                     }
                     structuresGrid.DataSourceID = null;
                     structuresGrid.DataBind();
@@ -1573,30 +1070,6 @@ namespace ISTATRegistry
                 }
 
             }
-            // Verifico se la codelist è final
-            /* if (cl.IsFinal.IsTrue || Request["ACTION"].ToString().Equals("VIEW"))
-             {
-                 // Se final il pulsante di add e le colonne di modifica
-                 // dei codici non devono apparire
-                 btnSaveMemoryCodeList.Visible = false;
-                 btnAddNewCode.Visible = false;
-                 gvCodelistsItem.Columns[gvCodelistsItem.Columns.Count - 1].Visible = false;
-                 gvCodelistsItem.Columns[gvCodelistsItem.Columns.Count - 2].Visible = false;
-                 gvCodelistsItem.Columns[gvCodelistsItem.Columns.Count - 3].Visible = false;
-                 cmbLanguageForCsv.Visible = false;
-                 imgImportCsv.Visible = false;
-             }
-             else
-             {
-                 btnSaveMemoryCodeList.Visible = true;
-                 btnAddNewCode.Visible = true;
-                 gvCodelistsItem.Columns[gvCodelistsItem.Columns.Count - 1].Visible = true;
-                 gvCodelistsItem.Columns[gvCodelistsItem.Columns.Count - 2].Visible = true;
-                 gvCodelistsItem.Columns[gvCodelistsItem.Columns.Count - 3].Visible = true;
-                 Utils.PopulateCmbLanguages(cmbLanguageForCsv);
-                 cmbLanguageForCsv.Visible = true;
-                 imgImportCsv.Visible = true;
-             }*/
         }
 
         private void SetInsertForm()
@@ -1726,12 +1199,28 @@ namespace ISTATRegistry
 
         protected void TreeView1_SelectedNodeChanged(object sender, EventArgs e)
         {
-            txtSelectedCategory.Text = TreeView1.SelectedNode.Value;
-            Session["tmpCategoryReference"] = TreeView1.SelectedNode.Value;
+            txtSelectedCategory.Text = GetPathNode(TreeView1.SelectedNode);
+            Session["tmpCategoryReference"] = GetPathNode(TreeView1.SelectedNode);
             Session["tmpCategorySchemeReference"] = ddlCategorySchemeList.Text;
             txtSelectedCategory.Visible = true;
             lblSelectedCategory.Visible = true;
             Utils.AppendScript("location.href= '#structure';");
+            Utils.ForceBlackClosing();
+        }
+
+        private string GetPathNode(TreeNode treeNode, string pathNode = "")
+        {
+            return treeNode.Value;
+
+            //if (pathNode != "")
+            //    pathNode = treeNode.Value + "." + pathNode;
+            //else
+            //    pathNode = treeNode.Value;
+
+            //if (treeNode.Parent != null)
+            //    pathNode= GetPathNode(treeNode.Parent, pathNode);
+
+            //return pathNode;
         }
 
         protected void btnOpenGridDiv_Click(object sender, EventArgs e)
@@ -1788,7 +1277,7 @@ namespace ISTATRegistry
                     List<IOrganisationUnitSchemeObject> organizationUnitScheme = sdmxInput.OrganisationUnitSchemes.ToList();
                     structuresGrid.DataSource = organizationUnitScheme;
                     break;
-                case "KEY_FAMILY":
+                case "DSD":
                     sdmxInput = wsModel.GetDataStructure(new ArtefactIdentity(string.Empty, string.Empty, string.Empty), true, false);
                     List<IDataStructureObject> dataStructure = sdmxInput.DataStructures.ToList();
                     structuresGrid.DataSource = dataStructure;
@@ -1831,6 +1320,8 @@ namespace ISTATRegistry
 
                 Session["tmpKindOfStructure"] = ddlAvailableStructures.Text;
                 Session["tmpReferenceOfTheObject"] = string.Format("{0}-{1}-{2}", id, agencyId, version);
+
+                Utils.ForceBlackClosing();
 
             }
             Utils.AppendScript("location.href= '#structure';");
@@ -1877,7 +1368,7 @@ namespace ISTATRegistry
                     List<IOrganisationUnitSchemeObject> organizationUnitScheme = sdmxInput.OrganisationUnitSchemes.ToList();
                     structuresGrid.DataSource = organizationUnitScheme;
                     break;
-                case "KEY_FAMILY":
+                case "DSD":
                     sdmxInput = wsModel.GetDataStructure(new ArtefactIdentity(string.Empty, string.Empty, string.Empty), true, false);
                     List<IDataStructureObject> dataStructure = sdmxInput.DataStructures.ToList();
                     structuresGrid.DataSource = dataStructure;

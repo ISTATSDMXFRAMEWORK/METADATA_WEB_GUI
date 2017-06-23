@@ -153,7 +153,7 @@ namespace ISTATRegistry
             {
                 case Action.INSERT:
                     SetInsertForm();
-                    if ( !Page.IsPostBack )
+                    if (!Page.IsPostBack)
                     {
                         cmbAgencies.Items.Insert(0, new ListItem(String.Empty, String.Empty));
                         cmbAgencies.SelectedIndex = 0;
@@ -281,7 +281,7 @@ namespace ISTATRegistry
 
         private string GetAgencyValue()
         {
-            if ( _action == Action.INSERT )
+            if (_action == Action.INSERT)
             {
                 string agencyValue = cmbAgencies.SelectedValue.ToString();
                 string agencyId = agencyValue.Split('-')[0].Trim();
@@ -431,10 +431,13 @@ namespace ISTATRegistry
                     _ccMutable.Uri = new Uri(txtURI.Text);
 
                 if (txtValidFrom.Text != String.Empty)
-                    _ccMutable.StartDate = DateTime.ParseExact(txtValidFrom.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
-
+                    _ccMutable.StartDate = DateTime.ParseExact(txtValidFrom.Text, "d/M/yyyy", CultureInfo.InvariantCulture);
+                else
+                    _ccMutable.StartDate = null;
                 if (txtValidTo.Text != String.Empty)
-                    _ccMutable.EndDate = DateTime.ParseExact(txtValidTo.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                    _ccMutable.EndDate = DateTime.ParseExact(txtValidTo.Text, "d/M/yyyy", CultureInfo.InvariantCulture);
+                else
+                    _ccMutable.EndDate = null;
 
                 _ccMutable.Annotations.Clear();
                 if (AnnotationGeneral.AnnotationObjectList != null)
@@ -464,7 +467,8 @@ namespace ISTATRegistry
 
                 //Utils.ShowDialog("Operation succesfully");
                 Utils.ResetBeforeUnload();
-                Utils.AppendScript("location.href='./ContentConstraint.aspx';");
+
+                Utils.AppendScript(string.Format(@"location.href='./ContentConstraintItemDetails.aspx?ACTION=UPDATE&ID={0}&AGENCY={1}&VERSION={2}&ISFINAL={3}';", _ccMutable.Id, _ccMutable.AgencyId, _ccMutable.Version, _ccMutable.FinalStructure.IsTrue.ToString()));
             }
             catch (Exception ex)
             {
@@ -675,7 +679,7 @@ namespace ISTATRegistry
 
             if (_dtDimension != null)
                 gvDimension.DataSource = _dtDimension;
-            
+
             gvDimension.DataBind();
         }
 
@@ -727,52 +731,54 @@ namespace ISTATRegistry
         {
             DataRow dr;
 
-            foreach (IDimension dim in dsd.DimensionList.Dimensions)
-            {
-                if (!dim.TimeDimension && dim.Representation != null)
+            if (dsd.DimensionList != null)
+                foreach (IDimension dim in dsd.DimensionList.Dimensions)
                 {
-                    dr = dt.NewRow();
-                    dr["ID"] = dim.Id;
-                    dr["Codelist"] = dim.Representation.Representation.MaintainableId + ", " + dim.Representation.Representation.AgencyId + ", " + dim.Representation.Representation.Version;
-                    dr["ComponentType"] = "Dimension";
-                    try
+                    if (!dim.TimeDimension && dim.Representation != null)
                     {
-                        dt.Rows.Add(dr);
-                    }
-                    catch (ConstraintException ce)
-                    {
-                    }
-                    catch (Exception ex)
-                    {
-                        throw ex;
+                        dr = dt.NewRow();
+                        dr["ID"] = dim.Id;
+                        dr["Codelist"] = dim.Representation.Representation.MaintainableId + ", " + dim.Representation.Representation.AgencyId + ", " + dim.Representation.Representation.Version;
+                        dr["ComponentType"] = "Dimension";
+                        try
+                        {
+                            dt.Rows.Add(dr);
+                        }
+                        catch (ConstraintException ce)
+                        {
+                        }
+                        catch (Exception ex)
+                        {
+                            throw ex;
+                        }
                     }
                 }
-            }
 
-            foreach (IAttributeObject att in dsd.AttributeList.Attributes)
-            {
-                if (att.Representation != null)
+            if (dsd.AttributeList != null)
+                foreach (IAttributeObject att in dsd.AttributeList.Attributes)
                 {
-                    dr = dt.NewRow();
-                    dr["ID"] = att.Id;
-                    if (att.Representation.Representation != null)
-                        dr["Codelist"] = att.Representation.Representation.MaintainableId + ", " + att.Representation.Representation.AgencyId + ", " + att.Representation.Representation.Version;
-                    else
-                        dr["Codelist"] = "";
-                    dr["ComponentType"] = "Attribute";
-                    try
+                    if (att.Representation != null)
                     {
-                        dt.Rows.Add(dr);
-                    }
-                    catch (ConstraintException ce)
-                    {
-                    }
-                    catch (Exception ex)
-                    {
-                        throw ex;
+                        dr = dt.NewRow();
+                        dr["ID"] = att.Id;
+                        if (att.Representation.Representation != null)
+                            dr["Codelist"] = att.Representation.Representation.MaintainableId + ", " + att.Representation.Representation.AgencyId + ", " + att.Representation.Representation.Version;
+                        else
+                            dr["Codelist"] = "";
+                        dr["ComponentType"] = "Attribute";
+                        try
+                        {
+                            dt.Rows.Add(dr);
+                        }
+                        catch (ConstraintException ce)
+                        {
+                        }
+                        catch (Exception ex)
+                        {
+                            throw ex;
+                        }
                     }
                 }
-            }
         }
 
         private void GVIncludeArtefactDataBind()
@@ -1150,7 +1156,7 @@ namespace ISTATRegistry
             cmbAgencies.SelectedValue = cc.AgencyId;
             txtAgenciesReadOnly.Text = cc.AgencyId;
 
-            AnnotationGeneral.OwnerAgency =  txtAgenciesReadOnly.Text;
+            AnnotationGeneral.OwnerAgency = txtAgenciesReadOnly.Text;
 
             if (cc.Version != _ntdCCVersion)
                 txtVersion.Text = cc.Version;
@@ -1196,7 +1202,7 @@ namespace ISTATRegistry
 
             AnnotationGeneral.AnnotationObjectList = cc.MutableInstance.Annotations;
 
-            if ( _action == Action.INSERT )
+            if (_action == Action.INSERT)
             {
                 cmbAgencies.Visible = true;
                 txtAgenciesReadOnly.Visible = false;
@@ -1218,19 +1224,23 @@ namespace ISTATRegistry
                 _action = Action.VIEW;
             else
             {
-                if ( Request["ACTION"] == "UPDATE" )
+                if (Request["ACTION"] == "UPDATE")
                 {
                     IRServiceReference.User currentUser = Session[SESSION_KEYS.USER_DATA] as User;
-                    _artIdentity = Utils.GetIdentityFromRequest(Request);
-                    int agencyOccurence = currentUser.agencies.Count( agency => agency.id.Equals( _artIdentity.Agency) );
-                    if ( agencyOccurence > 0 )
+                    if (currentUser != null)
                     {
-                        _action = (Action)Enum.Parse(typeof(Action), Request["ACTION"].ToString());
+                        int agencyOccurence = currentUser.agencies.Count(agency => agency.id.Equals(_artIdentity.Agency));
+                        if (agencyOccurence > 0)
+                        {
+                            _action = (Action)Enum.Parse(typeof(Action), Request["ACTION"].ToString());
+                        }
+                        else
+                        {
+                            _action = Action.VIEW;
+                        }
                     }
                     else
-                    {
                         _action = Action.VIEW;
-                    }
                 }
                 else
                 {

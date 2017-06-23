@@ -37,7 +37,6 @@
                     DataSourceID="ObjectDataSource1" 
                 
                     OnPageIndexChanging="OnPageIndexChanging" 
-                    OnRowCommand="OnRowCommand" 
                     OnRowCreated="OnRowCreated"
                     PagerSettings-Position="TopAndBottom" 
                     onrowdatabound="gridView_RowDataBound">
@@ -108,14 +107,12 @@
 
                         <asp:TemplateField HeaderText="" ShowHeader="False">
                             <ItemTemplate>
-                                <asp:ImageButton 
-                                ID="btmDattail" 
+                            <asp:HyperLink ID="hplDetails" 
                                 runat="server" 
-                                CausesValidation="False" 
-                                CommandName="Details"
-                                CommandArgument="<%# Container.DataItemIndex %>" 
-                                ImageUrl="~/images/Details2.png"
-                                ToolTip="View details" />
+                                ImageUrl="~/images/Details2.png" 
+                                NavigateUrl="s"
+                                ToolTip="View details">
+                            </asp:HyperLink>
                             </ItemTemplate>
                             <HeaderStyle Width="50px" HorizontalAlign="Center" />
                             <ItemStyle HorizontalAlign="Center" />

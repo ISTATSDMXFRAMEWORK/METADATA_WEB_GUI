@@ -35,6 +35,7 @@
                 changeYear: true,
                 dateFormat: 'dd/mm/yy'
             });
+            $(".datepicker").datepicker($.datepicker.regional['<%=Session["Language"]%>']);
             $(".datepicker").datepicker("option", "showAnim", "drop");
 
             jQuery(function ($) {
@@ -102,7 +103,7 @@
                 <%= Resources.Messages.lbl_group %></a></li>
             <li class='tab'><a href="#Attributes">
                 <%= Resources.Messages.lbl_attribute %></a></li>
-            <li class='tab'><a href="#categorisation"><%= Resources.Messages.lbl_categorisation %></a></li>
+            <li class='tab ircats'><a href="#categorisation" class="ircats"><%= Resources.Messages.lbl_categorisation %></a></li>
         </ul>
         <div class='panel-container'>
             <div id="general">
@@ -762,7 +763,7 @@
                     </ContentTemplate>
                 </iup:IstatUpdatePanel>
             </div>
-            <div id= "categorisation">
+            <div id= "categorisation" class="ircats">
                 <uc1:Categorisations runat="server" id="Categorisations" />
             </div>
         </div>

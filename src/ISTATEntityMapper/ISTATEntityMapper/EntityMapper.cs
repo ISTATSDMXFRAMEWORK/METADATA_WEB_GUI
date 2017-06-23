@@ -362,7 +362,8 @@ namespace ISTAT.EntityMapper
 
             foreach (ICategorisationObject categorization in sdmxObjects.Categorisations)
             {
-                lCategorization.Add(new Categorization(_localizedUtils.GetNameableName(categorization), categorization.Id, categorization.AgencyId, categorization.Version,categorization.IsFinal.IsTrue, string.Format( "{0} - {1} - {2}", categorization.CategoryReference.MaintainableId, categorization.CategoryReference.AgencyId, categorization.CategoryReference.Version ), categorization.CategoryReference.IdentifiableIds[0].ToString(),  string.Format( "{0} - {1} - {2}", categorization.StructureReference.MaintainableId, categorization.StructureReference.AgencyId, categorization.StructureReference.Version ) ));
+                // Quirini fix
+                lCategorization.Add(new Categorization(_localizedUtils.GetNameableName(categorization), categorization.Id, categorization.AgencyId, categorization.Version, categorization.IsFinal.IsTrue, string.Format("{0} - {1} - {2}", categorization.CategoryReference.MaintainableId, categorization.CategoryReference.AgencyId, categorization.CategoryReference.Version), categorization.CategoryReference.IdentifiableIds.LastOrDefault().ToString(), string.Format("{0} - {1} - {2}", categorization.StructureReference.MaintainableId, categorization.StructureReference.AgencyId, categorization.StructureReference.Version)));
             }
             return lCategorization;
         }

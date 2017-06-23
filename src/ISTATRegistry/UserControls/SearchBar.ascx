@@ -25,7 +25,7 @@
             <td>
 <%--                <asp:DropDownList ID="cmbAgencies" runat="server" Enabled="true" Visible="true">
                 </asp:DropDownList>     --%>                              
-                <asp:TextBox ID="txtSearchAgency" runat="server" Visible="true"></asp:TextBox>
+                <asp:TextBox ID="txtSearchAgency" onkeydown = "return (event.keyCode!=13);" runat="server" Visible="true"></asp:TextBox>
             </td>
             <td>
             </td>
@@ -50,4 +50,3 @@
         </tr>
     </table>
 </div>
-

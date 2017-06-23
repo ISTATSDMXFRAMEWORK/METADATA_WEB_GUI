@@ -33,6 +33,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -47,22 +48,20 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Users\Massimiliano\Documents\ASP.NET AJAX Control Toolkit\Bin\AjaxControlToolkit.dll</HintPath>
     </Reference>
-    <Reference Include="FlyCallWS">
-      <HintPath>..\Lib\FlyCallWS.dll</HintPath>
+    <Reference Include="DotNetRtfWriter, Version=2.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\DotNetRtfWriter.dll</HintPath>
     </Reference>
     <Reference Include="Ionic.Utils.Zip">
       <HintPath>..\Lib\Ionic.Utils.Zip.dll</HintPath>
-    </Reference>
-    <Reference Include="ISTAT.EXPORT">
-      <HintPath>..\Lib\ISTAT.EXPORT.dll</HintPath>
-    </Reference>
-    <Reference Include="ISTAT.IO">
-      <HintPath>..\Lib\ISTAT.IO.dll</HintPath>
     </Reference>
     <Reference Include="LumenWorks.Framework.IO">
       <HintPath>..\Lib\LumenWorks.Framework.IO.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\..\..\Users\Massimiliano\Desktop\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="SdmxApi, Version=0.7.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Lib\SdmxApi.dll</HintPath>
@@ -105,6 +104,12 @@
     <Content Include="admin.aspx" />
     <Content Include="AgencySchemeItemDetails.aspx" />
     <Content Include="agencyschemes.aspx" />
+    <Content Include="App_Data\Languages.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\ws_istat.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Categorization.aspx" />
     <Content Include="categorizationItemDetails.aspx" />
     <Content Include="CategorySchemeGraph.aspx" />
@@ -114,9 +119,6 @@
     <Content Include="CategorySchemes.aspx" />
     <Content Include="ConceptSchemeItemDetails.aspx" />
     <Content Include="CategorySchemeItemDetails.aspx" />
-    <Content Include="Agencies.xml">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="ContentConstraint.aspx" />
     <Content Include="ContentConstraintItemDetails.aspx" />
     <Content Include="404.aspx" />
@@ -126,9 +128,16 @@
     <Content Include="HttpErrorPage.aspx" />
     <Content Include="images\Codelist.png" />
     <Content Include="images\ConceptScheme.png" />
+    <Content Include="images\Connection.png" />
+    <Content Include="images\ConnectionBig.png" />
+    <Content Include="images\artefact.jpg" />
     <Content Include="images\Dataflow.png" />
     <Content Include="images\dsd.png" />
+    <Content Include="images\LSB.png" />
     <Content Include="images\SdmxLogoBrowser.png" />
+    <Content Include="images\ServerOff.png" />
+    <Content Include="images\ServerOn.png" />
+    <Content Include="images\World.png" />
     <Content Include="Oops.aspx" />
     <Content Include="HclItemDetails.aspx" />
     <Content Include="Hcl.aspx" />
@@ -153,6 +162,8 @@
     <Content Include="images\Trash-50.png" />
     <Content Include="SdmxQueryTemplate\HierarchicalCodelist.xml" />
     <Content Include="UserControls\CSVImporter.ascx" />
+    <Content Include="UserControls\MultipleDownload.ascx" />
+    <Content Include="WebServices\IRWebService.asmx" />
     <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
     <Content Include="SdmxQueryTemplate\CategorySchemeWithParents.xml">
       <SubType>Designer</SubType>
@@ -163,20 +174,6 @@
     <Content Include="css\blank.gif" />
     <Content Include="css\jquery.msg.css" />
     <Content Include="css\PIE.htc" />
-    <Content Include="csv_agencyschemes_files\ReadMe.txt" />
-    <Content Include="csv_agencyschemes_import_logs\ReadMe.txt" />
-    <Content Include="csv_categoryschemes_files\ReadMe.txt" />
-    <Content Include="csv_categoryschemes_import_logs\ReadMe.txt" />
-    <Content Include="csv_codelists_files\ReadMe.txt" />
-    <Content Include="csv_codelists_import_logs\ReadMe.txt" />
-    <Content Include="csv_conceptschemes_files\ReadMe.txt" />
-    <Content Include="csv_conceptschemes_import_logs\ReadMe.txt" />
-    <Content Include="csv_dataconsumerschemes_files\ReadMe.txt" />
-    <Content Include="csv_dataconsumerschemes_import_logs\ReadMe.txt" />
-    <Content Include="csv_dataproviderschemes_files\ReadMe.txt" />
-    <Content Include="csv_dataproviderschemes_import_logs\ReadMe.txt" />
-    <Content Include="csv_organizationunitschemes_files\ReadMe.txt" />
-    <Content Include="csv_organizationunitschemes_import_logs\ReadMe.txt" />
     <Content Include="DataConsumerSchemeItemDetails.aspx" />
     <Content Include="dataconsumerschemes.aspx" />
     <Content Include="DataProviderSchemeItemDetails.aspx" />
@@ -258,9 +255,6 @@
     <Content Include="jquery\jquery-ui.theme.min.css" />
     <Content Include="js\jquery.min.js" />
     <Content Include="js\PopUp.js" />
-    <Content Include="Languages.xml">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="master.Master" />
     <Content Include="OrganizationUnitSchemeItemDetails.aspx" />
     <Content Include="organizationunitschemes.aspx" />
@@ -297,8 +291,6 @@
     <Content Include="SdmxQueryTemplate\SubmitStructureDelete.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="test.aspx" />
-    <Content Include="UploadedFiles\ReadMe.txt" />
     <Content Include="UploadStructure.aspx" />
     <Content Include="UserControls\AddText.ascx" />
     <Content Include="UserControls\ArtefactDelete.ascx" />
@@ -311,21 +303,14 @@
     <Content Include="UserControls\FileDownload3.ascx" />
     <Content Include="UserControls\GetCodeList.ascx" />
     <Content Include="UserControls\SearchBar.ascx" />
-    <Content Include="UserControls\UserPopUp.ascx" />
-    <None Include="Properties\PublishProfiles\AVANA2012.pubxml" />
-    <None Include="Properties\PublishProfiles\Locale App.pubxml" />
+    <None Include="Properties\PublishProfiles\App.pubxml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="Web References\IRServiceReference\IRService.disco" />
-    <Content Include="UserFiles\Languages.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="UserFiles\ws_istat2.xml" />
-    <Content Include="UserFiles\ws_istat.xml">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="UserControls\UserPopUp.ascx" />
+    <Content Include="App_Data\ws_istat2.xml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -400,8 +385,8 @@
     <Compile Include="CategorySchemeGraph.aspx.designer.cs">
       <DependentUpon>CategorySchemeGraph.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Classes\EndpointCheck.cs" />
     <Compile Include="Classes\ExceptionUtility.cs" />
-    <Compile Include="Classes\IRConfiguration.cs" />
     <Compile Include="Classes\I18nSupport.cs" />
     <Compile Include="Classes\IOUtils.cs" />
     <Compile Include="Classes\IREnums.cs" />
@@ -409,6 +394,7 @@
     <Compile Include="Classes\ISTATWebPage.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Classes\JsonMessage.cs" />
     <Compile Include="Classes\LatestError.cs" />
     <Compile Include="Classes\SDMXUtils.cs" />
     <Compile Include="Classes\Utils.cs" />
@@ -619,13 +605,6 @@
       <DependentUpon>organizationunitschemes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="test.aspx.cs">
-      <DependentUpon>test.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="test.aspx.designer.cs">
-      <DependentUpon>test.aspx</DependentUpon>
-    </Compile>
     <Compile Include="UploadStructure.aspx.cs">
       <DependentUpon>UploadStructure.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -710,6 +689,13 @@
     <Compile Include="UserControls\GetCodeList.ascx.designer.cs">
       <DependentUpon>GetCodeList.ascx</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\MultipleDownload.ascx.cs">
+      <DependentUpon>MultipleDownload.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\MultipleDownload.ascx.designer.cs">
+      <DependentUpon>MultipleDownload.ascx</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\SearchBar.ascx.cs">
       <DependentUpon>SearchBar.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -729,16 +715,29 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <Compile Include="WebServices\IRWebService.asmx.cs">
+      <DependentUpon>IRWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="bin\" />
+    <Folder Include="csv_files\" />
     <Folder Include="OutputFiles\" />
+    <Folder Include="UploadedFiles\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ISTAT.EXPORT\ISTAT.EXPORT.csproj">
+      <Project>{f05353b5-107a-45de-98bf-a43c87d20ece}</Project>
+      <Name>ISTAT.EXPORT</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ISTAT.IO\ISTAT.IO.csproj">
+      <Project>{85728c59-ab7f-4322-9d32-e0c89aaa0c48}</Project>
+      <Name>ISTAT.IO</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ISTATEntityMapper\ISTATEntityMapper\ISTATEntityMapper.csproj">
       <Project>{C255917B-F8AA-4A07-B8AE-A4F5985654EC}</Project>
       <Name>ISTATEntityMapper</Name>
@@ -808,7 +807,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>18844</DevelopmentServerPort>
+          <DevelopmentServerPort>55866</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

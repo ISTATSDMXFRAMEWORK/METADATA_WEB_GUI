@@ -1,0 +1,4 @@
+C:\ISTAT\Source\OnTheFlyWebService2\src\FlyCallWS\bin\x86\Release\FlyCallWS.dll
+C:\ISTAT\Source\OnTheFlyWebService2\src\FlyCallWS\bin\x86\Release\FlyCallWS.pdb
+C:\ISTAT\Source\OnTheFlyWebService2\src\FlyCallWS\obj\x86\Release\FlyCallWS.dll
+C:\ISTAT\Source\OnTheFlyWebService2\src\FlyCallWS\obj\x86\Release\FlyCallWS.pdb

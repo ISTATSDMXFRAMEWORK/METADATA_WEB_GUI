@@ -144,7 +144,7 @@ namespace ISTATRegistry.UserControls
 
                 //Carico il template
                 xDocTemplate = new XmlDocument();
-                xDocTemplate.Load(Server.MapPath(@".\SdmxQueryTemplate\SubmitStructureDelete.xml"));
+                xDocTemplate.Load(Server.MapPath(@"~/SdmxQueryTemplate\SubmitStructureDelete.xml"));
 
                 // Il nodo root "Structure" del template
                 XmlNode xTempStructNode = xDocTemplate.SelectSingleNode("//*[local-name()='Structures']");

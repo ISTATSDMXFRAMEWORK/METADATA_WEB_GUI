@@ -43,9 +43,6 @@
     <Reference Include="EstatSdmxSourceExtension.CustomRequests">
       <HintPath>..\..\Lib\EstatSdmxSourceExtension.CustomRequests.dll</HintPath>
     </Reference>
-    <Reference Include="FlyCallWS">
-      <HintPath>..\..\Lib\FlyCallWS.dll</HintPath>
-    </Reference>
     <Reference Include="Org.Sdmx.Resources.SdmxMl.Schemas.V21, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Lib\Org.Sdmx.Resources.SdmxMl.Schemas.V21.dll</HintPath>
@@ -81,15 +78,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EndpointSettings.cs" />
+    <Compile Include="FixXmlDoc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WSConstants.cs" />
     <Compile Include="WSModel.cs" />
     <Compile Include="WSUtils.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\FlyCallWS\FlyCallWS.csproj">
+      <Project>{fa8e977a-cb4f-4cf9-85ae-b3baea7fd66e}</Project>
+      <Name>FlyCallWS</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\ISTATEntity\ISTATEntity\ISTATEntity.csproj">
       <Project>{8CF23178-149F-4097-B497-0A3969D5FA6F}</Project>
       <Name>ISTATEntity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ISTATUtils\ISTATUtils.csproj">
+      <Project>{b2c4ac1a-e87a-4988-b982-dbb2f9d26603}</Project>
+      <Name>ISTATUtils</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

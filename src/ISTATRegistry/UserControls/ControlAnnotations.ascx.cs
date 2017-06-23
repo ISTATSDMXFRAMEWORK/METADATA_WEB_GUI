@@ -8,11 +8,26 @@ using Org.Sdmxsource.Sdmx.Api.Model.Mutable.Base;
 using Org.Sdmxsource.Sdmx.SdmxObjects.Model.Mutable.Base;
 using System.Diagnostics;
 using ISTATRegistry.IRServiceReference;
+using ISTATUtils;
 
 namespace ISTATRegistry.UserControls
 {
+
+    #region Delegates
+
+    public delegate void AnnotationCreatedEventHandler(object sender, IAnnotationMutableObject e);
+    public delegate void AnnotationDeletedEventHandler(object sender, IAnnotationMutableObject e);
+
+    #endregion
+
     public partial class ControlAnnotations : System.Web.UI.UserControl
     {
+        #region Public Events
+
+        public event AnnotationCreatedEventHandler AnnotationCreated;
+        public event AnnotationDeletedEventHandler AnnotationDeleted;
+
+        #endregion
 
         #region Private Prop
 
@@ -104,6 +119,19 @@ namespace ISTATRegistry.UserControls
 
         #endregion
 
+
+        protected virtual void OnAnnotationCreated(IAnnotationMutableObject e)
+        {
+            if (AnnotationCreated != null)
+                AnnotationCreated(this, e);
+        }
+
+        protected virtual void OnAnnotationDeleted(IAnnotationMutableObject e)
+        {
+            if (AnnotationDeleted != null)
+                AnnotationDeleted(this, e);
+        }
+        
         #region Private Methods
 
         private IAnnotationMutableObject CreateAnnotation(string id, string title,
@@ -269,7 +297,7 @@ namespace ISTATRegistry.UserControls
             IList<ISTAT.Entity.Annotation> lAnnoations = new List<ISTAT.Entity.Annotation>();
             foreach (IAnnotationMutableObject annotation in _annotations)
             {
-                if (annotation.Type == null || ((annotation.Type != null) && (annotation.Type.Trim() != "@ORDER@" && annotation.Type.Trim() != "CategoryScheme_node_order")))
+                if (annotation.Type == null || ((annotation.Type != null) && (annotation.Type.Trim() != "@ORDER@" && annotation.Type.Trim() != "CategoryScheme_node_order" && annotation.Type.Trim() != "NonProductionDataflow")))
                 {
                     // Valore standard per le codelist immesso automaticmante
                     lAnnoations.Add(new ISTAT.Entity.Annotation(
@@ -381,10 +409,12 @@ namespace ISTATRegistry.UserControls
             string type = txt_type_annotation.Text;
             string uri = txt_url_annotation.Text;
             IList<ITextTypeWrapperMutableObject> values = AddText_value_annotation.TextObjectList;
+            
+            IAnnotationMutableObject annotation = null;
 
             if (ValidateForm())
             {
-                IAnnotationMutableObject annotation = CreateAnnotation(id, title, type, uri, values);
+                annotation = CreateAnnotation(id, title, type, uri, values);
                 this._annotations.Add(annotation);
                 SetAnnotationsToSession();
                 ClearControlInput();
@@ -392,9 +422,7 @@ namespace ISTATRegistry.UserControls
             }
 
             OpenPopUpContainer();
-
-            //Utils.ForceBlackClosing();
-
+            OnAnnotationCreated(annotation);
         }
 
         protected void OnUpdateClick(object sender, EventArgs e)
@@ -483,7 +511,7 @@ namespace ISTATRegistry.UserControls
                         IAnnotationMutableObject foundAnnotation = this._annotations.Where(ann => ann.Id != null && ann.Id.Equals(id)).First();
                         this._annotations.Remove(foundAnnotation);
                         SetAnnotationsToSession();
-
+                        OnAnnotationDeleted(foundAnnotation);
                     } break;
             }
 
@@ -512,7 +540,6 @@ namespace ISTATRegistry.UserControls
 
         protected void gridView_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
-            //NULL
         }
 
         protected void gridView_RowDataBound(object sender, GridViewRowEventArgs e)

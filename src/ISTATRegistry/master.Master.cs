@@ -15,6 +15,9 @@ using System.IO;
 using System.Collections.Specialized;
 using ISTATRegistry.IRServiceReference;
 using System.Xml.Linq;
+using ISTAT.Entity;
+using ISTATUtils;
+using Resources;
 
 namespace ISTATRegistry
 {
@@ -33,9 +36,22 @@ namespace ISTATRegistry
     public partial class master : System.Web.UI.MasterPage
     {
 
+        /// <summary>
+        ///   Get the IR version
+        /// </summary>
+        public static string Version
+        {
+            get
+            {
+                return Assembly.GetExecutingAssembly().GetName().Version.ToString();
+                //return string.Format(CultureInfo.InvariantCulture, Resources.Messages.app_version, Assembly.GetExecutingAssembly().GetName().Version.ToString());
+            }
+        }
+
+        #region EVENTS
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
             if (!IsPostBack)
             {
 
@@ -50,17 +66,23 @@ namespace ISTATRegistry
                     Utils.ShowDialog(Resources.Messages.msg_session_expired);
                 }
 
-                pnlUpload.Visible = !Utils.ViewMode;
-                //pnlNotVisible.Visible = !Utils.ViewMode;
+                
+
+                pnlUpload.Visible = false;
                 string[] resources = Directory.GetFiles(Server.MapPath("~/App_GlobalResources"), "*.resx");
                 Utils.PopulateCmbLanguages(cmbLanguage, AVAILABLE_MODES.MODE_FOR_GLOBAL_LOCALIZATION, resources);
+
                 Utils.PopulateCmbEndPoint(cmbEPoints);
+
+                CheckWSConnection();
+
                 SetEndPoint();
 
                 EndPointElement epe = IRConfiguration.GetEndPointByName(cmbEPoints.SelectedValue);
                 lnkAdmin.Visible = epe.EnableAdministration;
                 loginButton.Visible = epe.EnableAuthentication;
                 pnlExtraArtefact.Visible = !epe.PartialArtefact;
+                pnlArtefactBrowser.Visible = epe.EnableArtefactBrowser;
                 Session[SESSION_KEYS.CURRENT_ENDPOINT_OBJECT] = epe;
 
                 if (Session[SESSION_KEYS.KEY_LANG] != null)
@@ -71,10 +93,15 @@ namespace ISTATRegistry
                 else
                 {
                     var globalizationSection = WebConfigurationManager.GetSection("system.web/globalization") as GlobalizationSection;
-                    cmbLanguage.SelectedValue = globalizationSection.Culture;
+
+                    if(!String.IsNullOrEmpty(epe.DefaultLanguageForCombo))
+                        cmbLanguage.SelectedValue = epe.DefaultLanguageForCombo;
+                    else
+                        cmbLanguage.SelectedValue = ConfigurationManager.AppSettings["DefaultLanguageForCombo"].ToString();
                     Session[SESSION_KEYS.KEY_LANG] = cmbLanguage.SelectedValue.ToString();
                     Session[SESSION_KEYS.OLD_KEY_LANG] = cmbLanguage.SelectedItem.Value;
                 }
+
                 LocaleResolver.SendCookie(new System.Globalization.CultureInfo(Session[SESSION_KEYS.KEY_LANG].ToString()), HttpContext.Current);
             }
             else
@@ -84,6 +111,7 @@ namespace ISTATRegistry
 
             if (Session[SESSION_KEYS.USER_OK] != null && (bool)Session[SESSION_KEYS.USER_OK] == true)
             {
+                pnlUpload.Visible = true;
                 lblWelcomeUser.Visible = true;
                 User currentUser = (User)Session[SESSION_KEYS.USER_DATA];
                 string userCompleteName = string.Format("{0} {1}", currentUser.name.ToString(), currentUser.surname.ToString());
@@ -133,18 +161,6 @@ namespace ISTATRegistry
             }
         }
 
-        protected void cmbLanguage_DataBound(object sender, EventArgs e)
-        {
-            //Session[SESSION_KEYS.KEY_LANG] = cmbLanguage.SelectedItem.Value;
-            //LocaleResolver.SendCookie(new System.Globalization.CultureInfo(Session[SESSION_KEYS.KEY_LANG].ToString()),HttpContext.Current);
-
-        }
-
-        protected void cmbLanguage_DataBinding(object sender, EventArgs e)
-        {
-            // NULL
-        }
-
         protected void btnLoginSubmit_Click(object sender, EventArgs e)
         {
             string myUserName = txtLoginUserName.Text.Trim();
@@ -175,7 +191,7 @@ namespace ISTATRegistry
                 lblWelcomeUser.Text = string.Format(Resources.Messages.lblWelcomeUserMessagge, userCompleteName);
                 loginButton.Visible = false;
                 logoutButton.Visible = true;
-                Response.Redirect(Request.RawUrl);
+                Response.Redirect(Request.RawUrl.Replace("se=y", ""));
             }
             else
             {
@@ -183,13 +199,94 @@ namespace ISTATRegistry
             }
         }
 
+        protected void logoutButton_Click(object sender, EventArgs e)
+        {
+            LogOutUser();
+        }
+
+        protected void cmbEPoints_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Session["SelectedEndPoint"] = cmbEPoints.SelectedValue;
+
+            EndPointElement epe = IRConfiguration.GetEndPointByName(cmbEPoints.SelectedValue);
+            Session[SESSION_KEYS.CURRENT_ENDPOINT_OBJECT] = epe;
+
+//TODO COMPLETARE
+
+            if (!String.IsNullOrEmpty(epe.DefaultLanguageForCombo))
+                cmbLanguage.SelectedValue = epe.DefaultLanguageForCombo;
+            else
+                cmbLanguage.SelectedValue = ConfigurationManager.AppSettings["DefaultLanguageForCombo"].ToString();
+            Session[SESSION_KEYS.KEY_LANG] = cmbLanguage.SelectedValue.ToString();
+            Session[SESSION_KEYS.OLD_KEY_LANG] = cmbLanguage.SelectedItem.Value;
+
+            CheckWSConnection();
+
+            LogOutUser();
+            Server.Transfer("~/default.aspx");
+        }
+
+        #endregion
+
+        private void CheckWSConnection()
+        {
+
+            string wsState;
+
+            List<string> EndPointUP;
+
+            if (Session["EndPointUp"] != null)
+                EndPointUP = (List<string>)Session["EndPointUp"];
+            else
+                EndPointUP = new List<string>();
+
+            if (EndPointUP.Contains(cmbEPoints.SelectedValue))
+            {
+                SetWSState("OK");
+                return;
+            }
+
+            Session["SelectedEndPoint"] = cmbEPoints.SelectedValue;
+
+            EndPointElement epe = IRConfiguration.GetEndPointByName(cmbEPoints.SelectedValue);
+
+            wsState = ISTATRegistry.Classes.EndpointCheck.IsEndpointUp(epe);
+
+            if (wsState == "OK")
+            {
+                EndPointUP.Add(cmbEPoints.SelectedValue);
+                Session["EndPointUp"] = EndPointUP;
+            }
+
+            SetWSState(wsState);
+        }
+
+        private void SetWSState(string wsState)
+        {
+            if (wsState != "OK")
+            {
+                imgServerStatus.ImageUrl = "~/images/ServerOff.png";
+                imgServerStatus.AlternateText = wsState;
+                imgServerStatus.ToolTip = wsState;
+            }
+            else
+            {
+                imgServerStatus.ImageUrl = "~/images/ServerOn.png";
+                imgServerStatus.AlternateText = "Web Service is On";
+                imgServerStatus.ToolTip = "Web Service is On";
+            }
+        }
+
+
+        #region METHODS
+
         private User GetUserFromFile(string myUserName, string myPassword)
         {
             User currentUser = new User();
 
             string filePath = IRConfiguration.GetEndPointByName(cmbEPoints.SelectedValue).UsersFilePath;
 
-            XElement xelement = XElement.Load(Server.MapPath(filePath));
+            XElement xelement = XElement.Load(Server.MapPath("~/" + filePath));
             IEnumerable<XElement> users = xelement.Elements();
 
             var user = from u in xelement.Elements("user")
@@ -207,14 +304,14 @@ namespace ISTATRegistry
             currentUser.surname = us.Attribute("surname").Value;
 
             var agencies = from ags in us.Descendants("agency")
-                select ags;
+                           select ags;
 
             UserAgency[] userAgencies = new UserAgency[agencies.Count()];
             int count = 0;
 
             foreach (string agencyId in agencies.Attributes("id"))
             {
-                userAgencies[count] = new UserAgency(){id=agencyId, lang="en"};
+                userAgencies[count] = new UserAgency() { id = agencyId, lang = "en" };
                 ++count;
             }
 
@@ -225,11 +322,10 @@ namespace ISTATRegistry
 
         private void LogOutUser()
         {
-            //EndPointElement epe = IRConfiguration.GetEndPointByName(cmbEPoints.SelectedValue);
-
             Session[SESSION_KEYS.USER_OK] = null;
             Session[SESSION_KEYS.USER_DATA] = null;
             Session[SESSION_KEYS.USER_AGENCIES] = null;
+            Session["AuthenticatedWebServices"] = null;
             lblWelcomeUser.Visible = false;
             lblWelcomeUser.Text = string.Empty;
             loginButton.Visible = true;
@@ -237,28 +333,10 @@ namespace ISTATRegistry
             Response.Redirect("~/default.aspx");
         }
 
-        protected void logoutButton_Click(object sender, EventArgs e)
-        {
-            LogOutUser();
-
-        }
-
-        protected void cmbEPoints_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Session["SelectedEndPoint"] = cmbEPoints.SelectedValue;
-
-            EndPointElement epe = IRConfiguration.GetEndPointByName(cmbEPoints.SelectedValue);
-            Session[SESSION_KEYS.CURRENT_ENDPOINT_OBJECT] = epe;
-
-            LogOutUser();
-        }
-
         private void SetEndPoint()
         {
-            Session["WSEndPoint"] = IRConfiguration.GetEndPointByName(cmbEPoints.SelectedValue).NSIEndPoint;
-
-            //NameValueCollection endPointSection = (NameValueCollection)ConfigurationManager.GetSection("EndPoints");
-            //Session["WSEndPoint"] = endPointSection[cmbEPoints.SelectedValue];
+            EndPointElement epe = ISTATUtils.IRConfiguration.GetEndPointByName(cmbEPoints.SelectedValue);
+            Session["WSEndPoint"] = epe;
         }
 
         private void CheckSessioneExpired()
@@ -270,6 +348,8 @@ namespace ISTATRegistry
                 Response.End();
             }
         }
+
+        #endregion
 
     }
 

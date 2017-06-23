@@ -100,7 +100,19 @@ namespace ISTATRegistry
         {
             EntityMapper eMapper = new EntityMapper(Utils.LocalizedLanguage);
 
-            List<ISTAT.Entity.ConceptScheme> _list = eMapper.GetConceptSchemeList(_sdmxObjects, Utils.LocalizedLanguage);
+            List<ISTAT.Entity.ConceptScheme> lConceptScheme = eMapper.GetConceptSchemeList(_sdmxObjects, Utils.LocalizedLanguage);
+            List<ISTAT.Entity.ConceptScheme> lFilteredConceptScheme = null;
+
+            if (Utils.EnableCLPeriodsFilter)
+            {
+                lFilteredConceptScheme = lConceptScheme.FindAll(i => !(Utils.CSFilterList.Contains(i.ID)));
+            }
+
+            if (lConceptScheme.Count > 0 && lFilteredConceptScheme.Count == 0)
+            {
+                Utils.ShowDialog("no results found");
+                return;
+            }
 
             int numberOfRows = 0;
 
@@ -112,9 +124,9 @@ namespace ISTATRegistry
             {
                 gridView.PageSize = Utils.GeneralConceptschemeGridNumberRow;
             }
-            lblNumberOfTotalElements.Text = string.Format( Resources.Messages.lbl_number_of_total_rows, _list.Count.ToString() );
-            
-            if ( _list.Count == 0 )
+            lblNumberOfTotalElements.Text = string.Format(Resources.Messages.lbl_number_of_total_rows, lFilteredConceptScheme.Count.ToString());
+
+            if (lFilteredConceptScheme.Count == 0)
             {
                 txtNumberOfRows.Visible = false;
                 lblNumberOfRows.Visible = false;
@@ -128,7 +140,7 @@ namespace ISTATRegistry
             }
             
             gridView.DataSourceID = null;
-            gridView.DataSource = _list;
+            gridView.DataSource = lFilteredConceptScheme;
             gridView.DataBind();
         }
 
@@ -151,26 +163,18 @@ namespace ISTATRegistry
             BindData();
         }
 
-        protected void OnRowCommand(object sender, GridViewCommandEventArgs e)
-        {
-            switch (e.CommandName)
-            {
-                case "Details":
-                    GridViewRow gvr = (GridViewRow)(((ImageButton)e.CommandSource).NamingContainer);
-                    string stringIdentity = Utils.GetStringKey(gridView.Rows[gvr.RowIndex]);
-                    Response.Redirect("ConceptSchemeItemDetails.aspx?ACTION=UPDATE&" + stringIdentity);
-                    break;
-                case "xxxx":
-                    break;
-            }
-        }
-
         protected void OnRowCreated(object sender, GridViewRowEventArgs e)
         {
             FileDownload3 fd = (e.Row.FindControl("FileDownload3") as FileDownload3);
             if (fd != null)
             {
                 ScriptManager.GetCurrent(this).RegisterPostBackControl(fd);
+            }
+            HyperLink hplDetails = (e.Row.FindControl("hplDetails") as HyperLink);
+            if (hplDetails != null)
+            {
+                string stringIdentity = Utils.GetStringKey((ArtefactIdentity)e.Row.DataItem);
+                hplDetails.NavigateUrl = "ConceptSchemeItemDetails.aspx?ACTION=UPDATE&" + stringIdentity;
             }
         }
 

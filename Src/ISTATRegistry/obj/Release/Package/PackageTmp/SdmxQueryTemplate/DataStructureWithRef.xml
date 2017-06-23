@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<message:DataStructureQuery
+	xmlns:message="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message" 
+	xmlns:query="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/query" 
+	xmlns:common="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" >
+   <message:Header>
+      <message:ID>DataStructureQuery</message:ID>
+      <message:Test>true</message:Test>
+      <message:Prepared>2014-06-23T08:00:33+01:00</message:Prepared>
+      <message:Sender id="GiTest"/>
+      <message:Receiver id="ISTAT"/>
+   </message:Header>
+	<message:Query>
+		<query:ReturnDetails detail="Full">
+			<query:References><query:Children/></query:References>	
+		</query:ReturnDetails>
+		<query:DataStructureWhere >
+      <query:ID>STS_MARKET</query:ID>
+      <query:Version>3.0</query:Version>
+      <query:AgencyID>IT1</query:AgencyID>
+		</query:DataStructureWhere >	
+	</message:Query>
+</message:DataStructureQuery>

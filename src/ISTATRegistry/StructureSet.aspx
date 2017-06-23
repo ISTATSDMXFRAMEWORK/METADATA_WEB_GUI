@@ -17,7 +17,7 @@
             <asp:GridView ID="gridView" runat="server" CssClass="Grid" AllowPaging="True" PagerSettings-Mode="NumericFirstLast"
                 PagerSettings-FirstPageText="<%# Resources.Messages.btn_goto_first %>" PagerSettings-LastPageText="<%# Resources.Messages.btn_goto_last %>"
                 AllowSorting="True" OnSorted="OnSorted" OnSorting="OnSorting" AutoGenerateColumns="False"
-                OnPageIndexChanging="OnPageIndexChanging" OnRowCommand="OnRowCommand" OnRowCreated="OnRowCreated"
+                OnPageIndexChanging="OnPageIndexChanging" OnRowCreated="OnRowCreated"
                 PagerSettings-Position="TopAndBottom" 
                 onrowdatabound="gridView_RowDataBound">
                 <Columns>
@@ -64,9 +64,12 @@
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="" ShowHeader="False">
                         <ItemTemplate>
-                            <asp:ImageButton ID="btnDetails" runat="server" CausesValidation="False" CommandName="Details"
-                                CommandArgument="<%# Container.DataItemIndex %>" ImageUrl="~/images/Details2.png"
-                                ToolTip="View details" />
+                            <asp:HyperLink ID="hplDetails" 
+                                runat="server" 
+                                ImageUrl="~/images/Details2.png" 
+                                NavigateUrl="s"
+                                ToolTip="View details">
+                            </asp:HyperLink>
                         </ItemTemplate>
                         <HeaderStyle Width="50px" HorizontalAlign="Center" />
                         <ItemStyle HorizontalAlign="Center" />
@@ -92,7 +95,8 @@
                     OnClick="btnChangePaging_Click" />
             <br />
             <br />
-            <asp:Button ID="btnAdd" runat="server" OnClick="btnAdd_Click" Text="<%$ Resources:Messages, btn_new_structureset %>" />
+            <asp:Button ID="btnAdd" runat="server" OnClick="btnAdd_Click" OnClientClick="location.href='./StructureSetItemDetails.aspx?ACTION=INSERT';return false;" Text="<%$ Resources:Messages, btn_new_structureset %>" />
+            
         </ContentTemplate>
     </iup:IstatUpdatePanel>
 </asp:Content>

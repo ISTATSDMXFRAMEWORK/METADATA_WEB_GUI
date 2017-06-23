@@ -16,6 +16,7 @@ using System.Text;
 using ISTAT.EXPORT;
 using ISTAT.IO;
 using Org.Sdmxsource.Sdmx.Api.Model.Objects.Codelist;
+using ISTAT.Entity;
 
 namespace ISTATRegistry
 {
@@ -29,6 +30,15 @@ namespace ISTATRegistry
         #endregion
 
         #region "Public Methods"
+
+        public void SaveRTFFile(Elistia.DotNetRtfWriter.RtfDocument doc, string outputFileName)
+        {
+            string rtfString = doc.render();
+
+            byte[] bytesInStream = Encoding.ASCII.GetBytes(rtfString);
+
+            SendAttachment(bytesInStream, outputFileName + ".rtf");
+        }
 
         public void SaveSDMXFile(ISdmxObjects sdmxObjects, StructureOutputFormatEnumType version, string outputFileName)
         {
@@ -50,6 +60,45 @@ namespace ISTATRegistry
         }
 
 
+
+        public void SaveMultipleCSVFile(List<DataTable> dts, List<string> outputFileName, string separator, string textDelimiter)
+        {
+            //byte[] bytesInStream = null;
+            string fName = "mutipleCSVFile_" + GetStrindDate() +".zip";
+            List<ISTAT.IO.Utility.FileGeneric> files = new List<ISTAT.IO.Utility.FileGeneric>();
+            MemoryStream tempStream;
+            StreamWriter writer;
+            int countName = 0;
+
+            foreach (DataTable dt in dts)
+            {
+
+                tempStream = new MemoryStream();
+
+                writer = new StreamWriter(tempStream);
+
+                WriteDataTable(dt, writer, true, separator, textDelimiter);
+
+                ISTAT.IO.Utility.FileGeneric file_code = new ISTAT.IO.Utility.FileGeneric();
+                file_code.filename = outputFileName[countName];
+                file_code.stream = tempStream;
+                files.Add(file_code);
+
+                ++countName;
+            }
+
+            string fileZip = System.Web.HttpContext.Current.Server.MapPath(@"~\OutputFiles" + "\\" + fName);
+
+            System.IO.File.Delete(fileZip);
+            Ionic.Utils.Zip.ZipFile zip = new Ionic.Utils.Zip.ZipFile(fileZip);
+            foreach (ISTAT.IO.Utility.FileGeneric file in files)
+                zip.AddFileStream(file.filename, string.Empty, file.stream);
+            zip.Save();
+
+            SendAttachment(fileZip, fName);
+        }
+
+
         public void SaveCSVFile(DataTable dt, string outputFileName, string separator, string textDelimiter)
         {
             byte[] bytesInStream = null;
@@ -68,11 +117,71 @@ namespace ISTATRegistry
 
         }
 
-        public void SaveDotSTATCodelistFile(ICodelistObject codelist)
+
+        public void SaveMultipleDotSTATCodelistFile(List<ICodelistObject> codelists, ISTAT.Entity.DotStatProperties dsp)
         {
-            CodelistExporter _codeExp = new CodelistExporter(codelist.Id, codelist);
+            string fName = "multipleDotStatFile_"+ GetStrindDate() +".zip";
+            string finalFile = System.Web.HttpContext.Current.Server.MapPath(@"~\OutputFiles" + "\\"+ fName);
+            //ISTAT.IO.Utility.FileGeneric singleFile = new ISTAT.IO.Utility.FileGeneric();
+            System.IO.File.Delete(finalFile);
+
+            Ionic.Utils.Zip.ZipFile zipFiles = new Ionic.Utils.Zip.ZipFile(finalFile);
+
+            foreach (ICodelistObject codelist in codelists)
+            {
+                CodelistExporter _codeExp = new CodelistExporter(codelist.Id, codelist, dsp, GetLanguages());
+                List<ISTAT.IO.Utility.FileGeneric> files = new List<ISTAT.IO.Utility.FileGeneric>();
+                List<ContactRef> contacs = GetConfigContact(dsp);
+                string ExportFileName;
+
+                ExportFileName = "DotStatExport-" + codelist.Id + "_" + codelist.AgencyId + "_" + codelist.Version;
+
+                _codeExp.CreateData(contacs);
+
+                System.Xml.XmlDocument xDoc_code = _codeExp.XMLDoc;
+                MemoryStream xmlStream_code = new MemoryStream();
+                xDoc_code.Save(xmlStream_code);
+                xmlStream_code.Flush();
+                xmlStream_code.Position = 0;
+                ISTAT.IO.Utility.FileGeneric file_code = new ISTAT.IO.Utility.FileGeneric();
+                file_code.filename = _codeExp.Code.ToString() + ".xml";
+                file_code.stream = xmlStream_code;
+                files.Add(file_code);
+
+                Stream streamCSV = CSVWriter.CreateStream(_codeExp.DataView);
+                ISTAT.IO.Utility.FileGeneric file_csv = new ISTAT.IO.Utility.FileGeneric();
+                file_csv.filename = _codeExp.DataFilename;
+                file_csv.stream = streamCSV;
+                files.Add(file_csv);
+
+                string fileZip = System.Web.HttpContext.Current.Server.MapPath(@"~\OutputFiles" + "\\" + ExportFileName + ".zip");
+
+                System.IO.File.Delete(fileZip);
+                Ionic.Utils.Zip.ZipFile zip = new Ionic.Utils.Zip.ZipFile(fileZip);
+                foreach (ISTAT.IO.Utility.FileGeneric file in files)
+                    zip.AddFileStream(file.filename, string.Empty, file.stream);
+                zip.Save();
+
+                zipFiles.AddFileStream(ExportFileName +".zip",string.Empty, File.OpenRead(fileZip));
+
+            }
+
+            zipFiles.Save();
+
+            SendAttachment(finalFile, fName);
+        }
+
+        private string GetStrindDate()
+        {
+            return DateTime.Now.Year.ToString() + "_" + DateTime.Now.Month.ToString() + "_" + DateTime.Now.Day.ToString() + "_" + DateTime.Now.Hour.ToString() + "_" + DateTime.Now.Minute.ToString();
+        }
+
+        public void SaveDotSTATCodelistFile(ICodelistObject codelist, ISTAT.Entity.DotStatProperties dsp)
+        {
+
+            CodelistExporter _codeExp = new CodelistExporter(codelist.Id, codelist, dsp, GetLanguages());
             List<ISTAT.IO.Utility.FileGeneric> files = new List<ISTAT.IO.Utility.FileGeneric>();
-            List<ContactRef> contacs = GetConfigContact();
+            List<ContactRef> contacs = GetConfigContact(dsp);
             string ExportFileName;
 
             ExportFileName = "DotStatExport-" + codelist.Id + "_" + codelist.AgencyId + "_" + codelist.Version;
@@ -95,7 +204,7 @@ namespace ISTATRegistry
             file_csv.stream = streamCSV;
             files.Add(file_csv);
 
-            string fileZip = System.Web.HttpContext.Current.Server.MapPath("OutputFiles" + "\\" + ExportFileName + ".zip");
+            string fileZip = System.Web.HttpContext.Current.Server.MapPath(@"~\OutputFiles" + "\\" + ExportFileName + ".zip");
 
             System.IO.File.Delete(fileZip);
             Ionic.Utils.Zip.ZipFile zip = new Ionic.Utils.Zip.ZipFile(fileZip);
@@ -106,7 +215,7 @@ namespace ISTATRegistry
             SendAttachment(fileZip, ExportFileName + ".zip");
         }
 
-        public void SaveDotSTATFile(ISdmxObjects sdmxObjects, DotStatExportType exportType)
+        public void SaveDotSTATFile(ISdmxObjects sdmxObjects, DotStatExportType exportType, DotStatProperties dsp)
         {
             string ExportFileName;
 
@@ -114,10 +223,11 @@ namespace ISTATRegistry
 
             List<ISTAT.IO.Utility.FileGeneric> files = new List<ISTAT.IO.Utility.FileGeneric>();
 
-            List<ContactRef> contacs = GetConfigContact();
-            List<SecurityDef> securities = GetConfigSecurity();
+            List<ContactRef> contacs = GetConfigContact(dsp);
+            List<SecurityDef> securities = GetConfigSecurity(dsp);
+            List<String> languages = GetLanguages();
 
-            DSDExporter _dsdExp = new DSDExporter(sdmxObjects);
+            DSDExporter _dsdExp = new DSDExporter(sdmxObjects, dsp);
 
             switch (exportType)
             {
@@ -125,6 +235,7 @@ namespace ISTATRegistry
                     if (_dsdExp.CreateData(
                         contacs,
                         securities,
+                        languages,
                         true, false))
                     {
                         System.Xml.XmlDocument xDoc = _dsdExp.XMLDoc;
@@ -146,6 +257,7 @@ namespace ISTATRegistry
                     if (_dsdExp.CreateData(
                         contacs,
                         securities,
+                        languages,
                         true, false))
                     {
                         foreach (CodelistExporter _codeExp in _dsdExp.ExporterCodelists)
@@ -160,9 +272,16 @@ namespace ISTATRegistry
                             file_code.stream = xmlStream_code;
                             files.Add(file_code);
 
-                            Stream streamCSV = CSVWriter.CreateStream(_codeExp.DataView);
+                            // CSV_LOC
+                            Stream streamCSV_LOC = CSVWriter.CreateStream(_codeExp.DataView);
+                            ISTAT.IO.Utility.FileGeneric file_csv_loc = new ISTAT.IO.Utility.FileGeneric();
+                            file_csv_loc.filename = _codeExp.DataFilename;
+                            file_csv_loc.stream = streamCSV_LOC;
+                            files.Add(file_csv_loc);
+
+                            Stream streamCSV = CSVWriter.CreateStream(_codeExp.DataViewCsv);
                             ISTAT.IO.Utility.FileGeneric file_csv = new ISTAT.IO.Utility.FileGeneric();
-                            file_csv.filename = _codeExp.DataFilename;
+                            file_csv.filename = _codeExp.DataFilenameCsv;
                             file_csv.stream = streamCSV;
                             files.Add(file_csv);
                         }
@@ -172,6 +291,7 @@ namespace ISTATRegistry
                     if (_dsdExp.CreateData(
                         contacs,
                         securities,
+                        languages,
                         true, false))
                     {
                         System.Xml.XmlDocument xDoc = _dsdExp.XMLDoc;
@@ -199,17 +319,25 @@ namespace ISTATRegistry
                             file_code.stream = xmlStream_code;
                             files.Add(file_code);
 
-                            Stream streamCSV = CSVWriter.CreateStream(_codeExp.DataView);
+                            // CSV_LOC
+                            Stream streamCSV_LOC = CSVWriter.CreateStream(_codeExp.DataView);
+                            ISTAT.IO.Utility.FileGeneric file_csv_loc = new ISTAT.IO.Utility.FileGeneric();
+                            file_csv_loc.filename = _codeExp.DataFilename;
+                            file_csv_loc.stream = streamCSV_LOC;
+                            files.Add(file_csv_loc);
+
+                            Stream streamCSV = CSVWriter.CreateStream(_codeExp.DataViewCsv);
                             ISTAT.IO.Utility.FileGeneric file_csv = new ISTAT.IO.Utility.FileGeneric();
-                            file_csv.filename = _codeExp.DataFilename;
+                            file_csv.filename = _codeExp.DataFilenameCsv;
                             file_csv.stream = streamCSV;
                             files.Add(file_csv);
+
                         }
                     }
                     break;
             }
 
-            string fileZip = System.Web.HttpContext.Current.Server.MapPath("OutputFiles" + "\\" + ExportFileName + ".zip");
+            string fileZip = System.Web.HttpContext.Current.Server.MapPath(@"~\OutputFiles" + "\\" + ExportFileName + ".zip");
 
             System.IO.File.Delete(fileZip);
             Ionic.Utils.Zip.ZipFile zip = new Ionic.Utils.Zip.ZipFile(fileZip);
@@ -284,40 +412,43 @@ namespace ISTATRegistry
             return String.Concat("\"", value.Replace("\"", "\"\""), "\"");
         }
 
-        private List<ContactRef> GetConfigContact()
+        private List<ContactRef> GetConfigContact(DotStatProperties dsp)
         {
-            ISTAT.EXPORT.Settings.ContactSettingsHandler configContact =
-               (ISTAT.EXPORT.Settings.ContactSettingsHandler)System.Configuration.ConfigurationManager.GetSection(
-                   "ExportDotStatSettingsGroup/ContactSection");
-
             List<ContactRef> contacs = new List<ContactRef>();
             contacs.Add(new ContactRef()
             {
-                name = configContact.Name,
-                direction = configContact.Direction,
-                email = configContact.Email
+                name = dsp.ContactName,
+                direction = dsp.ContactDirection,
+                email = dsp.ContactEMail
             });
 
             return contacs;
         }
 
-        private List<SecurityDef> GetConfigSecurity()
+        private List<SecurityDef> GetConfigSecurity(DotStatProperties dsp)
         {
-            ISTAT.EXPORT.Settings.SecuritySettingsHandler configSecurity =
-               (ISTAT.EXPORT.Settings.SecuritySettingsHandler)System.Configuration.ConfigurationManager.GetSection(
-                   "ExportDotStatSettingsGroup/SecuritySection");
-
             List<SecurityDef> securities = new List<SecurityDef>();
             securities.Add(new SecurityDef()
             {
-                domain = configSecurity.Domain,
-                userGroup = configSecurity.UserGroup,
+                domain = dsp.SecurityDomain,
+                userGroup = dsp.SecurityUserGroup
             });
 
             return securities;
         }
 
+        private List<string> GetLanguages()
+        {
+            ISTATUtils.EndPointElement epe = (ISTATUtils.EndPointElement)HttpContext.Current.Session["WSEndPoint"];
+
+            if (epe.DotStatExportLanguages != "")
+                return epe.DotStatExportLanguages.Split(new char[] { ',' }).ToList();
+
+            throw new Exception("No DotStatExportLanguages configured in web.config");
+        }
+
         #endregion
+
 
     }
 }

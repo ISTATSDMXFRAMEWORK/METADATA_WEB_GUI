@@ -1,0 +1,18 @@
+C:\FlyCallWS\bin\Debug\FlyCallWS.dll
+C:\FlyCallWS\bin\Debug\FlyCallWS.pdb
+C:\FlyCallWS\obj\Debug\FlyCallWS.csprojResolveAssemblyReference.cache
+C:\FlyCallWS\obj\Debug\FlyCallWS.dll
+C:\FlyCallWS\obj\Debug\FlyCallWS.pdb
+C:\Users\Quirini\Documents\Visual Studio 2012\Projects\NomServer_new\FlyCallWS_20161018\bin\Debug\FlyCallWS.dll
+C:\Users\Quirini\Documents\Visual Studio 2012\Projects\NomServer_new\FlyCallWS_20161018\bin\Debug\FlyCallWS.pdb
+C:\Users\Quirini\Documents\Visual Studio 2012\Projects\NomServer_new\FlyCallWS_20161018\obj\Debug\FlyCallWS.dll
+C:\Users\Quirini\Documents\Visual Studio 2012\Projects\NomServer_new\FlyCallWS_20161018\obj\Debug\FlyCallWS.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\FlyCallWS\bin\Debug\FlyCallWS.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\FlyCallWS\bin\Debug\FlyCallWS.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\FlyCallWS\obj\Debug\FlyCallWS.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\FlyCallWS\obj\Debug\FlyCallWS.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\FlyCallWS\bin\Debug\FlyCallWS.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\FlyCallWS\bin\Debug\FlyCallWS.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\FlyCallWS\obj\Debug\FlyCallWS.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\FlyCallWS\obj\Debug\FlyCallWS.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\FlyCallWS\obj\Debug\FlyCallWS.csprojResolveAssemblyReference.cache

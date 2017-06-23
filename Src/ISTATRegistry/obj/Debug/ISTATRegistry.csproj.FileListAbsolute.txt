@@ -1,0 +1,330 @@
+C:\ISTAT\Source\ISTATRegistry_4.0\ISTATRegistry\obj\Debug\ISTATRegistry.csprojResolveAssemblyReference.cache
+C:\ISTAT\Source\ISTATRegistry_4.0\ISTATRegistry\bin\ISTATRegistry.dll
+C:\ISTAT\Source\ISTATRegistry_4.0\ISTATRegistry\bin\ISTATRegistry.pdb
+C:\ISTAT\Source\ISTATRegistry_4.0\ISTATRegistry\bin\FlyCallWS.dll
+C:\ISTAT\Source\ISTATRegistry_4.0\ISTATRegistry\bin\Ionic.Utils.Zip.dll
+C:\ISTAT\Source\ISTATRegistry_4.0\ISTATRegistry\bin\ISTAT.EXPORT.dll
+C:\ISTAT\Source\ISTATRegistry_4.0\ISTATRegistry\bin\ISTAT.IO.dll
+C:\ISTAT\Source\ISTATRegistry_4.0\ISTATRegistry\bin\ISTATEntity.dll
+C:\ISTAT\Source\ISTATRegistry_4.0\ISTATRegistry\bin\ISTATEntityMapper.dll
+C:\ISTAT\Source\ISTATRegistry_4.0\ISTATRegistry\bin\ISTATUtils.dll
+C:\ISTAT\Source\ISTATRegistry_4.0\ISTATRegistry\bin\LumenWorks.Framework.IO.dll
+C:\ISTAT\Source\ISTATRegistry_4.0\ISTATRegistry\bin\SdmxApi.dll
+C:\ISTAT\Source\ISTATRegistry_4.0\ISTATRegistry\bin\SdmxObjects.dll
+C:\ISTAT\Source\ISTATRegistry_4.0\ISTATRegistry\bin\SdmxSourceUtil.dll
+C:\ISTAT\Source\ISTATRegistry_4.0\ISTATRegistry\bin\SdmxStructureParser.dll
+C:\ISTAT\Source\ISTATRegistry_4.0\ISTATRegistry\bin\WSDAL.dll
+C:\ISTAT\Source\ISTATRegistry_4.0\ISTATRegistry\bin\Xml.Schema.Linq.dll
+C:\ISTAT\Source\ISTATRegistry_4.0\ISTATRegistry\bin\Org.Sdmx.Resources.SdmxMl.Schemas.V21.dll
+C:\ISTAT\Source\ISTATRegistry_4.0\ISTATRegistry\bin\Org.Sdmx.Resources.SdmxMl.Schemas.V20.dll
+C:\ISTAT\Source\ISTATRegistry_4.0\ISTATRegistry\bin\Org.Sdmx.Resources.SdmxMl.Schemas.V10.dll
+C:\ISTAT\Source\ISTATRegistry_4.0\ISTATRegistry\bin\SdmxStructureRetrieval.dll
+C:\ISTAT\Source\ISTATRegistry_4.0\ISTATRegistry\bin\ISTATEntityMapper.pdb
+C:\ISTAT\Source\ISTATRegistry_4.0\ISTATRegistry\bin\ISTATEntity.pdb
+C:\ISTAT\Source\ISTATRegistry_4.0\ISTATRegistry\bin\ISTATUtils.pdb
+C:\ISTAT\Source\ISTATRegistry_4.0\ISTATRegistry\bin\WSDAL.pdb
+C:\ISTAT\Source\ISTATRegistry_4.0\ISTATRegistry\bin\LumenWorks.Framework.IO.xml
+C:\ISTAT\Source\ISTATRegistry_4.0\ISTATRegistry\obj\Debug\ISTATRegistry.dll
+C:\ISTAT\Source\ISTATRegistry_4.0\ISTATRegistry\obj\Debug\ISTATRegistry.pdb
+C:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\bin\ISTATRegistry.dll
+C:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\bin\ISTATRegistry.pdb
+C:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\bin\AjaxControlToolkit.dll
+C:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\bin\FlyCallWS.dll
+C:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\bin\Ionic.Utils.Zip.dll
+C:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\bin\ISTAT.EXPORT.dll
+C:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\bin\ISTAT.IO.dll
+C:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\bin\ISTATEntity.dll
+C:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\bin\ISTATEntityMapper.dll
+C:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\bin\ISTATUtils.dll
+C:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\bin\LumenWorks.Framework.IO.dll
+C:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\bin\SdmxApi.dll
+C:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\bin\SdmxObjects.dll
+C:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\bin\SdmxSourceUtil.dll
+C:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\bin\SdmxStructureParser.dll
+C:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\bin\WSDAL.dll
+C:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\bin\Xml.Schema.Linq.dll
+C:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\bin\log4net.dll
+C:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\bin\Org.Sdmx.Resources.SdmxMl.Schemas.V21.dll
+C:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\bin\Org.Sdmx.Resources.SdmxMl.Schemas.V20.dll
+C:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\bin\Org.Sdmx.Resources.SdmxMl.Schemas.V10.dll
+C:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\bin\SdmxStructureRetrieval.dll
+C:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\bin\ISTATEntityMapper.pdb
+C:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\bin\ISTATEntity.pdb
+C:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\bin\ISTATUtils.pdb
+C:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\bin\WSDAL.pdb
+C:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\bin\LumenWorks.Framework.IO.xml
+C:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\obj\Debug\ISTATRegistry.csprojResolveAssemblyReference.cache
+C:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\obj\Debug\ISTATRegistry.dll
+C:\ISTAT\Source\ISTATRegistry_4.1\ISTATRegistry\obj\Debug\ISTATRegistry.pdb
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATRegistry\bin\ISTATRegistry.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATRegistry\bin\ISTATRegistry.pdb
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATRegistry\bin\ISTATEntity.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATRegistry\bin\ISTATEntityMapper.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATRegistry\bin\ISTATUtils.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATRegistry\bin\WSDAL.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATRegistry\bin\log4net.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATRegistry\bin\Org.Sdmx.Resources.SdmxMl.Schemas.V21.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATRegistry\bin\Org.Sdmx.Resources.SdmxMl.Schemas.V20.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATRegistry\bin\Org.Sdmx.Resources.SdmxMl.Schemas.V10.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATRegistry\bin\SdmxStructureRetrieval.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATRegistry\bin\ISTATEntityMapper.pdb
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATRegistry\bin\ISTATEntity.pdb
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATRegistry\bin\ISTATUtils.pdb
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATRegistry\bin\WSDAL.pdb
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATRegistry\bin\LumenWorks.Framework.IO.xml
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATRegistry\obj\Debug\ISTATRegistry.csprojResolveAssemblyReference.cache
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATRegistry\obj\Debug\ISTATRegistry.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATRegistry\obj\Debug\ISTATRegistry.pdb
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\ISTATRegistry\bin\ISTATRegistry.dll
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\ISTATRegistry\bin\ISTATRegistry.pdb
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\ISTATRegistry\bin\AjaxControlToolkit.dll
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\ISTATRegistry\bin\ISTATEntity.dll
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\ISTATRegistry\bin\ISTATEntityMapper.dll
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\ISTATRegistry\bin\ISTATUtils.dll
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\ISTATRegistry\bin\WSDAL.dll
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\ISTATRegistry\bin\log4net.dll
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\ISTATRegistry\bin\Org.Sdmx.Resources.SdmxMl.Schemas.V21.dll
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\ISTATRegistry\bin\Org.Sdmx.Resources.SdmxMl.Schemas.V20.dll
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\ISTATRegistry\bin\Org.Sdmx.Resources.SdmxMl.Schemas.V10.dll
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\ISTATRegistry\bin\SdmxStructureRetrieval.dll
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\ISTATRegistry\bin\ISTATEntityMapper.pdb
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\ISTATRegistry\bin\ISTATEntity.pdb
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\ISTATRegistry\bin\ISTATUtils.pdb
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\ISTATRegistry\bin\WSDAL.pdb
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\ISTATRegistry\bin\LumenWorks.Framework.IO.xml
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\ISTATRegistry\obj\Debug\ISTATRegistry.csprojResolveAssemblyReference.cache
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\ISTATRegistry\obj\Debug\ISTATRegistry.dll
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\ISTATRegistry\obj\Debug\ISTATRegistry.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATRegistry\obj\Debug\ISTATRegistry.csprojResolveAssemblyReference.cache
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATRegistry\bin\ISTATRegistry.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATRegistry\bin\ISTATRegistry.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATRegistry\bin\AjaxControlToolkit.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATRegistry\bin\FlyCallWS.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATRegistry\bin\Ionic.Utils.Zip.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATRegistry\bin\ISTAT.EXPORT.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATRegistry\bin\ISTAT.IO.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATRegistry\bin\ISTATEntity.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATRegistry\bin\ISTATEntityMapper.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATRegistry\bin\ISTATUtils.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATRegistry\bin\LumenWorks.Framework.IO.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATRegistry\bin\SdmxApi.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATRegistry\bin\SdmxObjects.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATRegistry\bin\SdmxSourceUtil.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATRegistry\bin\SdmxStructureParser.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATRegistry\bin\WSDAL.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATRegistry\bin\Xml.Schema.Linq.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATRegistry\bin\log4net.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATRegistry\bin\Org.Sdmx.Resources.SdmxMl.Schemas.V21.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATRegistry\bin\Org.Sdmx.Resources.SdmxMl.Schemas.V20.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATRegistry\bin\Org.Sdmx.Resources.SdmxMl.Schemas.V10.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATRegistry\bin\SdmxStructureRetrieval.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATRegistry\bin\ISTAT.EXPORT.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATRegistry\bin\ISTAT.IO.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATRegistry\bin\ISTATEntityMapper.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATRegistry\bin\ISTATEntity.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATRegistry\bin\ISTATUtils.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATRegistry\bin\WSDAL.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATRegistry\obj\Debug\ISTATRegistry.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATRegistry\obj\Debug\ISTATRegistry.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATRegistry\bin\FlyCallWS.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATRegistry\bin\ISTATRegistry.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATRegistry\bin\ISTATRegistry.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATRegistry\bin\Ionic.Utils.Zip.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATRegistry\bin\ISTAT.EXPORT.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATRegistry\bin\ISTAT.IO.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATRegistry\bin\ISTATEntity.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATRegistry\bin\ISTATEntityMapper.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATRegistry\bin\ISTATUtils.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATRegistry\bin\LumenWorks.Framework.IO.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATRegistry\bin\Newtonsoft.Json.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATRegistry\bin\SdmxApi.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATRegistry\bin\SdmxObjects.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATRegistry\bin\SdmxSourceUtil.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATRegistry\bin\SdmxStructureParser.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATRegistry\bin\WSDAL.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATRegistry\bin\Xml.Schema.Linq.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATRegistry\bin\FlyCallWS.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATRegistry\bin\log4net.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATRegistry\bin\Org.Sdmx.Resources.SdmxMl.Schemas.V21.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATRegistry\bin\Org.Sdmx.Resources.SdmxMl.Schemas.V20.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATRegistry\bin\Org.Sdmx.Resources.SdmxMl.Schemas.V10.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATRegistry\bin\SdmxStructureRetrieval.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATRegistry\bin\ISTAT.EXPORT.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATRegistry\bin\ISTAT.IO.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATRegistry\bin\ISTATEntityMapper.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATRegistry\bin\ISTATEntity.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATRegistry\bin\ISTATUtils.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATRegistry\bin\WSDAL.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATRegistry\bin\FlyCallWS.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATRegistry\obj\Debug\ISTATRegistry.csprojResolveAssemblyReference.cache
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATRegistry\obj\Debug\ISTATRegistry.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATRegistry\obj\Debug\ISTATRegistry.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATRegistry\bin\DotNetRtfWriter.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\ISTATRegistry\bin\ISTATRegistry.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\ISTATRegistry\bin\ISTATRegistry.pdb
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\ISTATRegistry\bin\DotNetRtfWriter.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\ISTATRegistry\bin\Ionic.Utils.Zip.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\ISTATRegistry\bin\ISTAT.EXPORT.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\ISTATRegistry\bin\ISTAT.IO.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\ISTATRegistry\bin\ISTATEntity.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\ISTATRegistry\bin\ISTATEntityMapper.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\ISTATRegistry\bin\ISTATUtils.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\ISTATRegistry\bin\LumenWorks.Framework.IO.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\ISTATRegistry\bin\Newtonsoft.Json.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\ISTATRegistry\bin\SdmxApi.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\ISTATRegistry\bin\SdmxObjects.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\ISTATRegistry\bin\SdmxSourceUtil.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\ISTATRegistry\bin\SdmxStructureParser.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\ISTATRegistry\bin\WSDAL.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\ISTATRegistry\bin\Xml.Schema.Linq.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\ISTATRegistry\bin\FlyCallWS.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\ISTATRegistry\bin\log4net.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\ISTATRegistry\bin\Org.Sdmx.Resources.SdmxMl.Schemas.V21.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\ISTATRegistry\bin\Org.Sdmx.Resources.SdmxMl.Schemas.V20.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\ISTATRegistry\bin\Org.Sdmx.Resources.SdmxMl.Schemas.V10.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\ISTATRegistry\bin\SdmxStructureRetrieval.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\ISTATRegistry\bin\ISTAT.EXPORT.pdb
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\ISTATRegistry\bin\ISTAT.IO.pdb
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\ISTATRegistry\bin\ISTATEntityMapper.pdb
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\ISTATRegistry\bin\ISTATEntity.pdb
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\ISTATRegistry\bin\ISTATUtils.pdb
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\ISTATRegistry\bin\WSDAL.pdb
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\ISTATRegistry\bin\FlyCallWS.pdb
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\ISTATRegistry\obj\Debug\ISTATRegistry.csprojResolveAssemblyReference.cache
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\ISTATRegistry\obj\Debug\ISTATRegistry.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\ISTATRegistry\obj\Debug\ISTATRegistry.pdb
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATRegistry\bin\ISTATRegistry.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATRegistry\bin\ISTATRegistry.pdb
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATRegistry\bin\DotNetRtfWriter.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATRegistry\bin\Ionic.Utils.Zip.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATRegistry\bin\ISTAT.EXPORT.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATRegistry\bin\ISTAT.IO.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATRegistry\bin\ISTATEntity.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATRegistry\bin\ISTATEntityMapper.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATRegistry\bin\ISTATUtils.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATRegistry\bin\LumenWorks.Framework.IO.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATRegistry\bin\Newtonsoft.Json.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATRegistry\bin\SdmxApi.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATRegistry\bin\SdmxObjects.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATRegistry\bin\SdmxSourceUtil.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATRegistry\bin\SdmxStructureParser.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATRegistry\bin\WSDAL.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATRegistry\bin\Xml.Schema.Linq.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATRegistry\bin\FlyCallWS.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATRegistry\bin\log4net.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATRegistry\bin\Org.Sdmx.Resources.SdmxMl.Schemas.V21.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATRegistry\bin\Org.Sdmx.Resources.SdmxMl.Schemas.V20.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATRegistry\bin\Org.Sdmx.Resources.SdmxMl.Schemas.V10.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATRegistry\bin\SdmxStructureRetrieval.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATRegistry\bin\ISTAT.EXPORT.pdb
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATRegistry\bin\ISTAT.IO.pdb
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATRegistry\bin\ISTATEntityMapper.pdb
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATRegistry\bin\ISTATEntity.pdb
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATRegistry\bin\ISTATUtils.pdb
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATRegistry\bin\WSDAL.pdb
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATRegistry\bin\FlyCallWS.pdb
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATRegistry\obj\Debug\ISTATRegistry.csprojResolveAssemblyReference.cache
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATRegistry\obj\Debug\ISTATRegistry.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATRegistry\obj\Debug\ISTATRegistry.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\ISTATRegistry.dll.config
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\ISTATRegistry.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\ISTATRegistry.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\DotNetRtfWriter.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\Ionic.Utils.Zip.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\ISTAT.EXPORT.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\ISTAT.IO.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\ISTATEntity.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\ISTATEntityMapper.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\ISTATUtils.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\LumenWorks.Framework.IO.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\Newtonsoft.Json.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\SdmxApi.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\SdmxObjects.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\SdmxSourceUtil.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\SdmxStructureParser.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\WSDAL.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\Xml.Schema.Linq.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\FlyCallWS.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\log4net.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\Org.Sdmx.Resources.SdmxMl.Schemas.V21.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\Org.Sdmx.Resources.SdmxMl.Schemas.V20.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\Org.Sdmx.Resources.SdmxMl.Schemas.V10.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\SdmxStructureRetrieval.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\ISTAT.EXPORT.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\ISTAT.IO.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\ISTATEntityMapper.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\ISTATEntity.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\ISTATUtils.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\WSDAL.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\FlyCallWS.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\obj\Debug\ISTATRegistry.csprojResolveAssemblyReference.cache
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\obj\Debug\ISTATRegistry.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\obj\Debug\ISTATRegistry.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\ISTATRegistry.dll.config
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\ISTATRegistry.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\ISTATRegistry.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\DotNetRtfWriter.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\Ionic.Utils.Zip.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\ISTAT.EXPORT.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\ISTAT.IO.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\ISTATEntity.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\ISTATEntityMapper.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\ISTATUtils.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\LumenWorks.Framework.IO.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\Newtonsoft.Json.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\SdmxApi.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\SdmxObjects.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\SdmxSourceUtil.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\SdmxStructureParser.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\WSDAL.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\Xml.Schema.Linq.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\FlyCallWS.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\log4net.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\Org.Sdmx.Resources.SdmxMl.Schemas.V21.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\Org.Sdmx.Resources.SdmxMl.Schemas.V20.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\Org.Sdmx.Resources.SdmxMl.Schemas.V10.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\SdmxStructureRetrieval.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\ISTAT.EXPORT.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\ISTAT.IO.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\ISTATEntityMapper.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\ISTATEntity.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\ISTATUtils.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\WSDAL.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\bin\FlyCallWS.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\obj\Debug\ISTATRegistry.csprojResolveAssemblyReference.cache
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\obj\Debug\ISTATRegistry.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.0.0_26-04-2017_Quirini\Src\ISTATRegistry\obj\Debug\ISTATRegistry.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATRegistry\bin\ISTATRegistry.dll.config
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATRegistry\bin\ISTATRegistry.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATRegistry\bin\ISTATRegistry.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATRegistry\bin\DotNetRtfWriter.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATRegistry\bin\Ionic.Utils.Zip.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATRegistry\bin\ISTAT.EXPORT.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATRegistry\bin\ISTAT.IO.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATRegistry\bin\ISTATEntity.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATRegistry\bin\ISTATEntityMapper.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATRegistry\bin\ISTATUtils.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATRegistry\bin\LumenWorks.Framework.IO.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATRegistry\bin\Newtonsoft.Json.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATRegistry\bin\SdmxApi.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATRegistry\bin\SdmxObjects.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATRegistry\bin\SdmxSourceUtil.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATRegistry\bin\SdmxStructureParser.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATRegistry\bin\WSDAL.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATRegistry\bin\Xml.Schema.Linq.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATRegistry\bin\FlyCallWS.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATRegistry\bin\log4net.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATRegistry\bin\Org.Sdmx.Resources.SdmxMl.Schemas.V21.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATRegistry\bin\Org.Sdmx.Resources.SdmxMl.Schemas.V20.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATRegistry\bin\Org.Sdmx.Resources.SdmxMl.Schemas.V10.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATRegistry\bin\SdmxStructureRetrieval.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATRegistry\bin\ISTAT.EXPORT.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATRegistry\bin\ISTAT.IO.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATRegistry\bin\ISTATEntityMapper.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATRegistry\bin\ISTATEntity.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATRegistry\bin\ISTATUtils.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATRegistry\bin\WSDAL.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATRegistry\bin\FlyCallWS.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATRegistry\obj\Debug\ISTATRegistry.csprojResolveAssemblyReference.cache
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATRegistry\obj\Debug\ISTATRegistry.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATRegistry\obj\Debug\ISTATRegistry.pdb

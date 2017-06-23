@@ -1,0 +1,170 @@
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\WSDAL\WSDAL\bin\Debug\WSDAL.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\WSDAL\WSDAL\bin\Debug\WSDAL.pdb
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\WSDAL\WSDAL\bin\Debug\EstatSdmxSourceExtension.CustomRequests.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\WSDAL\WSDAL\bin\Debug\FlyCallWS.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\WSDAL\WSDAL\bin\Debug\ISTATEntity.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\WSDAL\WSDAL\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V21.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\WSDAL\WSDAL\bin\Debug\SdmxApi.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\WSDAL\WSDAL\bin\Debug\SdmxObjects.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\WSDAL\WSDAL\bin\Debug\SdmxQueryBuilder.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\WSDAL\WSDAL\bin\Debug\SdmxSourceUtil.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\WSDAL\WSDAL\bin\Debug\SdmxStructureParser.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\WSDAL\WSDAL\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V20.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\WSDAL\WSDAL\bin\Debug\Xml.Schema.Linq.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\WSDAL\WSDAL\bin\Debug\log4net.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\WSDAL\WSDAL\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V10.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\WSDAL\WSDAL\bin\Debug\SdmxStructureRetrieval.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\WSDAL\WSDAL\bin\Debug\ISTATEntity.pdb
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\WSDAL\WSDAL\obj\Debug\ISTATWSDAL.csprojResolveAssemblyReference.cache
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\WSDAL\WSDAL\obj\Debug\WSDAL.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\WSDAL\WSDAL\obj\Debug\WSDAL.pdb
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\WSDAL\WSDAL\bin\Debug\WSDAL.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\WSDAL\WSDAL\bin\Debug\WSDAL.pdb
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\WSDAL\WSDAL\bin\Debug\ISTATEntity.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\WSDAL\WSDAL\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V20.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\WSDAL\WSDAL\bin\Debug\Xml.Schema.Linq.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\WSDAL\WSDAL\bin\Debug\log4net.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\WSDAL\WSDAL\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V10.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\WSDAL\WSDAL\bin\Debug\SdmxStructureRetrieval.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\WSDAL\WSDAL\bin\Debug\ISTATEntity.pdb
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\WSDAL\WSDAL\obj\Debug\ISTATWSDAL.csprojResolveAssemblyReference.cache
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\WSDAL\WSDAL\obj\Debug\WSDAL.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\WSDAL\WSDAL\obj\Debug\WSDAL.pdb
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\WSDAL\WSDAL\bin\Debug\WSDAL.dll
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\WSDAL\WSDAL\bin\Debug\WSDAL.pdb
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\WSDAL\WSDAL\bin\Debug\ISTATEntity.dll
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\WSDAL\WSDAL\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V20.dll
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\WSDAL\WSDAL\bin\Debug\Xml.Schema.Linq.dll
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\WSDAL\WSDAL\bin\Debug\log4net.dll
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\WSDAL\WSDAL\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V10.dll
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\WSDAL\WSDAL\bin\Debug\SdmxStructureRetrieval.dll
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\WSDAL\WSDAL\bin\Debug\ISTATEntity.pdb
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\WSDAL\WSDAL\obj\Debug\ISTATWSDAL.csprojResolveAssemblyReference.cache
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\WSDAL\WSDAL\obj\Debug\WSDAL.dll
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\WSDAL\WSDAL\obj\Debug\WSDAL.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\WSDAL\WSDAL\bin\Debug\WSDAL.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\WSDAL\WSDAL\bin\Debug\WSDAL.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\WSDAL\WSDAL\bin\Debug\FlyCallWS.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\WSDAL\WSDAL\bin\Debug\ISTATEntity.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\WSDAL\WSDAL\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V21.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\WSDAL\WSDAL\bin\Debug\SdmxApi.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\WSDAL\WSDAL\bin\Debug\SdmxObjects.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\WSDAL\WSDAL\bin\Debug\SdmxSourceUtil.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\WSDAL\WSDAL\bin\Debug\SdmxStructureParser.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\WSDAL\WSDAL\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V20.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\WSDAL\WSDAL\bin\Debug\Xml.Schema.Linq.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\WSDAL\WSDAL\bin\Debug\log4net.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\WSDAL\WSDAL\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V10.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\WSDAL\WSDAL\bin\Debug\SdmxStructureRetrieval.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\WSDAL\WSDAL\bin\Debug\ISTATEntity.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\WSDAL\WSDAL\obj\Debug\ISTATWSDAL.csprojResolveAssemblyReference.cache
+C:\ISTAT\Source\ISTATRegistry_4.5\WSDAL\WSDAL\obj\Debug\WSDAL.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\WSDAL\WSDAL\obj\Debug\WSDAL.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\WSDAL\WSDAL\bin\Debug\FlyCallWS.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\WSDAL\WSDAL\bin\Debug\ISTATUtils.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\WSDAL\WSDAL\bin\Debug\ISTATUtils.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\WSDAL\WSDAL\bin\Debug\WSDAL.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\WSDAL\WSDAL\bin\Debug\WSDAL.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\WSDAL\WSDAL\bin\Debug\FlyCallWS.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\WSDAL\WSDAL\bin\Debug\ISTATEntity.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\WSDAL\WSDAL\bin\Debug\ISTATUtils.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\WSDAL\WSDAL\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V21.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\WSDAL\WSDAL\bin\Debug\SdmxApi.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\WSDAL\WSDAL\bin\Debug\SdmxObjects.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\WSDAL\WSDAL\bin\Debug\SdmxSourceUtil.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\WSDAL\WSDAL\bin\Debug\SdmxStructureParser.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\WSDAL\WSDAL\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V20.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\WSDAL\WSDAL\bin\Debug\Xml.Schema.Linq.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\WSDAL\WSDAL\bin\Debug\log4net.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\WSDAL\WSDAL\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V10.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\WSDAL\WSDAL\bin\Debug\SdmxStructureRetrieval.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\WSDAL\WSDAL\bin\Debug\FlyCallWS.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\WSDAL\WSDAL\bin\Debug\ISTATEntity.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\WSDAL\WSDAL\bin\Debug\ISTATUtils.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\WSDAL\WSDAL\obj\Debug\ISTATWSDAL.csprojResolveAssemblyReference.cache
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\WSDAL\WSDAL\obj\Debug\WSDAL.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\WSDAL\WSDAL\obj\Debug\WSDAL.pdb
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\WSDAL\WSDAL\bin\Debug\WSDAL.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\WSDAL\WSDAL\bin\Debug\WSDAL.pdb
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\WSDAL\WSDAL\bin\Debug\FlyCallWS.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\WSDAL\WSDAL\bin\Debug\ISTATEntity.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\WSDAL\WSDAL\bin\Debug\ISTATUtils.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\WSDAL\WSDAL\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V21.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\WSDAL\WSDAL\bin\Debug\SdmxApi.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\WSDAL\WSDAL\bin\Debug\SdmxObjects.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\WSDAL\WSDAL\bin\Debug\SdmxSourceUtil.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\WSDAL\WSDAL\bin\Debug\SdmxStructureParser.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\WSDAL\WSDAL\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V20.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\WSDAL\WSDAL\bin\Debug\Xml.Schema.Linq.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\WSDAL\WSDAL\bin\Debug\log4net.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\WSDAL\WSDAL\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V10.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\WSDAL\WSDAL\bin\Debug\SdmxStructureRetrieval.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\WSDAL\WSDAL\bin\Debug\FlyCallWS.pdb
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\WSDAL\WSDAL\bin\Debug\ISTATEntity.pdb
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\WSDAL\WSDAL\bin\Debug\ISTATUtils.pdb
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\WSDAL\WSDAL\obj\Debug\ISTATWSDAL.csprojResolveAssemblyReference.cache
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\WSDAL\WSDAL\obj\Debug\WSDAL.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_17-02-2017\Src\WSDAL\WSDAL\obj\Debug\WSDAL.pdb
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Debug\WSDAL.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Debug\WSDAL.pdb
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Debug\FlyCallWS.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Debug\ISTATEntity.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Debug\ISTATUtils.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V21.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Debug\SdmxApi.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Debug\SdmxObjects.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Debug\SdmxSourceUtil.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Debug\SdmxStructureParser.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V20.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Debug\Xml.Schema.Linq.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Debug\log4net.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V10.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Debug\SdmxStructureRetrieval.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Debug\FlyCallWS.pdb
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Debug\ISTATEntity.pdb
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Debug\ISTATUtils.pdb
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\WSDAL\WSDAL\obj\Debug\ISTATWSDAL.csprojResolveAssemblyReference.cache
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\WSDAL\WSDAL\obj\Debug\WSDAL.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\WSDAL\WSDAL\obj\Debug\WSDAL.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Debug\WSDAL.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Debug\WSDAL.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Debug\FlyCallWS.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Debug\ISTATEntity.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Debug\ISTATUtils.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V21.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Debug\SdmxApi.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Debug\SdmxObjects.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Debug\SdmxSourceUtil.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Debug\SdmxStructureParser.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V20.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Debug\Xml.Schema.Linq.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Debug\log4net.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V10.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Debug\SdmxStructureRetrieval.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Debug\FlyCallWS.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Debug\ISTATEntity.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\WSDAL\WSDAL\bin\Debug\ISTATUtils.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\WSDAL\WSDAL\obj\Debug\ISTATWSDAL.csprojResolveAssemblyReference.cache
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\WSDAL\WSDAL\obj\Debug\WSDAL.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\ISTAT_REGISTRY_V4.2.0.0_26-04-2017_Quirini\Src\WSDAL\WSDAL\obj\Debug\WSDAL.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\WSDAL\WSDAL\bin\Debug\WSDAL.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\WSDAL\WSDAL\bin\Debug\WSDAL.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\WSDAL\WSDAL\bin\Debug\FlyCallWS.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\WSDAL\WSDAL\bin\Debug\ISTATEntity.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\WSDAL\WSDAL\bin\Debug\ISTATUtils.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\WSDAL\WSDAL\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V21.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\WSDAL\WSDAL\bin\Debug\SdmxApi.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\WSDAL\WSDAL\bin\Debug\SdmxObjects.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\WSDAL\WSDAL\bin\Debug\SdmxSourceUtil.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\WSDAL\WSDAL\bin\Debug\SdmxStructureParser.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\WSDAL\WSDAL\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V20.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\WSDAL\WSDAL\bin\Debug\Xml.Schema.Linq.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\WSDAL\WSDAL\bin\Debug\log4net.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\WSDAL\WSDAL\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V10.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\WSDAL\WSDAL\bin\Debug\SdmxStructureRetrieval.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\WSDAL\WSDAL\bin\Debug\FlyCallWS.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\WSDAL\WSDAL\bin\Debug\ISTATEntity.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\WSDAL\WSDAL\bin\Debug\ISTATUtils.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\WSDAL\WSDAL\obj\Debug\ISTATWSDAL.csprojResolveAssemblyReference.cache
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\WSDAL\WSDAL\obj\Debug\WSDAL.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\WSDAL\WSDAL\obj\Debug\WSDAL.pdb

@@ -114,10 +114,14 @@ namespace ISTATRegistry.UserControls
             SearchBar1.DataBind();
             lblTitle.DataBind();
 
-            if (TargetWebControl != null && TargetWebControl.Text != "")
-                btnDeleteText.Visible = true;
-            else
-                btnDeleteText.Visible = false;
+            //andrea
+            //if (TargetWebControl != null && TargetWebControl.Text != "")
+            //    btnDeleteText.Visible = true;
+            //else
+            //    btnDeleteText.Visible = false;
+            //added
+            btnDeleteText.Visible = true;
+            //fine
 
             switch (ucAddIconType)
             {

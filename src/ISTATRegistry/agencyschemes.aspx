@@ -28,7 +28,6 @@
                 AutoGenerateColumns="False"
                 DataSourceID="ObjectDataSource1" 
                 OnPageIndexChanging="OnPageIndexChanging" 
-                OnRowCommand="OnRowCommand" 
                 OnRowCreated="OnRowCreated"
                 PagerSettings-Position="TopAndBottom" 
                 onrowdatabound="gridView_RowDataBound">
@@ -66,8 +65,6 @@
                         <HeaderStyle Width="50px" />
                     </asp:TemplateField>
 
-
-
                     <asp:BoundField DataField="LocalID" HeaderText="LocalID" SortExpression="LocalID" Visible="False" />
                     
                     <asp:CommandField EditText="Edit" HeaderText="View/Edit" ShowEditButton="True" Visible="False" />
@@ -82,20 +79,18 @@
                             ucVersion='<%# Eval("Version") %>' 
                             ucArtefactType='AgencyScheme'/>
                         </ItemTemplate>
-                        <HeaderStyle Width="50px" HorizontalAlign="Center" CssClass="HiddenCol" />
-                        <ItemStyle HorizontalAlign="Center" CssClass="HiddenCol" />
+                        <HeaderStyle Width="50px" HorizontalAlign="Center" />
+                        <ItemStyle HorizontalAlign="Center" />
                     </asp:TemplateField>
 
                     <asp:TemplateField HeaderText="" ShowHeader="False">
                         <ItemTemplate>
-                            <asp:ImageButton 
-                            ID="btmDattail" 
-                            runat="server" 
-                            CausesValidation="False" 
-                            CommandName="Details"
-                            CommandArgument="<%# Container.DataItemIndex %>" 
-                            ImageUrl="~/images/Details2.png"
-                            ToolTip="View details" />
+                            <asp:HyperLink ID="hplDetails" 
+                                runat="server" 
+                                ImageUrl="~/images/Details2.png" 
+                                NavigateUrl="s"
+                                ToolTip="View details">
+                            </asp:HyperLink>
                         </ItemTemplate>
                         <HeaderStyle Width="50px" HorizontalAlign="Center" />
                         <ItemStyle HorizontalAlign="Center" />

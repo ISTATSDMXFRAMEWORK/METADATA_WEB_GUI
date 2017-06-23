@@ -152,27 +152,18 @@ namespace ISTATRegistry
             gridView.PageIndex = e.NewPageIndex;
             BindData();
         }
-
-        protected void OnRowCommand(object sender, GridViewCommandEventArgs e)
-        {
-            switch (e.CommandName)
-            {
-                case "Details":
-                    GridViewRow gvr = (GridViewRow)(((ImageButton)e.CommandSource).NamingContainer);
-                    string stringIdentity = Utils.GetStringKey(gridView.Rows[gvr.RowIndex]);
-                    Response.Redirect("OrganizationUnitSchemeItemDetails.aspx?ACTION=UPDATE&" + stringIdentity);
-                    break;
-                case "xxxx":
-                    break;
-            }
-        }
-
         protected void OnRowCreated(object sender, GridViewRowEventArgs e)
         {
             FileDownload3 fd = (e.Row.FindControl("FileDownload3") as FileDownload3);
             if (fd != null)
             {
                 ScriptManager.GetCurrent(this).RegisterPostBackControl(fd);
+            }
+            HyperLink hplDetails = (e.Row.FindControl("hplDetails") as HyperLink);
+            if (hplDetails != null)
+            {
+                string stringIdentity = Utils.GetStringKey((ArtefactIdentity)e.Row.DataItem);
+                hplDetails.NavigateUrl = "organizationunitschemeItemDetails.aspx?ACTION=UPDATE&" + stringIdentity;
             }
         }
 

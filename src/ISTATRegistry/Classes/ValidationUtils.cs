@@ -27,7 +27,7 @@ namespace ISTATRegistry
             // Verifico che la stringa non sia vuota
             if ( !idString.Trim().Equals( string.Empty ) && !idString.Trim().Contains( ' ' ) ) 
             {
-                const string idFormatPattern = @"^[a-zA-Z0-9_]*$";
+                const string idFormatPattern = @"^[a-zA-Z0-9_-]*$";
                 Regex rgx = new Regex( idFormatPattern, RegexOptions.IgnoreCase);
                 MatchCollection matches = rgx.Matches( idString );
                 if (matches.Count > 0)  //  Se la reqexp è soddisfatta ...
@@ -182,8 +182,8 @@ namespace ISTATRegistry
             {
                 DateTime convertedDateFrom, convertedDateTo;
                 // Converto le stringhe in oggetti Datetime
-                convertedDateFrom = DateTime.ParseExact( dateFrom, "dd/mm/yyyy", CultureInfo.InvariantCulture );
-                convertedDateTo = DateTime.ParseExact( dateTo, "dd/mm/yyyy", CultureInfo.InvariantCulture );
+                convertedDateFrom = DateTime.ParseExact( dateFrom, "d/M/yyyy", CultureInfo.InvariantCulture );
+                convertedDateTo = DateTime.ParseExact( dateTo, "d/M/yyyy", CultureInfo.InvariantCulture );
                 // Verifico che la data iniziale sia minore o uguale della data finale
                 if ( convertedDateFrom <= convertedDateTo )
                 {
@@ -212,7 +212,7 @@ namespace ISTATRegistry
             try
             {
                 DateTime result;
-                result = DateTime.ParseExact( date, "dd/mm/yyyy", CultureInfo.InvariantCulture );
+                result = DateTime.ParseExact( date, "d/M/yyyy", CultureInfo.InvariantCulture );
                 return true;
             }
             catch( FormatException ex )

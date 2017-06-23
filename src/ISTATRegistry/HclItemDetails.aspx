@@ -19,7 +19,7 @@
                 changeYear: true,
                 dateFormat: 'dd/mm/yy'
             });
-
+            $(".datepicker").datepicker($.datepicker.regional['<%=Session["Language"]%>']);
             $(".datepicker").datepicker("option", "showAnim", "drop");
         });
 

@@ -1,0 +1,20 @@
+C:\ISTAT\Source\SDMXDataloader_QB\src\bin\ISTAT.EXPORT.dll
+C:\ISTAT\Source\SDMXDataloader_QB\src\bin\ISTAT.EXPORT.pdb
+C:\ISTAT\Source\SDMXDataloader_QB\src\ISTAT.EXPORT\obj\Release\ISTAT.EXPORT.dll
+C:\ISTAT\Source\SDMXDataloader_QB\src\ISTAT.EXPORT\obj\Release\ISTAT.EXPORT.pdb
+C:\ISTAT\Source\SDMXDataloader_QB\src\ISTAT.EXPORT\obj\Release\ISTAT.EXPORT.csprojResolveAssemblyReference.cache
+C:\ISTAT\Source\ISTATRegistry_4.5\bin\ISTAT.EXPORT.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\bin\ISTAT.EXPORT.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTAT.EXPORT\obj\Release\ISTAT.EXPORT.csprojResolveAssemblyReference.cache
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTAT.EXPORT\obj\Release\ISTAT.EXPORT.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTAT.EXPORT\obj\Release\ISTAT.EXPORT.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\bin\ISTAT.EXPORT.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\bin\ISTAT.EXPORT.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTAT.EXPORT\obj\Release\ISTAT.EXPORT.csprojResolveAssemblyReference.cache
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTAT.EXPORT\obj\Release\ISTAT.EXPORT.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTAT.EXPORT\obj\Release\ISTAT.EXPORT.pdb
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\bin\ISTAT.EXPORT.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\bin\ISTAT.EXPORT.pdb
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTAT.EXPORT\obj\Release\ISTAT.EXPORT.csprojResolveAssemblyReference.cache
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTAT.EXPORT\obj\Release\ISTAT.EXPORT.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTAT.EXPORT\obj\Release\ISTAT.EXPORT.pdb

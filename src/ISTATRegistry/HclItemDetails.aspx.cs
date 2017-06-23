@@ -273,11 +273,14 @@ namespace ISTATRegistry
                     _hclMutable.Uri = new Uri(txtURI.Text);
 
                 if (txtValidFrom.Text != String.Empty)
-                    _hclMutable.StartDate = DateTime.ParseExact(txtValidFrom.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
-
+                    _hclMutable.StartDate = DateTime.ParseExact(txtValidFrom.Text, "d/M/yyyy", CultureInfo.InvariantCulture);
+				else
+					_hclMutable.StartDate = null;
                 if (txtValidTo.Text != String.Empty)
-                    _hclMutable.EndDate = DateTime.ParseExact(txtValidTo.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
-
+                    _hclMutable.EndDate = DateTime.ParseExact(txtValidTo.Text, "d/M/yyyy", CultureInfo.InvariantCulture);
+				else
+					_hclMutable.EndDate = null;
+				
                 _hclMutable.Annotations.Clear();
                 if (AnnotationGeneral.AnnotationObjectList != null)
                     foreach (var annotation in AnnotationGeneral.AnnotationObjectList)

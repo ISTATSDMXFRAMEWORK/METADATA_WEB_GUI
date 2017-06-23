@@ -31,6 +31,15 @@ namespace ISTATRegistry {
         protected global::System.Web.UI.WebControls.HyperLink HyperLink2;
         
         /// <summary>
+        /// Controllo IstatUpdatePanel1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::ISTATRegistry.Classes.IstatUpdatePanel IstatUpdatePanel1;
+        
+        /// <summary>
         /// Controllo lblDSDID.
         /// </summary>
         /// <remarks>
@@ -337,6 +346,15 @@ namespace ISTATRegistry {
         protected global::ISTATRegistry.UserControls.ControlAnnotations AnnotationGeneralControl;
         
         /// <summary>
+        /// Controllo IstatUpdatePanel2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::ISTATRegistry.Classes.IstatUpdatePanel IstatUpdatePanel2;
+        
+        /// <summary>
         /// Controllo lblNumberOfTotalElements.
         /// </summary>
         /// <remarks>
@@ -562,24 +580,6 @@ namespace ISTATRegistry {
         protected global::System.Web.UI.WebControls.Button btnClearFields;
         
         /// <summary>
-        /// Controllo btnSaveMemoryDataProviderScheme.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSaveMemoryDataProviderScheme;
-        
-        /// <summary>
-        /// Controllo FileDownload31.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::ISTATRegistry.UserControls.FileDownload3 FileDownload31;
-        
-        /// <summary>
         /// Controllo lbl_title_update.
         /// </summary>
         /// <remarks>
@@ -677,6 +677,24 @@ namespace ISTATRegistry {
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
         protected global::ISTATRegistry.UserControls.UserPopUp UserPopUp2;
+        
+        /// <summary>
+        /// Controllo btnSaveMemoryDataProviderScheme.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSaveMemoryDataProviderScheme;
+        
+        /// <summary>
+        /// Controllo FileDownload31.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::ISTATRegistry.UserControls.FileDownload3 FileDownload31;
         
         /// <summary>
         /// Controllo lblAnnotationAttribute.

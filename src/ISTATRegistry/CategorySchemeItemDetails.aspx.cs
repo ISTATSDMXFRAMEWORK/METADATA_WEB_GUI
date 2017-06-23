@@ -24,6 +24,7 @@ using ISTAT.EntityMapper;
 using ISTAT.Entity;
 using ISTAT.WSDAL;
 using ISTATRegistry.IRServiceReference;
+using Org.Sdmxsource.Sdmx.Api.Model.Mutable.Codelist;
 
 namespace ISTATRegistry
 {
@@ -80,15 +81,21 @@ namespace ISTATRegistry
                 {
                     IRServiceReference.User currentUser = Session[SESSION_KEYS.USER_DATA] as User;
                     _artIdentity = Utils.GetIdentityFromRequest(Request);
-                    int agencyOccurence = currentUser.agencies.Count( agency => agency.id.Equals( _artIdentity.Agency) );
-                    if ( agencyOccurence > 0 )
+
+                    if (currentUser != null)
                     {
-                        _action = (Action)Enum.Parse(typeof(Action), Request["ACTION"].ToString());
+                        int agencyOccurence = currentUser.agencies.Count(agency => agency.id.Equals(_artIdentity.Agency));
+                        if (agencyOccurence > 0)
+                        {
+                            _action = (Action)Enum.Parse(typeof(Action), Request["ACTION"].ToString());
+                        }
+                        else
+                        {
+                            _action = Action.VIEW;
+                        }
                     }
                     else
-                    {
                         _action = Action.VIEW;
-                    }
                 }
                 else
                 {
@@ -97,7 +104,7 @@ namespace ISTATRegistry
             }
         }
 
-        private ICategorySchemeMutableObject GetCategoryschemeForm()
+        private ICategorySchemeMutableObject GetCategoryschemeForm(bool errorBypass = false)
         {
             bool isInError = false;                 // Indicatore di errore
             string messagesGroup = string.Empty;    // Stringa di raggruppamento errori
@@ -183,7 +190,11 @@ namespace ISTATRegistry
             }
             #endregion
 
-            if (isInError)
+
+
+            if (isInError && errorBypass)
+                return null;
+            else if (isInError)
             {
                 Utils.ShowDialog(messagesGroup, 300);
                 return null;
@@ -199,12 +210,20 @@ namespace ISTATRegistry
             tmpCategoryscheme.Uri = (!txtDSDURI.Text.Trim().Equals(string.Empty) && ValidationUtils.CheckUriFormat(txtDSDURI.Text)) ? new Uri(txtDSDURI.Text) : null;
             if (!txtValidFrom.Text.Trim().Equals(string.Empty))
             {
-                tmpCategoryscheme.StartDate = DateTime.ParseExact(txtValidFrom.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                tmpCategoryscheme.StartDate = DateTime.ParseExact(txtValidFrom.Text, "d/M/yyyy", CultureInfo.InvariantCulture);
             }
+			else
+			{
+				tmpCategoryscheme.StartDate = null;				
+			}
             if (!txtValidTo.Text.Trim().Equals(string.Empty))
             {
-                tmpCategoryscheme.EndDate = DateTime.ParseExact(txtValidTo.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                tmpCategoryscheme.EndDate = DateTime.ParseExact(txtValidTo.Text, "d/M/yyyy", CultureInfo.InvariantCulture);
             }
+			else
+			{
+				tmpCategoryscheme.EndDate = null;				
+			}
             foreach (var tmpName in AddTextName.TextObjectList)
             {
                 tmpCategoryscheme.AddName(tmpName.Locale, tmpName.Value);
@@ -238,7 +257,7 @@ namespace ISTATRegistry
             }
         }
 
-        private ICategorySchemeMutableObject GetCategoryschemeForm(ICategorySchemeMutableObject cs)
+        private ICategorySchemeMutableObject GetCategoryschemeForm(ICategorySchemeMutableObject cs, bool errorBypass = false)
         {
 
             if (cs == null) return GetCategoryschemeForm();
@@ -327,7 +346,9 @@ namespace ISTATRegistry
             }
             #endregion
 
-            if (isInError)
+            if (isInError && errorBypass)
+                return null;
+            else if (isInError)
             {
                 Utils.ShowDialog(messagesGroup, 300);
                 return null;
@@ -342,12 +363,20 @@ namespace ISTATRegistry
             cs.Uri = (!txtDSDURI.Text.Trim().Equals(string.Empty) && ValidationUtils.CheckUriFormat(txtDSDURI.Text)) ? new Uri(txtDSDURI.Text) : null;
             if (!txtValidFrom.Text.Trim().Equals(string.Empty))
             {
-                cs.StartDate = DateTime.ParseExact(txtValidFrom.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                cs.StartDate = DateTime.ParseExact(txtValidFrom.Text, "d/M/yyyy", CultureInfo.InvariantCulture);
             }
+			else
+			{
+				cs.StartDate = null;
+			}
             if (!txtValidTo.Text.Trim().Equals(string.Empty))
             {
-                cs.EndDate = DateTime.ParseExact(txtValidTo.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                cs.EndDate = DateTime.ParseExact(txtValidTo.Text, "d/M/yyyy", CultureInfo.InvariantCulture);
             }
+			else
+			{
+				cs.EndDate = null;
+			}
             if (cs.Names.Count != 0)
             {
                 cs.Names.Clear();
@@ -597,21 +626,17 @@ namespace ISTATRegistry
 
                 XmlDocument result = modelCategoryScheme.SubmitStructure(sdmxObjects);
 
-                if (Utils.GetXMLResponseError(result) != "")
-                {
-                    Utils.ShowDialog(Utils.GetXMLResponseError(result), 350, "Error");
-                    return false;
-                }
+                Utils.GetXMLResponseError(result);
 
                 return true;
 
             }
             catch (Exception ex)
             {
-                throw ex;
+                return false;
             }
-        }
 
+        }
         private void ClearSessionPage()
         {
             Session[KEY_PAGE_SESSION] = null;
@@ -625,6 +650,10 @@ namespace ISTATRegistry
             TemporaryLog("In caricamento pagina");
 
             _epe = (EndPointElement)Session[SESSION_KEYS.CURRENT_ENDPOINT_OBJECT];
+
+            //Modifca UserControlCSV
+            CSVImporter1.OperationComplete += CSVImporter1_OperationComplete;
+
 
             lblDSDID.DataBind();
             lblVersion.DataBind();
@@ -682,6 +711,8 @@ namespace ISTATRegistry
                 AnnotationUpdateControl.ClearAnnotationsSession();
             }
 
+            ICategorySchemeMutableObject cs;
+
             switch (_action)
             {
                 case Action.INSERT:
@@ -703,6 +734,23 @@ namespace ISTATRegistry
                         cmbAgencies.SelectedIndex = 0;
                         FileDownload31.Visible = false;
                     }
+
+                    cs = GetCategorySchemeFromSession();
+                    if (cs == null) cs = GetCategoryschemeForm(true);
+                    else cs = GetCategoryschemeForm(cs);
+
+                    if (cs == null)
+                    {
+                        cs = new CategorySchemeMutableCore();
+                        cs.Id = "@fitt@";
+                        cs.AgencyId = "@fitt@";
+                        cs.Version = "1.0";
+                        cs.AddName("it", "@fitt@");
+                    }
+
+                    CSVImporter1.ucCategoryScheme = cs;
+                    CSVImporter1.ucTabName = "categories";
+
                     break;
                 case Action.UPDATE:
 
@@ -710,6 +758,15 @@ namespace ISTATRegistry
 
                     SetInitControls();
                     SetEditForm();
+
+                    bool b = (bool)_artIdentity.IsFinal;
+
+                    cs = GetCategorySchemeFromSession();
+                    if (cs == null) cs = GetCategoryschemeForm(b);
+                    else cs = GetCategoryschemeForm(cs, b);
+                    CSVImporter1.ucCategoryScheme = cs;
+                    CSVImporter1.ucTabName = "categories";
+
 
                     break;
                 case Action.VIEW:
@@ -791,6 +848,45 @@ namespace ISTATRegistry
 
 
         }
+
+        //Modifca UserControlCSV
+        protected void CSVImporter1_OperationComplete(object sender, object e)
+        {
+            ICategorySchemeMutableObject cs;
+            ICategorySchemeMutableObject clCSV = (ICategorySchemeMutableObject)e;
+
+            if (_action == Action.INSERT)
+            {
+                cs = GetCategorySchemeFromSession();
+                if (cs == null) cs = GetCategoryschemeForm();
+                else cs = GetCategoryschemeForm(cs);
+
+                // Primo insert senza Item
+                if (cs != null && cs.Items.Count == 0)
+                {
+                    List<ICategoryMutableObject> lItems = clCSV.Items.ToList();
+
+                    foreach (ICategoryMutableObject code in lItems)
+                    {
+                        cs.Items.Add(code);
+                    }
+                }
+            }
+            else
+                cs = clCSV;
+
+            if (!SaveInMemory(cs)) return;
+
+            BindData();
+            //if (!errorInUploading)
+            //{
+            Utils.ShowDialog(Resources.Messages.succ_operation);
+            //}
+            Utils.AppendScript("location.href='#categories'");
+        }
+
+
+
 
         protected void gvCategoryschemesItem_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
@@ -1403,7 +1499,11 @@ namespace ISTATRegistry
                 btnSaveMemoryCategoryScheme.Visible = false;
                 btnAddNewCategory.Visible = false;
                 cmbLanguageForCsv.Visible = false;
-                imgImportCsv.Visible = false;
+
+
+                //Modifca UserControlCSV
+                CSVImporter1.Visible = false;
+                //imgImportCsv.Visible = false;
             }
             else
             {
@@ -1411,7 +1511,10 @@ namespace ISTATRegistry
                 btnAddNewCategory.Visible = true;
                 Utils.PopulateCmbLanguages(cmbLanguageForCsv, AVAILABLE_MODES.MODE_FOR_ADD_TEXT);
                 cmbLanguageForCsv.Visible = true;
-                imgImportCsv.Visible = true;
+
+                //Modifca UserControlCSV
+                CSVImporter1.Visible = true;
+                //imgImportCsv.Visible = true;
             }
         }
 

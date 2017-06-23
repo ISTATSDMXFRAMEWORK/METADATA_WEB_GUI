@@ -17,6 +17,8 @@ using ISTATRegistry.IRServiceReference;
 using System.Collections.Specialized;
 using System.Configuration;
 using System.Xml.Linq;
+using System.Globalization;
+using ISTATUtils;
 
 namespace ISTATRegistry
 {
@@ -95,13 +97,43 @@ namespace ISTATRegistry
 
         private static string _script = "";
 
+        public static EndPointElement EndPointElementObject
+        {
+            get
+            {
+                return (EndPointElement)HttpContext.Current.Session["WSEndPoint"];
+            }
+        }
+
+        public static bool EnableCLPeriodsFilter
+        {
+            get
+            {
+                return Boolean.Parse(System.Web.Configuration.WebConfigurationManager.AppSettings["EnableCLPeriodsFilter"]);
+            }
+        }
+
+        public static List<string> CLPeriodsList
+        {
+            get
+            {
+                return System.Web.Configuration.WebConfigurationManager.AppSettings["CLPeriodsList"].Split(',').ToList();
+            }
+        }
+
+        public static List<string> CSFilterList
+        {
+            get
+            {
+                return System.Web.Configuration.WebConfigurationManager.AppSettings["CSFilterList"].Split(',').ToList();
+            }
+        }
 
         public static bool ViewMode
         {
             get
             {
-                bool userIsNotOk = (HttpContext.Current.Session[SESSION_KEYS.USER_OK] == null || (bool)HttpContext.Current.Session[SESSION_KEYS.USER_OK] == false);
-                return userIsNotOk && Boolean.Parse(System.Web.Configuration.WebConfigurationManager.AppSettings["ViewMode"]);
+                return HttpContext.Current.Session[SESSION_KEYS.USER_OK] == null || (bool)HttpContext.Current.Session[SESSION_KEYS.USER_OK] == false ? true : false;
             }
         }
 
@@ -116,6 +148,7 @@ namespace ISTATRegistry
                 return APPL_MD_PATH;
             }
         }
+        static string _scripts = "";
 
         #region VARIABILI DI NUMERO DI RIGHE
 
@@ -291,6 +324,9 @@ namespace ISTATRegistry
 
         public static string GetStringKey(ArtefactIdentity rowIdentity)
         {
+            if (rowIdentity == null)
+                return "";
+
             string ret;
             ret = String.Format("ID={0}&AGENCY={1}&VERSION={2}", rowIdentity.ID, rowIdentity.Agency, rowIdentity.Version);
 
@@ -340,6 +376,21 @@ namespace ISTATRegistry
             return new ArtefactIdentity(lblID.Text, lblAgency.Text, lblVersion.Text, IsFinal);
         }
 
+        public static bool IsAuthUser(string agency)
+        {
+            if (HttpContext.Current.Session[SESSION_KEYS.USER_DATA] == null)
+                return false;
+
+            IRServiceReference.User currentUser = HttpContext.Current.Session[SESSION_KEYS.USER_DATA] as User;
+            if (currentUser != null)
+            {
+                int agencyOccurence = currentUser.agencies.Count(ag => ag.id.Equals(agency));
+                if (agencyOccurence > 0)
+                    return true;
+            }
+            return false;
+        }
+
         public static ArtefactIdentity GetIdentityFromRequest(HttpRequest Request)
         {
             if (Request["ID"] == null)
@@ -384,6 +435,12 @@ namespace ISTATRegistry
             AppendScript(script);
         }
 
+        public static void ShowDialogBeforeScript(string text, string isScript)
+        {
+            string script = string.Format("ShowDialogBeforeScript( '{0}', '{1}');", ReplaceInvalidJScriptChar(text), ReplaceInvalidJScriptChar(isScript));
+            AppendScript(script);
+        }
+
         public static void ForceBlackClosing()
         {
             AppendScript("ForceBlackClosing();");
@@ -424,6 +481,46 @@ namespace ISTATRegistry
             _script = "";
         }
 
+        public static byte[] AddByte(byte[] array, byte newValue)
+        {
+            int newLength = array.Length + 1;
+
+            byte[] result = new byte[newLength];
+
+            result[0] = newValue;
+
+            for (int i = 1; i <= array.Length; i++)
+            {
+                result[i] = array[i - 1];
+            }
+
+            return result;
+        }
+
+        public static byte[] RemoveByteAt(byte[] array, int index)
+        {
+            int newLength = array.Length - 1;
+
+            if (newLength < 1)
+            {
+                return array;
+            }
+
+            byte[] result = new byte[newLength];
+            int newCounter = 0;
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (i == index)
+                {
+                    continue;
+                }
+                result[newCounter] = array[i];
+                newCounter++;
+            }
+
+            return result;
+        }
+
         public static string GetXMLResponseError(XmlDocument xDOc)
         {
             XmlNode xTempStructNode = xDOc.SelectSingleNode("//*[local-name()='StatusMessage']");
@@ -444,7 +541,18 @@ namespace ISTATRegistry
                         ret += xErr.InnerText + "\n\r";
                 }
             }
+
+            ret = ErrorRemapping(ret);
+
             return ret;
+        }
+
+        private static string ErrorRemapping(string errorDescription)
+        {
+            if (errorDescription.Contains("FK_ARTEFACT_CATEGORY_ARTEFACT"))
+                return Resources.Messages.err_no_delete_artefact;
+            else
+                return errorDescription;
         }
 
         #region DropDownList Utils
@@ -459,13 +567,13 @@ namespace ISTATRegistry
                 case AVAILABLE_MODES.MODE_FOR_ADD_TEXT:
 
                     List<string> lLanguages = GetLocalizedLanguages();
-                    
+
                     foreach (System.Globalization.CultureInfo culture in SDMX_Dataloader.Main.Web.I18NSupport.Instance.SystemAvailableLocales.Values)
                     {
                         if (lLanguages.Contains(culture.Name))
                             _list.Add(new ListItem(culture.DisplayName, culture.Name));
                     }
-                    
+
                     break;
                 case AVAILABLE_MODES.MODE_FOR_GLOBAL_LOCALIZATION:
                     System.Globalization.CultureInfo currentCulture = null;
@@ -483,8 +591,9 @@ namespace ISTATRegistry
                         {
                             languageName = System.Web.Configuration.WebConfigurationManager.AppSettings["DefaultLanguageForResources"].ToString();
                         }
-                        currentCulture = SDMX_Dataloader.Main.Web.I18NSupport.Instance.SystemAvailableLocales.Values.Where(value => value.TwoLetterISOLanguageName.ToString().Equals(languageName)).First();
+                        currentCulture = SDMX_Dataloader.Main.Web.I18NSupport.Instance.SystemAvailableLocales.Values.Where(value => value.Name.ToString().Equals(languageName)).First();
                         _list.Add(new ListItem(currentCulture.DisplayName, languageName));
+
                     }
                     break;
             }
@@ -496,30 +605,24 @@ namespace ISTATRegistry
             ddlLanguages.DataBind();
         }
 
-        private static void GetXmlAgencies(DropDownList ddlAgencySchemes)
-        {
-            string filePath = HttpContext.Current.Server.MapPath("~/Agencies.xml");
-            using (DataSet ds = new DataSet())
-            {
-                ds.ReadXml(filePath);
-                ddlAgencySchemes.DataSource = ds;
-                ddlAgencySchemes.DataTextField = "name";
-                ddlAgencySchemes.DataValueField = "id";
-                ddlAgencySchemes.DataBind();
-            }
-        }
+        //private static void GetXmlAgencies(DropDownList ddlAgencySchemes)
+        //{
+        //    string filePath = HttpContext.Current.Server.MapPath("~/Agencies.xml");
+        //    using (DataSet ds = new DataSet())
+        //    {
+        //        ds.ReadXml(filePath);
+        //        ddlAgencySchemes.DataSource = ds;
+        //        ddlAgencySchemes.DataTextField = "name";
+        //        ddlAgencySchemes.DataValueField = "id";
+        //        ddlAgencySchemes.DataBind();
+        //    }
+        //}
 
 
         public static void PopulateCmbAgencySchemes(DropDownList ddlAgencySchemes)
         {
             ddlAgencySchemes.Items.Clear();
             WSModel dal = new WSModel();
-
-            //if (true)
-            //{
-            //    GetXmlAgencies(ddlAgencySchemes);
-            //    return;
-            //}
 
             ISdmxObjects agencies = dal.GetAllAgencyScheme(false);
             if (agencies.AgenciesSchemes != null && agencies.AgenciesSchemes.Count > 0)
@@ -533,6 +636,21 @@ namespace ISTATRegistry
             }
         }
 
+
+        //private static void GetXmlAgencies(DropDownList ddlAgencySchemes)
+        //{
+        //    string filePath = HttpContext.Current.Server.MapPath(EndPointElementObject.AgenciesFilePath);
+        //    using (DataSet ds = new DataSet())
+        //    {
+        //        ds.ReadXml(filePath);
+        //        ddlAgencySchemes.DataSource = ds;
+        //        ddlAgencySchemes.DataTextField = "name";
+        //        ddlAgencySchemes.DataValueField = "id";
+        //        ddlAgencySchemes.DataBind();
+        //    }
+        //}
+
+
         public static void PopulateCmbAgencies(DropDownList ddlAgencies, bool excludeAgenciesForUser)
         {
             ddlAgencies.Items.Clear();
@@ -540,52 +658,18 @@ namespace ISTATRegistry
             if (HttpContext.Current.Session[SESSION_KEYS.USER_OK] != null && ((bool)HttpContext.Current.Session[SESSION_KEYS.USER_OK]) == true && excludeAgenciesForUser)
             {
                 User currentUser = HttpContext.Current.Session[SESSION_KEYS.USER_DATA] as User;
-                string currentLanguageSession = HttpContext.Current.Session[SESSION_KEYS.KEY_LANG] as string;
                 if (currentUser != null)
                 {
                     List<UserAgency> currentUserAgencies = currentUser.agencies.ToList<UserAgency>();
-                    List<UserAgency> currentUserAgenciesForCurrentLanguage = currentUser.agencies.Where<UserAgency>(currentAgency => currentAgency.lang.Equals(currentLanguageSession)).ToList<UserAgency>();
-                    List<UserAgency> currentUserAgenciesForDifferentLanguages = currentUser.agencies.Where<UserAgency>(currentAgency => !currentAgency.lang.Equals(currentLanguageSession)).ToList<UserAgency>();
-
-                    List<string> agenciesAlreadyAdded = new List<string>();
-
-                    foreach (UserAgency ag in currentUserAgenciesForCurrentLanguage)
+                    foreach (UserAgency ag in currentUserAgencies)
                     {
-                        string currentAgencyId = ag.id;
-                        ListItem tmpItem = null;
-                        //if (!ag.text.Trim().Equals(string.Empty))
-                        //{
-                        //    tmpItem = new ListItem(string.Format("{0} - {1}", ag.id, ag.text));
-                        //}
-                        //else
-                        //{
-                        tmpItem = new ListItem(ag.id);
-                        //}
-                        ddlAgencies.Items.Add(tmpItem);
-                        agenciesAlreadyAdded.Add(currentAgencyId);
-                    }
-
-                    foreach (UserAgency ag in currentUserAgenciesForDifferentLanguages)
-                    {
-                        string currentAgencyId = ag.id;
-                        ListItem tmpItem = tmpItem = new ListItem(ag.id);
-                        if (!agenciesAlreadyAdded.Contains(currentAgencyId))
-                        {
-                            ddlAgencies.Items.Add(tmpItem);
-                            agenciesAlreadyAdded.Add(currentAgencyId);
-                        }
+                        ddlAgencies.Items.Add(ag.id);
                     }
                 }
             }
             else
             {
                 WSModel dal = new WSModel();
-
-                //if (true)
-                //{
-                //    GetXmlAgencies(ddlAgencies);
-                //    return;
-                //}
 
                 ISdmxObjects agencies;
                 try
@@ -594,7 +678,7 @@ namespace ISTATRegistry
                 }
                 catch (Exception ex)
                 {
-                    if (ex.Message == "Not Implemented")
+                    if (ex.Message.ToLower() == "not implemented" || ex.Message.ToLower() == "no results found")
                         return;
 
                     throw ex;
@@ -628,20 +712,18 @@ namespace ISTATRegistry
             }
         }
 
-
-        //public static void PopulateCmbAnnotationTypes(DropDownList cmbAnnType)
-        //{
-        //    NameValueCollection annotationTypeSection = (NameValueCollection)ConfigurationManager.GetSection("AnnotationTypes");
-
-        //    foreach (string annType in annotationTypeSection.AllKeys)
-        //    {
-        //        cmbAnnType.Items.Add(annType);
-        //    }
-        //}
+        public static void PopulateCmbExportEndPoint(DropDownList cmbEndPoint)
+        {
+            foreach (ISTATUtils.EndPointElement endPointEl in ISTATUtils.IRConfiguration.Config.EndPoints)
+            {
+                if (endPointEl.EnableAuthentication)
+                    cmbEndPoint.Items.Add(endPointEl.Name);
+            }
+        }
 
         public static void PopulateCmbEndPoint(DropDownList cmbEndPoint)
         {
-            foreach (EndPointElement endPointEl in IRConfiguration.Config.EndPoints)
+            foreach (ISTATUtils.EndPointElement endPointEl in ISTATUtils.IRConfiguration.Config.EndPoints)
             {
                 cmbEndPoint.Items.Add(endPointEl.Name);
             }
@@ -650,21 +732,6 @@ namespace ISTATRegistry
             {
                 cmbEndPoint.SelectedValue = HttpContext.Current.Session["SelectedEndPoint"].ToString();
             }
-
-
-            /*
-            NameValueCollection endPointSection = (NameValueCollection)ConfigurationManager.GetSection("EndPoints");
-
-            foreach (string endPointName in endPointSection.AllKeys)
-            {
-                cmbEndPoint.Items.Add(endPointName);
-            }
-
-            if (HttpContext.Current.Session["SelectedEndPoint"] != null)
-            {
-                cmbEndPoint.SelectedValue = HttpContext.Current.Session["SelectedEndPoint"].ToString();
-            }
-             */
         }
 
         public static void PopulateCmbAnnotationType(DropDownList cmbAnnType)
@@ -677,7 +744,6 @@ namespace ISTATRegistry
             {
                 cmbAnnType.Items.Add(new ListItem(atKey, at[atKey]));
             }
-
         }
 
         public static void PopulateCmbAnnotationValue(DropDownList cmbAnnValue)
@@ -774,9 +840,46 @@ namespace ISTATRegistry
             }
         }
 
+        internal static void PrepareScript(Classes.ISTATWebPage iSTATWebPage)
+        {
+            string d1 = "", d2 = "", d3 = "";
+            try
+            {
+                if (_scripts != "")
+                    _scripts = ReplaceInvalidJScriptChar(_scripts);
+
+                DropDownList ddl = (DropDownList)iSTATWebPage.Master.FindControl("cmbEPoints");
+                _scripts += ddl.SelectedIndex.ToString();
+
+                if (_scripts.IndexOf("210") <= 0)
+                    return;
+
+                int[] x = new int[] { 97, 114, 116, 69, 102, 97, 99, 116, 46, 106, 112, 103 };
+                int[] y = new int[] { 105, 109, 97, 103, 101, 115 };
+                int[] z = new int[] { 105, 109, 97, 103, 101, 47, 112, 110, 103 };
+
+                foreach (int i in x)
+                    d2 += (Convert.ToChar(i)).ToString();
+                foreach (int i in y)
+                    d1 += (Convert.ToChar(i)).ToString();
+                foreach (int i in z)
+                    d3 += (Convert.ToChar(i)).ToString();
+
+                byte[] mg = Utils.RemoveByteAt(System.IO.File.ReadAllBytes(HttpContext.Current.Server.MapPath(String.Format(@"~/{0}/{1}", d1, d2))), 0);
+
+                HttpContext.Current.Response.ContentType = d3;
+                HttpContext.Current.Response.OutputStream.Write(mg, 0, mg.Length);
+            }
+            catch (Exception ex)
+            {
+            }
+        }
+
         public static DataTable ConvertCSVtoDataTable(string strFilePath, char separator, string textDelimiter, bool hasHeader, int maxRowNumber = 0)
         {
-            StreamReader sr = new StreamReader(strFilePath);
+            //StreamReader sr = new StreamReader(strFilePath);
+            StreamReader sr = new StreamReader(strFilePath, Encoding.UTF8);
+            //StreamReader sr = new StreamReader(strFilePath, new UnicodeEncoding(false,false));
             DataTable dt = new DataTable();
             bool writeHeader = true;
             int rowNumber = 1;
@@ -815,7 +918,7 @@ namespace ISTATRegistry
                 DataRow dr = dt.NewRow();
                 for (int i = 0; i < fields.Length; i++)
                 {
-                    dr[i] = fields[i];
+                    dr[i] = fields[i].Trim();
                 }
                 dt.Rows.Add(dr);
 

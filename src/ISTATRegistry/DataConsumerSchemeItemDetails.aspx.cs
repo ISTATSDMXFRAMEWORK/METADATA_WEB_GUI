@@ -64,15 +64,20 @@ namespace ISTATRegistry
                 {
                     IRServiceReference.User currentUser = Session[SESSION_KEYS.USER_DATA] as User;
                     _artIdentity = Utils.GetIdentityFromRequest(Request);
-                    int agencyOccurence = currentUser.agencies.Count( agency => agency.id.Equals( _artIdentity.Agency) );
-                    if ( agencyOccurence > 0 )
+                    if (currentUser != null)
                     {
-                        _action = (Action)Enum.Parse(typeof(Action), Request["ACTION"].ToString());
+                        int agencyOccurence = currentUser.agencies.Count(agency => agency.id.Equals(_artIdentity.Agency));
+                        if (agencyOccurence > 0)
+                        {
+                            _action = (Action)Enum.Parse(typeof(Action), Request["ACTION"].ToString());
+                        }
+                        else
+                        {
+                            _action = Action.VIEW;
+                        }
                     }
                     else
-                    {
                         _action = Action.VIEW;
-                    }
                 }
                 else
                 {
@@ -197,11 +202,11 @@ namespace ISTATRegistry
             tmpDataConsumerscheme.Uri = (!txtDSDURI.Text.Trim().Equals( string.Empty ) && ValidationUtils.CheckUriFormat(txtDSDURI.Text)) ? new Uri(txtDSDURI.Text) : null;
             if (!txtValidFrom.Text.Trim().Equals(string.Empty))
             {
-                tmpDataConsumerscheme.StartDate = DateTime.ParseExact(txtValidFrom.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                tmpDataConsumerscheme.StartDate = DateTime.ParseExact(txtValidFrom.Text, "d/M/yyyy", CultureInfo.InvariantCulture);
             }
             if (!txtValidTo.Text.Trim().Equals(string.Empty))
             {
-                tmpDataConsumerscheme.EndDate = DateTime.ParseExact(txtValidTo.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                tmpDataConsumerscheme.EndDate = DateTime.ParseExact(txtValidTo.Text, "d/M/yyyy", CultureInfo.InvariantCulture);
             }
             foreach (var tmpName in AddTextName.TextObjectList)
             {
@@ -327,12 +332,20 @@ namespace ISTATRegistry
             dataConsumerScheme.Uri = (!txtDSDURI.Text.Trim().Equals( string.Empty ) && ValidationUtils.CheckUriFormat(txtDSDURI.Text)) ? new Uri(txtDSDURI.Text) : null;
             if (!txtValidFrom.Text.Trim().Equals(string.Empty))
             {
-                dataConsumerScheme.StartDate = DateTime.ParseExact(txtValidFrom.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                dataConsumerScheme.StartDate = DateTime.ParseExact(txtValidFrom.Text, "d/M/yyyy", CultureInfo.InvariantCulture);
             }
+			else
+			{
+				dataConsumerScheme.StartDate = null;
+			}
             if (!txtValidTo.Text.Trim().Equals(string.Empty))
             {
-                dataConsumerScheme.EndDate = DateTime.ParseExact(txtValidTo.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                dataConsumerScheme.EndDate = DateTime.ParseExact(txtValidTo.Text, "d/M/yyyy", CultureInfo.InvariantCulture);
             }
+			else
+			{
+				dataConsumerScheme.EndDate = null;
+			}
             if (dataConsumerScheme.Names.Count != 0)
             {
                 dataConsumerScheme.Names.Clear();
@@ -1250,8 +1263,8 @@ namespace ISTATRegistry
                 //gvDataConsumerschemesItem.Columns[3].Visible = false;
                 gvDataConsumerschemesItem.Columns[4].Visible = false;
                 //gvDataConsumerschemesItem.Columns[5].Visible = false;
-                cmbLanguageForCsv.Visible = false;
-                imgImportCsv.Visible = false;
+                //cmbLanguageForCsv.Visible = false;
+                //imgImportCsv.Visible = false;
             }
             else
             {
@@ -1260,9 +1273,9 @@ namespace ISTATRegistry
                 gvDataConsumerschemesItem.Columns[3].Visible = true;
                 gvDataConsumerschemesItem.Columns[4].Visible = true;
                 gvDataConsumerschemesItem.Columns[5].Visible = true;
-                Utils.PopulateCmbLanguages(cmbLanguageForCsv, AVAILABLE_MODES.MODE_FOR_ADD_TEXT);
-                cmbLanguageForCsv.Visible = true;
-                imgImportCsv.Visible = true;
+                //Utils.PopulateCmbLanguages(cmbLanguageForCsv, AVAILABLE_MODES.MODE_FOR_ADD_TEXT);
+                //cmbLanguageForCsv.Visible = true;
+                //imgImportCsv.Visible = true;
             }
         }
         private void SetInsertForm()

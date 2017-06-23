@@ -5,6 +5,8 @@
 <%@ Register Src="UserControls/ArtefactDelete.ascx" TagName="ArtefactDelete" TagPrefix="uc1" %>
 <%@ Register Src="UserControls/SearchBar.ascx" TagName="SearchBar" TagPrefix="uc2" %>
 <%@ Register Namespace= "ISTATRegistry.Classes" TagPrefix="iup" Assembly="IstatRegistry" %>
+<%@ Register Src="UserControls/MultipleDownload.ascx" TagPrefix="md" TagName="MultipleDownload" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -31,26 +33,25 @@
                 AutoGenerateColumns="False"               
                 DataSourceID="ObjectDataSource1"                
                 OnPageIndexChanging="OnPageIndexChanging" 
-                OnRowCommand="OnRowCommand" 
                 OnRowCreated="OnRowCreated"
                 PagerSettings-Position="TopAndBottom" 
                 onrowdatabound="gridView_RowDataBound">         
                 <Columns>
                     <asp:TemplateField HeaderText="ID" SortExpression="ID">
                         <ItemTemplate>
-                            <asp:Label ID="lblID" runat="server" Text='<%# Bind("ID") %>'></asp:Label>
+                            <asp:Label ID="lblID" runat="server" Text='<%# Bind("ID") %>' CssClass="aiID"></asp:Label>
                         </ItemTemplate>
                         <HeaderStyle Width="190px" />
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Agency" SortExpression="Agency">
                         <ItemTemplate>
-                            <asp:Label ID="lblAgency" runat="server" Text='<%# Bind("Agency") %>'></asp:Label>
+                            <asp:Label ID="lblAgency" runat="server" Text='<%# Bind("Agency") %>' CssClass="aiAgency"></asp:Label>
                         </ItemTemplate>
                         <HeaderStyle Width="70px" />
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Version" SortExpression="Version">
                         <ItemTemplate>
-                            <asp:Label ID="lblVersion" runat="server" Text='<%# Bind("Version") %>'></asp:Label>
+                            <asp:Label ID="lblVersion" runat="server" Text='<%# Bind("Version") %>'  CssClass="aiVersion"></asp:Label>
                         </ItemTemplate>
                         <HeaderStyle Width="50px" />
                     </asp:TemplateField>
@@ -83,14 +84,20 @@
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="" ShowHeader="False">
                         <ItemTemplate>
-                            <asp:ImageButton 
+<%--                            <asp:ImageButton 
                             ID="btmDattail" 
                             runat="server" 
                             CausesValidation="False" 
                             CommandName="Details"
                             CommandArgument="<%# Container.DataItemIndex %>" 
                             ImageUrl="~/images/Details2.png"
-                            ToolTip="View details" />
+                            ToolTip="View details"/>--%>
+                            <asp:HyperLink ID="hplDetails" 
+                                runat="server" 
+                                ImageUrl="~/images/Details2.png" 
+                                NavigateUrl="s"
+                                ToolTip="View details">
+                            </asp:HyperLink>
                         </ItemTemplate>
                         <HeaderStyle Width="50px" HorizontalAlign="Center" />
                         <ItemStyle HorizontalAlign="Center" />
@@ -108,6 +115,18 @@
                         <HeaderStyle Width="50px" HorizontalAlign="Center" />
                         <ItemStyle HorizontalAlign="Center" />
                     </asp:TemplateField>
+
+
+                    <asp:TemplateField HeaderText="">
+                        <ItemTemplate>
+                            <asp:CheckBox ID="chkDownload" runat="server" CssClass="chkDown"/>
+                        </ItemTemplate>
+                        <HeaderStyle Width="50px" HorizontalAlign="Center" />
+                        <ItemStyle HorizontalAlign="Center" />
+                    </asp:TemplateField>
+
+
+
                 </Columns>
                 <HeaderStyle CssClass="hs" />
                 <RowStyle CssClass="rs" />
@@ -128,4 +147,7 @@
             <asp:Button ID="btnAddCodeList" runat="server" Text="<%# Resources.Messages.btn_new_codelist%>" onclick="btnAddCodeList_Click" />
         </ContentTemplate>
     </iup:IstatUpdatePanel>
+
+            <md:MultipleDownload runat="server" id="MultipleDownload1" />
+
 </asp:Content>

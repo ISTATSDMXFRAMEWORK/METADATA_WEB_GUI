@@ -8,6 +8,7 @@ using Org.Sdmxsource.Sdmx.Api.Model.Mutable.Base;
 using Org.Sdmxsource.Sdmx.Api.Constants;
 using Org.Sdmxsource.Sdmx.SdmxObjects.Model.Mutable.Base;
 using Org.Sdmxsource.Sdmx.Api.Model.Objects.Base;
+using ISTATUtils;
 
 namespace ISTATRegistry.UserControls
 {
@@ -231,6 +232,7 @@ namespace ISTATRegistry.UserControls
         protected void gvText_RowEditing(object sender, GridViewEditEventArgs e)
         {
             //openP("dialog-form<%=_sessionName %>",900)'
+            OpenTab();
             OpenUCPopUp();
             OpenDialogForm();
             txtText.Text = ((Label)gvText.Rows[e.NewEditIndex].FindControl("lblText")).Text;

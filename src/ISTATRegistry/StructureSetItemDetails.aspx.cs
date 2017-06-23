@@ -226,11 +226,14 @@ namespace ISTATRegistry
                     _ssMutable.Uri = new Uri(txtURI.Text);
 
                 if (txtValidFrom.Text != String.Empty)
-                    _ssMutable.StartDate = DateTime.ParseExact(txtValidFrom.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
-
+                    _ssMutable.StartDate = DateTime.ParseExact(txtValidFrom.Text, "d/M/yyyy", CultureInfo.InvariantCulture);
+				else
+					_ssMutable.StartDate = null;
                 if (txtValidTo.Text != String.Empty)
-                    _ssMutable.EndDate = DateTime.ParseExact(txtValidTo.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
-
+                    _ssMutable.EndDate = DateTime.ParseExact(txtValidTo.Text, "d/M/yyyy", CultureInfo.InvariantCulture);
+				else
+					_ssMutable.EndDate = null;
+				
                 _ssMutable.Annotations.Clear();
                 if (AnnotationGeneral.AnnotationObjectList != null)
                     foreach (var annotation in AnnotationGeneral.AnnotationObjectList)
@@ -373,7 +376,7 @@ namespace ISTATRegistry
                 return;
             }
             ArtefactIdentity ai = Utils.GetArtefactIdentityFromString(txtArtefactTarget.Text);
-            PopolateSMLBTarget(ai, AvailableStructures.KEY_FAMILY);
+            PopolateSMLBTarget(ai, AvailableStructures.DSD);
 
             IStructureMapMutableObject sm = CreateOrUpdateSM();
             UpdateSMTarget(ref sm, ai, "Dsd");
@@ -390,7 +393,7 @@ namespace ISTATRegistry
                 return;
             }
             ArtefactIdentity ai = Utils.GetArtefactIdentityFromString(txtArtefactSource.Text);
-            PopolateSMLBSource(ai, AvailableStructures.KEY_FAMILY);
+            PopolateSMLBSource(ai, AvailableStructures.DSD);
 
             IStructureMapMutableObject sm = CreateOrUpdateSM();
             UpdateSMSource(ref sm, ai, "Dsd");
@@ -732,7 +735,7 @@ namespace ISTATRegistry
                     string[] TargetID = ((Label)gvr.FindControl("lblSMArtefactTarget")).Text.Split(',');
                     string artType = ((Label)gvr.FindControl("lblSMArtefactType")).Text;
                     
-                    AvailableStructures avStruct = AvailableStructures.KEY_FAMILY;
+                    AvailableStructures avStruct = AvailableStructures.DSD;
 
                     if (artType.ToUpper() == "DATAFLOW")
                     {
@@ -995,11 +998,11 @@ namespace ISTATRegistry
             }
 
             // Bug Common API
-            if (gvSMMapping.Rows.Count > 1)
-            {
-                messagesGroup += Convert.ToString(errorCounter) + ") " + Resources.Messages.err_sm_commonApi_BUG + "<br /><br />";
-                errorCounter++;
-            }
+            //if (gvSMMapping.Rows.Count > 1)
+            //{
+            //    messagesGroup += Convert.ToString(errorCounter) + ") " + Resources.Messages.err_sm_commonApi_BUG + "<br /><br />";
+            //    errorCounter++;
+            //}
 
             if (messagesGroup != String.Empty)
             {
@@ -1238,7 +1241,7 @@ namespace ISTATRegistry
 
             switch (StructureType)
             {
-                case AvailableStructures.KEY_FAMILY:
+                case AvailableStructures.DSD:
                     sdmxObjects = _wsmodel.GetDataStructure(artefactIdentity, false, false);
                     break;
                 case AvailableStructures.DATAFLOW:
@@ -1685,15 +1688,20 @@ namespace ISTATRegistry
                 {
                     IRServiceReference.User currentUser = Session[SESSION_KEYS.USER_DATA] as User;
                     _artIdentity = Utils.GetIdentityFromRequest(Request);
-                    int agencyOccurence = currentUser.agencies.Count( agency => agency.id.Equals( _artIdentity.Agency) );
-                    if ( agencyOccurence > 0 )
+                    if (currentUser != null)
                     {
-                        _action = (Action)Enum.Parse(typeof(Action), Request["ACTION"].ToString());
+                        int agencyOccurence = currentUser.agencies.Count(agency => agency.id.Equals(_artIdentity.Agency));
+                        if (agencyOccurence > 0)
+                        {
+                            _action = (Action)Enum.Parse(typeof(Action), Request["ACTION"].ToString());
+                        }
+                        else
+                        {
+                            _action = Action.VIEW;
+                        }
                     }
                     else
-                    {
                         _action = Action.VIEW;
-                    }
                 }
                 else
                 {

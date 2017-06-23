@@ -31,6 +31,15 @@ namespace ISTATRegistry {
         protected global::System.Web.UI.WebControls.HyperLink HyperLink2;
         
         /// <summary>
+        /// Controllo IstatUpdatePanel1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::ISTATRegistry.Classes.IstatUpdatePanel IstatUpdatePanel1;
+        
+        /// <summary>
         /// Controllo lblDSDID.
         /// </summary>
         /// <remarks>
@@ -400,85 +409,13 @@ namespace ISTATRegistry {
         protected global::System.Web.UI.WebControls.Button btnAddNewConcept;
         
         /// <summary>
-        /// Controllo imgImportCsv.
+        /// Controllo CSVImporter1.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton imgImportCsv;
-        
-        /// <summary>
-        /// Controllo lblImportCsvTitle.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblImportCsvTitle;
-        
-        /// <summary>
-        /// Controllo lblCsvLanguage.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCsvLanguage;
-        
-        /// <summary>
-        /// Controllo cmbLanguageForCsv.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList cmbLanguageForCsv;
-        
-        /// <summary>
-        /// Controllo lblcsvFile.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblcsvFile;
-        
-        /// <summary>
-        /// Controllo csvFile.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload csvFile;
-        
-        /// <summary>
-        /// Controllo lblSeparator.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSeparator;
-        
-        /// <summary>
-        /// Controllo txtSeparator.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSeparator;
-        
-        /// <summary>
-        /// Controllo btnImportFromCsv.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnImportFromCsv;
+        protected global::ISTATRegistry.UserControls.CSVImporter CSVImporter1;
         
         /// <summary>
         /// Controllo lbl_title_new.
@@ -569,6 +506,15 @@ namespace ISTATRegistry {
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblErrorOnNewInsert;
+        
+        /// <summary>
+        /// Controllo btnAddConceptToFinalStructure.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAddConceptToFinalStructure;
         
         /// <summary>
         /// Controllo btnNewConcept.

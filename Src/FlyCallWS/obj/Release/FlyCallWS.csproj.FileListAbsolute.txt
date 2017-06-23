@@ -1,0 +1,9 @@
+C:\FlyCallWS\bin\Release\FlyCallWS.dll
+C:\FlyCallWS\bin\Release\FlyCallWS.pdb
+C:\FlyCallWS\obj\Release\FlyCallWS.dll
+C:\FlyCallWS\obj\Release\FlyCallWS.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\FlyCallWS\bin\Release\FlyCallWS.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\FlyCallWS\bin\Release\FlyCallWS.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\FlyCallWS\obj\Release\FlyCallWS.csprojResolveAssemblyReference.cache
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\FlyCallWS\obj\Release\FlyCallWS.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\FlyCallWS\obj\Release\FlyCallWS.pdb

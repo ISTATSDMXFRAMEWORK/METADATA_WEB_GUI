@@ -15,6 +15,7 @@ using Org.Sdmxsource.Sdmx.Api.Model.Mutable;
 using ISTATUtils;
 using ISTATRegistry.IRServiceReference;
 
+
 namespace ISTATRegistry
 {
     
@@ -48,17 +49,24 @@ namespace ISTATRegistry
 
             try
             {
-                _sdmxObjects = GetSdmxObjects();
-
                 if (!IsPostBack)
                 {
                     btnAddCodeList.Visible = !Utils.ViewMode;
                     gridView.Columns[7].Visible = !Utils.ViewMode;
- 
-                    ViewState["SortExpr"] = SortDirection.Ascending;
 
+                    ViewState["SortExpr"] = SortDirection.Ascending;
+                }
+
+                _sdmxObjects = GetSdmxObjects();
+
+                if (!IsPostBack)
+                {
                     BindData();
                 }
+
+                MultipleDownload1.ucGridview = gridView;
+                MultipleDownload1.ucArtefactType = "CODELIST";
+
             }
             catch (Exception ex)
             {
@@ -118,8 +126,18 @@ namespace ISTATRegistry
             EntityMapper eMapper = new EntityMapper(Utils.LocalizedLanguage);
 
             List<ISTAT.Entity.CodeList> lCodeList = eMapper.GetCodeListList(_sdmxObjects,  Utils.LocalizedLanguage);
+            List<ISTAT.Entity.CodeList> lFilteredCodeList = null;
 
-            lCodeList = lCodeList.FindAll(i => !(new List<string> { "SDMX_H_PERIODS", "SDMX_M_PERIODS", "SDMX_Q_PERIODS" }.Contains(i.ID)));
+            if (Utils.EnableCLPeriodsFilter)
+            {
+                lFilteredCodeList = lCodeList.FindAll(i => !(Utils.CLPeriodsList.Contains(i.ID)));
+            }
+
+            if (lFilteredCodeList.Count > 0 && lFilteredCodeList.Count == 0)
+            {
+                Utils.ShowDialog("no results found");
+                return;
+            }
 
             int numberOfRows = 0;
 
@@ -131,13 +149,13 @@ namespace ISTATRegistry
             {
                 gridView.PageSize = Utils.GeneralCodelistGridNumberRow;
             }
-           
-            lblNumberOfTotalElements.Text = string.Format( Resources.Messages.lbl_number_of_total_rows, lCodeList.Count.ToString() );
+
+            lblNumberOfTotalElements.Text = string.Format(Resources.Messages.lbl_number_of_total_rows, lFilteredCodeList.Count.ToString());
             gridView.DataSourceID = null;
-            gridView.DataSource = lCodeList;
+            gridView.DataSource = lFilteredCodeList;
             gridView.DataBind();
 
-            if ( lCodeList.Count == 0 )
+            if (lFilteredCodeList.Count == 0)
             {
                 txtNumberOfRows.Visible = false;
                 lblNumberOfRows.Visible = false;
@@ -173,23 +191,6 @@ namespace ISTATRegistry
             BindData();
 
         }
-        protected void OnRowCommand(object sender, GridViewCommandEventArgs e)
-        {
-            switch (e.CommandName)
-            {
-                case "Details":
-                    GridViewRow gvr = (GridViewRow)(((ImageButton)e.CommandSource).NamingContainer);
-
-                    string stringIdentity = Utils.GetStringKey(gridView.Rows[gvr.RowIndex]);
-
-                    Response.Redirect("codelistItemDetails.aspx?ACTION=UPDATE&" + stringIdentity);
-
-                    break;
-                case "xxxx":
-                    break;
-
-            }
-        }
 
         protected void OnRowCreated(object sender, GridViewRowEventArgs e)
         {
@@ -198,6 +199,14 @@ namespace ISTATRegistry
             {
                 ScriptManager.GetCurrent(this).RegisterPostBackControl(fd);
             }
+
+            HyperLink hplDetails = (e.Row.FindControl("hplDetails") as HyperLink);
+            if (hplDetails != null)
+            {
+                string stringIdentity = Utils.GetStringKey((ArtefactIdentity)e.Row.DataItem);
+                hplDetails.NavigateUrl = "codelistItemDetails.aspx?ACTION=UPDATE&" + stringIdentity;
+            }
+
         }
 
         protected void OnSorting(object sender, GridViewSortEventArgs e)

@@ -1,0 +1,10 @@
+C:\ISTAT\Source\SDMXDataloader_QB\src\bin\ISTAT.IO.dll
+C:\ISTAT\Source\SDMXDataloader_QB\src\bin\ISTAT.IO.pdb
+C:\ISTAT\Source\SDMXDataloader_QB\src\ISTAT.IO\obj\Release\ISTAT.IO.csprojResolveAssemblyReference.cache
+C:\ISTAT\Source\SDMXDataloader_QB\src\ISTAT.IO\obj\Release\ISTAT.IO.dll
+C:\ISTAT\Source\SDMXDataloader_QB\src\ISTAT.IO\obj\Release\ISTAT.IO.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\bin\ISTAT.IO.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\bin\ISTAT.IO.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTAT.IO\obj\Release\ISTAT.IO.csprojResolveAssemblyReference.cache
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTAT.IO\obj\Release\ISTAT.IO.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTAT.IO\obj\Release\ISTAT.IO.pdb

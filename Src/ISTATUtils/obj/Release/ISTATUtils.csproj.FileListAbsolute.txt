@@ -1,0 +1,33 @@
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\ISTATUtils\bin\Release\ISTATUtils.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\ISTATUtils\bin\Release\ISTATUtils.pdb
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\ISTATUtils\bin\Release\SdmxApi.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\ISTATUtils\bin\Release\log4net.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\ISTATUtils\obj\Release\ISTATUtils.csprojResolveAssemblyReference.cache
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\ISTATUtils\obj\Release\ISTATUtils.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\ISTATUtils\obj\Release\ISTATUtils.pdb
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATUtils\bin\Release\ISTATUtils.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATUtils\bin\Release\ISTATUtils.pdb
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATUtils\bin\Release\log4net.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATUtils\obj\Release\ISTATUtils.csprojResolveAssemblyReference.cache
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATUtils\obj\Release\ISTATUtils.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATUtils\obj\Release\ISTATUtils.pdb
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\ISTATUtils\bin\Release\ISTATUtils.dll
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\ISTATUtils\bin\Release\ISTATUtils.pdb
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\ISTATUtils\bin\Release\log4net.dll
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\ISTATUtils\obj\Release\ISTATUtils.csprojResolveAssemblyReference.cache
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\ISTATUtils\obj\Release\ISTATUtils.dll
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\ISTATUtils\obj\Release\ISTATUtils.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATUtils\bin\Release\ISTATUtils.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATUtils\bin\Release\ISTATUtils.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATUtils\bin\Release\log4net.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATUtils\obj\Release\ISTATUtils.csprojResolveAssemblyReference.cache
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATUtils\obj\Release\ISTATUtils.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATUtils\obj\Release\ISTATUtils.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATUtils\bin\Release\SdmxApi.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATUtils\bin\Release\ISTATUtils.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATUtils\bin\Release\ISTATUtils.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATUtils\bin\Release\SdmxApi.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATUtils\bin\Release\log4net.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATUtils\obj\Release\ISTATUtils.csprojResolveAssemblyReference.cache
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATUtils\obj\Release\ISTATUtils.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATUtils\obj\Release\ISTATUtils.pdb

@@ -11,7 +11,9 @@ namespace ISTATUtils
         private System.Globalization.CultureInfo _language;
         private const string _defaultLanguage = "en";
 
-        public string Language { get { return _language.TwoLetterISOLanguageName; } }
+        //public string Language { get { return _language.TwoLetterISOLanguageName; } }
+
+        public string Language { get { return _language.Name; } }
 
         public LocalizedUtils(System.Globalization.CultureInfo language)
         {
@@ -27,7 +29,7 @@ namespace ISTATUtils
 
             foreach (ITextTypeWrapper name in nameableObject.Names)
             {
-                if (name.Locale == Language)
+                if (name.Locale.ToLower() == Language.ToLower())
                     LocalizedName = name.Value;
 
                 if (name.Locale == _defaultLanguage)

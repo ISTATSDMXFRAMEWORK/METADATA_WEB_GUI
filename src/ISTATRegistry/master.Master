@@ -1,8 +1,7 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="master.master.cs" Inherits="ISTATRegistry.master" %>
-
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="master.master.cs" Inherits="ISTATRegistry.master"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<head id="Head1" runat="server">
     <title><%= Resources.Messages.lbl_site_title %></title>
     <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     <link href="css/style.css" rel="stylesheet" />
@@ -13,6 +12,7 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./jquery/jquery-ui.css" />
     <link href="css/jquery.msg.css" rel="stylesheet" />
+
 
     <script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
     <script src="js/PopUp.js" type="text/javascript"></script>
@@ -87,8 +87,6 @@
             }
         }
 
-
-
         function PrepareDefaultDiv(divId, text, title) {
             var myDiv = document.getElementById(divId);
             if (myDiv == null) {
@@ -117,19 +115,6 @@
         PrepareDefaultDiv(newIdName, text, title);
         openP(newIdName, popWidth, false, null);
     }
-
-    //function ShowConfirm(text, jsYes,jsNo) {
-
-    //    if(confirm(text))
-    //    {
-    //        if(jsYes != '')
-    //            eval(jsYes);
-    //    }
-    //    else{
-    //        if(jsNo != '')
-    //            eval(jsNo);
-    //    }
-    //}
 
     function ForceBlackClosing() {
         $("#fade").fadeOut();
@@ -170,7 +155,7 @@
     function ResetBeforeUnload() {
         window.onbeforeunload = null;
     }
-    
+
     function CloseConfirm() {
         $('#dialog-confirm').dialog('close');
     }
@@ -198,30 +183,64 @@
         });
     }
 
+    function ShowDialogBeforeScript(texts, jsYes) {
 
-    //$(function() {
-    //    $( "#dialog-confirm" ).dialog({
-    //        resizable: false,
-    //        height:140,
-    //        modal: true,
-    //        buttons: {
-    //            "Delete all items": function() {
-    //                $( this ).dialog( "close" );
-    //            },
-    //            Cancel: function() {
-    //                $( this ).dialog( "close" );
-    //            }
-    //        }
-    //    });
-    //});
+        $("#dialog-confirm").text(texts);
+
+        $("#dialog-confirm").dialog({
+            resizable: false,
+            height: 140,
+            modal: true,
+            dialogClass: "no-close",
+            buttons: {
+                Ok: function () {
+                    window.onbeforeunload = null;
+                    eval(jsYes);
+                }
+            }
+        });
+    }
 
     </script>
+
+    <style type="text/css">
+        .selectDD {
+            margin: 5px;
+            border: 1px solid #111;
+            background: transparent;
+            padding: 5px 35px 5px 5px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            height: 34px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+        .selectWSBkg {
+            background: #eee url("./images/ConnectionBig.png") 96% / 10% no-repeat; 
+        }        
+        .selectLangBkg {
+            background: #eee url("./images/World.png") 96% / 20% no-repeat; 
+        }        
+
+        /*target Internet Explorer 9 and Internet Explorer 10:*/
+        @media screen and (min-width: 0\0) {
+            select {
+                background: none;
+                padding: 5px;
+            }
+        }
+
+        .marg {padding-top:10px;}
+
+    </style>
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
+
         <div class="wrapper">
             <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true"></asp:ScriptManager>
             <header class="header">
@@ -233,33 +252,32 @@
         <div style="float: left">
 		    <a href="./"><img src="./images/SdmxLogo.png" alt="Sdmx Logo"/></a>
 
-            <div style="margin-left:10px;">Ver. 3.4.0 
+            <div style="margin-left:10px;">Ver. <%=Version %>
                 <asp:LinkButton ID="loginButton" runat="server" CssClass="button" OnClientClick= "$('#login').toggle(); return false;">Login</asp:LinkButton>
                 <asp:LinkButton ID="lnkAdmin" runat="server" CssClass="button" PostBackUrl="./admin.aspx" Visible="false">Admin</asp:LinkButton>
             </div>
             
             <div id="login">
               <h1><%= Resources.Messages.lblUserCredentials %><span onclick="$('#login').toggle();" style="float: right; padding-right:4px; cursor:pointer">X</span></h1>
-              <form class="myForm">
+              <%--<form class="myForm">--%>
                 <asp:Label ID="lblLoginUserName" runat="server" Text="Username"></asp:Label>
                 <asp:TextBox ID="txtLoginUserName" CssClass="loginUserNameText" runat="server"></asp:TextBox>
                 <asp:Label ID="lblLoginPassword" runat="server" Text="Password"></asp:Label>
                 <asp:TextBox ID="txtLoginPassword" CssClass="loginPasswordText" runat="server" TextMode="Password"></asp:TextBox>
                 <asp:Button ID="btnLoginSubmit" runat="server" Text="Login" CssClass="loginSubmit"
                     onclick="btnLoginSubmit_Click" ></asp:Button>
-              </form>
+              <%--</form>--%>
             </div>
             <asp:Label ID="lblWelcomeUser" runat="server" Text="" CssClass="welcomeUserMessagge"></asp:Label>
             <asp:LinkButton ID="logoutButton" runat="server" CssClass="logoutButton" Visible= "false" onclick="logoutButton_Click" >Logout</asp:LinkButton>
         </div>
         
-            <div style="float: right; padding-top:10px">
-                <asp:DropDownList ID="cmbEPoints" runat="server" AutoPostBack="True" 
-                    onselectedindexchanged="cmbEPoints_SelectedIndexChanged"></asp:DropDownList>&nbsp;&nbsp;
-                <asp:DropDownList ID="cmbLanguage" runat="server"  AutoPostBack="False" 
-                    OnSelectedIndexChanged="cmbLanguage_SelectedIndexChanged" 
-                    ondatabinding="cmbLanguage_DataBinding" ondatabound="cmbLanguage_DataBound"></asp:DropDownList>
-                
+            <div style="float: right; padding-top:10px; vertical-align:central">
+                <asp:Image ID="imgServerStatus" ImageUrl="~/images/ServerOff.png" runat="server" CssClass="marg" ></asp:Image>
+                <asp:DropDownList ID="cmbEPoints" runat="server" AutoPostBack="True" CssClass="selectDD selectWSBkg"
+                    onselectedindexchanged="cmbEPoints_SelectedIndexChanged" UseSubmitBehavior="False"></asp:DropDownList>&nbsp;&nbsp;
+                <asp:DropDownList ID="cmbLanguage" runat="server"  AutoPostBack="False" CssClass="selectDD selectLangBkg"
+                    OnSelectedIndexChanged="cmbLanguage_SelectedIndexChanged"></asp:DropDownList>
             </div>
 	    </header>
             <!-- .header-->
@@ -271,7 +289,7 @@
                     <div class="navbox">
                         <ul class="nav">
                             <asp:Panel ID="pnlUpload" runat="server"><li><a href="UploadStructure.aspx?m=y"><%= Resources.Messages.lbl_upload_structure %></a></li></asp:Panel>
-                            <li><a href="CategorySchemeGraph.aspx?m=y"><%= Resources.Messages.lbl_categorisation_detail %></a></li>
+                            <asp:Panel ID="pnlArtefactBrowser" runat="server"><li><a href="CategorySchemeGraph.aspx?m=y"><%= Resources.Messages.lbl_categorisation_detail %></a></li></asp:Panel>
                             <li><a href="Codelists.aspx?m=y"><%= Resources.Messages.lbl_codelist %></a></li>
                             <li><a href="ConceptSchemes.aspx?m=y"><%= Resources.Messages.lbl_concept_scheme %></a></li>
                             <li><a href="KeyFamily.aspx?m=y"><%= Resources.Messages.lbl_key_family %></a></li>

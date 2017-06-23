@@ -121,6 +121,15 @@ namespace ISTATRegistry {
         protected global::System.Web.UI.WebControls.LinkButton logoutButton;
         
         /// <summary>
+        /// Controllo imgServerStatus.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgServerStatus;
+        
+        /// <summary>
         /// Controllo cmbEPoints.
         /// </summary>
         /// <remarks>
@@ -146,6 +155,15 @@ namespace ISTATRegistry {
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlUpload;
+        
+        /// <summary>
+        /// Controllo pnlArtefactBrowser.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlArtefactBrowser;
         
         /// <summary>
         /// Controllo pnlExtraArtefact.

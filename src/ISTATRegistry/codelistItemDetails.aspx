@@ -10,11 +10,13 @@
 <%@ Register Src="UserControls/DuplicateArtefact.ascx" TagName="DuplicateArtefact" TagPrefix="uc5" %>
 <%@ Register Src="~/UserControls/Categorisations.ascx" TagPrefix="uc1" TagName="Categorisations" %>
 <%@ Register Src="UserControls/CSVImporter.ascx" TagName="CSVImporter" TagPrefix="uc10" %>
+<%@ Register Namespace="ISTATRegistry.Classes" TagPrefix="iup" Assembly="IstatRegistry" %>
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <script type="text/javascript">
         $(document).ready(function () {
+
             $('#tab-container').easytabs();
 
             $(".datepicker").datepicker({
@@ -23,7 +25,7 @@
                 dateFormat: 'dd/mm/yy'
             });
             $(".datepicker").datepicker("option", "showAnim", "drop");
-
+            $(".datepicker").datepicker($.datepicker.regional['<%=Session["Language"]%>']);
             jQuery(function ($) {
                 var form = $('form'), oldSubmit = form[0].onsubmit;
                 form[0].onsubmit = null;
@@ -53,6 +55,13 @@
             });
 
         });
+
+        function exitf()
+        {
+            window.onbeforeunload = null;
+            alert("ok");
+            location.href="www.google.com";
+        }
 
     </script>
     <style type="text/css">
@@ -133,378 +142,303 @@
         <ul class='etabs'>
             <li class='tab'><a href="#general"><%= Resources.Messages.lbl_general %></a></li>
             <li class='tab'><a href="#codes"><%= Resources.Messages.lbl_codes %></a></li>
-            <li class='tab'><a href="#categorisation"><%= Resources.Messages.lbl_categorisation %></a></li>
+            <li class='tab ircats'><a href="#categorisation" class="ircats"><%= Resources.Messages.lbl_categorisation %></a></li>
         </ul>
         <div class='panel-container'>
             <div id="general">
-
-                <table class="tableForm">
-
-                    <tr>
-                        <td>
-                            <asp:Label ID="lbl_id" runat="server" Text="<%# '*' + Resources.Messages.lbl_id+ ':' %>" CssClass="tdProperty"></asp:Label>
-                        </td>
-                        <td>
-                            <asp:TextBox ID="txt_id" runat="server" Enabled="false"></asp:TextBox>
-                        </td>
-                        <td>
-                            <asp:Label ID="lbl_agency" runat="server" Text="<%# '*' + Resources.Messages.lbl_agency+ ':' %>" CssClass="tdProperty"></asp:Label>
-                        </td>
-                        <td>
-                            <asp:DropDownList ID="cmb_agencies" runat="server" Enabled="False">
-                            </asp:DropDownList>
-                            <asp:TextBox ID="txtAgenciesReadOnly" runat="server" Enabled="false" Visible="false"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:Label ID="lbl_version" runat="server" Text="<%# '*' + Resources.Messages.lbl_version+ ':' %>" CssClass="tdProperty"></asp:Label>
-                        </td>
-                        <td>
-                            <asp:TextBox ID="txt_version" runat="server" Enabled="false"></asp:TextBox>
-                        </td>
-                        <td>
-                            <asp:Label ID="lbl_isFinal" runat="server" Text="<%# Resources.Messages.lbl_is_final+ ':' %>" CssClass="tdProperty"></asp:Label>
-                        </td>
-                        <td>
-                            <asp:CheckBox ID="chk_isFinal" runat="server" Enabled="false" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:Label ID="lbl_uri" runat="server" Text="<%# Resources.Messages.lbl_uri+ ':' %>" CssClass="tdProperty"></asp:Label>
-                        </td>
-                        <td>
-                            <asp:TextBox ID="txt_uri" runat="server" Enabled="false"></asp:TextBox>
-                        </td>
-                        <td>
-                            <asp:Label ID="lbl_urn" runat="server" Text="<%# Resources.Messages.lbl_urn+ ':' %>" CssClass="tdProperty"></asp:Label>
-                        </td>
-                        <td>
-                            <asp:TextBox ID="txt_urn" runat="server" Enabled="false"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:Label ID="lbl_valid_from" runat="server" Text="<%# Resources.Messages.lbl_valid_from+ ':' %>" CssClass="tdProperty"></asp:Label>
-                        </td>
-                        <td>
-                            <asp:TextBox ID="txt_valid_from" runat="server" Enabled="false" CssClass="datepicker"></asp:TextBox>
-                        </td>
-                        <td>
-                            <asp:Label ID="lbl_valid_to" runat="server" Text="<%# Resources.Messages.lbl_valid_to+ ':' %>" CssClass="tdProperty"></asp:Label>
-                        </td>
-                        <td>
-                            <asp:TextBox ID="txt_valid_to" runat="server" Enabled="false" CssClass="datepicker"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:Label ID="lbl_name" runat="server" Text="<%# '*' + Resources.Messages.lbl_name+ ':' %>" CssClass="tdProperty"></asp:Label>
-                        </td>
-                        <td>
-                            <asp:Panel ID="pnlViewName" runat="server" Visible="false">
-                                <asp:TextBox ID="txt_name_locale" runat="server" Enabled="false" TextMode="MultiLine" Rows="5" ValidationGroup="dsd"></asp:TextBox>
-                            </asp:Panel>
-                            <asp:Panel ID="pnlEditName" runat="server" Visible="false">
-                                <uc2:AddText ID="AddTextName" runat="server" />
-                            </asp:Panel>
-                            <asp:TextBox ID="txt_all_names" runat="server" Visible="false" Enabled="false" />
-                        </td>
-                        <td>
-                            <asp:Label ID="lbl_description" runat="server" Text="<%# Resources.Messages.lbl_description+ ':' %>" CssClass="tdProperty"></asp:Label>
-                        </td>
-                        <td>
-                            <asp:Panel ID="pnlViewDescription" runat="server" Visible="false">
-                                <asp:TextBox ID="txt_description_locale" runat="server" Enabled="false" TextMode="MultiLine" Rows="5"></asp:TextBox>
-                            </asp:Panel>
-                            <asp:Panel ID="pnlEditDescription" runat="server" Visible="false">
-                                <uc2:AddText ID="AddTextDescription" runat="server" />
-                            </asp:Panel>
-                            <asp:TextBox ID="txt_all_description" runat="server" Visible="false" Enabled="false" />
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <asp:Label ID="lbl_annotation" runat="server" Text="<%# Resources.Messages.lbl_annotation+ ':' %>" CssClass="tdProperty"></asp:Label>
-                        </td>
-                        <td colspan="3">
-                            <asp:Panel ID="pnlAnnotation" runat="server" Visible="true">
-                                <uc4:ControlAnnotations ID="AnnotationGeneralControl" EditMode="true" Visible="true" runat="server" />
-                            </asp:Panel>
-                        </td>
-                    </tr>
-
-                </table>
-            </div>
-
-            <div id="codes">
-                <asp:Label ID="lblNoItemsPresent" runat="server" Text="<%# Resources.Messages.lbl_no_items_in_grid %>"></asp:Label>
-                <br />
-                <asp:Label ID="lblNumberOfTotalElements" runat="server" Text=""></asp:Label>
-                <asp:GridView
-                    ID="gvCodelistsItem"
-                    runat="server"
-                    Width="730px"
-                    AllowSorting="False"
-                    AllowPaging="True"
-                    PagerSettings-Mode="NumericFirstLast"
-                    PagerSettings-FirstPageText="<%# Resources.Messages.btn_goto_first %>"
-                    PagerSettings-LastPageText="<%# Resources.Messages.btn_goto_last %>"
-                    OnSorting="gvCodelistsItem_Sorting"
-                    OnSorted="gvCodelistsItem_Sorted"
-                    CssClass="Grid"
-                    OnPageIndexChanging="gvCodelistsItem_PageIndexChanging"
-                    OnRowCommand="gvCode_RowCommand"
-                    AutoGenerateColumns="False"
-                    OnRowUpdating="gvCodelistsItem_RowUpdating"
-                    OnRowDeleting="gvCodelistsItem_RowDeleting"
-                    OnRowDataBound="gvCodelistsItem_RowDataBound">
-                    <Columns>
-                        <asp:TemplateField HeaderText="No.">
-                            <ItemTemplate>
-                                <%# Container.DataItemIndex + 1 %>
-                            </ItemTemplate>
-                        </asp:TemplateField>
-                        <asp:TemplateField HeaderText="ID" SortExpression="ID">
-                            <ItemTemplate>
-                                <asp:Label ID="lblID" runat="server" Text='<%# Bind("Code") %>'></asp:Label>
-                            </ItemTemplate>
-                            <HeaderStyle Width="200px" />
-                        </asp:TemplateField>
-                        <asp:TemplateField HeaderText="Name" SortExpression="Name">
-                            <ItemTemplate>
-                                <asp:Label ID="lblName" runat="server" Text='<%# Bind("Name") %>'></asp:Label>
-                            </ItemTemplate>
-                            <HeaderStyle Width="400px" />
-                        </asp:TemplateField>
-                        <asp:TemplateField HeaderText="Parent Code" SortExpression="ParentCode">
-                            <ItemTemplate>
-                                <asp:Label ID="lblParentCode" runat="server" Text='<%# Bind("ParentCode") %>'></asp:Label>
-                            </ItemTemplate>
-                            <HeaderStyle Width="160px" />
-                        </asp:TemplateField>
-                        <asp:TemplateField HeaderText="" ShowHeader="False">
-                            <ItemTemplate>
-                                <asp:ImageButton
-                                    ID="img_update"
-                                    runat="server"
-                                    CausesValidation="False"
-                                    CommandName="UPDATE"
-                                    CommandArgument="<%# Container.DataItemIndex %>"
-                                    ImageUrl="~/images/Details2.png"
-                                    ToolTip="UPDATE" />
-                            </ItemTemplate>
-                            <HeaderStyle Width="50px" HorizontalAlign="Center" />
-                            <ItemStyle HorizontalAlign="Center" />
-                        </asp:TemplateField>
-                        <asp:TemplateField HeaderText="" ShowHeader="False">
-                            <ItemTemplate>
-                                <asp:ImageButton
-                                    ID="img_delete"
-                                    runat="server"
-                                    CausesValidation="False"
-                                    CommandName="DELETE"
-                                    CommandArgument="<%# Container.DataItemIndex %>"
-                                    ImageUrl="~/images/Delete2.png"
-                                    ToolTip="DELETE" />
-                            </ItemTemplate>
-                            <HeaderStyle Width="50px" HorizontalAlign="Center" />
-                            <ItemStyle HorizontalAlign="Center" />
-                        </asp:TemplateField>
-                        <asp:TemplateField HeaderText="" ShowHeader="False">
-                            <ItemTemplate>
-                                <asp:Label ID="lblNumberOfAnnotation" runat="server" Text="Label"></asp:Label>
-                                <asp:ImageButton
-                                    ID="img_annotation"
-                                    runat="server"
-                                    CausesValidation="False"
-                                    CommandName="ANNOTATION"
-                                    CommandArgument="<%# Container.DataItemIndex %>"
-                                    ImageUrl="~/images/Annotation.png"
-                                    ToolTip="ANNOTATION" />
-                            </ItemTemplate>
-                            <HeaderStyle Width="50px" HorizontalAlign="Center" />
-                            <ItemStyle HorizontalAlign="Center" />
-                        </asp:TemplateField>
-                    </Columns>
-                    <HeaderStyle CssClass="hs" />
-                    <RowStyle CssClass="rs" />
-                    <AlternatingRowStyle CssClass="ars" />
-                    <PagerStyle CssClass="pgr"></PagerStyle>
-                </asp:GridView>
-                <asp:Label ID="lblNumberOfRows" runat="server" Text="<%# Resources.Messages.lbl_number_of_rows + ':'%>"></asp:Label>
-                <asp:TextBox ID="txtNumberOfRows" runat="server" Style="text-align: center"
-                    OnTextChanged="txtNumberOfRows_TextChanged" onkeydown="return (event.keyCode!=13);"
-                    Width="40px"></asp:TextBox>
-                &nbsp;<asp:Button ID="btnChangePaging" runat="server"
-                    Text="<%# Resources.Messages.lbl_change_number_of_rows%>" OnClick="btnChangePaging_Click" />
-
-                <div style="float:left">
-                    <asp:Button ID="btnAddNewCode" Text="<%# Resources.Messages.lbl_add_code %>" OnClientClick="javascript: openP('df-Dimension',600); return false;" runat="server" OnClick="btnAddNewCode_Click" />
-                </div>
-                <div style="float:right; padding-bottom:10px; margin-bottom:10px">
-                    <uc10:CSVImporter ID="CSVImporter1" runat="server" />
-                    <br />
-                </div>
-                <%--                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-                    <ContentTemplate>--%>
-
-                <%--                <div id="importCsv" class="popup_block">
-                    <asp:Label ID="lblImportCsvTitle" runat="server" Text="<%# Resources.Messages.lbl_import_csv %>" CssClass="PageTitle"></asp:Label>
-                    <br />
-                    <br />
-                    <div style="padding: 10px; overflow: auto; width: 450px; height: 250px; border: solid 1px #999; -moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0; margin-left: 10px;">
-                        <table class="tblForm">
+                <iup:IstatUpdatePanel ID="IstatUpdatePanel1" runat="server">
+                    <ContentTemplate>
+                        <table class="tableForm">
                             <tr>
                                 <td>
-                                    <asp:Label ID="lblCsvLanguage" runat="server" Text="<%# Resources.Messages.lbl_language%>"></asp:Label></td>
+                                    <asp:Label ID="lbl_id" runat="server" Text="<%# '*' + Resources.Messages.lbl_id+ ':' %>" CssClass="tdProperty"></asp:Label>
+                                </td>
                                 <td>
-                                    <asp:DropDownList ID="cmbLanguageForCsv" runat="server" AutoPostBack="False"></asp:DropDownList></td>
-                            </tr>
-                            <tr>
+                                    <asp:TextBox ID="txt_id" runat="server" Enabled="false"></asp:TextBox>
+                                </td>
                                 <td>
-                                    <asp:Label ID="lblcsvFile" runat="server" Text="<%# Resources.Messages.lbl_csv_file%>"></asp:Label></td>
+                                    <asp:Label ID="lbl_agency" runat="server" Text="<%# '*' + Resources.Messages.lbl_agency+ ':' %>" CssClass="tdProperty"></asp:Label>
+                                </td>
                                 <td>
-                                    <asp:FileUpload ID="csvFile" runat="server" />
-                                    <asp:Label ID="lblCsvFileName" runat="server" Text="" Visible="false"></asp:Label><asp:ImageButton ID="ibDeleteFileSelection" runat="server" ImageUrl="~/images/Delete_mini.png" OnClick="ibDeleteFileSelection_Click" Visible="false" />
+                                    <asp:DropDownList ID="cmb_agencies" runat="server" Enabled="False">
+                                    </asp:DropDownList>
+                                    <asp:TextBox ID="txtAgenciesReadOnly" runat="server" Enabled="false" Visible="false"></asp:TextBox>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <asp:Label ID="lblHeaderRow" runat="server" Text="<%$ Resources:Messages, lbl_is_header_row%>"></asp:Label></td>
-                                <td>
-                                    <asp:CheckBox ID="chkHeaderRow" runat="server" Checked="true" /></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:Label ID="lblSeparator" runat="server" Text="<%# Resources.Messages.lbl_used_separator%>"></asp:Label></td>
-                                <td>
-                                    <asp:TextBox ID="txtSeparator" Text="" runat="server" Width="15px" /></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:Label ID="lblTextDelimiter" runat="server" Text="<%$ Resources:Messages, lbl_text_delimiter%>"></asp:Label></td>
-                                <td>
-                                    <asp:TextBox ID="txtTextDelimiter" Text="" MaxLength="1" runat="server" Width="15px" /></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <asp:Label ID="lblExtraFields" runat="server" Text="<%$ Resources:Messages, lbl_extra_fields%>"></asp:Label>
+                                    <asp:Label ID="lbl_version" runat="server" Text="<%# '*' + Resources.Messages.lbl_version+ ':' %>" CssClass="tdProperty"></asp:Label>
                                 </td>
                                 <td>
-                                    <asp:ListBox ID="lbExtraFields" runat="server" SelectionMode="Multiple" Height="50px" Width="150px">
-                                        <asp:ListItem Value="Description" Text="<%$ Resources:Messages,lbl_description%>"></asp:ListItem>
-                                        <asp:ListItem Value="Parent" Text="<%$ Resources:Messages,lbl_parent%>"></asp:ListItem>
-                                    </asp:ListBox><img alt="Clear" id="imgClear" visible="false" src="./images/Delete_mini.png" style="cursor: pointer; display: none" onclick="$('#<%=lbExtraFields.ClientID%>').val([]); $('#imgClear').hide(); " />
+                                    <asp:TextBox ID="txt_version" runat="server" Enabled="false"></asp:TextBox>
+                                </td>
+                                <td>
+                                    <asp:Label ID="lbl_isFinal" runat="server" Text="<%# Resources.Messages.lbl_is_final+ ':' %>" CssClass="tdProperty"></asp:Label>
+                                </td>
+                                <td>
+                                    <asp:CheckBox ID="chk_isFinal" runat="server" Enabled="false" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:Label ID="lbl_uri" runat="server" Text="<%# Resources.Messages.lbl_uri+ ':' %>" CssClass="tdProperty"></asp:Label>
+                                </td>
+                                <td>
+                                    <asp:TextBox ID="txt_uri" runat="server" Enabled="false"></asp:TextBox>
+                                </td>
+                                <td>
+                                    <asp:Label ID="lbl_urn" runat="server" Text="<%# Resources.Messages.lbl_urn+ ':' %>" CssClass="tdProperty"></asp:Label>
+                                </td>
+                                <td>
+                                    <asp:TextBox ID="txt_urn" runat="server" Enabled="false"></asp:TextBox>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:Label ID="lbl_valid_from" runat="server" Text="<%# Resources.Messages.lbl_valid_from+ ':' %>" CssClass="tdProperty"></asp:Label>
+                                </td>
+                                <td>
+                                    <asp:TextBox ID="txt_valid_from" runat="server" Enabled="false" CssClass="datepicker"></asp:TextBox>
+                                </td>
+                                <td>
+                                    <asp:Label ID="lbl_valid_to" runat="server" Text="<%# Resources.Messages.lbl_valid_to+ ':' %>" CssClass="tdProperty"></asp:Label>
+                                </td>
+                                <td>
+                                    <asp:TextBox ID="txt_valid_to" runat="server" Enabled="false" CssClass="datepicker"></asp:TextBox>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <asp:Label ID="lbl_name" runat="server" Text="<%# '*' + Resources.Messages.lbl_name+ ':' %>" CssClass="tdProperty"></asp:Label>
+                                </td>
+                                <td>
+                                    <asp:Panel ID="pnlViewName" runat="server" Visible="false">
+                                        <asp:TextBox ID="txt_name_locale" runat="server" Enabled="false" TextMode="MultiLine" Rows="5" ValidationGroup="dsd"></asp:TextBox>
+                                    </asp:Panel>
+                                    <asp:Panel ID="pnlEditName" runat="server" Visible="false">
+                                        <uc2:AddText ID="AddTextName" runat="server" />
+                                    </asp:Panel>
+                                    <asp:TextBox ID="txt_all_names" runat="server" Visible="false" Enabled="false" />
+                                </td>
+                                <td>
+                                    <asp:Label ID="lbl_description" runat="server" Text="<%# Resources.Messages.lbl_description+ ':' %>" CssClass="tdProperty"></asp:Label>
+                                </td>
+                                <td>
+                                    <asp:Panel ID="pnlViewDescription" runat="server" Visible="false">
+                                        <asp:TextBox ID="txt_description_locale" runat="server" Enabled="false" TextMode="MultiLine" Rows="5"></asp:TextBox>
+                                    </asp:Panel>
+                                    <asp:Panel ID="pnlEditDescription" runat="server" Visible="false">
+                                        <uc2:AddText ID="AddTextDescription" runat="server" />
+                                    </asp:Panel>
+                                    <asp:TextBox ID="txt_all_description" runat="server" Visible="false" Enabled="false" />
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <asp:Label ID="lbl_annotation" runat="server" Text="<%# Resources.Messages.lbl_annotation+ ':' %>" CssClass="tdProperty"></asp:Label>
+                                </td>
+                                <td colspan="3">
+                                    <asp:Panel ID="pnlAnnotation" runat="server" Visible="true">
+                                        <uc4:ControlAnnotations ID="AnnotationGeneralControl" EditMode="true" Visible="true" runat="server" />
+                                    </asp:Panel>
                                 </td>
                             </tr>
                         </table>
-                    </div>
-                    <br />
-                    <center>
-                        <asp:Button ID="btnPreview" runat="server" Text="<%$ Resources:Messages,btn_preview %>" OnClick="btnPreview_Click" />&nbsp;
-                        <asp:Button ID="btnImportFromCsv" runat="server" Text="<%# Resources.Messages.btn_import_csv %>" OnClick="btnImportFromCsv_Click" />
-                    </center>
-                </div>
-
-                <div id="df-csvPreview" class="popup_block">
-                    <asp:Label ID="Label1" runat="server" Text="<%$ Resources:Messages,lbl_csv_preview %>" CssClass="PageTitle"></asp:Label>
-                    <br />
-                    <hr style="width: 100%;" />
-                    <br />
-                    <div style="overflow: auto; height: 380px;">
-                        <asp:GridView ID="gvCsvPreview" runat="server" CssClass="Grid"></asp:GridView>
-                    </div>
-                </div>
-
-                <div id="importCsvErrors" class="popup_block">
-                    <asp:Label ID="lblImportCsvErrorsTitle" runat="server" Text="IMPORT ERRORS" CssClass="PageTitle"></asp:Label>
-                    <hr style="width: 95%;" />
-                    <center>
-                        <div style="height: 100px; overflow: auto">
-                            <br />
-                            <asp:Label ID="lblImportCsvErrors" runat="server" Text=""></asp:Label>
-                        </div>
-                    </center>
-                    <span style="text-align: left"><%= Resources.Messages.lbl_wrong_lines %></span>
-                    <div style="height: 100px; width: 100%;">
-                        <asp:TextBox ID="lblImportCsvWrongLines" runat="server" Text="" TextMode="MultiLine" CssClass="noScalableTextArea" Width="100%" Height="80%"></asp:TextBox>
-                    </div>
-                </div>--%>
-
-                <%--                    </ContentTemplate>
-                </asp:UpdatePanel>--%>
-
-                <div id="df-Dimension" class="popup_block">
-                    <asp:Label ID="lbl_title_popup_code" runat="server" Text="<%# Resources.Messages.lbl_add_code %>" CssClass="PageTitle"></asp:Label>
-                    <hr style="width: 100%;" />
-
-                    <table class="tableForm">
-                        <tr>
-                            <td width="20%">
-                                <asp:Label ID="lbl_id_new" runat="server" Text="<%# '*' + Resources.Messages.lbl_id+':' %>" CssClass="tdProperty"></asp:Label>
-                            </td>
-                            <td width="80%">
-                                <asp:TextBox ID="txt_id_new" runat="server" Enabled="true"></asp:TextBox>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <asp:Label ID="lbl_name_new" runat="server" Text="<%# '*' + Resources.Messages.lbl_name+':' %>" CssClass="tdProperty"></asp:Label>
-                            </td>
-                            <td>
-                                <uc2:AddText ID="AddTextName_new" runat="server" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <asp:Label ID="lbl_description_new" runat="server" Text="<%# Resources.Messages.lbl_description+':' %>" CssClass="tdProperty"></asp:Label>
-                            </td>
-                            <td>
-                                <uc2:AddText ID="AddTextDescription_new" runat="server" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <asp:Label ID="lbl_parentid_new" runat="server" Text="<%# Resources.Messages.lbl_parent_code+':' %>" CssClass="tdProperty"></asp:Label>
-                            </td>
-                            <td>
-                                <asp:TextBox ID="txt_parentid_new" runat="server" Enabled="true"></asp:TextBox>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <asp:Label ID="lbl_order_new" runat="server" Text="<%# Resources.Messages.lbl_order+':' %>" CssClass="tdProperty"></asp:Label>
-                            </td>
-                            <td>
-                                <asp:TextBox ID="txt_order_new" runat="server" Enabled="true"></asp:TextBox>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                                <center>
-                                    <asp:Label ID="lblErrorOnNewInsert" runat="server" Text="" ForeColor="Red"></asp:Label><br />
-                                    <br />
-                                    <asp:Button OnClick="btnAddNewCode_Click" ID="btnNewCode" runat="server" Text="<%# Resources.Messages.btn_add_code %>" />
-                                    <asp:Button ID="btnNewCodeOnFinalStructure" runat="server" Text="<%# Resources.Messages.btn_add_code %>" Visible="false" OnClick="btnNewCodeOnFinalStructure_Click" />
-                                    <asp:Button ID="btnClearFields" runat="server" Text="<%# Resources.Messages.btn_cancel_operation %>" OnClick="btnClearFields_Click" />
-                                </center>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                                <br />
-                                <asp:Label ID="lblYouAreWorkingOnAFinal" runat="server" Text="<%# Resources.Messages.lbl_working_on_a_final %>" Visible="false"></asp:Label>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
+                    </ContentTemplate>
+                </iup:IstatUpdatePanel>
             </div>
 
+            <div id="codes">
+<%--                <iup:IstatUpdatePanel ID="IstatUpdatePanel2" runat="server">
+                    <ContentTemplate>--%>
 
-            <div id="categorisation">
+                        <asp:Label ID="lblNoItemsPresent" runat="server" Text="<%# Resources.Messages.lbl_no_items_in_grid %>"></asp:Label>
+                        <br />
+                        <asp:Label ID="lblNumberOfTotalElements" runat="server" Text=""></asp:Label>
+                        <asp:GridView
+                            ID="gvCodelistsItem"
+                            runat="server"
+                            Width="730px"
+                            AllowSorting="False"
+                            AllowPaging="True"
+                            PagerSettings-Mode="NumericFirstLast"
+                            PagerSettings-FirstPageText="<%# Resources.Messages.btn_goto_first %>"
+                            PagerSettings-LastPageText="<%# Resources.Messages.btn_goto_last %>"
+                            OnSorting="gvCodelistsItem_Sorting"
+                            OnSorted="gvCodelistsItem_Sorted"
+                            CssClass="Grid"
+                            OnPageIndexChanging="gvCodelistsItem_PageIndexChanging"
+                            OnRowCommand="gvCode_RowCommand"
+                            AutoGenerateColumns="False"
+                            OnRowUpdating="gvCodelistsItem_RowUpdating"
+                            OnRowDeleting="gvCodelistsItem_RowDeleting"
+                            OnRowDataBound="gvCodelistsItem_RowDataBound">
+                            <Columns>
+                                <asp:TemplateField HeaderText="No.">
+                                    <ItemTemplate>
+                                        <%# Container.DataItemIndex + 1 %>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                <asp:TemplateField HeaderText="ID" SortExpression="ID">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblID" runat="server" Text='<%# Bind("Code") %>'></asp:Label>
+                                    </ItemTemplate>
+                                    <HeaderStyle Width="200px" />
+                                </asp:TemplateField>
+                                <asp:TemplateField HeaderText="Name" SortExpression="Name">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblName" runat="server" Text='<%# Bind("Name") %>'></asp:Label>
+                                    </ItemTemplate>
+                                    <HeaderStyle Width="400px" />
+                                </asp:TemplateField>
+                                <asp:TemplateField HeaderText="Parent Code" SortExpression="ParentCode">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblParentCode" runat="server" Text='<%# Bind("ParentCode") %>'></asp:Label>
+                                    </ItemTemplate>
+                                    <HeaderStyle Width="160px" />
+                                </asp:TemplateField>
+                                <asp:TemplateField HeaderText="" ShowHeader="False">
+                                    <ItemTemplate>
+                                        <asp:ImageButton
+                                            ID="img_update"
+                                            runat="server"
+                                            CausesValidation="False"
+                                            CommandName="UPDATE"
+                                            CommandArgument="<%# Container.DataItemIndex %>"
+                                            ImageUrl="~/images/Details2.png"
+                                            ToolTip="UPDATE" />
+                                    </ItemTemplate>
+                                    <HeaderStyle Width="50px" HorizontalAlign="Center" />
+                                    <ItemStyle HorizontalAlign="Center" />
+                                </asp:TemplateField>
+                                <asp:TemplateField HeaderText="" ShowHeader="False">
+                                    <ItemTemplate>
+                                        <asp:ImageButton
+                                            ID="img_delete"
+                                            runat="server"
+                                            CausesValidation="False"
+                                            CommandName="DELETE"
+                                            CommandArgument="<%# Container.DataItemIndex %>"
+                                            ImageUrl="~/images/Delete2.png"
+                                            ToolTip="DELETE" />
+                                    </ItemTemplate>
+                                    <HeaderStyle Width="50px" HorizontalAlign="Center" />
+                                    <ItemStyle HorizontalAlign="Center" />
+                                </asp:TemplateField>
+                                <asp:TemplateField HeaderText="" ShowHeader="False">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblNumberOfAnnotation" runat="server" Text="Label"></asp:Label>
+                                        <asp:ImageButton
+                                            ID="img_annotation"
+                                            runat="server"
+                                            CausesValidation="False"
+                                            CommandName="ANNOTATION"
+                                            CommandArgument="<%# Container.DataItemIndex %>"
+                                            ImageUrl="~/images/Annotation.png"
+                                            ToolTip="ANNOTATION" />
+                                    </ItemTemplate>
+                                    <HeaderStyle Width="50px" HorizontalAlign="Center" />
+                                    <ItemStyle HorizontalAlign="Center" />
+                                </asp:TemplateField>
+                            </Columns>
+                            <HeaderStyle CssClass="hs" />
+                            <RowStyle CssClass="rs" />
+                            <AlternatingRowStyle CssClass="ars" />
+                            <PagerStyle CssClass="pgr"></PagerStyle>
+                        </asp:GridView>
+                        <asp:Label ID="lblNumberOfRows" runat="server" Text="<%# Resources.Messages.lbl_number_of_rows + ':'%>"></asp:Label>
+                        <asp:TextBox ID="txtNumberOfRows" runat="server" Style="text-align: center"
+                            OnTextChanged="txtNumberOfRows_TextChanged" onkeydown="return (event.keyCode!=13);"
+                            Width="40px"></asp:TextBox>
+                        &nbsp;<asp:Button ID="btnChangePaging" runat="server"
+                            Text="<%# Resources.Messages.lbl_change_number_of_rows%>" OnClick="btnChangePaging_Click" />
+
+                        <div style="float: left">
+                            <asp:Button ID="btnAddNewCode" Text="<%# Resources.Messages.lbl_add_code %>" OnClientClick="javascript: openP('df-Dimension',600); return false;" runat="server" OnClick="btnAddNewCode_Click" />
+                        </div>
+                        <div style="float: right; padding-bottom: 10px; margin-bottom: 10px">
+                            <uc10:CSVImporter ID="CSVImporter1" runat="server" />
+                            <br />
+                        </div>
+
+
+                        <div id="df-Dimension" class="popup_block">
+                            <asp:Label ID="lbl_title_popup_code" runat="server" Text="<%# Resources.Messages.lbl_add_code %>" CssClass="PageTitle"></asp:Label>
+                            <hr style="width: 100%;" />
+
+                            <table class="tableForm">
+                                <tr>
+                                    <td width="20%">
+                                        <asp:Label ID="lbl_id_new" runat="server" Text="<%# '*' + Resources.Messages.lbl_id+':' %>" CssClass="tdProperty"></asp:Label>
+                                    </td>
+                                    <td width="80%">
+                                        <asp:TextBox ID="txt_id_new" runat="server" Enabled="true"></asp:TextBox>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <asp:Label ID="lbl_name_new" runat="server" Text="<%# '*' + Resources.Messages.lbl_name+':' %>" CssClass="tdProperty"></asp:Label>
+                                    </td>
+                                    <td>
+                                        <uc2:AddText ID="AddTextName_new" runat="server" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <asp:Label ID="lbl_description_new" runat="server" Text="<%# Resources.Messages.lbl_description+':' %>" CssClass="tdProperty"></asp:Label>
+                                    </td>
+                                    <td>
+                                        <uc2:AddText ID="AddTextDescription_new" runat="server" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <asp:Label ID="lbl_parentid_new" runat="server" Text="<%# Resources.Messages.lbl_parent_code+':' %>" CssClass="tdProperty"></asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="txt_parentid_new" runat="server" Enabled="true"></asp:TextBox>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <asp:Label ID="lbl_order_new" runat="server" Text="<%# Resources.Messages.lbl_order+':' %>" CssClass="tdProperty"></asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="txt_order_new" runat="server" Enabled="true"></asp:TextBox>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <center>
+                                            <asp:Label ID="lblErrorOnNewInsert" runat="server" Text="" ForeColor="Red"></asp:Label><br />
+                                            <br />
+                                            <asp:Button OnClick="btnAddNewCode_Click" ID="btnNewCode" runat="server" Text="<%# Resources.Messages.btn_add_code %>" />
+                                            <asp:Button ID="btnNewCodeOnFinalStructure" runat="server" Visible="false" Text="<%# Resources.Messages.btn_add_code %>" OnClick="btnNewCodeOnFinalStructure_Click" />
+                                            <asp:Button ID="btnClearFields" runat="server" Text="<%# Resources.Messages.btn_cancel_operation %>" OnClick="btnClearFields_Click" />
+                                        </center>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <br />
+                                        <asp:Label ID="lblYouAreWorkingOnAFinal" runat="server" Text="<%# Resources.Messages.lbl_working_on_a_final %>" Visible="false"></asp:Label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+<%--                    </ContentTemplate>
+
+                    <Triggers>
+                        <asp:AsyncPostBackTrigger ControlID="CSVImporter1"/>
+                    </Triggers>
+
+                </iup:IstatUpdatePanel>--%>
+
+            </div>
+
+            <div id="categorisation" class="ircats">
                 <uc1:Categorisations runat="server" ID="Categorisations" />
             </div>
         </div>

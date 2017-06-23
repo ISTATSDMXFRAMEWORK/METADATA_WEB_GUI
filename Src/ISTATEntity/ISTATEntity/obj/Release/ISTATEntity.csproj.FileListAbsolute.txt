@@ -1,0 +1,20 @@
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\ISTATEntity\ISTATEntity\bin\Release\ISTATEntity.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\ISTATEntity\ISTATEntity\bin\Release\ISTATEntity.pdb
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\ISTATEntity\ISTATEntity\obj\Release\ISTATEntity.csprojResolveAssemblyReference.cache
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\ISTATEntity\ISTATEntity\obj\Release\ISTATEntity.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\ISTATEntity\ISTATEntity\obj\Release\ISTATEntity.pdb
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATEntity\ISTATEntity\bin\Release\ISTATEntity.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATEntity\ISTATEntity\bin\Release\ISTATEntity.pdb
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATEntity\ISTATEntity\obj\Release\ISTATEntity.csprojResolveAssemblyReference.cache
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATEntity\ISTATEntity\obj\Release\ISTATEntity.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATEntity\ISTATEntity\obj\Release\ISTATEntity.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATEntity\ISTATEntity\bin\Release\ISTATEntity.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATEntity\ISTATEntity\bin\Release\ISTATEntity.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATEntity\ISTATEntity\obj\Release\ISTATEntity.csprojResolveAssemblyReference.cache
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATEntity\ISTATEntity\obj\Release\ISTATEntity.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATEntity\ISTATEntity\obj\Release\ISTATEntity.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATEntity\ISTATEntity\bin\Release\ISTATEntity.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATEntity\ISTATEntity\bin\Release\ISTATEntity.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATEntity\ISTATEntity\obj\Release\ISTATEntity.csprojResolveAssemblyReference.cache
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATEntity\ISTATEntity\obj\Release\ISTATEntity.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATEntity\ISTATEntity\obj\Release\ISTATEntity.pdb

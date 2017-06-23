@@ -32,6 +32,16 @@ namespace ISTATRegistry.UserControls
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            EndPointElement epe = (EndPointElement)HttpContext.Current.Session["WSEndPoint"];
+
+            if (!epe.EnableCategorisations)
+            {
+                Utils.AppendScript("$('.ircats').hide();");
+
+                btnAddCategorisation.Visible = false;
+                return;
+            }
+
             _localizedUtils = new LocalizedUtils(Utils.LocalizedCulture);
 
             SetAction();
@@ -83,14 +93,19 @@ namespace ISTATRegistry.UserControls
             else
             {
                 IRServiceReference.User currentUser = Session[SESSION_KEYS.USER_DATA] as User;
-                int agencyOccurence = currentUser.agencies.Count(agency => agency.id.Equals(ucArtIdentity.Agency));
-                if (agencyOccurence > 0)
-                    _action = Action.UPDATE;
+                if (currentUser != null)
+                {
+                    int agencyOccurence = currentUser.agencies.Count(agency => agency.id.Equals(ucArtIdentity.Agency));
+
+                    if (agencyOccurence > 0)
+                        _action = Action.UPDATE;
+                    else
+                        _action = Action.VIEW;
+                }
                 else
                     _action = Action.VIEW;
             }
         }
-
 
         private void PopolateGVCategorisations()
         {
@@ -106,7 +121,7 @@ namespace ISTATRegistry.UserControls
             }
             catch (Exception ex)
             {
-                if (ex.Message == "No Results Found")
+                if (ex.Message.ToLower() == "no results found")
                     return;
                 else
                     throw ex;
@@ -134,22 +149,8 @@ namespace ISTATRegistry.UserControls
 
             gvCategorisations.PageSize = Utils.GeneralCategorizationGridNumberRow;
 
-            //            lblNumberOfTotalElements.Text = string.Format(Resources.Messages.lbl_number_of_total_rows, lCategorization.Count.ToString());
             gvCategorisations.DataSource = lCategorisation;
             gvCategorisations.DataBind();
-
-            //if (lCategorisation.Count == 0)
-            //{
-            //    txtNumberOfRows.Visible = false;
-            //    lblNumberOfRows.Visible = false;
-            //    btnChangePaging.Visible = false;
-            //}
-            //else
-            //{
-            //    txtNumberOfRows.Visible = true;
-            //    lblNumberOfRows.Visible = true;
-            //    btnChangePaging.Visible = true;
-            //}
         }
 
         private SdmxStructureType GetStructureType()
@@ -164,7 +165,7 @@ namespace ISTATRegistry.UserControls
                 case AvailableStructures.DATAFLOW:
                     sType = SdmxStructureType.GetFromEnum(SdmxStructureEnumType.Dataflow);
                     break;
-                case AvailableStructures.KEY_FAMILY:
+                case AvailableStructures.DSD:
                     sType = SdmxStructureType.GetFromEnum(SdmxStructureEnumType.Dsd);
                     break;
                 case AvailableStructures.CONCEPT_SCHEME:
@@ -185,7 +186,7 @@ namespace ISTATRegistry.UserControls
             }
             catch (Exception ex)
             {
-                if (ex.Message == "No Results Found")
+                if (ex.Message.ToLower().Equals("no results found"))
                     return;
                 else
                     throw ex;
@@ -228,7 +229,6 @@ namespace ISTATRegistry.UserControls
             {
                 TreeNode tChild = new TreeNode("[ " + cat.Id + " ] " + _localizedUtils.GetNameableName(cat));
                 tChild.Value = cat.Id;
-                //tChild.SelectAction = TreeNodeSelectAction;
                 tn.ChildNodes.Add(tChild);
 
                 FillTree(cat.Items, tChild);

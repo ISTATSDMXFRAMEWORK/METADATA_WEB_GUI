@@ -1,0 +1,665 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+Questo file viene utilizzato dal processo di pubblicazione/creazione pacchetto del progetto Web. È possibile personalizzare il comportamento del processo
+modificando il file MSBuild. Per ulteriori informazioni su questo argomento, visitare http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile>
+    </TimeStampOfAssociatedLegacyPublishXmlFile>
+    <_PublishTargetUrl>C:\publish_registry</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="404.aspx">
+      <publishTime>01/27/2016 17:10:46</publishTime>
+    </File>
+    <File Include="admin.aspx">
+      <publishTime>01/27/2016 17:10:36</publishTime>
+    </File>
+    <File Include="AgencySchemeItemDetails.aspx">
+      <publishTime>12/29/2016 10:27:53</publishTime>
+    </File>
+    <File Include="agencyschemes.aspx">
+      <publishTime>10/28/2016 16:39:48</publishTime>
+    </File>
+    <File Include="App_Data/Languages.xml">
+      <publishTime>11/28/2016 11:41:52</publishTime>
+    </File>
+    <File Include="App_Data/ws_istat.xml">
+      <publishTime>02/02/2017 11:43:39</publishTime>
+    </File>
+    <File Include="App_Data/ws_istat2.xml">
+      <publishTime>11/10/2016 10:08:49</publishTime>
+    </File>
+    <File Include="App_GlobalResources/Messages.en.resx">
+      <publishTime>02/16/2017 17:04:00</publishTime>
+    </File>
+    <File Include="App_GlobalResources/Messages.lo.resx">
+      <publishTime>01/06/2016 10:44:02</publishTime>
+    </File>
+    <File Include="App_GlobalResources/Messages.resx">
+      <publishTime>02/16/2017 17:04:01</publishTime>
+    </File>
+    <File Include="App_GlobalResources/Messages.sr-Cyrl.resx">
+      <publishTime>12/06/2016 16:28:34</publishTime>
+    </File>
+    <File Include="App_GlobalResources/Messages.sr-Latn.resx">
+      <publishTime>12/06/2016 16:28:32</publishTime>
+    </File>
+    <File Include="bin/AjaxControlToolkit.dll">
+      <publishTime>05/24/2016 14:40:40</publishTime>
+    </File>
+    <File Include="bin/csv_files/stub.txt">
+      <publishTime>04/24/2017 15:25:38</publishTime>
+    </File>
+    <File Include="bin/DotNetRtfWriter.dll">
+      <publishTime>12/05/2016 10:30:30</publishTime>
+    </File>
+    <File Include="bin/FlyCallWS.dll">
+      <publishTime>11/28/2016 14:45:00</publishTime>
+    </File>
+    <File Include="bin/Ionic.Utils.Zip.dll">
+      <publishTime>01/27/2016 17:10:34</publishTime>
+    </File>
+    <File Include="bin/ISTAT.EXPORT.dll">
+      <publishTime>10/28/2016 10:53:38</publishTime>
+    </File>
+    <File Include="bin/ISTAT.IO.dll">
+      <publishTime>10/17/2016 17:50:37</publishTime>
+    </File>
+    <File Include="bin/ISTATEntity.dll">
+      <publishTime>10/21/2016 11:49:58</publishTime>
+    </File>
+    <File Include="bin/ISTATEntityMapper.dll">
+      <publishTime>04/24/2017 14:18:50</publishTime>
+    </File>
+    <File Include="bin/ISTATRegistry.dll">
+      <publishTime>04/24/2017 15:26:25</publishTime>
+    </File>
+    <File Include="bin/ISTATRegistry.XmlSerializers.dll">
+      <publishTime>04/24/2017 15:26:26</publishTime>
+    </File>
+    <File Include="bin/ISTATUtils.dll">
+      <publishTime>02/17/2017 11:15:07</publishTime>
+    </File>
+    <File Include="bin/log4net.dll">
+      <publishTime>06/27/2016 11:35:22</publishTime>
+    </File>
+    <File Include="bin/LumenWorks.Framework.IO.dll">
+      <publishTime>01/27/2016 17:10:34</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>01/28/2016 14:22:24</publishTime>
+    </File>
+    <File Include="bin/Org.Sdmx.Resources.SdmxMl.Schemas.V10.dll">
+      <publishTime>06/27/2016 11:35:22</publishTime>
+    </File>
+    <File Include="bin/Org.Sdmx.Resources.SdmxMl.Schemas.V20.dll">
+      <publishTime>06/27/2016 11:35:22</publishTime>
+    </File>
+    <File Include="bin/Org.Sdmx.Resources.SdmxMl.Schemas.V21.dll">
+      <publishTime>06/27/2016 11:35:22</publishTime>
+    </File>
+    <File Include="bin/OutputFiles/stub.txt">
+      <publishTime>04/24/2017 15:25:38</publishTime>
+    </File>
+    <File Include="bin/SdmxApi.dll">
+      <publishTime>06/27/2016 11:35:22</publishTime>
+    </File>
+    <File Include="bin/SdmxObjects.dll">
+      <publishTime>06/27/2016 11:35:22</publishTime>
+    </File>
+    <File Include="bin/SdmxSourceUtil.dll">
+      <publishTime>06/27/2016 11:35:22</publishTime>
+    </File>
+    <File Include="bin/SdmxStructureParser.dll">
+      <publishTime>06/27/2016 11:35:22</publishTime>
+    </File>
+    <File Include="bin/SdmxStructureRetrieval.dll">
+      <publishTime>06/27/2016 11:35:22</publishTime>
+    </File>
+    <File Include="bin/UploadedFiles/stub.txt">
+      <publishTime>04/24/2017 15:25:38</publishTime>
+    </File>
+    <File Include="bin/WSDAL.dll">
+      <publishTime>04/24/2017 14:18:51</publishTime>
+    </File>
+    <File Include="bin/Xml.Schema.Linq.dll">
+      <publishTime>06/27/2016 11:35:22</publishTime>
+    </File>
+    <File Include="Categorization.aspx">
+      <publishTime>10/28/2016 15:07:45</publishTime>
+    </File>
+    <File Include="categorizationItemDetails.aspx">
+      <publishTime>12/29/2016 10:23:15</publishTime>
+    </File>
+    <File Include="CategorySchemeGraph.aspx">
+      <publishTime>03/08/2016 15:29:26</publishTime>
+    </File>
+    <File Include="CategorySchemeItemDetails.aspx">
+      <publishTime>11/15/2016 11:16:24</publishTime>
+    </File>
+    <File Include="CategorySchemes.aspx">
+      <publishTime>10/28/2016 15:07:21</publishTime>
+    </File>
+    <File Include="codelistItemDetails.aspx">
+      <publishTime>01/26/2017 16:04:58</publishTime>
+    </File>
+    <File Include="codelists.aspx">
+      <publishTime>02/15/2017 16:35:07</publishTime>
+    </File>
+    <File Include="ConceptSchemeItemDetails.aspx">
+      <publishTime>01/24/2017 12:53:55</publishTime>
+    </File>
+    <File Include="conceptschemes.aspx">
+      <publishTime>10/28/2016 15:06:35</publishTime>
+    </File>
+    <File Include="ContentConstraint.aspx">
+      <publishTime>11/14/2016 12:26:02</publishTime>
+    </File>
+    <File Include="ContentConstraintItemDetails.aspx">
+      <publishTime>07/14/2016 13:06:08</publishTime>
+    </File>
+    <File Include="css/blank.gif">
+      <publishTime>01/27/2016 17:10:36</publishTime>
+    </File>
+    <File Include="css/gridview.css">
+      <publishTime>01/27/2016 17:10:36</publishTime>
+    </File>
+    <File Include="css/jquery.msg.css">
+      <publishTime>01/27/2016 17:10:36</publishTime>
+    </File>
+    <File Include="css/PIE.htc">
+      <publishTime>01/27/2016 17:10:36</publishTime>
+    </File>
+    <File Include="css/popup.css">
+      <publishTime>01/27/2016 17:10:36</publishTime>
+    </File>
+    <File Include="css/style.css">
+      <publishTime>05/02/2016 16:38:16</publishTime>
+    </File>
+    <File Include="css/tabs.css">
+      <publishTime>02/02/2016 15:24:16</publishTime>
+    </File>
+    <File Include="csv_files/stub.txt">
+      <publishTime>04/24/2017 15:25:38</publishTime>
+    </File>
+    <File Include="DataConsumerSchemeItemDetails.aspx">
+      <publishTime>01/30/2017 15:48:56</publishTime>
+    </File>
+    <File Include="dataconsumerschemes.aspx">
+      <publishTime>10/28/2016 15:05:41</publishTime>
+    </File>
+    <File Include="DataFlow.aspx">
+      <publishTime>10/28/2016 15:05:11</publishTime>
+    </File>
+    <File Include="DataFlowItemDetails.aspx">
+      <publishTime>11/14/2016 10:12:04</publishTime>
+    </File>
+    <File Include="DataProviderSchemeItemDetails.aspx">
+      <publishTime>01/30/2017 15:44:46</publishTime>
+    </File>
+    <File Include="dataproviderschemes.aspx">
+      <publishTime>10/28/2016 15:04:47</publishTime>
+    </File>
+    <File Include="default.aspx">
+      <publishTime>01/27/2016 17:10:50</publishTime>
+    </File>
+    <File Include="GenericErrorPage.aspx">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>01/27/2016 17:10:46</publishTime>
+    </File>
+    <File Include="Hcl.aspx">
+      <publishTime>10/28/2016 15:04:17</publishTime>
+    </File>
+    <File Include="HclItemDetails.aspx">
+      <publishTime>07/14/2016 13:05:52</publishTime>
+    </File>
+    <File Include="HttpErrorPage.aspx">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/Add.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/Annotation.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/arrow_default.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/arrow_dw.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/arrow_up.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/artefact.jpg">
+      <publishTime>12/30/2016 11:14:54</publishTime>
+    </File>
+    <File Include="images/back.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/border.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/brankic1979-icon-set.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/Cancel File-50 - disable.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/Cancel File-50.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/Cancel-50 - disable.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/Cancel-50.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/Check File-50 - disable.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/Check File-50.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/close_pop.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/Codelist.png">
+      <publishTime>02/05/2016 14:38:18</publishTime>
+    </File>
+    <File Include="images/ConceptScheme.png">
+      <publishTime>02/05/2016 14:38:18</publishTime>
+    </File>
+    <File Include="images/Connection.png">
+      <publishTime>12/28/2016 12:49:31</publishTime>
+    </File>
+    <File Include="images/ConnectionBig.png">
+      <publishTime>12/28/2016 12:51:27</publishTime>
+    </File>
+    <File Include="images/csvImport.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/Cut-50 - disable.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/Cut-50.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/Dataflow.png">
+      <publishTime>02/05/2016 14:38:18</publishTime>
+    </File>
+    <File Include="images/Delete-50 - disable.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/Delete-50.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/Delete.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/Delete2.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/Delete_mini.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/Details.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/Details2.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/download-Maxi.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/download.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/download2.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/download20.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/download21.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/downloadCSV.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/dsd.png">
+      <publishTime>02/03/2016 16:41:46</publishTime>
+    </File>
+    <File Include="images/Edit-50 - disable.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/Edit-50.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/Edit.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/Edit_mini.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/favicon.ico">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/GetObject.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/Immagine.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/istat.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/LSB.png">
+      <publishTime>02/16/2017 10:14:58</publishTime>
+    </File>
+    <File Include="images/mini_loading.gif">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/Paste Filled-50.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/Plus-50 - disable.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/Plus-50.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/SdmxLogo.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/SdmxLogoBrowser.png">
+      <publishTime>02/15/2016 10:11:20</publishTime>
+    </File>
+    <File Include="images/Search_off.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/Search_on.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/ServerOff.png">
+      <publishTime>12/28/2016 11:41:21</publishTime>
+    </File>
+    <File Include="images/ServerOn.png">
+      <publishTime>12/28/2016 11:41:21</publishTime>
+    </File>
+    <File Include="images/shad2.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/si.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/Trash-50 - disable.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/Trash-50.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/Upload.png">
+      <publishTime>01/27/2016 17:10:52</publishTime>
+    </File>
+    <File Include="images/World.png">
+      <publishTime>12/28/2016 13:03:54</publishTime>
+    </File>
+    <File Include="jquery/external/jquery/jquery.js">
+      <publishTime>01/27/2016 17:10:44</publishTime>
+    </File>
+    <File Include="jquery/external/jquery/jquery.min.js">
+      <publishTime>01/27/2016 17:10:44</publishTime>
+    </File>
+    <File Include="jquery/images/ui-bg_diagonals-thick_18_b81900_40x40.png">
+      <publishTime>01/27/2016 17:10:44</publishTime>
+    </File>
+    <File Include="jquery/images/ui-bg_diagonals-thick_20_666666_40x40.png">
+      <publishTime>01/27/2016 17:10:44</publishTime>
+    </File>
+    <File Include="jquery/images/ui-bg_flat_10_000000_40x100.png">
+      <publishTime>01/27/2016 17:10:44</publishTime>
+    </File>
+    <File Include="jquery/images/ui-bg_glass_100_f6f6f6_1x400.png">
+      <publishTime>01/27/2016 17:10:44</publishTime>
+    </File>
+    <File Include="jquery/images/ui-bg_glass_100_fdf5ce_1x400.png">
+      <publishTime>01/27/2016 17:10:44</publishTime>
+    </File>
+    <File Include="jquery/images/ui-bg_glass_65_ffffff_1x400.png">
+      <publishTime>01/27/2016 17:10:44</publishTime>
+    </File>
+    <File Include="jquery/images/ui-bg_gloss-wave_35_f6a828_500x100.png">
+      <publishTime>01/27/2016 17:10:44</publishTime>
+    </File>
+    <File Include="jquery/images/ui-bg_highlight-soft_100_eeeeee_1x100.png">
+      <publishTime>01/27/2016 17:10:44</publishTime>
+    </File>
+    <File Include="jquery/images/ui-bg_highlight-soft_75_ffe45c_1x100.png">
+      <publishTime>01/27/2016 17:10:44</publishTime>
+    </File>
+    <File Include="jquery/images/ui-icons_222222_256x240.png">
+      <publishTime>01/27/2016 17:10:44</publishTime>
+    </File>
+    <File Include="jquery/images/ui-icons_228ef1_256x240.png">
+      <publishTime>01/27/2016 17:10:44</publishTime>
+    </File>
+    <File Include="jquery/images/ui-icons_ef8c08_256x240.png">
+      <publishTime>01/27/2016 17:10:44</publishTime>
+    </File>
+    <File Include="jquery/images/ui-icons_ffd27a_256x240.png">
+      <publishTime>01/27/2016 17:10:44</publishTime>
+    </File>
+    <File Include="jquery/images/ui-icons_ffffff_256x240.png">
+      <publishTime>01/27/2016 17:10:44</publishTime>
+    </File>
+    <File Include="jquery/index.html">
+      <publishTime>01/27/2016 17:10:44</publishTime>
+    </File>
+    <File Include="jquery/jquery-ui.css">
+      <publishTime>01/27/2016 17:10:44</publishTime>
+    </File>
+    <File Include="jquery/jquery-ui.js">
+      <publishTime>01/27/2016 17:10:44</publishTime>
+    </File>
+    <File Include="jquery/jquery-ui.min.css">
+      <publishTime>01/27/2016 17:10:44</publishTime>
+    </File>
+    <File Include="jquery/jquery-ui.min.js">
+      <publishTime>01/27/2016 17:10:44</publishTime>
+    </File>
+    <File Include="jquery/jquery-ui.structure.css">
+      <publishTime>01/27/2016 17:10:44</publishTime>
+    </File>
+    <File Include="jquery/jquery-ui.structure.min.css">
+      <publishTime>01/27/2016 17:10:44</publishTime>
+    </File>
+    <File Include="jquery/jquery-ui.theme.css">
+      <publishTime>01/27/2016 17:10:44</publishTime>
+    </File>
+    <File Include="jquery/jquery-ui.theme.min.css">
+      <publishTime>01/27/2016 17:10:44</publishTime>
+    </File>
+    <File Include="jqueryPopUpDemo.htm">
+      <publishTime>01/27/2016 17:10:42</publishTime>
+    </File>
+    <File Include="js/animatedcollapse.js">
+      <publishTime>01/27/2016 17:10:36</publishTime>
+    </File>
+    <File Include="js/blank.gif">
+      <publishTime>01/27/2016 17:10:36</publishTime>
+    </File>
+    <File Include="js/jquery-1.7.1.min.js">
+      <publishTime>01/27/2016 17:10:36</publishTime>
+    </File>
+    <File Include="js/jquery.ba-hashchange.js">
+      <publishTime>01/27/2016 17:10:36</publishTime>
+    </File>
+    <File Include="js/jquery.blockUI.js">
+      <publishTime>01/17/2017 14:58:47</publishTime>
+    </File>
+    <File Include="js/jquery.center.min.js">
+      <publishTime>01/27/2016 17:10:36</publishTime>
+    </File>
+    <File Include="js/jquery.easytabs.min.js">
+      <publishTime>01/27/2016 17:10:36</publishTime>
+    </File>
+    <File Include="js/jquery.min.js">
+      <publishTime>01/27/2016 17:10:36</publishTime>
+    </File>
+    <File Include="js/jquery.msg.min.js">
+      <publishTime>01/27/2016 17:10:36</publishTime>
+    </File>
+    <File Include="js/PopUp.js">
+      <publishTime>05/06/2016 14:00:12</publishTime>
+    </File>
+    <File Include="KeyFamily.aspx">
+      <publishTime>10/28/2016 15:03:49</publishTime>
+    </File>
+    <File Include="KeyFamilyItemDetails.aspx">
+      <publishTime>10/19/2016 12:02:36</publishTime>
+    </File>
+    <File Include="master.Master">
+      <publishTime>02/16/2017 11:11:05</publishTime>
+    </File>
+    <File Include="Oops.aspx">
+      <publishTime>01/27/2016 17:10:36</publishTime>
+    </File>
+    <File Include="OrganizationUnitSchemeItemDetails.aspx">
+      <publishTime>01/30/2017 15:52:49</publishTime>
+    </File>
+    <File Include="organizationunitschemes.aspx">
+      <publishTime>10/28/2016 15:02:59</publishTime>
+    </File>
+    <File Include="OutputFiles/stub.txt">
+      <publishTime>04/24/2017 15:25:38</publishTime>
+    </File>
+    <File Include="SdmxQueryTemplate/AgencyScheme.xml">
+      <publishTime>01/27/2016 17:10:36</publishTime>
+    </File>
+    <File Include="SdmxQueryTemplate/Categorisation.xml">
+      <publishTime>01/27/2016 17:10:36</publishTime>
+    </File>
+    <File Include="SdmxQueryTemplate/CategoryScheme.xml">
+      <publishTime>01/27/2016 17:10:36</publishTime>
+    </File>
+    <File Include="SdmxQueryTemplate/CategorySchemeWithParents.xml">
+      <publishTime>02/02/2016 18:36:00</publishTime>
+    </File>
+    <File Include="SdmxQueryTemplate/CodeList.xml">
+      <publishTime>01/27/2016 17:10:36</publishTime>
+    </File>
+    <File Include="SdmxQueryTemplate/ConceptScheme.xml">
+      <publishTime>01/27/2016 17:10:36</publishTime>
+    </File>
+    <File Include="SdmxQueryTemplate/ContentConstraint.xml">
+      <publishTime>01/27/2016 17:10:36</publishTime>
+    </File>
+    <File Include="SdmxQueryTemplate/DataConsumerScheme.xml">
+      <publishTime>01/27/2016 17:10:36</publishTime>
+    </File>
+    <File Include="SdmxQueryTemplate/DataFlow.xml">
+      <publishTime>01/27/2016 17:10:36</publishTime>
+    </File>
+    <File Include="SdmxQueryTemplate/DataProviderScheme.xml">
+      <publishTime>01/27/2016 17:10:36</publishTime>
+    </File>
+    <File Include="SdmxQueryTemplate/DataStructure.xml">
+      <publishTime>01/27/2016 17:10:36</publishTime>
+    </File>
+    <File Include="SdmxQueryTemplate/DataStructureWithRef.xml">
+      <publishTime>01/27/2016 17:10:36</publishTime>
+    </File>
+    <File Include="SdmxQueryTemplate/HierarchicalCodelist.xml">
+      <publishTime>01/27/2016 17:10:36</publishTime>
+    </File>
+    <File Include="SdmxQueryTemplate/OrganisationUnitScheme.xml">
+      <publishTime>01/27/2016 17:10:36</publishTime>
+    </File>
+    <File Include="SdmxQueryTemplate/StructureSet.xml">
+      <publishTime>01/27/2016 17:10:36</publishTime>
+    </File>
+    <File Include="SdmxQueryTemplate/SubmitStructureDelete.xml">
+      <publishTime>01/27/2016 17:10:36</publishTime>
+    </File>
+    <File Include="SdmxQueryTemplate/SubmitStructureReplace.xml">
+      <publishTime>01/27/2016 17:10:36</publishTime>
+    </File>
+    <File Include="StructureSet.aspx">
+      <publishTime>11/14/2016 12:21:13</publishTime>
+    </File>
+    <File Include="StructureSetItemDetails.aspx">
+      <publishTime>07/14/2016 13:05:48</publishTime>
+    </File>
+    <File Include="test.aspx">
+      <publishTime>01/27/2016 17:10:46</publishTime>
+    </File>
+    <File Include="UploadedFiles/stub.txt">
+      <publishTime>04/24/2017 15:25:38</publishTime>
+    </File>
+    <File Include="UploadStructure.aspx">
+      <publishTime>06/30/2016 16:58:14</publishTime>
+    </File>
+    <File Include="UserControls/AddText.ascx">
+      <publishTime>05/06/2016 13:58:56</publishTime>
+    </File>
+    <File Include="UserControls/ArtefactDelete.ascx">
+      <publishTime>01/27/2016 17:10:36</publishTime>
+    </File>
+    <File Include="UserControls/Categorisations.ascx">
+      <publishTime>04/04/2016 16:22:36</publishTime>
+    </File>
+    <File Include="UserControls/ControlAnnotations.ascx">
+      <publishTime>01/27/2016 17:10:36</publishTime>
+    </File>
+    <File Include="UserControls/CSVImporter.ascx">
+      <publishTime>06/06/2016 16:29:46</publishTime>
+    </File>
+    <File Include="UserControls/DuplicateArtefact.ascx">
+      <publishTime>01/27/2016 17:10:36</publishTime>
+    </File>
+    <File Include="UserControls/FileDownload3.ascx">
+      <publishTime>02/06/2017 10:34:15</publishTime>
+    </File>
+    <File Include="UserControls/GetCodeList.ascx">
+      <publishTime>06/30/2016 16:56:38</publishTime>
+    </File>
+    <File Include="UserControls/GetConcept.ascx">
+      <publishTime>05/17/2016 18:01:14</publishTime>
+    </File>
+    <File Include="UserControls/GetDataFlow.ascx">
+      <publishTime>05/17/2016 18:03:10</publishTime>
+    </File>
+    <File Include="UserControls/GetDSD.ascx">
+      <publishTime>11/04/2016 15:42:30</publishTime>
+    </File>
+    <File Include="UserControls/MultipleDownload.ascx">
+      <publishTime>02/16/2017 17:12:13</publishTime>
+    </File>
+    <File Include="UserControls/SearchBar.ascx">
+      <publishTime>01/25/2017 17:26:47</publishTime>
+    </File>
+    <File Include="UserControls/UserPopUp.ascx">
+      <publishTime>01/27/2016 17:10:36</publishTime>
+    </File>
+    <File Include="UserFiles/Languages.xml">
+      <publishTime>09/20/2016 12:51:55</publishTime>
+    </File>
+    <File Include="UserFiles/ws_istat.xml">
+      <publishTime>01/29/2016 17:15:10</publishTime>
+    </File>
+    <File Include="UserFiles/ws_istat2.xml">
+      <publishTime>01/27/2016 17:10:50</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>04/24/2017 15:25:16</publishTime>
+    </File>
+    <File Include="WebServices/IRWebService.asmx">
+      <publishTime>12/15/2016 12:09:25</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

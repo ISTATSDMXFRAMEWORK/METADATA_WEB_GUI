@@ -1,0 +1,30 @@
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\ISTATEntity\ISTATEntity\bin\Debug\ISTATEntity.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\ISTATEntity\ISTATEntity\bin\Debug\ISTATEntity.pdb
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\ISTATEntity\ISTATEntity\obj\Debug\ISTATEntity.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\ISTATEntity\ISTATEntity\obj\Debug\ISTATEntity.pdb
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\ISTATEntity\ISTATEntity\obj\Debug\ISTATEntity.csprojResolveAssemblyReference.cache
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATEntity\ISTATEntity\bin\Debug\ISTATEntity.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATEntity\ISTATEntity\bin\Debug\ISTATEntity.pdb
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATEntity\ISTATEntity\obj\Debug\ISTATEntity.csprojResolveAssemblyReference.cache
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATEntity\ISTATEntity\obj\Debug\ISTATEntity.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATEntity\ISTATEntity\obj\Debug\ISTATEntity.pdb
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\ISTATEntity\ISTATEntity\bin\Debug\ISTATEntity.dll
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\ISTATEntity\ISTATEntity\bin\Debug\ISTATEntity.pdb
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\ISTATEntity\ISTATEntity\obj\Debug\ISTATEntity.csprojResolveAssemblyReference.cache
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\ISTATEntity\ISTATEntity\obj\Debug\ISTATEntity.dll
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\ISTATEntity\ISTATEntity\obj\Debug\ISTATEntity.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATEntity\ISTATEntity\bin\Debug\ISTATEntity.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATEntity\ISTATEntity\bin\Debug\ISTATEntity.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATEntity\ISTATEntity\obj\Debug\ISTATEntity.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATEntity\ISTATEntity\obj\Debug\ISTATEntity.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATEntity\ISTATEntity\obj\Debug\ISTATEntity.csprojResolveAssemblyReference.cache
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATEntity\ISTATEntity\bin\Debug\ISTATEntity.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATEntity\ISTATEntity\bin\Debug\ISTATEntity.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATEntity\ISTATEntity\obj\Debug\ISTATEntity.csprojResolveAssemblyReference.cache
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATEntity\ISTATEntity\obj\Debug\ISTATEntity.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATEntity\ISTATEntity\obj\Debug\ISTATEntity.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATEntity\ISTATEntity\bin\Debug\ISTATEntity.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATEntity\ISTATEntity\bin\Debug\ISTATEntity.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATEntity\ISTATEntity\obj\Debug\ISTATEntity.csprojResolveAssemblyReference.cache
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATEntity\ISTATEntity\obj\Debug\ISTATEntity.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATEntity\ISTATEntity\obj\Debug\ISTATEntity.pdb

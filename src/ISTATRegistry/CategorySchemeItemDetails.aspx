@@ -6,6 +6,8 @@
 <%@ Register src="~/UserControls/ControlAnnotations.ascx" tagname="ControlAnnotations" tagprefix="uc4" %>
 
 <%@ Register src="UserControls/DuplicateArtefact.ascx" tagname="DuplicateArtefact" tagprefix="uc5" %>
+<%@ Register Src="UserControls/CSVImporter.ascx" TagName="CSVImporter" TagPrefix="uc10" %>
+
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <script type="text/javascript">
@@ -29,7 +31,7 @@
             });
 
             $(".datepicker").datepicker("option", "showAnim", "drop");
-
+            $(".datepicker").datepicker($.datepicker.regional['<%=Session["Language"]%>']);
             jQuery(function ($) {
                 var form = $('form'), oldSubmit = form[0].onsubmit;
                 form[0].onsubmit = null;
@@ -236,9 +238,21 @@
                             <br /><br />
                             <asp:Label ID="lblMoveInstructions" runat="server" Text="<%# Resources.Messages.txt_move_instructions_first %>"></asp:Label>
                         </td>
+
+
+                        <!------------ Modifca UserControlCSV ------------------>
                         <td align= "right">
-                            <asp:ImageButton ID="imgImportCsv" runat="server" ToolTip="Import CSV file" AlternateText="Import CSV file" ImageUrl="~/images/csvImport.png" onClientClick= "javascript: openP('importCsv',450); return false;"/>
+                            <uc10:CSVImporter ID="CSVImporter1" runat="server" />
                         </td>
+<%--                        <div style="float:right; padding-bottom:10px; margin-bottom:10px">
+                            <uc10:CSVImporter ID="CSVImporter1" runat="server" />
+                            <br />
+                        </div>--%>
+
+<%--                        <td align= "right">
+                            <asp:ImageButton ID="imgImportCsv" runat="server" ToolTip="Import CSV file" AlternateText="Import CSV file" ImageUrl="~/images/csvImport.png" onClientClick= "javascript: openP('importCsv',450); return false;"/>
+                        </td>--%>
+
                     </tr>
                 </table>               
                <div id="importCsv" class="popup_block">

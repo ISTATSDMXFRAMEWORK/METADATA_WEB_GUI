@@ -163,6 +163,12 @@ namespace ISTATRegistry
                     break;
             }
 
+            ucAnnotationDimension.AnnotationCreated += ucAnnotationDimension_AnnotationCreated;
+            ucAnnotationDimension.AnnotationDeleted += ucAnnotationDimension_AnnotationDeleted;
+            ucAnnotationAttribute.AnnotationCreated += ucAnnotationAttribute_AnnotationCreated;
+            ucAnnotationAttribute.AnnotationDeleted += ucAnnotationAttribute_AnnotationDeleted;
+            ucAnnotationGroup.AnnotationCreated += ucAnnotationGroup_AnnotationCreated;
+            ucAnnotationGroup.AnnotationDeleted += ucAnnotationGroup_AnnotationDeleted;
 
             DuplicateArtefact1.ucStructureType = SdmxStructureEnumType.Dsd;
             DuplicateArtefact1.ucMaintanableArtefact = _dsdMutable;
@@ -197,6 +203,36 @@ namespace ISTATRegistry
             btnAddGroup.DataBind();
             lbl_annotation.DataBind();
             lblAnnotaionPM.DataBind();
+        }
+
+        void ucAnnotationGroup_AnnotationDeleted(object sender, IAnnotationMutableObject e)
+        {
+            SetGroupTab(_dsdMutable.ImmutableInstance);
+        }
+
+        void ucAnnotationGroup_AnnotationCreated(object sender, IAnnotationMutableObject e)
+        {
+            SetGroupTab(_dsdMutable.ImmutableInstance);
+        }
+
+        void ucAnnotationAttribute_AnnotationDeleted(object sender, IAnnotationMutableObject e)
+        {
+            SetAttributeTab(_dsdMutable.ImmutableInstance);
+        }
+
+        void ucAnnotationAttribute_AnnotationCreated(object sender, IAnnotationMutableObject e)
+        {
+            SetAttributeTab(_dsdMutable.ImmutableInstance);
+        }
+
+        void ucAnnotationDimension_AnnotationDeleted(object sender, IAnnotationMutableObject e)
+        {
+            SetDimensionTab(_dsdMutable.ImmutableInstance);
+        }
+
+        private void ucAnnotationDimension_AnnotationCreated(object sender, IAnnotationMutableObject e)
+        {
+            SetDimensionTab(_dsdMutable.ImmutableInstance);
         }
 
         protected void btnOpenAttributePopUp_Click(object sender, ImageClickEventArgs e)
@@ -348,6 +384,7 @@ namespace ISTATRegistry
                     txtAttributeID.Text = attrEdit.Id;
                     txtAttributeConcept.Text = concept;
                     txtAttributeCodelist.Text = codedRepresentation;
+                    txtAttOrder.Enabled = !(_action == Action.VIEW);
                     cmbAssignmentStatus.SelectedValue = assStatus;
                     cmbAttachLevel.SelectedValue = attachLevel;
 
@@ -514,6 +551,8 @@ namespace ISTATRegistry
                     txtDimCodelist.Text = codedRep;
                     txtDimConceptScheme.Text = codedRep;
                     txtDimOrder.Text = orderID;
+                    txtDimOrder.Enabled = !(_action == Action.VIEW);
+
                     cmbDimType.Enabled = false;
 
                     hdnEditDimension.Value = "true";
@@ -633,7 +672,7 @@ namespace ISTATRegistry
 
                 Label lblNumber = (Label)e.Row.FindControl("lblNumberOfAnnotationDimensions");
                 ImageButton btnImage = (ImageButton)e.Row.FindControl("ibDimAnnotation");
-                int numberOfAnnotation = dimension.Annotations.Where(ann => ann.Id != null).Count();
+                int numberOfAnnotation = dimension.Annotations.Where(ann => ann.Id != null && ann.Type != "@ORDER@").Count();
                 lblNumber.Text = numberOfAnnotation.ToString();
                 if (numberOfAnnotation == 0 && _action == Action.VIEW)
                 {
@@ -735,6 +774,8 @@ namespace ISTATRegistry
                 _dsdMutable.AddGroup(group);
                 SetDsdToSession();
                 SetGroupTab(_dsdMutable.ImmutableInstance);
+
+                PopulateAttachedGroup(_dsdMutable);
 
                 txtGroupID.Text = "";
                 lbGroupDimension.ClearSelection();
@@ -870,10 +911,12 @@ namespace ISTATRegistry
 
                 if (Int32.TryParse(txtAttOrder.Text, out orderID))
                 {
+                    if (orderID <= 0)
+                        orderID = 1;
                     _dsdMutable = ReOrderAttribute(_dsdMutable, attr, orderID);
                 }
                 else
-                    _dsdMutable.Attributes.Add(attr);
+                    _dsdMutable.AddAttribute(attr);
 
                 SetDsdToSession();
                 SetAttributeTab(_dsdMutable.ImmutableInstance);
@@ -947,9 +990,6 @@ namespace ISTATRegistry
                 dim.ConceptRef = conceptRef;
             }
             #endregion
-
-
-
 
             switch (cmbDimType.SelectedValue)
             {
@@ -1048,6 +1088,11 @@ namespace ISTATRegistry
                     {
                         if (dimDel.Id == txtDimID.Text)
                         {
+                            foreach (AnnotationMutableCore ads in dimDel.Annotations)
+                            {
+                                if (ads.Type != "@ORDER@")
+                                    dim.AddAnnotation(ads);
+                            }
                             _dsdMutable.Dimensions.Remove(dimDel);
                             break;
                         }
@@ -1058,6 +1103,8 @@ namespace ISTATRegistry
 
                 if (Int32.TryParse(txtDimOrder.Text, out orderID))
                 {
+                    if (orderID <= 0)
+                        orderID = 1;
                     _dsdMutable = ReOrderDimension(_dsdMutable, dim, orderID);
                 }
                 else
@@ -1141,11 +1188,13 @@ namespace ISTATRegistry
                     _dsdMutable.Uri = new Uri(txtDSDURI.Text);
 
                 if (txtValidFrom.Text != String.Empty)
-                    _dsdMutable.StartDate = DateTime.ParseExact(txtValidFrom.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
-
+                    _dsdMutable.StartDate = DateTime.ParseExact(txtValidFrom.Text, "d/M/yyyy", CultureInfo.InvariantCulture);
+                else
+                    _dsdMutable.StartDate = null;
                 if (txtValidTo.Text != String.Empty)
-                    _dsdMutable.EndDate = DateTime.ParseExact(txtValidTo.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
-
+                    _dsdMutable.EndDate = DateTime.ParseExact(txtValidTo.Text, "d/M/yyyy", CultureInfo.InvariantCulture);
+                else
+                    _dsdMutable.EndDate = null;
                 // PM 
                 string[] pmValues = txtConcept.Text.Substring(0, txtConcept.Text.IndexOf(" ")).Split(',');
                 string pmConcept = txtConcept.Text.Substring(txtConcept.Text.LastIndexOf(" ") + 1);
@@ -1198,26 +1247,21 @@ namespace ISTATRegistry
                 //Utils.ShowDialog(successMessage, 300);
                 //Utils.AppendScript("location.href='./KeyFamily.aspx';");
 
-                string jsYes, jsNo;
+                string jsYes, jsNo, script;
 
-                jsYes = String.Format("location.href='KeyFamilyItemDetails.aspx?ACTION=UPDATE&ID={0}&AGENCY={1}&VERSION={2}&ISFINAL={3}",
+                script = "CloseConfirm();";
+
+                jsNo = String.Format("location.href='KeyFamilyItemDetails.aspx?ACTION=UPDATE&ID={0}&AGENCY={1}&VERSION={2}&ISFINAL={3}'",
                                         _dsdMutable.Id, _dsdMutable.AgencyId, _dsdMutable.Version, _dsdMutable.FinalStructure.IsTrue.ToString());
-                //jsNo = "location.href='KeyFamily.aspx?m=y'";
+                //jsYes = "location.href='KeyFamily.aspx?m=y'";
 
-                string successMessage = Resources.Messages.succ_operation + " " + Resources.Messages.lbl_manage_categorisations;
 
                 if (_action == Action.INSERT)
                 {
-                    jsNo = jsYes + "'";
-                    jsYes += "&OCT=true'";
-                }
-                else
-                {
-                    jsYes += "&OCT=true'";
-                    jsNo = "CloseConfirm();";
+                    script = jsNo;
                 }
 
-                Utils.ShowConfirm(successMessage, jsYes, jsNo);
+                Utils.ShowDialogBeforeScript(Resources.Messages.succ_operation, script);
 
             }
             catch (Exception ex)
@@ -1239,11 +1283,11 @@ namespace ISTATRegistry
 
             if (_dsdMutable.Attributes != null)
                 foreach (var attr in _dsdMutable.Attributes)
-            {
-                annToRemove = attr.Annotations.Where(an => an.Type == "@ORDER@").ToList();
-                foreach (var ann in annToRemove)
-                    attr.Annotations.Remove(ann);
-            }
+                {
+                    annToRemove = attr.Annotations.Where(an => an.Type == "@ORDER@").ToList();
+                    foreach (var ann in annToRemove)
+                        attr.Annotations.Remove(ann);
+                }
         }
 
         protected void gvAttribute_RowDataBound(object sender, GridViewRowEventArgs e)
@@ -1703,6 +1747,7 @@ namespace ISTATRegistry
             GetConceptAttribute.ucOpenPopUpName = "df-Attribute";
             GetConceptAttribute.ucOpenPopUpWidth = 600;
             GetConceptAttribute.IsConceptSelection = true;
+            GetConceptAttribute.TargetWebControlID = txtAttributeID;
 
             // Get Attribute CodeList User Control options
             GetCodeListAttribute.TargetWebControl = txtAttributeCodelist;
@@ -1734,7 +1779,7 @@ namespace ISTATRegistry
             GetDsdFromSession();
             EnableDownload();
 
-            Categorisations.ucArtefactType = AvailableStructures.KEY_FAMILY;
+            Categorisations.ucArtefactType = AvailableStructures.DSD;
             Categorisations.ucArtIdentity = _artIdentity;
 
             if (!IsPostBack)
@@ -1754,6 +1799,9 @@ namespace ISTATRegistry
                 AnnotationGeneral.EditMode = false;
                 AnnotationPrimaryMeasure.EditMode = false;
 
+                btnAddDimension.Visible = false;
+                btnAddGroup.Visible = false;
+
                 // Attribute
                 txtAttributeID.Enabled = false;
                 txtAttributeConcept.Enabled = false;
@@ -1767,6 +1815,15 @@ namespace ISTATRegistry
                 GetCodeListAttribute.Visible = false;
                 pnlAddGroup.Visible = false;
 
+                GetConcept1.Visible = false;
+                GetConceptAttribute.Visible = false;
+                GetConcept1.Visible = false;
+                GetConceptAttribute.Visible = false;
+                GetDimCodeList.Visible = false;
+                GetDimConcept.Visible = false;
+                GetDimConceptScheme.Visible = false;
+
+
                 BindData();
             }
         }
@@ -1777,7 +1834,7 @@ namespace ISTATRegistry
             InitUserControl();
             EnableDownload();
 
-            Categorisations.ucArtefactType = AvailableStructures.KEY_FAMILY;
+            Categorisations.ucArtefactType = AvailableStructures.DSD;
             Categorisations.ucArtIdentity = _artIdentity;
 
             if (!IsPostBack)
@@ -2161,6 +2218,8 @@ namespace ISTATRegistry
 
         private IDataStructureMutableObject ReOrderAttribute(IDataStructureMutableObject dsMut, IAttributeMutableObject attMut, int inputOrder)
         {
+            if (dsMut.Attributes == null)
+                return dsMut;
 
             var sortedAttributes = dsMut.AttributeList.Attributes.OrderBy(
             o =>
@@ -2273,15 +2332,21 @@ namespace ISTATRegistry
                 {
                     IRServiceReference.User currentUser = Session[SESSION_KEYS.USER_DATA] as User;
                     _artIdentity = Utils.GetIdentityFromRequest(Request);
-                    int agencyOccurence = currentUser.agencies.Count(agency => agency.id.Equals(_artIdentity.Agency));
-                    if (agencyOccurence > 0)
+
+                    if (currentUser != null)
                     {
-                        _action = (Action)Enum.Parse(typeof(Action), Request["ACTION"].ToString());
+                        int agencyOccurence = currentUser.agencies.Count(agency => agency.id.Equals(_artIdentity.Agency));
+                        if (agencyOccurence > 0)
+                        {
+                            _action = (Action)Enum.Parse(typeof(Action), Request["ACTION"].ToString());
+                        }
+                        else
+                        {
+                            _action = Action.VIEW;
+                        }
                     }
                     else
-                    {
                         _action = Action.VIEW;
-                    }
                 }
                 else
                 {

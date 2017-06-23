@@ -61,6 +61,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a Ver. .
+        /// </summary>
+        internal static string app_version {
+            get {
+                return ResourceManager.GetString("app_version", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a Aggiungi agency.
         /// </summary>
         internal static string btn_add_agency {
@@ -160,6 +169,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a Autenticazione.
+        /// </summary>
+        internal static string btn_authentication {
+            get {
+                return ResourceManager.GetString("btn_authentication", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a Cancella.
         /// </summary>
         internal static string btn_cancel {
@@ -228,6 +246,15 @@ namespace Resources {
         internal static string btn_delete_user_button {
             get {
                 return ResourceManager.GetString("btn_delete_user_button", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Scarica.
+        /// </summary>
+        internal static string btn_download {
+            get {
+                return ResourceManager.GetString("btn_download", resourceCulture);
             }
         }
         
@@ -1195,6 +1222,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a Non è possibile modificare o eliminare un artefatto categorizzato..
+        /// </summary>
+        internal static string err_no_delete_artefact {
+            get {
+                return ResourceManager.GetString("err_no_delete_artefact", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a Non è stato selezionato un file dati!.
         /// </summary>
         internal static string err_no_file_uploaded {
@@ -1497,6 +1533,15 @@ namespace Resources {
         internal static string err_while_retrieving_code {
             get {
                 return ResourceManager.GetString("err_while_retrieving_code", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Credenziali di accesso non corrette!.
+        /// </summary>
+        internal static string err_wrong_credentials {
+            get {
+                return ResourceManager.GetString("err_wrong_credentials", resourceCulture);
             }
         }
         
@@ -2293,6 +2338,33 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a Direzione.
+        /// </summary>
+        internal static string lbl_contactdirection {
+            get {
+                return ResourceManager.GetString("lbl_contactdirection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a E-Mail.
+        /// </summary>
+        internal static string lbl_contactemail {
+            get {
+                return ResourceManager.GetString("lbl_contactemail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Nome contatto.
+        /// </summary>
+        internal static string lbl_contactname {
+            get {
+                return ResourceManager.GetString("lbl_contactname", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a Content Constraint.
         /// </summary>
         internal static string lbl_content_constraint {
@@ -2464,6 +2536,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a Directory.
+        /// </summary>
+        internal static string lbl_Directory {
+            get {
+                return ResourceManager.GetString("lbl_Directory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a Scarica.
         /// </summary>
         internal static string lbl_download {
@@ -2478,6 +2559,15 @@ namespace Resources {
         internal static string lbl_download_artefact {
             get {
                 return ResourceManager.GetString("lbl_download_artefact", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Scarica Artefatti Multipli.
+        /// </summary>
+        internal static string lbl_download_multiple_artefact {
+            get {
+                return ResourceManager.GetString("lbl_download_multiple_artefact", resourceCulture);
             }
         }
         
@@ -2568,6 +2658,15 @@ namespace Resources {
         internal static string lbl_importated_aterfacts {
             get {
                 return ResourceManager.GetString("lbl_importated_aterfacts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Artefatti Importati.
+        /// </summary>
+        internal static string lbl_importedArtefact {
+            get {
+                return ResourceManager.GetString("lbl_importedArtefact", resourceCulture);
             }
         }
         
@@ -2950,6 +3049,24 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a Dominio.
+        /// </summary>
+        internal static string lbl_securitydomain {
+            get {
+                return ResourceManager.GetString("lbl_securitydomain", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Gruppo utente.
+        /// </summary>
+        internal static string lbl_securityuser {
+            get {
+                return ResourceManager.GetString("lbl_securityuser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a Seleziona.
         /// </summary>
         internal static string lbl_select {
@@ -3036,6 +3153,15 @@ namespace Resources {
         internal static string lbl_send {
             get {
                 return ResourceManager.GetString("lbl_send", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Server.
+        /// </summary>
+        internal static string lbl_Server {
+            get {
+                return ResourceManager.GetString("lbl_Server", resourceCulture);
             }
         }
         
@@ -3148,6 +3274,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a Tema.
+        /// </summary>
+        internal static string lbl_theme {
+            get {
+                return ResourceManager.GetString("lbl_theme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a Titolo.
         /// </summary>
         internal static string lbl_title {
@@ -3256,6 +3391,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Cerca una stringa localizzata simile a Carica.
+        /// </summary>
+        internal static string lbl_upload {
+            get {
+                return ResourceManager.GetString("lbl_upload", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Cerca una stringa localizzata simile a Importa Structure.
         /// </summary>
         internal static string lbl_upload_structure {
@@ -3360,6 +3504,60 @@ namespace Resources {
         internal static string lbl_wrong_lines {
             get {
                 return ResourceManager.GetString("lbl_wrong_lines", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a WS Destinazione.
+        /// </summary>
+        internal static string lbl_wsExport {
+            get {
+                return ResourceManager.GetString("lbl_wsExport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Nuova Agenzia.
+        /// </summary>
+        internal static string lbl_WSNewAgency {
+            get {
+                return ResourceManager.GetString("lbl_WSNewAgency", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Nuovo ID.
+        /// </summary>
+        internal static string lbl_WSNewID {
+            get {
+                return ResourceManager.GetString("lbl_WSNewID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Nuova Versione.
+        /// </summary>
+        internal static string lbl_WSNewVersion {
+            get {
+                return ResourceManager.GetString("lbl_WSNewVersion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Password WS.
+        /// </summary>
+        internal static string lbl_WSPassword {
+            get {
+                return ResourceManager.GetString("lbl_WSPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Utente WS.
+        /// </summary>
+        internal static string lbl_WSUserName {
+            get {
+                return ResourceManager.GetString("lbl_WSUserName", resourceCulture);
             }
         }
         
@@ -3477,6 +3675,15 @@ namespace Resources {
         internal static string msg_content_constraint_imported {
             get {
                 return ResourceManager.GetString("msg_content_constraint_imported", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Dataflow [ {0} - {1} - {2} ] aggiunto!&lt;br /&gt;&lt;br /&gt;.
+        /// </summary>
+        internal static string msg_dataflow_imported {
+            get {
+                return ResourceManager.GetString("msg_dataflow_imported", resourceCulture);
             }
         }
         

@@ -1,0 +1,5 @@
+C:\ISTAT\Source\OnTheFlyWebService\src\FlyCallWS\bin\x86\Debug\FlyCallWS.dll
+C:\ISTAT\Source\OnTheFlyWebService\src\FlyCallWS\bin\x86\Debug\FlyCallWS.pdb
+C:\ISTAT\Source\OnTheFlyWebService\src\FlyCallWS\obj\x86\Debug\FlyCallWS.csprojResolveAssemblyReference.cache
+C:\ISTAT\Source\OnTheFlyWebService\src\FlyCallWS\obj\x86\Debug\FlyCallWS.dll
+C:\ISTAT\Source\OnTheFlyWebService\src\FlyCallWS\obj\x86\Debug\FlyCallWS.pdb

@@ -16,7 +16,7 @@
             <asp:GridView ID="gridView" runat="server" CssClass="Grid" AllowPaging="True" PagerSettings-Mode="NumericFirstLast"
                 PagerSettings-FirstPageText="<%# Resources.Messages.btn_goto_first %>" PagerSettings-LastPageText="<%# Resources.Messages.btn_goto_last %>"
                 AllowSorting="True" OnSorted="OnSorted" OnSorting="OnSorting" AutoGenerateColumns="False"
-                OnPageIndexChanging="OnPageIndexChanging" OnRowCommand="OnRowCommand" OnRowCreated="OnRowCreated"
+                OnPageIndexChanging="OnPageIndexChanging" OnRowCreated="OnRowCreated"
                 PagerSettings-Position="TopAndBottom">
                 <Columns>
                     <asp:TemplateField HeaderText="ID" SortExpression="ID">
@@ -62,9 +62,12 @@
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="" ShowHeader="False" Visible="false">
                         <ItemTemplate>
-                            <asp:ImageButton ID="btnDetails" runat="server" CausesValidation="False" CommandName="Details"
-                                CommandArgument="<%# Container.DataItemIndex %>" ImageUrl="~/images/Details2.png"
-                                ToolTip="View details" />
+                            <asp:HyperLink ID="hplDetails" 
+                                runat="server" 
+                                ImageUrl="~/images/Details2.png" 
+                                NavigateUrl="s"
+                                ToolTip="View details">
+                            </asp:HyperLink>
                         </ItemTemplate>
                         <HeaderStyle Width="50px" HorizontalAlign="Center" />
                         <ItemStyle HorizontalAlign="Center" />

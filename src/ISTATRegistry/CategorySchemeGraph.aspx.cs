@@ -50,10 +50,11 @@ namespace ISTATRegistry
         private ArtefactIdentity _artIdentity;
         private ISdmxObjects _sdmxCS;
         private ISdmxObjects _sdmxArtefacts;
-        private CategoryViewConfigurationSection _config;
+        //private CategoryViewConfigurationSection _config;
         private LocalizedUtils _localizedUtils;
         private EntityMapper _entityMapper;
         private List<string> _lVisibleArtefacts;
+        private EndPointElement _epe;
 
         #endregion
 
@@ -61,8 +62,11 @@ namespace ISTATRegistry
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            _epe = (EndPointElement)Session[SESSION_KEYS.CURRENT_ENDPOINT_OBJECT];
+
             _wsModel = new WSModel();
-            _config = (CategoryViewConfigurationSection)System.Configuration.ConfigurationManager.GetSection("categoryViewConfigurationGroup/categoryViewConfiguration");
+            //_config = (CategoryViewConfigurationSection)System.Configuration.ConfigurationManager.GetSection("categoryViewConfigurationGroup/categoryViewConfiguration");
             _entityMapper = new EntityMapper(cmbLanguage.SelectedValue);
             ScriptManager.GetCurrent(this.Page).RegisterPostBackControl(FileDownload3);
 
@@ -70,7 +74,16 @@ namespace ISTATRegistry
             {
                 FileDownload3.ucVisible = false;
 
-                Session["WSEndPoint"] = _config.WsEndPoint;
+                //ISTATUtils.EndPointElement epe = new EndPointElement()
+                //{
+                //    ActiveEndPointType = ActiveEndPointType.SOAP,
+                //    NSIEndPoint = _config.WsEndPoint,
+                //    RestEndPoint = ""
+
+                //};
+
+                //Session["WSEndPoint"] = epe;
+
                 _artIdentity = Utils.GetIdentityFromRequest(Request);
                 FillForm();
 
@@ -280,17 +293,21 @@ namespace ISTATRegistry
 
                 if (_artIdentity != null)
                     cmbCategorySchemes.SelectedValue = _artIdentity.ToString();
-                else if (!_config.EnableCategoryDropDownList)
+                else if (!_epe.CatViewEnableCategoryDropDownList)
                 {
-                    cmbCategorySchemes.SelectedValue = new ArtefactIdentity(_config.DefaultCategoryScheme.Id, _config.DefaultCategoryScheme.Agency, _config.DefaultCategoryScheme.Version).ToString();
+                    if (_epe.CatViewDefaultCategoryScheme != String.Empty)
+                    {
+                        string[] artIdentity = _epe.CatViewDefaultCategoryScheme.Split('|');
+                        cmbCategorySchemes.SelectedValue = new ArtefactIdentity(artIdentity[0], artIdentity[1], artIdentity[2]).ToString();
+                    }
                     cmbCategorySchemes.Enabled = false;
                 }
             }
 
-            chkCodelist.Visible = _config.ArtefactFilterList.EnableCodelist;
-            chkConcSchema.Visible = _config.ArtefactFilterList.EnableConceptScheme;
-            chkDataflow.Visible = _config.ArtefactFilterList.EnableDataFlow;
-            chkDSD.Visible = _config.ArtefactFilterList.EnableDsd;
+            chkCodelist.Visible = _epe.CatViewEnableCodelist;
+            chkConcSchema.Visible = _epe.CatViewEnableConceptScheme;
+            chkDataflow.Visible = _epe.CatViewEnableDataFlow;
+            chkDSD.Visible = _epe.CatViewEnableDsd;
 
             string[] resources = Directory.GetFiles(Server.MapPath("~/App_GlobalResources"), "*.resx");
 
@@ -376,7 +393,7 @@ namespace ISTATRegistry
 
         private void FillArtefacts(TreeNode tn, ICategoryObject cat)
         {
-            var foundedCat = _sdmxCS.Categorisations.Where(c => c.CategoryReference.IdentifiableIds[0] == cat.Id);
+            var foundedCat = _sdmxCS.Categorisations.Where(c => c.CategoryReference.IdentifiableIds.LastOrDefault() == cat.Id);
 
             string artefactType;
             ISdmxObjects sdmxObject;
@@ -583,10 +600,15 @@ namespace ISTATRegistry
                 dt.Columns.Add("dt" + (i + 1));
             }
 
-            foreach (var dimension in dsd.DimensionList.Dimensions.Where(c => c.HasCodedRepresentation()))
+            //foreach (var dimension in dsd.DimensionList.Dimensions.Where(c => c.HasCodedRepresentation()))
+            foreach (var dimension in dsd.DimensionList.Dimensions)
             {
                 string TextFormat = String.Empty;
 
+                if (!dimension.HasCodedRepresentation())
+                {
+                    TextFormat = "String";
+                } else
                 if (dimension.Representation.TextFormat != null)
                     TextFormat = dimension.Representation.TextFormat.TextType.EnumType.ToString();
 
@@ -596,14 +618,26 @@ namespace ISTATRegistry
                                                     && ci.Version == dimension.ConceptRef.Version).FirstOrDefault();
 
 
-                dt.Rows.Add(dimension.ConceptRef.FullId,
-                            _localizedUtils.GetNameableName(cs),
-                            cs.Id, cs.AgencyId, cs.Version,
-                            dimension.Representation.Representation.MaintainableId,
-                            dimension.Representation.Representation.Version,
-                            dimension.Representation.Representation.AgencyId,
-                            TextFormat,
-                            _entityMapper.GetDimensionRole(dimension));
+                if (dimension.HasCodedRepresentation())
+                {
+                    dt.Rows.Add(dimension.ConceptRef.FullId,
+                                _localizedUtils.GetNameableName(cs),
+                                cs.Id, cs.AgencyId, cs.Version,
+                                dimension.Representation.Representation.MaintainableId,
+                                dimension.Representation.Representation.Version,
+                                dimension.Representation.Representation.AgencyId,
+                                TextFormat,
+                                _entityMapper.GetDimensionRole(dimension));
+                }
+                else
+                {
+                    dt.Rows.Add(dimension.ConceptRef.FullId,
+                                _localizedUtils.GetNameableName(cs),
+                                cs.Id, cs.AgencyId, cs.Version,
+                                "","","",
+                                TextFormat,
+                                _entityMapper.GetDimensionRole(dimension));
+                }
             }
 
             gvDimension.DataSource = dt;

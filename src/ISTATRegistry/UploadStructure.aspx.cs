@@ -109,7 +109,9 @@ namespace ISTATRegistry
                     string currentId = ((Label)row.Cells[0].Controls[1]).Text;
                     string currentAgency = ((Label)row.Cells[1].Controls[1]).Text;
                     string currentVersion = ((Label)row.Cells[2].Controls[1]).Text;
-                    ImportedItem myCurrentItem = myItems.Find(item => item.ID.Equals(currentId) && item.Agency.Equals(currentAgency) && item.Version.Equals(currentVersion));
+                    string currentType = ((Label)row.Cells[3].Controls[1]).Text;
+
+                    ImportedItem myCurrentItem = myItems.Find(item => item.ID.Equals(currentId) && item._type.Equals(currentType) && item.Agency.Equals(currentAgency) && item.Version.Equals(currentVersion));
 
                     if (((CheckBox)row.Cells[4].Controls[1]).Checked)
                     {
@@ -174,6 +176,11 @@ namespace ISTATRegistry
                                 ICategorisationObject tmpCategorisation = sdmxObjects.Categorisations.First(cat => cat.Id.Equals(currentId) && cat.AgencyId.Equals(currentAgency) && cat.Version.Equals(currentVersion));
                                 newSdmxObjects.AddCategorisation(tmpCategorisation);
                                 objectsSummary += string.Format(Resources.Messages.msg_categorisation_imported, tmpCategorisation.Id, tmpCategorisation.AgencyId, tmpCategorisation.Version);
+                                break;
+                            case "DATAFLOW":
+                                IDataflowObject tmpDataflow = sdmxObjects.Dataflows.First(df => df.Id.Equals(currentId) && df.AgencyId.Equals(currentAgency) && df.Version.Equals(currentVersion));
+                                newSdmxObjects.AddDataflow(tmpDataflow);
+                                objectsSummary += string.Format(Resources.Messages.msg_dataflow_imported, tmpDataflow.Id, tmpDataflow.AgencyId, tmpDataflow.Version);
                                 break;
                         }
                         reportItems.Add(myCurrentItem);
@@ -279,6 +286,44 @@ namespace ISTATRegistry
                             items.Add(new ImportedItem(localizedUtils.GetNameableName(tmpCodeList), tmpCodeList.Id, tmpCodeList.AgencyId, tmpCodeList.Version, "CODELIST", itemIsOk));
                         }
                     }
+
+
+                    foreach (IDataflowObject tmpDataflow in sdmxObjects.Dataflows)
+                    {
+                        itemIsOk = true;
+                        try
+                        {
+                            ISdmxObjects checkedObject = wsModel.GetDataFlow(new ArtefactIdentity(tmpDataflow.Id, tmpDataflow.AgencyId, tmpDataflow.Version), true, false);
+                            if (checkedObject.Codelists.Count > 0)
+                            {
+                                IDataflowObject checkedDataflow = checkedObject.Dataflows.First();
+                                if (checkedDataflow.IsFinal.IsTrue)
+                                {
+                                    itemIsOk = false;
+                                }
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            itemIsOk = true;
+                        }
+
+                        var foundAgency = (from agency in currentUser.agencies
+                                           where agency.id.Equals(tmpDataflow.AgencyId.ToString())
+                                           select agency).ToList<UserAgency>();
+
+                        if (foundAgency.Count > 0)
+                        {
+                            items.Add(new ImportedItem(localizedUtils.GetNameableName(tmpDataflow), tmpDataflow.Id, tmpDataflow.AgencyId, tmpDataflow.Version, "DATAFLOW", itemIsOk));
+                        }
+                    }
+
+
+
+
+
+
+
 
                     foreach (IConceptSchemeObject tmpConceptScheme in sdmxObjects.ConceptSchemes)
                     {

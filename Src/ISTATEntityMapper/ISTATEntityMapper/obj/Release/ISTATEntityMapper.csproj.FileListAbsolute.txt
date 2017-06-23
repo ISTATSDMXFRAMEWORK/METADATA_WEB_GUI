@@ -1,0 +1,64 @@
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATEntityMapper.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATEntityMapper.pdb
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATEntity.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATUtils.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\ISTATEntityMapper\ISTATEntityMapper\bin\Release\SdmxApi.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\ISTATEntityMapper\ISTATEntityMapper\bin\Release\log4net.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATEntity.pdb
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATUtils.pdb
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\ISTATEntityMapper\ISTATEntityMapper\obj\Release\ISTATEntityMapper.csprojResolveAssemblyReference.cache
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\ISTATEntityMapper\ISTATEntityMapper\obj\Release\ISTATEntityMapper.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY\ISTATEntityMapper\ISTATEntityMapper\obj\Release\ISTATEntityMapper.pdb
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATEntityMapper.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATEntityMapper.pdb
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATEntity.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATUtils.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATEntityMapper\ISTATEntityMapper\bin\Release\log4net.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATEntity.pdb
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATUtils.pdb
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATEntityMapper\ISTATEntityMapper\obj\Release\ISTATEntityMapper.csprojResolveAssemblyReference.cache
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATEntityMapper\ISTATEntityMapper\obj\Release\ISTATEntityMapper.dll
+C:\Users\cervini\Documents\Visual Studio 2012\Projects\ISTAT_REGISTRY_MAX\ISTATEntityMapper\ISTATEntityMapper\obj\Release\ISTATEntityMapper.pdb
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATEntityMapper.dll
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATEntityMapper.pdb
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATEntity.dll
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATUtils.dll
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\ISTATEntityMapper\ISTATEntityMapper\bin\Release\log4net.dll
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATEntity.pdb
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATUtils.pdb
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\ISTATEntityMapper\ISTATEntityMapper\obj\Release\ISTATEntityMapper.csprojResolveAssemblyReference.cache
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\ISTATEntityMapper\ISTATEntityMapper\obj\Release\ISTATEntityMapper.dll
+C:\ISTAT\ISTAT_REGISTRY_MAX+CERVINI\ISTATEntityMapper\ISTATEntityMapper\obj\Release\ISTATEntityMapper.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATEntityMapper.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATEntityMapper.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATEntity.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATUtils.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATEntityMapper\ISTATEntityMapper\bin\Release\log4net.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATEntity.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATUtils.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATEntityMapper\ISTATEntityMapper\obj\Release\ISTATEntityMapper.csprojResolveAssemblyReference.cache
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATEntityMapper\ISTATEntityMapper\obj\Release\ISTATEntityMapper.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATEntityMapper\ISTATEntityMapper\obj\Release\ISTATEntityMapper.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\ISTATEntityMapper\ISTATEntityMapper\bin\Release\SdmxApi.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATEntityMapper.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATEntityMapper.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATEntity.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATUtils.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\SdmxApi.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\log4net.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATEntity.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATUtils.pdb
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATEntityMapper\ISTATEntityMapper\obj\Release\ISTATEntityMapper.csprojResolveAssemblyReference.cache
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATEntityMapper\ISTATEntityMapper\obj\Release\ISTATEntityMapper.dll
+C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATEntityMapper\ISTATEntityMapper\obj\Release\ISTATEntityMapper.pdb
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATEntityMapper.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATEntityMapper.pdb
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATEntity.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATUtils.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\SdmxApi.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\log4net.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATEntity.pdb
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATUtils.pdb
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATEntityMapper\ISTATEntityMapper\obj\Release\ISTATEntityMapper.csprojResolveAssemblyReference.cache
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATEntityMapper\ISTATEntityMapper\obj\Release\ISTATEntityMapper.dll
+C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATEntityMapper\ISTATEntityMapper\obj\Release\ISTATEntityMapper.pdb

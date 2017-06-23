@@ -156,22 +156,6 @@ namespace ISTATRegistry
             BindData();
 
         }
-        protected void OnRowCommand(object sender, GridViewCommandEventArgs e)
-        {
-            switch (e.CommandName)
-            {
-                case "Details":
-                    GridViewRow gvr = (GridViewRow)(((ImageButton)e.CommandSource).NamingContainer);
-
-                    string stringIdentity = Utils.GetStringKey(gridView.Rows[gvr.RowIndex]);
-
-                    Response.Redirect("StructureSetItemDetails.aspx?ACTION=UPDATE&" + stringIdentity);
-
-                    break;
-                case "xxxx":
-                    break;
-            }
-        }
         protected void OnRowCreated(object sender, GridViewRowEventArgs e)
         {
 
@@ -179,6 +163,13 @@ namespace ISTATRegistry
             if (fd != null)
             {
                 ScriptManager.GetCurrent(this).RegisterPostBackControl(fd);
+            }
+
+            HyperLink hplDetails = (e.Row.FindControl("hplDetails") as HyperLink);
+            if (hplDetails != null)
+            {
+                string stringIdentity = Utils.GetStringKey((ArtefactIdentity)e.Row.DataItem);
+                hplDetails.NavigateUrl = "StructureSetItemDetails.aspx?ACTION=UPDATE&" + stringIdentity;
             }
         }
         protected void OnSorting(object sender, GridViewSortEventArgs e)

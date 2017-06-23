@@ -213,16 +213,19 @@ namespace ISTATRegistry
                     _dfMutable.Uri = new Uri(txtURI.Text);
 
                 if (txtValidFrom.Text != String.Empty)
-                    _dfMutable.StartDate = DateTime.ParseExact(txtValidFrom.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
-
+                    _dfMutable.StartDate = DateTime.ParseExact(txtValidFrom.Text, "d/M/yyyy", CultureInfo.InvariantCulture);
+                else
+                    _dfMutable.StartDate = null;
                 if (txtValidTo.Text != String.Empty)
-                    _dfMutable.EndDate = DateTime.ParseExact(txtValidTo.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
-
+                    _dfMutable.EndDate = DateTime.ParseExact(txtValidTo.Text, "d/M/yyyy", CultureInfo.InvariantCulture);
+                else
+                    _dfMutable.EndDate = null;
                 _dfMutable.Annotations.Clear();
                 if (AnnotationGeneral.AnnotationObjectList != null)
                     foreach (var annotation in AnnotationGeneral.AnnotationObjectList)
                     {
-                        _dfMutable.AddAnnotation(annotation);
+                        if (annotation.Type != "NonProductionDataflow")
+                            _dfMutable.AddAnnotation(annotation);
                     }
 
                 string[] DSDValues = txtDSD.Text.Split(',');
@@ -250,31 +253,24 @@ namespace ISTATRegistry
                 //Session[_snInsDf] = null;
                 //Session[_snSdmxObjects] = null;
 
-                //Utils.ShowDialog("Operation succesfully");
                 Utils.ResetBeforeUnload();
-                //Utils.AppendScript("location.href='./DataFlow.aspx';");
 
 
-                string jsYes, jsNo;
 
-                jsYes = String.Format("location.href='DataFlowItemDetails.aspx?ACTION=UPDATE&ID={0}&AGENCY={1}&VERSION={2}&ISFINAL={3}",
+                string jsYes, jsNo, script;
+
+                script = "CloseConfirm();";
+
+                jsNo = String.Format("location.href='DataFlowItemDetails.aspx?ACTION=UPDATE&ID={0}&AGENCY={1}&VERSION={2}&ISFINAL={3}'",
                             _dfMutable.Id, _dfMutable.AgencyId, _dfMutable.Version, _dfMutable.FinalStructure.IsTrue.ToString());
-                //jsNo = "location.href='DataFlow.aspx?m=y'";
-
-                string successMessage = Resources.Messages.succ_operation + " " + Resources.Messages.lbl_manage_categorisations;
+                //jsYes = "location.href='DataFlow.aspx?m=y'";
 
                 if (_action == Action.INSERT)
                 {
-                    jsNo = jsYes + "'";
-                    jsYes += "&OCT=true'";
-                }
-                else
-                {
-                    jsYes += "&OCT=true'";
-                    jsNo = "CloseConfirm();";
+                    script = jsNo;
                 }
 
-                Utils.ShowConfirm(successMessage, jsYes, jsNo);
+                Utils.ShowDialogBeforeScript(Resources.Messages.succ_operation, script);
 
             }
             catch (Exception ex)
@@ -641,15 +637,20 @@ namespace ISTATRegistry
                 {
                     IRServiceReference.User currentUser = Session[SESSION_KEYS.USER_DATA] as User;
                     _artIdentity = Utils.GetIdentityFromRequest(Request);
-                    int agencyOccurence = currentUser.agencies.Count(agency => agency.id.Equals(_artIdentity.Agency));
-                    if (agencyOccurence > 0)
+                    if (currentUser != null)
                     {
-                        _action = (Action)Enum.Parse(typeof(Action), Request["ACTION"].ToString());
+                        int agencyOccurence = currentUser.agencies.Count(agency => agency.id.Equals(_artIdentity.Agency));
+                        if (agencyOccurence > 0)
+                        {
+                            _action = (Action)Enum.Parse(typeof(Action), Request["ACTION"].ToString());
+                        }
+                        else
+                        {
+                            _action = Action.VIEW;
+                        }
                     }
                     else
-                    {
                         _action = Action.VIEW;
-                    }
                 }
                 else
                 {
