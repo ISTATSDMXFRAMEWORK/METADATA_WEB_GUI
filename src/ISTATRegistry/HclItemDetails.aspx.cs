@@ -219,8 +219,16 @@ namespace ISTATRegistry
                     break;
             }
 
-            DuplicateArtefact1.ucStructureType = SdmxStructureEnumType.HierarchicalCodelist;
-            DuplicateArtefact1.ucMaintanableArtefact = _hclMutable;
+            //andrea 07/06/2017
+            //DuplicateArtefact1.ucStructureType = SdmxStructureEnumType.HierarchicalCodelist;
+            //DuplicateArtefact1.ucMaintanableArtefact = _hclMutable;
+            if (!Utils.ViewMode && _action != Action.INSERT)
+            {
+                DuplicateArtefact1.ucStructureType = SdmxStructureEnumType.HierarchicalCodelist;
+                DuplicateArtefact1.ucMaintanableArtefact = _hclMutable;
+            }
+            else
+                DuplicateArtefact1.ucDisable = true;
 
         }
 

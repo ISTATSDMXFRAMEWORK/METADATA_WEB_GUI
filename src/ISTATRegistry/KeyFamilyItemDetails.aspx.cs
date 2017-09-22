@@ -1603,8 +1603,8 @@ namespace ISTATRegistry
         {
             Session[_snSdmxObjects] = null;
             Session[_snInsDSD] = null;
-
-            if (!_epe.PartialArtefact)
+            //andrea 07/06/2017
+            //if (!_epe.PartialArtefact)
                 Utils.PopulateCmbAgencies(cmbAgencies, true);
 
             cmbDimType.Items.Add("NORMAL");

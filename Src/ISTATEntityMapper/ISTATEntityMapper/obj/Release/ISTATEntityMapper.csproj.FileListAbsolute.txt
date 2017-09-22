@@ -62,3 +62,47 @@ C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017
 C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATEntityMapper\ISTATEntityMapper\obj\Release\ISTATEntityMapper.csprojResolveAssemblyReference.cache
 C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATEntityMapper\ISTATEntityMapper\obj\Release\ISTATEntityMapper.dll
 C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTATEntityMapper\ISTATEntityMapper\obj\Release\ISTATEntityMapper.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATEntityMapper.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATEntityMapper.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATEntity.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATUtils.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\SdmxApi.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\log4net.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATEntity.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATUtils.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATEntityMapper\ISTATEntityMapper\obj\Release\ISTATEntityMapper.csprojResolveAssemblyReference.cache
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATEntityMapper\ISTATEntityMapper\obj\Release\ISTATEntityMapper.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTATEntityMapper\ISTATEntityMapper\obj\Release\ISTATEntityMapper.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IR_SVIL_4.2.1\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATEntityMapper.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IR_SVIL_4.2.1\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATEntityMapper.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IR_SVIL_4.2.1\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATEntity.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IR_SVIL_4.2.1\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATUtils.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IR_SVIL_4.2.1\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\SdmxApi.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IR_SVIL_4.2.1\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\log4net.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IR_SVIL_4.2.1\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATEntity.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IR_SVIL_4.2.1\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATUtils.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IR_SVIL_4.2.1\Src\ISTATEntityMapper\ISTATEntityMapper\obj\Release\ISTATEntityMapper.csprojResolveAssemblyReference.cache
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IR_SVIL_4.2.1\Src\ISTATEntityMapper\ISTATEntityMapper\obj\Release\ISTATEntityMapper.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IR_SVIL_4.2.1\Src\ISTATEntityMapper\ISTATEntityMapper\obj\Release\ISTATEntityMapper.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.3.0\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATEntityMapper.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.3.0\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATEntityMapper.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.3.0\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATEntity.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.3.0\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATUtils.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.3.0\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\SdmxApi.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.3.0\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\log4net.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.3.0\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATEntity.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.3.0\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATUtils.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.3.0\Src\ISTATEntityMapper\ISTATEntityMapper\obj\Release\ISTATEntityMapper.csprojResolveAssemblyReference.cache
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.3.0\Src\ISTATEntityMapper\ISTATEntityMapper\obj\Release\ISTATEntityMapper.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.3.0\Src\ISTATEntityMapper\ISTATEntityMapper\obj\Release\ISTATEntityMapper.pdb
+G:\Andrea\Progetti\ISTAT\TEST\IR\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATEntityMapper.dll
+G:\Andrea\Progetti\ISTAT\TEST\IR\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATEntityMapper.pdb
+G:\Andrea\Progetti\ISTAT\TEST\IR\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATEntity.dll
+G:\Andrea\Progetti\ISTAT\TEST\IR\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATUtils.dll
+G:\Andrea\Progetti\ISTAT\TEST\IR\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\SdmxApi.dll
+G:\Andrea\Progetti\ISTAT\TEST\IR\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\log4net.dll
+G:\Andrea\Progetti\ISTAT\TEST\IR\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATEntity.pdb
+G:\Andrea\Progetti\ISTAT\TEST\IR\Src\ISTATEntityMapper\ISTATEntityMapper\bin\Release\ISTATUtils.pdb
+G:\Andrea\Progetti\ISTAT\TEST\IR\Src\ISTATEntityMapper\ISTATEntityMapper\obj\Release\ISTATEntityMapper.csprojResolveAssemblyReference.cache
+G:\Andrea\Progetti\ISTAT\TEST\IR\Src\ISTATEntityMapper\ISTATEntityMapper\obj\Release\ISTATEntityMapper.dll
+G:\Andrea\Progetti\ISTAT\TEST\IR\Src\ISTATEntityMapper\ISTATEntityMapper\obj\Release\ISTATEntityMapper.pdb

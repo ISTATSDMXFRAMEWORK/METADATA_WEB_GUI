@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISTATRegistry", "ISTATRegistry.csproj", "{CD158926-6EBD-4C33-8C12-F58220FA3826}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISTATWSDAL", "..\WSDAL\WSDAL\ISTATWSDAL.csproj", "{5F953133-BB02-4734-97B2-DF44D9C52916}"

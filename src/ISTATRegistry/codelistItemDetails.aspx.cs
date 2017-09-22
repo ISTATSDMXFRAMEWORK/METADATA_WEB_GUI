@@ -546,7 +546,8 @@ namespace ISTATRegistry
             {
                 if (Session[KEY_PAGE_SESSION] == null)
                 {
-                    if (_artIdentity.ToString() != string.Empty)
+                    if (_artIdentity != null &&
+                        _artIdentity.ToString() != string.Empty)
                     {
                         WSModel wsModel = new WSModel();
                         ISdmxObjects sdmxObject = wsModel.GetCodeList(_artIdentity, false, false);
@@ -672,14 +673,33 @@ namespace ISTATRegistry
             CSVImporter1.OperationComplete += CSVImporter1_OperationComplete;
 
             SetAction();
+            if (Session[SESSION_KEYS.USER_OK] != null && (bool)Session[SESSION_KEYS.USER_OK] == true && 
+                (this._action == Action.VIEW || _action == Action.UPDATE || _action == Action.DELETE) )
+            {
+                //Andrea 22/08
+                if (!IsPostBack)
+                {
+                    Utils.AppendScript("$('.subCL').show();");
+                }
+                //tabSubCL.Visible = true;
+                //derivedCL.Visible = true;
+            }
+            else
+            {
+                Utils.AppendScript("$('.subCL').hide();"); 
+                //tabSubCL.Visible = false;
+                //derivedCL.Visible = false;
+            }
+
 
             if (!IsPostBack)
             {
-                if (!_epe.PartialArtefact)
-                {
+                //la codelist è un artefatto sempre visibile non ha senso testare il valore di PartialArtefact quindi commento istruzione if
+                //if (!_epe.PartialArtefact)
+                //{
                     Utils.PopulateCmbAgencies(cmb_agencies, true);
                     //Utils.PopulateCmbLanguages(cmbLanguageForCsv, AVAILABLE_MODES.MODE_FOR_ADD_TEXT);
-                }
+                //}
 
                 ClearSessionPage();
                 ViewState["SortExpr"] = SortDirection.Ascending;
@@ -790,6 +810,10 @@ namespace ISTATRegistry
                     {
                         chk_isFinal.Enabled = false;
                     }*/
+                    
+                    //Andrea 22/08
+                    //Utils.AppendScript("$('.subCL').hide();");
+
                     break;
                 case Action.VIEW:
 
@@ -823,15 +847,24 @@ namespace ISTATRegistry
 
                     break;
             }
-
-            if (!_epe.PartialArtefact)
+            
+            //andrea 07/06/2017
+            //if (!_epe.PartialArtefact)
+            if (!Utils.ViewMode && _action != Action.INSERT)
             {
                 DuplicateArtefact1.ucStructureType = SdmxStructureEnumType.CodeList;
                 DuplicateArtefact1.ucMaintanableArtefact = GetCodeListFromSession();
+                //andrea inizio
+                CreateSubCodelist1.ucStructureType = SdmxStructureEnumType.CodeList;
+                CreateSubCodelist1.ucMaintanableArtefact = DuplicateArtefact1.ucMaintanableArtefact;
+                //andrea fine
             }
-            else
+            else { 
                 DuplicateArtefact1.ucDisable = true;
-
+                //andrea inizio
+                CreateSubCodelist1.ucDisable = true;
+                //andrea fine
+            }
 
             lbl_id.DataBind();
             lbl_agency.DataBind();
@@ -989,7 +1022,7 @@ namespace ISTATRegistry
 
             Utils.ShowDialogBeforeScript(successMessage, script);
         }
-
+     
         protected void btnAddNewCode_Click(object sender, EventArgs e)
         {
             ICodelistMutableObject cl = GetCodeListFromSession();
@@ -1320,14 +1353,17 @@ namespace ISTATRegistry
             }
 
         }
+        
         protected void gvCodelistsItem_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
             // NULL
         }
+        
         protected void gvCodelistsItem_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             // NULL
         }
+        
         protected void gvCodelistsItem_Sorting(object sender, GridViewSortEventArgs e)
         {
             ICodelistMutableObject cl = GetCodeListFromSession();
@@ -1603,6 +1639,8 @@ namespace ISTATRegistry
                 lCodeListItem.Add(new CodeItem(code.Id, localUtils.GetNameableName(code), localUtils.GetNameableDescription(code), code.ParentCode));
             }
 
+            Session["CL_ORIGINAL"] = lCodeListItem;
+
             int numberOfRows = 0;
 
             if (!txtNumberOfRows.Text.Trim().Equals(string.Empty) && int.TryParse(txtNumberOfRows.Text, out numberOfRows))
@@ -1617,7 +1655,7 @@ namespace ISTATRegistry
             lblNumberOfTotalElements.Text = string.Format(Resources.Messages.lbl_number_of_total_rows, numberOfTotalElements.ToString());
             gvCodelistsItem.DataSource = lCodeListItem;
             gvCodelistsItem.DataBind();
-
+            
             if (lCodeListItem.Count == 0)
             {
                 txtNumberOfRows.Visible = false;
@@ -1702,10 +1740,17 @@ namespace ISTATRegistry
             if (!Utils.ViewMode && _action != Action.INSERT)
             {
                 DuplicateArtefact1.Visible = true;
+                //andrea inizio
+                CreateSubCodelist1.Visible = true;
+                //andrea fine
             }
-            else
-                DuplicateArtefact1.ucDisable = true;
-
+            else 
+            { 
+                DuplicateArtefact1.ucDisable = true; 
+                //andrea inizio
+                CreateSubCodelist1.ucDisable = true;
+                //andrea fine
+            }
             AnnotationGeneralControl.AddText_ucOpenTabName = AnnotationGeneralControl.ClientID;
             AnnotationGeneralControl.AnnotationObjectList = cl.MutableInstance.Annotations;
             AnnotationGeneralControl.EditMode = (cl.IsFinal.IsTrue || _action == Action.VIEW) ? false : true;

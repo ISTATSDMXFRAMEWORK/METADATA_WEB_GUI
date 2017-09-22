@@ -16,3 +16,15 @@ G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\bin\Debug\ISTAT.IO.dll
 G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\bin\Debug\ISTAT.IO.pdb
 G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTAT.IO\obj\Debug\ISTAT.IO.dll
 G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTAT.IO\obj\Debug\ISTAT.IO.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.3.0\Src\bin\Debug\ISTAT.IO.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.3.0\Src\bin\Debug\ISTAT.IO.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.3.0\Src\ISTAT.IO\obj\Debug\ISTAT.IO.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.3.0\Src\ISTAT.IO\obj\Debug\ISTAT.IO.pdb
+G:\Andrea\Progetti\ISTAT\TEST\IR\Src\bin\Debug\ISTAT.IO.dll
+G:\Andrea\Progetti\ISTAT\TEST\IR\Src\bin\Debug\ISTAT.IO.pdb
+G:\Andrea\Progetti\ISTAT\TEST\IR\Src\ISTAT.IO\obj\Debug\ISTAT.IO.dll
+G:\Andrea\Progetti\ISTAT\TEST\IR\Src\ISTAT.IO\obj\Debug\ISTAT.IO.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRSVIL\ISTAT_REGISTRY_V4.3.1_12-07-2017\Src\bin\Debug\ISTAT.IO.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRSVIL\ISTAT_REGISTRY_V4.3.1_12-07-2017\Src\bin\Debug\ISTAT.IO.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRSVIL\ISTAT_REGISTRY_V4.3.1_12-07-2017\Src\ISTAT.IO\obj\Debug\ISTAT.IO.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRSVIL\ISTAT_REGISTRY_V4.3.1_12-07-2017\Src\ISTAT.IO\obj\Debug\ISTAT.IO.pdb

@@ -314,9 +314,23 @@ namespace ISTATRegistry.UserControls
             {
                 List<ISTAT.Entity.ConceptScheme> lConcept = eMapper.GetConceptSchemeList(_sdmxObjects);
 
+
+                //Andrea 22/08/2017
+                List<ISTAT.Entity.ConceptScheme> lFilteredConceptScheme = null;
+
+                if (Utils.EnableCLPeriodsFilter)
+                {
+                    lFilteredConceptScheme = lConcept.FindAll(i => !(Utils.CSFilterList.Contains(i.ID)));
+                }
+                //
+
+
                 gvConceptScheme.PageSize = 12;
                 gvConceptScheme.DataSourceID = null;
-                gvConceptScheme.DataSource = lConcept;
+                //Andrea 22/08/2017
+                //gvConceptScheme.DataSource = lConcept;
+                gvConceptScheme.DataSource = lFilteredConceptScheme;
+                //
                 gvConceptScheme.DataBind();
             }
         }

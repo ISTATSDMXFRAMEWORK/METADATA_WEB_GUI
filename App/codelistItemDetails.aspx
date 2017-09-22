@@ -8,8 +8,12 @@
 <%@ Register Src="UserControls/ControlAnnotations.ascx" TagName="ControlAnnotations" TagPrefix="uc4" %>
 
 <%@ Register Src="UserControls/DuplicateArtefact.ascx" TagName="DuplicateArtefact" TagPrefix="uc5" %>
-<%@ Register Src="~/UserControls/Categorisations.ascx" TagPrefix="uc1" TagName="Categorisations" %>
-<%@ Register Src="UserControls/CSVImporter.ascx" TagName="CSVImporter" TagPrefix="uc10" %>
+<%@ Register Src="~/UserControls/Categorisations.ascx" TagName="Categorisations"  TagPrefix="uc6" %>
+<%@ Register Src="UserControls/CSVImporter.ascx" TagName="CSVImporter" TagPrefix="uc7" %>
+
+<%@ Register Src="UserControls/CreateSubCodelistForm.ascx" TagName="SubCodelistForm" TagPrefix="uc8" %>
+<%@ Register Src="UserControls/CreateSubCodelistConfirm.ascx" TagName="CreateSubCodelist" TagPrefix="uc9" %>
+
 <%@ Register Namespace="ISTATRegistry.Classes" TagPrefix="iup" Assembly="IstatRegistry" %>
 
 
@@ -143,6 +147,7 @@
             <li class='tab'><a href="#general"><%= Resources.Messages.lbl_general %></a></li>
             <li class='tab'><a href="#codes"><%= Resources.Messages.lbl_codes %></a></li>
             <li class='tab ircats'><a href="#categorisation" class="ircats"><%= Resources.Messages.lbl_categorisation %></a></li>
+            <li class='tab subCL'><a href="#derivedCL"><%= Resources.Messages.lbl_derived_codelist %></a></li>
         </ul>
         <div class='panel-container'>
             <div id="general">
@@ -357,12 +362,12 @@
                         <div style="float: left">
                             <asp:Button ID="btnAddNewCode" Text="<%# Resources.Messages.lbl_add_code %>" OnClientClick="javascript: openP('df-Dimension',600); return false;" runat="server" OnClick="btnAddNewCode_Click" />
                         </div>
+                             
                         <div style="float: right; padding-bottom: 10px; margin-bottom: 10px">
-                            <uc10:CSVImporter ID="CSVImporter1" runat="server" />
+                            <uc7:CSVImporter ID="CSVImporter1" runat="server" />
                             <br />
                         </div>
-
-
+                
                         <div id="df-Dimension" class="popup_block">
                             <asp:Label ID="lbl_title_popup_code" runat="server" Text="<%# Resources.Messages.lbl_add_code %>" CssClass="PageTitle"></asp:Label>
                             <hr style="width: 100%;" />
@@ -439,7 +444,12 @@
             </div>
 
             <div id="categorisation" class="ircats">
-                <uc1:Categorisations runat="server" ID="Categorisations" />
+                <uc6:Categorisations runat="server" ID="Categorisations" />
+            </div>
+
+            <div id="derivedCL" class="subCL">
+                <uc8:SubCodelistForm runat="server" ID="SubCodelistForm1" />
+                <uc9:CreateSubCodelist ID="CreateSubCodelist1" runat="server" Visible="false" />
             </div>
         </div>
     </div>

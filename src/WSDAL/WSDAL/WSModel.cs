@@ -182,7 +182,15 @@ namespace ISTAT.WSDAL
             return WSSubmitStructure(wsUtils.GetXmlMessage(sdmxObjects));
         }
 
+        public XmlDocument SubmitStructureWS(ISdmxObjects sdmxObjects)
+        {
+            WSUtils wsUtils = new WSUtils();
 
+            //if (FinalArtefactExists(sdmxObjects))
+            //    return CreateXMLError("The artefact exists and is final!");
+
+            return WSSubmitStructure(wsUtils.GetXmlMessage(sdmxObjects));
+        }
         #endregion
 
         #region "Private Methods"
@@ -294,6 +302,7 @@ namespace ISTAT.WSDAL
             return xDomOutput;
         }
 
+        
         /// <summary>
         /// 
         /// </summary>

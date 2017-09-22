@@ -410,7 +410,7 @@ Per navigare la meta informazione è possibile utilizzare il menù posto a sinis
     <value>Aggiungi Dataflow</value>
   </data>
   <data name="btn_new_keyFamily" xml:space="preserve">
-    <value>Aggiungi KeyFamily</value>
+    <value>Aggiungi DSD</value>
   </data>
   <data name="btn_ok" xml:space="preserve">
     <value>Ok</value>
@@ -1437,5 +1437,17 @@ Per navigare la meta informazione è possibile utilizzare il menù posto a sinis
   </data>
   <data name="lbl_download_multiple_artefact" xml:space="preserve">
     <value>Scarica Artefatti Multipli</value>
+  </data>
+  <data name="lbl_create_subcodelist" xml:space="preserve">
+    <value>SubCodelist</value>
+  </data>
+  <data name="btn_Create_SubCodelist" xml:space="preserve">
+    <value>Crea Sub Codelist</value>
+  </data>
+  <data name="err_create_subcodelist" xml:space="preserve">
+    <value>Selezionare almeno un codice</value>
+  </data>
+  <data name="lbl_derived_codelist" xml:space="preserve">
+    <value>Codelist derivata</value>
   </data>
 </root>

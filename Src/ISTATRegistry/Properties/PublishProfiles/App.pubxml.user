@@ -32,13 +32,13 @@ modificando il file MSBuild. Per ulteriori informazioni su questo argomento, vis
       <publishTime>11/10/2016 10:08:49</publishTime>
     </File>
     <File Include="App_GlobalResources/Messages.en.resx">
-      <publishTime>02/16/2017 17:04:00</publishTime>
+      <publishTime>07/11/2017 11:25:50</publishTime>
     </File>
     <File Include="App_GlobalResources/Messages.lo.resx">
       <publishTime>01/06/2016 10:44:02</publishTime>
     </File>
     <File Include="App_GlobalResources/Messages.resx">
-      <publishTime>02/16/2017 17:04:01</publishTime>
+      <publishTime>07/11/2017 11:25:50</publishTime>
     </File>
     <File Include="App_GlobalResources/Messages.sr-Cyrl.resx">
       <publishTime>12/06/2016 16:28:34</publishTime>
@@ -62,22 +62,22 @@ modificando il file MSBuild. Per ulteriori informazioni su questo argomento, vis
       <publishTime>01/27/2016 17:10:34</publishTime>
     </File>
     <File Include="bin/ISTAT.EXPORT.dll">
-      <publishTime>10/28/2016 10:53:38</publishTime>
+      <publishTime>06/07/2017 16:03:16</publishTime>
     </File>
     <File Include="bin/ISTAT.IO.dll">
       <publishTime>10/17/2016 17:50:37</publishTime>
     </File>
     <File Include="bin/ISTATEntity.dll">
-      <publishTime>10/21/2016 11:49:58</publishTime>
+      <publishTime>06/07/2017 16:03:15</publishTime>
     </File>
     <File Include="bin/ISTATEntityMapper.dll">
-      <publishTime>04/24/2017 14:18:50</publishTime>
+      <publishTime>06/07/2017 16:03:16</publishTime>
     </File>
     <File Include="bin/ISTATRegistry.dll">
-      <publishTime>04/24/2017 15:26:25</publishTime>
+      <publishTime>07/11/2017 14:20:48</publishTime>
     </File>
     <File Include="bin/ISTATRegistry.XmlSerializers.dll">
-      <publishTime>04/24/2017 15:26:26</publishTime>
+      <publishTime>07/11/2017 14:20:49</publishTime>
     </File>
     <File Include="bin/ISTATUtils.dll">
       <publishTime>02/17/2017 11:15:07</publishTime>
@@ -89,7 +89,7 @@ modificando il file MSBuild. Per ulteriori informazioni su questo argomento, vis
       <publishTime>01/27/2016 17:10:34</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
-      <publishTime>01/28/2016 14:22:24</publishTime>
+      <publishTime>10/02/2013 12:10:10</publishTime>
     </File>
     <File Include="bin/Org.Sdmx.Resources.SdmxMl.Schemas.V10.dll">
       <publishTime>06/27/2016 11:35:22</publishTime>
@@ -122,7 +122,7 @@ modificando il file MSBuild. Per ulteriori informazioni su questo argomento, vis
       <publishTime>04/24/2017 15:25:38</publishTime>
     </File>
     <File Include="bin/WSDAL.dll">
-      <publishTime>04/24/2017 14:18:51</publishTime>
+      <publishTime>06/07/2017 16:03:16</publishTime>
     </File>
     <File Include="bin/Xml.Schema.Linq.dll">
       <publishTime>06/27/2016 11:35:22</publishTime>
@@ -143,7 +143,7 @@ modificando il file MSBuild. Per ulteriori informazioni su questo argomento, vis
       <publishTime>10/28/2016 15:07:21</publishTime>
     </File>
     <File Include="codelistItemDetails.aspx">
-      <publishTime>01/26/2017 16:04:58</publishTime>
+      <publishTime>07/11/2017 11:25:50</publishTime>
     </File>
     <File Include="codelists.aspx">
       <publishTime>02/15/2017 16:35:07</publishTime>
@@ -180,6 +180,9 @@ modificando il file MSBuild. Per ulteriori informazioni su questo argomento, vis
     </File>
     <File Include="css/tabs.css">
       <publishTime>02/02/2016 15:24:16</publishTime>
+    </File>
+    <File Include="csv_files/delete_me.txt">
+      <publishTime>06/07/2017 16:12:13</publishTime>
     </File>
     <File Include="csv_files/stub.txt">
       <publishTime>04/24/2017 15:25:38</publishTime>
@@ -535,6 +538,12 @@ modificando il file MSBuild. Per ulteriori informazioni su questo argomento, vis
     <File Include="organizationunitschemes.aspx">
       <publishTime>10/28/2016 15:02:59</publishTime>
     </File>
+    <File Include="OutputFiles/delete_me.txt">
+      <publishTime>06/07/2017 16:12:13</publishTime>
+    </File>
+    <File Include="OutputFiles/f.csv">
+      <publishTime>06/07/2017 16:01:32</publishTime>
+    </File>
     <File Include="OutputFiles/stub.txt">
       <publishTime>04/24/2017 15:25:38</publishTime>
     </File>
@@ -598,6 +607,12 @@ modificando il file MSBuild. Per ulteriori informazioni su questo argomento, vis
     <File Include="test.aspx">
       <publishTime>01/27/2016 17:10:46</publishTime>
     </File>
+    <File Include="UploadedFiles/delete_me.txt">
+      <publishTime>06/07/2017 16:12:13</publishTime>
+    </File>
+    <File Include="UploadedFiles/f.csv">
+      <publishTime>06/07/2017 16:01:37</publishTime>
+    </File>
     <File Include="UploadedFiles/stub.txt">
       <publishTime>04/24/2017 15:25:38</publishTime>
     </File>
@@ -616,6 +631,12 @@ modificando il file MSBuild. Per ulteriori informazioni su questo argomento, vis
     <File Include="UserControls/ControlAnnotations.ascx">
       <publishTime>01/27/2016 17:10:36</publishTime>
     </File>
+    <File Include="UserControls/CreateSubCodelistConfirm.ascx">
+      <publishTime>06/19/2017 11:03:54</publishTime>
+    </File>
+    <File Include="UserControls/CreateSubCodelistForm.ascx">
+      <publishTime>06/21/2017 15:44:51</publishTime>
+    </File>
     <File Include="UserControls/CSVImporter.ascx">
       <publishTime>06/06/2016 16:29:46</publishTime>
     </File>
@@ -623,7 +644,7 @@ modificando il file MSBuild. Per ulteriori informazioni su questo argomento, vis
       <publishTime>01/27/2016 17:10:36</publishTime>
     </File>
     <File Include="UserControls/FileDownload3.ascx">
-      <publishTime>02/06/2017 10:34:15</publishTime>
+      <publishTime>04/26/2017 11:25:34</publishTime>
     </File>
     <File Include="UserControls/GetCodeList.ascx">
       <publishTime>06/30/2016 16:56:38</publishTime>
@@ -656,7 +677,7 @@ modificando il file MSBuild. Per ulteriori informazioni su questo argomento, vis
       <publishTime>01/27/2016 17:10:50</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>04/24/2017 15:25:16</publishTime>
+      <publishTime>07/11/2017 14:12:07</publishTime>
     </File>
     <File Include="WebServices/IRWebService.asmx">
       <publishTime>12/15/2016 12:09:25</publishTime>

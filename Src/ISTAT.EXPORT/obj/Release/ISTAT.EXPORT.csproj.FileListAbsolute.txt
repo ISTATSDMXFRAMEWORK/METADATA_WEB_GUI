@@ -18,3 +18,23 @@ C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017
 C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTAT.EXPORT\obj\Release\ISTAT.EXPORT.csprojResolveAssemblyReference.cache
 C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTAT.EXPORT\obj\Release\ISTAT.EXPORT.dll
 C:\Users\Quirini\Desktop\Progetti e Soluzioni\ISTAT_REGISTRY_V4.1.0.0_24-04-2017_Quirini\Src\ISTAT.EXPORT\obj\Release\ISTAT.EXPORT.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\bin\ISTAT.EXPORT.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\bin\ISTAT.EXPORT.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTAT.EXPORT\obj\Release\ISTAT.EXPORT.csprojResolveAssemblyReference.cache
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTAT.EXPORT\obj\Release\ISTAT.EXPORT.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.2.1\Src\ISTAT.EXPORT\obj\Release\ISTAT.EXPORT.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IR_SVIL_4.2.1\Src\bin\ISTAT.EXPORT.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IR_SVIL_4.2.1\Src\bin\ISTAT.EXPORT.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IR_SVIL_4.2.1\Src\ISTAT.EXPORT\obj\Release\ISTAT.EXPORT.csprojResolveAssemblyReference.cache
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IR_SVIL_4.2.1\Src\ISTAT.EXPORT\obj\Release\ISTAT.EXPORT.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IR_SVIL_4.2.1\Src\ISTAT.EXPORT\obj\Release\ISTAT.EXPORT.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.3.0\Src\bin\ISTAT.EXPORT.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.3.0\Src\bin\ISTAT.EXPORT.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.3.0\Src\ISTAT.EXPORT\obj\Release\ISTAT.EXPORT.csprojResolveAssemblyReference.cache
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.3.0\Src\ISTAT.EXPORT\obj\Release\ISTAT.EXPORT.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.3.0\Src\ISTAT.EXPORT\obj\Release\ISTAT.EXPORT.pdb
+G:\Andrea\Progetti\ISTAT\TEST\IR\Src\bin\ISTAT.EXPORT.dll
+G:\Andrea\Progetti\ISTAT\TEST\IR\Src\bin\ISTAT.EXPORT.pdb
+G:\Andrea\Progetti\ISTAT\TEST\IR\Src\ISTAT.EXPORT\obj\Release\ISTAT.EXPORT.csprojResolveAssemblyReference.cache
+G:\Andrea\Progetti\ISTAT\TEST\IR\Src\ISTAT.EXPORT\obj\Release\ISTAT.EXPORT.dll
+G:\Andrea\Progetti\ISTAT\TEST\IR\Src\ISTAT.EXPORT\obj\Release\ISTAT.EXPORT.pdb

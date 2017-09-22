@@ -7305,3 +7305,308 @@ Stack Trace:
    at System.Web.UI.Control.LoadRecursive()
    at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
 
+********** 5/19/2017 12:41:31 PM **********
+Exception Type: System.NullReferenceException
+Exception: Object reference not set to an instance of an object.
+Source: Generic Error Page
+Stack Trace: 
+   at ISTATRegistry.codelistItemDetails.Page_Load(Object sender, EventArgs e) in g:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IR_SVIL_4.2.1\Src\ISTATRegistry\codelistItemDetails.aspx.cs:line 678
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 5/19/2017 12:57:59 PM **********
+Exception Type: System.ArgumentOutOfRangeException
+Exception: Specified argument was out of the range of valid values.
+Parameter name: index
+Source: Generic Error Page
+Stack Trace: 
+   at System.Web.UI.ControlCollection.get_Item(Int32 index)
+   at System.Web.UI.WebControls.TableCellCollection.get_Item(Int32 index)
+   at ISTATRegistry.UserControls.CreateDerivedCL.btnAddCodes_Click(Object sender, EventArgs e) in g:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IR_SVIL_4.2.1\Src\ISTATRegistry\UserControls\CreateDerivedCL.ascx.cs:line 109
+   at System.Web.UI.WebControls.ImageButton.OnClick(ImageClickEventArgs e)
+   at System.Web.UI.WebControls.ImageButton.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.ImageButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 5/19/2017 1:10:32 PM **********
+Exception Type: System.ArgumentOutOfRangeException
+Exception: Length cannot be less than zero.
+Parameter name: length
+Source: Generic Error Page
+Stack Trace: 
+   at System.String.InternalSubStringWithChecks(Int32 startIndex, Int32 length, Boolean fAlwaysCopy)
+   at System.String.Substring(Int32 startIndex, Int32 length)
+   at ISTATRegistry.UserControls.CreateDerivedCL.btnAddCodes_Click(Object sender, EventArgs e) in g:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IR_SVIL_4.2.1\Src\ISTATRegistry\UserControls\CreateDerivedCL.ascx.cs:line 116
+   at System.Web.UI.WebControls.ImageButton.OnClick(ImageClickEventArgs e)
+   at System.Web.UI.WebControls.ImageButton.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.ImageButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 5/23/2017 11:21:51 AM **********
+Exception Type: System.ArgumentOutOfRangeException
+Exception: Length cannot be less than zero.
+Parameter name: length
+Source: Generic Error Page
+Stack Trace: 
+   at System.String.InternalSubStringWithChecks(Int32 startIndex, Int32 length, Boolean fAlwaysCopy)
+   at System.String.Substring(Int32 startIndex, Int32 length)
+   at ISTATRegistry.UserControls.CreateDerivedCL.btnAddCodes_Click(Object sender, EventArgs e) in g:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IR_SVIL_4.2.1\Src\ISTATRegistry\UserControls\CreateDerivedCL.ascx.cs:line 116
+   at System.Web.UI.WebControls.ImageButton.OnClick(ImageClickEventArgs e)
+   at System.Web.UI.WebControls.ImageButton.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.ImageButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 5/23/2017 12:28:03 PM **********
+Exception Type: System.ArgumentOutOfRangeException
+Exception: Specified argument was out of the range of valid values.
+Parameter name: index
+Source: Generic Error Page
+Stack Trace: 
+   at System.Web.UI.ControlCollection.get_Item(Int32 index)
+   at ISTATRegistry.UserControls.CreateDerivedCL.btnAddCodes_Click(Object sender, EventArgs e) in g:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IR_SVIL_4.2.1\Src\ISTATRegistry\UserControls\CreateDerivedCL.ascx.cs:line 106
+   at System.Web.UI.WebControls.ImageButton.OnClick(ImageClickEventArgs e)
+   at System.Web.UI.WebControls.ImageButton.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.ImageButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 5/23/2017 2:47:33 PM **********
+Exception Type: System.NullReferenceException
+Exception: Object reference not set to an instance of an object.
+Source: Generic Error Page
+Stack Trace: 
+   at ISTATRegistry.UserControls.CreateDerivedCL.btnAddCodes_Click(Object sender, EventArgs e) in g:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IR_SVIL_4.2.1\Src\ISTATRegistry\UserControls\CreateDerivedCL.ascx.cs:line 117
+   at System.Web.UI.WebControls.ImageButton.OnClick(ImageClickEventArgs e)
+   at System.Web.UI.WebControls.ImageButton.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.ImageButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 5/23/2017 3:06:27 PM **********
+Exception Type: System.NullReferenceException
+Exception: Object reference not set to an instance of an object.
+Source: Generic Error Page
+Stack Trace: 
+   at ISTATRegistry.UserControls.CreateDerivedCL.btnAddCodes_Click(Object sender, EventArgs e) in g:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IR_SVIL_4.2.1\Src\ISTATRegistry\UserControls\CreateDerivedCL.ascx.cs:line 115
+   at System.Web.UI.WebControls.ImageButton.OnClick(ImageClickEventArgs e)
+   at System.Web.UI.WebControls.ImageButton.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.ImageButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 5/23/2017 3:07:57 PM **********
+Exception Type: System.NullReferenceException
+Exception: Object reference not set to an instance of an object.
+Source: Generic Error Page
+Stack Trace: 
+   at ISTATRegistry.UserControls.CreateDerivedCL.btnAddCodes_Click(Object sender, EventArgs e) in g:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IR_SVIL_4.2.1\Src\ISTATRegistry\UserControls\CreateDerivedCL.ascx.cs:line 115
+   at System.Web.UI.WebControls.ImageButton.OnClick(ImageClickEventArgs e)
+   at System.Web.UI.WebControls.ImageButton.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.ImageButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 5/24/2017 3:05:48 PM **********
+Exception Type: System.ArgumentOutOfRangeException
+Exception: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+Source: Generic Error Page
+Stack Trace: 
+   at System.Collections.ArrayList.get_Item(Int32 index)
+   at System.Web.UI.WebControls.ListItemCollection.get_Item(Int32 index)
+   at ISTATRegistry.UserControls.UserControl1.btnSearch_Click(Object sender, EventArgs e) in g:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IR_SVIL_4.2.1\Src\ISTATRegistry\UserControls\UserControl1.ascx.cs:line 134
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 5/24/2017 3:07:55 PM **********
+Exception Type: System.ArgumentOutOfRangeException
+Exception: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+Source: Generic Error Page
+Stack Trace: 
+   at System.Collections.ArrayList.get_Item(Int32 index)
+   at System.Web.UI.WebControls.ListItemCollection.get_Item(Int32 index)
+   at ISTATRegistry.UserControls.UserControl1.btnSearch_Click(Object sender, EventArgs e) in g:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IR_SVIL_4.2.1\Src\ISTATRegistry\UserControls\UserControl1.ascx.cs:line 134
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 6/1/2017 3:28:53 PM **********
+Exception Type: System.NullReferenceException
+Exception: Object reference not set to an instance of an object.
+Source: Generic Error Page
+Stack Trace: 
+   at ISTATRegistry.UserControls.CreateSubCodelist.btnSave_Click(Object sender, EventArgs e) in g:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IR_SVIL_4.2.1\Src\ISTATRegistry\UserControls\CreateSubCodelist.ascx.cs:line 126
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 6/1/2017 3:42:28 PM **********
+Exception Type: System.InvalidCastException
+Exception: Unable to cast object of type 'System.Web.UI.WebControls.ListItem' to type 'ISTAT.Entity.CodeItem'.
+Source: Generic Error Page
+Stack Trace: 
+   at ISTATRegistry.UserControls.CreateSubCodelist.btnSave_Click(Object sender, EventArgs e) in g:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IR_SVIL_4.2.1\Src\ISTATRegistry\UserControls\CreateSubCodelist.ascx.cs:line 127
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 6/1/2017 3:59:57 PM **********
+Inner Exception Type: Org.Sdmxsource.Sdmx.Api.Exception.SdmxSemmanticException
+Inner Exception: Semantic Error - Can not resolve parent with id A+B
+Inner Source: SdmxObjects
+Inner Stack Trace: 
+   at Org.Sdmxsource.Sdmx.SdmxObjects.Model.Objects.Codelist.CodelistObjectCore.GetCode(IDictionary`2 codes, String id)
+   at Org.Sdmxsource.Sdmx.SdmxObjects.Model.Objects.Codelist.CodelistObjectCore.Validate()
+   at Org.Sdmxsource.Sdmx.SdmxObjects.Model.Objects.Codelist.CodelistObjectCore..ctor(ICodelistMutableObject codelist)
+Exception Type: Org.Sdmxsource.Sdmx.Api.Exception.SdmxSemmanticException
+Exception: Semantic Error - Can not resolve parent with id A+B - Error while creating structure: urn:sdmx:org.sdmx.infomodel.codelist.Codelist=ESTAT:CL_ACTIVITY(1.1)
+Source: Generic Error Page
+Stack Trace: 
+   at Org.Sdmxsource.Sdmx.SdmxObjects.Model.Objects.Codelist.CodelistObjectCore..ctor(ICodelistMutableObject codelist)
+   at Org.Sdmxsource.Sdmx.SdmxObjects.Model.Mutable.Codelist.CodelistMutableCore.get_ImmutableInstance()
+   at ISTATRegistry.UserControls.CreateSubCodelist.btnSave_Click(Object sender, EventArgs e) in g:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IR_SVIL_4.2.1\Src\ISTATRegistry\UserControls\CreateSubCodelist.ascx.cs:line 138
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 6/1/2017 5:11:01 PM **********
+Exception Type: System.NullReferenceException
+Exception: Object reference not set to an instance of an object.
+Source: Generic Error Page
+Stack Trace: 
+   at ISTATRegistry.codelistItemDetails.Page_Load(Object sender, EventArgs e) in g:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IR_SVIL_4.2.1\Src\ISTATRegistry\codelistItemDetails.aspx.cs:line 675
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 6/1/2017 5:14:34 PM **********
+Exception Type: System.NullReferenceException
+Exception: Object reference not set to an instance of an object.
+Source: Generic Error Page
+Stack Trace: 
+   at ISTATRegistry.codelistItemDetails.Page_Load(Object sender, EventArgs e) in g:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IR_SVIL_4.2.1\Src\ISTATRegistry\codelistItemDetails.aspx.cs:line 675
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 6/5/2017 10:50:32 AM **********
+Exception Type: System.NullReferenceException
+Exception: Object reference not set to an instance of an object.
+Source: Generic Error Page
+Stack Trace: 
+   at ISTATRegistry.codelistItemDetails.Page_Load(Object sender, EventArgs e) in g:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IR_SVIL_4.2.1\Src\ISTATRegistry\codelistItemDetails.aspx.cs:line 838
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 6/9/2017 2:09:39 PM **********
+Exception Type: System.NullReferenceException
+Exception: Object reference not set to an instance of an object.
+Source: Generic Error Page
+Stack Trace: 
+   at ISTATRegistry.UserControls.CreateSubCodelistConfirm.btnSave_Click(Object sender, EventArgs e) in g:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.3.0\Src\ISTATRegistry\UserControls\CreateSubCodelistConfirm.ascx.cs:line 99
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 6/15/2017 12:26:04 PM **********
+Inner Exception Type: Org.Sdmxsource.Sdmx.Api.Exception.SdmxSemmanticException
+Inner Exception: Semantic Error - Can not resolve parent with id A
+Inner Source: SdmxObjects
+Inner Stack Trace: 
+   at Org.Sdmxsource.Sdmx.SdmxObjects.Model.Objects.Codelist.CodelistObjectCore.GetCode(IDictionary`2 codes, String id)
+   at Org.Sdmxsource.Sdmx.SdmxObjects.Model.Objects.Codelist.CodelistObjectCore.Validate()
+   at Org.Sdmxsource.Sdmx.SdmxObjects.Model.Objects.Codelist.CodelistObjectCore..ctor(ICodelistMutableObject codelist)
+Exception Type: Org.Sdmxsource.Sdmx.Api.Exception.SdmxSemmanticException
+Exception: Semantic Error - Can not resolve parent with id A - Error while creating structure: urn:sdmx:org.sdmx.infomodel.codelist.Codelist=ESTAT:CL_ACTIVITY_AND2(1.1)
+Source: Generic Error Page
+Stack Trace: 
+   at Org.Sdmxsource.Sdmx.SdmxObjects.Model.Objects.Codelist.CodelistObjectCore..ctor(ICodelistMutableObject codelist)
+   at Org.Sdmxsource.Sdmx.SdmxObjects.Model.Mutable.Codelist.CodelistMutableCore.get_ImmutableInstance()
+   at ISTATRegistry.UserControls.CreateSubCodelistConfirm.btnSave_Click(Object sender, EventArgs e) in g:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.3.0\Src\ISTATRegistry\UserControls\CreateSubCodelistConfirm.ascx.cs:line 158
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 6/15/2017 2:46:12 PM **********
+Exception Type: System.Exception
+Exception: no results found
+Source: Generic Error Page
+Stack Trace: 
+   at ISTAT.WSDAL.WSModel.WSExecute(ArtefactIdentity artIdentity, wsOperation operation, Boolean stub, Boolean withLike) in g:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.3.0\Src\WSDAL\WSDAL\WSModel.cs:line 460
+   at ISTAT.WSDAL.WSModel.GetAllAgencyScheme(Boolean stub) in g:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.3.0\Src\WSDAL\WSDAL\WSModel.cs:line 37
+   at ISTATRegistry.Utils.PopulateCmbAgencySchemes(DropDownList ddlAgencySchemes) in g:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.3.0\Src\ISTATRegistry\Classes\Utils.cs:line 627
+   at ISTATRegistry.admin.Page_Load(Object sender, EventArgs e) in g:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.3.0\Src\ISTATRegistry\admin.aspx.cs:line 69
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 7/7/2017 2:47:16 PM **********
+Exception Type: System.Net.WebException
+Exception: The request failed with HTTP status 404: Not Found.
+Source: Generic Error Page
+Stack Trace: 
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at ISTATRegistry.IRServiceReference.IRService.GetUserByCredentials(String username, String password) in g:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.3.0\Src\ISTATRegistry\Web References\IRServiceReference\Reference.cs:line 164
+   at ISTATRegistry.master.btnLoginSubmit_Click(Object sender, EventArgs e) in g:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.3.0\Src\ISTATRegistry\master.Master.cs:line 182
+   at System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   at System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+********** 7/10/2017 4:07:58 PM **********
+Exception Type: System.Exception
+Exception: no results found
+Source: Generic Error Page
+Stack Trace: 
+   at ISTAT.WSDAL.WSModel.WSExecute(ArtefactIdentity artIdentity, wsOperation operation, Boolean stub, Boolean withLike) in g:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.3.0\Src\WSDAL\WSDAL\WSModel.cs:line 460
+   at ISTAT.WSDAL.WSModel.GetAllAgencyScheme(Boolean stub) in g:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.3.0\Src\WSDAL\WSDAL\WSModel.cs:line 37
+   at ISTATRegistry.Utils.PopulateCmbAgencySchemes(DropDownList ddlAgencySchemes) in g:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.3.0\Src\ISTATRegistry\Classes\Utils.cs:line 627
+   at ISTATRegistry.admin.Page_Load(Object sender, EventArgs e) in g:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IRV4.3.0\Src\ISTATRegistry\admin.aspx.cs:line 69
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+

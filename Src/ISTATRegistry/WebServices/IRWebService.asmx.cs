@@ -361,7 +361,7 @@ namespace ISTATRegistry.WebServices
 
                 WSModel wsModel = new WSModel();
 
-                XmlDocument xRet = wsModel.SubmitStructure(sdmxObjects);
+                XmlDocument xRet = wsModel.SubmitStructureWS(sdmxObjects);
 
                 string err = Utils.GetXMLResponseError(xRet);
 

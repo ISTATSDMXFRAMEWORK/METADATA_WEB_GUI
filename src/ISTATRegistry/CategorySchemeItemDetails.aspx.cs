@@ -703,7 +703,8 @@ namespace ISTATRegistry
                 lblMoveInstructions.DataBind();
                 btnMoveCategory.DataBind();
 
-                if(!_epe.PartialArtefact)
+                //andrea 07/06/2017
+                //if (!_epe.PartialArtefact)
                     Utils.PopulateCmbAgencies(cmbAgencies, true);
 
                 ClearSessionPage();
@@ -838,8 +839,11 @@ namespace ISTATRegistry
                 lblCategoryOrder.Visible = true;
             }
 
-            if (!_epe.PartialArtefact)
+            //andrea 07/06/2017
+            //if (!_epe.PartialArtefact)
+            if (!Utils.ViewMode && _action != Action.INSERT)
             {
+            
                 DuplicateArtefact1.ucStructureType = SdmxStructureEnumType.CategoryScheme;
                 DuplicateArtefact1.ucMaintanableArtefact = GetCategorySchemeFromSession();
             }

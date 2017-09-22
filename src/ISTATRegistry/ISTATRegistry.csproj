@@ -161,8 +161,10 @@
     <Content Include="images\Trash-50 - disable.png" />
     <Content Include="images\Trash-50.png" />
     <Content Include="SdmxQueryTemplate\HierarchicalCodelist.xml" />
+    <Content Include="UserControls\CreateSubCodelistConfirm.ascx" />
     <Content Include="UserControls\CSVImporter.ascx" />
     <Content Include="UserControls\MultipleDownload.ascx" />
+    <Content Include="UserControls\CreateSubCodelistForm.ascx" />
     <Content Include="WebServices\IRWebService.asmx" />
     <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
     <Content Include="SdmxQueryTemplate\CategorySchemeWithParents.xml">
@@ -640,6 +642,13 @@
     <Compile Include="UserControls\ControlAnnotations.ascx.designer.cs">
       <DependentUpon>ControlAnnotations.ascx</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\CreateSubCodelistConfirm.ascx.cs">
+      <DependentUpon>CreateSubCodelistConfirm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\CreateSubCodelistConfirm.ascx.designer.cs">
+      <DependentUpon>CreateSubCodelistConfirm.ascx</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\CSVImporter.ascx.cs">
       <DependentUpon>CSVImporter.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -702,6 +711,13 @@
     </Compile>
     <Compile Include="UserControls\SearchBar.ascx.designer.cs">
       <DependentUpon>SearchBar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CreateSubCodelistForm.ascx.cs">
+      <DependentUpon>CreateSubCodelistForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\CreateSubCodelistForm.ascx.designer.cs">
+      <DependentUpon>CreateSubCodelistForm.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UserPopUp.ascx.cs">
       <DependentUpon>UserPopUp.ascx</DependentUpon>
@@ -820,6 +836,10 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

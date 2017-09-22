@@ -18,3 +18,8 @@ C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATEntity\ISTATEntity\bin\Release\ISTATE
 C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATEntity\ISTATEntity\obj\Release\ISTATEntity.csprojResolveAssemblyReference.cache
 C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATEntity\ISTATEntity\obj\Release\ISTATEntity.dll
 C:\ISTAT\Source\ISTATRegistry_4.5\Src\ISTATEntity\ISTATEntity\obj\Release\ISTATEntity.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IR_SVIL_4.2.1\Src\ISTATEntity\ISTATEntity\bin\Release\ISTATEntity.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IR_SVIL_4.2.1\Src\ISTATEntity\ISTATEntity\bin\Release\ISTATEntity.pdb
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IR_SVIL_4.2.1\Src\ISTATEntity\ISTATEntity\obj\Release\ISTATEntity.csprojResolveAssemblyReference.cache
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IR_SVIL_4.2.1\Src\ISTATEntity\ISTATEntity\obj\Release\ISTATEntity.dll
+G:\Andrea\Progetti\ISTAT\ITB\ISTATRegistry\IR_SVIL_4.2.1\Src\ISTATEntity\ISTATEntity\obj\Release\ISTATEntity.pdb

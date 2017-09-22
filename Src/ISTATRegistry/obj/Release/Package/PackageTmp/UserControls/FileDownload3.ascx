@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="FileDownload3.ascx.cs"
     Inherits="ISTATRegistry.UserControls.FileDownload3" %>
-
-<div id="dialog-form<%=ucID.Replace( '@', '_' ) + '_' + ucAgency + '_' + ucVersion.Replace( '.', '_' )%>" class="popup_block">
+<!-- Quirini -->
+<div id="dialog-form<%=ucID.Replace( '@', '_' ) + '_' + ucAgency + '_' + ucVersion.Replace( '.', '_' )%>" class="popup_block read_identity" data-identity="<%=ucID.Replace( '@', '_' ) + '-' + ucAgency + '-' + ucVersion%>">
 
     <asp:Label ID="lblArtefactID" runat="server" Text="<%# Resources.Messages.lbl_artefact+':' %>" CssClass="PageTitle3" EnableViewState="True"></asp:Label>
     <br />
@@ -220,6 +220,10 @@
 
 <script>
 
+    var saveArtId = "";
+    var saveArtAgency = "";
+    var saveArtVersion = "";
+
     function openAndReset(pName) {
         $(".downType").val(0).change();
         $(".popup_block").css("z-index", 19999);
@@ -232,6 +236,7 @@
     }
 
     $(document).ready(function () {
+
         $('.IRCSV').hide();
         $('.WSExport').hide();
         $('.WSAutentication').hide();
@@ -252,6 +257,7 @@
                 newArtVersion: $("#<%=txtNewVersion.ClientID %>").val(),
                 exportWithRef: $("#<%=chkExportCodeListAndConcept.ClientID %>").is(":checked")
             });
+            console.log(jsonData);
             $.ajax({
                 type: "POST",
                 url: "WebServices/IRWebService.asmx/ExportArtefact",
@@ -500,18 +506,26 @@
 
         $('#<%=btnAjaxDownload.ClientID %>').unbind('click').click(function () {
 
+            // Quirini
+            var ArtIdentity = $("div.read_identity").attr("data-identity").split("-");
+            //
+
             var jsonData = JSON.stringify({
                 sourceEndPoint: $("#<%=hdnWsSource.ClientID %>").val(),
                 targetEndPoint: $("#<%=cmbWSExport.ClientID %>").val(),
                 artefactType: "<%=ucArtefactType%>",
-                artID: "<%=ucID%>",
-                artAgency: "<%=ucAgency%>",
-                artVersion: "<%=ucVersion%>",
+                //artID: "<%=ucID%>",
+                //artAgency: "<%=ucAgency%>",
+                //artVersion: "<%=ucVersion%>",
+                artID: ArtIdentity[0],
+                artAgency: ArtIdentity[1],
+                artVersion: ArtIdentity[2],
                 newArtID: $("#<%=txtNewID.ClientID %>").val(),
                 newArtAgency: $("#<%=cmbNewAgency.ClientID %>").val(),
                 newArtVersion: $("#<%=txtNewVersion.ClientID %>").val(),
                 exportWithRef: $("#<%=chkExportCodeListAndConcept.ClientID %>").is(":checked")
             });
+            console.log(jsonData);
             $.ajax({
                 type: "POST",
                 url: "WebServices/IRWebService.asmx/ExportArtefact",

@@ -32,6 +32,6 @@ using System.Resources;
 //
 // È possibile specificare tutti i valori oppure impostare valori predefiniti per i numeri relativi alla revisione e alla build 
 // utilizzando l'asterisco (*) come illustrato di seguito:
-[assembly: AssemblyVersion("4.2.1.0")]
-[assembly: AssemblyFileVersion("4.2.1.0")]
+[assembly: AssemblyVersion("4.3.2.0")]
+[assembly: AssemblyFileVersion("4.3.2.0")]
 [assembly: NeutralResourcesLanguageAttribute("en-GB")]

@@ -410,7 +410,7 @@ To navigate the meta information you can use the menu on the left.</value>
     <value>Add dataflow</value>
   </data>
   <data name="btn_new_keyFamily" xml:space="preserve">
-    <value>Add KeyFamily</value>
+    <value>Add DSD</value>
   </data>
   <data name="btn_ok" xml:space="preserve">
     <value>Ok</value>
@@ -1437,5 +1437,17 @@ To navigate the meta information you can use the menu on the left.</value>
   </data>
   <data name="lbl_download_multiple_artefact" xml:space="preserve">
     <value>Download Multiple Artefact</value>
+  </data>
+  <data name="lbl_create_subcodelist" xml:space="preserve">
+    <value>SubCodelist</value>
+  </data>
+  <data name="btn_Create_SubCodelist" xml:space="preserve">
+    <value>Create Sub Codelist</value>
+  </data>
+  <data name="err_create_subcodelist" xml:space="preserve">
+    <value>Select at least one code</value>
+  </data>
+  <data name="lbl_derived_codelist" xml:space="preserve">
+    <value>Derived Codelist</value>
   </data>
 </root>

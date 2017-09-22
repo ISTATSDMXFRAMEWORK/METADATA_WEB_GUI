@@ -553,6 +553,24 @@ namespace ISTATRegistry {
         protected global::ISTATRegistry.UserControls.Categorisations Categorisations;
         
         /// <summary>
+        /// Controllo SubCodelistForm1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::ISTATRegistry.UserControls.CreateSubCodelistForm SubCodelistForm1;
+        
+        /// <summary>
+        /// Controllo CreateSubCodelist1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::ISTATRegistry.UserControls.CreateSubCodelistConfirm CreateSubCodelist1;
+        
+        /// <summary>
         /// Controllo btnSaveMemoryCodeList.
         /// </summary>
         /// <remarks>
